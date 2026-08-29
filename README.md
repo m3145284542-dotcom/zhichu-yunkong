@@ -1,8 +1,8 @@
 # 智储云控
 
-这是“基于人工智能负荷预测与优化调度的园区智能能源管理系统”的本科生竞赛项目仓库。当前已完成第二阶段数据接入与审计，以及第三阶段单建筑、24 小时超前负荷预测 baseline。
+这是“基于人工智能负荷预测与优化调度的园区智能能源管理系统”的本科生竞赛项目仓库。当前已完成数据审计、单建筑 24 小时超前负荷预测、模型诊断，以及基于预测的日前储能削峰优化。
 
-当前没有实现储能优化、强化学习、Web API 或前端。
+当前没有实现强化学习、Web API 或前端。
 
 ## 环境
 
@@ -94,3 +94,15 @@ python scripts\phase4_5_model_diagnostics.py
 ```
 
 Machine-readable results and report-ready figures are written to `outputs/phase4_5/`. Phase 4.5 validates a reproducible LightGBM benchmark, but it does not show a robust improvement over the Phase 3 LightGBM or the yesterday persistence baseline on Test.
+
+## Phase 5 — Forecast-driven Battery Peak Shaving
+
+Phase 5 directly reuses outputs/phase4/test_prediction.csv; it does not refit LightGBM. For each target day from 2017-12-02 through 2017-12-31, Persistence, LightGBM, and Oracle forecasts independently produce a fixed 24-hour battery schedule. Only after optimization is the schedule applied to actual load for realized-peak evaluation. Oracle uses future actual load and is explicitly non-deployable.
+
+The optimizer is a small SciPy/HiGHS MILP with binary charge/discharge mutual exclusion, 10%–90% SOC limits, 50% daily initial/terminal SOC, and 90% round-trip efficiency. Hourly load and battery power are treated as kWh per one-hour interval, numerically equal to average kW; capacity and SOC are kWh. Equivalent full cycles use one definition throughout: total discharge energy divided by nominal capacity.
+
+Run:
+
+    python scripts\run_phase5.py
+
+Core metrics, 720-row Medium dispatch files, constraint audit, configuration, summary, and report-ready figures are written to outputs/phase5/. The detailed interpretation is in reports/phase5_report.md.

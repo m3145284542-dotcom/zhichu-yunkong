@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "runtime_seconds": 5.875990300002741,
+  "forecast_metrics": [
+    {
+      "controller": "Persistence",
+      "MAE": 9.86111111111111,
+      "RMSE": 15.5433980268866,
+      "MAPE": 2.338321970837698
+    },
+    {
+      "controller": "LightGBM",
+      "MAE": 10.90208123095793,
+      "RMSE": 17.421081429536144,
+      "MAPE": 2.7097328290478324
+    },
+    {
+      "controller": "Oracle",
+      "MAE": 0.0,
+      "RMSE": 0.0,
+      "MAPE": 0.0
+    }
+  ],
+  "decision_value": {
+    "Small": {
+      "oracle_gain": 20.217973255036952,
+      "persistence_oracle_capture": 0.30885642512160877,
+      "lightgbm_oracle_capture": 0.5062653365529379,
+      "lightgbm_absolute_improvement_over_persistence": 3.9912080916245714,
+      "lightgbm_relative_improvement_over_persistence_pct": 0.9143894043223681,
+      "lightgbm_gap_to_oracle": 9.982314220657372
+    },
+    "Medium": {
+      "oracle_gain": 22.561549456198577,
+      "persistence_oracle_capture": 0.36035445989373166,
+      "lightgbm_oracle_capture": 0.5319801887307976,
+      "lightgbm_absolute_improvement_over_persistence": 3.8721423691135897,
+      "lightgbm_relative_improvement_over_persistence_pct": 0.8909604351453781,
+      "lightgbm_gap_to_oracle": 10.559252118430834
+    },
+    "Large": {
+      "oracle_gain": 22.561549456198577,
+      "persistence_oracle_capture": 0.3603544598937367,
+      "lightgbm_oracle_capture": 0.5319801887307976,
+      "lightgbm_absolute_improvement_over_persistence": 3.872142369113476,
+      "lightgbm_relative_improvement_over_persistence_pct": 0.8909604351453522,
+      "lightgbm_gap_to_oracle": 10.559252118430834
+    }
+  },
+  "example_day": {
+    "date": "2017-12-11",
+    "selection_rule": "maximum LightGBM realized-peak advantage over Persistence"
+  },
+  "constraint_totals": {
+    "solver_failures": 0,
+    "soc_violations": 0,
+    "power_violations": 0,
+    "simultaneous_charge_discharge_violations": 0,
+    "initial_soc_violations": 0,
+    "terminal_soc_violations": 0
+  },
+  "required_outputs": [
+    "phase5_metrics.csv",
+    "daily_metrics.csv",
+    "dispatch_lightgbm.csv",
+    "dispatch_persistence.csv",
+    "dispatch_oracle.csv",
+    "battery_size_sensitivity.csv",
+    "peak_comparison.png",
+    "daily_peak_reduction.png",
+    "example_day_dispatch.png",
+    "example_day_soc.png",
+    "battery_size_sensitivity.png",
+    "phase5_config.json",
+    "constraint_audit.csv",
+    "forecast_metrics.csv"
+  ]
+}

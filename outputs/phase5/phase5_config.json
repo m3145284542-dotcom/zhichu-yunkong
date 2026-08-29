@@ -1,0 +1,92 @@
+{
+  "building": "Hog_office_Rolando",
+  "random_seed": 42,
+  "input_prediction_file": "outputs/phase4/test_prediction.csv",
+  "prediction_columns": [
+    "timestamp",
+    "actual",
+    "prediction",
+    "error",
+    "abs_error"
+  ],
+  "prediction_timestamp_definition": "target timestamp t+24h",
+  "test_target_period": {
+    "start": "2017-12-02 00:00:00",
+    "end": "2017-12-31 23:00:00",
+    "hours": 720,
+    "days": 30
+  },
+  "train_load_period_for_sizing": {
+    "start": "2016-01-15 00:00:00",
+    "end": "2017-10-31 23:00:00",
+    "samples": 15573,
+    "selection_rule": "mean current_load across the exact Phase 4 train feature rows; no imputation",
+    "mean_hourly_load": 305.3239581326655,
+    "mean_daily_energy": 7327.774995183972
+  },
+  "units": {
+    "load_charge_discharge": "kWh per one-hour interval; numerically equal to average kW",
+    "soc_capacity": "kWh"
+  },
+  "solver": "scipy.optimize.milp with HiGHS backend",
+  "objective": "min peak + 1e-6 * sum(charge + discharge)",
+  "equivalent_full_cycles_definition": "total discharge energy / nominal capacity",
+  "battery_configs": {
+    "Small": {
+      "name": "Small",
+      "capacity": 366.3887497591986,
+      "max_charge_power": 91.59718743979965,
+      "max_discharge_power": 91.59718743979965,
+      "soc_min_fraction": 0.1,
+      "soc_max_fraction": 0.9,
+      "initial_soc_fraction": 0.5,
+      "terminal_soc_fraction": 0.5,
+      "eta_charge": 0.9486832980505138,
+      "eta_discharge": 0.9486832980505138,
+      "throughput_penalty": 1e-06,
+      "soc_min": 36.63887497591986,
+      "soc_max": 329.74987478327876,
+      "initial_soc": 183.1943748795993,
+      "terminal_soc": 183.1943748795993,
+      "round_trip_efficiency": 0.8999999999999999
+    },
+    "Medium": {
+      "name": "Medium",
+      "capacity": 732.7774995183972,
+      "max_charge_power": 183.1943748795993,
+      "max_discharge_power": 183.1943748795993,
+      "soc_min_fraction": 0.1,
+      "soc_max_fraction": 0.9,
+      "initial_soc_fraction": 0.5,
+      "terminal_soc_fraction": 0.5,
+      "eta_charge": 0.9486832980505138,
+      "eta_discharge": 0.9486832980505138,
+      "throughput_penalty": 1e-06,
+      "soc_min": 73.27774995183972,
+      "soc_max": 659.4997495665575,
+      "initial_soc": 366.3887497591986,
+      "terminal_soc": 366.3887497591986,
+      "round_trip_efficiency": 0.8999999999999999
+    },
+    "Large": {
+      "name": "Large",
+      "capacity": 1465.5549990367945,
+      "max_charge_power": 366.3887497591986,
+      "max_discharge_power": 366.3887497591986,
+      "soc_min_fraction": 0.1,
+      "soc_max_fraction": 0.9,
+      "initial_soc_fraction": 0.5,
+      "terminal_soc_fraction": 0.5,
+      "eta_charge": 0.9486832980505138,
+      "eta_discharge": 0.9486832980505138,
+      "throughput_penalty": 1e-06,
+      "soc_min": 146.55549990367945,
+      "soc_max": 1318.999499133115,
+      "initial_soc": 732.7774995183972,
+      "terminal_soc": 732.7774995183972,
+      "round_trip_efficiency": 0.8999999999999999
+    }
+  },
+  "example_day": "2017-12-11",
+  "example_day_selection_rule": "maximum LightGBM realized-peak advantage over Persistence"
+}
