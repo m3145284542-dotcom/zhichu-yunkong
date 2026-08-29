@@ -1,0 +1,248 @@
+{
+  "config": {
+    "building": "Hog_office_Rolando",
+    "target": "load at t+24h",
+    "forecast_horizon_hours": 24,
+    "train_period": {
+      "feature_time_start": "2016-01-15 00:00:00",
+      "feature_time_end": "2017-10-31 23:00:00",
+      "target_time_start": "2016-01-16 00:00:00",
+      "target_time_end": "2017-11-01 23:00:00",
+      "samples": 15573
+    },
+    "validation_period": {
+      "feature_time_start": "2017-11-01 00:00:00",
+      "feature_time_end": "2017-11-30 23:00:00",
+      "target_time_start": "2017-11-02 00:00:00",
+      "target_time_end": "2017-12-01 23:00:00",
+      "samples": 720
+    },
+    "test_period": {
+      "feature_time_start": "2017-12-01 00:00:00",
+      "feature_time_end": "2017-12-30 23:00:00",
+      "target_time_start": "2017-12-02 00:00:00",
+      "target_time_end": "2017-12-31 23:00:00",
+      "samples": 720
+    },
+    "selected_feature_set": "C: Calendar + lag + rolling",
+    "feature_list": [
+      "current_load",
+      "hour",
+      "day_of_week",
+      "day_of_month",
+      "month",
+      "day_of_year",
+      "week_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "month_sin",
+      "month_cos",
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_24",
+      "lag_48",
+      "lag_72",
+      "lag_168",
+      "lag_336",
+      "rolling_mean_3",
+      "rolling_mean_6",
+      "rolling_mean_24",
+      "rolling_mean_48",
+      "rolling_mean_168",
+      "rolling_std_24",
+      "rolling_std_168",
+      "rolling_min_24",
+      "rolling_max_24"
+    ],
+    "model": "lightgbm.LGBMRegressor (CPU)",
+    "model_parameters": {
+      "objective": "regression",
+      "n_estimators": 800,
+      "learning_rate": 0.03,
+      "num_leaves": 31,
+      "max_depth": -1,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.8,
+      "min_child_samples": 20,
+      "random_state": 42,
+      "n_jobs": 4,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "best_iteration": 382
+    },
+    "random_seed": 42,
+    "selection_rule": "lowest validation RMSE, then validation MAE; test never used"
+  },
+  "ablation": [
+    {
+      "feature_set": "A: Calendar only",
+      "n_features": 13,
+      "MAE": 13.596610534004558,
+      "RMSE": 21.530372656303314,
+      "MAPE": 3.045199970407052
+    },
+    {
+      "feature_set": "B: Calendar + lag",
+      "n_features": 22,
+      "MAE": 8.405878729360715,
+      "RMSE": 18.762331816823735,
+      "MAPE": 1.8808731699054122
+    },
+    {
+      "feature_set": "C: Calendar + lag + rolling",
+      "n_features": 31,
+      "MAE": 7.701758456284872,
+      "RMSE": 18.502979607643894,
+      "MAPE": 1.7140684229920748
+    }
+  ],
+  "candidate_validation_results": [
+    {
+      "candidate": "base",
+      "best_iteration": 382,
+      "MAE": 7.701758456284872,
+      "RMSE": 18.502979607643894,
+      "MAPE": 1.7140684229920748
+    },
+    {
+      "candidate": "regularized_small",
+      "best_iteration": 149,
+      "MAE": 8.252927454085997,
+      "RMSE": 18.63583089374595,
+      "MAPE": 1.8362492697489317
+    },
+    {
+      "candidate": "bounded_depth",
+      "best_iteration": 148,
+      "MAE": 7.898338581773545,
+      "RMSE": 18.576544056754287,
+      "MAPE": 1.757696301826867
+    }
+  ],
+  "model_comparison": [
+    {
+      "model": "Yesterday baseline",
+      "validation_MAE": 11.579166666666667,
+      "validation_RMSE": 26.921103865431174,
+      "validation_MAPE": 2.59565073947999,
+      "test_MAE": 9.86111111111111,
+      "test_RMSE": 15.5433980268866,
+      "test_MAPE": 2.338321970837698
+    },
+    {
+      "model": "Last-week baseline",
+      "validation_MAE": 10.21111111111111,
+      "validation_RMSE": 25.95187854472196,
+      "validation_MAPE": 2.2874242187034812,
+      "test_MAE": 11.993055555555555,
+      "test_RMSE": 18.385947230304875,
+      "test_MAPE": 2.9509366099616368
+    },
+    {
+      "model": "Phase 4 LightGBM",
+      "validation_MAE": 7.701758456284872,
+      "validation_RMSE": 18.502979607643894,
+      "validation_MAPE": 1.7140684229920748,
+      "test_MAE": 10.90208123095793,
+      "test_RMSE": 17.421081429536144,
+      "test_MAPE": 2.7097328290478324
+    }
+  ],
+  "improvement_vs_primary_last_week_baseline_percent": {
+    "validation": {
+      "MAE": 24.574726761083948,
+      "RMSE": 28.70273504186466,
+      "MAPE": 25.06556462169427
+    },
+    "test": {
+      "MAE": 9.096717008804758,
+      "RMSE": 5.247843848797621,
+      "MAPE": 8.17380421184107
+    }
+  },
+  "top_15_features": [
+    {
+      "feature": "current_load",
+      "importance": 4056998144.4291687
+    },
+    {
+      "feature": "lag_1",
+      "importance": 1584506439.2967834
+    },
+    {
+      "feature": "lag_2",
+      "importance": 99504795.25726318
+    },
+    {
+      "feature": "day_of_year",
+      "importance": 33049210.845794678
+    },
+    {
+      "feature": "rolling_max_24",
+      "importance": 22159355.214904785
+    },
+    {
+      "feature": "day_of_week",
+      "importance": 14824849.650375366
+    },
+    {
+      "feature": "lag_72",
+      "importance": 10032352.111114502
+    },
+    {
+      "feature": "dow_cos",
+      "importance": 8323322.474395752
+    },
+    {
+      "feature": "week_of_year",
+      "importance": 7554830.529006958
+    },
+    {
+      "feature": "lag_168",
+      "importance": 3565833.425628662
+    },
+    {
+      "feature": "lag_48",
+      "importance": 3394245.9311065674
+    },
+    {
+      "feature": "hour",
+      "importance": 2332066.7469787598
+    },
+    {
+      "feature": "rolling_mean_48",
+      "importance": 2288164.003097534
+    },
+    {
+      "feature": "lag_336",
+      "importance": 2176654.179901123
+    },
+    {
+      "feature": "rolling_min_24",
+      "importance": 2081550.4169464111
+    }
+  ],
+  "leakage_checks": {
+    "all_lag_offsets_are_positive": true,
+    "future_perturbation_does_not_change_inputs": true,
+    "rolling_windows_use_shift_1_history": true,
+    "no_scaler_used": true,
+    "model_fit_rows_are_train_only": true,
+    "validation_used_only_for_selection_and_early_stopping": true,
+    "test_not_used_for_tuning": true,
+    "test_prediction_called_once_after_selection": true,
+    "no_target_imputation_or_interpolation": true,
+    "raw_data_hash_matches_phase3": true
+  },
+  "runtime_seconds": 3.3976493000009214,
+  "versions": {
+    "python": "3.11.9",
+    "pandas": "2.3.3"
+  }
+}

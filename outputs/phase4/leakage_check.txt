@@ -1,0 +1,18 @@
+Phase 4 data leakage audit
+Forecast task: features known at origin t predict load at t+24h.
+The negative shift is used only to create the supervised target; no input feature uses a negative shift.
+Validation labels affect early stopping/model selection only, never tree gradient fitting. Test is evaluated once after selection.
+Missing target/history rows are dropped; no forward/backward fill or interpolation is used.
+
+PASS - all_lag_offsets_are_positive
+PASS - future_perturbation_does_not_change_inputs
+PASS - rolling_windows_use_shift_1_history
+PASS - no_scaler_used
+PASS - model_fit_rows_are_train_only
+PASS - validation_used_only_for_selection_and_early_stopping
+PASS - test_not_used_for_tuning
+PASS - test_prediction_called_once_after_selection
+PASS - no_target_imputation_or_interpolation
+PASS - raw_data_hash_matches_phase3
+
+Overall: PASS

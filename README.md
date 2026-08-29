@@ -64,3 +64,17 @@ python src\train_baseline.py
 ```
 
 该入口校验原始电力 CSV 的 SHA-256，分块筛选一栋建筑，按 feature timestamp 固定切分 train / validation / test，训练两个朴素基线与 CPU LightGBM，并将指标、预测和图表写入 `outputs/phase3/`。原始 CSV 只读且不会被修改。
+
+## Phase 4 — Feature Engineering and LightGBM Forecasting
+
+第四阶段继续使用 `Hog_office_Rolando` 和第三阶段的 24 小时超前预测口径、固定时间边界。输入包括日历与周期编码、过去负荷 lag（1、2、3、24、48、72、168、336 小时），以及从 `load.shift(1)` 开始计算的 3、6、24、48、168 小时滚动统计。最终特征集合由 validation 指标选择。
+
+所有 lag 偏移均为正数；rolling 在统计前先偏移 1 小时，因此不含当前值；缺失历史和目标直接删除，不插值或用未来目标填补。模型不使用 scaler，LightGBM 只用 train 样本拟合，validation 仅用于消融、少量候选选择和 early stopping，test 在方案锁定后只评估一次。
+
+运行：
+
+```powershell
+python scripts\run_phase4.py
+```
+
+结果位于 `outputs/phase4/`，包括 `model_comparison.csv`、`ablation_study.csv`、`test_prediction.csv`、`feature_importance.csv`、`leakage_check.txt`、`run_config.json`、`run_report.json` 和 `figures/` 下的五张图。该入口只读取 `data/raw/electricity_cleaned.csv`，并校验其 SHA-256 与第三阶段一致。
