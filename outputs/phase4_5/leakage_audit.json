@@ -1,0 +1,28 @@
+{
+  "finding": "Phase 4 features are causal, but its last 24 training and validation labels cross the next forecast-period start.",
+  "resolution": "Keep evaluation feature-time boundaries unchanged and purge unavailable boundary labels for Phase 4.5 fitting/selection.",
+  "historical_reference_is_not_leakage_corrected": true,
+  "test_is_not_pristine": "Phase 3 and Phase 4 test metrics already existed before Phase 4.5; Phase 4.5 never uses them for selection.",
+  "row_counts": {
+    "train_fixed_window": 15573,
+    "train_used_after_purge": 15549,
+    "validation_fixed_window": 720,
+    "validation_used_for_selection_after_purge": 696,
+    "test_fixed_window": 720
+  },
+  "checks": {
+    "raw_hash_matches_phase3_phase4": true,
+    "feature_timestamp_boundaries_unchanged": true,
+    "target_is_t_plus_24h": true,
+    "target_not_in_feature_list": true,
+    "future_perturbation_does_not_change_features": true,
+    "rolling_uses_shifted_history": true,
+    "chronological_split_no_shuffle": true,
+    "train_labels_available_before_validation_start": true,
+    "selection_labels_available_before_test_start": true,
+    "no_scaler_or_global_fitted_statistics": true,
+    "test_not_used_for_feature_or_parameter_selection": true,
+    "final_test_prediction_called_once_after_selection": true,
+    "historical_test_was_already_visible_before_phase4_5": true
+  }
+}

@@ -16,6 +16,14 @@ def split_by_feature_time(frame: pd.DataFrame) -> dict[str, pd.DataFrame]:
     }
 
 
+def purge_unavailable_targets(frame: pd.DataFrame, forecast_start: str | pd.Timestamp) -> pd.DataFrame:
+    """Keep rows whose labels are observable strictly before a forecast period starts."""
+    cutoff = pd.Timestamp(forecast_start)
+    if "target_timestamp" not in frame:
+        raise KeyError("target_timestamp")
+    return frame.loc[frame["target_timestamp"] < cutoff].copy()
+
+
 def safe_mape(actual: np.ndarray, predicted: np.ndarray) -> float:
     actual = np.asarray(actual, dtype=float)
     predicted = np.asarray(predicted, dtype=float)
@@ -48,7 +56,8 @@ def fit_lgbm(
     model.fit(
         train[features],
         train["target"],
-        eval_set=[(validation[features], validation["target"])],
+        eval_X=validation[features],
+        eval_y=validation["target"],
         eval_metric="rmse",
         callbacks=[lgb.early_stopping(50, verbose=False), lgb.log_evaluation(0)],
     )

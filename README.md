@@ -78,3 +78,19 @@ python scripts\run_phase4.py
 ```
 
 结果位于 `outputs/phase4/`，包括 `model_comparison.csv`、`ablation_study.csv`、`test_prediction.csv`、`feature_importance.csv`、`leakage_check.txt`、`run_config.json`、`run_report.json` 和 `figures/` 下的五张图。该入口只读取 `data/raw/electricity_cleaned.csv`，并校验其 SHA-256 与第三阶段一致。
+
+## Phase 4.5 - Model Diagnostics and Robustness
+
+Phase 4.5 keeps `Hog_office_Rolando`, the 24-hour horizon, and all fixed feature-time boundaries. It reproduces Phase 4 exactly, then audits boundary-label availability, runs grouped feature ablations and eight lightweight parameter checks, and produces error/curve/importance diagnostics.
+
+The audit found no future values in lag or rolling features. It did find that the final 24 labels in the historical Train and Validation windows were not yet observable at the next forecast-period start. Phase 4.5 therefore retains the evaluation windows but purges those labels during fitting and selection. Test is never used for feature or parameter selection; however, it is not a pristine blind set because Phase 3/4 test results already existed in this repository.
+
+The final benchmark retains the 31 Phase 4 features and original parameters. Validation MAE/RMSE are 7.6363/18.5041; Test MAE/RMSE are 11.5863/17.3375. Calendar removal causes the clearest degradation. Rolling features add modest value, while short-term lag features are substantially redundant with rolling history. Parameter changes produce only small, inconsistent differences, so the Phase 4 parameter set is retained. The largest Test errors cluster around the low-load Christmas period, where the model overpredicts.
+
+Run:
+
+```powershell
+python scripts\phase4_5_model_diagnostics.py
+```
+
+Machine-readable results and report-ready figures are written to `outputs/phase4_5/`. Phase 4.5 validates a reproducible LightGBM benchmark, but it does not show a robust improvement over the Phase 3 LightGBM or the yesterday persistence baseline on Test.
