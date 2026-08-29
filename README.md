@@ -106,3 +106,16 @@ Run:
     python scripts\run_phase5.py
 
 Core metrics, 720-row Medium dispatch files, constraint audit, configuration, summary, and report-ready figures are written to outputs/phase5/. The detailed interpretation is in reports/phase5_report.md.
+
+## Phase 5.5 — Robustness, Sensitivity, and Error Propagation
+
+Phase 5.5 diagnoses how frozen Phase 4 forecast errors propagate into the Phase 5 peak-shaving decisions. It does not retrain LightGBM, tune on Test, change the Test dates, or redesign the battery optimizer. LightGBM reads `outputs/phase4/test_prediction.csv`; Persistence remains `actual(t-24h)`; Oracle uses actual only as a non-deployable hindsight benchmark. Every forecast-driven schedule is evaluated on realized actual load.
+
+The analysis covers 30 daily forecast/error diagnostics, decision regret relative to Oracle, forecast-versus-decision consistency, capacity/power/round-trip-efficiency sensitivity, synthetic multiplicative forecast bias, a 10,000-resample paired daily bootstrap with seed 42, constraint audits, and three representative case studies. Decision regret is defined as `realized_peak_forecast_driven - realized_peak_oracle` in kW. Phase 5 has no price or cost objective, so Phase 5.5 does not invent an economic-regret metric.
+
+Run:
+
+    python scripts\run_phase5_5.py
+    python -m unittest discover -s tests -v
+
+All new data products are written to `outputs/phase5_5/`, figures to `outputs/phase5_5/figures/`, and the detailed interpretation to `reports/phase5_5_report.md`. The runner hashes and rechecks every Phase 4/5 output, reproduces the Phase 5 Medium baseline within `1e-8`, and fails if a frozen output changes or a battery constraint is violated.

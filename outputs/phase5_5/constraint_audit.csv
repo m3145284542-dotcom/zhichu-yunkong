@@ -1,0 +1,1411 @@
+experiment,setting,date,controller,battery_size,solver_success,soc_violations,power_violations,simultaneous_charge_discharge_violations,initial_soc_error,terminal_soc_error,initial_soc_violations,terminal_soc_violations
+baseline_reproduction,1.0x,2017-12-02,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-03,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-04,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-05,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-06,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-07,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-08,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-09,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-10,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-11,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-12,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-13,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-14,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-15,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-16,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-17,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-18,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-19,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-20,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-21,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-22,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-23,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-24,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-25,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-26,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-27,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-28,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-29,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-30,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-31,Persistence,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-02,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-03,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-04,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-05,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-06,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-07,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-08,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-09,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-10,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-11,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-12,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-13,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-14,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-15,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-16,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-17,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-18,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-19,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-20,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-21,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-22,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-23,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-24,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-25,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-26,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-27,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-28,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-29,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-30,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-31,LightGBM,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-02,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-03,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-04,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-05,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-06,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-07,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-08,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-09,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-10,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-11,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-12,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-13,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-14,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-15,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-16,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-17,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-18,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-19,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-20,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-21,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-22,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-23,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-24,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-25,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-26,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-27,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-28,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-29,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-30,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+baseline_reproduction,1.0x,2017-12-31,Oracle,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-02,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-03,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-04,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-05,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-06,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-07,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-08,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-09,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-10,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-11,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-12,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-13,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-14,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-15,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-16,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-17,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-18,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-19,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-20,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-21,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-22,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-23,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-24,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-25,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-26,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-27,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-28,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-29,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-30,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-31,Persistence,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-02,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-03,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-04,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-05,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-06,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-07,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-08,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-09,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-10,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-11,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-12,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-13,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-14,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-15,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-16,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-17,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-18,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-19,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-20,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-21,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-22,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-23,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-24,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-25,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-26,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-27,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-28,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-29,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-30,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-31,LightGBM,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-02,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-03,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-04,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-05,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-06,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-07,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-08,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-09,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-10,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-11,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-12,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-13,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-14,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-15,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-16,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-17,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-18,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-19,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-20,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-21,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-22,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-23,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-24,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-25,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-26,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-27,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-28,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-29,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-30,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.5000,2017-12-31,Oracle,capacity_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-02,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-03,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-04,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-05,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-06,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-07,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-08,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-09,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-10,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-11,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-12,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-13,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-14,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-15,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-16,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-17,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-18,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-19,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-20,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-21,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-22,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-23,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-24,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-25,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-26,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-27,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-28,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-29,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-30,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-31,Persistence,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-02,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-03,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-04,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-05,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-06,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-07,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-08,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-09,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-10,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-11,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-12,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-13,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-14,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-15,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-16,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-17,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-18,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-19,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-20,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-21,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-22,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-23,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-24,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-25,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-26,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-27,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-28,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-29,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-30,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-31,LightGBM,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-02,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-03,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-04,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-05,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-06,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-07,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-08,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-09,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-10,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-11,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-12,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-13,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-14,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-15,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-16,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-17,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-18,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-19,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-20,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-21,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-22,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-23,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-24,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-25,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-26,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-27,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-28,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-29,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-30,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,0.7500,2017-12-31,Oracle,capacity_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-02,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-03,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-04,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-05,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-06,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-07,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-08,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-09,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-10,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-11,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-12,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-13,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-14,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-15,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-16,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-17,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-18,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-19,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-20,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-21,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-22,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-23,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-24,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-25,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-26,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-27,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-28,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-29,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-30,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-31,Persistence,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-02,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-03,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-04,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-05,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-06,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-07,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-08,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-09,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-10,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-11,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-12,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-13,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-14,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-15,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-16,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-17,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-18,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-19,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-20,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-21,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-22,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-23,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-24,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-25,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-26,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-27,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-28,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-29,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-30,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-31,LightGBM,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-02,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-03,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-04,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-05,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-06,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-07,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-08,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-09,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-10,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-11,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-12,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-13,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-14,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-15,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-16,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-17,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-18,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-19,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-20,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-21,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-22,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-23,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-24,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-25,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-26,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-27,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-28,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-29,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-30,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.0000,2017-12-31,Oracle,capacity_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-02,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-03,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-04,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-05,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-06,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-07,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-08,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-09,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-10,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-11,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-12,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-13,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-14,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-15,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-16,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-17,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-18,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-19,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-20,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-21,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-22,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-23,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-24,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-25,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-26,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-27,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-28,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-29,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-30,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-31,Persistence,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-02,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-03,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-04,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-05,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-06,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-07,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-08,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-09,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-10,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-11,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-12,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-13,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-14,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-15,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-16,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-17,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-18,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-19,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-20,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-21,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-22,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-23,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-24,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-25,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-26,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-27,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-28,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-29,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-30,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-31,LightGBM,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-02,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-03,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-04,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-05,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-06,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-07,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-08,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-09,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-10,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-11,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-12,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-13,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-14,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-15,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-16,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-17,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-18,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-19,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-20,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-21,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-22,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-23,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-24,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-25,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-26,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-27,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-28,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-29,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-30,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.2500,2017-12-31,Oracle,capacity_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-02,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-03,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-04,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-05,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-06,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-07,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-08,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-09,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-10,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-11,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-12,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-13,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-14,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-15,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-16,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-17,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-18,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-19,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-20,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-21,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-22,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-23,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-24,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-25,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-26,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-27,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-28,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-29,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-30,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-31,Persistence,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-02,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-03,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-04,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-05,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-06,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-07,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-08,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-09,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-10,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-11,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-12,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-13,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-14,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-15,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-16,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-17,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-18,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-19,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-20,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-21,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-22,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-23,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-24,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-25,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-26,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-27,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-28,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-29,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-30,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-31,LightGBM,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-02,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-03,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-04,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-05,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-06,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-07,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-08,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-09,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-10,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-11,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-12,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-13,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-14,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-15,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-16,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-17,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-18,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-19,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-20,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-21,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-22,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-23,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-24,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-25,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-26,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-27,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-28,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-29,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-30,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+capacity_sensitivity,1.5000,2017-12-31,Oracle,capacity_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-02,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-03,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-04,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-05,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-06,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-07,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-08,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-09,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-10,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-11,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-12,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-13,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-14,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-15,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-16,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-17,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-18,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-19,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-20,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-21,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-22,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-23,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-24,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-25,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-26,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-27,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-28,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-29,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-30,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-31,Persistence,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-02,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-03,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-04,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-05,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-06,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-07,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-08,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-09,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-10,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-11,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-12,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-13,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-14,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-15,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-16,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-17,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-18,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-19,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-20,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-21,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-22,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-23,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-24,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-25,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-26,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-27,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-28,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-29,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-30,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-31,LightGBM,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-02,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-03,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-04,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-05,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-06,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-07,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-08,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-09,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-10,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-11,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-12,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-13,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-14,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-15,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-16,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-17,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-18,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-19,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-20,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-21,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-22,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-23,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-24,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-25,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-26,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-27,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-28,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-29,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-30,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.5000,2017-12-31,Oracle,power_0.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-02,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-03,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-04,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-05,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-06,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-07,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-08,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-09,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-10,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-11,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-12,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-13,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-14,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-15,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-16,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-17,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-18,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-19,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-20,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-21,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-22,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-23,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-24,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-25,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-26,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-27,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-28,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-29,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-30,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-31,Persistence,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-02,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-03,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-04,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-05,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-06,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-07,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-08,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-09,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-10,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-11,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-12,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-13,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-14,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-15,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-16,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-17,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-18,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-19,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-20,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-21,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-22,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-23,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-24,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-25,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-26,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-27,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-28,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-29,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-30,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-31,LightGBM,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-02,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-03,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-04,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-05,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-06,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-07,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-08,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-09,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-10,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-11,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-12,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-13,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-14,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-15,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-16,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-17,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-18,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-19,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-20,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-21,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-22,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-23,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-24,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-25,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-26,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-27,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-28,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-29,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-30,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,0.7500,2017-12-31,Oracle,power_0.75x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-02,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-03,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-04,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-05,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-06,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-07,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-08,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-09,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-10,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-11,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-12,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-13,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-14,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-15,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-16,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-17,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-18,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-19,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-20,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-21,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-22,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-23,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-24,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-25,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-26,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-27,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-28,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-29,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-30,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-31,Persistence,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-02,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-03,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-04,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-05,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-06,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-07,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-08,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-09,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-10,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-11,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-12,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-13,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-14,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-15,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-16,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-17,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-18,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-19,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-20,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-21,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-22,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-23,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-24,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-25,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-26,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-27,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-28,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-29,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-30,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-31,LightGBM,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-02,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-03,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-04,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-05,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-06,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-07,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-08,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-09,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-10,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-11,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-12,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-13,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-14,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-15,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-16,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-17,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-18,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-19,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-20,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-21,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-22,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-23,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-24,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-25,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-26,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-27,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-28,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-29,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-30,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.0000,2017-12-31,Oracle,power_1.00x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-02,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-03,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-04,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-05,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-06,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-07,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-08,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-09,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-10,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-11,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-12,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-13,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-14,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-15,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-16,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-17,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-18,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-19,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-20,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-21,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-22,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-23,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-24,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-25,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-26,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-27,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-28,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-29,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-30,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-31,Persistence,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-02,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-03,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-04,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-05,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-06,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-07,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-08,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-09,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-10,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-11,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-12,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-13,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-14,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-15,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-16,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-17,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-18,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-19,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-20,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-21,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-22,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-23,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-24,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-25,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-26,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-27,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-28,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-29,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-30,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-31,LightGBM,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-02,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-03,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-04,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-05,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-06,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-07,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-08,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-09,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-10,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-11,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-12,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-13,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-14,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-15,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-16,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-17,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-18,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-19,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-20,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-21,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-22,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-23,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-24,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-25,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-26,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-27,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-28,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-29,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-30,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.2500,2017-12-31,Oracle,power_1.25x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-02,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-03,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-04,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-05,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-06,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-07,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-08,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-09,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-10,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-11,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-12,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-13,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-14,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-15,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-16,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-17,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-18,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-19,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-20,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-21,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-22,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-23,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-24,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-25,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-26,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-27,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-28,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-29,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-30,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-31,Persistence,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-02,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-03,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-04,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-05,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-06,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-07,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-08,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-09,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-10,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-11,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-12,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-13,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-14,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-15,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-16,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-17,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-18,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-19,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-20,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-21,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-22,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-23,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-24,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-25,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-26,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-27,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-28,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-29,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-30,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-31,LightGBM,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-02,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-03,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-04,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-05,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-06,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-07,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-08,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-09,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-10,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-11,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-12,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-13,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-14,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-15,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-16,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-17,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-18,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-19,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-20,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-21,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-22,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-23,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-24,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-25,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-26,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-27,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-28,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-29,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-30,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+power_sensitivity,1.5000,2017-12-31,Oracle,power_1.50x,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-02,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-03,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-04,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-05,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-06,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-07,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-08,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-09,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-10,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-11,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-12,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-13,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-14,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-15,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-16,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-17,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-18,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-19,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-20,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-21,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-22,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-23,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-24,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-25,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-26,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-27,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-28,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-29,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-30,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-31,Persistence,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-02,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-03,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-04,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-05,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-06,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-07,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-08,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-09,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-10,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-11,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-12,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-13,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-14,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-15,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-16,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-17,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-18,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-19,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-20,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-21,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-22,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-23,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-24,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-25,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-26,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-27,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-28,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-29,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-30,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-31,LightGBM,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-02,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-03,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-04,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-05,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-06,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-07,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-08,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-09,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-10,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-11,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-12,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-13,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-14,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-15,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-16,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-17,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-18,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-19,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-20,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-21,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-22,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-23,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-24,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-25,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-26,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-27,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-28,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-29,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-30,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.8500,2017-12-31,Oracle,rte_0.85,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-02,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-03,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-04,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-05,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-06,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-07,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-08,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-09,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-10,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-11,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-12,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-13,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-14,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-15,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-16,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-17,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-18,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-19,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-20,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-21,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-22,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-23,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-24,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-25,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-26,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-27,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-28,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-29,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-30,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-31,Persistence,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-02,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-03,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-04,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-05,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-06,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-07,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-08,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-09,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-10,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-11,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-12,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-13,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-14,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-15,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-16,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-17,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-18,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-19,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-20,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-21,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-22,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-23,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-24,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-25,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-26,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-27,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-28,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-29,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-30,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-31,LightGBM,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-02,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-03,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-04,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-05,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-06,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-07,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-08,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-09,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-10,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-11,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-12,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-13,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-14,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-15,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-16,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-17,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-18,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-19,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-20,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-21,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-22,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-23,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-24,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-25,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-26,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-27,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-28,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-29,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-30,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9000,2017-12-31,Oracle,rte_0.90,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-02,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-03,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-04,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-05,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-06,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-07,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-08,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-09,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-10,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-11,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-12,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-13,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-14,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-15,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-16,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-17,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-18,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-19,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-20,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-21,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-22,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-23,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-24,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-25,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-26,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-27,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-28,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-29,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-30,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-31,Persistence,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-02,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-03,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-04,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-05,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-06,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-07,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-08,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-09,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-10,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-11,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-12,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-13,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-14,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-15,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-16,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-17,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-18,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-19,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-20,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-21,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-22,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-23,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-24,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-25,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-26,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-27,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-28,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-29,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-30,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-31,LightGBM,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-02,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-03,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-04,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-05,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-06,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-07,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-08,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-09,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-10,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-11,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-12,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-13,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-14,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-15,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-16,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-17,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-18,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-19,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-20,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-21,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-22,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-23,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-24,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-25,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-26,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-27,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-28,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-29,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-30,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+efficiency_sensitivity,0.9500,2017-12-31,Oracle,rte_0.95,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-02,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-03,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-04,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-05,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-06,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-07,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-08,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-09,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-10,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-11,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-12,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-13,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-14,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-15,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-16,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-17,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-18,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-19,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-20,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-21,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-22,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-23,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-24,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-25,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-26,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-27,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-28,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-29,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-30,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.10,2017-12-31,LightGBM bias -10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-02,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-03,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-04,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-05,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-06,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-07,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-08,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-09,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-10,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-11,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-12,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-13,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-14,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-15,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-16,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-17,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-18,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-19,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-20,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-21,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-22,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-23,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-24,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-25,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-26,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-27,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-28,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-29,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-30,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,-0.05,2017-12-31,LightGBM bias -5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-02,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-03,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-04,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-05,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-06,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-07,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-08,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-09,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-10,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-11,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-12,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-13,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-14,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-15,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-16,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-17,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-18,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-19,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-20,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-21,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-22,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-23,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-24,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-25,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-26,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-27,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-28,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-29,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-30,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.00,2017-12-31,LightGBM bias +0%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-02,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-03,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-04,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-05,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-06,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-07,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-08,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-09,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-10,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-11,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-12,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-13,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-14,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-15,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-16,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-17,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-18,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-19,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-20,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-21,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-22,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-23,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-24,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-25,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-26,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-27,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-28,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-29,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-30,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.05,2017-12-31,LightGBM bias +5%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-02,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-03,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-04,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-05,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-06,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-07,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-08,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-09,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-10,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-11,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-12,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-13,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-14,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-15,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-16,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-17,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-18,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-19,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-20,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-21,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-22,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-23,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-24,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-25,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-26,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-27,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-28,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-29,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-30,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0
+forecast_bias_stress,+0.10,2017-12-31,LightGBM bias +10%,Medium,True,0,0,0,0.0000000000,0.0000000000,0,0

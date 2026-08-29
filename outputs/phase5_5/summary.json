@@ -1,0 +1,425 @@
+{
+  "status": "PASS",
+  "phase": "Phase 5.5 robustness / sensitivity / error propagation analysis",
+  "runtime_seconds": 38.62373060000391,
+  "input_audit": {
+    "prediction_file": "outputs/phase4/test_prediction.csv",
+    "phase4_prediction_sha256": "67610a88a109d2c127b83a4de518710191afef2fd6897abfdebcc1554d44dc46",
+    "frozen_output_sha256": {
+      "outputs/phase4/ablation_study.csv": "b09149ef4faadc8fae4fde6f1f937a00f8a0fc21df18ced8f4d34cd44e0aea00",
+      "outputs/phase4/candidate_validation_results.csv": "1417d25ab5bec27b12663b663adf6cd25ee3b2b7b722386e2d8089bf105a1ca7",
+      "outputs/phase4/feature_importance.csv": "3c5fc42f3ee2477f1f368a4ae7ff5914feaeb2c5907e5323d8ebb29f3687f4c0",
+      "outputs/phase4/figures/01_test_actual_vs_prediction.png": "a2bcad62f5135525a4d53fb9fa8cddc12a66b819033d0483b60ead29a23e2fd6",
+      "outputs/phase4/figures/02_test_scatter.png": "5ae33b95eeae5418a17966c9ad872c4003472f139e88ec3fb895e3dc0a56edb8",
+      "outputs/phase4/figures/03_error_distribution.png": "f4eaf30124af3a8f17d7360ce65ba893dba27f93f1ed3c83990a856a072f2dd2",
+      "outputs/phase4/figures/04_feature_importance.png": "ef46f278bc4a2f48926a8e89288ecbd43620c8eaca573893624e3ad93da8b6d1",
+      "outputs/phase4/figures/05_week_example.png": "554ecfa8e71b70268e2d1c1ef421fcbc7f7b3794490f169a27f30020846fc578",
+      "outputs/phase4/leakage_check.txt": "2b844eae2e31c9196fc8486b49fa6405c17b687fc1cc0ff65bbb122a8e65b46f",
+      "outputs/phase4/model_comparison.csv": "49528342b4781775991b3bcd93ce4b0de756b8c59ab62ce57c9de5e919346102",
+      "outputs/phase4/run_config.json": "117b4283d2435a8ddb129e2c6c4f48240b84aee0c5c9a5f01f2f73d28e2f7428",
+      "outputs/phase4/run_report.json": "b97b5ddc7a7921c3c1b62cae0ac018a388b43f7f1cbc3c8a4e12ce9c45fd8e90",
+      "outputs/phase4/test_prediction.csv": "67610a88a109d2c127b83a4de518710191afef2fd6897abfdebcc1554d44dc46",
+      "outputs/phase5/battery_size_sensitivity.csv": "c1fedb1544c84955279d1f623c311107f27060a0f6f78b4e703ac9d024aa463d",
+      "outputs/phase5/battery_size_sensitivity.png": "4eb717ee48d77af410a6b6f01ae8358710d5a950209077a5f9586c72d117f561",
+      "outputs/phase5/constraint_audit.csv": "3ef4a33a2386421e239977f90041c1fff36e68efbfa9b00993e9a14d62c2731f",
+      "outputs/phase5/daily_metrics.csv": "9e995e320b1ee3b17c42ff80919c1a8d1cdc242b12df30f65d44f7b35d483989",
+      "outputs/phase5/daily_peak_reduction.png": "b6d0a3ff400f280b60a9d1d7c825bf5b2a849ca7264cbfbbe3160f719d0f3522",
+      "outputs/phase5/dispatch_lightgbm.csv": "9760adb305d3f059cc3450ddc8eafb1bdcb6c3d792783fb8c916b2949393af92",
+      "outputs/phase5/dispatch_oracle.csv": "9c2716ca21bf3900ec3dceb991235ed51502a2acf77a9135f9b65f65bec43a09",
+      "outputs/phase5/dispatch_persistence.csv": "9eeb421f64afd8a995d2aa0e5d0dbf45a1b2a7798e1000ea6c326a5d12556a59",
+      "outputs/phase5/example_day_dispatch.png": "362b4f338bc3aa6831ae7495267c008b6e5da10a38f5aa147982a9ccd8778a99",
+      "outputs/phase5/example_day_soc.png": "b0983dd27936c1c0fc3c2708d4ba88e4f7fd6f4a2669175b7f32d03e2c978485",
+      "outputs/phase5/forecast_metrics.csv": "230c7101c46109fb3871d7576400cae1ada63367292643500070650dce07cbd1",
+      "outputs/phase5/peak_comparison.png": "6633f40cc61ad37ce7e3213d44e409862845ddef7b3beb47f6d91564c90fde98",
+      "outputs/phase5/phase5_config.json": "40bf2243bdecc4de6ef1da9efe9e51015a7abc0cd1faecc4ffd3b5817c43c793",
+      "outputs/phase5/phase5_metrics.csv": "322575e710430e9fa87e57d96387dfddae5691e8fc8bb66305276ac742732a83",
+      "outputs/phase5/phase5_summary.json": "de1601c7eb727ed9841747e297b97f6bd48b6da6dbd16a9ba82072653a737b12"
+    },
+    "timestamp_semantics": "target timestamp t+24h, not feature timestamp",
+    "test_start": "2017-12-02 00:00:00",
+    "test_end": "2017-12-31 23:00:00",
+    "hours": 720,
+    "days": 30,
+    "hours_per_day": 24,
+    "actual_matches_raw_load": true
+  },
+  "methodology": {
+    "decision_regret_definition": "realized_peak_forecast_driven - realized_peak_oracle (kW)",
+    "peak_reduction_regret_definition": "oracle_peak_reduction - forecast_driven_peak_reduction (kW)",
+    "realized_evaluation_load": "actual",
+    "oracle_role": "perfect-information hindsight benchmark; not deployable",
+    "daily_optimization": "30 independent 24-hour optimizations with daily SOC reset",
+    "economic_regret": "not applicable because Phase 5 has no price, cost, saving, or economic objective"
+  },
+  "battery_baseline_configuration": {
+    "name": "Medium",
+    "capacity": 732.7774995183972,
+    "max_charge_power": 183.1943748795993,
+    "max_discharge_power": 183.1943748795993,
+    "soc_min_fraction": 0.1,
+    "soc_max_fraction": 0.9,
+    "initial_soc_fraction": 0.5,
+    "terminal_soc_fraction": 0.5,
+    "eta_charge": 0.9486832980505138,
+    "eta_discharge": 0.9486832980505138,
+    "throughput_penalty": 1e-06,
+    "soc_min": 73.27774995183972,
+    "soc_max": 659.4997495665575,
+    "initial_soc": 366.3887497591986,
+    "terminal_soc": 366.3887497591986,
+    "round_trip_efficiency": 0.8999999999999999
+  },
+  "baseline_reproduction": {
+    "passed": true,
+    "tolerance": 1e-08,
+    "daily_metrics_maximum_absolute_difference": 4.990852175978944e-11,
+    "dispatch_maximum_absolute_difference": {
+      "Persistence": 4.990852175978944e-11,
+      "LightGBM": 4.993605529080014e-11,
+      "Oracle": 4.990852175978944e-11
+    },
+    "maximum_absolute_difference": 4.993605529080014e-11
+  },
+  "daily_robustness": {
+    "lightgbm_average_decision_regret_kw": 10.55925211843087,
+    "persistence_average_decision_regret_kw": 14.431394487544319,
+    "oracle_average_realized_peak_kw": 420.17178387713477,
+    "lightgbm_win_days": 19,
+    "persistence_win_days": 11,
+    "lightgbm_worst_regret_date": "2017-12-22",
+    "persistence_worst_regret_date": "2017-12-02"
+  },
+  "error_to_decision_relationship": {
+    "LightGBM": {
+      "forecast_mae": {
+        "pearson_correlation": 0.5440416501723824,
+        "pearson_pvalue_descriptive_only": 0.0018854419934267027,
+        "spearman_correlation": 0.45850945494994433,
+        "spearman_pvalue_descriptive_only": 0.010825175981410595,
+        "days": 30
+      },
+      "forecast_rmse": {
+        "pearson_correlation": 0.5857008013437682,
+        "pearson_pvalue_descriptive_only": 0.0006727349110644204,
+        "spearman_correlation": 0.48565072302558404,
+        "spearman_pvalue_descriptive_only": 0.0065161279405272264,
+        "days": 30
+      }
+    },
+    "Persistence": {
+      "forecast_mae": {
+        "pearson_correlation": 0.9253790514599949,
+        "pearson_pvalue_descriptive_only": 2.5647468963236913e-13,
+        "spearman_correlation": 0.8549499443826475,
+        "spearman_pvalue_descriptive_only": 1.7999473889701586e-09,
+        "days": 30
+      },
+      "forecast_rmse": {
+        "pearson_correlation": 0.9268668869551807,
+        "pearson_pvalue_descriptive_only": 1.9527310355793485e-13,
+        "spearman_correlation": 0.8531701890989989,
+        "spearman_pvalue_descriptive_only": 2.1105653515673326e-09,
+        "days": 30
+      }
+    }
+  },
+  "forecast_to_decision_consistency": {
+    "lightgbm_forecast_mae_win_days": 16,
+    "lightgbm_decision_regret_win_days": 19,
+    "forecast better / decision better": 14,
+    "forecast better / decision worse": 2,
+    "forecast worse / decision better": 5,
+    "forecast worse / decision worse": 9
+  },
+  "battery_sensitivity": {
+    "capacity_mean_realized_peak_kw": {
+      "0.5": {
+        "LightGBM": 432.4814459707089,
+        "Oracle": 422.5153600782964,
+        "Persistence": 436.48888239057834
+      },
+      "0.75": {
+        "LightGBM": 430.8362286780483,
+        "Oracle": 420.53548039188354,
+        "Persistence": 434.870165234027
+      },
+      "1.0": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646792
+      },
+      "1.25": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646791
+      },
+      "1.5": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.1717838771348,
+        "Persistence": 434.60317836467914
+      }
+    },
+    "power_mean_realized_peak_kw": {
+      "0.5": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646792
+      },
+      "0.75": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646792
+      },
+      "1.0": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646792
+      },
+      "1.25": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646792
+      },
+      "1.5": {
+        "LightGBM": 430.7310359955656,
+        "Oracle": 420.17178387713477,
+        "Persistence": 434.6031783646792
+      }
+    },
+    "efficiency_round_trip_values": [
+      0.85,
+      0.9,
+      0.95
+    ]
+  },
+  "forecast_bias_stress": [
+    {
+      "bias": -0.1,
+      "bias_percent": -10.0,
+      "prediction_clipped_at_zero": true,
+      "clipped_value_count": 0,
+      "mean_realized_peak_kw": 430.65932353428616,
+      "max_realized_peak_kw": 453.29967155263324,
+      "mean_peak_reduction_kw": 12.074009799047149,
+      "mean_peak_reduction_pct": 2.5662251912565526,
+      "mean_decision_regret_kw": 10.487539657151398,
+      "total_charge_energy_kwh": 4415.739152560207,
+      "total_discharge_energy_kwh": 3974.1652373042216,
+      "baseline_max_abs_difference": 0.0
+    },
+    {
+      "bias": -0.05,
+      "bias_percent": -5.0,
+      "prediction_clipped_at_zero": true,
+      "clipped_value_count": 0,
+      "mean_realized_peak_kw": 430.5800865771658,
+      "max_realized_peak_kw": 451.9829866388906,
+      "mean_peak_reduction_kw": 12.153246756167562,
+      "mean_peak_reduction_pct": 2.5781907393005117,
+      "mean_decision_regret_kw": 10.408302700030985,
+      "total_charge_energy_kwh": 4661.057994369105,
+      "total_discharge_energy_kwh": 4194.952194932233,
+      "baseline_max_abs_difference": 0.0
+    },
+    {
+      "bias": 0.0,
+      "bias_percent": 0.0,
+      "prediction_clipped_at_zero": true,
+      "clipped_value_count": 0,
+      "mean_realized_peak_kw": 430.7310359955656,
+      "max_realized_peak_kw": 451.2604385215491,
+      "mean_peak_reduction_kw": 12.002297337767677,
+      "mean_peak_reduction_pct": 2.541179171985936,
+      "mean_decision_regret_kw": 10.55925211843087,
+      "total_charge_energy_kwh": 4906.376836177999,
+      "total_discharge_energy_kwh": 4415.739152560252,
+      "baseline_max_abs_difference": 0.0
+    },
+    {
+      "bias": 0.05,
+      "bias_percent": 5.0,
+      "prediction_clipped_at_zero": true,
+      "clipped_value_count": 0,
+      "mean_realized_peak_kw": 430.9917513922339,
+      "max_realized_peak_kw": 452.4234604476266,
+      "mean_peak_reduction_kw": 11.741581941099346,
+      "mean_peak_reduction_pct": 2.48052397581837,
+      "mean_decision_regret_kw": 10.8199675150992,
+      "total_charge_energy_kwh": 5151.695677986903,
+      "total_discharge_energy_kwh": 4636.526110188262,
+      "baseline_max_abs_difference": 0.0
+    },
+    {
+      "bias": 0.1,
+      "bias_percent": 10.0,
+      "prediction_clipped_at_zero": true,
+      "clipped_value_count": 0,
+      "mean_realized_peak_kw": 431.29412066331014,
+      "max_realized_peak_kw": 453.586482373704,
+      "mean_peak_reduction_kw": 11.43921267002323,
+      "mean_peak_reduction_pct": 2.410798111596411,
+      "mean_decision_regret_kw": 11.122336786175318,
+      "total_charge_energy_kwh": 5397.0145197958145,
+      "total_discharge_energy_kwh": 4857.313067816266,
+      "baseline_max_abs_difference": 0.0
+    }
+  ],
+  "bootstrap": {
+    "metric": "Persistence decision regret - LightGBM decision regret (kW)",
+    "resampling_unit": "day",
+    "days": 30,
+    "seed": 42,
+    "resamples": 10000,
+    "mean_paired_difference": 3.8721423691134493,
+    "median_paired_difference": 2.1623312146305693,
+    "bootstrap_95_ci_lower": 0.47137478759126206,
+    "bootstrap_95_ci_upper": 7.453706863459359,
+    "lightgbm_win_days": 19,
+    "persistence_win_days": 11,
+    "tie_days": 0
+  },
+  "case_studies": [
+    {
+      "date": "2017-12-22",
+      "reason": "largest LightGBM decision regret"
+    },
+    {
+      "date": "2017-12-11",
+      "reason": "largest LightGBM improvement over Persistence"
+    },
+    {
+      "date": "2017-12-25",
+      "reason": "largest LightGBM deterioration versus Persistence"
+    }
+  ],
+  "anomalous_date_top3": [
+    {
+      "category": "largest LightGBM decision regret",
+      "rank": 1,
+      "date": "2017-12-22",
+      "lgbm_forecast_mae": 16.137756035636738,
+      "persistence_forecast_mae": 18.791666666666668,
+      "lgbm_decision_regret": 28.05472747052687,
+      "persistence_decision_regret": 29.110758688203646,
+      "decision_regret_improvement": 1.0560312176767752
+    },
+    {
+      "category": "largest LightGBM decision regret",
+      "rank": 2,
+      "date": "2017-12-27",
+      "lgbm_forecast_mae": 31.189333493502243,
+      "persistence_forecast_mae": 14.166666666666666,
+      "lgbm_decision_regret": 23.628594890191266,
+      "persistence_decision_regret": 14.435618502917578,
+      "decision_regret_improvement": -9.192976387273688
+    },
+    {
+      "category": "largest LightGBM decision regret",
+      "rank": 3,
+      "date": "2017-12-25",
+      "lgbm_forecast_mae": 50.421824772789286,
+      "persistence_forecast_mae": 3.9166666666666665,
+      "lgbm_decision_regret": 21.615846111694566,
+      "persistence_decision_regret": 3.9342105263157805,
+      "decision_regret_improvement": -17.681635585378785
+    },
+    {
+      "category": "largest Persistence decision regret",
+      "rank": 1,
+      "date": "2017-12-02",
+      "lgbm_forecast_mae": 6.9047031089442115,
+      "persistence_forecast_mae": 25.125,
+      "lgbm_decision_regret": 11.057638967367723,
+      "persistence_decision_regret": 34.127753303964596,
+      "decision_regret_improvement": 23.070114336596873
+    },
+    {
+      "category": "largest Persistence decision regret",
+      "rank": 2,
+      "date": "2017-12-11",
+      "lgbm_forecast_mae": 2.9878143203958345,
+      "persistence_forecast_mae": 20.291666666666668,
+      "lgbm_decision_regret": 7.169271379300881,
+      "persistence_decision_regret": 30.322281474611714,
+      "decision_regret_improvement": 23.153010095310833
+    },
+    {
+      "category": "largest Persistence decision regret",
+      "rank": 3,
+      "date": "2017-12-22",
+      "lgbm_forecast_mae": 16.137756035636738,
+      "persistence_forecast_mae": 18.791666666666668,
+      "lgbm_decision_regret": 28.05472747052687,
+      "persistence_decision_regret": 29.110758688203646,
+      "decision_regret_improvement": 1.0560312176767752
+    },
+    {
+      "category": "largest LightGBM improvement over Persistence",
+      "rank": 1,
+      "date": "2017-12-11",
+      "lgbm_forecast_mae": 2.9878143203958345,
+      "persistence_forecast_mae": 20.291666666666668,
+      "lgbm_decision_regret": 7.169271379300881,
+      "persistence_decision_regret": 30.322281474611714,
+      "decision_regret_improvement": 23.153010095310833
+    },
+    {
+      "category": "largest LightGBM improvement over Persistence",
+      "rank": 2,
+      "date": "2017-12-02",
+      "lgbm_forecast_mae": 6.9047031089442115,
+      "persistence_forecast_mae": 25.125,
+      "lgbm_decision_regret": 11.057638967367723,
+      "persistence_decision_regret": 34.127753303964596,
+      "decision_regret_improvement": 23.070114336596873
+    },
+    {
+      "category": "largest LightGBM improvement over Persistence",
+      "rank": 3,
+      "date": "2017-12-18",
+      "lgbm_forecast_mae": 3.5972139241046768,
+      "persistence_forecast_mae": 20.75,
+      "lgbm_decision_regret": 6.283600434340542,
+      "persistence_decision_regret": 26.295154185022113,
+      "decision_regret_improvement": 20.01155375068157
+    },
+    {
+      "category": "largest LightGBM deterioration versus Persistence",
+      "rank": 1,
+      "date": "2017-12-25",
+      "lgbm_forecast_mae": 50.421824772789286,
+      "persistence_forecast_mae": 3.9166666666666665,
+      "lgbm_decision_regret": 21.615846111694566,
+      "persistence_decision_regret": 3.9342105263157805,
+      "decision_regret_improvement": -17.681635585378785
+    },
+    {
+      "category": "largest LightGBM deterioration versus Persistence",
+      "rank": 2,
+      "date": "2017-12-27",
+      "lgbm_forecast_mae": 31.189333493502243,
+      "persistence_forecast_mae": 14.166666666666666,
+      "lgbm_decision_regret": 23.628594890191266,
+      "persistence_decision_regret": 14.435618502917578,
+      "decision_regret_improvement": -9.192976387273688
+    },
+    {
+      "category": "largest LightGBM deterioration versus Persistence",
+      "rank": 3,
+      "date": "2017-12-29",
+      "lgbm_forecast_mae": 12.015950423906858,
+      "persistence_forecast_mae": 2.9166666666666665,
+      "lgbm_decision_regret": 13.430999071341489,
+      "persistence_decision_regret": 5.809773327123082,
+      "decision_regret_improvement": -7.621225744218407
+    }
+  ],
+  "constraint_totals": {
+    "solver_failures": 0,
+    "soc_violations": 0,
+    "power_violations": 0,
+    "simultaneous_charge_discharge_violations": 0,
+    "initial_soc_violations": 0,
+    "terminal_soc_violations": 0
+  }
+}

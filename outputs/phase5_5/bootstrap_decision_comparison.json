@@ -1,0 +1,14 @@
+{
+  "metric": "Persistence decision regret - LightGBM decision regret (kW)",
+  "resampling_unit": "day",
+  "days": 30,
+  "seed": 42,
+  "resamples": 10000,
+  "mean_paired_difference": 3.8721423691134493,
+  "median_paired_difference": 2.1623312146305693,
+  "bootstrap_95_ci_lower": 0.47137478759126206,
+  "bootstrap_95_ci_upper": 7.453706863459359,
+  "lightgbm_win_days": 19,
+  "persistence_win_days": 11,
+  "tie_days": 0
+}
