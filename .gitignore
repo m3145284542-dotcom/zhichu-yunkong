@@ -1,0 +1,26 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mplconfig/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+.DS_Store
+*.tmp
+*.temp
+*.log
+
+# Large source data: keep the directory and reproducible scripts, not CSV payloads.
+data/raw/*
+!data/raw/.gitkeep
+

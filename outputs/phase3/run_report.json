@@ -1,0 +1,151 @@
+{
+  "building": "Hog_office_Rolando",
+  "selection": {
+    "building": "Hog_office_Rolando",
+    "non_null_count": 17543,
+    "missing_count": 1,
+    "missing_rate": 5.699954400364797e-05,
+    "mean": 309.8665564612666,
+    "std": 164.71748888141948,
+    "min": 51.0,
+    "max": 853.0,
+    "zero_ratio": 0.0,
+    "negative_count": 0,
+    "obvious_extreme": false,
+    "train_non_null": 16079,
+    "validation_non_null": 720,
+    "test_non_null": 744,
+    "screening_score": 88.98339674200923,
+    "selected": true,
+    "selection_score": 99.68028958884172,
+    "train_daily_autocorrelation": 0.9907783567975552,
+    "train_weekly_autocorrelation": 0.9731213474763276,
+    "train_robust_extreme_rate": 0.0,
+    "train_cv": 0.5610047762164591
+  },
+  "selection_reason": "满足低缺失、充分波动、低零值、无负值、无明显严重极值及完整测试期条件后，确定性质量得分最高。",
+  "cleaning": {
+    "duplicate_timestamps": 0,
+    "missing_hours": 0,
+    "missing_load": 1,
+    "negative_load": 0,
+    "interpolation": "none",
+    "selected_building_extreme_threshold_q3_plus_20_iqr": 7066.0,
+    "selected_building_extreme_count": 0
+  },
+  "supervised_samples": 17182,
+  "alignment_sample": {
+    "feature_timestamp": "2017-01-07 01:00:00",
+    "current_load": 433.0,
+    "target_timestamp": "2017-01-08 01:00:00",
+    "target_load": 421.0
+  },
+  "splits": {
+    "train": {
+      "start": "2016-01-08 00:00:00",
+      "end": "2017-10-31 23:00:00",
+      "samples": 15742
+    },
+    "validation": {
+      "start": "2017-11-01 00:00:00",
+      "end": "2017-11-30 23:00:00",
+      "samples": 720
+    },
+    "test": {
+      "start": "2017-12-01 00:00:00",
+      "end": "2017-12-30 23:00:00",
+      "samples": 720
+    }
+  },
+  "model": "lightgbm.LGBMRegressor",
+  "model_params": {
+    "objective": "regression",
+    "n_estimators": 600,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": 8,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.9,
+    "random_state": 42,
+    "n_jobs": 4,
+    "verbosity": -1
+  },
+  "best_iteration": 370,
+  "metrics": [
+    {
+      "model": "Yesterday baseline",
+      "split": "validation",
+      "MAE": 11.579166666666667,
+      "RMSE": 26.921103865431174,
+      "sMAPE": 2.5737109116990826
+    },
+    {
+      "model": "Last-week baseline",
+      "split": "validation",
+      "MAE": 10.21111111111111,
+      "RMSE": 25.95187854472196,
+      "sMAPE": 2.264789976847811
+    },
+    {
+      "model": "LightGBM",
+      "split": "validation",
+      "MAE": 7.6812771735654195,
+      "RMSE": 18.27708785883606,
+      "sMAPE": 1.722330459181666
+    },
+    {
+      "model": "Yesterday baseline",
+      "split": "test",
+      "MAE": 9.86111111111111,
+      "RMSE": 15.5433980268866,
+      "sMAPE": 2.320600182195729
+    },
+    {
+      "model": "Last-week baseline",
+      "split": "test",
+      "MAE": 11.993055555555555,
+      "RMSE": 18.385947230304875,
+      "sMAPE": 2.8614254550168874
+    },
+    {
+      "model": "LightGBM",
+      "split": "test",
+      "MAE": 10.570016519435349,
+      "RMSE": 15.711327357874778,
+      "sMAPE": 2.5419875625966832
+    }
+  ],
+  "improvements_percent": {
+    "Yesterday baseline": {
+      "MAE": -7.188899915400724,
+      "RMSE": -1.0803900839295115
+    },
+    "Last-week baseline": {
+      "MAE": 11.865525257748104,
+      "RMSE": 14.547087723724243
+    }
+  },
+  "leakage_checks": {
+    "target_is_exactly_t_plus_24h": true,
+    "target_value_matches_source_t_plus_24h": true,
+    "all_lags_use_t_or_earlier": true,
+    "rolling_shift_before_window": true,
+    "no_scaler_used": true,
+    "test_not_used_for_feature_selection": true,
+    "test_not_used_for_tuning_or_early_stopping": true,
+    "chronological_split_no_shuffle": true,
+    "no_test_statistics_used_for_imputation": true,
+    "no_interpolation_or_imputation": true
+  },
+  "acceptance": "PASS",
+  "training_seconds": 0.33521469999686815,
+  "total_seconds": 5.06919509999716,
+  "versions": {
+    "python": "3.12.13",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "random_seed": 42
+  }
+}
