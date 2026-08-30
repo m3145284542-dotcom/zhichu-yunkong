@@ -17,6 +17,7 @@ from src.phase5_5 import (
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "phase5_5"
+TEXT_SUFFIXES = {".csv", ".json", ".md", ".txt"}
 
 
 def sha256(path: Path) -> str:
@@ -25,6 +26,23 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def matches_frozen_sha256(path: Path, expected: str) -> bool:
+    """Match historical byte hashes without treating CRLF/LF as a content change.
+
+    Phase 5.5 froze hashes on a Windows working tree. GitHub Actions checks out
+    normalized text with LF on Linux, so byte-identical scientific artifacts can
+    otherwise fail solely because of line endings. Binary files remain strict.
+    """
+    if sha256(path) == expected:
+        return True
+    if path.suffix.lower() not in TEXT_SUFFIXES:
+        return False
+    data = path.read_bytes()
+    lf = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    crlf = lf.replace(b"\n", b"\r\n")
+    return hashlib.sha256(crlf).hexdigest() == expected
 
 
 class Phase55UnitTests(unittest.TestCase):
@@ -39,6 +57,18 @@ class Phase55UnitTests(unittest.TestCase):
     def test_frozen_bootstrap_configuration(self) -> None:
         self.assertEqual(BOOTSTRAP_SEED, 42)
         self.assertEqual(BOOTSTRAP_RESAMPLES, 10_000)
+
+    def test_frozen_hash_match_only_normalizes_text_line_endings(self) -> None:
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "example.csv"
+            windows_bytes = b"a,b\r\n1,2\r\n"
+            expected = hashlib.sha256(windows_bytes).hexdigest()
+            path.write_bytes(b"a,b\n1,2\n")
+            self.assertTrue(matches_frozen_sha256(path, expected))
+            path.write_bytes(b"a,b\n1,3\n")
+            self.assertFalse(matches_frozen_sha256(path, expected))
 
 
 class Phase55AcceptanceTests(unittest.TestCase):
@@ -74,12 +104,14 @@ class Phase55AcceptanceTests(unittest.TestCase):
     def test_phase4_and_phase5_outputs_are_unchanged(self) -> None:
         hashes = self.summary["input_audit"]["frozen_output_sha256"]
         for relative, expected in hashes.items():
-            self.assertEqual(sha256(ROOT / relative), expected, relative)
+            self.assertTrue(matches_frozen_sha256(ROOT / relative, expected), relative)
 
     def test_saved_prediction_was_used_without_retraining(self) -> None:
-        self.assertEqual(
-            self.summary["input_audit"]["phase4_prediction_sha256"],
-            sha256(ROOT / "outputs" / "phase4" / "test_prediction.csv"),
+        self.assertTrue(
+            matches_frozen_sha256(
+                ROOT / "outputs" / "phase4" / "test_prediction.csv",
+                self.summary["input_audit"]["phase4_prediction_sha256"],
+            )
         )
         source = (ROOT / "src" / "phase5_5.py").read_text(encoding="utf-8")
         self.assertNotIn("fit_lgbm(", source)
