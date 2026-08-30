@@ -18,6 +18,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: phase6-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   phase6:
     runs-on: ubuntu-latest
