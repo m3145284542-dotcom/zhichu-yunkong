@@ -10,7 +10,7 @@
 
 ## 3. 数据与时间切分
 
-预测 horizon 为 24h，`target_timestamp = feature_timestamp + 24h`。Validation target 为 2017-11-02 00:00:00 至 2017-12-01 23:00:00，共 720 小时/30 个完整自然日；Test target 为 2017-12-02 至 2017-12-31，共 720 小时/30 日。
+预测 horizon 为 24h，`target_timestamp = feature_timestamp + 24h`。Validation feature-time 为 2017-11-01 00:00:00 至 2017-11-30 23:00:00；对应的 Validation target-time 为 2017-11-02 00:00:00 至 2017-12-01 23:00:00，共 720 小时/30 个完整自然日。feature-time 与 target-time 相差 24 小时是由 `t -> t+24h` 的预测定义自然产生的，不是时间错位或数据泄漏。Test target 为 2017-12-02 至 2017-12-31，共 720 小时/30 日。
 
 ## 4. 防止数据泄漏措施
 
@@ -30,7 +30,9 @@ Validation residual 均值 -0.1650 kW，标准差 18.5162 kW，MAE 7.6363 kW，R
 
 ## 8. Parameter-selection procedure
 
-Among candidates with Validation mean daily realized peak <= deterministic Validation mean * 1.01, minimize Validation worst-10% daily realized peak; tie-break by mean daily peak then smaller lambda. Test is not accessed. 选中 lambda=0.5, alpha=0.9, scenarios=100。
+预先冻结的选择规则为：在 Validation mean daily realized peak 不超过确定性 Validation 均值 1.01 倍的候选中，最小化 Validation worst-10% daily realized peak；如相同，再依次按 mean daily peak 和较小 lambda 破同分。Test 未参与选择。最终配置为 lambda=0.5、alpha=0.9、scenarios=100。
+
+lambda=0.5 是按照预先冻结的 Validation 选择规则确定的最终配置，但其相对于 lambda=0.25 的 Validation tail 优势仅约 0.0414 kW，因此不能描述为显著优于邻近参数。
 
 | lambda | validation_mean_daily_peak | validation_worst_10pct_daily_peak | validation_mean_regret | validation_throughput | eligible |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +56,11 @@ Among candidates with Validation mean daily realized peak <= deterministic Valid
 
 ## 10. Robustness / tail-risk analysis
 
-鲁棒相对确定性的 worst-10% 日峰值变化为 +9.5642 kW（负值表示改善），worst daily peak 与 regret 尾部见上表。结果不预设鲁棒必胜。
+Phase 5.7 表明，显式引入预测不确定性并不必然改善储能削峰。基于 Validation 24h residual block bootstrap 与 CVaR 构建的鲁棒策略，在独立 Test 上的平均日峰值、worst-10% 日峰值和 decision regret 均劣于确定性 LightGBM 调度。因此，本实验不能支持“鲁棒优化提高了削峰性能”这一结论。
+
+鲁棒相对确定性的 worst-10% 日峰值变化为 +9.5642 kW（负值表示改善），worst daily peak 与 regret 尾部见上表。Validation sensitivity 中，从 lambda=0 增加到最终 lambda=0.5 时，robust throughput 从约 15253.9 增加到 19274.5 kWh，但实际削峰反而更差。因此，性能下降并非主要来自电池使用不足，而更可能来自 Validation residual scenarios 与 Test 中真正影响峰值决策的误差结构之间存在分布偏移，导致有限储能资源被分配到错误的时段。这里的分布偏移解释是与观测结果一致的机制推测，而不是由当前实验直接识别出的因果事实。
+
+方法学上，历史残差重采样在流程上可以是无泄漏、可复现的，但并不能保证构造出具有 out-of-sample 决策价值的不确定性集合。
 
 ## 11. Paired daily comparison
 
@@ -66,7 +72,7 @@ solver failure、SOC 上下界、充放电功率、同时充放电、SOC transit
 
 ## 13. Sensitivity experiment
 
-lambda sensitivity 完全在 Validation 上完成。表中同时给出 average peak、worst-10% tail peak、mean regret 与 throughput；其变化可能非单调，因为共享 dispatch、离散充放电互斥和有限样本 CVaR 共同作用，不能据 Test 曲线反调参数。
+lambda sensitivity 完全在 Validation 上完成。表中同时给出 average peak、worst-10% tail peak、mean regret 与 throughput；从 lambda=0 到 lambda=0.5，throughput 由 15253.9224 增至 19274.5485 kWh，而 Validation mean peak 和 mean regret 同时恶化，只有 tail peak 小幅下降。其变化可能非单调，因为共享 dispatch、离散充放电互斥和有限样本 CVaR 共同作用，不能据 Test 曲线反调参数。
 
 ## 14. Success-day case study
 
@@ -78,8 +84,10 @@ lambda sensitivity 完全在 Validation 上完成。表中同时给出 average p
 
 ## 16. Limitations
 
-仅覆盖一个建筑、一个 30 日 Test 窗口和一个冻结电池尺寸；Validation block 仅 30 个，bootstrap 不能创造未见过的误差形态。模型是风险感知情景优化而非对所有可能扰动的硬 worst-case 保证。日初 SOC 每天重置，未研究跨日能量耦合；也未引入电价或退化成本。
+本实验的适用范围严格限于单建筑 `Hog_office_Rolando`、30 日 Test、30 个 Validation residual day blocks、Phase 5 Medium battery、daily SOC reset，以及当前 scenario-based CVaR formulation。Validation block bootstrap 不能创造历史样本中未出现的误差形态，模型也不是对所有可能扰动的硬 worst-case 保证。实验未研究其他建筑、季节、时间窗口、电池尺寸、跨日能量耦合、scenario construction、风险目标、电价或退化成本。因此，当前负面结果不得外推为“鲁棒优化普遍无效”。
 
 ## 17. Competition-report-safe conclusions
 
-本 Test 窗口中鲁棒调度未改善平均日峰值。 鲁棒相对确定性的平均 regret 变化为 +9.3361 kW，worst-10% 日峰值变化为 +9.5642 kW。该结论只描述冻结协议下的本建筑、本时间窗实证结果，不能外推为鲁棒优化普遍优于确定性调度，也不能把 Oracle 描述为可部署方案。
+Phase 5.7 表明，显式引入预测不确定性并不必然改善储能削峰。基于 Validation 24h residual block bootstrap 与 CVaR 构建的鲁棒策略，在独立 Test 上的平均日峰值、worst-10% 日峰值和 decision regret 均劣于确定性 LightGBM 调度。因此，本实验不能支持“鲁棒优化提高了削峰性能”这一结论。
+
+具体而言，鲁棒相对确定性的平均 regret 变化为 +9.3361 kW，worst-10% 日峰值变化为 +9.5642 kW。该结论仅适用于 `Hog_office_Rolando`、30 日 Test、30 个 Validation residual day blocks、Medium battery、daily SOC reset 和当前 scenario-based CVaR formulation，不得外推为“鲁棒优化普遍无效”。Oracle 仍只是不可部署的 hindsight theoretical upper bound。
