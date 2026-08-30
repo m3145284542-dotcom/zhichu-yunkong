@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "phase": "Phase 5.6 forecast lineage repair and downstream regression audit",
+  "runtime_seconds": 6.815301900000122,
+  "finding": "Phase 5 consumed Phase 4 prediction instead of the Phase 4.5 leakage-audited final prediction.",
+  "resolution": {
+    "historical_baseline": "Phase 4 is retained unchanged as the historical baseline.",
+    "canonical_artifact": "outputs/phase4_5/final_predictions.csv",
+    "rule": "Phase 4.5 is canonical because its boundary-label availability protocol is stricter, not because of downstream Test performance."
+  },
+  "lineage": {
+    "canonical_phase": "Phase 4.5",
+    "prediction_file": "outputs/phase4_5/final_predictions.csv",
+    "config_file": "outputs/phase4_5/final_config.json",
+    "prediction_sha256": "2a0f868e40d9ee63b5d750720c9602ed13f4792176f1f144b57d4e8ffe5547de",
+    "config_sha256": "414bce43e889b78940ebf0f17588d66eff624b4348e144ce424816801786fffa",
+    "timestamp_semantics": "timestamp is Phase 4.5 target_timestamp (feature_timestamp + 24h)",
+    "rows": 720,
+    "days": 30,
+    "hours_per_day": 24,
+    "forecast_horizon_hours": 24,
+    "selection_protocol": {
+      "train_target_cutoff_exclusive": "2017-11-01 00:00:00",
+      "validation_target_cutoff_exclusive": "2017-12-01 00:00:00",
+      "test_used_for_selection": false,
+      "final_refit_rows": 16269
+    }
+  },
+  "audit_findings": {
+    "phase4_5_test_feature_period": "2017-12-01 00:00:00 to 2017-12-30 23:00:00",
+    "phase4_5_test_target_period": "2017-12-02 00:00:00 to 2017-12-31 23:00:00",
+    "phase4_and_phase4_5_timestamps_identical": true,
+    "phase4_and_phase4_5_actual_identical": true,
+    "phase4_and_phase4_5_predictions_identical": false,
+    "changed_prediction_rows": 720,
+    "prediction_max_absolute_difference": 18.305803311122702,
+    "train_boundary_labels_purged": true,
+    "validation_boundary_labels_purged": true,
+    "test_used_for_selection": false,
+    "historical_phase5_input_prediction_file": "outputs/phase4/test_prediction.csv"
+  },
+  "frozen_phase5_experiment": {
+    "source_config": "outputs/phase5/phase5_config.json",
+    "source_config_sha256": "40bf2243bdecc4de6ef1da9efe9e51015a7abc0cd1faecc4ffd3b5817c43c793",
+    "battery_configs": {
+      "Small": {
+        "name": "Small",
+        "capacity": 366.3887497591986,
+        "max_charge_power": 91.59718743979965,
+        "max_discharge_power": 91.59718743979965,
+        "soc_min_fraction": 0.1,
+        "soc_max_fraction": 0.9,
+        "initial_soc_fraction": 0.5,
+        "terminal_soc_fraction": 0.5,
+        "eta_charge": 0.9486832980505138,
+        "eta_discharge": 0.9486832980505138,
+        "throughput_penalty": 1e-06,
+        "soc_min": 36.63887497591986,
+        "soc_max": 329.74987478327876,
+        "initial_soc": 183.1943748795993,
+        "terminal_soc": 183.1943748795993,
+        "round_trip_efficiency": 0.8999999999999999
+      },
+      "Medium": {
+        "name": "Medium",
+        "capacity": 732.7774995183972,
+        "max_charge_power": 183.1943748795993,
+        "max_discharge_power": 183.1943748795993,
+        "soc_min_fraction": 0.1,
+        "soc_max_fraction": 0.9,
+        "initial_soc_fraction": 0.5,
+        "terminal_soc_fraction": 0.5,
+        "eta_charge": 0.9486832980505138,
+        "eta_discharge": 0.9486832980505138,
+        "throughput_penalty": 1e-06,
+        "soc_min": 73.27774995183972,
+        "soc_max": 659.4997495665575,
+        "initial_soc": 366.3887497591986,
+        "terminal_soc": 366.3887497591986,
+        "round_trip_efficiency": 0.8999999999999999
+      },
+      "Large": {
+        "name": "Large",
+        "capacity": 1465.5549990367945,
+        "max_charge_power": 366.3887497591986,
+        "max_discharge_power": 366.3887497591986,
+        "soc_min_fraction": 0.1,
+        "soc_max_fraction": 0.9,
+        "initial_soc_fraction": 0.5,
+        "terminal_soc_fraction": 0.5,
+        "eta_charge": 0.9486832980505138,
+        "eta_discharge": 0.9486832980505138,
+        "throughput_penalty": 1e-06,
+        "soc_min": 146.55549990367945,
+        "soc_max": 1318.999499133115,
+        "initial_soc": 732.7774995183972,
+        "terminal_soc": 732.7774995183972,
+        "round_trip_efficiency": 0.8999999999999999
+      }
+    },
+    "solver": "scipy.optimize.milp with HiGHS backend",
+    "objective": "min peak + 1e-6 * sum(charge + discharge)",
+    "daily_soc_reset": true,
+    "persistence": "forecast(T) = raw actual(T-24h), available before target day starts",
+    "oracle": "perfect-foresight hindsight upper bound; not deployable"
+  },
+  "invariants": {
+    "hours": 720,
+    "days": 30,
+    "hours_per_day": 24,
+    "raw_actual_alignment": true,
+    "solver_failures": 0,
+    "soc_violations": 0,
+    "power_violations": 0,
+    "simultaneous_charge_discharge_violations": 0,
+    "initial_soc_violations": 0,
+    "terminal_soc_violations": 0,
+    "regression_tolerance": 1e-08,
+    "regression_status": {
+      "No Battery": {
+        "passed": true,
+        "maximum_absolute_delta": 4.476530257591094e-11
+      },
+      "Persistence": {
+        "passed": true,
+        "maximum_absolute_delta": 4.944356035707642e-11
+      },
+      "Oracle": {
+        "passed": true,
+        "maximum_absolute_delta": 4.8487436288269237e-11
+      }
+    }
+  },
+  "supersession": {
+    "phase5": "Retained unchanged; its LightGBM result is no longer the final official competition result.",
+    "phase5_5": "Retained unchanged; its LightGBM robustness conclusion uses the historical Phase 4 forecast source.",
+    "downstream": "Use the Phase 4.5 canonical forecast and Phase 5.6 results for official downstream work."
+  }
+}
