@@ -167,33 +167,42 @@ def _forecast_source_comparison(
         raise AssertionError("Phase 4 and Phase 4.5 Test target timestamps differ")
     if not np.allclose(historical["actual"], corrected["actual"], atol=1e-10, rtol=0.0):
         raise AssertionError("Phase 4 and Phase 4.5 Test actual values differ")
+    if np.allclose(
+        historical["prediction"].to_numpy(dtype=float),
+        corrected["prediction"].to_numpy(dtype=float),
+        atol=1e-10,
+        rtol=0.0,
+    ):
+        raise AssertionError("Phase 4.5 correction is a no-op: predictions equal Phase 4")
 
     actual = corrected["actual"].to_numpy(dtype=float)
-    rows = [
-        {
-            "source": "Phase 4 historical",
-            **safe_prediction_metrics(actual, historical["prediction"].to_numpy(dtype=float)),
-        },
-        {
-            "source": "Phase 4.5 canonical",
-            **safe_prediction_metrics(actual, corrected["prediction"].to_numpy(dtype=float)),
-        },
-        {
-            "source": "Persistence",
-            **safe_prediction_metrics(actual, forecasts["Persistence"]),
-        },
-        {
-            "source": "Oracle",
-            **safe_prediction_metrics(actual, forecasts["Oracle"]),
-        },
-    ]
-    result = pd.DataFrame(rows)
-    result["prediction_changed_vs_phase4"] = [False, True, True, True]
-    return result
+    return pd.DataFrame(
+        [
+            {
+                "source": "Phase 4 historical",
+                **safe_prediction_metrics(actual, historical["prediction"].to_numpy(dtype=float)),
+            },
+            {
+                "source": "Phase 4.5 canonical",
+                **safe_prediction_metrics(actual, corrected["prediction"].to_numpy(dtype=float)),
+            },
+            {
+                "source": "Persistence",
+                **safe_prediction_metrics(actual, forecasts["Persistence"]),
+            },
+            {
+                "source": "Oracle",
+                **safe_prediction_metrics(actual, forecasts["Oracle"]),
+            },
+        ]
+    )
 
 
 def _compare_with_historical_phase5(project_root: Path, corrected_metrics: pd.DataFrame) -> pd.DataFrame:
     old = pd.read_csv(project_root / "outputs" / "phase5" / "phase5_metrics.csv")
+    old["battery_size"] = old["battery_size"].fillna("None").astype(str)
+    corrected = corrected_metrics.copy()
+    corrected["battery_size"] = corrected["battery_size"].fillna("None").astype(str)
     metric_columns = [
         "mean_daily_peak",
         "max_peak",
@@ -207,13 +216,15 @@ def _compare_with_historical_phase5(project_root: Path, corrected_metrics: pd.Da
         "equivalent_full_cycles",
         "oracle_capture_ratio",
     ]
-    merged = corrected_metrics.merge(
+    merged = corrected.merge(
         old[["controller", "battery_size", *metric_columns]],
         on=["controller", "battery_size"],
         how="left",
         suffixes=("_phase5_6", "_phase5"),
         validate="one_to_one",
     )
+    if merged[[f"{column}_phase5" for column in metric_columns if column != "oracle_capture_ratio"]].isna().any().any():
+        raise AssertionError("Historical Phase 5 metric row could not be matched")
     for column in metric_columns:
         merged[f"delta_{column}"] = merged[f"{column}_phase5_6"] - merged[f"{column}_phase5"]
     return merged
@@ -222,8 +233,9 @@ def _compare_with_historical_phase5(project_root: Path, corrected_metrics: pd.Da
 def _assert_correction_is_isolated(comparison: pd.DataFrame) -> None:
     unchanged = comparison.loc[comparison["controller"].isin(["No Battery", "Persistence", "Oracle"])]
     delta_columns = [column for column in comparison.columns if column.startswith("delta_")]
-    finite = unchanged[delta_columns].select_dtypes(include=[np.number])
-    if not finite.empty and float(np.nanmax(np.abs(finite.to_numpy(dtype=float)))) > 1e-8:
+    values = unchanged[delta_columns].to_numpy(dtype=float)
+    finite = values[np.isfinite(values)]
+    if finite.size and float(np.max(np.abs(finite))) > 1e-8:
         raise AssertionError("Non-LightGBM Phase 5 results changed; correction is not isolated to forecast lineage")
 
 
@@ -243,13 +255,13 @@ def run(project_root: Path = PROJECT_ROOT) -> dict[str, Any]:
     phase5_comparison = _compare_with_historical_phase5(project_root, metrics)
     _assert_correction_is_isolated(phase5_comparison)
 
-    if audit["solver_success"].all() is not True:
+    if not bool(audit["solver_success"].all()):
         raise AssertionError("At least one Phase 5.6 optimization failed")
     if int(audit[["soc_violations", "power_violations", "simultaneous_charge_discharge_violations"]].to_numpy().sum()) != 0:
         raise AssertionError("Phase 5.6 battery constraint violation")
-    if not (audit["initial_soc_error"].abs() <= TOLERANCE).all():
+    if not bool((audit["initial_soc_error"].abs() <= TOLERANCE).all()):
         raise AssertionError("Phase 5.6 initial SOC mismatch")
-    if not (audit["terminal_soc_error"].abs() <= TOLERANCE).all():
+    if not bool((audit["terminal_soc_error"].abs() <= TOLERANCE).all()):
         raise AssertionError("Phase 5.6 terminal SOC mismatch")
 
     metrics.to_csv(output_dir / "phase5_6_metrics.csv", index=False, float_format="%.10f")
