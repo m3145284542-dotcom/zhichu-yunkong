@@ -1,0 +1,47 @@
+name: Phase 6 decision-aware forecast
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/phase6.py'
+      - 'scripts/run_phase6.py'
+      - 'tests/test_phase6.py'
+      - '.github/workflows/phase6.yml'
+      - 'src/battery/**'
+      - 'src/features/**'
+      - 'src/models/**'
+      - 'src/forecast_artifacts.py'
+      - 'outputs/phase4_5/**'
+      - 'outputs/phase5/**'
+
+permissions:
+  contents: read
+
+jobs:
+  phase6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Download frozen BDG2 data
+        run: python scripts/download_bdg2.py
+      - name: Run Phase 6
+        run: python scripts/run_phase6.py
+      - name: Run Phase 6 acceptance tests
+        run: python -m unittest tests.test_phase6 -v
+      - name: Upload Phase 6 outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase6-results
+          path: |
+            outputs/phase6/
+            reports/phase6_report.md
+          if-no-files-found: warn
