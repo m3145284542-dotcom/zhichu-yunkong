@@ -1,0 +1,16 @@
+method,column,rows,max_absolute_delta_vs_phase5_6,passed
+Persistence deterministic,charge,720,0.0000000000,True
+Persistence deterministic,discharge,720,0.0000000000,True
+Persistence deterministic,soc_start,720,0.0000000000,True
+Persistence deterministic,soc_end,720,0.0000000000,True
+Persistence deterministic,realized_grid_load,720,0.0000000000,True
+LightGBM deterministic,charge,720,0.0000000000,True
+LightGBM deterministic,discharge,720,0.0000000000,True
+LightGBM deterministic,soc_start,720,0.0000000000,True
+LightGBM deterministic,soc_end,720,0.0000000000,True
+LightGBM deterministic,realized_grid_load,720,0.0000000000,True
+Oracle,charge,720,0.0000000000,True
+Oracle,discharge,720,0.0000000000,True
+Oracle,soc_start,720,0.0000000000,True
+Oracle,soc_end,720,0.0000000000,True
+Oracle,realized_grid_load,720,0.0000000000,True
