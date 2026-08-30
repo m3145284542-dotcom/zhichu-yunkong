@@ -2,7 +2,7 @@ name: Phase 6 decision-aware forecast
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, phase6-ci-base]
     paths:
       - 'src/phase6.py'
       - 'scripts/run_phase6.py'
