@@ -14,6 +14,8 @@ on:
       - 'src/forecast_artifacts.py'
       - 'outputs/phase4_5/**'
       - 'outputs/phase5/**'
+      - 'outputs/phase6/**'
+      - 'reports/phase6_report.md'
 
 permissions:
   contents: read
