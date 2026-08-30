@@ -6,7 +6,7 @@ on:
     paths:
       - 'src/phase6.py'
       - 'scripts/run_phase6.py'
-      - 'tests/test_phase6.py'
+      - 'tests/**'
       - '.github/workflows/phase6.yml'
       - 'src/battery/**'
       - 'src/features/**'
