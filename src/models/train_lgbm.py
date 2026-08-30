@@ -48,16 +48,31 @@ def fit_lgbm(
     validation: pd.DataFrame,
     features: list[str],
     parameters: dict[str, object],
+    train_sample_weight: np.ndarray | pd.Series | None = None,
 ):
+    """Fit LightGBM with the supported 4.x sklearn API.
+
+    ``train_sample_weight`` is optional so historical Phase 4/4.5 callers keep the
+    same behavior while Phase 6 can emphasize peak-load samples.
+    """
     import lightgbm as lgb
     from lightgbm import LGBMRegressor
+
+    if train_sample_weight is not None:
+        weights = np.asarray(train_sample_weight, dtype=float)
+        if weights.shape != (len(train),):
+            raise ValueError("train_sample_weight must have one value per training row")
+        if not np.isfinite(weights).all() or (weights <= 0).any():
+            raise ValueError("train_sample_weight must contain finite positive values")
+    else:
+        weights = None
 
     model = LGBMRegressor(**parameters)
     model.fit(
         train[features],
         train["target"],
-        eval_X=validation[features],
-        eval_y=validation["target"],
+        sample_weight=weights,
+        eval_set=[(validation[features], validation["target"])],
         eval_metric="rmse",
         callbacks=[lgb.early_stopping(50, verbose=False), lgb.log_evaluation(0)],
     )
