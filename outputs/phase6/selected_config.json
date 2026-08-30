@@ -1,0 +1,118 @@
+{
+  "phase": "Phase 6",
+  "building": "Hog_office_Rolando",
+  "research_goal": "Decision-oriented peak-aware forecasting for deterministic battery peak shaving",
+  "random_seed": 42,
+  "selection_protocol": {
+    "train_target_cutoff_exclusive": "2017-11-01 00:00:00",
+    "validation_target_cutoff_exclusive": "2017-12-01 00:00:00",
+    "validation_rows": 696,
+    "validation_complete_days": 29,
+    "primary_selection_metric": "Validation mean daily realized peak under frozen Phase 5 Medium battery",
+    "tie_breakers": [
+      "worst-10% daily realized peak",
+      "forecast MAE",
+      "smaller candidate parameter"
+    ],
+    "test_used_for_selection": false,
+    "selected_before_canonical_test_loader": true,
+    "historical_test_already_visible_before_phase6": true
+  },
+  "day_week_blend": {
+    "formula": "(1-weekly_weight)*yesterday + weekly_weight*last_week",
+    "candidate_weights": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "weekly_weight": 0.5,
+    "validation_mean_daily_peak": 460.0668724309912
+  },
+  "peak_aware_lightgbm": {
+    "feature_list": [
+      "current_load",
+      "hour",
+      "day_of_week",
+      "day_of_month",
+      "month",
+      "day_of_year",
+      "week_of_year",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "month_sin",
+      "month_cos",
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_24",
+      "lag_48",
+      "lag_72",
+      "lag_168",
+      "lag_336",
+      "rolling_mean_3",
+      "rolling_mean_6",
+      "rolling_mean_24",
+      "rolling_mean_48",
+      "rolling_mean_168",
+      "rolling_std_24",
+      "rolling_std_168",
+      "rolling_min_24",
+      "rolling_max_24"
+    ],
+    "base_parameters": {
+      "objective": "regression",
+      "n_estimators": 296,
+      "learning_rate": 0.03,
+      "num_leaves": 31,
+      "max_depth": -1,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.8,
+      "min_child_samples": 20,
+      "random_state": 42,
+      "n_jobs": 4,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "selected_iteration": 296,
+    "peak_quantile": 0.75,
+    "train_peak_threshold": 448.0,
+    "candidate_multipliers": [
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "peak_multiplier": 2.0,
+    "validation_mean_daily_peak": 458.3689475156638
+  },
+  "battery_config": {
+    "name": "Medium",
+    "capacity": 732.7774995183972,
+    "max_charge_power": 183.1943748795993,
+    "max_discharge_power": 183.1943748795993,
+    "soc_min_fraction": 0.1,
+    "soc_max_fraction": 0.9,
+    "initial_soc_fraction": 0.5,
+    "terminal_soc_fraction": 0.5,
+    "eta_charge": 0.9486832980505138,
+    "eta_discharge": 0.9486832980505138,
+    "throughput_penalty": 1e-06,
+    "soc_min": 73.27774995183972,
+    "soc_max": 659.4997495665575,
+    "initial_soc": 366.3887497591986,
+    "terminal_soc": 366.3887497591986,
+    "round_trip_efficiency": 0.8999999999999999
+  },
+  "test_method_names": {
+    "peak_aware": "Peak-aware LightGBM (m=2)",
+    "day_week_blend": "Day-week blend (w_week=0.5)"
+  },
+  "test_accessed_during_selection": false
+}
