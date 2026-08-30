@@ -258,6 +258,14 @@ def _write_report(
     lightgbm_delta = medium.iloc[0]
     audit = summary["audit_findings"]
     constraints = summary["invariants"]
+    prediction_rows = summary["lineage"]["rows"]
+    changed_prediction_rows = audit["changed_prediction_rows"]
+    if changed_prediction_rows == prediction_rows:
+        prediction_change_text = f"{prediction_rows} 行 prediction 全部变化"
+    else:
+        prediction_change_text = (
+            f"{prediction_rows} 行中有 {changed_prediction_rows} 行 prediction 发生变化"
+        )
     text = f"""# Phase 5.6：预测数据血缘修复与下游重算
 
 ## 漏洞发现与根因
@@ -272,7 +280,7 @@ Phase 4.5 已输出经过边界标签 purge 和重新拟合的 `outputs/phase4_5
 
 - Phase 4.5 Test feature 时间：{audit['phase4_5_test_feature_period']}；target 时间：{audit['phase4_5_test_target_period']}。
 - Test 为 720 小时、30 天、每日 24 条，且每行 `target_timestamp - feature_timestamp = 24h`。
-- Phase 4 与 Phase 4.5 的 timestamp、actual 完全一致；720 行 prediction 全部变化，最大绝对预测差为 {audit['prediction_max_absolute_difference']:.6f}。
+- Phase 4 与 Phase 4.5 的 timestamp、actual 完全一致；{prediction_change_text}，最大绝对预测差为 {audit['prediction_max_absolute_difference']:.6f}。
 - Phase 4.5 对 Train 和 Validation 边界标签均执行 purge；配置明确 Test 不参与特征或参数选择。
 - Phase 5 的旧配置明确记录 `input_prediction_file = outputs/phase4/test_prediction.csv`，绕过原因仅是硬编码输入血缘。
 
@@ -346,9 +354,22 @@ def run(project_root: Path = PROJECT_ROOT) -> dict[str, Any]:
     phase4 = pd.read_csv(root / "outputs" / "phase4" / "test_prediction.csv")
     phase45_test = pd.read_csv(root / "outputs" / "phase4_5" / "final_predictions.csv")
     phase45_test = phase45_test.loc[phase45_test["split"].eq("test")].reset_index(drop=True)
-    prediction_max_difference = float(
-        np.max(np.abs(phase4["prediction"].to_numpy(float) - phase45_test["y_pred"].to_numpy(float)))
+    phase4_prediction = phase4["prediction"].to_numpy(dtype=float)
+    phase45_prediction = phase45_test["y_pred"].to_numpy(dtype=float)
+    if len(phase4_prediction) != len(phase45_prediction):
+        raise AssertionError("Phase 4 and Phase 4.5 prediction lengths differ")
+    if len(phase4_prediction) != 720:
+        raise AssertionError("Phase 4 and Phase 4.5 Test predictions must contain 720 rows")
+    prediction_changed_mask = ~np.isclose(
+        phase4_prediction,
+        phase45_prediction,
+        atol=1e-12,
+        rtol=0.0,
     )
+    changed_prediction_rows = int(np.count_nonzero(prediction_changed_mask))
+    if changed_prediction_rows <= 0:
+        raise AssertionError("Phase 4 and Phase 4.5 predictions did not change")
+    prediction_max_difference = float(np.max(np.abs(phase4_prediction - phase45_prediction)))
     constraint_totals = {
         "solver_failures": int((~audit["solver_success"]).sum()),
         "soc_violations": int(audit["soc_violations"].sum()),
@@ -375,8 +396,8 @@ def run(project_root: Path = PROJECT_ROOT) -> dict[str, Any]:
             "phase4_5_test_target_period": "2017-12-02 00:00:00 to 2017-12-31 23:00:00",
             "phase4_and_phase4_5_timestamps_identical": True,
             "phase4_and_phase4_5_actual_identical": True,
-            "phase4_and_phase4_5_predictions_identical": False,
-            "changed_prediction_rows": 720,
+            "phase4_and_phase4_5_predictions_identical": changed_prediction_rows == 0,
+            "changed_prediction_rows": changed_prediction_rows,
             "prediction_max_absolute_difference": prediction_max_difference,
             "train_boundary_labels_purged": True,
             "validation_boundary_labels_purged": True,

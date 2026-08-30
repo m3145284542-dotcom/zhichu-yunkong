@@ -108,6 +108,30 @@ class Phase56AcceptanceTests(unittest.TestCase):
         cls.audit = pd.read_csv(OUTPUT / "constraint_audit.csv")
         cls.comparison = pd.read_csv(OUTPUT / "comparison_vs_phase5.csv")
 
+    def test_summary_prediction_change_count_is_recomputed_from_artifacts(self) -> None:
+        phase4 = pd.read_csv(ROOT / "outputs" / "phase4" / "test_prediction.csv")
+        phase45 = pd.read_csv(ROOT / "outputs" / "phase4_5" / "final_predictions.csv")
+        phase45_test = phase45.loc[phase45["split"].eq("test")].reset_index(drop=True)
+        phase4_prediction = phase4["prediction"].to_numpy(dtype=float)
+        phase45_prediction = phase45_test["y_pred"].to_numpy(dtype=float)
+        self.assertEqual(len(phase4_prediction), len(phase45_prediction))
+        self.assertEqual(len(phase4_prediction), 720)
+        expected_changed = int(
+            np.count_nonzero(
+                ~np.isclose(
+                    phase4_prediction,
+                    phase45_prediction,
+                    atol=1e-12,
+                    rtol=0.0,
+                )
+            )
+        )
+        self.assertGreater(expected_changed, 0)
+        self.assertEqual(
+            self.summary["audit_findings"]["changed_prediction_rows"],
+            expected_changed,
+        )
+
     def test_constraints_all_hold(self) -> None:
         self.assertTrue(self.audit["solver_success"].all())
         for column in (
