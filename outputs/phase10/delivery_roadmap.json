@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "phase": 10,
+  "status": "canonical",
+  "logical_role": "formal competition deliverable gap matrix and frozen minimal delivery roadmap",
+  "producer": "Phase 10 repository evidence audit",
+  "created_at": "2026-08-31T21:44:07+08:00",
+  "version": "1.0",
+  "source_inputs": {
+    "frozen_baseline_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+    "phase7_manifest": "outputs/phase7/artifact_manifest.json",
+    "phase8_lineage": "outputs/phase8/lineage.json",
+    "phase9_lineage": "outputs/phase9/data_lineage.json",
+    "phase9_1_lineage": "outputs/phase9_1/data_lineage.json",
+    "final_reporting_summary": "outputs/phase9_1/final_reporting_summary.json",
+    "repository_head_at_audit_start": "549abc314e93e2862bfc22965db89622c22890e1"
+  },
+  "artifact_set": [
+    {
+      "path": "reports/phase10_final_deliverable_gap_audit.md",
+      "status": "canonical",
+      "sha256": "a887ac6f52fb3a5319f474180d9055e707fffc2039204744ac53dc87e7c1f801"
+    },
+    {
+      "path": "outputs/phase10/deliverable_gap_matrix.csv",
+      "status": "canonical",
+      "sha256": "5ef1545f45dc54326dab7994f9de9707e5858391f6633084aa6a058840aaab56"
+    },
+    {
+      "path": "outputs/phase10/delivery_roadmap.json",
+      "status": "canonical",
+      "sha256": null,
+      "hash_note": "The stage-level manifest does not self-hash. No Phase 10 commit was created because the existing full suite has open pre-existing/environmental failures."
+    }
+  ],
+  "acceptance_reason": "All 13 deliverable classes and five dependency-ordered stages were validated; evidence paths and commits resolve; Phase 10 report/matrix hashes match; only the three intended Phase 10 files differ from the frozen baseline. The full existing suite was run and its six pre-existing/environmental exceptions are explicitly preserved as an open HIGH lineage/reproduction risk.",
+  "downstream_consumers": [
+    "Phase 11 official rules and submission requirements verification",
+    "Phase 12 innovation positioning and claim freeze",
+    "Phase 13 scientific visual narrative and unified technical report",
+    "Phase 14 integrated presentation, defense and required demo/video assets",
+    "Phase 15 reproducibility package and final consistency audit"
+  ],
+  "verification": {
+    "phase10_structure_status": "PASS",
+    "matrix_rows": 13,
+    "roadmap_stages": 5,
+    "evidence_paths_exist": true,
+    "relevant_commits_resolve": true,
+    "existing_test_suite": {
+      "command": "python -m unittest discover -s tests -v",
+      "tests_run": 122,
+      "passed": 116,
+      "failures": 2,
+      "errors": 4,
+      "phase10_caused_failures": 0,
+      "exceptions": [
+        "data/raw/electricity_cleaned.csv is absent and was not downloaded",
+        "clean-checkout Phase 7 report/manifest bytes do not match hashes registered before commit, causing five lineage/loader failures"
+      ]
+    },
+    "open_lineage_risk": {
+      "severity": "HIGH",
+      "status": "OPEN",
+      "phase7_report_current_sha256": "d64dafa6252ae30d405a13af47c5c993fb11061665be39a74a2d0e554f185a57",
+      "phase7_report_registered_sha256": "b93d1e628ce1dd0200f5171c733fef14f26de83f4bcfe4ca0b2233c9bac10fdb",
+      "phase7_manifest_current_sha256": "163d7877b875617d5340aa906e1339d18a2cd536983d72b01c03a03928805237",
+      "phase7_manifest_registered_sha256": "7ce38421ec265da62e853c643db3f28a8329b66df8509c8ba49210890e070b70",
+      "algorithm_or_result_change_found": false,
+      "phase10_action": "record only; frozen artifacts unchanged"
+    }
+  },
+  "roadmap": [
+    {
+      "phase": 11,
+      "name_en": "Competition Rules & Submission Specification Verification",
+      "name_zh": "比赛规则与提交规范核验",
+      "single_objective": "Obtain and freeze authoritative, versioned requirements for eligibility, scoring, formats, limits, naming, deadlines, openness and templates.",
+      "inputs": ["outputs/phase10/deliverable_gap_matrix.csv", "official competition sources supplied or verified externally"],
+      "formal_outputs": ["versioned rules evidence register", "submission requirement checklist", "resolved external-verification decisions"],
+      "success_criteria": ["every material rule has an authoritative source, version/date and quotation-safe interpretation", "unknown rules remain explicitly unresolved rather than guessed"],
+      "dependencies": [],
+      "modifies_repository": true,
+      "allowed": ["rules evidence and requirement documentation"],
+      "forbidden": ["algorithm changes", "report/PPT/video/prototype production"],
+      "risk": "Official portal access or version ambiguity",
+      "external_information_required": true
+    },
+    {
+      "phase": 12,
+      "name_en": "Innovation Positioning & Claim Freeze",
+      "name_zh": "创新定位与主张冻结",
+      "single_objective": "Freeze an evidence-bounded competition narrative separating algorithmic contribution, engineering design and unsupported claims.",
+      "inputs": ["Phase 11 rules", "Phase 9.1 canonical reporting lineage", "targeted literature and comparable-system evidence"],
+      "formal_outputs": ["claim-evidence matrix", "frozen innovation statement", "approved key-number ledger"],
+      "success_criteria": ["every headline claim maps to canonical evidence", "base-model and weighted-average novelty are not overstated", "formal bootstrap and metric semantics are fixed"],
+      "dependencies": [11],
+      "modifies_repository": true,
+      "allowed": ["literature evidence", "narrative and claim registry"],
+      "forbidden": ["training", "tuning", "changing frozen results"],
+      "risk": "Overclaim or weak differentiation",
+      "external_information_required": true
+    },
+    {
+      "phase": 13,
+      "name_en": "Scientific Visual Narrative & Unified Technical Report",
+      "name_zh": "科研视觉叙事与统一技术报告",
+      "single_objective": "Produce the rules-compliant source-of-truth technical narrative and its traceable scientific figures.",
+      "inputs": ["Phase 11 rules", "Phase 12 claim/key-number freeze", "canonical Phase 7-9.1 data"],
+      "formal_outputs": ["unified technical report", "architecture and forecast-to-decision value-chain figures", "curated result figure ledger"],
+      "success_criteria": ["all figures trace to machine-readable sources", "report numbers match the key-number ledger", "limitations and evaluation scope are explicit"],
+      "dependencies": [11, 12],
+      "modifies_repository": true,
+      "allowed": ["report and visual packaging"],
+      "forbidden": ["new experiments", "algorithm changes", "selective omission of buildings"],
+      "risk": "Visuals may silently reuse Phase 9 legacy labels/statistics",
+      "external_information_required": false
+    },
+    {
+      "phase": 14,
+      "name_en": "Integrated Presentation, Defense & Demonstration",
+      "name_zh": "一体化展示、答辩与演示",
+      "single_objective": "Create one coherent judging experience across deck, speaking notes, Q&A and only the prototype/video assets required by verified rules.",
+      "inputs": ["Phase 13 report/figures", "Phase 11 format constraints"],
+      "formal_outputs": ["competition deck", "timed defense script and per-slide notes", "Q&A/attack-defense bank", "minimum required demo and/or video package"],
+      "success_criteria": ["timing and format comply with rules", "all numbers match Phase 13", "demo claims do not imply unproven deployment"],
+      "dependencies": [11, 13],
+      "modifies_repository": true,
+      "allowed": ["presentation, rehearsal and rule-required demonstrator assets"],
+      "forbidden": ["algorithm changes", "unrequired expansive product development"],
+      "risk": "Prototype/video scope depends on rules",
+      "external_information_required": false
+    },
+    {
+      "phase": 15,
+      "name_en": "Reproducibility, Submission Package & Final Consistency Audit",
+      "name_zh": "复现、提交包与最终一致性审计",
+      "single_objective": "Assemble and verify the exact submission package without stale, ambiguous or non-compliant artifacts.",
+      "inputs": ["all accepted Phase 11-14 outputs", "canonical algorithm and reporting lineages"],
+      "formal_outputs": ["rules-compliant submission package", "reproduction instructions and checksum manifest", "final cross-artifact consistency verdict"],
+      "success_criteria": ["clean-room low-cost reproduction succeeds or limitations are explicit", "all required files pass naming/size/format checks", "report/deck/script/video/package key numbers agree"],
+      "dependencies": [11, 12, 13, 14],
+      "modifies_repository": true,
+      "allowed": ["packaging, licensing/citation metadata, verification fixes"],
+      "forbidden": ["algorithm changes", "result rewriting", "new scope"],
+      "risk": "Licensing, external data and final portal constraints",
+      "external_information_required": true
+    }
+  ],
+  "next_phase": {
+    "phase": 11,
+    "name_en": "Competition Rules & Submission Specification Verification",
+    "name_zh": "比赛规则与提交规范核验",
+    "reason": "The repository contains no authoritative competition rules; all packaging choices depend on them."
+  }
+}
