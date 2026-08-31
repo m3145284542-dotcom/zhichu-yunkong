@@ -1,0 +1,80 @@
+{
+  "status": "frozen_before_test",
+  "phase": 9,
+  "random_seed": 42,
+  "buildings": [
+    "Hog_office_Rolando",
+    "Hog_office_Lavon",
+    "Hog_office_Joey",
+    "Lamb_office_Caitlin",
+    "Robin_office_Addie",
+    "Lamb_office_Gerardo",
+    "Hog_office_Alexis",
+    "Hog_office_Byron"
+  ],
+  "feature_list": [
+    "current_load",
+    "hour",
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "day_of_year",
+    "week_of_year",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "month_sin",
+    "month_cos",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_24",
+    "lag_48",
+    "lag_72",
+    "lag_168",
+    "lag_336",
+    "rolling_mean_3",
+    "rolling_mean_6",
+    "rolling_mean_24",
+    "rolling_mean_48",
+    "rolling_mean_168",
+    "rolling_std_24",
+    "rolling_std_168",
+    "rolling_min_24",
+    "rolling_max_24"
+  ],
+  "split_protocol": "Phase 4.5/6 feature-time splits and target-availability purge",
+  "peak_quantiles": [
+    0.8,
+    0.9
+  ],
+  "peak_alphas": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "weight_rule": "1+alpha if y_fit >= quantile(y_fit,q), otherwise 1",
+  "validation_selection": {
+    "primary": "normalized mean daily regret vs Oracle",
+    "equivalence_band": 0.001,
+    "tie_breakers": [
+      "smaller alpha",
+      "normalized p90 regret",
+      "normalized MAE",
+      "smaller q"
+    ]
+  },
+  "final_refit_threshold_source": "Train + purged Validation labels only",
+  "battery_source": "unchanged Phase 7 Train-scaled battery and Phase 5/6 optimizer",
+  "phase8_method": "building-specific Validation decision-selected DayWeek/LightGBM ensemble",
+  "test_used_for_peak_configuration": false,
+  "test_evaluated_after_selected_config_written": true,
+  "forecast_horizon_hours": 24,
+  "test_samples_per_building": 720,
+  "inference_repeats": 20,
+  "bootstrap_seed": 42,
+  "bootstrap_resamples": 10000
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": {
+    "fixed_phase7_buildings": true,
+    "fixed_feature_set": true,
+    "train_thresholds_only_for_validation": true,
+    "train_validation_thresholds_only_for_test": true,
+    "validation_search_has_no_test_rows": true,
+    "selected_config_written_before_test": true,
+    "test_not_used_for_peak_configuration": true,
+    "phase8_weights_unchanged": true,
+    "battery_configs_unchanged": true,
+    "oracle_non_deployable": true,
+    "phase7_phase8_reproduction": true
+  },
+  "maximum_reproduction_delta": 1.4210854715202004e-14
+}

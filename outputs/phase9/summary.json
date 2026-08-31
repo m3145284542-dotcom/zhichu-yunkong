@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "phase": "Phase 9 — Final Algorithm Validation & Freeze",
+  "runtime_seconds": 117.73080870000013,
+  "hardware": {
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "machine": "AMD64",
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9"
+  },
+  "selected_buildings": [
+    "Hog_office_Rolando",
+    "Hog_office_Lavon",
+    "Hog_office_Joey",
+    "Lamb_office_Caitlin",
+    "Robin_office_Addie",
+    "Lamb_office_Gerardo",
+    "Hog_office_Alexis",
+    "Hog_office_Byron"
+  ],
+  "validation_candidates_per_building": 8,
+  "best_forecast_method_by_mean_normalized_MAE": "Phase8_DOEF",
+  "best_decision_method_by_mean_normalized_regret": "Phase8_DOEF",
+  "forecast_decision_best_method_aligned": true,
+  "comparisons": {
+    "Phase8_DOEF_vs_LightGBM": {
+      "wins": 6,
+      "ties": 2,
+      "losses": 0,
+      "mean_delta_kw": -1.2421201105861412,
+      "median_delta_kw": -0.48528003769888395,
+      "mean_normalized_delta": -0.0041976002058672825,
+      "improvements_count": 6
+    },
+    "PeakAwareLightGBM_vs_LightGBM": {
+      "wins": 0,
+      "ties": 7,
+      "losses": 1,
+      "mean_delta_kw": 0.07210984546682386,
+      "median_delta_kw": 0.0,
+      "mean_normalized_delta": 7.567352254480653e-05,
+      "improvements_count": 0
+    },
+    "PeakAwareLightGBM_vs_Phase8_DOEF": {
+      "wins": 0,
+      "ties": 2,
+      "losses": 6,
+      "mean_delta_kw": 1.314229956052965,
+      "median_delta_kw": 0.48528003769888395,
+      "mean_normalized_delta": 0.0042732737284120895,
+      "improvements_count": 0
+    }
+  },
+  "bootstrap": {
+    "Phase8_DOEF_minus_LightGBM": {
+      "comparison": "Phase8_DOEF_minus_LightGBM",
+      "metric": "daily regret difference normalized by frozen Phase 7 Train mean load",
+      "resampling_unit": "building-day pair",
+      "pairs": 240,
+      "seed": 42,
+      "resamples": 10000,
+      "point_estimate": -0.0041976002058672825,
+      "median_difference": -0.0004035619357737049,
+      "ci95_lower": -0.00782961634863114,
+      "ci95_upper": -0.00035565804761488937,
+      "probability_a_better": 0.9834
+    },
+    "PeakAwareLightGBM_minus_LightGBM": {
+      "comparison": "PeakAwareLightGBM_minus_LightGBM",
+      "metric": "daily regret difference normalized by frozen Phase 7 Train mean load",
+      "resampling_unit": "building-day pair",
+      "pairs": 240,
+      "seed": 42,
+      "resamples": 10000,
+      "point_estimate": 7.567352254480789e-05,
+      "median_difference": 0.0,
+      "ci95_lower": -0.0004115802246715955,
+      "ci95_upper": 0.0005310347228016216,
+      "probability_a_better": 0.3669
+    },
+    "PeakAwareLightGBM_minus_Phase8_DOEF": {
+      "comparison": "PeakAwareLightGBM_minus_Phase8_DOEF",
+      "metric": "daily regret difference normalized by frozen Phase 7 Train mean load",
+      "resampling_unit": "building-day pair",
+      "pairs": 240,
+      "seed": 42,
+      "resamples": 10000,
+      "point_estimate": 0.004273273728412091,
+      "median_difference": 0.00020599887638311545,
+      "ci95_lower": 0.0003947396435229129,
+      "ci95_upper": 0.00793949058824039,
+      "probability_a_better": 0.0152
+    }
+  },
+  "final_algorithm": {
+    "status": "canonical",
+    "case": "A",
+    "final_algorithm": "DOEF — Decision-Oriented Ensemble Forecasting",
+    "chinese_name": "面向储能决策的集成负荷预测方法",
+    "peak_aware_result": "未成功",
+    "reason": "Peak-aware 未形成相对普通 LightGBM 的稳定跨建筑决策收益，按停止规则不再调参。",
+    "algorithm_development_frozen": true,
+    "test_used_to_choose_peak_configuration": false,
+    "frozen_method_key": "Phase8_DOEF",
+    "configuration_source": "outputs/phase8/selected_weights.csv",
+    "selection_protocol": "Peak q/alpha Validation-only; final promotion gate uses frozen cross-building Test evidence"
+  },
+  "peak_aware_stop_rule_applied": true,
+  "frozen_phase7_8_artifacts_unchanged": true,
+  "constraint_audit": {
+    "status": "PASS",
+    "daily_solves": 4488,
+    "totals": {
+      "solver_failures": 0,
+      "soc_lower_upper_violations": 0,
+      "charge_discharge_limit_violations": 0,
+      "simultaneous_charge_discharge_violations": 0,
+      "soc_transition_violations": 0,
+      "initial_soc_violations": 0,
+      "terminal_soc_violations": 0,
+      "nan_inf_violations": 0,
+      "negative_forecast_violations": 0,
+      "timestamp_alignment_violations": 0
+    }
+  },
+  "leakage_audit": {
+    "status": "PASS",
+    "checks": {
+      "fixed_phase7_buildings": true,
+      "fixed_feature_set": true,
+      "train_thresholds_only_for_validation": true,
+      "train_validation_thresholds_only_for_test": true,
+      "validation_search_has_no_test_rows": true,
+      "selected_config_written_before_test": true,
+      "test_not_used_for_peak_configuration": true,
+      "phase8_weights_unchanged": true,
+      "battery_configs_unchanged": true,
+      "oracle_non_deployable": true,
+      "phase7_phase8_reproduction": true
+    },
+    "maximum_reproduction_delta": 1.4210854715202004e-14
+  },
+  "algorithm_development_complete": true
+}

@@ -148,3 +148,32 @@ python -m unittest discover -s tests -v
 ```
 
 Formal outputs, the frozen run configuration, lineage, leakage/constraint audits, bootstrap uncertainty, and report figures are in `outputs/phase8/`; the controlled interpretation and claim boundaries are in `reports/phase8_report.md`.
+
+## Phase 9 — Final Algorithm Validation & Freeze
+
+Phase 9 是最后一个算法研发阶段。它不增加模型家族，只在 Phase 7/8 完全冻结的 8 栋建筑、24 小时预测、Train/Validation/Test、31 个因果特征、逐建筑 LightGBM 参数和 Train-scale battery 上验证轻量 Peak-aware sample weighting：
+
+```text
+threshold = quantile(y_fit, q)
+weight = 1 + alpha  if y_fit >= threshold else 1
+q ∈ {0.80, 0.90}, alpha ∈ {0, 0.5, 1, 2}
+```
+
+Validation 搜索的阈值只来自 purge 后 Train labels。每栋建筑先比较 normalized mean daily regret；与最优值相差不超过 0.001 的候选视为决策近似等价，再优先更小 alpha、较低 p90 regret、较低 MAE 和更小 q。选择文件写出后才访问 Test；最终 refit 的阈值只可来自 Train + purged Validation。Test 不参与 q/alpha、树参数、融合权重、建筑、切分或 battery 选择。
+
+统一 benchmark 包含 Persistence、Day、Week、DayWeek、LightGBM、XGBoost、CatBoost、Phase 8 decision-oriented ensemble 和 Peak-aware LightGBM。Persistence 与 Day 都是 t-24 同小时负荷，是为保留历史口径而列出的数学等价别名。Forecast 和储能 decision metrics 均逐建筑报告，并提供跨建筑 mean/median、win/tie/loss、10,000 次 paired bootstrap 95% CI，以及 LightGBM/XGBoost/CatBoost/Ensemble/Peak-aware 的训练时间、720 样本推理时间与实际序列化模型大小。
+
+真实结果触发 Case A：7/8 建筑在保守 Validation 规则下选择 alpha=0；冻结 Test 上 Peak-aware 相对普通 LightGBM 为 0/7/1（win/tie/loss），相对 Phase 8 ensemble 为 0/2/6。Peak-aware minus ensemble 的 mean normalized regret difference 为 +0.004273，95% CI [+0.000395, +0.007939]。因此 Peak-aware **未成功**，不进入最终算法，也不继续增加 weighting function 或调参。
+
+**Final frozen algorithm: DOEF — Decision-Oriented Ensemble Forecasting（面向储能决策的集成负荷预测方法）。** DOEF 在 Test 相对普通 LightGBM 为 6/2/0，mean normalized regret difference -0.004198，95% CI [-0.007830, -0.000356]；本次 benchmark 的 mean normalized forecast MAE 和 decision regret 最优方法均为 DOEF。Phase 8 仍记录了逐建筑 forecast/decision 选择错位，因此项目结论是二者不具有一般等价关系，而不是声称每个聚合 benchmark 的赢家都必须不同。
+
+运行与验证：
+
+```powershell
+python scripts\run_phase9.py
+python -m unittest discover -s tests -v
+```
+
+正式输出在 `outputs/phase9/`，完整解释在 `reports/phase9_report.md`。后续代码必须通过 `src.final_algorithm.load_final_algorithm()` 解析 Phase 9 canonical lineage；该加载器不回退到 Phase 8 或任何中间产物。
+
+**Phase 9 marks the end of algorithm development.** 项目之后只进入 system prototype、visualization、technical report、presentation 和 demo，不再新增预测或储能算法。

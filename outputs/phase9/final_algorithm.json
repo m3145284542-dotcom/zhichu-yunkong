@@ -1,0 +1,13 @@
+{
+  "status": "canonical",
+  "case": "A",
+  "final_algorithm": "DOEF — Decision-Oriented Ensemble Forecasting",
+  "chinese_name": "面向储能决策的集成负荷预测方法",
+  "peak_aware_result": "未成功",
+  "reason": "Peak-aware 未形成相对普通 LightGBM 的稳定跨建筑决策收益，按停止规则不再调参。",
+  "algorithm_development_frozen": true,
+  "test_used_to_choose_peak_configuration": false,
+  "frozen_method_key": "Phase8_DOEF",
+  "configuration_source": "outputs/phase8/selected_weights.csv",
+  "selection_protocol": "Peak q/alpha Validation-only; final promotion gate uses frozen cross-building Test evidence"
+}

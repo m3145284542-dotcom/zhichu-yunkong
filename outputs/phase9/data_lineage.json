@@ -1,0 +1,110 @@
+{
+  "status": "canonical",
+  "logical_role": "canonical final algorithm evidence and sole downstream result source",
+  "producer": "scripts/run_phase9.py",
+  "created_at_utc": "2026-08-31T04:17:48.178605+00:00",
+  "schema_version": 1,
+  "parents": {
+    "phase7_model_config": {
+      "path": "outputs/phase7/model_selection_config.json",
+      "sha256": "ea1f34a1d24ce9281303fbec91efebb7eb0efa665309f0c509236b2f0f970749"
+    },
+    "phase7_buildings": {
+      "path": "outputs/phase7/selected_buildings.json",
+      "sha256": "0a39c5e38c0568d30010d5b0c2a71d82933fe5e27b5df37408c9de2f81f7b885"
+    },
+    "phase8_weights": {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "outputs/phase9/aggregate_metrics.csv",
+      "sha256": "a1f00383492667cc8acdf16142ec42e79519f4222f9151e82da2889603e3210c"
+    },
+    {
+      "path": "outputs/phase9/bootstrap_results.csv",
+      "sha256": "c73223f1017330decba2fb3a501f0e1558123c0842fe8be3c1a4b38838073eb0"
+    },
+    {
+      "path": "outputs/phase9/constraint_audit.csv",
+      "sha256": "7733288972207cea0eb29e23c3f22ea7ef1559830e8398802c1fa5bec4222fa6"
+    },
+    {
+      "path": "outputs/phase9/constraint_summary.json",
+      "sha256": "f1c7d860ebca33a98ad09c77b3f5d885a0bc4108d70bad610b6a46b041a05a99"
+    },
+    {
+      "path": "outputs/phase9/decision_metrics.csv",
+      "sha256": "f9d107db60d89d6f88d06adc89ba153508d3dad08bc435dd224f1aec97a4fc1d"
+    },
+    {
+      "path": "outputs/phase9/efficiency_metrics.csv",
+      "sha256": "11cbea992e8fddc31e33b4a362ad22d3ab9b98c1567a4723bbd2189d8541b80d"
+    },
+    {
+      "path": "outputs/phase9/figures/01_forecast_vs_decision.png",
+      "sha256": "a1171e0e948089af290e1ed3f68da58cb26966fea7e7ff694c35afb63d54f8e9"
+    },
+    {
+      "path": "outputs/phase9/figures/02_building_decision_comparison.png",
+      "sha256": "a1eb1784f528cb096f12417463604b0411d1c95229c5ea043652e656ba7104d6"
+    },
+    {
+      "path": "outputs/phase9/figures/03_core_improvements.png",
+      "sha256": "991f41101af7d8fe1a6e4603de444057849ce865e695006d9c18c053877cf81e"
+    },
+    {
+      "path": "outputs/phase9/figures/04_peak_quality_vs_decision.png",
+      "sha256": "fdfa7382f1ec47a7cc81264faa751bc976a415956e12c004555c64bb23d2dc3f"
+    },
+    {
+      "path": "outputs/phase9/figures/05_efficiency.png",
+      "sha256": "775d6f9e73750297b9ed45e6d397d7a52c9c8998c33f22089ec67aeb89ac7921"
+    },
+    {
+      "path": "outputs/phase9/figures/06_validation_search.png",
+      "sha256": "76184f282f68591dbab694ef3d5280e1fae1304a29e05591046a74ce31a9b9d1"
+    },
+    {
+      "path": "outputs/phase9/final_algorithm.json",
+      "sha256": "f0d12082ff0670afcef3780823ceba0a332022231fcb5c1af7e4ef9c99fb3a46"
+    },
+    {
+      "path": "outputs/phase9/forecast_metrics.csv",
+      "sha256": "f0482cee61ca310c18d5347ab73ab59d20f5062d953ec1c8c129edf4d3d28dc3"
+    },
+    {
+      "path": "outputs/phase9/leakage_audit.json",
+      "sha256": "6ab1a482ac7a10b55f4f9b36b4fcff5e07f5fefe0da59b1b266eb48532f232d0"
+    },
+    {
+      "path": "outputs/phase9/per_building_metrics.csv",
+      "sha256": "d0fd10d5c8e80b773575857b1f79de4b23294bd7a8b7c82fbf32023a96d29cdf"
+    },
+    {
+      "path": "outputs/phase9/run_config.json",
+      "sha256": "13efb8319264541d8347281ce2f44282dc2eb27f4414851de640344263e3d508"
+    },
+    {
+      "path": "outputs/phase9/selected_peak_configs.csv",
+      "sha256": "09efa00c6ef1ac1cb16da106a4b81ae186a801e1323efe0f1193a14556155688"
+    },
+    {
+      "path": "outputs/phase9/summary.json",
+      "sha256": "e89eff21103759149eaaa10f6e0e2776bf73c9dcafce694f56d1d8c9aba7491a"
+    },
+    {
+      "path": "outputs/phase9/validation_search.csv",
+      "sha256": "b4b836954ebc5a9fcc12e49e4629e107bc77651a6ff006bdd9396254ee806bea"
+    },
+    {
+      "path": "reports/phase9_report.md",
+      "sha256": "97894a88dbfac28d95b491949bd6e4a60769c96db4f4b79e8c9e00d17faa42d8"
+    }
+  ],
+  "acceptance_reason": "Validation-only configuration freeze, exact Phase 7/8 reproduction, zero leakage/constraint violations, full cross-building benchmark, and algorithm stop rule",
+  "supersedes_for_downstream_role": "outputs/phase8/lineage.json",
+  "historical_sources_preserved": true
+}

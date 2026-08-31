@@ -1,0 +1,4 @@
+comparison,metric,resampling_unit,pairs,seed,resamples,point_estimate,median_difference,ci95_lower,ci95_upper,probability_a_better
+Phase8_DOEF_minus_LightGBM,daily regret difference normalized by frozen Phase 7 Train mean load,building-day pair,240,42,10000,-0.0041976002058672825,-0.0004035619357737049,-0.00782961634863114,-0.00035565804761488937,0.9834
+PeakAwareLightGBM_minus_LightGBM,daily regret difference normalized by frozen Phase 7 Train mean load,building-day pair,240,42,10000,7.567352254480789e-05,0.0,-0.0004115802246715955,0.0005310347228016216,0.3669
+PeakAwareLightGBM_minus_Phase8_DOEF,daily regret difference normalized by frozen Phase 7 Train mean load,building-day pair,240,42,10000,0.004273273728412091,0.00020599887638311545,0.0003947396435229129,0.00793949058824039,0.0152
