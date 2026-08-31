@@ -1,0 +1,14 @@
+{
+  "comparison": "DOEF_minus_LightGBM",
+  "metric": "building mean daily decision regret difference normalized by Phase 7 Train mean load",
+  "resampling_unit": "building",
+  "number_of_buildings": 8,
+  "number_of_units": 8,
+  "resamples": 10000,
+  "seed": 42,
+  "point_estimate": -0.0041976002058672825,
+  "median_bootstrap_estimate": -0.0041410778250212076,
+  "ci95_lower": -0.0068502135531734835,
+  "ci95_upper": -0.0017190447979306138,
+  "probability_mean_less_than_zero": 1.0
+}

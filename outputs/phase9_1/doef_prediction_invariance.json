@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "reference": "frozen Phase 8 ensemble_prediction using w_decision",
+  "audited_definition": "explicit DOEF v1.0 formula using the same frozen component forecasts and weights",
+  "samples": 5760,
+  "max_absolute_delta": 0.0,
+  "tolerance": 1e-12,
+  "reference_sha256": "b628fa94b3883e88867acbed96d9366540c2777dca54bb6d1c2d4ea34ebfdc66",
+  "audited_sha256": "b628fa94b3883e88867acbed96d9366540c2777dca54bb6d1c2d4ea34ebfdc66",
+  "per_building": [
+    {
+      "building": "Hog_office_Rolando",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Hog_office_Lavon",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Hog_office_Joey",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Lamb_office_Caitlin",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Robin_office_Addie",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Lamb_office_Gerardo",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    },
+    {
+      "building": "Hog_office_Byron",
+      "samples": 720,
+      "max_abs_delta": 0.0
+    }
+  ]
+}

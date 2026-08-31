@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "algorithm_selection_source": "Validation",
+  "test_role": "evaluation_only",
+  "test_based_algorithm_promotion_removed": true,
+  "peak_aware_role": "supporting experiment only",
+  "building_level_bootstrap_primary": true,
+  "building_day_bootstrap_secondary": true,
+  "unit_semantics_documented": true,
+  "building_selection_eligibility_scope_disclosed": true,
+  "multi_building_robustness_term_used": true,
+  "forecast_and_decision_objectives_not_claimed_equivalent": true,
+  "decision_regret_distinguished_from_peak_reduction": true,
+  "catboost_extreme_result_retained": true,
+  "unsupported_engineering_outcomes_claimed": false
+}

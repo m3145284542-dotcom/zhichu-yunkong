@@ -150,33 +150,26 @@ def win_tie_loss(a: pd.Series, b: pd.Series, tolerance: float = TOLERANCE) -> di
 
 
 def choose_final_algorithm(comparisons: dict[str, dict[str, Any]], bootstrap: dict[str, dict[str, Any]]) -> dict[str, Any]:
-    """Promote Peak-aware only under the predeclared strict Case C gate."""
-    vs_lgbm = comparisons["PeakAwareLightGBM_vs_LightGBM"]
-    vs_doef = comparisons["PeakAwareLightGBM_vs_Phase8_DOEF"]
-    ci = bootstrap["PeakAwareLightGBM_minus_Phase8_DOEF"]
-    peak_beats_lgbm = vs_lgbm["wins"] >= 5 and vs_lgbm["mean_normalized_delta"] < 0.0
-    peak_beats_doef = vs_doef["wins"] >= 5 and vs_doef["mean_normalized_delta"] < 0.0
-    uncertainty_supports = ci["ci95_upper"] < 0.0
-    if peak_beats_doef and uncertainty_supports:
-        case = "C"
-        algorithm = "DOPE — Decision-Oriented Peak-Aware Ensemble"
-        peak_status = "成功"
-        reason = "Peak-aware 在多数建筑优于 DOEF，平均归一化 regret 更低，且 paired bootstrap 95% CI 上界低于 0。"
-    elif peak_beats_lgbm:
-        case = "B"
-        algorithm = "DOEF — Decision-Oriented Ensemble Forecasting"
-        peak_status = "部分成功"
-        reason = "Peak-aware 跨建筑优于普通 LightGBM，但未同时满足替换 Phase 8 DOEF 的多数建筑与不确定性门槛。"
-    else:
-        case = "A"
-        algorithm = "DOEF — Decision-Oriented Ensemble Forecasting"
-        peak_status = "未成功"
-        reason = "Peak-aware 未形成相对普通 LightGBM 的稳定跨建筑决策收益，按停止规则不再调参。"
+    """Return the Validation-selected canonical algorithm regardless of Test evidence.
+
+    ``comparisons`` and ``bootstrap`` are retained only for API compatibility
+    with the historical Phase 9 runner.  They are reporting inputs and have no
+    algorithm-promotion role.
+    """
+    _ = comparisons, bootstrap
     return {
-        "status": "canonical", "case": case, "final_algorithm": algorithm,
-        "chinese_name": "面向储能决策的集成负荷预测方法" if case != "C" else "面向储能决策的峰值感知集成负荷预测方法",
-        "peak_aware_result": peak_status, "reason": reason,
-        "algorithm_development_frozen": True, "test_used_to_choose_peak_configuration": False,
+        "status": "canonical",
+        "case": "legacy_non_canonical",
+        "case_role": "legacy/non-canonical reporting field; no promotion authority",
+        "final_algorithm": "DOEF v1.0 — Decision-Oriented Ensemble Forecasting",
+        "chinese_name": "面向储能决策的集成负荷预测方法",
+        "peak_aware_result": "supporting experiment only",
+        "reason": "DOEF was selected by the Phase 8 Validation downstream-decision objective before Test evaluation.",
+        "algorithm_selection_source": "Validation",
+        "test_role": "evaluation_only",
+        "algorithm_development_frozen": True,
+        "test_used_to_choose_peak_configuration": False,
+        "test_used_to_promote_algorithm": False,
     }
 
 
@@ -630,9 +623,9 @@ def run(project_root: Path) -> dict[str, Any]:
 
     final = choose_final_algorithm(comparisons, bootstrap)
     final.update({
-        "frozen_method_key": "Phase8_DOEF" if final["case"] != "C" else "PeakAwareLightGBM",
-        "configuration_source": "outputs/phase8/selected_weights.csv" if final["case"] != "C" else "outputs/phase9/selected_peak_configs.csv",
-        "selection_protocol": "Peak q/alpha Validation-only; final promotion gate uses frozen cross-building Test evidence",
+        "frozen_method_key": "Phase8_DOEF",
+        "configuration_source": "outputs/phase8/selected_weights.csv",
+        "selection_protocol": "DOEF w_decision selected on Validation; Test is evaluation and reporting only",
     })
     _write_json(output / "final_algorithm.json", final)
 

@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "phase": "9.1",
+  "final_algorithm": {
+    "name": "Decision-Oriented Ensemble Forecasting",
+    "acronym": "DOEF",
+    "display_name": "DOEF v1.0 — Decision-Oriented Ensemble Forecasting",
+    "display_name_zh": "面向储能决策的集成负荷预测方法",
+    "source_phase": 9,
+    "canonical_reporting_phase": "9.1",
+    "algorithm_version": "1.0",
+    "freeze_status": "frozen",
+    "algorithm_selection_source": "Validation",
+    "selection_source_phase": 8,
+    "selection_objective": "downstream storage decision regret",
+    "test_role": "evaluation_only",
+    "test_can_promote_algorithm": false,
+    "weight_config_path": "outputs/phase8/selected_weights.csv",
+    "weight_field": "w_decision",
+    "formula": "w_b * LightGBM + (1 - w_b) * DayWeek",
+    "dayweek_formula": "0.5 * actual(t-24h) + 0.5 * actual(t-168h)"
+  },
+  "test_protocol": {
+    "test_role": "evaluation_only",
+    "algorithm_selection_source": "Validation",
+    "test_used_for_algorithm_promotion": false,
+    "peak_aware_role": "frozen supporting experiment / stress test; rejected from canonical algorithm"
+  },
+  "evaluation_scope": {
+    "preferred_term": "multi-building robustness evaluation",
+    "buildings": 8,
+    "not_unseen_building_transfer": true
+  },
+  "building_selection": {
+    "eligibility": "fixed raw-data coverage checks over predefined Train/Validation/Test windows",
+    "representative_sampling": "Train-period load morphology only among eligible buildings",
+    "validation_or_test_forecast_or_decision_performance_used": false
+  },
+  "forecast_vs_decision_weights": {
+    "total": 8,
+    "same": 2,
+    "different": 6,
+    "rows": [
+      {
+        "building": "Hog_office_Rolando",
+        "w_forecast": 0.9,
+        "w_decision": 0.7,
+        "weights_differ": true
+      },
+      {
+        "building": "Hog_office_Lavon",
+        "w_forecast": 0.0,
+        "w_decision": 0.0,
+        "weights_differ": false
+      },
+      {
+        "building": "Hog_office_Joey",
+        "w_forecast": 0.6,
+        "w_decision": 0.3,
+        "weights_differ": true
+      },
+      {
+        "building": "Lamb_office_Caitlin",
+        "w_forecast": 0.4,
+        "w_decision": 0.8,
+        "weights_differ": true
+      },
+      {
+        "building": "Robin_office_Addie",
+        "w_forecast": 1.0,
+        "w_decision": 1.0,
+        "weights_differ": false
+      },
+      {
+        "building": "Lamb_office_Gerardo",
+        "w_forecast": 0.0,
+        "w_decision": 1.0,
+        "weights_differ": true
+      },
+      {
+        "building": "Hog_office_Alexis",
+        "w_forecast": 0.6,
+        "w_decision": 0.7,
+        "weights_differ": true
+      },
+      {
+        "building": "Hog_office_Byron",
+        "w_forecast": 0.9,
+        "w_decision": 0.8,
+        "weights_differ": true
+      }
+    ]
+  },
+  "doef_vs_lightgbm": {
+    "doef_mean_normalized_mae": 0.1379695350007493,
+    "lightgbm_mean_normalized_mae": 0.1473380276776882,
+    "doef_mean_normalized_regret": 0.1119291838879677,
+    "lightgbm_mean_normalized_regret": 0.116126784093835,
+    "normalized_mae_relative_improvement_pct": 6.358502841800696,
+    "normalized_regret_relative_improvement_pct": 3.6146701543680733,
+    "decision_regret_win_tie_loss": {
+      "wins": 6,
+      "ties": 2,
+      "losses": 0
+    }
+  },
+  "building_level_bootstrap": {
+    "comparison": "DOEF_minus_LightGBM",
+    "metric": "building mean daily decision regret difference normalized by Phase 7 Train mean load",
+    "resampling_unit": "building",
+    "number_of_buildings": 8,
+    "number_of_units": 8,
+    "resamples": 10000,
+    "seed": 42,
+    "point_estimate": -0.0041976002058672825,
+    "median_bootstrap_estimate": -0.0041410778250212076,
+    "ci95_lower": -0.0068502135531734835,
+    "ci95_upper": -0.0017190447979306138,
+    "probability_mean_less_than_zero": 1.0
+  },
+  "secondary_building_day_bootstrap": {
+    "comparison": "Phase8_DOEF_minus_LightGBM",
+    "metric": "daily regret difference normalized by frozen Phase 7 Train mean load",
+    "resampling_unit": "building-day pair",
+    "pairs": 240,
+    "seed": 42,
+    "resamples": 10000,
+    "point_estimate": -0.0041976002058672,
+    "median_difference": -0.0004035619357737,
+    "ci95_lower": -0.0078296163486311,
+    "ci95_upper": -0.0003556580476148,
+    "probability_a_better": 0.9834,
+    "analysis_role": "secondary temporal-resampling sensitivity analysis"
+  },
+  "unit_semantics_path": "outputs/phase9_1/unit_semantics.json",
+  "metric_semantics_path": "outputs/phase9_1/metric_semantics.json",
+  "doef_prediction_invariance": {
+    "status": "PASS",
+    "reference": "frozen Phase 8 ensemble_prediction using w_decision",
+    "audited_definition": "explicit DOEF v1.0 formula using the same frozen component forecasts and weights",
+    "samples": 5760,
+    "max_absolute_delta": 0.0,
+    "tolerance": 1e-12,
+    "reference_sha256": "b628fa94b3883e88867acbed96d9366540c2777dca54bb6d1c2d4ea34ebfdc66",
+    "audited_sha256": "b628fa94b3883e88867acbed96d9366540c2777dca54bb6d1c2d4ea34ebfdc66",
+    "per_building": [
+      {
+        "building": "Hog_office_Rolando",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Hog_office_Lavon",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Hog_office_Joey",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Lamb_office_Caitlin",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Robin_office_Addie",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Lamb_office_Gerardo",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Hog_office_Alexis",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      },
+      {
+        "building": "Hog_office_Byron",
+        "samples": 720,
+        "max_abs_delta": 0.0
+      }
+    ]
+  },
+  "catboost_peak_reduction_pct": {
+    "mean": -24.482416067796464,
+    "median": 4.820860917002948,
+    "min": -245.94331246534048,
+    "max": 13.236691454892531,
+    "per_building": [
+      {
+        "building": "Hog_office_Alexis",
+        "peak_reduction_percentage": 11.68435263492371
+      },
+      {
+        "building": "Hog_office_Byron",
+        "peak_reduction_percentage": 12.53391257506742
+      },
+      {
+        "building": "Hog_office_Joey",
+        "peak_reduction_percentage": 0.3385458642955882
+      },
+      {
+        "building": "Hog_office_Lavon",
+        "peak_reduction_percentage": -245.94331246534048
+      },
+      {
+        "building": "Hog_office_Rolando",
+        "peak_reduction_percentage": 5.555821767077667
+      },
+      {
+        "building": "Lamb_office_Caitlin",
+        "peak_reduction_percentage": 4.08590006692823
+      },
+      {
+        "building": "Lamb_office_Gerardo",
+        "peak_reduction_percentage": 2.6487595597836258
+      },
+      {
+        "building": "Robin_office_Addie",
+        "peak_reduction_percentage": 13.236691454892531
+      }
+    ],
+    "extreme_case": {
+      "building": "Hog_office_Lavon",
+      "no_battery_peak_kw": 19.192,
+      "post_dispatch_peak_kw": 66.39344052834815,
+      "normalized_mae": 0.0479740655650084,
+      "daily_peak_hour_mae_hours": 7.466666666666667
+    }
+  },
+  "limitations": [
+    "eight office buildings",
+    "one fixed future Test month per building",
+    "one-hour intervals and 24-hour forecast horizon",
+    "frozen battery and daily-reset dispatch protocol",
+    "no energy-use, tariff, cost, or carbon outcome model"
+  ]
+}

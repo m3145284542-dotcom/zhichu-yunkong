@@ -51,14 +51,17 @@ class Phase9UnitTests(unittest.TestCase):
         self.assertEqual(BOOTSTRAP_SEED, 42)
         self.assertEqual(BOOTSTRAP_RESAMPLES, 10_000)
 
-    def test_final_selection_uses_comparison_evidence_not_candidate_table(self):
+    def test_test_comparison_cannot_promote_algorithm(self):
         comparisons = {
             "PeakAwareLightGBM_vs_LightGBM": {"wins": 5, "mean_normalized_delta": -0.1},
             "PeakAwareLightGBM_vs_Phase8_DOEF": {"wins": 5, "mean_normalized_delta": -0.1},
         }
         bootstrap = {"PeakAwareLightGBM_minus_Phase8_DOEF": {"ci95_upper": -0.01}}
         final = choose_final_algorithm(comparisons, bootstrap)
-        self.assertEqual(final["case"], "C")
+        self.assertEqual(final["final_algorithm"], "DOEF v1.0 — Decision-Oriented Ensemble Forecasting")
+        self.assertEqual(final["algorithm_selection_source"], "Validation")
+        self.assertEqual(final["test_role"], "evaluation_only")
+        self.assertFalse(final["test_used_to_promote_algorithm"])
         self.assertFalse(final["test_used_to_choose_peak_configuration"])
 
     def test_frozen_grids_buildings_and_battery(self):
@@ -198,7 +201,7 @@ class Phase9AcceptanceTests(unittest.TestCase):
             phase9 = root / "outputs/phase9"
             phase9.mkdir(parents=True)
             shutil.copy2(self.out / "data_lineage.json", phase9 / "data_lineage.json")
-            with self.assertRaises(ValueError):
+            with self.assertRaises(FileNotFoundError):
                 load_final_algorithm(root)
 
     def test_test_protocol_documentation_uses_honest_terminology(self):

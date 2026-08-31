@@ -1,0 +1,46 @@
+document,category,banned_unqualified_phrase,occurrences,status
+README.md,unseen-building generalization claim,cross-building generalization,0,PASS
+README.md,unseen-building generalization claim,unseen-building generalization,0,PASS
+README.md,unseen-building generalization claim,泛化到未见建筑,0,PASS
+README.md,unsupported energy-use claim,节能 ,0,PASS
+README.md,unsupported electricity-use claim,节电 ,0,PASS
+README.md,unsupported cost claim,电费下降,0,PASS
+README.md,unsupported carbon claim,碳排下降,0,PASS
+README.md,unsupported deployment claim,industrial real-time deployment proven,0,PASS
+README.md,unsupported deployment claim,达到工业实时部署要求,0,PASS
+README.md,unsupported significance claim,statistically significant improvement,0,PASS
+README.md,unsupported significance claim,显著提升,0,PASS
+README.md,overclaim,全面优于,0,PASS
+README.md,overclaim,充分证明,0,PASS
+README.md,overclaim,有力证明,0,PASS
+README.md,overclaim,巨大工程价值,0,PASS
+reports/phase9_1_final_audit.md,unseen-building generalization claim,cross-building generalization,0,PASS
+reports/phase9_1_final_audit.md,unseen-building generalization claim,unseen-building generalization,0,PASS
+reports/phase9_1_final_audit.md,unseen-building generalization claim,泛化到未见建筑,0,PASS
+reports/phase9_1_final_audit.md,unsupported energy-use claim,节能 ,0,PASS
+reports/phase9_1_final_audit.md,unsupported electricity-use claim,节电 ,0,PASS
+reports/phase9_1_final_audit.md,unsupported cost claim,电费下降,0,PASS
+reports/phase9_1_final_audit.md,unsupported carbon claim,碳排下降,0,PASS
+reports/phase9_1_final_audit.md,unsupported deployment claim,industrial real-time deployment proven,0,PASS
+reports/phase9_1_final_audit.md,unsupported deployment claim,达到工业实时部署要求,0,PASS
+reports/phase9_1_final_audit.md,unsupported significance claim,statistically significant improvement,0,PASS
+reports/phase9_1_final_audit.md,unsupported significance claim,显著提升,0,PASS
+reports/phase9_1_final_audit.md,overclaim,全面优于,0,PASS
+reports/phase9_1_final_audit.md,overclaim,充分证明,0,PASS
+reports/phase9_1_final_audit.md,overclaim,有力证明,0,PASS
+reports/phase9_1_final_audit.md,overclaim,巨大工程价值,0,PASS
+reports/battery_methodology.md,unseen-building generalization claim,cross-building generalization,0,PASS
+reports/battery_methodology.md,unseen-building generalization claim,unseen-building generalization,0,PASS
+reports/battery_methodology.md,unseen-building generalization claim,泛化到未见建筑,0,PASS
+reports/battery_methodology.md,unsupported energy-use claim,节能 ,0,PASS
+reports/battery_methodology.md,unsupported electricity-use claim,节电 ,0,PASS
+reports/battery_methodology.md,unsupported cost claim,电费下降,0,PASS
+reports/battery_methodology.md,unsupported carbon claim,碳排下降,0,PASS
+reports/battery_methodology.md,unsupported deployment claim,industrial real-time deployment proven,0,PASS
+reports/battery_methodology.md,unsupported deployment claim,达到工业实时部署要求,0,PASS
+reports/battery_methodology.md,unsupported significance claim,statistically significant improvement,0,PASS
+reports/battery_methodology.md,unsupported significance claim,显著提升,0,PASS
+reports/battery_methodology.md,overclaim,全面优于,0,PASS
+reports/battery_methodology.md,overclaim,充分证明,0,PASS
+reports/battery_methodology.md,overclaim,有力证明,0,PASS
+reports/battery_methodology.md,overclaim,巨大工程价值,0,PASS

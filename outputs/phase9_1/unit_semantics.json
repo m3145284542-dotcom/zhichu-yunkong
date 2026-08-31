@@ -1,0 +1,10 @@
+{
+  "status": "canonical",
+  "raw_meter_unit": "kWh per hourly interval",
+  "dispatch_power_interpretation": "interval-average kW",
+  "time_step_hours": 1.0,
+  "conversion": "P_t = E_t / delta_t",
+  "numeric_values_unchanged_due_to_one_hour_interval": true,
+  "battery_capacity_and_soc_unit": "kWh",
+  "battery_charge_discharge_power_unit": "kW"
+}

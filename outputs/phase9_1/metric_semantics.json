@@ -1,0 +1,22 @@
+{
+  "status": "canonical",
+  "decision_regret": {
+    "definition": "daily realized peak from forecast-driven dispatch minus non-deployable Oracle daily peak",
+    "primary_metric": "normalized mean daily regret vs Oracle",
+    "normalization": "Phase 7 Train mean load",
+    "uses": [
+      "Validation model selection",
+      "DOEF vs LightGBM decision comparison",
+      "win/tie/loss",
+      "bootstrap"
+    ]
+  },
+  "peak_reduction_percentage": {
+    "definition": "100 * (overall Test-window original maximum peak - post-dispatch maximum peak) / overall Test-window original maximum peak",
+    "scope": "whole Test window",
+    "not_equivalent_to_decision_regret": true
+  },
+  "energy_use_reduction_metric_present": false,
+  "electricity_cost_model_present": false,
+  "carbon_model_present": false
+}

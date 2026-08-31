@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "logical_role": "canonical Phase 9.1 methodology, statistical, unit-semantic, and reporting correction",
+  "producer": "scripts/run_phase9_1.py",
+  "created_at_utc": "2026-08-31T05:23:24.013938+00:00",
+  "parents": {
+    "phase7": {
+      "path": "outputs/phase7/artifact_manifest.json",
+      "sha256": "7ce38421ec265da62e853c643db3f28a8329b66df8509c8ba49210890e070b70"
+    },
+    "phase8": {
+      "path": "outputs/phase8/lineage.json",
+      "sha256": "e6604a4f3fcd8a366a377697ba8e536b2ac022433f61f5f0559b6f2b74535087"
+    },
+    "phase9": {
+      "path": "outputs/phase9/data_lineage.json",
+      "sha256": "13ffbc387574215f2e9d352466a92a0f24c5af6878c8cfb47028c800e73571a5"
+    }
+  },
+  "supersedes_for_reporting_role": "outputs/phase9/data_lineage.json",
+  "historical_phase9_artifacts_preserved": true,
+  "acceptance_reason": "Validation-only DOEF selection, building-level bootstrap, explicit units and metric semantics, claim audit, and frozen-artifact invariance all passed",
+  "canonical_loader": "src.final_algorithm.load_final_algorithm",
+  "artifacts": [
+    {
+      "path": "outputs/phase9_1/artifact_hash_audit.json",
+      "sha256": "3f246b62a1d4938dfb6835dd57036694bb877868b09725e0f3298aa2cfa7f9aa"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap_summary.json",
+      "sha256": "e87007e2dc2608e6e1aafebf622cc00a558110168b7aac525088f188da78a38e"
+    },
+    {
+      "path": "outputs/phase9_1/claim_audit.csv",
+      "sha256": "7acde4d886ddbea8662488295edc9c06725da0dd7c3e740cce480d543adf9227"
+    },
+    {
+      "path": "outputs/phase9_1/doef_prediction_invariance.json",
+      "sha256": "85bcf0cf3d0c5ef9ec12d48ef2f7a601dcdfbf1845b0e821ca6cd6ddf9844a42"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
+    },
+    {
+      "path": "outputs/phase9_1/methodology_audit.json",
+      "sha256": "f4b40ec737d7b6c30b71976b5e30619c8ea27c4807994b4fbdb492a3237ab2b7"
+    },
+    {
+      "path": "outputs/phase9_1/metric_semantics.json",
+      "sha256": "ff07f2ee0d96b2676f84ab13f6302543cb1b51defb8f8420dfb6ba6d634de574"
+    },
+    {
+      "path": "outputs/phase9_1/unit_semantics.json",
+      "sha256": "a114ccd51ff37406728238fc279ab2125f24e3b43907dd61b62673af5daba9dc"
+    },
+    {
+      "path": "reports/battery_methodology.md",
+      "sha256": "94ce51b86cce4da5207b4daa9a0207429dde27ae8e2b3f0238414e6e32f8740a"
+    },
+    {
+      "path": "reports/phase9_1_final_audit.md",
+      "sha256": "be50e66794894f291a38e1a8dd1b8c4f9a43fb9e97927d7be638c3f13b0506eb"
+    }
+  ]
+}

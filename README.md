@@ -149,43 +149,18 @@ python -m unittest discover -s tests -v
 
 Formal outputs, the frozen run configuration, lineage, leakage/constraint audits, bootstrap uncertainty, and report figures are in `outputs/phase8/`; the controlled interpretation and claim boundaries are in `reports/phase8_report.md`.
 
-## Phase 9 — Final Algorithm Validation & Freeze
+## Phase 9.1 — Final Methodology & Reporting Audit
 
-Phase 9 是最后一个算法研发阶段。它没有增加模型家族，只在 Phase 7/8 完全冻结的 8 栋建筑、24 小时预测、Train/Validation/Test、31 个因果特征、逐建筑 LightGBM 参数和 Train-scale battery 上验证轻量 Peak-aware sample weighting。
+**Final algorithm:** DOEF v1.0 — Decision-Oriented Ensemble Forecasting（面向储能决策的集成负荷预测方法）。DOEF uses `w_b × LightGBM + (1 − w_b) × DayWeek`; each building-specific `w_b` is the Validation decision-regret-selected `w_decision` in `outputs/phase8/selected_weights.csv`.
 
-Validation 使用 normalized mean regret `0.001` 等价带，避免把极小且可能不稳定的差异解释为实质性提升；等价候选优先更弱 sample weighting。该值是保守 model-selection tolerance，不是统计显著性或置信阈值。
+Phase 9.1 changes reporting, statistical aggregation, unit semantics, and methodology wording only. It does not alter frozen DOEF predictions, Phase 8 weights, selected buildings, model parameters, battery configurations, optimizer settings, or Test boundaries. DOEF was selected on Validation before Test evaluation; Test is used for evaluation and reporting only. Peak-aware LightGBM is a rejected supporting experiment, not an algorithm-promotion candidate.
 
-正式评估术语为 **frozen held-out test period（冻结的留出测试区间）**。历史阶段已经查看过其结果；Phase 7–9 只保证边界冻结，且不使用该区间重新选择模型、建筑、参数、融合权重或 battery。
+The evaluation covers eight heterogeneous office buildings, each trained from its own history and tested on its own fixed future window. It is a multi-building robustness evaluation, not an evaluation on a new building absent from training. Eligibility used fixed raw-data coverage checks over Train/Validation/Test windows; representative morphology sampling among eligible buildings used Train statistics only and no Validation/Test forecast or decision performance.
 
-### Competition-ready benchmark
+DOEF versus LightGBM building-level decision-regret comparison is 6/2/0 wins/ties/losses. The paired building bootstrap of normalized mean daily regret difference is -0.004198, with 95% percentile interval [-0.006850, -0.001719] (10,000 resamples, seed 42, eight buildings).
 
-原始数据层为兼容历史保留 `Persistence`/`Day`，展示层合并为 `Day Persistence`，公式为 `forecast(t)=actual(t-24h)`。
+BDG2 meter values are hourly-interval kWh. Dispatch interprets `P_t = E_t / Δt` with `Δt = 1 h`, yielding numerically identical interval-average kW values. Peak-shaving percentages describe simulated maximum-power reduction under the frozen battery and dispatch protocol; the project does not model total electricity-use reduction, tariffs, costs, or emissions.
 
-| display_name | normalized_mae_mean | normalized_rmse_mean | normalized_peak_mae_mean | normalized_decision_regret_mean | peak_reduction_mean_pct | peak_reduction_median_pct |
-| --- | --- | --- | --- | --- | --- | --- |
-| Day Persistence | 0.22588 | 0.43019 | 0.36119 | 0.16299 | -1.87845 | 0.63516 |
-| Week | 0.20158 | 0.32841 | 0.25763 | 0.14432 | 3.08546 | 4.77208 |
-| DayWeek | 0.18348 | 0.29662 | 0.26366 | 0.14302 | 4.90690 | 5.57369 |
-| LightGBM | 0.14734 | 0.21694 | 0.21736 | 0.11613 | 1.00843 | 5.05712 |
-| XGBoost | 0.14978 | 0.21675 | 0.21144 | 0.11753 | 0.45283 | 4.58839 |
-| CatBoost | 0.17360 | 0.23921 | 0.23138 | 0.11874 | -24.48242 | 4.82086 |
-| DOEF | 0.13797 | 0.20782 | 0.20720 | 0.11193 | 6.44233 | 5.62914 |
-| Peak-aware LightGBM | 0.14759 | 0.21728 | 0.21737 | 0.11620 | 1.12881 | 5.05712 |
+Canonical sources: `outputs/phase9/final_benchmark.csv` for the unchanged benchmark; `outputs/phase9_1/final_reporting_summary.json` for corrected interpretation; `outputs/phase9_1/data_lineage.json` for fail-closed lineage; `reports/phase9_1_final_audit.md` for the final audit report.
 
-Peak reduction 是冻结 battery 容量、功率约束和调度协议下的削峰比例，不是节电率、成本降幅或碳减排。CatBoost 的负向 mean 由个别极端建筑驱动，因此主表同时给出 median；完整逐建筑值见 `competition_summary.json`。
-
-**Final frozen algorithm: DOEF v1.0 — Decision-Oriented Ensemble Forecasting（面向储能决策的集成负荷预测方法）。** 相对 LightGBM，程序派生的 normalized MAE 相对改善为 6.3585%，normalized decision regret 相对改善为 3.6147%，decision win/tie/loss 为 6/2/0。
-
-Peak-aware LightGBM **未成功**：7/8 建筑选择 alpha=0，冻结的留出测试区间上相对 LightGBM 为 0/7/1、相对 DOEF 为 0/2/6，因此按停止规则不再扩展 weighting 或继续调参。
-
-正式输出位于 `outputs/phase9/`，比赛表为 `final_benchmark.csv`，派生摘要为 `competition_summary.json`，完整解释在 `reports/phase9_report.md`。后续消费者必须通过 `src.final_algorithm.load_final_algorithm()` 读取；Phase 9 artifact 缺失时显式失败，不回退历史阶段。
-
-## Algorithm Freeze
-
-**Phase 9 is the final algorithm-development phase.**
-
-- Final frozen algorithm: `DOEF v1.0`
-- Algorithm development: `ENDED / FROZEN`
-- Further algorithm R&D: `STOPPED`
-- 后续 visualization、prototype、report、presentation 或 demo 必须消费 Phase 9 canonical loader/artifacts。
-- 冻结后只允许修复经过验证的 bug；不得自行新增或调整模型。
+Reproduction: `python scripts/run_phase9_1.py` followed by `python -m unittest discover -s tests -v`.
