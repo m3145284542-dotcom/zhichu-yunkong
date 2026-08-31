@@ -1,0 +1,55 @@
+name: Phase 7 multi-building benchmark
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/phase7/**'
+      - 'scripts/run_phase7.py'
+      - 'tests/test_phase7.py'
+      - 'requirements.txt'
+      - '.github/workflows/phase7.yml'
+      - 'src/phase6.py'
+      - 'src/battery/**'
+      - 'src/features/**'
+      - 'src/models/**'
+      - 'outputs/phase4_5/**'
+      - 'outputs/phase5/**'
+      - 'outputs/phase6/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase7-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  phase7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install fixed model dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Download frozen BDG2 data
+        run: python scripts/download_bdg2.py
+      - name: Materialize Phase 6 acceptance artifacts
+        run: python scripts/run_phase6.py
+      - name: Run Phase 7
+        run: python scripts/run_phase7.py
+      - name: Run full regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Upload Phase 7 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase7-results
+          path: |
+            outputs/phase7/
+            reports/phase7_report.md
+          if-no-files-found: error

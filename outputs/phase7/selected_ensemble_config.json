@@ -1,0 +1,33 @@
+{
+  "status": "frozen_before_test",
+  "selection_scope": "global alpha across all selected buildings",
+  "candidate_alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "alpha": 1.0,
+  "best_tree_by_building": {
+    "Hog_office_Rolando": "LightGBM",
+    "Hog_office_Lavon": "LightGBM",
+    "Hog_office_Joey": "CatBoost",
+    "Lamb_office_Caitlin": "CatBoost",
+    "Robin_office_Addie": "LightGBM",
+    "Lamb_office_Gerardo": "LightGBM",
+    "Hog_office_Alexis": "XGBoost",
+    "Hog_office_Byron": "LightGBM"
+  },
+  "selection_order": [
+    "mean across-building normalized Validation daily realized peak",
+    "normalized worst-10% daily peak",
+    "normalized mean regret",
+    "normalized forecast MAE",
+    "smaller alpha"
+  ],
+  "stable_validation_improvement": false,
+  "stop_rule": "Test ensemble runs only if interior alpha improves at least 5/8 buildings and mean normalized peak by >0.001",
+  "test_executed": false,
+  "test_used_for_selection": false
+}

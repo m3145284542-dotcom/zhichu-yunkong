@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "phase": "Phase 7 \u2014 Multi-Building Generalization and Decision-Value Benchmarking",
+  "runtime_seconds": 152.1051376999999,
+  "office_candidate_count": 296,
+  "quality_pass_count": 82,
+  "selected_buildings": [
+    "Hog_office_Rolando",
+    "Hog_office_Lavon",
+    "Hog_office_Joey",
+    "Lamb_office_Caitlin",
+    "Robin_office_Addie",
+    "Lamb_office_Gerardo",
+    "Hog_office_Alexis",
+    "Hog_office_Byron"
+  ],
+  "forecast_decision_exact_rank_agreement_rate": 0.34375,
+  "ensemble": {
+    "status": "frozen_before_test",
+    "selection_scope": "global alpha across all selected buildings",
+    "candidate_alphas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "alpha": 1.0,
+    "best_tree_by_building": {
+      "Hog_office_Rolando": "LightGBM",
+      "Hog_office_Lavon": "LightGBM",
+      "Hog_office_Joey": "CatBoost",
+      "Lamb_office_Caitlin": "CatBoost",
+      "Robin_office_Addie": "LightGBM",
+      "Lamb_office_Gerardo": "LightGBM",
+      "Hog_office_Alexis": "XGBoost",
+      "Hog_office_Byron": "LightGBM"
+    },
+    "selection_order": [
+      "mean across-building normalized Validation daily realized peak",
+      "normalized worst-10% daily peak",
+      "normalized mean regret",
+      "normalized forecast MAE",
+      "smaller alpha"
+    ],
+    "stable_validation_improvement": false,
+    "stop_rule": "Test ensemble runs only if interior alpha improves at least 5/8 buildings and mean normalized peak by >0.001",
+    "test_executed": false,
+    "test_used_for_selection": false
+  },
+  "hog_phase6_compatibility": {
+    "building": "Hog_office_Rolando",
+    "protocol": "Phase 4.5 canonical / Phase 6 reproduction",
+    "test_prediction_max_absolute_delta": 5.684341886080802e-14,
+    "mean_daily_peak_absolute_delta_vs_phase6": 0.0,
+    "tolerance": 1e-06,
+    "passed": true
+  },
+  "constraint_audit": {
+    "status": "PASS",
+    "controllers_audited": 120,
+    "daily_solves": 3520,
+    "totals": {
+      "solver_failures": 0,
+      "soc_lower_upper_violations": 0,
+      "charge_discharge_limit_violations": 0,
+      "simultaneous_charge_discharge_violations": 0,
+      "soc_transition_violations": 0,
+      "initial_soc_violations": 0,
+      "terminal_soc_violations": 0,
+      "nan_inf_violations": 0,
+      "negative_forecast_violations": 0,
+      "timestamp_alignment_violations": 0
+    }
+  },
+  "leakage_audit": {
+    "status": "PASS",
+    "checks": {
+      "building_morphology_train_only": true,
+      "selection_ignores_validation_test_performance": true,
+      "target_not_in_features": true,
+      "lags_positive_and_causal": true,
+      "rolling_features_use_shift1_history": true,
+      "purge_boundaries_correct": true,
+      "validation_test_separated": true,
+      "model_selection_validation_only": true,
+      "ensemble_alpha_validation_only": true,
+      "battery_sizing_train_only": true,
+      "test_actual_not_used_for_forecast_generation": true,
+      "test_metrics_not_used_for_configuration": true,
+      "phase6_dayweek_reused": true,
+      "weather_not_used": true
+    },
+    "canonical_lineage": {
+      "canonical_phase": "Phase 4.5",
+      "prediction_file": "outputs/phase4_5/final_predictions.csv",
+      "config_file": "outputs/phase4_5/final_config.json",
+      "prediction_sha256": "2a0f868e40d9ee63b5d750720c9602ed13f4792176f1f144b57d4e8ffe5547de",
+      "config_sha256": "414bce43e889b78940ebf0f17588d66eff624b4348e144ce424816801786fffa",
+      "timestamp_semantics": "timestamp is Phase 4.5 target_timestamp (feature_timestamp + 24h)",
+      "rows": 720,
+      "days": 30,
+      "hours_per_day": 24,
+      "forecast_horizon_hours": 24,
+      "selection_protocol": {
+        "train_target_cutoff_exclusive": "2017-11-01 00:00:00",
+        "validation_target_cutoff_exclusive": "2017-12-01 00:00:00",
+        "test_used_for_selection": false,
+        "final_refit_rows": 16269
+      }
+    },
+    "test_access_after_model_and_ensemble_freeze": true
+  },
+  "frozen_artifact_hashes_unchanged": true,
+  "versions": {
+    "python": "3.11.9",
+    "pandas": "2.3.3"
+  }
+}

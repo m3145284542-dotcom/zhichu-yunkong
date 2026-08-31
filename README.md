@@ -119,3 +119,17 @@ Run:
     python -m unittest discover -s tests -v
 
 All new data products are written to `outputs/phase5_5/`, figures to `outputs/phase5_5/figures/`, and the detailed interpretation to `reports/phase5_5_report.md`. The runner hashes and rechecks every Phase 4/5 output, reproduces the Phase 5 Medium baseline within `1e-8`, and fails if a frozen output changes or a battery constraint is violated.
+
+## Phase 7 — Multi-Building Generalization and Decision-Value Benchmarking
+
+Phase 7 uses only Train-period load morphology to select eight representative office buildings, retaining `Hog_office_Rolando` as the Phase 3–6 anchor. It compares the frozen Phase 6 Day-Week baseline (`weekly_weight=0.5`) with fixed-budget LightGBM, XGBoost, and CatBoost candidates under identical Phase 4.5/6 splits, purge rules, causal features, and normalized Phase 5 battery sizing.
+
+Run the Phase 6 acceptance artifacts first, then Phase 7 and the full suite:
+
+```powershell
+python scripts\run_phase6.py
+python scripts\run_phase7.py
+python -m unittest discover -s tests -v
+```
+
+Formal outputs, audits, figures, and lineage metadata are written to `outputs/phase7/`; the interpretation is in `reports/phase7_report.md`. The runner fails if any tracked Phase 3–6 artifact changes, the Hog canonical reproduction drifts, or any leakage/battery constraint audit fails. No weather, MPC, reinforcement learning, robust optimization, deep learning, or Test-time tuning is used.

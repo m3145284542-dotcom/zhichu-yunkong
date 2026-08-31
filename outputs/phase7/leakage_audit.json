@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": {
+    "building_morphology_train_only": true,
+    "selection_ignores_validation_test_performance": true,
+    "target_not_in_features": true,
+    "lags_positive_and_causal": true,
+    "rolling_features_use_shift1_history": true,
+    "purge_boundaries_correct": true,
+    "validation_test_separated": true,
+    "model_selection_validation_only": true,
+    "ensemble_alpha_validation_only": true,
+    "battery_sizing_train_only": true,
+    "test_actual_not_used_for_forecast_generation": true,
+    "test_metrics_not_used_for_configuration": true,
+    "phase6_dayweek_reused": true,
+    "weather_not_used": true
+  },
+  "canonical_lineage": {
+    "canonical_phase": "Phase 4.5",
+    "prediction_file": "outputs/phase4_5/final_predictions.csv",
+    "config_file": "outputs/phase4_5/final_config.json",
+    "prediction_sha256": "2a0f868e40d9ee63b5d750720c9602ed13f4792176f1f144b57d4e8ffe5547de",
+    "config_sha256": "414bce43e889b78940ebf0f17588d66eff624b4348e144ce424816801786fffa",
+    "timestamp_semantics": "timestamp is Phase 4.5 target_timestamp (feature_timestamp + 24h)",
+    "rows": 720,
+    "days": 30,
+    "hours_per_day": 24,
+    "forecast_horizon_hours": 24,
+    "selection_protocol": {
+      "train_target_cutoff_exclusive": "2017-11-01 00:00:00",
+      "validation_target_cutoff_exclusive": "2017-12-01 00:00:00",
+      "test_used_for_selection": false,
+      "final_refit_rows": 16269
+    }
+  },
+  "test_access_after_model_and_ensemble_freeze": true
+}

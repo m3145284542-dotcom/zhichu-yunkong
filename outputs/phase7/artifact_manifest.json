@@ -1,0 +1,124 @@
+{
+  "status": "canonical",
+  "logical_role": "Phase 7 formal multi-building benchmark evidence",
+  "producer": "scripts/run_phase7.py",
+  "acceptance_reason": "Hog reproduction, zero leakage/constraint violations, deterministic frozen selection",
+  "source_artifacts": {
+    "phase4_5": "outputs/phase4_5/final_predictions.csv",
+    "phase6": "outputs/phase6/selected_config.json"
+  },
+  "artifacts": [
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "e360e2259744a3b9788d550ba87635e4f986d726e93147066e8d7deaa40a8eb7"
+    },
+    {
+      "path": "outputs/phase7/building_candidate_statistics.csv",
+      "sha256": "629d1112fd5400dc508aee526ef3491840effd8bc7b24094485735d571ae44f8"
+    },
+    {
+      "path": "outputs/phase7/constraint_audit.json",
+      "sha256": "72c45f2e3642f20f7d29ae400515c4fc7ae453e34adae4c6a0a5d720576cb073"
+    },
+    {
+      "path": "outputs/phase7/constraint_audit_details.csv",
+      "sha256": "4248d9e84141560a3106e1c987add972438a7bf7da416d51745fa767b4d6819f"
+    },
+    {
+      "path": "outputs/phase7/cross_building_model_summary.csv",
+      "sha256": "cbad06fd825d9b49fb612f69fb888b5b42c158d61a1929092bb5c692df7b048d"
+    },
+    {
+      "path": "outputs/phase7/ensemble_test_results.csv",
+      "sha256": "3665f23462e8f8f4b3f1685dcdaef42713f41bddc744d2f9c1f762d9757f1d3c"
+    },
+    {
+      "path": "outputs/phase7/ensemble_validation_sweep.csv",
+      "sha256": "86e35525da91d06092e7d31b5165d8629e41dfdc31b361a26fe320d498e1a8ca"
+    },
+    {
+      "path": "outputs/phase7/figures/01_morphology_map.png",
+      "sha256": "11e7c3543cd4bc15efcb9225d1c6f141841fc98033e4f075799f8c2f17c7e178"
+    },
+    {
+      "path": "outputs/phase7/figures/02_normalized_forecast_comparison.png",
+      "sha256": "dd53673c537c77117e661f80074305e8fa4cbdf6e9e198cdc7dfbdff9c46c3f5"
+    },
+    {
+      "path": "outputs/phase7/figures/03_decision_comparison.png",
+      "sha256": "ac5554bd5bb0999ab948b4e01147843898f11b0e7a66fcbc30cd2e53f1e72a2d"
+    },
+    {
+      "path": "outputs/phase7/figures/04_forecast_vs_decision_rank.png",
+      "sha256": "163e16ba4804830af1bae45153f7788433ad8186213a39836eef48a1f5944598"
+    },
+    {
+      "path": "outputs/phase7/figures/05_average_rank.png",
+      "sha256": "3d1a208783b7f6249a9b3e5df100be76ca2acb7c2d3eede1cd4e6fe3bda15a80"
+    },
+    {
+      "path": "outputs/phase7/figures/06_success_case.png",
+      "sha256": "05d9a6b9d9537143fc9354e933db73e133354a89858f70deacf24bc490c3bfc8"
+    },
+    {
+      "path": "outputs/phase7/figures/07_failure_case.png",
+      "sha256": "2c65392092079729ff7e1d0f43c87f3782fdf9d02032904837a87cd47f1c7835"
+    },
+    {
+      "path": "outputs/phase7/figures/08_ensemble_improvement.png",
+      "sha256": "1a46c68fe0e8bc28a1916eff3e9a29a50efaed5896bc2881a682f8eb531dd584"
+    },
+    {
+      "path": "outputs/phase7/hog_phase6_compatibility.json",
+      "sha256": "ad42273da39b181804f8c4f1561b099164c58721c5507e568bfa9bb25a204b6d"
+    },
+    {
+      "path": "outputs/phase7/leakage_audit.json",
+      "sha256": "7e64bd277feb4ffce41b0cf1ce2573ad35b32ca2647a045675c8d44e67f47e6e"
+    },
+    {
+      "path": "outputs/phase7/model_selection_config.json",
+      "sha256": "ea1f34a1d24ce9281303fbec91efebb7eb0efa665309f0c509236b2f0f970749"
+    },
+    {
+      "path": "outputs/phase7/model_test_decision_metrics.csv",
+      "sha256": "8680b2eced090f2ef2e56d5ceecf3217eacc1958f23b0eff1aec07eff3499454"
+    },
+    {
+      "path": "outputs/phase7/model_test_forecast_metrics.csv",
+      "sha256": "38692038ae03c56000c2f05f6ac2138f39c58f26eb588f9b8cfff14dcd20d855"
+    },
+    {
+      "path": "outputs/phase7/model_validation_results.csv",
+      "sha256": "0a3f239e405b48aaf17fc3f92cbe5fcbf1cb1a040d574591c09bda7a7a4a6add"
+    },
+    {
+      "path": "outputs/phase7/paired_model_comparison.csv",
+      "sha256": "d50360d3ec236140ac463527872ad216f10254f8ade2a34ac379bd4af86febd5"
+    },
+    {
+      "path": "outputs/phase7/selected_buildings.csv",
+      "sha256": "2057f67f11f345fdf7c2f6609351ca4fe4c06dabe816c19067dd129856679d2a"
+    },
+    {
+      "path": "outputs/phase7/selected_buildings.json",
+      "sha256": "0a39c5e38c0568d30010d5b0c2a71d82933fe5e27b5df37408c9de2f81f7b885"
+    },
+    {
+      "path": "outputs/phase7/selected_ensemble_config.json",
+      "sha256": "80ef745c7d4f315e2d01e25ce5ca9e19c8d3a35e82000533b442f739634f1256"
+    },
+    {
+      "path": "outputs/phase7/summary.json",
+      "sha256": "aff81d762af9f6416c39c7af2c751d221af903a2734e774743891a954fb2fc54"
+    },
+    {
+      "path": "outputs/phase7/test_daily_decision_metrics.csv",
+      "sha256": "172c8aab5f9eb86a4faa54243d1eaa72f9d28b94b60088a140e7b47ead1cf3fe"
+    },
+    {
+      "path": "reports/phase7_report.md",
+      "sha256": "b93d1e628ce1dd0200f5171c733fef14f26de83f4bcfe4ca0b2233c9bac10fdb"
+    }
+  ]
+}

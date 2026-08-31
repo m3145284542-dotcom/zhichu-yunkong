@@ -1,0 +1,70 @@
+{
+  "status": "frozen_before_model_training",
+  "random_seed": 42,
+  "office_candidates": 296,
+  "quality_pass_count": 82,
+  "quality_rules": {
+    "train_missing_fraction_max": 0.01,
+    "validation_missing_fraction_max": 0.0,
+    "test_missing_fraction_max": 0.0,
+    "zero_fraction_max": 0.2,
+    "minimum_train_valid_samples": 8760,
+    "required_validation_samples": 720,
+    "required_test_samples": 744
+  },
+  "selection_features": [
+    "log_mean_load",
+    "coefficient_of_variation",
+    "peak_to_average_ratio",
+    "normalized_peak_valley_range",
+    "lag24_autocorrelation",
+    "lag168_autocorrelation",
+    "weekday_weekend_difference_normalized",
+    "daily_profile_variability_normalized",
+    "robust_outlier_fraction"
+  ],
+  "selection_method": "anchor + deterministic farthest-point sampling on robust-scaled Train-only morphology",
+  "selected_buildings": [
+    {
+      "building": "Hog_office_Rolando",
+      "selection_order": 0,
+      "selection_reason": "Phase 3\u20136 canonical anchor; passed the same frozen quality rules"
+    },
+    {
+      "building": "Hog_office_Lavon",
+      "selection_order": 1,
+      "selection_reason": "deterministic morphology coverage: high peak_to_average_ratio, high daily_profile_variability_normalized, high normalized_peak_valley_range"
+    },
+    {
+      "building": "Hog_office_Joey",
+      "selection_order": 2,
+      "selection_reason": "deterministic morphology coverage: high robust_outlier_fraction, low lag168_autocorrelation, high log_mean_load"
+    },
+    {
+      "building": "Lamb_office_Caitlin",
+      "selection_order": 3,
+      "selection_reason": "deterministic morphology coverage: high daily_profile_variability_normalized, high robust_outlier_fraction, high coefficient_of_variation"
+    },
+    {
+      "building": "Robin_office_Addie",
+      "selection_order": 4,
+      "selection_reason": "deterministic morphology coverage: low lag168_autocorrelation, low lag24_autocorrelation, low log_mean_load"
+    },
+    {
+      "building": "Lamb_office_Gerardo",
+      "selection_order": 5,
+      "selection_reason": "deterministic morphology coverage: high daily_profile_variability_normalized, high peak_to_average_ratio, high normalized_peak_valley_range"
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "selection_order": 6,
+      "selection_reason": "deterministic morphology coverage: high weekday_weekend_difference_normalized, high daily_profile_variability_normalized, high peak_to_average_ratio"
+    },
+    {
+      "building": "Hog_office_Byron",
+      "selection_order": 7,
+      "selection_reason": "deterministic morphology coverage: high log_mean_load, low daily_profile_variability_normalized, low coefficient_of_variation"
+    }
+  ],
+  "validation_or_test_model_performance_used": false
+}
