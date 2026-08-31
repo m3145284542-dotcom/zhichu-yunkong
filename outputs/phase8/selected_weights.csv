@@ -1,0 +1,9 @@
+building,w_forecast,w_decision,weights_differ,validation_MAE_decision_minus_forecast,validation_regret_decision_minus_forecast,validation_MAE_decision_rank_spearman
+Hog_office_Rolando,0.9,0.7,True,0.04684557060636951,-0.06346890925118487,0.9545454545454546
+Hog_office_Lavon,0.0,0.0,False,0.0,0.0,1.0
+Hog_office_Joey,0.6,0.3,True,2.9848124028365746,-2.1807675294934086,0.06363636363636364
+Lamb_office_Caitlin,0.4,0.8,True,1.2384183257057497,-1.0179468049228797,-0.5454545454545455
+Robin_office_Addie,1.0,1.0,False,0.0,0.0,1.0
+Lamb_office_Gerardo,0.0,1.0,True,0.30743218210984136,-0.06511340915926964,-1.0
+Hog_office_Alexis,0.6,0.7,True,0.04978084387909387,-0.015230022940031063,0.38181818181818183
+Hog_office_Byron,0.9,0.8,True,1.4885510835370894,-0.6101223050286606,0.9272727272727275

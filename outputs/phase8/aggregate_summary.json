@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "phase": "Phase 8 — Decision-Oriented Ensemble and Controlled Validation",
+  "runtime_seconds": 96.33349019999878,
+  "different_weight_buildings": 6,
+  "global_weights": {
+    "forecast": 0.5,
+    "decision": 0.8
+  },
+  "decision_improved_buildings": 5,
+  "decision_degraded_buildings": 1,
+  "decision_tied_buildings": 2,
+  "mean_test_regret_delta_decision_minus_forecast_kw": -0.09260290886455452,
+  "median_test_regret_delta_decision_minus_forecast_kw": -0.10941275726855526,
+  "mismatch_buildings": [
+    "Hog_office_Joey"
+  ],
+  "bootstrap": {
+    "comparison": "DecisionSelectedPerBuilding minus ForecastSelectedPerBuilding",
+    "metric": "daily regret difference normalized by Phase 7 Train mean load",
+    "resampling_unit": "building-day pair",
+    "pairs": 240,
+    "seed": 42,
+    "resamples": 10000,
+    "mean_difference": -0.01595789658000044,
+    "median_difference": 0.0,
+    "ci95_lower": -0.030478993879124745,
+    "ci95_upper": -0.0026374167962761146,
+    "probability_of_improvement": 0.9902
+  },
+  "endpoint_reproduction_max_metric_delta": 1.4210854715202004e-14,
+  "endpoint_reproduction_passed": true,
+  "constraint_audit": {
+    "status": "PASS",
+    "controllers_audited": 152,
+    "daily_solves": 4464,
+    "totals": {
+      "solver_failures": 0,
+      "soc_lower_upper_violations": 0,
+      "charge_discharge_limit_violations": 0,
+      "simultaneous_charge_discharge_violations": 0,
+      "soc_transition_violations": 0,
+      "initial_soc_violations": 0,
+      "terminal_soc_violations": 0,
+      "nan_inf_violations": 0,
+      "negative_forecast_violations": 0,
+      "timestamp_alignment_violations": 0
+    }
+  },
+  "leakage_audit": {
+    "status": "PASS",
+    "checks": {
+      "fixed_phase7_buildings": true,
+      "same_validation_grid_for_both_objectives": true,
+      "selection_rows_validation_only": true,
+      "weight_files_written_before_test_evaluation": true,
+      "test_not_used_for_selection_or_tie_break": true,
+      "global_scale_uses_phase7_train_mean": true,
+      "target_not_in_features": true,
+      "weather_not_in_features": true,
+      "same_frozen_battery_optimizer": true,
+      "realized_decisions_evaluated_on_actual": true,
+      "oracle_not_deployable": true
+    }
+  },
+  "frozen_phase3_7_artifacts_unchanged": true,
+  "retain_as_final_algorithm_component": true,
+  "final_conclusion": "Decision-oriented ensemble 在多数建筑且平均 Test regret 上改善，可作为最终候选组成部分；但仍受单月 Test 与 bootstrap 区间约束，不表述为普遍或显著提升。",
+  "phase7_manifest_status": "canonical",
+  "versions": {
+    "python": "3.11.9",
+    "pandas": "2.3.3"
+  }
+}

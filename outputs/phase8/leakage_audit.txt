@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": {
+    "fixed_phase7_buildings": true,
+    "same_validation_grid_for_both_objectives": true,
+    "selection_rows_validation_only": true,
+    "weight_files_written_before_test_evaluation": true,
+    "test_not_used_for_selection_or_tie_break": true,
+    "global_scale_uses_phase7_train_mean": true,
+    "target_not_in_features": true,
+    "weather_not_in_features": true,
+    "same_frozen_battery_optimizer": true,
+    "realized_decisions_evaluated_on_actual": true,
+    "oracle_not_deployable": true
+  }
+}

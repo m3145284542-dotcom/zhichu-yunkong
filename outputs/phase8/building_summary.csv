@@ -1,0 +1,9 @@
+building,w_forecast,w_decision,forecast_MAE_delta_decision_minus_forecast,decision_regret_delta_decision_minus_forecast,p90_regret_delta_decision_minus_forecast,worst_10pct_peak_delta_decision_minus_forecast,decision_outcome,mismatch,mismatch_type
+Hog_office_Rolando,0.9,0.7,-0.9514536144964509,-0.38509829909113513,-1.5856511031795542,-0.7254687285677619,improved,False,none
+Hog_office_Lavon,0.0,0.0,0.0,0.0,0.0,0.0,tied,False,none
+Hog_office_Joey,0.6,0.3,-0.6033992992647796,1.1835908520113065,-7.001393652882257,-0.17812649156348925,degraded,True,forecast better / decision worse
+Lamb_office_Caitlin,0.4,0.8,-1.1089856577620871,-0.42124400464378553,-4.482981444408418,1.2531344252041094,improved,False,none
+Robin_office_Addie,1.0,1.0,0.0,0.0,0.0,0.0,tied,False,none
+Lamb_office_Gerardo,0.0,1.0,-1.5821517950429222,-0.8992463046557115,-1.1057818072864842,-0.6125147492625374,improved,False,none
+Hog_office_Alexis,0.6,0.7,-0.025347282871777344,-0.04601395203327918,-0.17721914994342836,-0.10402694296302428,improved,False,none
+Hog_office_Byron,0.9,0.8,-0.8903534587809645,-0.17281156250383134,0.36087790214278215,-1.3912457091678334,improved,False,none

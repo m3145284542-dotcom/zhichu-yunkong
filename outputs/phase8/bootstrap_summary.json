@@ -1,0 +1,13 @@
+{
+  "comparison": "DecisionSelectedPerBuilding minus ForecastSelectedPerBuilding",
+  "metric": "daily regret difference normalized by Phase 7 Train mean load",
+  "resampling_unit": "building-day pair",
+  "pairs": 240,
+  "seed": 42,
+  "resamples": 10000,
+  "mean_difference": -0.01595789658000044,
+  "median_difference": 0.0,
+  "ci95_lower": -0.030478993879124745,
+  "ci95_upper": -0.0026374167962761146,
+  "probability_of_improvement": 0.9902
+}

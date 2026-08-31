@@ -1,0 +1,105 @@
+{
+  "status": "canonical",
+  "logical_role": "Phase 8 formal decision-oriented ensemble evidence",
+  "producer": "scripts/run_phase8.py",
+  "created_at_utc": "2026-08-31T03:35:27.913874+00:00",
+  "schema_version": 1,
+  "parent_artifacts": {
+    "phase7_commit": "5c89bdea663563d90df5eb52e289a9171573bc52",
+    "phase7_manifest": "outputs/phase7/artifact_manifest.json",
+    "phase7_manifest_sha256": "7ce38421ec265da62e853c643db3f28a8329b66df8509c8ba49210890e070b70",
+    "phase7_model_selection_config_sha256": "ea1f34a1d24ce9281303fbec91efebb7eb0efa665309f0c509236b2f0f970749"
+  },
+  "artifacts": [
+    {
+      "path": "outputs/phase8/aggregate_summary.json",
+      "sha256": "ce5018ef62e724e85c343381b279f8e061ba2438e725dfc84c014e205845a895"
+    },
+    {
+      "path": "outputs/phase8/bootstrap_summary.json",
+      "sha256": "135ec5924b6e22d30fbe3880cad7c4b09efd0763799edc085f8ec1d3f7ac9706"
+    },
+    {
+      "path": "outputs/phase8/building_summary.csv",
+      "sha256": "f5420e7ffaab4cf370314ff5b5a51bb790f1121d06c9d7eb6bea98724a21a756"
+    },
+    {
+      "path": "outputs/phase8/constraint_audit.txt",
+      "sha256": "debd5e1174e0dccee25fad53a3233e40646563ebbafde39fc294a21e193196ff"
+    },
+    {
+      "path": "outputs/phase8/constraint_audit_details.csv",
+      "sha256": "0fad55271e50ed41d8fe68d4c821d384c458abb679c0e14a0b2d0f0a34b7580c"
+    },
+    {
+      "path": "outputs/phase8/figures/01_validation_weight_vs_mae.png",
+      "sha256": "fd5060d1c37c38a696c9c23a5929396fb6c261e342d18eb356f31f103396dbe7"
+    },
+    {
+      "path": "outputs/phase8/figures/02_validation_weight_vs_regret.png",
+      "sha256": "5a3ca07d87033671c69d8a39f0a11bb9ca9a1f393d1d9691abed7ff8b3822046"
+    },
+    {
+      "path": "outputs/phase8/figures/03_selected_weights.png",
+      "sha256": "281d12edca9dfee3b31cd2ee5e4f643fda0f7e90848698670e2e7f310499c889"
+    },
+    {
+      "path": "outputs/phase8/figures/04_test_decision_regret.png",
+      "sha256": "1bbd66bd870d6612f4b9790bd35036bee84d0bc853b38501e8ed0fb54885099e"
+    },
+    {
+      "path": "outputs/phase8/figures/05_forecast_vs_decision_effect.png",
+      "sha256": "6bc5ba0250724df336f2836bb465e913a9356f4109d5c4cd20e4abff6b90608c"
+    },
+    {
+      "path": "outputs/phase8/figures/06_representative_dispatch.png",
+      "sha256": "a0bb0ec0cc353021314112ccfa36b9e4f2c74dd18b03905e1f9dd121be1b12ca"
+    },
+    {
+      "path": "outputs/phase8/global_selected_weights.json",
+      "sha256": "327e2208cc5ffe9c0c4de2690070764652de24091ad3914e746a16c398b7ecd2"
+    },
+    {
+      "path": "outputs/phase8/global_test_summary.csv",
+      "sha256": "42d8930a4c3799951bdffeb8d8bb525dbcd462962cf88f37e71caae3eeab919a"
+    },
+    {
+      "path": "outputs/phase8/global_weight_search.csv",
+      "sha256": "f44d68ae5125f64689e5a6fc219d23ff8a085ceafcfc9306b3f5b9d327ac3818"
+    },
+    {
+      "path": "outputs/phase8/leakage_audit.txt",
+      "sha256": "b4aece5837c6cbf462c21ebfd1597e328210004acd9faf0f39bb4ad3f3b4e26b"
+    },
+    {
+      "path": "outputs/phase8/run_config.json",
+      "sha256": "b4f7b7011df0e2a845dc75ccd8c4fbb716fdaf098794fd8b1861711064c4ad78"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "sha256": "918f3b4e38cec5b16be964a2631392577068333de264e973ddac9409a2f4da60"
+    },
+    {
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "sha256": "1c4667ce525a0cdada916bd11ee8c27276ec3a816aeae6b12bbd45355fdbb502"
+    },
+    {
+      "path": "outputs/phase8/test_forecast_metrics.csv",
+      "sha256": "66d7bef9f8c671486f5f93f84141101ab04a85168726ebe813b689411bed9c51"
+    },
+    {
+      "path": "outputs/phase8/validation_weight_search.csv",
+      "sha256": "c28ab6885d2e3c6ad89f1e8854963694f90d9c058077a417b84a906b291163f7"
+    },
+    {
+      "path": "reports/phase8_report.md",
+      "sha256": "287f3341e00e3ade4137979b2cc27d9eb01b3a508657343f1149b604ae42af0d"
+    }
+  ],
+  "acceptance_reason": "Validation-only selection frozen before Test; Phase 7 endpoints reproduced; leakage, constraints, and frozen-artifact checks passed",
+  "execution_note": "The first formal execution completed selection, Test evaluation, endpoint reproduction, leakage, constraint, and frozen-artifact checks, then stopped on a presentation-only plotting column error. The plotting field was corrected without changing the grid, objectives, tie-breaks, models, weights, or Test interpretation. A deterministic rerun produced identical selected_weights.csv and global_selected_weights.json SHA-256 values (2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959 and 327e2208cc5ffe9c0c4de2690070764652de24091ad3914e746a16c398b7ecd2)."
+}

@@ -133,3 +133,18 @@ python -m unittest discover -s tests -v
 ```
 
 Formal outputs, audits, figures, and lineage metadata are written to `outputs/phase7/`; the interpretation is in `reports/phase7_report.md`. The runner fails if any tracked Phase 3–6 artifact changes, the Hog canonical reproduction drifts, or any leakage/battery constraint audit fails. No weather, MPC, reinforcement learning, robust optimization, deep learning, or Test-time tuning is used.
+
+## Phase 8 — Decision-Oriented Ensemble
+
+Phase 8 only combines the frozen Phase 6 Day-Week prediction and each building's frozen/canonical Phase 7 LightGBM prediction. It compares two selection protocols over the same predeclared grid `w={0.0,0.1,...,1.0}`: forecast-oriented weights minimize Validation MAE, while decision-oriented weights minimize Validation mean daily battery regret versus the non-deployable Oracle. Both building-specific and one globally shared, Train-scale-normalized weight are evaluated.
+
+All weights and deterministic tie-break rules are frozen using Validation before Test evaluation. Every forecast enters the same Phase 7 battery configuration and optimizer, and realized peak shaving is evaluated on actual load. The stage uses no weather or future weather, performs no Test-time tuning, and does not add a model family.
+
+Run:
+
+```powershell
+python scripts\run_phase8.py
+python -m unittest discover -s tests -v
+```
+
+Formal outputs, the frozen run configuration, lineage, leakage/constraint audits, bootstrap uncertainty, and report figures are in `outputs/phase8/`; the controlled interpretation and claim boundaries are in `reports/phase8_report.md`.
