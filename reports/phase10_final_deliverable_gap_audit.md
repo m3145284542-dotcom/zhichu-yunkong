@@ -275,9 +275,9 @@ Acceptance requires `git diff --name-only <frozen-baseline>` to contain exactly 
 
 ### Phase 10 lineage
 
-`outputs/phase10/delivery_roadmap.json` is the stage-level manifest. Before validation its outputs are `candidate`. After Phase 10-specific acceptance checks, the report and matrix hashes are recorded there and the coherent set is promoted to `canonical` for the logical role “formal competition deliverable gap matrix and frozen minimal delivery roadmap.” The manifest intentionally does not self-hash. A Git commit would provide its immutable delivered identity, but Phase 10 remains uncommitted because the existing full suite has open failures/errors even though they were not caused by this stage.
+`outputs/phase10/delivery_roadmap.json` is the stage-level manifest. Before validation its outputs are `candidate`. After Phase 10-specific acceptance checks, the report and matrix hashes are recorded there and the coherent set is promoted to `canonical` for the logical role “formal competition deliverable gap matrix and frozen minimal delivery roadmap.” The manifest intentionally does not self-hash. Phase 10 was initially left uncommitted because the existing full suite has open failures/errors; the user subsequently gave explicit push authorization, so the accepted files were committed and delivered on the dedicated Phase 10 branch without changing the recorded exceptions.
 
-No push is authorized.
+Push was performed only after the user's later explicit authorization, to the dedicated branch `codex/phase10-deliverable-audit`; `main` was not updated directly.
 
 ## 15. Final Verdict
 

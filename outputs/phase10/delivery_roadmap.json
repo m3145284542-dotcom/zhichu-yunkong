@@ -19,7 +19,7 @@
     {
       "path": "reports/phase10_final_deliverable_gap_audit.md",
       "status": "canonical",
-      "sha256": "a887ac6f52fb3a5319f474180d9055e707fffc2039204744ac53dc87e7c1f801"
+      "sha256": "6e2b480f6b779cb74d4d683c02a8823af0bcaf2bc292803e8c3cd7a4926ad1a1"
     },
     {
       "path": "outputs/phase10/deliverable_gap_matrix.csv",
@@ -30,7 +30,7 @@
       "path": "outputs/phase10/delivery_roadmap.json",
       "status": "canonical",
       "sha256": null,
-      "hash_note": "The stage-level manifest does not self-hash. No Phase 10 commit was created because the existing full suite has open pre-existing/environmental failures."
+      "hash_note": "The stage-level manifest does not self-hash. The accepted set was committed and pushed only after explicit later user authorization; open pre-existing/environmental test exceptions remain recorded."
     }
   ],
   "acceptance_reason": "All 13 deliverable classes and five dependency-ordered stages were validated; evidence paths and commits resolve; Phase 10 report/matrix hashes match; only the three intended Phase 10 files differ from the frozen baseline. The full existing suite was run and its six pre-existing/environmental exceptions are explicitly preserved as an open HIGH lineage/reproduction risk.",
