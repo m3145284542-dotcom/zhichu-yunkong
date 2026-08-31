@@ -17,7 +17,7 @@
 - 峰值阈值只由 purge 后 Train target 的 P75 计算并冻结。
 - Medium battery 的容量、功率、效率、SOC 与 daily reset 完全复用 Phase 5。
 - `selected_config.json` 在任何 canonical Test forecast loader 调用之前写出；Test 不参与 blend 权重或 peak multiplier 选择。
-- Test 不是 pristine blind set，因为历史 Phase 3–5.7 Test 结果已经存在；Phase 6 不利用这些历史 Test 数值调参。
+- Test 是冻结的留出测试区间；历史 Phase 3–5.7 已查看过其结果。Phase 6 保持边界固定，且不利用这些历史 Test 数值调参。
 
 ## 4. 日—周组合 baseline
 

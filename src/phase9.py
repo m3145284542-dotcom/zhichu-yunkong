@@ -400,7 +400,7 @@ def _report(path: Path, validation: pd.DataFrame, selected: pd.DataFrame,
         "Phase 9 marks the end of algorithm development. 后续只进入 system prototype、visualization、technical report、presentation 与 demo；不再因为本次 Test 结果扩充 weighting function、模型、天气、深度学习、强化学习或 robust optimization。", "",
         "## 10. 失败尝试、适用范围与局限", "",
         "Phase 5.7 robust optimization 没有改善；Phase 6 单建筑 peak-aware 也未在 Test 优于 canonical LightGBM；本阶段按真实跨建筑结果记录 Peak-aware 的成功、部分成功或未成功，不做追加调参。最终创新点来自 causal forecasting protocol、decision-oriented validation、forecast-to-storage closed-loop evaluation、multi-building generalization 与 decision-oriented ensemble/peak-aware learning，而不是“全新 LightGBM”。", "",
-        "适用范围限于当前 8 栋 office、BDG2 固定时段、24 h 前预测、当前 Train-scale battery 和每日 SOC reset。Test 是单月且在历史阶段已经可见，不是项目级 pristine blind set；Phase 9 只保证它未进入本阶段配置选择。跨季节、其他建筑类型、不同电池或在线部署仍需独立验证。", "",
+        "适用范围限于当前 8 栋 office、BDG2 固定时段、24 h 前预测、当前 Train-scale battery 和每日 SOC reset。Test 是冻结的留出测试区间，历史阶段已查看过其结果；Phase 9 保持边界固定，并禁止将其用于本阶段配置选择。跨季节、其他建筑类型、不同电池或在线部署仍需独立验证。", "",
         "## 11. 15 个验收问题的直接回答", "",
         "1. 错位来自平均误差等权，而削峰取决于峰时与约束。", "2. weighting 为 Train quantile 阈值上的 1+alpha。", "3. 阈值、q/alpha、模型和融合均在 Test 前冻结。",
         f"4. Peak-aware：{final['peak_aware_result']}。", f"5. 三者的最终去留：{final['final_algorithm']}。", f"6. forecast 最佳：{best_forecast}。", f"7. decision 最佳：{best_decision}。",
@@ -684,4 +684,11 @@ def run(project_root: Path) -> dict[str, Any]:
         "artifacts": [{"path": path.relative_to(root).as_posix(), "sha256": sha256(path)} for path in sorted(artifact_paths)],
     })
     _write_json(output / "data_lineage.json", lineage)
-    return summary
+    from src.phase9_cleanup import finalize_phase9_outputs
+    finalize_phase9_outputs(root)
+    return _read_finalized_summary(output)
+
+
+def _read_finalized_summary(output: Path) -> dict[str, Any]:
+    """Read the summary after competition-ready finalization."""
+    return json.loads((output / "summary.json").read_text(encoding="utf-8"))

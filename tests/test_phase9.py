@@ -1,5 +1,7 @@
 import hashlib
 import json
+import shutil
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -84,6 +86,7 @@ class Phase9AcceptanceTests(unittest.TestCase):
             "per_building_metrics.csv", "aggregate_metrics.csv", "forecast_metrics.csv", "decision_metrics.csv",
             "efficiency_metrics.csv", "bootstrap_results.csv", "final_algorithm.json", "summary.json",
             "leakage_audit.json", "constraint_summary.json",
+            "final_benchmark.csv", "competition_summary.json",
         }
         self.assertTrue(required.issubset({path.name for path in self.out.iterdir()}))
         forecast = pd.read_csv(self.out / "forecast_metrics.csv")
@@ -127,7 +130,7 @@ class Phase9AcceptanceTests(unittest.TestCase):
         for artifact in lineage["artifacts"]:
             self.assertEqual(hashlib.sha256((ROOT / artifact["path"]).read_bytes()).hexdigest(), artifact["sha256"])
         loaded, loaded_lineage = load_final_algorithm(ROOT)
-        self.assertEqual(loaded["final_algorithm"], final["final_algorithm"])
+        self.assertEqual(loaded["name"], final["name"])
         self.assertEqual(loaded_lineage["status"], "canonical")
 
     def test_aggregate_schema_is_one_finite_row_per_method(self):
@@ -135,6 +138,84 @@ class Phase9AcceptanceTests(unittest.TestCase):
         self.assertEqual(len(aggregate), 9)
         self.assertEqual(aggregate.method.nunique(), 9)
         self.assertTrue(np.isfinite(aggregate.select_dtypes("number")).all().all())
+
+    def test_day_persistence_alias_and_display_merge(self):
+        per_building = pd.read_csv(self.out / "per_building_metrics.csv")
+        persistence = per_building.loc[per_building.method.eq("Persistence")].sort_values("building").reset_index(drop=True)
+        day = per_building.loc[per_building.method.eq("Day")].sort_values("building").reset_index(drop=True)
+        self.assertEqual(persistence.building.tolist(), day.building.tolist())
+        numeric = persistence.select_dtypes("number").columns
+        np.testing.assert_allclose(persistence[numeric], day[numeric], atol=1e-12, rtol=0.0)
+        benchmark = pd.read_csv(self.out / "final_benchmark.csv")
+        self.assertEqual(int(benchmark.display_name.eq("Day Persistence").sum()), 1)
+        self.assertFalse(benchmark.display_name.isin(["Persistence", "Day"]).any())
+        alias = benchmark.loc[benchmark.display_name.eq("Day Persistence")].iloc[0]
+        self.assertTrue(alias.equivalent_alias)
+        self.assertEqual(alias.raw_identifiers, "Persistence|Day")
+
+    def test_relative_improvements_are_derived_from_canonical_aggregate(self):
+        aggregate = pd.read_csv(self.out / "aggregate_metrics.csv").set_index("method")
+        competition = json.loads((self.out / "competition_summary.json").read_text(encoding="utf-8"))
+        derived = competition["doef_vs_lightgbm"]
+        expected_mae = 100 * (aggregate.loc["LightGBM", "mean_normalized_MAE"] - aggregate.loc["Phase8_DOEF", "mean_normalized_MAE"]) / aggregate.loc["LightGBM", "mean_normalized_MAE"]
+        expected_regret = 100 * (aggregate.loc["LightGBM", "mean_normalized_regret"] - aggregate.loc["Phase8_DOEF", "mean_normalized_regret"]) / aggregate.loc["LightGBM", "mean_normalized_regret"]
+        self.assertAlmostEqual(derived["normalized_mae_relative_improvement_pct"], expected_mae, places=12)
+        self.assertAlmostEqual(derived["normalized_regret_relative_improvement_pct"], expected_regret, places=12)
+
+    def test_catboost_robust_statistics_come_from_per_building_values(self):
+        per_building = pd.read_csv(self.out / "per_building_metrics.csv")
+        values = per_building.loc[per_building.method.eq("CatBoost"), "peak_reduction_percentage"].to_numpy(float)
+        competition = json.loads((self.out / "competition_summary.json").read_text(encoding="utf-8"))
+        catboost = competition["catboost_peak_reduction_pct"]
+        self.assertAlmostEqual(catboost["mean"], float(np.mean(values)), places=12)
+        self.assertAlmostEqual(catboost["median"], float(np.median(values)), places=12)
+        self.assertAlmostEqual(catboost["min"], float(np.min(values)), places=12)
+        self.assertAlmostEqual(catboost["max"], float(np.max(values)), places=12)
+        self.assertEqual(len(catboost["per_building"]), 8)
+
+    def test_final_algorithm_v1_metadata_and_metric_semantics(self):
+        final, _ = load_final_algorithm(ROOT)
+        self.assertEqual(final["name"], "Decision-Oriented Ensemble Forecasting")
+        self.assertEqual(final["acronym"], "DOEF")
+        self.assertEqual(final["source_phase"], 9)
+        self.assertEqual(final["algorithm_version"], "1.0")
+        self.assertEqual(final["freeze_status"], "frozen")
+        competition = json.loads((self.out / "competition_summary.json").read_text(encoding="utf-8"))
+        semantics = competition["metric_semantics"]
+        self.assertFalse(semantics["peak_reduction_is_energy_saving"])
+        self.assertFalse(semantics["energy_saving_metric_present"])
+
+    def test_loader_fails_closed_without_phase9_and_never_uses_phase8(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            phase8 = root / "outputs/phase8"
+            phase8.mkdir(parents=True)
+            (phase8 / "final_algorithm.json").write_text('{"name":"fallback"}', encoding="utf-8")
+            with self.assertRaises(FileNotFoundError):
+                load_final_algorithm(root)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            phase9 = root / "outputs/phase9"
+            phase9.mkdir(parents=True)
+            shutil.copy2(self.out / "data_lineage.json", phase9 / "data_lineage.json")
+            with self.assertRaises(ValueError):
+                load_final_algorithm(root)
+
+    def test_test_protocol_documentation_uses_honest_terminology(self):
+        documents = [ROOT / "README.md", *sorted((ROOT / "reports").glob("*.md"))]
+        banned = ("pristine blind", "completely unseen", "untouched test", "never-seen test", "never seen test", "blind holdout")
+        for path in documents:
+            text = path.read_text(encoding="utf-8").casefold()
+            for phrase in banned:
+                self.assertNotIn(phrase, text, f"{phrase!r} in {path}")
+
+    def test_phase7_phase8_canonical_hashes_match_cleanup_audit(self):
+        competition = json.loads((self.out / "competition_summary.json").read_text(encoding="utf-8"))
+        audit = competition["historical_artifact_audit"]
+        for path_key, hash_key in (("phase7_manifest_path", "phase7_manifest_sha256"), ("phase8_lineage_path", "phase8_lineage_sha256")):
+            path = ROOT / audit[path_key]
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), audit[hash_key])
+        self.assertFalse(audit["frozen_artifacts_modified_by_cleanup"])
 
 
 if __name__ == "__main__":

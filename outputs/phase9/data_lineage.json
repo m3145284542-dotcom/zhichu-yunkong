@@ -3,7 +3,7 @@
   "logical_role": "canonical final algorithm evidence and sole downstream result source",
   "producer": "scripts/run_phase9.py",
   "created_at_utc": "2026-08-31T04:17:48.178605+00:00",
-  "schema_version": 1,
+  "schema_version": 2,
   "parents": {
     "phase7_model_config": {
       "path": "outputs/phase7/model_selection_config.json",
@@ -16,6 +16,10 @@
     "phase8_weights": {
       "path": "outputs/phase8/selected_weights.csv",
       "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    "phase7_battery_configs": {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "e360e2259744a3b9788d550ba87635e4f986d726e93147066e8d7deaa40a8eb7"
     }
   },
   "artifacts": [
@@ -26,6 +30,10 @@
     {
       "path": "outputs/phase9/bootstrap_results.csv",
       "sha256": "c73223f1017330decba2fb3a501f0e1558123c0842fe8be3c1a4b38838073eb0"
+    },
+    {
+      "path": "outputs/phase9/competition_summary.json",
+      "sha256": "0bec9f74fd58b831ca3d39502f54c23d8499fdac8167b89aecaa998c244107b7"
     },
     {
       "path": "outputs/phase9/constraint_audit.csv",
@@ -69,7 +77,11 @@
     },
     {
       "path": "outputs/phase9/final_algorithm.json",
-      "sha256": "f0d12082ff0670afcef3780823ceba0a332022231fcb5c1af7e4ef9c99fb3a46"
+      "sha256": "9ada55af2ce3b217df78c3f0697a551d6d3d87ace892356163d5a13dd6025125"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
     },
     {
       "path": "outputs/phase9/forecast_metrics.csv",
@@ -93,7 +105,7 @@
     },
     {
       "path": "outputs/phase9/summary.json",
-      "sha256": "e89eff21103759149eaaa10f6e0e2776bf73c9dcafce694f56d1d8c9aba7491a"
+      "sha256": "21d2b5d5b42c0f8c33396a382a5299ed1e6b3576b02936fec4b5831411abdb16"
     },
     {
       "path": "outputs/phase9/validation_search.csv",
@@ -101,10 +113,22 @@
     },
     {
       "path": "reports/phase9_report.md",
-      "sha256": "97894a88dbfac28d95b491949bd6e4a60769c96db4f4b79e8c9e00d17faa42d8"
+      "sha256": "22ed2238a0c8c582123d4f93bec07f6feefd6f969613865f7665a96fe31da2e2"
     }
   ],
-  "acceptance_reason": "Validation-only configuration freeze, exact Phase 7/8 reproduction, zero leakage/constraint violations, full cross-building benchmark, and algorithm stop rule",
+  "acceptance_reason": "Competition-ready display aliases, derived statistics, honest held-out terminology, strict DOEF v1.0 metadata, and fail-closed canonical consumption; core experiment unchanged",
   "supersedes_for_downstream_role": "outputs/phase8/lineage.json",
-  "historical_sources_preserved": true
+  "historical_sources_preserved": true,
+  "finalizer": "scripts/finalize_phase9.py",
+  "canonical_loader": "src.final_algorithm.load_final_algorithm",
+  "algorithm_freeze": {
+    "acronym": "DOEF",
+    "version": "1.0",
+    "freeze_status": "frozen",
+    "source_phase": 9
+  },
+  "documentation": [
+    "README.md",
+    "reports/phase9_report.md"
+  ]
 }

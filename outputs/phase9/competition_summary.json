@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "source_phase": 9,
+  "final_algorithm": {
+    "name": "Decision-Oriented Ensemble Forecasting",
+    "acronym": "DOEF",
+    "display_name_zh": "面向储能决策的集成负荷预测方法",
+    "algorithm_version": "1.0",
+    "freeze_status": "frozen"
+  },
+  "buildings": 8,
+  "building_ids": [
+    "Hog_office_Rolando",
+    "Hog_office_Lavon",
+    "Hog_office_Joey",
+    "Lamb_office_Caitlin",
+    "Robin_office_Addie",
+    "Lamb_office_Gerardo",
+    "Hog_office_Alexis",
+    "Hog_office_Byron"
+  ],
+  "doef_vs_lightgbm": {
+    "normalized_mae_relative_improvement_pct": 6.358502841800696,
+    "normalized_regret_relative_improvement_pct": 3.6146701543680733,
+    "win_tie_loss": {
+      "wins": 6,
+      "ties": 2,
+      "losses": 0
+    },
+    "bootstrap_point_difference": -0.0041976002058672,
+    "bootstrap_ci_low": -0.0078296163486311,
+    "bootstrap_ci_high": -0.0003556580476148,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 42
+  },
+  "day_persistence_alias": {
+    "display_name": "Day Persistence",
+    "formula": "forecast(t) = actual(t - 24h)",
+    "raw_identifiers": [
+      "Persistence",
+      "Day"
+    ],
+    "equivalent_alias": true
+  },
+  "decision_equivalence_band": {
+    "metric": "normalized mean Validation regret",
+    "tolerance": 0.001,
+    "purpose": "Avoid interpreting very small and potentially unstable Validation differences as substantive decision improvements; prefer weaker sample weighting among equivalent candidates.",
+    "is_statistical_significance_threshold": false
+  },
+  "catboost_peak_reduction_pct": {
+    "mean": -24.482416067796464,
+    "median": 4.820860917002948,
+    "min": -245.94331246534048,
+    "max": 13.236691454892531,
+    "per_building": [
+      {
+        "building": "Hog_office_Alexis",
+        "peak_reduction_percentage": 11.68435263492371
+      },
+      {
+        "building": "Hog_office_Byron",
+        "peak_reduction_percentage": 12.53391257506742
+      },
+      {
+        "building": "Hog_office_Joey",
+        "peak_reduction_percentage": 0.3385458642955882
+      },
+      {
+        "building": "Hog_office_Lavon",
+        "peak_reduction_percentage": -245.94331246534048
+      },
+      {
+        "building": "Hog_office_Rolando",
+        "peak_reduction_percentage": 5.555821767077667
+      },
+      {
+        "building": "Lamb_office_Caitlin",
+        "peak_reduction_percentage": 4.08590006692823
+      },
+      {
+        "building": "Lamb_office_Gerardo",
+        "peak_reduction_percentage": 2.6487595597836258
+      },
+      {
+        "building": "Robin_office_Addie",
+        "peak_reduction_percentage": 13.236691454892531
+      }
+    ],
+    "extreme_case": {
+      "building": "Hog_office_Lavon",
+      "no_battery_peak_kw": 19.192,
+      "post_dispatch_peak_kw": 66.39344052834815,
+      "normalized_mae": 0.0479740655650084,
+      "daily_peak_hour_mae_hours": 7.466666666666667
+    }
+  },
+  "peak_aware_result": {
+    "status_zh": "未成功",
+    "selected_alpha_zero_buildings": 7,
+    "nonzero_selection": [
+      {
+        "building": "Hog_office_Byron",
+        "q": 0.8,
+        "alpha": 2.0
+      }
+    ],
+    "vs_lightgbm_win_tie_loss": {
+      "wins": 0,
+      "ties": 7,
+      "losses": 1
+    },
+    "vs_doef_win_tie_loss": {
+      "wins": 0,
+      "ties": 2,
+      "losses": 6
+    }
+  },
+  "test_protocol": {
+    "preferred_term": "frozen held-out test period",
+    "preferred_term_zh": "冻结的留出测试区间",
+    "historical_results_previously_viewed": true,
+    "phase7_9_boundaries_frozen": true,
+    "used_for_model_or_hyperparameter_selection": false
+  },
+  "metric_semantics": {
+    "peak_reduction_percentage": "Peak shaving under the frozen battery capacity, power constraints, and dispatch protocol.",
+    "peak_reduction_is_energy_saving": false,
+    "energy_saving_metric_present": false,
+    "cost_reduction_metric_present": false,
+    "carbon_reduction_metric_present": false
+  },
+  "efficiency_protocol": {
+    "aggregation": "mean across 8 buildings",
+    "inference_measurement": "median of 20 repetitions on the same 720 samples per building, then mean across buildings",
+    "environment": "CPU test environment recorded in outputs/phase9/summary.json",
+    "embedded_device_test": false,
+    "industrial_control_latency_proven": false,
+    "methods": [
+      {
+        "display_name": "CatBoost",
+        "training_time_seconds_mean_across_buildings": 0.784468962499659,
+        "inference_time_ms_mean_across_buildings": 1.3697000000547632,
+        "artifact_size_kib_mean_across_buildings": 228.6309814453125,
+        "test_samples_per_building": 720,
+        "inference_repeats": 20
+      },
+      {
+        "display_name": "LightGBM",
+        "training_time_seconds_mean_across_buildings": 0.1842050124998877,
+        "inference_time_ms_mean_across_buildings": 2.1542375000080938,
+        "artifact_size_kib_mean_across_buildings": 499.1944580078125,
+        "test_samples_per_building": 720,
+        "inference_repeats": 20
+      },
+      {
+        "display_name": "Peak-aware LightGBM",
+        "training_time_seconds_mean_across_buildings": 0.18231873750028169,
+        "inference_time_ms_mean_across_buildings": 2.1632375002127446,
+        "artifact_size_kib_mean_across_buildings": 499.9993896484375,
+        "test_samples_per_building": 720,
+        "inference_repeats": 20
+      },
+      {
+        "display_name": "DOEF",
+        "training_time_seconds_mean_across_buildings": 0.187476874999902,
+        "inference_time_ms_mean_across_buildings": 2.3403437500064683,
+        "artifact_size_kib_mean_across_buildings": 499.2091064453125,
+        "test_samples_per_building": 720,
+        "inference_repeats": 20
+      },
+      {
+        "display_name": "XGBoost",
+        "training_time_seconds_mean_across_buildings": 0.2848816875000466,
+        "inference_time_ms_mean_across_buildings": 2.163281250204818,
+        "artifact_size_kib_mean_across_buildings": 646.2098388671875,
+        "test_samples_per_building": 720,
+        "inference_repeats": 20
+      }
+    ]
+  },
+  "historical_artifact_audit": {
+    "phase7_manifest_path": "outputs/phase7/artifact_manifest.json",
+    "phase7_manifest_sha256": "7ce38421ec265da62e853c643db3f28a8329b66df8509c8ba49210890e070b70",
+    "phase8_lineage_path": "outputs/phase8/lineage.json",
+    "phase8_lineage_sha256": "e6604a4f3fcd8a366a377697ba8e536b2ac022433f61f5f0559b6f2b74535087",
+    "frozen_artifacts_modified_by_cleanup": false
+  }
+}

@@ -140,5 +140,97 @@
     },
     "maximum_reproduction_delta": 1.4210854715202004e-14
   },
-  "algorithm_development_complete": true
+  "algorithm_development_complete": true,
+  "competition_summary_path": "outputs/phase9/competition_summary.json",
+  "final_benchmark_path": "outputs/phase9/final_benchmark.csv",
+  "algorithm_freeze": {
+    "schema_version": 1,
+    "name": "Decision-Oriented Ensemble Forecasting",
+    "acronym": "DOEF",
+    "display_name_zh": "面向储能决策的集成负荷预测方法",
+    "source_phase": 9,
+    "algorithm_version": "1.0",
+    "freeze_status": "frozen",
+    "status": "canonical",
+    "algorithm_development_status": "ENDED / FROZEN",
+    "selection_basis": "Validation-selected decision-oriented ensemble, confirmed by frozen held-out multi-building evaluation.",
+    "held_out_evaluation_role": "Reporting and freeze confirmation only; not used to choose buildings, model parameters, or ensemble weights.",
+    "fixed_buildings": [
+      "Hog_office_Rolando",
+      "Hog_office_Lavon",
+      "Hog_office_Joey",
+      "Lamb_office_Caitlin",
+      "Robin_office_Addie",
+      "Lamb_office_Gerardo",
+      "Hog_office_Alexis",
+      "Hog_office_Byron"
+    ],
+    "forecast_horizon_hours": 24,
+    "model_components": [
+      {
+        "name": "DayWeek",
+        "role": "causal baseline component",
+        "formula": "0.5 * actual(t-24h) + 0.5 * actual(t-168h)"
+      },
+      {
+        "name": "LightGBM",
+        "role": "frozen per-building tree forecast component",
+        "metadata_path": "outputs/phase7/model_selection_config.json"
+      }
+    ],
+    "ensemble": {
+      "formula": "w * LightGBM + (1-w) * DayWeek",
+      "weight_config_path": "outputs/phase8/selected_weights.csv",
+      "weight_field": "w_decision",
+      "weight_selection": "Per-building Validation mean daily regret vs non-deployable Oracle with frozen tie-breaks"
+    },
+    "building_config_path": "outputs/phase7/selected_buildings.json",
+    "battery_config_path": "outputs/phase7/building_battery_configs.csv",
+    "required_artifacts": [
+      "outputs/phase7/selected_buildings.json",
+      "outputs/phase7/model_selection_config.json",
+      "outputs/phase7/building_battery_configs.csv",
+      "outputs/phase8/selected_weights.csv",
+      "outputs/phase9/run_config.json",
+      "outputs/phase9/aggregate_metrics.csv",
+      "outputs/phase9/final_benchmark.csv",
+      "outputs/phase9/competition_summary.json"
+    ],
+    "decision_equivalence_band": {
+      "metric": "normalized mean Validation regret",
+      "tolerance": 0.001,
+      "purpose": "Conservative model-selection tolerance that treats very small Validation differences as practically equivalent and prefers weaker sample weighting.",
+      "is_statistical_significance_threshold": false
+    },
+    "peak_aware_experiment": {
+      "status": "rejected supporting experiment",
+      "result_zh": "未成功",
+      "entered_final_algorithm": false
+    },
+    "test_used_to_choose_peak_configuration": false,
+    "algorithm_development_frozen": true,
+    "legacy_method_key": "Phase8_DOEF",
+    "legacy_final_algorithm": "DOEF — Decision-Oriented Ensemble Forecasting"
+  },
+  "derived_competition_results": {
+    "normalized_mae_relative_improvement_pct": 6.358502841800696,
+    "normalized_regret_relative_improvement_pct": 3.6146701543680733,
+    "win_tie_loss": {
+      "wins": 6,
+      "ties": 2,
+      "losses": 0
+    },
+    "bootstrap_point_difference": -0.0041976002058672,
+    "bootstrap_ci_low": -0.0078296163486311,
+    "bootstrap_ci_high": -0.0003556580476148,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 42
+  },
+  "test_protocol": {
+    "preferred_term": "frozen held-out test period",
+    "preferred_term_zh": "冻结的留出测试区间",
+    "historical_results_previously_viewed": true,
+    "phase7_9_boundaries_frozen": true,
+    "used_for_model_or_hyperparameter_selection": false
+  }
 }

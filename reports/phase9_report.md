@@ -1,117 +1,106 @@
-# Phase 9 — Final Algorithm Validation & Freeze
+# Phase 9 — Final Algorithm Validation & Algorithm Freeze v1.0
 
-## 1. 研究问题与错位机制
+## 1. Scope and honest evaluation protocol
 
-普通 forecast loss 对各时段近似等权，而削峰调度由日内最高负荷、可用 SOC 与功率约束共同决定；因此较小的平均误差不必然产生更小的 realized peak 或 regret。本阶段只验证 downstream-decision-aware sample weighting，不把它表述为新基础模型。
+Phase 9 是最后一个算法研发阶段。本次 cleanup 没有训练新模型、搜索新参数、改变建筑/切分/battery，也没有用测试结果重新选择配置。8 栋建筑、24 h horizon、31 个因果特征、Phase 7 模型参数、Phase 8 决策导向权重和全部正式数值保持不变。
 
-## 2. 冻结协议与审计
+正式术语为 **frozen held-out test period（冻结的留出测试区间）**。该区间在早期阶段作为固定 held-out evaluation period 使用，但历史阶段已经查看过结果；Phase 7–9 保持边界冻结，并禁止使用它重新选择模型、建筑或超参数。这是 honest evaluation protocol，不是项目级从未查看过的盲测声明。
 
-完整复用 Phase 7/8 的 8 栋建筑、24 h horizon、feature-time split、target-availability purge、31 个 causal features、逐建筑 LightGBM 参数/树数、Day/Week/DayWeek 定义、Phase 8 融合权重以及 Train-scale battery。Phase 3–8 正式产物在运行前后哈希一致。Persistence 与 Day 均为 t-24 同小时观测，是为满足历史命名而保留的数学等价别名。
+## 2. Peak-aware design and 0.001 equivalence band
 
-## 3. Peak-aware weighting 与防泄漏
+Peak-aware 仅比较 q∈{0.80,0.90}、alpha∈{0,0.5,1,2}，threshold 来自允许用于拟合/选择的 labels。为避免将 Validation 上极小、可能缺乏稳定性的数值差异解释为实质性决策提升，本阶段采用 normalized mean regret `0.001` 的等价带。与最佳候选差异不超过该阈值的配置视为决策表现近似等价，并优先选择复杂度更低、sample weighting 更弱的方案。
 
-对 q∈{0.80,0.90}、alpha∈{0,0.5,1,2} 使用 `threshold=quantile(y_train,q)`；训练标签达到阈值时 weight=1+alpha，否则为 1。Validation 阈值只由 purge 后 Train target 计算；选定 q/alpha 后，最终 Test 模型阈值可由 Train+Validation final-fit labels 重算。Test 不参与阈值、配置、模型参数、融合权重、建筑或 battery 选择。
+`0.001` 是保守的 model-selection tolerance，**不是** p-value、统计显著性阈值或置信阈值。
 
-每栋建筑先最小化 Validation normalized mean regret；与最优值相差不超过 0.001 的候选视为 decision-equivalent，再依次选择更小 alpha、较低 normalized p90 regret、较低 normalized MAE 和更小 q。选择文件在任何 Test 评估前写出。
+| building | q | alpha |
+| --- | --- | --- |
+| Hog_office_Rolando | 0.80000 | 0.00000 |
+| Hog_office_Lavon | 0.80000 | 0.00000 |
+| Hog_office_Joey | 0.80000 | 0.00000 |
+| Lamb_office_Caitlin | 0.80000 | 0.00000 |
+| Robin_office_Addie | 0.80000 | 0.00000 |
+| Lamb_office_Gerardo | 0.80000 | 0.00000 |
+| Hog_office_Alexis | 0.80000 | 0.00000 |
+| Hog_office_Byron | 0.80000 | 2.00000 |
 
-| building | q | alpha | normalized_mean_regret | normalized_MAE |
+## 3. Canonical competition benchmark
+
+原始 machine-readable 结果为兼容历史仍保留 `Persistence` 和 `Day`；两者均严格满足 `forecast(t)=actual(t-24h)`。比赛展示合并为一行 **Day Persistence**。`DOEF` 是 Phase 8 decision-oriented ensemble 在 Phase 9 正式冻结后的比赛方法名。
+
+| display_name | normalized_mae_mean | normalized_rmse_mean | normalized_peak_mae_mean | normalized_decision_regret_mean | peak_reduction_mean_pct | peak_reduction_median_pct |
+| --- | --- | --- | --- | --- | --- | --- |
+| Day Persistence | 0.22588 | 0.43019 | 0.36119 | 0.16299 | -1.87845 | 0.63516 |
+| Week | 0.20158 | 0.32841 | 0.25763 | 0.14432 | 3.08546 | 4.77208 |
+| DayWeek | 0.18348 | 0.29662 | 0.26366 | 0.14302 | 4.90690 | 5.57369 |
+| LightGBM | 0.14734 | 0.21694 | 0.21736 | 0.11613 | 1.00843 | 5.05712 |
+| XGBoost | 0.14978 | 0.21675 | 0.21144 | 0.11753 | 0.45283 | 4.58839 |
+| CatBoost | 0.17360 | 0.23921 | 0.23138 | 0.11874 | -24.48242 | 4.82086 |
+| DOEF | 0.13797 | 0.20782 | 0.20720 | 0.11193 | 6.44233 | 5.62914 |
+| Peak-aware LightGBM | 0.14759 | 0.21728 | 0.21737 | 0.11620 | 1.12881 | 5.05712 |
+
+所有 peak-reduction 数值表示当前冻结储能容量、功率约束和调度协议下的削峰结果。**Peak shaving 不等于 energy saving**；本项目没有由该百分比推导节电量、电费或碳减排。
+
+## 4. DOEF v1.0 core evidence
+
+8 栋异质办公建筑上，DOEF 相对 LightGBM 的 normalized MAE 从 0.14734 降至 0.13797，程序计算的相对改善为 **6.3585%**；normalized decision regret 从 0.11613 降至 0.11193，相对改善为 **3.6147%**。
+
+Decision win/tie/loss = **6/2/0**。DOEF − LightGBM normalized regret difference = **-0.004198**，95% CI **[-0.007830, -0.000356]**（10,000 paired bootstrap，seed 42）。
+
+本项目的创新重点不是重新设计基础预测器，而是针对建筑储能削峰任务中“平均预测误差最优并不必然对应下游调度最优”的目标错位问题，建立预测—储能决策闭环评价体系，并通过 Validation 下游决策指标进行模型选择与融合，形成 DOEF。创新链为：Causal time-series forecasting + Decision-oriented validation + Forecast-to-storage closed-loop evaluation + Multi-building generalization + Decision-oriented ensemble。
+
+## 5. CatBoost extreme aggregate audit
+
+CatBoost peak reduction：mean=-24.48242%，median=4.82086%，min=-245.94331%，max=13.23669%。均值受少数建筑极端负向调度结果显著影响，因此单独使用 arithmetic mean 容易夸大其典型表现差异；这里保留真实均值，并同时报告 median、范围和全部逐建筑结果。
+
+| building | peak_reduction_pct |
+| --- | --- |
+| Hog_office_Alexis | 11.68435 |
+| Hog_office_Byron | 12.53391 |
+| Hog_office_Joey | 0.33855 |
+| Hog_office_Lavon | -245.94331 |
+| Hog_office_Rolando | 5.55582 |
+| Lamb_office_Caitlin | 4.08590 |
+| Lamb_office_Gerardo | 2.64876 |
+| Robin_office_Addie | 13.23669 |
+
+极端值来自 Hog_office_Lavon：no-battery peak=19.192 kW，post-dispatch peak=66.393 kW，故比例为 -245.943%。其 normalized MAE=0.04797，但 daily peak-hour MAE=7.47 h。结合该建筑按 Train scale 配置、而测试负荷峰值较低的 battery 条件，错误的峰时调度会被百分比的小分母放大。这是与已保存诊断一致的解释，不是新的因果实验，也不掩盖 CatBoost 的失败。
+
+## 6. Rejected supporting experiment: Peak-aware LightGBM
+
+事实是 7/8 建筑选择 alpha=0，仅 Hog_office_Byron 选择 q=0.8、alpha=2.0。冻结的留出测试区间上，Peak-aware vs LightGBM 为 0/7/1，Peak-aware vs DOEF 为 0/2/6；Peak-aware − LightGBM CI 跨 0，而 Peak-aware − DOEF CI 完全高于 0。
+
+简单的高负荷 sample weighting 没有产生稳定的跨建筑 downstream decision improvement。结果说明储能决策质量不能简单通过提高峰值样本训练权重获得；模型误差的时序结构、峰值时刻定位以及与储能约束的相互作用仍然重要。因此按照预定义停止规则，不再扩展 weighting function 或继续调参。
+
+## 7. Engineering efficiency
+
+| display_name | training_time_seconds_mean_across_buildings | inference_time_ms_mean_across_buildings | artifact_size_kib_mean_across_buildings | test_samples_per_building |
 | --- | --- | --- | --- | --- |
-| Hog_office_Rolando | 0.80000 | 0.00000 | 0.05664 | 0.02525 |
-| Hog_office_Lavon | 0.80000 | 0.00000 | 0.01474 | 0.02373 |
-| Hog_office_Joey | 0.80000 | 0.00000 | 0.08958 | 0.05436 |
-| Lamb_office_Caitlin | 0.80000 | 0.00000 | 0.26602 | 0.57554 |
-| Robin_office_Addie | 0.80000 | 0.00000 | 0.16224 | 0.10326 |
-| Lamb_office_Gerardo | 0.80000 | 0.00000 | 0.02183 | 0.23271 |
-| Hog_office_Alexis | 0.80000 | 0.00000 | 0.16745 | 0.16768 |
-| Hog_office_Byron | 0.80000 | 2.00000 | 0.05572 | 0.02520 |
+| CatBoost | 0.78447 | 1.36970 | 228.63098 | 720.00000 |
+| LightGBM | 0.18421 | 2.15424 | 499.19446 | 720.00000 |
+| Peak-aware LightGBM | 0.18232 | 2.16324 | 499.99939 | 720.00000 |
+| DOEF | 0.18748 | 2.34034 | 499.20911 | 720.00000 |
+| XGBoost | 0.28488 | 2.16328 | 646.20984 | 720.00000 |
 
-完整 64 行候选及 forecast/decision metrics 见 `validation_search.csv`。
+表中训练、推理和 artifact size 均为 8 栋建筑平均；inference 先对同一 720 样本重复 20 次取中位数，再跨建筑平均。环境是 summary.json 记录的 CPU 测试环境，不是嵌入式设备测试，不能外推为实际工业控制 latency。DOEF 相比标准 LightGBM 只增加很小的推理开销，在当前 CPU 测试环境下仍属于轻量级方法，但不声称已证明实时工业部署。
 
-## 4. Final benchmark — Forecast metrics
+## 8. Final Algorithm
 
-| method | mean_normalized_MAE | median_normalized_MAE | mean_normalized_RMSE | mean_MAPE_pct | mean_normalized_peak_region_MAE | mean_normalized_peak_region_RMSE |
-| --- | --- | --- | --- | --- | --- | --- |
-| Persistence | 0.22588 | 0.10344 | 0.43019 | 21.32510 | 0.36119 | 0.56510 |
-| Day | 0.22588 | 0.10344 | 0.43019 | 21.32510 | 0.36119 | 0.56510 |
-| Week | 0.20158 | 0.11662 | 0.32841 | 23.52301 | 0.25763 | 0.37676 |
-| DayWeek | 0.18348 | 0.09345 | 0.29662 | 20.03230 | 0.26366 | 0.39456 |
-| LightGBM | 0.14734 | 0.08499 | 0.21694 | 30.90449 | 0.21736 | 0.28027 |
-| XGBoost | 0.14978 | 0.08838 | 0.21675 | 32.47506 | 0.21144 | 0.27044 |
-| CatBoost | 0.17360 | 0.09232 | 0.23921 | 33.14073 | 0.23138 | 0.30090 |
-| Phase8_DOEF | 0.13797 | 0.07970 | 0.20782 | 16.20115 | 0.20720 | 0.27346 |
-| PeakAwareLightGBM | 0.14759 | 0.08499 | 0.21728 | 30.93504 | 0.21737 | 0.28045 |
+**DOEF v1.0**
 
-按跨建筑 mean normalized MAE，最佳 forecast method 为 **Phase8_DOEF**。MAPE 对接近零负荷的建筑较敏感，因此结论优先使用 normalized MAE/RMSE。
+**Decision-Oriented Ensemble Forecasting**
 
-## 5. Final benchmark — Decision metrics
+**面向储能决策的集成负荷预测方法**
 
-| method | mean_normalized_daily_peak | median_normalized_daily_peak | mean_normalized_regret | median_normalized_regret | mean_normalized_p90_regret | mean_peak_reduction_pct |
-| --- | --- | --- | --- | --- | --- | --- |
-| Persistence | 1.69300 | 1.27377 | 0.16299 | 0.15011 | 0.31670 | -1.87845 |
-| Day | 1.69300 | 1.27377 | 0.16299 | 0.15011 | 0.31670 | -1.87845 |
-| Week | 1.67434 | 1.26132 | 0.14432 | 0.13766 | 0.27801 | 3.08546 |
-| DayWeek | 1.67303 | 1.23625 | 0.14302 | 0.11259 | 0.28065 | 4.90690 |
-| LightGBM | 1.64614 | 1.22346 | 0.11613 | 0.09638 | 0.20332 | 1.00843 |
-| XGBoost | 1.64755 | 1.22539 | 0.11753 | 0.09268 | 0.22338 | 0.45283 |
-| CatBoost | 1.64876 | 1.21984 | 0.11874 | 0.09427 | 0.21298 | -24.48242 |
-| Phase8_DOEF | 1.64194 | 1.21778 | 0.11193 | 0.09412 | 0.19894 | 6.44233 |
-| PeakAwareLightGBM | 1.64622 | 1.22346 | 0.11620 | 0.09638 | 0.20278 | 1.12881 |
+Selection basis: Validation-selected decision-oriented ensemble, confirmed by frozen held-out multi-building evaluation. Held-out results用于报告与冻结确认，不用于重新选择建筑、模型参数或融合权重。
 
-按跨建筑 mean normalized regret，最佳 decision method 为 **Phase8_DOEF**。本次 aggregate forecast/decision 赢家一致；这不能单独证明二者总是等价。Phase 8 已在逐建筑 Validation 权重和 Test mismatch case 上验证了局部错位，因此证据支持“不具有一般等价关系”，但不声称本表的聚合赢家不同。
+Core evidence: 8 heterogeneous office buildings；DOEF vs LightGBM = 6 wins / 2 ties / 0 losses；normalized MAE = 0.13797 vs 0.14734；normalized decision regret = 0.11193 vs 0.11613；bootstrap difference = -0.004198，95% CI [-0.007830, -0.000356]。
 
-## 6. Peak-aware 是否提升及跨建筑稳定性
+Rejected experiment: Peak-aware LightGBM 未产生稳定跨建筑收益，不进入最终算法。
 
-相对 LightGBM：0/7/1（win/tie/loss），mean normalized regret delta=0.000076。相对 Phase 8 DOEF：0/2/6，delta=0.004273。结论：Peak-aware **未成功**。
+**Algorithm development: FROZEN**
 
-## 7. Bootstrap uncertainty
+**Algorithm version: DOEF v1.0**
+**Further algorithm R&D: STOPPED**
 
-| comparison | point_estimate | ci95_lower | ci95_upper | probability_a_better | pairs | resamples |
-| --- | --- | --- | --- | --- | --- | --- |
-| Phase8_DOEF_minus_LightGBM | -0.00420 | -0.00783 | -0.00036 | 0.98340 | 240 | 10000 |
-| PeakAwareLightGBM_minus_LightGBM | 0.00008 | -0.00041 | 0.00053 | 0.36690 | 240 | 10000 |
-| PeakAwareLightGBM_minus_Phase8_DOEF | 0.00427 | 0.00039 | 0.00794 | 0.01520 | 240 | 10000 |
-
-CI 基于与 Phase 8 相同的 10,000 次、seed=42、building-day paired normalized regret bootstrap，仅用于描述冻结后比较的不确定性，不参与 q/alpha 选择。
-
-## 8. 计算开销
-
-| method | training_time_seconds | inference_time_ms | artifact_size_bytes | test_samples |
-| --- | --- | --- | --- | --- |
-| CatBoost | 0.78447 | 1.36970 | 234118.12500 | 720 |
-| LightGBM | 0.18421 | 2.15424 | 511175.12500 | 720 |
-| PeakAwareLightGBM | 0.18232 | 2.16324 | 511999.37500 | 720 |
-| Phase8_DOEF | 0.18748 | 2.34034 | 511190.12500 | 720 |
-| XGBoost | 0.28488 | 2.16328 | 661718.87500 | 720 |
-
-同一运行环境：Intel64 Family 6 Model 186 Stepping 2, GenuineIntel；Windows-10-10.0.26200-SP0；Python 3.11.9。训练用 `time.perf_counter()` 单次计时；inference 为同一 720 样本预测重复 20 次的中位耗时；artifact size 为实际模型 pickle 字节数，Ensemble 包含其 LightGBM 组件与权重元数据。它们是本机相对工程开销，不代表绝对部署性能。
-
-## 9. 最终冻结
-
-**Final frozen algorithm: DOEF — Decision-Oriented Ensemble Forecasting**（面向储能决策的集成负荷预测方法）。Case A：Peak-aware 未形成相对普通 LightGBM 的稳定跨建筑决策收益，按停止规则不再调参。
-
-Phase 9 marks the end of algorithm development. 后续只进入 system prototype、visualization、technical report、presentation 与 demo；不再因为本次 Test 结果扩充 weighting function、模型、天气、深度学习、强化学习或 robust optimization。
-
-## 10. 失败尝试、适用范围与局限
-
-Phase 5.7 robust optimization 没有改善；Phase 6 单建筑 peak-aware 也未在 Test 优于 canonical LightGBM；本阶段按真实跨建筑结果记录 Peak-aware 的成功、部分成功或未成功，不做追加调参。最终创新点来自 causal forecasting protocol、decision-oriented validation、forecast-to-storage closed-loop evaluation、multi-building generalization 与 decision-oriented ensemble/peak-aware learning，而不是“全新 LightGBM”。
-
-适用范围限于当前 8 栋 office、BDG2 固定时段、24 h 前预测、当前 Train-scale battery 和每日 SOC reset。Test 是单月且在历史阶段已经可见，不是项目级 pristine blind set；Phase 9 只保证它未进入本阶段配置选择。跨季节、其他建筑类型、不同电池或在线部署仍需独立验证。
-
-## 11. 15 个验收问题的直接回答
-
-1. 错位来自平均误差等权，而削峰取决于峰时与约束。
-2. weighting 为 Train quantile 阈值上的 1+alpha。
-3. 阈值、q/alpha、模型和融合均在 Test 前冻结。
-4. Peak-aware：未成功。
-5. 三者的最终去留：DOEF — Decision-Oriented Ensemble Forecasting。
-6. forecast 最佳：Phase8_DOEF。
-7. decision 最佳：Phase8_DOEF。
-8. 聚合赢家一致；Phase 8 的逐建筑证据表明两类目标不具有一般等价关系。
-9. 跨建筑证据见 0/2/6。
-10. CI 如上，不扩大解释。
-11. 开销如上表。
-12. 冻结理由：Peak-aware 未形成相对普通 LightGBM 的稳定跨建筑决策收益，按停止规则不再调参。
-13. 负结果包括 Phase 5.7 与未满足停止门槛的 Peak-aware 比较。
-14. 范围与局限见上一节。
-15. 预注册停止规则已触发算法收口，继续堆模型会引入 Test 后选择风险。
+Phase 9 canonical consumers必须通过 `src.final_algorithm.load_final_algorithm()` 读取；Phase 9 缺失或校验失败时显式报错，不回退到 Phase 8。
 
