@@ -1,0 +1,43 @@
+check_id,category,item,verdict,mandatory_level,applicable_scope,deadline_or_limit,evidence_rule_ids,phase_owner,blocking,notes
+C001,identity,赛事正式身份,VERIFIED,REQUIRED,all,"2026 第八届",R001;R002,Phase11,NO,"用户简称应改为官方全称"
+C002,track,实际报名赛道与组别,VERIFIED,REQUIRED,project,"算法主题赛（AI+能源）—科技创新组",R004;R005,Phase11,NO,"用户于2026-09-01明确确认；官方赛题规则已核验"
+C003,eligibility,本科生允许,VERIFIED,REQUIRED,AI+能源科技创新组,,R007,Phase15,NO,"需核对正式学籍"
+C004,eligibility,团队人数,VERIFIED,REQUIRED,AI+能源,"1-3人",R008,Phase15,NO,
+C005,eligibility,跨校组队,NOT_ALLOWED,PROHIBITED,AI+能源,,R008,Phase15,NO,"含分校不得跨校"
+C006,eligibility,指导教师,VERIFIED,OPTIONAL,AI+能源,"0-2名",R008,Phase15,NO,
+C007,eligibility,同组别多队限制,VERIFIED,PROHIBITED,AI+能源,,R009,Phase15,NO,"同一组别每人仅一队"
+C008,timeline,报名截止,VERIFIED,REQUIRED,AI+能源,"2026-10-15 20:00",R010,Phase15,YES,
+C009,timeline,初赛作品截止,VERIFIED,REQUIRED,AI+能源,"2026-10-15 20:00",R011,Phase15,YES,"截止后不可修改"
+C010,timeline,复赛,PARTIAL,REQUIRED,AI+能源,"不晚于2026-10-31；具体日期UNKNOWN",R012,Phase14,NO,"线上评审，可能在线答疑"
+C011,timeline,总决赛,PARTIAL,REQUIRED,AI+能源,"不晚于2026-11-30；具体日期/地点UNKNOWN",R013,Phase14,NO,"线下"
+C012,report,技术报告,VERIFIED,REQUIRED,AI+能源科技创新组,"PDF≤10MB",R024,Phase13,YES,
+C013,report,官方模板/大纲,VERIFIED,REQUIRED,AI+能源科技创新组,"附件2",R026;R027,Phase13,YES,"模板原件已保存"
+C014,report,页数/总字数,UNKNOWN,UNKNOWN,AI+能源科技创新组,,R026,Phase13,NO,
+C015,report,摘要,VERIFIED,REQUIRED,AI+能源科技创新组,"300-500字",R026,Phase13,NO,
+C016,report,正文格式,VERIFIED,REQUIRED,AI+能源科技创新组,"小四宋体/单倍行距；参考文献五号宋体/20磅",R026,Phase13,NO,
+C017,report,章节,VERIFIED,REQUIRED,AI+能源科技创新组,,R025;R027,Phase13,NO,"采用附件1与附件2要求并集"
+C018,ppt,PPT,VERIFIED,REQUIRED,AI+能源科技创新组,"提交PDF；页数/大小UNKNOWN",R028;R048,Phase14,YES,
+C019,defense,总决赛答辩,VERIFIED,REQUIRED,AI+能源,"8分钟陈述+5分钟问答；线下",R014;R015,Phase14,YES,"原则全员到场"
+C020,gui,GUI/Web/App,NOT_REQUIRED,OPTIONAL,AI+能源科技创新组,,R031,Phase14,NO,"不得据此提前开发"
+C021,demo,演示/应用展示,PARTIAL,REQUIRED,AI+能源科技创新组,"通过3-5分钟视频；现场独立Demo时段UNKNOWN",R030,Phase14,YES,
+C022,video,演示视频,VERIFIED,REQUIRED,AI+能源科技创新组,"MP4；3-5分钟；≤300MB",R029;R047,Phase14,YES,"分辨率等UNKNOWN"
+C023,source_code,源代码,VERIFIED,REQUIRED,AI+能源科技创新组,"可运行；完整代码包",R018;R019;R020,Phase15,YES,
+C024,model,模型文件/权重,PARTIAL,REQUIRED,AI+能源科技创新组,,R018;R032,Phase15,NO,"代码/模型/系统原型表述含‘或’，项目实际打包内容待Phase15"
+C025,reproducibility,完整复现,VERIFIED,REQUIRED,AI+能源科技创新组,,R019;R020,Phase15,YES,"canonical loader 风险留待授权修复"
+C026,environment,环境配置,VERIFIED,REQUIRED,AI+能源科技创新组,"载体未指定",R020;R045,Phase15,YES,"requirements/environment.yml/Docker均未被点名"
+C027,dataset,公开/第三方数据,VERIFIED,OPTIONAL,AI+能源科技创新组,,R021;R022,Phase15,NO,"允许但须授权、引用；可给获取方式"
+C028,dataset,BDG2,PARTIAL,OPTIONAL,AI+能源科技创新组,,R021;R022,Phase15,NO,"未点名BDG2；在通用许可条件下可用"
+C029,ai_assistance,ChatGPT/Codex/Copilot政策,PARTIAL,UNKNOWN,AI+能源科技创新组,,R037;R038,Phase15,YES,"AI工具链可作为加分项；具体工具/披露规则UNKNOWN"
+C030,open_source,公开开源,NOT_REQUIRED,OPTIONAL,AI+能源科技创新组,,R034,Phase15,NO,"源码提交不等于公开开源"
+C031,license,LICENSE/依赖许可清单,UNKNOWN,UNKNOWN,AI+能源科技创新组,,R021;R036;R050,Phase15,NO,"第三方授权合规必需，文件形式未指定"
+C032,ip,著作权,VERIFIED,REQUIRED,all,,R035;R036,Phase15,NO,"归团队；主办方有规定使用权"
+C033,submission,提交平台,VERIFIED,REQUIRED,AI+能源,"大赛报名系统 + 百度网盘永久链接",R032,Phase15,YES,
+C034,submission,文件命名,PARTIAL,REQUIRED,AI+能源,"团队编号-赛题名称-作品名称-XX",R033,Phase15,YES,"团队编号和作品名尚未确认"
+C035,submission,压缩格式/总大小/文件数,UNKNOWN,UNKNOWN,AI+能源,,R046,Phase15,NO,
+C036,submission,覆盖提交,PARTIAL,UNKNOWN,AI+能源,"截止后不可修改；截止前覆盖机制UNKNOWN",R011;R046,Phase15,NO,
+C037,submission,匿名,VERIFIED,PROHIBITED,all,,R016,Phase15,YES,"匿名材料不得出现任何可识别身份信息"
+C038,submission,承诺书,PARTIAL,REQUIRED,all,,R017,Phase15,YES,"必须提交；模板/签署格式UNKNOWN"
+C039,scoring,AI+能源评分表,VERIFIED,REQUIRED,AI+能源科技创新组,"20/10/25/25/10/10",R039;R040;R041;R042;R043;R044,Phase12,NO,"已冻结为唯一适用评分表"
+C040,scoring,算法模型创新备选评分表,NOT_APPLICABLE,OPTIONAL,excluded_candidate,"20/20/20/20/15/5",R051,Phase12,NO,"已排除；禁止与AI+能源规则混用"
+C041,hardware,CPU/GPU/联网/运行时限,UNKNOWN,UNKNOWN,AI+能源科技创新组,,R045,Phase15,NO,
+C042,defense,设备网络/主讲人/视频播放,UNKNOWN,UNKNOWN,AI+能源 final,,R049,Phase14,NO,

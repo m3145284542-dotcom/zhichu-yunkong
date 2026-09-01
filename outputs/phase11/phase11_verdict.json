@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "phase": 11,
+  "status": "PASS",
+  "competition_identity": {
+    "verdict": "VERIFIED",
+    "official_name_zh": "全球校园人工智能算法精英大赛",
+    "official_name_en": "Global Campus Artificial Intelligence Algorithm Elite Competition",
+    "acronym": "AIC",
+    "edition": 8,
+    "year": 2026,
+    "organizer": "全球校园人工智能算法精英大赛组委会",
+    "secretariat": "江苏省人工智能学会",
+    "official_website": "https://www.aicomp.cn/"
+  },
+  "track": {
+    "verdict": "VERIFIED",
+    "actual_registered_track": "算法主题赛（AI+能源）—科技创新组",
+    "confirmation": "User explicitly confirmed the project goes directly to AI+能源科技创新组 on 2026-09-01; the official scope includes load forecasting and energy-storage intelligent management/optimal dispatch.",
+    "excluded_candidate": "算法创新赛—算法模型创新",
+    "human_confirmation_required": false
+  },
+  "competition_stage": {
+    "as_of": "2026-09-01",
+    "general": "registration / preliminary submission preparation",
+    "AI_plus_energy": "registration and preliminary submission window open",
+    "evidence": "Registration and preliminary submission both close 2026-10-15 20:00."
+  },
+  "key_dates": {
+    "registration_open": "2026-04-28",
+    "AI_plus_energy_registration_deadline": "2026-10-15 20:00",
+    "AI_plus_energy_preliminary_submission_deadline": "2026-10-15 20:00",
+    "AI_plus_energy_semifinal_latest_date": "2026-10-31",
+    "AI_plus_energy_final_latest_date": "2026-11-30",
+    "exact_semifinal_date": null,
+    "exact_final_date_and_location": null
+  },
+  "key_verdicts": {
+    "TRACK_VERIFIED": "VERIFIED",
+    "ELIGIBILITY_VERIFIED": "VERIFIED",
+    "REPORT_REQUIREMENT": "VERIFIED",
+    "PPT_REQUIREMENT": "VERIFIED",
+    "DEFENSE_REQUIREMENT": "VERIFIED",
+    "GUI_REQUIREMENT": "NOT REQUIRED",
+    "DEMO_REQUIREMENT": "PARTIAL",
+    "VIDEO_REQUIREMENT": "VERIFIED",
+    "SOURCE_CODE_REQUIREMENT": "VERIFIED",
+    "OPEN_SOURCE_REQUIREMENT": "NOT REQUIRED",
+    "REPRODUCIBILITY_REQUIREMENT": "VERIFIED",
+    "DATASET_POLICY": "VERIFIED",
+    "AI_ASSISTANCE_POLICY": "PARTIAL",
+    "SUBMISSION_PACKAGE_REQUIREMENT": "PARTIAL",
+    "SCORING_RUBRIC_VERIFIED": "VERIFIED"
+  },
+  "report_required": {"value": true, "conditional_scope": "AI+能源—科技创新组", "format": "PDF", "max_size": "10 MB", "page_limit": null},
+  "ppt_required": {"value": true, "conditional_scope": "AI+能源—科技创新组", "submission_format": "PDF", "page_limit": null, "max_size": null},
+  "defense_required": {"value": true, "conditional_scope": "AI+能源 final", "mode": "offline", "presentation_minutes": 8, "qa_minutes": 5},
+  "gui_required": {"value": false, "verdict": "NOT REQUIRED", "basis": "GUI/Web/App is not mandated; interface screenshots are optional."},
+  "demo_required": {"value": true, "verdict": "PARTIAL", "basis": "Application demonstration through the required video is mandatory; a separate live interactive demo is not specified."},
+  "video_required": {"value": true, "format": "MP4", "duration": "3-5 minutes", "max_size": "300 MB"},
+  "source_code_required": {"value": true, "basis": "Runnable code and a complete code package are required for this code-based project."},
+  "open_source_required": {"value": false, "basis": "No GitHub/Gitee/public repository requirement; private submission is via registration system and Baidu Netdisk link."},
+  "reproducibility_required": {"value": true, "basis": "Runnable code, reproducible results, full code package, dataset/access method, and environment configuration are mandatory."},
+  "dataset_policy": {"verdict": "VERIFIED", "public_or_third_party_data_allowed": true, "conditions": ["cite source", "comply with authorization/license", "provide dataset or access method", "explain data source and processing"], "BDG2_named_by_rules": false},
+  "ai_assistance_policy": {"verdict": "PARTIAL", "known": "Showing use of an AI toolchain to improve development efficiency can be a bonus in the AI+energy student group.", "unknown": "No authoritative rule found naming ChatGPT/Codex/Copilot or specifying disclosure and generated-code attribution."},
+  "scoring_rubric": {
+    "conditional_scope": "AI+能源—科技创新组",
+    "verified": true,
+    "total_points": 100,
+    "items": [
+      {"name":"问题聚焦与创新价值","points":20},
+      {"name":"需求洞察与背景分析","points":10},
+      {"name":"技术深度与框架构建","points":25},
+      {"name":"实验验证与结果分析","points":25},
+      {"name":"应用价值与推广潜力","points":10},
+      {"name":"反思局限与未来展望","points":10}
+    ],
+    "excluded_rubric": "算法模型创新: 20/20/20/20/15/5; user confirmed it is not applicable; never combine it with the AI+energy rubric."
+  },
+  "submission_package_requirement": {
+    "verdict": "PARTIAL",
+    "platform": "https://reg.aicomp.cn/",
+    "large_file_transport": "Permanent Baidu Netdisk share link with extraction code",
+    "known_files": ["technical report PDF", "defense PPT PDF", "demo video MP4", "code/model/system prototype link", "commitment letter under general charter"],
+    "unknown": ["archive format", "total size", "file count", "PPT max size", "pre-deadline overwrite behavior", "commitment-letter template"]
+  },
+  "unresolved_unknowns": [
+    {"item":"Team number","classification":"NON-BLOCKING","blocks":"Phase 15 file naming only"},
+    {"item":"ChatGPT/Codex/Copilot-specific disclosure and generated-code policy","classification":"NON-BLOCKING","blocks":"Final integrity declaration and AI-use disclosure before Phase 15 acceptance"},
+    {"item":"Exact semifinal/final dates, final location and detailed final notice","classification":"NON-BLOCKING","blocks":"final Phase 14 logistics only"},
+    {"item":"PPT page/size/template; live-demo allocation; venue network/equipment","classification":"NON-BLOCKING","blocks":"final Phase 14 format only"},
+    {"item":"Archive format, total size/file count, upload overwrite semantics and commitment-letter template","classification":"NON-BLOCKING","blocks":"final Phase 15 package only"},
+    {"item":"Video resolution/orientation/voiceover/subtitles/editing/on-camera requirements","classification":"NON-BLOCKING","blocks":"final Phase 14 encoding choices only"},
+    {"item":"CPU/GPU/network/runtime limits","classification":"NON-BLOCKING","blocks":"final Phase 15 runtime envelope only"}
+  ],
+  "conflicts": [],
+  "phase12_entry_allowed": true,
+  "phase12_entry_condition": "Use only the AI+能源—科技创新组 rules and 20/10/25/25/10/10 scoring rubric; do not mix the excluded algorithm-model-innovation branch."
+}
