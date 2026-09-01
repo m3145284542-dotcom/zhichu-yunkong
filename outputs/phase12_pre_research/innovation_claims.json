@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "phase": "12-pre-research",
+  "status": "PROVISIONAL_PRE_RESEARCH",
+  "freeze_status": "NOT_FROZEN",
+  "scope_note": "Phase 12 pre-research; claims require adversarial prior-art review before the final Phase 12 freeze.",
+  "algorithm": "DOEF v1.0 — Decision-Oriented Ensemble Forecasting",
+  "core_contributions": [
+    {
+      "id": "CORE-1",
+      "one_sentence": "DOEF uses Validation storage decision regret to select a per-building DayWeek–LightGBM ensemble weight.",
+      "technical": "A fixed grid w in {0.0,...,1.0} combines w*LightGBM+(1-w)*DayWeek; w_decision minimizes Validation mean daily regret versus a non-deployable Oracle under frozen tie-breaks.",
+      "ppt": "让预测权重服从储能削峰决策价值，而不只服从 MAE。",
+      "oral": "我们没有改造 LightGBM 的训练，而是在验证集上用同一个储能优化器评价每个融合权重，选择实际削峰后悔值更小的权重。",
+      "internal_evidence": ["outputs/phase8/selected_weights.csv", "outputs/phase8/run_config.json", "outputs/phase9_1/final_reporting_summary.json"],
+      "external_evidence": ["L015", "L016"],
+      "novelty_level": "LEVEL B",
+      "confidence": "MEDIUM-HIGH",
+      "closest_difference": "Unlike decision-focused probabilistic pooling or meta-learned model selection, DOEF is a deterministic point-forecast blend selected by a transparent finite Validation grid for building battery peak shaving.",
+      "prohibited": ["first decision-focused ensemble", "end-to-end DFL", "new foundational learning algorithm"]
+    },
+    {
+      "id": "CORE-2",
+      "one_sentence": "The project experimentally separates forecast accuracy from battery decision value across eight pre-selected buildings.",
+      "technical": "Forecast- and decision-optimal weights differ on 6/8 buildings; Phase 7 forecast winners match decision winners on only 2/8 buildings, while all building×method rank agreement is 0.344.",
+      "ppt": "预测更准，不等于储能削峰一定更好。",
+      "oral": "我们把同一批预测同时放到误差指标和真实约束下的储能调度里比较，发现两套排名经常不同。",
+      "internal_evidence": ["reports/phase7_report.md", "outputs/phase9_1/final_reporting_summary.json"],
+      "external_evidence": ["L004", "L007", "L008", "L017"],
+      "novelty_level": "LEVEL C",
+      "confidence": "HIGH",
+      "closest_difference": "The mismatch is known in literature; DOEF contributes a specific building peak-shaving replication with frozen point forecasts and weight-selection evidence.",
+      "prohibited": ["scientific first", "universal theorem", "accuracy is irrelevant"]
+    },
+    {
+      "id": "CORE-3",
+      "one_sentence": "A Train-only representative-building protocol and frozen Test audit provide a reproducible multi-building robustness evaluation.",
+      "technical": "Eight offices were deterministically chosen from 82 eligible candidates using Train morphology only; selection, weights, constraints, predictions and building-level bootstrap are machine-readable and Test was evaluation-only.",
+      "ppt": "8 栋异质建筑、训练期代表性选择、测试期只评价。",
+      "oral": "建筑不是按测试成绩挑的，而是先按训练期形态固定，再统一跑预测和储能评价，同时保留失败案例。",
+      "internal_evidence": ["outputs/phase7/summary.json", "outputs/phase7/selected_buildings.json", "outputs/phase9_1/methodology_audit.json"],
+      "external_evidence": ["L001", "L002", "L003"],
+      "novelty_level": "LEVEL C",
+      "confidence": "HIGH",
+      "closest_difference": "This is evaluation rigor, not an unseen-building transfer algorithm.",
+      "prohibited": ["novel forecasting algorithm", "all-building generalization", "unseen-building transfer"]
+    }
+  ],
+  "supporting_contributions": [
+    {"id": "SUP-1", "statement": "Machine-readable forecast-to-dispatch lineage and fail-closed resolution boundary.", "novelty_level": "LEVEL D", "confidence": "MEDIUM", "caveat": "Phase 10 records an open clean-checkout Phase 7 hash defect."},
+    {"id": "SUP-2", "statement": "Simulated AI forecasting-to-battery peak-shaving application chain.", "novelty_level": "LEVEL E", "confidence": "HIGH", "caveat": "No tariffs, costs, carbon, deployment or renewable-consumption model."}
+  ]
+}

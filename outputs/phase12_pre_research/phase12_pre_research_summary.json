@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "phase": "12-pre-research",
+  "status": "PASS_AS_PRE_RESEARCH",
+  "claim_freeze": false,
+  "starting_repository_head": "549abc314e93e2862bfc22965db89622c22890e1",
+  "phase12_pre_research_parent_head": "12a204f7b48e5a603e94f1643f3903175f1a5d17",
+  "starting_branch": "main",
+  "working_branch": "codex/phase12-pre-research",
+  "starting_modified_or_untracked": [],
+  "phase10_location_found": "codex/phase10-deliverable-audit",
+  "phase10_files": ["reports/phase10_final_deliverable_gap_audit.md", "outputs/phase10/deliverable_gap_matrix.csv", "outputs/phase10/delivery_roadmap.json"],
+  "literature_count": 18,
+  "source_quality": {"high": 17, "medium": 1, "core_sources_primary_or_official": true},
+  "closest_prior_work": ["L016", "L015", "L007", "L008"],
+  "provisional_core_levels": ["LEVEL B", "LEVEL C", "LEVEL C"],
+  "algorithm_touched": false,
+  "training_or_tuning_run": false,
+  "final_phase12_claim_audit_allowed": true,
+  "final_phase12_objective": "Adversarially expand and reproduce the closest-prior search, resolve metadata gaps, then freeze final claims and wording without changing DOEF."
+}

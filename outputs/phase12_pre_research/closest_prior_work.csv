@@ -1,0 +1,10 @@
+literature_id,prior_work,load_forecasting,ensemble,downstream_optimization,battery_peak_shaving,decision_metric_used_for_selection,end_to_end_training,multi_building_validation,leakage_control,reproducibility,main_difference
+L016,"Stratigakos et al. 2025",NO,YES,YES,NO,YES,YES,NO,PARTIAL,YES,"Closest ensemble concept: probabilistic linear pool for trading/grid scheduling versus DOEF deterministic DayWeek-LightGBM point blend for building peak shaving with a discrete Validation grid."
+L015,"Werling et al. 2024",YES,NO,YES,PARTIAL,YES,NO,YES,PARTIAL,YES,"Closest model-selection application: meta-classifier chooses models across 300 PV-building instances; DOEF directly chooses per-building convex weight by Validation regret."
+L007,"Li et al. 2024",YES,NO,YES,YES,NO,NO,UNVERIFIED,UNVERIFIED,UNVERIFIED,"Closest accuracy-value diagnosis for building storage; DOEF turns the insight into ensemble selection and a frozen benchmark."
+L008,"Katholnigg and Goebel 2025",YES,YES,YES,YES,NO,NO,NO,PARTIAL,YES,"Dual-axis model/ensemble evaluation for industrial BESS economics; DOEF explicitly selects weight by Validation peak-shaving regret."
+L004,"Soman et al. 2020",YES,NO,YES,YES,NO,NO,YES,PARTIAL,UNVERIFIED,"Peak-specific forecasting for battery control; DOEF forecasts the full curve and selects an ensemble by optimizer-derived regret."
+L006,"Rafayal et al. 2024",YES,NO,YES,YES,NO,NO,UNVERIFIED,UNVERIFIED,UNVERIFIED,"Probabilistic forecast plus stochastic optimization; DOEF uses deterministic point forecasts and deterministic daily dispatch."
+L012,"Zhang et al. 2022",YES,NO,YES,NO,YES,YES,NO,PARTIAL,UNVERIFIED,"Operational cost enters load-forecast training; DOEF leaves base training frozen and uses downstream metrics only for selection."
+L014,"Sang et al. 2022",NO,NO,YES,NO,YES,YES,NO,PARTIAL,UNVERIFIED,"Decision-focused price forecasting for ESS arbitrage; DOEF targets building load/peak shaving and is not end-to-end."
+L017,"Depoortere et al. 2026",NO,NO,YES,NO,YES,YES,YES,PARTIAL,UNVERIFIED,"PV-battery DFL across 20 buildings; DOEF is a simpler non-differentiable-selection approach using load forecasts."
