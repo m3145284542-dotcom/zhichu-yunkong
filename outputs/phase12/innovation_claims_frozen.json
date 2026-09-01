@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 12 — Innovation Positioning & Claim Freeze",
+  "status": "FROZEN",
+  "freeze_date": "2026-09-01",
+  "algorithm": {
+    "name": "DOEF v1.0 — Decision-Oriented Ensemble Forecasting",
+    "frozen_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+    "changed_in_phase12": false
+  },
+  "competition_context": {
+    "track": "算法主题赛（AI+能源）—科技创新组",
+    "rubric": {
+      "问题聚焦与创新价值": 20,
+      "需求洞察与背景分析": 10,
+      "技术深度与框架构建": 25,
+      "实验验证与结果分析": 25,
+      "应用价值与推广潜力": 10,
+      "反思局限与未来展望": 10
+    },
+    "forbidden_mixed_track": "算法创新赛—算法模型创新"
+  },
+  "core_contributions": [
+    {
+      "id": "CORE-1",
+      "name": "Validation downstream-regret selection of a transparent deterministic blend",
+      "one_sentence": "让预测权重服从储能削峰决策价值，而不只服从 MAE。",
+      "technical_statement": "For each of the eight frozen buildings, DOEF searches a fixed convex grid for w_b in w_b·LightGBM + (1-w_b)·DayWeek using Validation mean daily battery peak-shaving regret versus Oracle, freezes w_b, and uses Test only for final evaluation.",
+      "novelty_level": "LEVEL B",
+      "confidence": "MEDIUM-HIGH",
+      "closest_prior_work": [
+        "L015 — Werling et al. (2024)",
+        "L016 — Stratigakos et al. (2025)",
+        "L020 — Singleton and Grindrod (2021)"
+      ],
+      "difference": "L015 selects a discrete forecast model via cross-building meta-learning for a PV-battery dispatchable feeder; L016 learns probabilistic linear-pool weights through nested downstream-cost optimization; L020 tunes a weighted historical-demand predictor with a task-specific surrogate shape error. DOEF instead uses a finite held-out Validation grid to select one deterministic DayWeek-LightGBM weight per building by realized constrained-dispatch regret, with no end-to-end retraining and an evaluation-only Test.",
+      "why_it_matters": "The mechanism is lightweight, directly auditable, and preserves a strict selection/evaluation boundary while aligning the blend with the deployed peak-shaving objective.",
+      "report_wording": "DOEF is a bounded method adaptation of value-oriented forecasting: it uses optimizer-derived Validation peak-shaving regret to select a transparent per-building deterministic blend before Test evaluation.",
+      "ppt_wording": "Validation regret selects the blend—not MAE alone.",
+      "oral_wording": "We do not claim to invent decision-focused forecasting. Our contribution is the specific auditable building-battery adaptation: a held-out Validation regret selects a simple deterministic blend, and Test never chooses it.",
+      "internal_evidence": [
+        "outputs/phase8/selected_weights.csv",
+        "outputs/phase8/validation_weight_search.csv",
+        "outputs/phase8/run_config.json",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "external_evidence": ["L015", "L016", "L019", "L020", "L021"],
+      "scope": "Eight fixed office buildings; deterministic 24-hour-ahead point forecasts; frozen battery and daily-reset peak-shaving dispatch; one Validation and one Test period.",
+      "limitations": [
+        "Not a theoretical or end-to-end DFL algorithm",
+        "Not the first use of forecast value or downstream cost for selection",
+        "Not tested for unseen-building transfer",
+        "Finite two-model blend and one battery protocol"
+      ],
+      "prohibited_claims": [
+        "首次提出决策导向预测",
+        "首个 decision-focused ensemble",
+        "全新的 DFL 算法",
+        "端到端 decision-focused learning"
+      ],
+      "headline_suitability": {
+        "report": true,
+        "ppt": true,
+        "oral_defense": true,
+        "appendix": true
+      }
+    },
+    {
+      "id": "CORE-2",
+      "name": "Forecast-to-decision mismatch in the frozen multi-building experiment",
+      "one_sentence": "预测精度排名与储能削峰决策价值排名在冻结实验中并不等价。",
+      "technical_statement": "Forecast-optimal and decision-optimal blend weights differ on 6/8 buildings; Phase 7 forecast and decision winners agree on 2/8 buildings; the exact within-building forecast/decision rank agreement across 32 building-method entries is 0.34375.",
+      "novelty_level": "LEVEL C",
+      "confidence": "HIGH",
+      "closest_prior_work": [
+        "L007 — Li et al. (2024)",
+        "L008 — Katholnigg and Goebel (2025)",
+        "L015 — Werling et al. (2024)",
+        "L016 — Stratigakos et al. (2025)"
+      ],
+      "difference": "The mismatch itself is known in prior work. DOEF contributes a reproducible descriptive instance under one fixed multi-building load-forecast and constrained peak-shaving protocol, including exact weight, winner, and rank evidence.",
+      "why_it_matters": "It empirically motivates using both forecast metrics and downstream decision metrics rather than assuming one ranking is a proxy for the other.",
+      "report_wording": "In the frozen eight-building experiment, forecast and decision rankings materially diverged: 6/8 blend optima differed, only 2/8 method winners agreed, and exact rank agreement was 0.344.",
+      "ppt_wording": "6/8 weights differ · 2/8 winners agree · rank agreement 0.344",
+      "oral_wording": "Accuracy remains necessary, but in this experiment it was not sufficient to identify the best storage decision value.",
+      "internal_evidence": [
+        "outputs/phase8/selected_weights.csv",
+        "outputs/phase7/model_test_forecast_metrics.csv",
+        "outputs/phase7/model_test_decision_metrics.csv",
+        "outputs/phase7/summary.json"
+      ],
+      "external_evidence": ["L007", "L008", "L015", "L016", "L020"],
+      "scope": "Descriptive evidence for eight selected office buildings and four Phase 7 methods plus the Phase 8 blend grid.",
+      "limitations": [
+        "Not a first discovery",
+        "Not a causal result",
+        "Does not imply forecast accuracy is unimportant",
+        "Does not establish population-wide rank mismatch"
+      ],
+      "prohibited_claims": [
+        "首次发现预测与决策不一致",
+        "预测精度没有意义",
+        "预测越准调度一定越差"
+      ],
+      "headline_suitability": {
+        "report": true,
+        "ppt": true,
+        "oral_defense": true,
+        "appendix": true
+      }
+    },
+    {
+      "id": "CORE-3",
+      "name": "Pre-Test representative-building evaluation with retained failures",
+      "one_sentence": "建筑代表性选择在 Test 结果前固定，并保留全部成功与失败案例。",
+      "technical_statement": "From 296 office candidates, 82 passed fixed raw-availability and quality gates; eight buildings were then fixed through an anchor plus deterministic farthest-point sampling on Train-period morphology, without Validation/Test forecast or decision performance, and all resulting cases were retained.",
+      "novelty_level": "LEVEL C",
+      "confidence": "HIGH",
+      "closest_prior_work": ["L001 — Building Data Genome Project 2"],
+      "difference": "This is an evaluation-rigor contribution rather than a new forecast algorithm: it makes the building sample deterministic and performance-independent while documenting the eligibility/morphology distinction.",
+      "why_it_matters": "It reduces the risk of selecting buildings because their Test outcomes flatter the method and makes negative cases part of the evidence.",
+      "report_wording": "Among candidates passing predefined raw-coverage gates, the eight evaluation buildings were fixed before Test using Train-period morphology; forecast and decision performance did not choose them.",
+      "ppt_wording": "296 candidates → 82 eligible → 8 fixed before Test",
+      "oral_wording": "Eligibility checked raw availability over all predefined windows, while representative morphology was Train-only; we therefore do not claim every part of eligibility was Train-only.",
+      "internal_evidence": [
+        "outputs/phase7/selected_buildings.json",
+        "outputs/phase7/building_candidate_statistics.csv",
+        "outputs/phase7/leakage_audit.json",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "external_evidence": ["L001"],
+      "scope": "Evaluation design for the Building Data Genome 2 office subset.",
+      "limitations": [
+        "Raw Validation/Test availability participates in eligibility",
+        "No unseen-building model or weight transfer",
+        "Eight buildings do not prove all-building generalization"
+      ],
+      "prohibited_claims": [
+        "所有建筑选择完全只看 Train",
+        "实现 unseen-building transfer",
+        "8 栋建筑证明全体建筑泛化"
+      ],
+      "headline_suitability": {
+        "report": true,
+        "ppt": false,
+        "oral_defense": true,
+        "appendix": true
+      }
+    }
+  ],
+  "supporting_contributions": [
+    {
+      "id": "SUPPORT-D1",
+      "novelty_level": "LEVEL D",
+      "statement": "Machine-readable metric/unit semantics, claim audit, lineage and prediction-invariance evidence make the frozen result auditable.",
+      "confidence": "MEDIUM",
+      "caveat": "A HIGH open Phase 7 clean-checkout loader/hash consistency defect prevents a complete fail-closed reproducibility claim."
+    },
+    {
+      "id": "SUPPORT-E1",
+      "novelty_level": "LEVEL E",
+      "statement": "The framework connects 24-hour-ahead building load forecasts to constrained battery peak-shaving decisions in a lightweight simulated pipeline.",
+      "confidence": "HIGH",
+      "caveat": "No real deployment, tariff savings, carbon reduction or renewable-consumption outcome was evaluated."
+    },
+    {
+      "id": "SUPPORT-C1",
+      "novelty_level": "LEVEL C",
+      "statement": "Rejected robust, peak-aware and extreme CatBoost outcomes are preserved as stopping-rule and anti-cherry-picking evidence.",
+      "confidence": "HIGH",
+      "caveat": "Negative results are not performance contributions and must remain scoped to their frozen experiments."
+    }
+  ],
+  "competition_narrative": [
+    "Building battery operation ultimately consumes forecasts through a constrained scheduling problem, so forecast error alone is not the final value measure.",
+    "Prior art already establishes value-oriented forecasting and decision-focused selection; DOEF does not claim priority over that idea.",
+    "The frozen multi-building evidence shows forecast and storage-decision rankings were not equivalent in this scope.",
+    "DOEF therefore uses Validation battery regret to select a transparent DayWeek-LightGBM blend, then freezes the weight before Test.",
+    "The eight buildings were fixed before Test performance using Train-period morphology among raw-coverage-eligible candidates, and failures were retained.",
+    "The defensible competition position is a lightweight, transparent and auditable method adaptation for simulated building-battery peak shaving."
+  ],
+  "phase13_handoff": {
+    "allowed_claim_statuses": ["APPROVED", "APPROVED_WITH_SCOPE"],
+    "required_sources": [
+      "outputs/phase12/claim_evidence_matrix.csv",
+      "outputs/phase12/key_number_ledger.csv",
+      "outputs/phase9_1/metric_semantics.json",
+      "outputs/phase9_1/unit_semantics.json",
+      "outputs/phase12/literature_registry_frozen.csv"
+    ],
+    "forbidden": [
+      "create new innovation points",
+      "change a frozen number or rounding rule",
+      "change a statistical or metric definition",
+      "expand population or deployment scope",
+      "reuse provisional pre-research wording unless approved here",
+      "present LEVEL C D or E as LEVEL A"
+    ]
+  }
+}

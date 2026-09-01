@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 12 — Innovation Positioning & Claim Freeze",
+  "status": "FROZEN",
+  "generated_at": "2026-09-01T00:00:00+08:00",
+  "repository": {
+    "branch": "codex/phase12-claim-freeze",
+    "parent_head": "c0ffedf4e57482caf3175bcb2fa0ebde1784ee7c",
+    "algorithm_freeze_commit": "549abc314e93e2862bfc22965db89622c22890e1"
+  },
+  "lineage_role": "Narrative and evidence freeze; no upstream canonical artifact replacement",
+  "canonical_sources": [
+    {
+      "path": "outputs/phase7/summary.json",
+      "sha256": "aff81d762af9f6416c39c7af2c751d221af903a2734e774743891a954fb2fc54",
+      "role": "building scope, mismatch and split protocol"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959",
+      "role": "forecast-optimal versus decision-optimal weights"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c",
+      "role": "final benchmark and whole-window peak reduction"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36",
+      "role": "canonical reporting and building-level bootstrap"
+    },
+    {
+      "path": "outputs/phase9_1/metric_semantics.json",
+      "sha256": "ff07f2ee0d96b2676f84ab13f6302543cb1b51defb8f8420dfb6ba6d634de574",
+      "role": "frozen metric semantics"
+    },
+    {
+      "path": "outputs/phase9_1/unit_semantics.json",
+      "sha256": "a114ccd51ff37406728238fc279ab2125f24e3b43907dd61b62673af5daba9dc",
+      "role": "frozen unit semantics"
+    },
+    {
+      "path": "reports/phase10_final_deliverable_gap_audit.md",
+      "sha256": "49b2e62415a88de43b2511f574b7d8a9124a066507dc174e98b995107e584752",
+      "role": "Phase 12 boundary and open lineage defect"
+    },
+    {
+      "path": "outputs/phase11/phase11_verdict.json",
+      "sha256": "cea068c8705e4dbf736a0fb4cb52bda39b619582eeee0baf166b3537011a2c6a",
+      "role": "verified competition track and rubric"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reports/phase12_innovation_positioning_and_claim_freeze.md",
+      "sha256": "9999422b30f78ccd1f23803651825e4a098fc0f361e3c7b9fd10b50c607f56c5",
+      "bytes": 20780,
+      "role": "formal human-readable freeze report"
+    },
+    {
+      "path": "outputs/phase12/innovation_claims_frozen.json",
+      "sha256": "3bbedd7a28443b9636f7dcb2502a7924623ad77c43d9e52d9e503b6a3f6467bf",
+      "bytes": 11840,
+      "role": "machine-readable contribution hierarchy"
+    },
+    {
+      "path": "outputs/phase12/claim_evidence_matrix.csv",
+      "sha256": "f5185fe65ef08cb949d0029f06f6e9755ab77b3ac3fe19046994d1b75cda0c13",
+      "bytes": 12136,
+      "role": "claim approval and wording registry"
+    },
+    {
+      "path": "outputs/phase12/key_number_ledger.csv",
+      "sha256": "b5a9b94a214c0f72a5c6ee42f14cbad46cb268adf87a9b13999eba34a43e2af0",
+      "bytes": 12380,
+      "role": "sole downstream key-number source"
+    },
+    {
+      "path": "outputs/phase12/prior_art_audit.csv",
+      "sha256": "9c005ee17ae5c7140548eff2de0ce6a07d89a2920eee8ffd8da90cef257c326d",
+      "bytes": 12170,
+      "role": "adversarial comparison evidence"
+    },
+    {
+      "path": "outputs/phase12/prohibited_claims.md",
+      "sha256": "d41149bc8b1814ae15b70872238b80375ef1ac5e3e0f5b8abf44603b0c679ba0",
+      "bytes": 6313,
+      "role": "frozen prohibited wording and safe alternatives"
+    },
+    {
+      "path": "outputs/phase12/literature_registry_frozen.csv",
+      "sha256": "67da537ab1c6a43de1876dd35b0d2eaa3119a7f1b3d6d8703d8bc617f726e4c2",
+      "bytes": 8245,
+      "role": "frozen bibliography and verification status"
+    },
+    {
+      "path": "outputs/phase12/phase12_verdict.json",
+      "sha256": "b1b22a66507f89af4c3abeaf373e8e2ea062d6e8f5f9fc0d2577d35e6c12dd56",
+      "bytes": 5317,
+      "role": "machine-readable PASS and Phase 13 contract"
+    }
+  ],
+  "consumers": [
+    {
+      "phase": "Phase 13",
+      "allowed_inputs": [
+        "APPROVED or APPROVED_WITH_SCOPE claims",
+        "frozen key-number ledger",
+        "frozen metric and unit semantics",
+        "frozen literature registry"
+      ]
+    },
+    {
+      "phase": "Phase 14 and later competition media",
+      "allowed_inputs": ["Phase 13-compliant claims and numbers only"]
+    }
+  ],
+  "known_open_lineage_risk": {
+    "id": "Phase 7 clean-checkout loader/hash consistency defect",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "repaired_in_phase12": false
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 12 — Innovation Positioning & Claim Freeze",
+  "status": "PASS",
+  "phase13_allowed": true,
+  "date": "2026-09-01",
+  "git": {
+    "branch": "codex/phase12-claim-freeze",
+    "starting_head": "c0ffedf4e57482caf3175bcb2fa0ebde1784ee7c",
+    "expected_ending_head_without_commit": "c0ffedf4e57482caf3175bcb2fa0ebde1784ee7c",
+    "algorithm_freeze_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+    "commit_created": false,
+    "push_performed": false
+  },
+  "competition_context": {
+    "track": "算法主题赛（AI+能源）—科技创新组",
+    "rubric": [20, 10, 25, 25, 10, 10],
+    "other_track_rubric_mixed": false
+  },
+  "innovation_hierarchy": [
+    {
+      "id": "CORE-1",
+      "level": "LEVEL B",
+      "confidence": "MEDIUM-HIGH",
+      "status": "APPROVED_WITH_SCOPE"
+    },
+    {
+      "id": "CORE-2",
+      "level": "LEVEL C",
+      "confidence": "HIGH",
+      "status": "APPROVED_WITH_SCOPE"
+    },
+    {
+      "id": "CORE-3",
+      "level": "LEVEL C",
+      "confidence": "HIGH",
+      "status": "APPROVED_WITH_SCOPE"
+    }
+  ],
+  "pass_checks": {
+    "literature": {
+      "adversarial_search_performed": true,
+      "L015_full_text_checked": true,
+      "L016_full_text_checked": true,
+      "citation_chaining_performed": true,
+      "new_closest_boundary_work_added": ["L019", "L020", "L021", "L022"],
+      "high_overlap_work_concealed": false,
+      "remaining_unknowns_explicit": true,
+      "first_or_SOTA_claim_approved": false
+    },
+    "innovation": {
+      "core_count": 3,
+      "all_have_level": true,
+      "all_have_closest_prior_work": true,
+      "all_have_exact_difference": true,
+      "level_A_count": 0
+    },
+    "internal_evidence": {
+      "headline_claims_have_canonical_paths": true,
+      "key_numbers_recomputed_or_cross_checked": true,
+      "validation_test_semantics_separated": true,
+      "negative_results_retained": true,
+      "scope_bounded": true
+    },
+    "key_numbers": {
+      "ledger_frozen": true,
+      "units_defined": true,
+      "metric_semantics_defined": true,
+      "rounding_defined": true,
+      "traceable": true
+    },
+    "algorithm_invariance": {
+      "retrained": false,
+      "retuned": false,
+      "new_model": false,
+      "changed_features": false,
+      "changed_splits": false,
+      "changed_building_selection": false,
+      "changed_weights": false,
+      "changed_predictions": false,
+      "changed_dispatch": false,
+      "new_bootstrap": false,
+      "modified_phase7": false,
+      "modified_phase8": false,
+      "modified_phase9": false,
+      "modified_phase9_1": false,
+      "modified_frozen_algorithm": false,
+      "canonical_prediction_invariance_source": "outputs/phase9_1/doef_prediction_invariance.json",
+      "canonical_samples": 5760,
+      "canonical_max_absolute_delta": 0.0
+    }
+  },
+  "frozen_artifacts": [
+    "reports/phase12_innovation_positioning_and_claim_freeze.md",
+    "outputs/phase12/innovation_claims_frozen.json",
+    "outputs/phase12/claim_evidence_matrix.csv",
+    "outputs/phase12/key_number_ledger.csv",
+    "outputs/phase12/prior_art_audit.csv",
+    "outputs/phase12/prohibited_claims.md",
+    "outputs/phase12/literature_registry_frozen.csv",
+    "outputs/phase12/phase12_verdict.json",
+    "outputs/phase12/artifact_manifest.json"
+  ],
+  "source_consumer_contract": {
+    "canonical_sources": [
+      "outputs/phase7",
+      "outputs/phase8",
+      "outputs/phase9",
+      "outputs/phase9_1",
+      "reports/phase10_final_deliverable_gap_audit.md",
+      "outputs/phase11",
+      "outputs/phase12_pre_research"
+    ],
+    "phase12_role": "narrative and evidence freeze only",
+    "downstream_consumers": ["Phase 13 technical report and figures", "Phase 14 PPT oral script and video"]
+  },
+  "phase13_handoff": {
+    "allowed_claim_statuses": ["APPROVED", "APPROVED_WITH_SCOPE"],
+    "key_number_source": "outputs/phase12/key_number_ledger.csv",
+    "claim_source": "outputs/phase12/claim_evidence_matrix.csv",
+    "literature_source": "outputs/phase12/literature_registry_frozen.csv",
+    "metric_semantics_source": "outputs/phase9_1/metric_semantics.json",
+    "unit_semantics_source": "outputs/phase9_1/unit_semantics.json",
+    "scope_expansion_allowed": false,
+    "new_innovation_points_allowed": false
+  },
+  "open_risks": [
+    {
+      "id": "RISK-P7-HASH",
+      "severity": "HIGH",
+      "status": "OPEN",
+      "description": "Phase 7 clean-checkout loader/hash consistency defect recorded by Phase 10.",
+      "phase12_action": "Disclosed and claim level reduced; not repaired or re-registered."
+    },
+    {
+      "id": "RISK-LITERATURE-COVERAGE",
+      "severity": "MEDIUM",
+      "status": "OPEN_BOUNDED",
+      "description": "No literature search can prove universal absence; L023 author metadata and some non-core split/leakage details remain UNVERIFIED or PARTIAL.",
+      "phase12_action": "No first/new/SOTA claim approved; uncertain sources are not used as sole core evidence."
+    },
+    {
+      "id": "RISK-COMPETITION-WORDING",
+      "severity": "MEDIUM",
+      "status": "CONTROLLED",
+      "description": "LEVEL B can be inflated into an unsupported first/new claim in later deliverables.",
+      "phase12_action": "Safe wording and prohibited alternatives frozen; Phase 13 contract enforced."
+    }
+  ]
+}
