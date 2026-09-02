@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "phase": "13.0A",
+  "verdict": "PASS",
+  "reason": "All recoverable core frozen presentation evidence is provenance-linked; limitations and scope conflicts are explicit and do not prevent truthful Phase 13.0B presentation work.",
+  "repository": {
+    "path": "D:/document/aic",
+    "branch": "codex/phase13-visual-report-demo",
+    "starting_head": "3d77272c36108fffcdcb4f73c240b52bbfc4de86",
+    "frozen_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+    "frozen_is_ancestor": true,
+    "ahead": 5,
+    "behind": 0,
+    "starting_status_short": [
+      "?? outputs/phase13/",
+      "?? reports/phase13_implementation_plan.md"
+    ],
+    "canonical_phase7_9_1_diff_frozen_to_starting_head": [],
+    "canonical_phase7_9_1_worktree_modification_count_at_start": 0
+  },
+  "recovery": {
+    "candidate_item_count": 2623,
+    "EXACT_RECOVERED": 2559,
+    "DETERMINISTIC_DERIVED": 4,
+    "FIGURE_REUSABLE_ONLY": 49,
+    "TEXT_ONLY_EVIDENCE": 0,
+    "AMBIGUOUS": 4,
+    "UNRECOVERABLE": 7
+  },
+  "numerical_manifest_item_count": 2545,
+  "source_file_count": 88,
+  "figure_count": 49,
+  "conflict_count": 8,
+  "critical_story_coverage": {
+    "Problem / dataset": "READY",
+    "Forecast task": "READY",
+    "Baselines": "READY",
+    "LightGBM": "READY",
+    "Forecast comparison": "READY",
+    "Decision-oriented evaluation": "READY",
+    "Battery optimization": "PARTIAL",
+    "Error propagation": "READY",
+    "Robustness": "READY",
+    "Multi-building generalization": "PARTIAL",
+    "Decision-oriented ensemble": "READY",
+    "Final DOEF": "READY",
+    "Final test evidence": "PARTIAL",
+    "Reproducibility": "READY"
+  },
+  "missing_evidence": [
+    "Unseen-building transfer/generalization beyond the eight fixed office buildings",
+    "Results beyond one fixed future Test month per building",
+    "A pristine never-before-viewed Test set",
+    "Tariff/cost/savings outcomes",
+    "Carbon-emission outcomes",
+    "Energy-use reduction outcomes"
+  ],
+  "negative_result": "Phase 5.7 Validation-selected robust LightGBM dispatch is worse on Test than deterministic LightGBM dispatch and must be retained."
+}
