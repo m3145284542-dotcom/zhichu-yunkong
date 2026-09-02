@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "phase": "13.0B",
+  "status": "PASS",
+  "artifact_status": "canonical",
+  "logical_role": "frozen downstream presentation evidence selection and story map",
+  "producer": "scripts/build_phase13_0b.py",
+  "starting_head": "dc9ad91c57d1e8c9037bef8216ccad23619ce85b",
+  "frozen_baseline_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+  "canonical_inputs": [
+    "outputs/phase13_0a/frozen_presentation_data_manifest.json",
+    "outputs/phase13_0a/presentation_claim_evidence_matrix.csv",
+    "outputs/phase13_0a/presentation_source_hashes.csv",
+    "outputs/phase13_0a/figure_inventory.csv",
+    "outputs/phase13_0a/conflict_register.csv",
+    "outputs/phase13_0a/recovery_summary.json",
+    "reports/phase13/phase13_0a_frozen_presentation_data_recovery_audit.md"
+  ],
+  "acceptance_reason": "All core claims bind frozen evidence and manifest metrics; references and hashes validate; limitations and forbidden wording are explicit; no upstream numerical or algorithm artifact changed.",
+  "core_claim_count": 8,
+  "supporting_claim_count": 8,
+  "backup_claim_count": 5,
+  "rejected_claim_count": 12,
+  "core_metric_count": 19,
+  "supporting_metric_count": 11,
+  "backup_metric_count": 5,
+  "hero_figure_count": 2,
+  "core_figure_count": 5,
+  "backup_figure_count": 6,
+  "logical_slide_count": 13,
+  "algorithm_modified": false,
+  "new_experiment_run": false,
+  "new_numerical_result_generated": false,
+  "presentation_created": false,
+  "phase13_0a_source_hash_drift": 0,
+  "canonical_artifact_modifications": 0,
+  "validation": {
+    "json_load": "PASS",
+    "csv_load": "PASS",
+    "manifest_id_resolution": "PASS",
+    "claim_evidence_references": "PASS",
+    "claim_metric_references": "PASS",
+    "slide_claim_references": "PASS",
+    "figure_path_references": "PASS",
+    "phase13_0a_source_hash_drift_count": 0
+  },
+  "innovation_positioning": [
+    {
+      "innovation_id": "INNOV-A",
+      "label": "Decision-oriented forecast evaluation",
+      "status": "supported",
+      "claim_ids": [
+        "CORE-02"
+      ],
+      "boundary": "Supported as an internal project contribution; no external novelty priority claim."
+    },
+    {
+      "innovation_id": "INNOV-B",
+      "label": "Validation-selected decision-oriented ensemble",
+      "status": "supported",
+      "claim_ids": [
+        "CORE-03",
+        "CORE-05"
+      ],
+      "boundary": "Supported by frozen Validation selection and weights; not Test-selected."
+    },
+    {
+      "innovation_id": "INNOV-C",
+      "label": "Forecast-to-decision integrated pipeline",
+      "status": "supported",
+      "claim_ids": [
+        "CORE-01",
+        "CORE-05",
+        "SUP-06"
+      ],
+      "boundary": "Integrated evaluation pipeline, not end-to-end differentiable training or deployment."
+    },
+    {
+      "innovation_id": "INNOV-D",
+      "label": "Multi-building morphology-aware benchmark design",
+      "status": "partially supported",
+      "claim_ids": [
+        "CORE-04"
+      ],
+      "boundary": "Train-only morphology and fixed heterogeneous offices are supported; generalization beyond the 8 buildings is not."
+    },
+    {
+      "innovation_id": "INNOV-E",
+      "label": "External first/world-first/SOTA positioning",
+      "status": "unsupported",
+      "claim_ids": [
+        "REJ-11"
+      ],
+      "boundary": "Requires a separate literature and comparable-system audit."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "scripts/build_phase13_0b.py",
+      "status": "canonical",
+      "sha256": "0cb439653d1590e305a5a0bdce7c172f28abc0d02e32c66b26ad20644621fd47"
+    },
+    {
+      "path": "outputs/phase13_0b/final_presentation_claims.json",
+      "status": "canonical",
+      "sha256": "2bd76115b0c5d325f08b3eacc8fd3d342cba407db5944f4cbaaf5edac34441d1"
+    },
+    {
+      "path": "outputs/phase13_0b/presentation_metric_shortlist.csv",
+      "status": "canonical",
+      "sha256": "f67399fb6d1ae961bd780884b4c729eb8c1c447dc2c27ccd73f4cd19e7e0aa74"
+    },
+    {
+      "path": "outputs/phase13_0b/final_figure_shortlist.csv",
+      "status": "canonical",
+      "sha256": "f4ffe83fb44c14ab1310bb691c5af2ee2b0a9c7013f762e02ddcb8d30a77193a"
+    },
+    {
+      "path": "outputs/phase13_0b/slide_evidence_map.csv",
+      "status": "canonical",
+      "sha256": "4f8a7c5973fb23f462963ae246df7e0dd1d691c00ae83aeb6b4962dbd99e6900"
+    },
+    {
+      "path": "outputs/phase13_0b/presentation_limitations_registry.csv",
+      "status": "canonical",
+      "sha256": "ec97e1cfc1747e9e0310d82f3a68076dae40759c6c7fee5132d46100837e3501"
+    },
+    {
+      "path": "outputs/phase13_0b/doef_pipeline_spec.json",
+      "status": "canonical",
+      "sha256": "dc5c512da452197e22f25dfdee0fba8aa985205bd80bac7248445e55a3b2603b"
+    },
+    {
+      "path": "reports/phase13/phase13_0b_frozen_presentation_evidence_selection_and_story_mapping.md",
+      "status": "canonical",
+      "sha256": "09358d62b1e44b7572190ebe2cd5debf03efc430f49da01344c0b2e523b238ca"
+    }
+  ],
+  "commit_message": "docs: complete phase 13.0b presentation evidence selection"
+}

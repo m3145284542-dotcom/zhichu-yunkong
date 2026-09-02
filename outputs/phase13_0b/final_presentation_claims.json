@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "phase": "13.0B",
+  "logical_role": "frozen presentation claim registry",
+  "source_layer": "outputs/phase13_0a/frozen_presentation_data_manifest.json",
+  "claims": [
+    {
+      "claim_id": "CORE-01",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Real problem",
+      "technical_wording": "The frozen task produces a 24-hour-ahead load forecast that is consumed by a battery peak-shaving dispatch evaluation; forecasting is an input to the decision task, not the terminal objective.",
+      "presentation_wording": "预测不是终点：24 小时前瞻负荷预测服务于电池削峰决策。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0021"
+      ],
+      "primary_metric_ids": [
+        "forecast.horizon"
+      ],
+      "figure_ids": [
+        "FIG-037"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Train/Validation/Test protocol",
+      "model_scope": "DOEF pipeline",
+      "aggregation": "not applicable",
+      "unit": "hours; kW",
+      "caveat": "The evidence supports peak-demand reduction only, not tariff savings, carbon reduction, or energy-use reduction.",
+      "forbidden_overclaim": "The system has validated electricity-cost savings, carbon reduction, or lower energy consumption.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase9/final_algorithm.json",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-02",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Forecast accuracy versus decision quality",
+      "technical_wording": "On the frozen 8-building Test aggregate, XGBoost has slightly lower normalized RMSE than LightGBM (0.216751 versus 0.216942) but higher normalized decision regret (0.117534 versus 0.116127).",
+      "presentation_wording": "更低的预测 RMSE 不必然带来更好的储能决策：冻结 Test 结果中，XGBoost 的 RMSE 略优，决策 regret 却更差。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2482",
+        "CLM-2472",
+        "CLM-2484",
+        "CLM-2474"
+      ],
+      "primary_metric_ids": [
+        "9.final_benchmark.4.normalized_rmse_mean",
+        "9.final_benchmark.3.normalized_rmse_mean",
+        "9.final_benchmark.4.normalized_decision_regret_mean",
+        "9.final_benchmark.3.normalized_decision_regret_mean"
+      ],
+      "figure_ids": [
+        "FIG-038"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "XGBoost versus LightGBM",
+      "aggregation": "equal-building mean after Train-mean normalization",
+      "unit": "dimensionless",
+      "caveat": "The RMSE gap is small and this is a project-specific counterexample, not proof that forecast accuracy never matters.",
+      "forbidden_overclaim": "Forecast accuracy is irrelevant, or all more accurate models make worse decisions.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-03",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Decision-oriented model selection",
+      "technical_wording": "Phase 8 evaluates 11 predeclared DayWeek/LightGBM weights on Validation and freezes each building's weight by mean daily regret versus a non-deployable Oracle; for Hog_office_Joey, forecast-MAE selection chooses w=0.6 while decision-regret selection chooses w=0.3.",
+      "presentation_wording": "DOEF 不只按预测误差选融合权重，而是在 Validation 上按储能决策 regret 冻结权重。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2526",
+        "CLM-2531",
+        "CLM-2532"
+      ],
+      "primary_metric_ids": [
+        "phase8.weight_candidates",
+        "phase8.Hog_office_Joey.w_forecast",
+        "phase8.Hog_office_Joey.w_decision"
+      ],
+      "figure_ids": [
+        "FIG-032",
+        "FIG-033",
+        "FIG-034"
+      ],
+      "building_scope": "8 fixed office buildings; example: Hog_office_Joey",
+      "split": "Validation only",
+      "model_scope": "DayWeek/LightGBM ensemble",
+      "aggregation": "per-building selection",
+      "unit": "ensemble LightGBM weight",
+      "caveat": "The Joey weights are an illustrative frozen example; Oracle is hindsight-only and non-deployable.",
+      "forbidden_overclaim": "Weights were tuned on Test, or the Oracle is deployable.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase8/run_config.json",
+        "outputs/phase9/final_algorithm.json"
+      ],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-04",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Multi-building benchmark",
+      "technical_wording": "The benchmark fixes 8 heterogeneous office buildings using Train-only morphology after frozen eligibility filtering from 296 office candidates, of which 82 pass the frozen quality rules.",
+      "presentation_wording": "在 296 个办公候选中按冻结质量规则筛到 82 个，再仅用 Train 期形态预选 8 栋异质办公建筑。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0003",
+        "CLM-0004",
+        "CLM-0008"
+      ],
+      "primary_metric_ids": [
+        "dataset.office_candidates",
+        "dataset.office_quality_pass",
+        "dataset.final_buildings"
+      ],
+      "figure_ids": [
+        "FIG-024"
+      ],
+      "building_scope": "8 pre-selected heterogeneous office buildings",
+      "split": "Train-only building selection; later Validation/Test evaluation",
+      "model_scope": "multi-model benchmark",
+      "aggregation": "fixed selection counts",
+      "unit": "buildings",
+      "caveat": "This is multi-building evaluation across fixed buildings, not unseen-building transfer.",
+      "forbidden_overclaim": "DOEF generalizes to unseen buildings, zero-shot transfers, or performs domain adaptation.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase7/selected_buildings.json"
+      ],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-05",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "DOEF v1.0 system",
+      "technical_wording": "DOEF v1.0 is formally named Decision-Oriented Ensemble Forecasting and computes w_b·LightGBM + (1-w_b)·DayWeek for a 24-hour-ahead forecast, with w_b frozen per building by Validation decision regret before battery dispatch evaluation.",
+      "presentation_wording": "DOEF v1.0（Decision-Oriented Ensemble Forecasting）把因果预测、决策导向融合和电池削峰评估连成一条冻结流程。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0021",
+        "CLM-2532"
+      ],
+      "primary_metric_ids": [
+        "forecast.horizon",
+        "phase8.Hog_office_Joey.w_decision"
+      ],
+      "figure_ids": [
+        "FIG-034"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Validation selection; Test evaluation",
+      "model_scope": "DayWeek + LightGBM → DOEF → battery dispatch",
+      "aggregation": "per-building frozen ensemble",
+      "unit": "hours; ensemble weight; kW",
+      "caveat": "The pipeline is integrated for evaluation; it is not end-to-end differentiable training and does not claim online deployment.",
+      "forbidden_overclaim": "DOEF is a new LightGBM model, an end-to-end differentiable optimizer, or a deployed production system.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase9/final_algorithm.json",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-06",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Final forecast outcome",
+      "technical_wording": "On the frozen 8-building Test aggregate, DOEF reduces mean normalized MAE from 0.147338 for LightGBM to 0.137970, a relative improvement of 6.3585%.",
+      "presentation_wording": "在冻结的 8 栋建筑 Test 汇总上，DOEF 相对 LightGBM 的 normalized MAE 改善 6.36%。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2547",
+        "CLM-2546",
+        "CLM-2550"
+      ],
+      "primary_metric_ids": [
+        "phase9_1.lightgbm_mean_normalized_mae",
+        "phase9_1.doef_mean_normalized_mae",
+        "phase9_1.normalized_mae_relative_improvement_pct"
+      ],
+      "figure_ids": [
+        "FIG-040"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "DOEF v1.0 versus LightGBM",
+      "aggregation": "equal-building mean; normalized by frozen Train mean load",
+      "unit": "dimensionless; %",
+      "caveat": "One fixed Test month per building; the result is not evidence of universal or unseen-building performance.",
+      "forbidden_overclaim": "DOEF beats all forecasting methods everywhere or is state of the art.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-07",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Final decision outcome",
+      "technical_wording": "On the frozen 8-building Test aggregate, DOEF reduces mean normalized decision regret from 0.116127 for LightGBM to 0.111929, a relative improvement of 3.6147%, with 6 building wins, 2 ties, and 0 losses.",
+      "presentation_wording": "DOEF 相对 LightGBM 的 normalized decision regret 改善 3.61%，建筑级结果为 6 胜、2 平、0 负。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2549",
+        "CLM-2548",
+        "CLM-2551",
+        "CLM-2552",
+        "CLM-2553",
+        "CLM-2554"
+      ],
+      "primary_metric_ids": [
+        "phase9_1.lightgbm_mean_normalized_regret",
+        "phase9_1.doef_mean_normalized_regret",
+        "phase9_1.normalized_regret_relative_improvement_pct",
+        "phase9_1.decision_wins",
+        "phase9_1.decision_ties",
+        "phase9_1.decision_losses"
+      ],
+      "figure_ids": [
+        "FIG-039",
+        "FIG-040"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "DOEF v1.0 versus LightGBM",
+      "aggregation": "equal-building mean; building-level win/tie/loss",
+      "unit": "dimensionless; %; buildings",
+      "caveat": "Regret is defined against the non-deployable Oracle under the frozen battery protocol; this is not monetary regret.",
+      "forbidden_overclaim": "DOEF beats every method on every building, or the improvement is monetary savings.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "CORE-08",
+      "tier": "TIER 1 — CORE CLAIM",
+      "category": "Peak-shaving outcome",
+      "technical_wording": "Across the 8 fixed Test buildings, DOEF's mean whole-window peak reduction is 6.4423%; the building-level minimum is -1.0170%, so the frozen evidence includes a degradation case.",
+      "presentation_wording": "DOEF 的 8 栋建筑平均削峰率为 6.44%，同时如实保留最差建筑 -1.02% 的负结果。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2506",
+        "CLM-2508"
+      ],
+      "primary_metric_ids": [
+        "9.final_benchmark.6.peak_reduction_mean_pct",
+        "9.final_benchmark.6.peak_reduction_min_pct"
+      ],
+      "figure_ids": [
+        "FIG-040"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "DOEF v1.0",
+      "aggregation": "equal-building mean and building minimum of whole-window peak reduction",
+      "unit": "%",
+      "caveat": "Whole-window peak reduction is not daily-average peak reduction; one building is negative.",
+      "forbidden_overclaim": "DOEF always reduces peak demand, or every building improves.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": {
+        "scientific_importance": 5,
+        "ai_algorithm_relevance": 5,
+        "decision_relevance": 5,
+        "visualizability": 4,
+        "defensibility_in_qa": 5,
+        "evidence_strength": 5,
+        "uniqueness_within_project": 5
+      }
+    },
+    {
+      "claim_id": "SUP-01",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Dataset scale",
+      "technical_wording": "The frozen Phase 3 selection table represents 1,578 building series; 296 are office candidates.",
+      "presentation_wording": "项目冻结的 BDG2 选择表覆盖 1,578 栋建筑序列，其中 296 栋为办公候选。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0002",
+        "CLM-0003"
+      ],
+      "primary_metric_ids": [
+        "dataset.raw_building_count",
+        "dataset.office_candidates"
+      ],
+      "figure_ids": [
+        "FIG-024"
+      ],
+      "building_scope": "project selection universe",
+      "split": "not applicable",
+      "model_scope": "dataset",
+      "aggregation": "row count",
+      "unit": "buildings",
+      "caveat": "The 1,578 count is scoped to this repository's frozen selection table.",
+      "forbidden_overclaim": "BDG2 universally has exactly 1,578 buildings.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-02",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Causal protocol",
+      "technical_wording": "Forecasts use only causally available load-history and calendar features for a 24-hour horizon; target leakage and weather features are excluded in the frozen protocol.",
+      "presentation_wording": "24 小时前瞻预测只使用因果可得的负荷历史与日历特征。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0021"
+      ],
+      "primary_metric_ids": [
+        "forecast.horizon"
+      ],
+      "figure_ids": [],
+      "building_scope": "8 fixed office buildings",
+      "split": "all splits",
+      "model_scope": "forecast components",
+      "aggregation": "not applicable",
+      "unit": "hours",
+      "caveat": "This does not claim the feature set is optimal or exhaustive.",
+      "forbidden_overclaim": "The system uses real-time future weather or future target values.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase9/final_algorithm.json"
+      ],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-03",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Validation discipline",
+      "technical_wording": "All model and ensemble choices were frozen using Validation only; Test is evaluation-only and cannot promote an algorithm.",
+      "presentation_wording": "所有模型与融合选择均只用 Validation 冻结，Test 仅用于评估。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2526"
+      ],
+      "primary_metric_ids": [
+        "phase8.weight_candidates"
+      ],
+      "figure_ids": [
+        "FIG-032",
+        "FIG-033"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Validation selection; Test evaluation",
+      "model_scope": "all selected models and ensemble weights",
+      "aggregation": "not applicable",
+      "unit": "weights",
+      "caveat": "Historical Test results had been viewed; the safe statement concerns non-use for selection, not pristine visibility.",
+      "forbidden_overclaim": "The Test set was pristine, completely untouched, or never viewed.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase9_1/final_reporting_summary.json",
+        "outputs/phase8/run_config.json"
+      ],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-04",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Building-level uncertainty",
+      "technical_wording": "A frozen building-level paired bootstrap of DOEF minus LightGBM normalized mean decision regret uses 10,000 resamples and yields point estimate -0.004198 with 95% interval [-0.006850, -0.001719].",
+      "presentation_wording": "以建筑为重采样单位的冻结 bootstrap 区间仍位于 0 以下。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2555",
+        "CLM-2556",
+        "CLM-2557",
+        "CLM-2558",
+        "CLM-2559"
+      ],
+      "primary_metric_ids": [
+        "phase9_1.bootstrap.resamples",
+        "phase9_1.bootstrap.point_estimate",
+        "phase9_1.bootstrap.ci95_lower",
+        "phase9_1.bootstrap.ci95_upper",
+        "phase9_1.bootstrap.probability_mean_less_than_zero"
+      ],
+      "figure_ids": [],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "DOEF v1.0 minus LightGBM",
+      "aggregation": "building-level paired bootstrap",
+      "unit": "normalized regret difference; resamples",
+      "caveat": "Only 8 building units are available; the bootstrap quantifies uncertainty within this fixed scope.",
+      "forbidden_overclaim": "This proves universal statistical superiority across buildings.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-05",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Reproducibility",
+      "technical_wording": "The explicit DOEF v1.0 formula reproduces all 5,760 frozen Phase 8 ensemble predictions with maximum absolute difference 0.0 kW.",
+      "presentation_wording": "DOEF v1.0 公式对 5,760 个冻结预测实现零差异复现。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2560",
+        "CLM-2561"
+      ],
+      "primary_metric_ids": [
+        "phase9_1.invariance_samples",
+        "phase9_1.invariance_max_delta"
+      ],
+      "figure_ids": [],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "DOEF v1.0",
+      "aggregation": "all stored predictions",
+      "unit": "predictions; kW",
+      "caveat": "This is prediction identity, not a fresh model rerun or independent replication.",
+      "forbidden_overclaim": "A new independent experiment reproduced the result.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-06",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Battery evaluation",
+      "technical_wording": "Forecast-driven daily battery schedules are evaluated on realized load under frozen capacity, power, efficiency, SOC, and daily-reset constraints.",
+      "presentation_wording": "所有预测方法在同一冻结电池约束下比较，实现从预测到真实削峰结果的闭环评价。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2548"
+      ],
+      "primary_metric_ids": [
+        "phase9_1.doef_mean_normalized_regret"
+      ],
+      "figure_ids": [
+        "FIG-037",
+        "FIG-042"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "all forecast-driven controllers",
+      "aggregation": "daily dispatch evaluation",
+      "unit": "kW; kWh",
+      "caveat": "The protocol is a fixed offline evaluation, not a field deployment.",
+      "forbidden_overclaim": "The battery controller has been deployed in real buildings.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase9/final_algorithm.json",
+        "outputs/phase13_0a/conflict_register.csv"
+      ],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-07",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Honest aggregation",
+      "technical_wording": "Peak-reduction conclusions must retain method, building, split, whole-window/daily scope, and aggregation labels; CatBoost's frozen Test mean is -24.4824% while its median is 4.8209%.",
+      "presentation_wording": "削峰率必须同时说明方法、建筑范围和聚合口径；均值与中位数可能给出相反印象。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2496",
+        "CLM-2497"
+      ],
+      "primary_metric_ids": [
+        "9.final_benchmark.5.peak_reduction_mean_pct",
+        "9.final_benchmark.5.peak_reduction_median_pct"
+      ],
+      "figure_ids": [
+        "FIG-041"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "CatBoost example",
+      "aggregation": "equal-building mean versus median",
+      "unit": "%",
+      "caveat": "The extreme mean is driven by a documented low-load building case; do not collapse it to one unlabeled scalar.",
+      "forbidden_overclaim": "Peak reduction is one universal scalar or CatBoost uniformly increases peaks.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "SUP-08",
+      "tier": "TIER 2 — SUPPORTING CLAIM",
+      "category": "Evidence-first falsification",
+      "technical_wording": "Negative or mixed frozen outcomes are retained and are not used to revise the Validation-frozen algorithm after Test evaluation.",
+      "presentation_wording": "负结果不被隐藏，也不用于 Test 后反向改选算法。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0061",
+        "CLM-0052"
+      ],
+      "primary_metric_ids": [
+        "phase5_7.test.lightgbm_robust.mean_regret",
+        "phase5_7.test.lightgbm_deterministic.mean_regret"
+      ],
+      "figure_ids": [
+        "FIG-022"
+      ],
+      "building_scope": "Hog_office_Rolando and 8-building follow-up",
+      "split": "Validation selection; Test reporting",
+      "model_scope": "robust and peak-aware supporting experiments",
+      "aggregation": "method-specific",
+      "unit": "kW",
+      "caveat": "These experiments are supporting falsification evidence, not DOEF components.",
+      "forbidden_overclaim": "Every attempted method improved Test performance.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "BACK-01",
+      "tier": "TIER 3 — BACKUP / Q&A CLAIM",
+      "category": "Robust optimization negative result",
+      "technical_wording": "For Hog_office_Rolando Test, the Validation-selected robust LightGBM configuration (lambda=0.5) has mean regret 20.4635 kW versus 11.1274 kW for deterministic LightGBM.",
+      "presentation_wording": "稳健优化实验是负结果：Test mean regret 由 11.1274 kW 恶化至 20.4635 kW。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0082",
+        "CLM-0061",
+        "CLM-0052"
+      ],
+      "primary_metric_ids": [
+        "phase5_7.selected_lambda",
+        "phase5_7.test.lightgbm_robust.mean_regret",
+        "phase5_7.test.lightgbm_deterministic.mean_regret"
+      ],
+      "figure_ids": [
+        "FIG-022",
+        "FIG-023"
+      ],
+      "building_scope": "Hog_office_Rolando",
+      "split": "Test after Validation selection",
+      "model_scope": "robust versus deterministic LightGBM",
+      "aggregation": "mean daily regret",
+      "unit": "kW",
+      "caveat": "Single-building negative supporting experiment; not part of DOEF v1.0.",
+      "forbidden_overclaim": "Robust optimization improved Test performance.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "BACK-02",
+      "tier": "TIER 3 — BACKUP / Q&A CLAIM",
+      "category": "Unit semantics",
+      "technical_wording": "Raw meter observations are kWh per one-hour interval; dispatch quantities are interpreted as interval-average kW, while battery capacity and SOC remain kWh.",
+      "presentation_wording": "一小时时间步下，负荷读数按区间能量解释，调度功率用 kW，电池容量与 SOC 用 kWh。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0021"
+      ],
+      "primary_metric_ids": [
+        "forecast.horizon"
+      ],
+      "figure_ids": [],
+      "building_scope": "all buildings",
+      "split": "all splits",
+      "model_scope": "data and battery semantics",
+      "aggregation": "one-hour intervals",
+      "unit": "kWh; kW",
+      "caveat": "Numerical values coincide only because delta-t equals one hour.",
+      "forbidden_overclaim": "kWh and kW are interchangeable units.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase13_0a/conflict_register.csv"
+      ],
+      "competition_value": null
+    },
+    {
+      "claim_id": "BACK-03",
+      "tier": "TIER 3 — BACKUP / Q&A CLAIM",
+      "category": "Test scope",
+      "technical_wording": "The frozen evaluation contains one fixed future Test month per building; Test did not select models or weights but historical Test results had been viewed.",
+      "presentation_wording": "Test 不参与选择，但评估范围仅为每栋建筑一个固定未来月份，且不能称为从未查看。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0008"
+      ],
+      "primary_metric_ids": [
+        "dataset.final_buildings"
+      ],
+      "figure_ids": [],
+      "building_scope": "8 fixed office buildings",
+      "split": "one fixed Test month per building",
+      "model_scope": "all final methods",
+      "aggregation": "not applicable",
+      "unit": "buildings",
+      "caveat": "This limits temporal generalization and pristine-Test wording.",
+      "forbidden_overclaim": "Completely untouched pristine Test set or broad temporal generalization.",
+      "presentation_safe": true,
+      "provenance_sources": [
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "competition_value": null
+    },
+    {
+      "claim_id": "BACK-04",
+      "tier": "TIER 3 — BACKUP / Q&A CLAIM",
+      "category": "DOEF weight detail",
+      "technical_wording": "DOEF uses frozen per-building Validation-selected weights rather than one universal ensemble weight; the Joey decision-selected LightGBM weight is 0.3.",
+      "presentation_wording": "DOEF 使用逐建筑冻结权重，而不是一个全局固定权重。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2532"
+      ],
+      "primary_metric_ids": [
+        "phase8.Hog_office_Joey.w_decision"
+      ],
+      "figure_ids": [
+        "FIG-034"
+      ],
+      "building_scope": "8 fixed office buildings",
+      "split": "Validation",
+      "model_scope": "DOEF ensemble",
+      "aggregation": "per building",
+      "unit": "ensemble LightGBM weight",
+      "caveat": "Do not generalize Joey's value to other buildings.",
+      "forbidden_overclaim": "DOEF always uses w=0.3.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "BACK-05",
+      "tier": "TIER 3 — BACKUP / Q&A CLAIM",
+      "category": "Prediction lineage",
+      "technical_wording": "The Phase 9.1 invariance audit confirms the reporting definition is byte-identical in values to the frozen Phase 8 ensemble prediction over 5,760 samples.",
+      "presentation_wording": "报告中的 DOEF 定义与冻结 Phase 8 预测逐值一致。",
+      "claim_status": "PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2560",
+        "CLM-2561"
+      ],
+      "primary_metric_ids": [
+        "phase9_1.invariance_samples",
+        "phase9_1.invariance_max_delta"
+      ],
+      "figure_ids": [],
+      "building_scope": "8 fixed office buildings",
+      "split": "Test",
+      "model_scope": "DOEF v1.0",
+      "aggregation": "all samples",
+      "unit": "predictions; kW",
+      "caveat": "This does not repair the separately documented historical canonical-loader parent-hash caveat.",
+      "forbidden_overclaim": "All repository lineage issues are repaired.",
+      "presentation_safe": true,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-01",
+      "tier": "REJECTED CLAIM",
+      "category": "Unseen-building transfer",
+      "technical_wording": "Frozen evidence covers 8 fixed buildings only.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2568"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "Frozen evidence covers 8 fixed buildings only.",
+      "forbidden_overclaim": "DOEF generalizes to unseen buildings.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-02",
+      "tier": "REJECTED CLAIM",
+      "category": "Monetary savings",
+      "technical_wording": "No tariff or monetary outcome model exists.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2569"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "No tariff or monetary outcome model exists.",
+      "forbidden_overclaim": "DOEF delivers verified electricity-cost savings.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-03",
+      "tier": "REJECTED CLAIM",
+      "category": "Carbon reduction",
+      "technical_wording": "No carbon outcome model exists.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2570"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "No carbon outcome model exists.",
+      "forbidden_overclaim": "DOEF reduces carbon emissions.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-04",
+      "tier": "REJECTED CLAIM",
+      "category": "Energy reduction",
+      "technical_wording": "The outcome is peak demand, not energy use.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2571"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "The outcome is peak demand, not energy use.",
+      "forbidden_overclaim": "DOEF reduces building energy consumption.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-05",
+      "tier": "REJECTED CLAIM",
+      "category": "Broader building scope",
+      "technical_wording": "No frozen experiment supports that scope.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2572"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "No frozen experiment supports that scope.",
+      "forbidden_overclaim": "Results generalize beyond the 8 buildings.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-06",
+      "tier": "REJECTED CLAIM",
+      "category": "Broader temporal scope",
+      "technical_wording": "Only one fixed Test month per building is available.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2573"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "Only one fixed Test month per building is available.",
+      "forbidden_overclaim": "Results generalize across seasons and years.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-07",
+      "tier": "REJECTED CLAIM",
+      "category": "Pristine Test",
+      "technical_wording": "Test was not used for selection, but historical results had been viewed.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2574"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "Test was not used for selection, but historical results had been viewed.",
+      "forbidden_overclaim": "The Test set was completely untouched and never viewed.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-08",
+      "tier": "REJECTED CLAIM",
+      "category": "Universal BDG2 count",
+      "technical_wording": "The count is limited to the frozen project selection table.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2564"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "The count is limited to the frozen project selection table.",
+      "forbidden_overclaim": "BDG2 has exactly 1,578 buildings.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-09",
+      "tier": "REJECTED CLAIM",
+      "category": "Universal peak scalar",
+      "technical_wording": "Method, building, split, scope, and aggregation change the value.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2567"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "Method, building, split, scope, and aggregation change the value.",
+      "forbidden_overclaim": "Peak reduction is one project-wide scalar.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-10",
+      "tier": "REJECTED CLAIM",
+      "category": "Robust improvement",
+      "technical_wording": "Frozen Test regret materially degraded.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-0061"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "Frozen Test regret materially degraded.",
+      "forbidden_overclaim": "Robust optimization improved Test performance.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-11",
+      "tier": "REJECTED CLAIM",
+      "category": "External novelty",
+      "technical_wording": "No external literature or SOTA audit is part of Phase 13.0B.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2551"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "No external literature or SOTA audit is part of Phase 13.0B.",
+      "forbidden_overclaim": "DOEF is first, novel, world-first, or state of the art.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    },
+    {
+      "claim_id": "REJ-12",
+      "tier": "REJECTED CLAIM",
+      "category": "Universal superiority",
+      "technical_wording": "Frozen results include ties, method-specific strengths, and negative cases.",
+      "presentation_wording": "NOT_PRESENTATION_SAFE",
+      "claim_status": "NOT_PRESENTATION_SAFE",
+      "evidence_ids": [
+        "CLM-2508"
+      ],
+      "primary_metric_ids": [],
+      "figure_ids": [],
+      "building_scope": "unsupported or over-broad scope",
+      "split": "not applicable",
+      "model_scope": "not applicable",
+      "aggregation": "not applicable",
+      "unit": "not applicable",
+      "caveat": "Frozen results include ties, method-specific strengths, and negative cases.",
+      "forbidden_overclaim": "DOEF beats all methods on every metric and building.",
+      "presentation_safe": false,
+      "provenance_sources": [],
+      "competition_value": null
+    }
+  ]
+}

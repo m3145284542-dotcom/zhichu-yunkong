@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "phase": "13.0B",
+  "logical_role": "machine-readable specification for a future DOEF presentation diagram",
+  "algorithm": {
+    "name": "Decision-Oriented Ensemble Forecasting",
+    "acronym": "DOEF",
+    "version": "1.0",
+    "freeze_status": "frozen"
+  },
+  "diagram_generation_allowed_now": false,
+  "future_visual_rule": "Visual encoding may change only from frozen data; no aggregation, value, selection, or algorithm changes.",
+  "modules": [
+    {
+      "module_id": "M1",
+      "name": "Frozen hourly load data",
+      "input": "hourly building meter series",
+      "output": "fixed Train/Validation/Test windows",
+      "role": "data boundary",
+      "selection_criterion": "predefined coverage/quality rules",
+      "frozen_parameter": "8 fixed offices; one-hour intervals",
+      "connection": "M1 -> M2",
+      "evidence": [
+        "dataset.final_buildings"
+      ]
+    },
+    {
+      "module_id": "M2",
+      "name": "Causal load features",
+      "input": "past load and calendar state available at issue time",
+      "output": "causal feature matrix",
+      "role": "prevent future-target leakage",
+      "selection_criterion": "positive lags; shifted rolling history; no weather",
+      "frozen_parameter": "target timestamp = feature timestamp + 24 h",
+      "connection": "M2 -> M3,M4",
+      "evidence": [
+        "forecast.horizon"
+      ]
+    },
+    {
+      "module_id": "M3",
+      "name": "DayWeek component",
+      "input": "actual(t-24h), actual(t-168h)",
+      "output": "DayWeek forecast",
+      "role": "causal baseline component",
+      "selection_criterion": "fixed formula",
+      "frozen_parameter": "0.5*actual(t-24h)+0.5*actual(t-168h)",
+      "connection": "M3 -> M5",
+      "evidence": []
+    },
+    {
+      "module_id": "M4",
+      "name": "LightGBM component",
+      "input": "causal feature matrix",
+      "output": "per-building LightGBM forecast",
+      "role": "tree forecast component",
+      "selection_criterion": "Validation-only model selection",
+      "frozen_parameter": "frozen per-building Phase 7 configuration",
+      "connection": "M4 -> M5",
+      "evidence": []
+    },
+    {
+      "module_id": "M5",
+      "name": "Decision-oriented ensemble",
+      "input": "DayWeek and LightGBM forecasts",
+      "output": "DOEF 24 h ahead forecast",
+      "role": "align forecast combination with downstream storage objective",
+      "selection_criterion": "per-building Validation mean daily regret versus non-deployable Oracle; frozen tie-breaks",
+      "frozen_parameter": "w_b from outputs/phase8/selected_weights.csv; formula w_b*LightGBM+(1-w_b)*DayWeek",
+      "connection": "M5 -> M6",
+      "evidence": [
+        "phase8.weight_candidates",
+        "phase8.Hog_office_Joey.w_decision"
+      ]
+    },
+    {
+      "module_id": "M6",
+      "name": "Battery peak-shaving optimization",
+      "input": "DOEF 24 h forecast and frozen battery configuration",
+      "output": "daily charge/discharge schedule",
+      "role": "translate forecast into an operational decision",
+      "selection_criterion": "same frozen optimizer and constraints for all methods",
+      "frozen_parameter": "capacity, power, efficiency, SOC, throughput penalty, daily reset",
+      "connection": "M6 -> M7",
+      "evidence": []
+    },
+    {
+      "module_id": "M7",
+      "name": "Downstream evaluation",
+      "input": "frozen schedule and realized Test load",
+      "output": "realized peak, Oracle-relative regret, constraint and reliability evidence",
+      "role": "measure decision value",
+      "selection_criterion": "Test is reporting/evaluation only",
+      "frozen_parameter": "equal-building aggregation; Phase 9.1 metric and unit semantics",
+      "connection": "terminal",
+      "evidence": [
+        "phase9_1.doef_mean_normalized_regret",
+        "9.final_benchmark.6.peak_reduction_mean_pct"
+      ]
+    }
+  ],
+  "source_paths": [
+    "outputs/phase9/final_algorithm.json",
+    "outputs/phase9_1/final_reporting_summary.json",
+    "outputs/phase13_0a/conflict_register.csv"
+  ]
+}
