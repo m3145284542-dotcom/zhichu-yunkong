@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "phase": "13.2",
+  "status": "PASS",
+  "validation_scope": "metadata, evidence traceability, Git ancestry, and immutable artifact hashes only",
+  "evaluated_starting_head": "d36fcd18568b98a5980b101e213f714ddf332f12",
+  "frozen_algorithm_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+  "hash_contract": "LF-normalized SHA-256 for text; raw SHA-256 for binary; committed Git blobs arbitrate frozen scopes.",
+  "scientific_operations": {
+    "model_training": "NOT_RUN",
+    "experiment_rerun": "NOT_RUN",
+    "new_statistical_test": "NOT_RUN",
+    "figure_regeneration": "NOT_RUN",
+    "ppt_creation": "NOT_RUN"
+  },
+  "checks": {
+    "slide_schema": {
+      "status": "PASS",
+      "errors": []
+    },
+    "slide_ids_unique": {
+      "status": "PASS",
+      "slide_count": 23,
+      "duplicates": []
+    },
+    "main_deck_order_deterministic": {
+      "status": "PASS",
+      "main_count": 12,
+      "appendix_count": 11,
+      "main_order": [
+        "SB-M01",
+        "SB-M02",
+        "SB-M03",
+        "SB-M04",
+        "SB-M05",
+        "SB-M06",
+        "SB-M07",
+        "SB-M08",
+        "SB-M09",
+        "SB-M10",
+        "SB-M11",
+        "SB-M12"
+      ],
+      "appendix_order": [
+        "SB-A01",
+        "SB-A02",
+        "SB-A03",
+        "SB-A04",
+        "SB-A05",
+        "SB-A06",
+        "SB-A07",
+        "SB-A08",
+        "SB-A09",
+        "SB-A10",
+        "SB-A11"
+      ]
+    },
+    "one_slide_one_takeaway": {
+      "status": "PASS",
+      "main_slides_checked": 12,
+      "failures": []
+    },
+    "approved_main_claims_only": {
+      "status": "PASS",
+      "unsupported_main_deck_claim_count": 0,
+      "rejected_claims_used_count": 0,
+      "unsupported": [],
+      "rejected_used": []
+    },
+    "must_not_claim_populated": {
+      "status": "PASS",
+      "main_slides_checked": 12,
+      "failures": []
+    },
+    "referenced_assets_exist": {
+      "status": "PASS",
+      "referenced_path_count": 12,
+      "missing_paths": [],
+      "unknown_phase13_1_asset_ids": []
+    },
+    "phase13_1_asset_allocation": {
+      "status": "PASS",
+      "manifest_asset_count": 8,
+      "mapped_asset_count": 8,
+      "missing_allocations": [],
+      "duplicate_allocations": [],
+      "missing_paths": [],
+      "modification_rule_failures": []
+    },
+    "claim_map_coverage": {
+      "status": "PASS",
+      "approved_claim_count": 21,
+      "mapped_claim_count": 21,
+      "missing": [],
+      "extra": [],
+      "duplicates": []
+    },
+    "evidence_traceability": {
+      "status": "PASS",
+      "fact_count": 50,
+      "traceability_row_count": 50,
+      "duplicate_keys": [],
+      "missing_fact_rows": [],
+      "orphan_trace_rows": [],
+      "errors": [],
+      "untraceable_main_deck_numbers": 0
+    },
+    "frozen_artifact_integrity": {
+      "status": "PASS",
+      "scopes": {
+        "phase7_8_9_9_1": {
+          "label": "Phase 7/8/9/9.1 canonical artifacts",
+          "registered": 76,
+          "pass_count": 76,
+          "missing_count": 0,
+          "lf_normalized_drift_count": 0,
+          "newline_only_checkout_difference_count": 56,
+          "missing": [],
+          "drift": [],
+          "status": "PASS"
+        },
+        "phase13_0a": {
+          "label": "Phase 13.0A registered source artifacts",
+          "registered": 88,
+          "pass_count": 88,
+          "missing_count": 0,
+          "lf_normalized_drift_count": 0,
+          "newline_only_checkout_difference_count": 39,
+          "missing": [],
+          "drift": [],
+          "status": "PASS"
+        },
+        "phase13_0b": {
+          "label": "Phase 13.0B registered presentation-evidence artifacts",
+          "registered": 8,
+          "pass_count": 8,
+          "missing_count": 0,
+          "lf_normalized_drift_count": 0,
+          "newline_only_checkout_difference_count": 0,
+          "missing": [],
+          "drift": [],
+          "status": "PASS"
+        },
+        "phase13_1": {
+          "label": "Phase 13.1 frozen files excluding README progress",
+          "registered": 26,
+          "pass_count": 26,
+          "missing_count": 0,
+          "lf_normalized_drift_count": 0,
+          "newline_only_checkout_difference_count": 0,
+          "missing": [],
+          "drift": [],
+          "status": "PASS"
+        }
+      }
+    },
+    "phase13_1_visual_output_integrity": {
+      "status": "PASS",
+      "scientific": {
+        "label": "Phase 13.1 scientific visual outputs",
+        "registered": 10,
+        "pass_count": 10,
+        "missing_count": 0,
+        "lf_normalized_drift_count": 0,
+        "newline_only_checkout_difference_count": 0,
+        "missing": [],
+        "drift": [],
+        "status": "PASS"
+      },
+      "all_assets": {
+        "label": "Phase 13.1 all canonical asset outputs",
+        "registered": 17,
+        "pass_count": 17,
+        "missing_count": 0,
+        "lf_normalized_drift_count": 0,
+        "newline_only_checkout_difference_count": 0,
+        "missing": [],
+        "drift": [],
+        "status": "PASS"
+      }
+    },
+    "phase13_1_source_lineage": {
+      "status": "PASS",
+      "registered_unique_sources": 11,
+      "missing": [],
+      "drift": []
+    },
+    "frozen_algorithm_ancestry": {
+      "status": "PASS",
+      "frozen_algorithm_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+      "phase13_2_starting_head": "d36fcd18568b98a5980b101e213f714ddf332f12",
+      "frozen_algorithm_is_ancestor": true,
+      "starting_head_is_ancestor_or_head": true
+    },
+    "no_experiment_or_frozen_output_modified": {
+      "status": "PASS",
+      "changed_upstream_paths": []
+    },
+    "phase13_1_readme_section_preserved": {
+      "status": "PASS"
+    },
+    "no_pptx_created": {
+      "status": "PASS",
+      "pptx_paths": []
+    },
+    "no_test_based_selection_introduced": {
+      "status": "PASS"
+    },
+    "no_new_experiment_or_statistic": {
+      "status": "PASS"
+    },
+    "claim_coverage_summary": {
+      "status": "PASS",
+      "approved_claims_available": 21,
+      "approved_claims_used_total": 21,
+      "main_deck_unique_claims": 11,
+      "appendix_unique_claims": 21,
+      "unused_approved_claims": [],
+      "unsupported_main_deck_claims": 0
+    }
+  },
+  "errors": []
+}

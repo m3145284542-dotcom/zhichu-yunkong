@@ -175,3 +175,13 @@ Reproduction and fail-closed validation:
 .\.venv\Scripts\python.exe scripts\build_phase13_1_visual_assets.py
 .\.venv\Scripts\python.exe scripts\validate_phase13_1_visual_assets.py
 ```
+
+## Phase 13.2 — Competition Presentation Storyboard & Slide Architecture
+
+Phase 13.2 is complete: the competition-defense storyboard and main/appendix slide architecture are frozen in `outputs/phase13_2/slide_architecture.json`, with claim, evidence, and visual-asset traceability plus the audit report in `reports/phase13_2_storyboard.md`. No PPT was produced. The next allowed phase is Phase 13.3 — Competition Presentation Production.
+
+Validation:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\validate_phase13_2.py
+```

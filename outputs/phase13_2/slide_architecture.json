@@ -1,0 +1,716 @@
+{
+  "schema_version": 1,
+  "phase": "13.2",
+  "status": "canonical",
+  "artifact_role": "canonical storyboard and slide architecture for the next presentation-production phase",
+  "producer": "Phase 13.2 controlled storyboard authoring; validated by scripts/validate_phase13_2.py",
+  "created_on": "2026-09-03",
+  "source_contract": {
+    "frozen_algorithm_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+    "phase13_0a_manifest": "outputs/phase13_0a/frozen_presentation_data_manifest.json",
+    "phase13_0b_claim_registry": "outputs/phase13_0b/final_presentation_claims.json",
+    "phase13_0b_metric_registry": "outputs/phase13_0b/presentation_metric_shortlist.csv",
+    "phase13_1_asset_manifest": "outputs/phase13_1/manifests/visual_asset_manifest.json"
+  },
+  "acceptance_reason": "The deterministic 12-page main narrative and 11-page appendix architecture pass claim, number, asset, lineage, frozen-hash, Validation/Test-boundary, and no-PPT checks with zero unsupported main-deck claims.",
+  "storyboard_id_note": "SB-* identifiers are organizational only and are not new scientific claims.",
+  "official_project_title": {
+    "status": "UNKNOWN",
+    "value": "",
+    "instruction": "Do not replace the official competition project title until it is supplied and verified."
+  },
+  "presentation_working_title": "DOEF：让负荷预测服务于储能削峰决策",
+  "suggested_subtitle": "面向储能决策的集成负荷预测方法",
+  "one_sentence_positioning": "面向建筑储能削峰，DOEF 用 Validation 下游决策 regret 冻结融合规则，让预测模型的评价与最终工程决策直接对齐。",
+  "verified_defense_format": {
+    "presentation_minutes": 8,
+    "qa_minutes": 5,
+    "source": "outputs/phase11/phase11_verdict.json",
+    "page_count_rule": "12 main-deck pages including the title slide; no Thank You or Q&A page is counted or specified."
+  },
+  "selection_protocol": {
+    "algorithm_selection_source": "Validation only",
+    "test_role": "evaluation only",
+    "test_based_selection_introduced": false,
+    "new_experiment_or_statistic_introduced": false
+  },
+  "main_deck_order": [
+    "SB-M01", "SB-M02", "SB-M03", "SB-M04", "SB-M05", "SB-M06",
+    "SB-M07", "SB-M08", "SB-M09", "SB-M10", "SB-M11", "SB-M12"
+  ],
+  "appendix_order": [
+    "SB-A01", "SB-A02", "SB-A03", "SB-A04", "SB-A05", "SB-A06",
+    "SB-A07", "SB-A08", "SB-A09", "SB-A10", "SB-A11"
+  ],
+  "slides": [
+    {
+      "slide_id": "SB-M01",
+      "section": "Opening",
+      "slide_role": "Title / problem positioning",
+      "core_question": "What engineering problem does this project solve, and what is the method's real focus?",
+      "single_takeaway": "DOEF treats load forecasting as an input to battery peak-shaving decisions, not as the endpoint.",
+      "headline": "DOEF：让负荷预测服务于储能削峰决策",
+      "supporting_copy": [
+        "Suggested subtitle: 面向储能决策的集成负荷预测方法。",
+        "Working title only; retain the verified official project title when it becomes available."
+      ],
+      "claim_ids": ["CORE-01", "CORE-05"],
+      "evidence_ids": ["CLM-0021", "CLM-2532"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M01-F01", "display": "24-hour-ahead forecast feeds battery peak-shaving dispatch"}
+      ],
+      "speaker_intent": "Position the entry as an AI-plus-energy decision problem and prevent LightGBM from becoming the perceived innovation.",
+      "transition_from": "Opening of the defense.",
+      "transition_to": "If prediction serves a decision, the first question is whether the usual prediction metric identifies the best decision.",
+      "main_or_appendix": "MAIN",
+      "speaking_priority": "important",
+      "must_not_claim": [
+        "This is the verified official competition project title.",
+        "LightGBM itself is the project innovation.",
+        "The project proves cost, carbon, or energy savings."
+      ],
+      "design_notes_for_next_phase": [
+        "Minimal title slide; no scientific chart.",
+        "Leave team/date fields unresolved until verified; do not invent identity details."
+      ]
+    },
+    {
+      "slide_id": "SB-M02",
+      "section": "Tension",
+      "slide_role": "Empirical hook",
+      "core_question": "Why is forecast accuracy alone insufficient for this project?",
+      "single_takeaway": "In the frozen eight-building aggregate, slightly lower forecast RMSE did not correspond to lower battery decision regret.",
+      "headline": "更低的预测 RMSE，并未带来更低的储能决策 regret",
+      "supporting_copy": [
+        "XGBoost and LightGBM reverse order between normalized RMSE and normalized decision regret.",
+        "This is a project-scoped counterexample, not a claim that forecast accuracy is irrelevant."
+      ],
+      "claim_ids": ["CORE-02"],
+      "evidence_ids": ["CLM-2482", "CLM-2472", "CLM-2484", "CLM-2474"],
+      "visual_asset_ids": ["SCI-01-forecast-decision-mismatch"],
+      "visual_asset_paths": ["outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M02-F01", "display": "XGBoost normalized RMSE: 0.216751"},
+        {"traceability_key": "M02-F02", "display": "LightGBM normalized RMSE: 0.216942"},
+        {"traceability_key": "M02-F03", "display": "XGBoost normalized decision regret: 0.117534"},
+        {"traceability_key": "M02-F04", "display": "LightGBM normalized decision regret: 0.116127"}
+      ],
+      "speaker_intent": "Create the central tension with one frozen comparison before introducing the method.",
+      "transition_from": "The project is judged by the decision it supports.",
+      "transition_to": "To understand the reversal, show where forecasting sits in the engineering chain.",
+      "main_or_appendix": "MAIN",
+      "speaking_priority": "essential",
+      "must_not_claim": [
+        "Forecast accuracy is irrelevant.",
+        "All more accurate forecasts lead to worse decisions.",
+        "The small directional difference proves a universal causal mechanism."
+      ],
+      "design_notes_for_next_phase": [
+        "Use SCI-01 unchanged as the dominant visual.",
+        "Do not add a second chart or full benchmark table."
+      ]
+    },
+    {
+      "slide_id": "SB-M03",
+      "section": "Problem",
+      "slide_role": "Real engineering pipeline",
+      "core_question": "How does a forecast affect the final peak-shaving outcome?",
+      "single_takeaway": "Prediction is an intermediate signal: it shapes a battery schedule that is ultimately evaluated on realized load.",
+      "headline": "预测只是中间环节，调度结果才是工程终点",
+      "supporting_copy": [
+        "Historical load → day-ahead forecast → constrained battery dispatch → realized post-storage peak.",
+        "Every forecast method is compared under the same frozen battery constraints."
+      ],
+      "claim_ids": ["CORE-01", "SUP-06"],
+      "evidence_ids": ["CLM-0021", "CLM-2548"],
+      "visual_asset_ids": ["CON-01-prediction-decision-bridge"],
+      "visual_asset_paths": ["outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M03-F01", "display": "24-hour-ahead forecast"},
+        {"traceability_key": "M03-F02", "display": "Same frozen battery constraints for all forecast methods"}
+      ],
+      "speaker_intent": "Give mixed AI and engineering judges a shared mental model without opening the optimizer details.",
+      "transition_from": "The metric reversal exists because forecasts are consumed by a downstream process.",
+      "transition_to": "That process exposes the limitation of selecting models only by forecast error.",
+      "main_or_appendix": "MAIN",
+      "speaking_priority": "important",
+      "must_not_claim": [
+        "The conceptual diagram is new experimental evidence.",
+        "The battery controller is already deployed in real buildings.",
+        "Peak shaving equals energy, cost, or carbon savings."
+      ],
+      "design_notes_for_next_phase": [
+        "Use CON-01 as conceptual/explanatory, visibly distinct from scientific result figures.",
+        "Keep optimizer constraints verbal; details belong in appendix."
+      ]
+    },
+    {
+      "slide_id": "SB-M04",
+      "section": "Tension to solution",
+      "slide_role": "Forecast-only selection limitation and DOEF introduction",
+      "core_question": "What changes when selection follows the downstream objective?",
+      "single_takeaway": "DOEF keeps forecasting components fixed but changes the selection criterion from forecast error alone to Validation battery regret.",
+      "headline": "模型不只要预测得准，还要在 Validation 上支持更好的储能决策",
+      "supporting_copy": [
+        "Traditional: forecast → forecast metric → select.",
+        "DOEF: forecast → dispatch → decision regret → freeze ensemble weight."
+      ],
+      "claim_ids": ["CORE-02", "CORE-03"],
+      "evidence_ids": ["CLM-2482", "CLM-2526", "CLM-2531", "CLM-2532"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M04-F01", "display": "Selection objective changes; the frozen component forecasts do not"}
+      ],
+      "speaker_intent": "Introduce the methodological response as a selection-framework change rather than a new base learner.",
+      "transition_from": "Forecast error and decision regret answer different questions.",
+      "transition_to": "Now show the complete frozen DOEF process and its information boundaries.",
+      "main_or_appendix": "MAIN",
+      "speaking_priority": "important",
+      "must_not_claim": [
+        "DOEF jointly trains the predictor and optimizer.",
+        "DOEF is a new LightGBM model.",
+        "Decision regret replaces all forecast-quality checks."
+      ],
+      "design_notes_for_next_phase": [
+        "Use a simple two-row native process comparison; no new data graphic.",
+        "Make the changed selection criterion the only emphasized difference."
+      ]
+    },
+    {
+      "slide_id": "SB-M05",
+      "section": "Solution",
+      "slide_role": "DOEF method overview",
+      "core_question": "What exactly is the frozen DOEF algorithm and where are choices made?",
+      "single_takeaway": "DOEF freezes each building's DayWeek–LightGBM weight on Validation decision regret, then evaluates the unchanged pipeline on Test.",
+      "headline": "DOEF 在 Validation 上按决策 regret 冻结权重，再进入 Test",
+      "supporting_copy": [
+        "Causal DayWeek and LightGBM forecasts → candidate weights → Validation dispatch evaluation → frozen per-building weight → Test evaluation.",
+        "Test has no feedback path to model, weight, tie-break, or battery configuration."
+      ],
+      "claim_ids": ["CORE-05", "SUP-02", "SUP-03", "SUP-06"],
+      "evidence_ids": ["CLM-0021", "CLM-2526", "CLM-2532", "CLM-2548"],
+      "visual_asset_ids": ["ARCH-01-doef-architecture-master"],
+      "visual_asset_paths": ["outputs/phase13_1/architecture/doef_architecture_master.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M05-F01", "display": "DOEF formula: w_b·LightGBM + (1−w_b)·DayWeek"},
+        {"traceability_key": "M05-F02", "display": "Validation-only selection; Test evaluation only"}
+      ],
+      "speaker_intent": "Explain the algorithm once, visually, with the selection/evaluation boundary impossible to miss.",
+      "transition_from": "The selection criterion changes from forecast-only to downstream decision value.",
+      "transition_to": "With the method fixed, the next question is whether the frozen Test results improve the relevant outcomes.",
+      "main_or_appendix": "MAIN",
+      "speaking_priority": "essential",
+      "must_not_claim": [
+        "The method is end-to-end differentiable, bilevel, online, or reinforcement learning.",
+        "Oracle is deployable.",
+        "Test selected or adjusted the weights."
+      ],
+      "design_notes_for_next_phase": [
+        "Use ARCH-01 unchanged as the dominant method visual.",
+        "Do not add feature lists, parameter tables, or optimizer equations."
+      ]
+    },
+    {
+      "slide_id": "SB-M06",
+      "section": "Evidence",
+      "slide_role": "Main result",
+      "core_question": "Did the frozen DOEF pipeline improve the forecast and downstream decision aggregates?",
+      "single_takeaway": "Against LightGBM on the frozen eight-building Test aggregate, DOEF improved both normalized MAE and normalized decision regret.",
+      "headline": "DOEF 同时降低预测误差与储能决策 regret",
+      "supporting_copy": [
+        "Report the aggregate improvements beside the building win/tie/loss result.",
+        "Keep the disclosed negative peak-reduction building visible; do not convert regret into money."
+      ],
+      "claim_ids": ["CORE-06", "CORE-07", "CORE-08"],
+      "evidence_ids": ["CLM-2547", "CLM-2546", "CLM-2550", "CLM-2549", "CLM-2548", "CLM-2551", "CLM-2552", "CLM-2553", "CLM-2554", "CLM-2508"],
+      "visual_asset_ids": ["SCI-02-doef-main-results"],
+      "visual_asset_paths": ["outputs/phase13_1/figures/sci_02_doef_main_results.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M06-F01", "display": "Normalized MAE relative improvement vs LightGBM: 6.3585%"},
+        {"traceability_key": "M06-F02", "display": "Normalized decision-regret relative improvement vs LightGBM: 3.6147%"},
+        {"traceability_key": "M06-F03", "display": "Decision-regret building result: 6 wins"},
+        {"traceability_key": "M06-F04", "display": "Decision-regret building result: 2 ties"},
+        {"traceability_key": "M06-F05", "display": "Decision-regret building result: 0 losses"},
+        {"traceability_key": "M06-F06", "display": "Minimum building peak reduction retained: -1.0170%"}
+      ],
+      "speaker_intent": "Land the strongest approved result without turning the slide into a metrics table.",
+      "transition_from": "The algorithm and evaluation boundary are now fixed.",
+      "transition_to": "The result makes sense only if the audience understands what the two metrics do—and do not—measure.",
+      "main_or_appendix": "MAIN",
+      "speaking_priority": "essential",
+      "must_not_claim": [
+        "DOEF is universally superior or state of the art.",
+        "The result covers unseen buildings or more than one fixed Test month per building.",
+        "Decision regret is monetary regret.",
+        "Every building has positive peak reduction."
+      ],
+      "design_notes_for_next_phase": [
+        "Use SCI-02 unchanged; no full benchmark table.",
+        "The negative minimum is a caveat, not a competing headline."
+      ]
+    },
+    {
+      "slide_id": "SB-M07",
+      "section": "Interpretation",
+      "slide_role": "Metric meaning without causal overreach",
+      "core_question": "Why can forecast and decision metrics rank methods differently?",
+      "single_takeaway": "RMSE summarizes forecast error magnitude, while decision regret evaluates the realized peak after that forecast drives constrained dispatch.",
+      "headline": "RMSE 衡量预测误差；regret 衡量误差经过调度后的工程后果",
+      "supporting_copy": [
+        "The metrics answer different questions and therefore need not induce the same ranking.",
+        "The frozen evidence shows an observed mismatch; it does not prove a universal error-location mechanism."
+      ],
+      "claim_ids": ["CORE-02", "SUP-06"],
+      "evidence_ids": ["CLM-2482", "CLM-2472", "CLM-2484", "CLM-2474", "CLM-2548"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M07-F01", "display": "Normalized decision regret is realized post-dispatch peak regret versus a non-deployable Oracle"}
+      ],
+      "speaker_intent": "Resolve the hook conceptually while staying within observed and metric-definition evidence.",
+      "transition_from": "DOEF improved both aggregates, but the original mismatch still needs interpretation.",
+      "transition_to": "Next, test whether the decision result is confined to one building or persists across the fixed benchmark."
+      ,"main_or_appendix": "MAIN",
+      "speaking_priority": "compressible",
+      "must_not_claim": [
+        "Where an error occurs has been causally proven to determine regret in all cases.",
+        "Forecast magnitude metrics have no value.",
+        "The optimizer eliminates forecast error."
+      ],
+      "design_notes_for_next_phase": [
+        "Use a text-led metric-to-question comparison, not another result chart.",
+        "This slide may be compressed verbally if time is tight, but its distinction must remain."
+      ]
+    },
+    {
+      "slide_id": "SB-M08",
+      "section": "Evidence",
+      "slide_role": "Multi-building robustness",
+      "core_question": "Is the decision result limited to a single favorable building?",
+      "single_takeaway": "Across all eight pre-selected buildings, DOEF lowered normalized decision regret for six and tied LightGBM for two.",
+      "headline": "全部八栋固定建筑均被展示：六胜、两平、零负",
+      "supporting_copy": [
+        "Buildings were fixed through frozen eligibility rules and Train-only morphology before Validation/Test performance was evaluated.",
+        "This supports multi-building robustness within the fixed scope, not unseen-building transfer."
+      ],
+      "claim_ids": ["CORE-04", "CORE-07"],
+      "evidence_ids": ["CLM-0003", "CLM-0004", "CLM-0008", "CLM-2552", "CLM-2553", "CLM-2554"],
+      "visual_asset_ids": ["SCI-03-multibuilding-regret"],
+      "visual_asset_paths": ["outputs/phase13_1/figures/sci_03_multibuilding_regret.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M08-F01", "display": "Fixed evaluation scope: 8 buildings"},
+        {"traceability_key": "M08-F02", "display": "DOEF vs LightGBM normalized decision regret: 6 wins"},
+        {"traceability_key": "M08-F03", "display": "DOEF vs LightGBM normalized decision regret: 2 ties"},
+        {"traceability_key": "M08-F04", "display": "DOEF vs LightGBM normalized decision regret: 0 losses"}
+      ],
+      "speaker_intent": "Answer the single-building and cherry-picking objections by showing every frozen building in source order.",
+      "transition_from": "Different metrics can disagree, so decision evidence must be inspected building by building.",
+      "transition_to": "The cross-building result is credible only if the ensemble rule was frozen without Test feedback."
+      ,"main_or_appendix": "MAIN",
+      "speaking_priority": "essential",
+      "must_not_claim": [
+        "The method generalizes to unseen buildings or all building types.",
+        "The eight buildings were selected because DOEF performed well on Test.",
+        "DOEF beats every possible comparator on every metric."
+      ],
+      "design_notes_for_next_phase": [
+        "Use SCI-03 unchanged and retain all buildings in frozen order.",
+        "Keep selection protocol as a short credibility annotation, not a dataset detour."
+      ]
+    },
+    {
+      "slide_id": "SB-M09",
+      "section": "Credibility",
+      "slide_role": "Validation weight selection / no Test tuning",
+      "core_question": "Were ensemble weights chosen after seeing Test outcomes?",
+      "single_takeaway": "Candidate weights were scored and frozen on Validation; Test only evaluated the already-frozen rule.",
+      "headline": "权重在 Validation 冻结，Test 不参与选择",
+      "supporting_copy": [
+        "The predeclared grid is evaluated under the downstream objective before Test.",
+        "Forecast-error and decision-regret optima differ for most fixed buildings."
+      ],
+      "claim_ids": ["CORE-03", "SUP-03"],
+      "evidence_ids": ["CLM-2526", "CLM-2531", "CLM-2532"],
+      "visual_asset_ids": ["SCI-04-validation-weight-selection"],
+      "visual_asset_paths": ["outputs/phase13_1/figures/sci_04_validation_weight_selection.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M09-F01", "display": "Predeclared candidate weights: 11"},
+        {"traceability_key": "M09-F02", "display": "Forecast- and decision-selected weights differ for 6 of 8 buildings"}
+      ],
+      "speaker_intent": "Make the anti-leakage protocol memorable and pre-empt the strongest selection-bias objection.",
+      "transition_from": "All buildings are shown, but that alone does not rule out Test-driven weight choice.",
+      "transition_to": "Once the rule is frozen, the same structure defines the repeatable forecast-to-dispatch workflow."
+      ,"main_or_appendix": "MAIN",
+      "speaking_priority": "essential",
+      "must_not_claim": [
+        "The Test set was pristine, never viewed, or used for weight optimization.",
+        "Different weights prove universal downstream superiority.",
+        "The Joey example weight applies to every building."
+      ],
+      "design_notes_for_next_phase": [
+        "Use SCI-04 unchanged; add only an external NO TEST-TIME TUNING callout.",
+        "Do not modify values, ordering, or axes."
+      ]
+    },
+    {
+      "slide_id": "SB-M10",
+      "section": "Engineering value",
+      "slide_role": "Frozen workflow / deployment boundary",
+      "core_question": "How would the frozen method run as a next-day forecast-to-dispatch workflow?",
+      "single_takeaway": "The frozen pipeline specifies a repeatable next-day forecast-to-dispatch process, but the evidence is offline evaluation rather than field deployment.",
+      "headline": "冻结流程明确了次日预测如何生成储能调度，但尚非现场部署",
+      "supporting_copy": [
+        "Historically available load and calendar inputs → frozen forecast rule → frozen battery optimizer → dispatch schedule.",
+        "Algorithm, per-building ensemble weights, battery configuration, and evaluation rules remain frozen."
+      ],
+      "claim_ids": ["CORE-05", "SUP-02", "SUP-06"],
+      "evidence_ids": ["CLM-0021", "CLM-2532", "CLM-2548"],
+      "visual_asset_ids": ["ARCH-01-doef-architecture-master"],
+      "visual_asset_paths": ["outputs/phase13_1/architecture/doef_architecture_master_transparent.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M10-F01", "display": "24-hour-ahead workflow using historically available load and calendar features"},
+        {"traceability_key": "M10-F02", "display": "Algorithm, ensemble rule, and battery constraints are frozen"}
+      ],
+      "speaker_intent": "Translate the evaluated system into an engineering operating sequence while explicitly stopping short of deployment claims.",
+      "transition_from": "Validation/Test isolation makes the rule fixed and reproducible.",
+      "transition_to": "The contribution can now be stated precisely without mistaking a base learner or simulated workflow for novelty."
+      ,"main_or_appendix": "MAIN",
+      "speaking_priority": "important",
+      "must_not_claim": [
+        "The system has been deployed or field-validated.",
+        "Industrial real-time readiness has been proven.",
+        "The workflow uses future weather, future target values, or a deployable Oracle."
+      ],
+      "design_notes_for_next_phase": [
+        "Reuse ARCH-01 only as a process-detail view; preserve scientific and split semantics.",
+        "External page-level callouts may distinguish FROZEN LOGIC from NOT FIELD DEPLOYED."
+      ]
+    },
+    {
+      "slide_id": "SB-M11",
+      "section": "Contribution",
+      "slide_role": "Evidence-backed innovation",
+      "core_question": "What is actually innovative in this project?",
+      "single_takeaway": "The contribution is the auditable decision-oriented selection and forecast-to-storage evaluation framework—not LightGBM or a simple weighted average by itself.",
+      "headline": "创新不在基础预测器，而在把模型选择对齐储能决策",
+      "supporting_copy": [
+        "Decision-oriented model evaluation and selection.",
+        "Validation-selected ensemble frozen before Test.",
+        "Auditable forecast-to-dispatch evaluation across fixed heterogeneous buildings."
+      ],
+      "claim_ids": ["CORE-02", "CORE-03", "CORE-04", "CORE-05", "SUP-03", "SUP-06"],
+      "evidence_ids": ["CLM-2482", "CLM-2472", "CLM-2484", "CLM-2474", "CLM-2526", "CLM-2532", "CLM-0003", "CLM-0004", "CLM-0008", "CLM-2548"],
+      "visual_asset_ids": ["CON-02-contribution-overview"],
+      "visual_asset_paths": ["outputs/phase13_1/presentation_assets/con_02_contribution_overview.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M11-F01", "display": "Three evidence-backed contribution statements mapped to existing approved claims"}
+      ],
+      "speaker_intent": "Give judges a concise, defensible innovation statement and remove unsupported novelty language.",
+      "transition_from": "The workflow shows what is frozen and operationally meaningful.",
+      "transition_to": "Close by resolving the opening tension with the value that the frozen evidence actually supports."
+      ,"main_or_appendix": "MAIN",
+      "speaking_priority": "important",
+      "must_not_claim": [
+        "LightGBM or DayWeek is independently novel.",
+        "DOEF is first, world-first, revolutionary, state of the art, or universally superior.",
+        "The pipeline is end-to-end differentiable or already deployed."
+      ],
+      "design_notes_for_next_phase": [
+        "Use CON-02 as a contribution summary, explicitly labeled conceptual/explanatory.",
+        "Show three contributions under one unifying claim; do not turn them into three independent slide messages."
+      ]
+    },
+    {
+      "slide_id": "SB-M12",
+      "section": "Close",
+      "slide_role": "Conclusion and value",
+      "core_question": "What should the judges remember?",
+      "single_takeaway": "For battery peak shaving, forecast models should be judged not only by prediction error but also by the engineering decisions they support.",
+      "headline": "让预测评价与最终储能决策对齐",
+      "supporting_copy": [
+        "The frozen evidence distinguishes prediction accuracy from decision quality.",
+        "DOEF links Validation-only selection to downstream battery regret and retains the full fixed-building evidence.",
+        "Its value is an auditable AI-to-electrical-engineering evaluation loop within the tested scope."
+      ],
+      "claim_ids": ["CORE-01", "CORE-02", "CORE-03", "CORE-04", "CORE-05", "CORE-06", "CORE-07"],
+      "evidence_ids": ["CLM-0021", "CLM-2482", "CLM-2472", "CLM-2484", "CLM-2474", "CLM-2526", "CLM-2532", "CLM-0008", "CLM-2547", "CLM-2546", "CLM-2550", "CLM-2549", "CLM-2548", "CLM-2551", "CLM-2552", "CLM-2553", "CLM-2554"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [
+        {"traceability_key": "M12-F01", "display": "Conclusion restates approved evidence; it introduces no new scientific claim"}
+      ],
+      "speaker_intent": "Resolve the opening thesis in one sentence and finish on engineering relevance rather than a generic summary.",
+      "transition_from": "The innovation is now precisely bounded.",
+      "transition_to": "End of the eight-minute main presentation; judge questions are handled through the appendix."
+      ,"main_or_appendix": "MAIN",
+      "speaking_priority": "essential",
+      "must_not_claim": [
+        "Any new result not already shown and traced in the deck.",
+        "Universal building or temporal generalization.",
+        "Verified economic, carbon, energy-saving, or field-deployment value."
+      ],
+      "design_notes_for_next_phase": [
+        "Text-led close; no new chart and no first appearance of a metric.",
+        "A separate Thank You/Q&A slide is not frozen in this architecture."
+      ]
+    },
+    {
+      "slide_id": "SB-A01",
+      "section": "Appendix — scope",
+      "slide_role": "Dataset and Train-only building selection detail",
+      "core_question": "How were the eight buildings selected?",
+      "single_takeaway": "The fixed building set came from frozen quality screening followed by Train-only morphology selection.",
+      "headline": "建筑范围在结果评估前冻结",
+      "supporting_copy": ["Show eligibility counts, morphology criteria, and the complete selected-building list."],
+      "claim_ids": ["CORE-04", "SUP-01"],
+      "evidence_ids": ["CLM-0002", "CLM-0003", "CLM-0004", "CLM-0008"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": ["outputs/phase7/figures/01_morphology_map.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "A01-F01", "display": "Project selection table: 1,578 building series"},
+        {"traceability_key": "A01-F02", "display": "Office candidates: 296"},
+        {"traceability_key": "A01-F03", "display": "Quality-pass office candidates: 82"},
+        {"traceability_key": "A01-F04", "display": "Final fixed buildings: 8"}
+      ],
+      "speaker_intent": "Answer scope and cherry-picking questions with the full frozen selection protocol.",
+      "transition_from": "Opened only during Q&A.",
+      "transition_to": "Chronological split and feature availability if leakage questions continue.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["The eight buildings represent all buildings or unseen-building transfer."],
+      "design_notes_for_next_phase": ["Use the frozen Phase 7 morphology visual; legibility must be checked at slide size."]
+    },
+    {
+      "slide_id": "SB-A02",
+      "section": "Appendix — protocol",
+      "slide_role": "Chronological split and causal features",
+      "core_question": "What information is available at prediction time, and what role does Test play?",
+      "single_takeaway": "Causal load-history and calendar features support a chronological Validation-selection/Test-evaluation protocol.",
+      "headline": "因果特征与时间切分共同约束信息边界",
+      "supporting_copy": ["Detail shifted lags, excluded weather/targets, frozen windows, and prior Test visibility caveat."],
+      "claim_ids": ["SUP-02", "SUP-03", "BACK-03"],
+      "evidence_ids": ["CLM-0021", "CLM-2526", "CLM-0008"],
+      "visual_asset_ids": ["ARCH-01-doef-architecture-master"],
+      "visual_asset_paths": ["outputs/phase13_1/architecture/doef_architecture_master.png"],
+      "primary_metric_or_fact": [{"traceability_key": "A02-F01", "display": "24-hour horizon; Validation selects; Test evaluates"}],
+      "speaker_intent": "Provide the detailed leakage answer without slowing the main deck.",
+      "transition_from": "Follows a selection-scope question.",
+      "transition_to": "Baseline and component definitions if requested.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["The Test set was never viewed or is a pristine blind test."],
+      "design_notes_for_next_phase": ["Reuse the frozen architecture; emphasize chronology with external callouts only."]
+    },
+    {
+      "slide_id": "SB-A03",
+      "section": "Appendix — models",
+      "slide_role": "Baseline and component definitions",
+      "core_question": "Which forecast methods and components were compared?",
+      "single_takeaway": "DOEF combines frozen DayWeek and per-building LightGBM components within a broader causal benchmark.",
+      "headline": "基础模型是对照与组件，不是被包装的创新点",
+      "supporting_copy": ["Summarize Day, Week, DayWeek, LightGBM, XGBoost, CatBoost, and the rejected peak-aware support experiment."],
+      "claim_ids": ["CORE-02", "CORE-05", "SUP-08"],
+      "evidence_ids": ["CLM-2482", "CLM-2472", "CLM-2484", "CLM-2474", "CLM-0061", "CLM-0052"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [{"traceability_key": "A03-F01", "display": "DOEF components: DayWeek and per-building LightGBM"}],
+      "speaker_intent": "Answer model-comparison questions while preserving the contribution boundary.",
+      "transition_from": "Opened after an algorithm-component question.",
+      "transition_to": "Battery and optimizer detail if the decision layer is challenged.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["LightGBM, DayWeek, or ordinary weighted averaging is independently novel."],
+      "design_notes_for_next_phase": ["Prefer a compact definition table; do not reproduce training parameter grids."]
+    },
+    {
+      "slide_id": "SB-A04",
+      "section": "Appendix — decision model",
+      "slide_role": "Battery constraints, optimizer, and units",
+      "core_question": "What physical and optimization constraints define the decision metric?",
+      "single_takeaway": "All forecasts are evaluated under the same frozen capacity, power, efficiency, SOC, daily-reset, and unit semantics.",
+      "headline": "同一冻结电池约束保证方法间可比",
+      "supporting_copy": ["List the frozen optimizer constraints and distinguish interval-energy kWh, average power kW, capacity, and SOC."],
+      "claim_ids": ["SUP-06", "BACK-02"],
+      "evidence_ids": ["CLM-2548", "CLM-0021"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [{"traceability_key": "A04-F01", "display": "One-hour interval: energy readings in kWh; dispatch power in kW; capacity and SOC in kWh"}],
+      "speaker_intent": "Answer physical-realism and unit questions without claiming field validation.",
+      "transition_from": "Opened after a battery/optimizer question.",
+      "transition_to": "Full metric tables if the judge asks for numerical comparisons.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["The parameter set is field-validated for every building or proves commercial realism."],
+      "design_notes_for_next_phase": ["Use a constraint table and unit legend; no new optimizer diagram is required."]
+    },
+    {
+      "slide_id": "SB-A05",
+      "section": "Appendix — results",
+      "slide_role": "Full forecast metrics",
+      "core_question": "What are the full frozen forecast results?",
+      "single_takeaway": "Full forecast metrics provide context, while the main deck retains only the decision-relevant comparison.",
+      "headline": "完整预测指标用于核查，不替代下游决策评价",
+      "supporting_copy": ["Show the frozen final benchmark with explicit model, scope, split, and aggregation labels."],
+      "claim_ids": ["CORE-02", "CORE-06"],
+      "evidence_ids": ["CLM-2482", "CLM-2472", "CLM-2547", "CLM-2546", "CLM-2550"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [{"traceability_key": "A05-F01", "display": "Canonical source: outputs/phase9/final_benchmark.csv"}],
+      "speaker_intent": "Provide auditability without spending main-deck time on a dense table.",
+      "transition_from": "Opened after a metric-detail question.",
+      "transition_to": "Full decision metrics and aggregation caveats.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["One forecast metric fully ranks downstream value or DOEF is universally best."],
+      "design_notes_for_next_phase": ["Use the frozen table values; do not recalculate or re-rank."]
+    },
+    {
+      "slide_id": "SB-A06",
+      "section": "Appendix — results",
+      "slide_role": "Full decision metrics and aggregation caveats",
+      "core_question": "What are the full decision results and their aggregation limits?",
+      "single_takeaway": "Decision conclusions require method, building, split, metric, and aggregation labels; mean and median can differ sharply.",
+      "headline": "决策指标必须连同范围与聚合口径一起解释",
+      "supporting_copy": ["Include per-method/per-building metrics, peak-reduction mean/median, and the retained negative cases."],
+      "claim_ids": ["CORE-07", "CORE-08", "SUP-07"],
+      "evidence_ids": ["CLM-2549", "CLM-2548", "CLM-2551", "CLM-2552", "CLM-2553", "CLM-2554", "CLM-2506", "CLM-2508", "CLM-2496", "CLM-2497"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": ["outputs/phase9/figures/04_peak_quality_vs_decision.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "A06-F01", "display": "CatBoost mean peak reduction: -24.4824%"},
+        {"traceability_key": "A06-F02", "display": "CatBoost median peak reduction: 4.8209%"}
+      ],
+      "speaker_intent": "Demonstrate honest aggregation and answer claims that average results conceal failures.",
+      "transition_from": "Follows full forecast metrics.",
+      "transition_to": "Representative dispatch trace if the judge asks how schedules differ in time.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["Peak reduction is one universal scalar or every building improves."],
+      "design_notes_for_next_phase": ["Retain mean and median together; never isolate the favorable statistic."]
+    },
+    {
+      "slide_id": "SB-A07",
+      "section": "Appendix — mechanism trace",
+      "slide_role": "Frozen representative dispatch reuse",
+      "core_question": "What does one pre-frozen forecast-to-dispatch trace look like?",
+      "single_takeaway": "A representative frozen Test trace illustrates how alternative forecasts produce realized grid-load schedules.",
+      "headline": "冻结调度轨迹只用于说明流程，不代表普遍表现",
+      "supporting_copy": ["Use the Phase 13.1 frozen reuse exactly as approved; do not infer or extract new values from pixels."],
+      "claim_ids": ["CORE-01", "SUP-06"],
+      "evidence_ids": ["CLM-0021", "CLM-2548"],
+      "visual_asset_ids": ["SCI-05-storage-dispatch-frozen"],
+      "visual_asset_paths": ["outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png"],
+      "primary_metric_or_fact": [{"traceability_key": "A07-F01", "display": "Pre-frozen representative Test trace; no case reselection"}],
+      "speaker_intent": "Answer optimizer-behavior questions with the approved backup trace only.",
+      "transition_from": "Opened when a judge asks for a time-series dispatch example.",
+      "transition_to": "Validation weight details if the question returns to model selection.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["The representative case proves universal dispatch behavior or contributes new numerical evidence."],
+      "design_notes_for_next_phase": ["No crop that removes scientific labels; no redraw, coordinate change, or value extraction."]
+    },
+    {
+      "slide_id": "SB-A08",
+      "section": "Appendix — selection",
+      "slide_role": "Weight grid and per-building selected weights",
+      "core_question": "What candidates were considered, and what weight was frozen for each building?",
+      "single_takeaway": "A fixed candidate grid and deterministic tie-breaks produced per-building Validation-selected weights.",
+      "headline": "逐建筑权重来自预先声明的 Validation 搜索",
+      "supporting_copy": ["Show the complete candidate grid, selected_weights table, and the Joey illustration without generalizing its weight."],
+      "claim_ids": ["CORE-03", "BACK-04"],
+      "evidence_ids": ["CLM-2526", "CLM-2531", "CLM-2532"],
+      "visual_asset_ids": ["SCI-04-validation-weight-selection"],
+      "visual_asset_paths": ["outputs/phase13_1/figures/sci_04_validation_weight_selection.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "A08-F01", "display": "Candidate weights: 11"},
+        {"traceability_key": "A08-F02", "display": "Joey forecast-selected LightGBM weight: 0.6"},
+        {"traceability_key": "A08-F03", "display": "Joey decision-selected LightGBM weight: 0.3"}
+      ],
+      "speaker_intent": "Give the full selection detail needed to rebut Test-tuning concerns.",
+      "transition_from": "Opened after a weight-selection question.",
+      "transition_to": "Uncertainty evidence if asked about robustness of the aggregate."
+      ,"main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["Every building uses w=0.3 or weights were tuned on Test."],
+      "design_notes_for_next_phase": ["Use the frozen scientific figure plus a source-faithful table; no interpolation between grid points."]
+    },
+    {
+      "slide_id": "SB-A09",
+      "section": "Appendix — uncertainty",
+      "slide_role": "Frozen building-level bootstrap",
+      "core_question": "How uncertain is the building-level aggregate difference?",
+      "single_takeaway": "The frozen building-level paired bootstrap interval remains below zero within the eight-building scope.",
+      "headline": "冻结 bootstrap 支持固定八栋建筑范围内的差异",
+      "supporting_copy": ["Report the resampling unit, point estimate, interval, and the eight-building limitation together."],
+      "claim_ids": ["SUP-04"],
+      "evidence_ids": ["CLM-2555", "CLM-2556", "CLM-2557", "CLM-2558", "CLM-2559"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [
+        {"traceability_key": "A09-F01", "display": "Bootstrap resamples: 10,000"},
+        {"traceability_key": "A09-F02", "display": "Point estimate: -0.004198"},
+        {"traceability_key": "A09-F03", "display": "95% interval lower bound: -0.006850"},
+        {"traceability_key": "A09-F04", "display": "95% interval upper bound: -0.001719"}
+      ],
+      "speaker_intent": "Answer uncertainty questions without converting the frozen analysis into a universal significance claim.",
+      "transition_from": "Opened after a robustness/statistics question.",
+      "transition_to": "Prediction-lineage identity if reproducibility is challenged.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["This proves universal statistical superiority across buildings."],
+      "design_notes_for_next_phase": ["Use a compact interval graphic only from frozen values; no new resampling."]
+    },
+    {
+      "slide_id": "SB-A10",
+      "section": "Appendix — reproducibility",
+      "slide_role": "Frozen prediction lineage",
+      "core_question": "Does the reported DOEF formula reproduce the frozen prediction artifact?",
+      "single_takeaway": "The explicit formula matches every frozen Phase 8 ensemble prediction exactly.",
+      "headline": "报告公式与冻结预测逐值一致",
+      "supporting_copy": ["Treat this as an identity audit, not a fresh experiment or independent replication."],
+      "claim_ids": ["SUP-05", "BACK-05"],
+      "evidence_ids": ["CLM-2560", "CLM-2561"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": [],
+      "primary_metric_or_fact": [
+        {"traceability_key": "A10-F01", "display": "Frozen predictions checked: 5,760"},
+        {"traceability_key": "A10-F02", "display": "Maximum absolute difference: 0.0 kW"}
+      ],
+      "speaker_intent": "Provide a concise reproducibility answer and retain the documented lineage caveat.",
+      "transition_from": "Opened after a reproducibility question.",
+      "transition_to": "Negative experiments if the judge asks how falsification was handled.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["A new independent experiment reproduced the model or all historical lineage issues are repaired."],
+      "design_notes_for_next_phase": ["Use a simple identity-check visual; do not imply model retraining."]
+    },
+    {
+      "slide_id": "SB-A11",
+      "section": "Appendix — falsification",
+      "slide_role": "Negative / non-improving experiment",
+      "core_question": "Were negative results retained, or were only favorable methods reported?",
+      "single_takeaway": "The Validation-selected robust variant degraded on Test and was retained as a negative result rather than used to revise DOEF.",
+      "headline": "负结果被保留，但不用于 Test 后反向改选算法",
+      "supporting_copy": ["Show the single-building robust-versus-deterministic result and its exclusion from DOEF v1.0."],
+      "claim_ids": ["SUP-08", "BACK-01"],
+      "evidence_ids": ["CLM-0061", "CLM-0052", "CLM-0082"],
+      "visual_asset_ids": [],
+      "visual_asset_paths": ["outputs/phase5_7/deterministic_vs_robust_daily_peaks.png"],
+      "primary_metric_or_fact": [
+        {"traceability_key": "A11-F01", "display": "Validation-selected robust lambda: 0.5"},
+        {"traceability_key": "A11-F02", "display": "Robust Test mean regret: 20.4635 kW"},
+        {"traceability_key": "A11-F03", "display": "Deterministic Test mean regret: 11.1274 kW"}
+      ],
+      "speaker_intent": "Demonstrate falsification discipline without expanding the main story into a robustness study.",
+      "transition_from": "Opened after a question about failed ideas or selection integrity.",
+      "transition_to": "Return to the main conclusion.",
+      "main_or_appendix": "APPENDIX",
+      "speaking_priority": "appendix-only",
+      "must_not_claim": ["Robust optimization improved Test performance or is part of DOEF v1.0."],
+      "design_notes_for_next_phase": ["Use the frozen negative-result visual or table; do not rerun robustness analysis."]
+    }
+  ]
+}
