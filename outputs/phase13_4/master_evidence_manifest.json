@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "phase": "13.4",
+  "generated_at": "2026-09-03T07:53:04.347201+00:00",
+  "repository_head": "076f76a2a4d2b622dd67f9e4595bba1ab0f5d81e",
+  "repository_branch": "main",
+  "frozen_baseline": "549abc314e93e2862bfc22965db89622c22890e1",
+  "algorithm_name": "Decision-Oriented Ensemble Forecasting",
+  "algorithm_version": "1.0",
+  "algorithm_status": "ALGORITHM FROZEN",
+  "canonical_artifacts": {
+    "scientific_hash_registry": "outputs/phase9_1/artifact_hash_audit.json",
+    "master_project_record": "reports/phase13_4/master_project_record.md",
+    "artifact_index": "reports/phase13_4/competition_artifact_index.md"
+  },
+  "claims": {
+    "path": "outputs/phase13_4/claim_registry.csv",
+    "json": "outputs/phase13_4/claim_registry.json",
+    "count": 33,
+    "status_counts": {
+      "SUPPORTED": 8,
+      "SUPPORTED_WITH_QUALIFICATION": 12,
+      "NEGATIVE_RESULT": 1,
+      "REJECTED": 12
+    }
+  },
+  "numbers": {
+    "path": "outputs/phase13_4/numeric_evidence_registry.csv",
+    "json": "outputs/phase13_4/numeric_evidence_registry.json",
+    "count": 110
+  },
+  "figures": {
+    "path": "outputs/phase13_4/figure_registry.csv",
+    "count": 8
+  },
+  "presentation": {
+    "path": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx",
+    "sha256": "4ee40f3e2cd7b5a44b6dc4595a43165a89e230ff862d5a67ac3e2c12607e2028",
+    "slides": 23,
+    "evidence_map": "outputs/phase13_4/presentation_evidence_map.csv",
+    "evidence_rows": 66,
+    "scientific_claim_rows": 43,
+    "numeric_metrics_audited": 83,
+    "figures_mapped": 8,
+    "traceability_counts": {
+      "NON_SCIENTIFIC": 23,
+      "PASS": 24,
+      "PASS_WITH_QUALIFICATION": 19
+    },
+    "unsupported_count": 0,
+    "mismatch_count": 1,
+    "modified_by_phase13_4": false
+  },
+  "negative_results": {
+    "path": "outputs/phase13_4/negative_result_registry.csv",
+    "count": 4,
+    "preserved": true
+  },
+  "terminology": "reports/phase13_4/terminology_and_naming_standard.md",
+  "discrepancies": {
+    "path": "outputs/phase13_4/discrepancy_registry.csv",
+    "count": 3,
+    "severity_counts": {
+      "MAJOR": 2,
+      "MINOR": 1
+    }
+  },
+  "integrity_summary": {
+    "phase7_8_9_9_1": {
+      "label": "Phase 7/8/9/9.1 canonical artifacts",
+      "registered": 76,
+      "pass_count": 76,
+      "missing_count": 0,
+      "lf_normalized_drift_count": 0,
+      "newline_only_checkout_difference_count": 56,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_0a": {
+      "label": "Phase 13.0A registered sources",
+      "registered": 88,
+      "pass_count": 88,
+      "missing_count": 0,
+      "lf_normalized_drift_count": 0,
+      "newline_only_checkout_difference_count": 39,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_0b": {
+      "label": "Phase 13.0B registered presentation-evidence artifacts",
+      "registered": 8,
+      "pass_count": 8,
+      "missing_count": 0,
+      "lf_normalized_drift_count": 0,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_1": {
+      "label": "Phase 13.1 frozen visual outputs",
+      "registered": 26,
+      "pass_count": 26,
+      "missing_count": 0,
+      "lf_normalized_drift_count": 0,
+      "newline_only_checkout_difference_count": 0,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_2": {
+      "label": "Phase 13.2 frozen storyboard records",
+      "registered": 7,
+      "pass_count": 7,
+      "missing_count": 0,
+      "lf_normalized_drift_count": 0,
+      "newline_only_checkout_difference_count": 0,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_3_pptx": {
+      "label": "Phase 13.3 audited PPTX",
+      "registered": 1,
+      "pass_count": 1,
+      "missing_count": 0,
+      "lf_normalized_drift_count": 0,
+      "newline_only_checkout_difference_count": 0,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    }
+  },
+  "operations": {
+    "new_experiments": 0,
+    "new_statistical_tests": 0,
+    "algorithm_modifications": 0,
+    "scientific_canonical_modifications": 0,
+    "ppt_modifications": 0
+  },
+  "phase14_gate": {
+    "status": "YES_WITH_FOLLOW_UP",
+    "entry_point": "reports/phase13_4/master_project_record.md",
+    "required_actions": [
+      "Reconcile origin/main PPTX divergence",
+      "Confirm or minimally repair exact official competition/track wording on slide 1"
+    ]
+  },
+  "record_counts": {
+    "claims": 33,
+    "numbers": 110,
+    "figures": 8,
+    "presentation_map_rows": 66,
+    "negative_results": 4,
+    "discrepancies": 3
+  }
+}
