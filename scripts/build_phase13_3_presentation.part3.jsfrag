@@ -23,6 +23,8 @@
 {
  const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A07','MECHANISM TRACE'); title(s,'冻结调度轨迹只用于说明流程，不代表普遍表现',{size:24}); subtitle(s,'Phase 8 预先冻结的代表性 Test case；只作为“预测如何改变 realized grid load”的机制说明。');
  addImageCard(s,IMG('sci_05_storage_dispatch_frozen'),.72,1.72,8.56,4.78,{pad:.04});
+ s.addShape(pptx.ShapeType.rect,{x:.77,y:5.68,w:8.46,h:.68,fill:{color:'FFFFFF'},line:{color:'FFFFFF',transparency:100}});
+ s.addText('Read as a mechanism trace, not a universal performance claim; the case and values remain frozen.',{x:1.20,y:5.94,w:7.55,h:.18,fontFace:EN,fontSize:6.8,color:C.muted,align:'center',margin:0});
  card(s,9.55,1.72,3.05,4.78,{fill:'0B192B',line:'0B192B',sh:null});
  badge(s,'BACKUP ONLY',9.91,2.08,1.58,{fill:'3B2B20',color:'FFC494',fs:8.0});
  const rules=['预冻结 Test case','不代表普遍表现','不做 case reselection','不提取新数值','不改变坐标/标签']; rules.forEach((t,i)=>s.addText('• '+t,{x:9.90,y:2.82+i*.52,w:2.00,h:.27,fontFace:FF,fontSize:10.2,color:'B6C4CF',margin:0}));
@@ -102,6 +104,8 @@
  source(s,'Frozen Phase 5.7 negative result · robust λ=0.5 · no rerun'); footer(s,'Appendix · falsification / failed idea answer');
 }
 
-const OUT=path.join(ROOT,'outputs','phase13_3');
+const OUT=process.env.PHASE13_3_OUT_DIR
+  ? path.resolve(process.env.PHASE13_3_OUT_DIR)
+  : path.join(ROOT,'outputs','phase13_3');
 fs.mkdirSync(OUT,{recursive:true});
 pptx.writeFile({ fileName: path.join(OUT,'Phase13_3_DOEF_Competition_Presentation.pptx') });

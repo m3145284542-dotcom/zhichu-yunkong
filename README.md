@@ -185,3 +185,15 @@ Validation:
 ```powershell
 .\.venv\Scripts\python.exe scripts\validate_phase13_2.py
 ```
+
+## Phase 13.3 — Submission-Grade Competition Presentation
+
+Phase 13.3 is complete. The 23-slide defense deck preserves the frozen 12-slide main narrative and 11-slide appendix, and has passed package, full-page rendering, visual, claim, and storyboard acceptance. The final PPTX, verified PDF, and machine-readable acceptance result are in `outputs/phase13_3/`; the audit is `reports/phase13_3_submission_grade_acceptance.md`.
+
+Validation:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\validate_phase13_3_presentation.py --pptx outputs\phase13_3\Phase13_3_DOEF_Competition_Presentation.pptx --pdf outputs\phase13_3\Phase13_3_DOEF_Competition_Presentation.pdf
+```
+
+Phase 14 must still be re-run before the project can be declared ready to submit.

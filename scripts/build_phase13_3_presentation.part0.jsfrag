@@ -21,8 +21,8 @@ pptx.title = 'DOEF：让负荷预测服务于储能削峰决策';
 pptx.company = 'Competition presentation';
 pptx.lang = 'zh-CN';
 pptx.theme = {
-  headFontFace: 'Noto Sans CJK SC',
-  bodyFontFace: 'Noto Sans CJK SC',
+  headFontFace: 'Microsoft YaHei',
+  bodyFontFace: 'Microsoft YaHei',
   lang: 'zh-CN'
 };
 pptx.defineSlideMaster({
@@ -31,7 +31,7 @@ pptx.defineSlideMaster({
   objects: [
     { rect: { x:0, y:0, w:13.333, h:0.06, fill:{color:'24C7FF'}, line:{color:'24C7FF'} } },
   ],
-  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'6F8295', fontFace:'Aptos', fontSize:8, align:'right' }
+  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'6F8295', fontFace:'Arial', fontSize:8, align:'right' }
 });
 pptx.defineSlideMaster({
   title: 'MAIN_LIGHT',
@@ -39,7 +39,7 @@ pptx.defineSlideMaster({
   objects: [
     { rect: { x:0, y:0, w:13.333, h:0.06, fill:{color:'1677FF'}, line:{color:'1677FF'} } },
   ],
-  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'8A98A8', fontFace:'Aptos', fontSize:8, align:'right' }
+  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'8A98A8', fontFace:'Arial', fontSize:8, align:'right' }
 });
 pptx.defineSlideMaster({
   title: 'APPENDIX',
@@ -47,15 +47,15 @@ pptx.defineSlideMaster({
   objects: [
     { rect: { x:0, y:0, w:13.333, h:0.06, fill:{color:'6F4E9C'}, line:{color:'6F4E9C'} } },
   ],
-  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'8A98A8', fontFace:'Aptos', fontSize:8, align:'right' }
+  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'8A98A8', fontFace:'Arial', fontSize:8, align:'right' }
 });
 
 const C = {
   bg:'07111E', bg2:'0B192B', bg3:'102338', white:'F8FBFF', paper:'FFFFFF', ink:'18212B', muted:'5C6873', muted2:'8EA1B5', grid:'D9E0E6', panel:'F4F7F9',
   blue:'1677FF', cyan:'24C7FF', doef:'0072B2', lgbm:'D55E00', xgb:'009E73', dayweek:'CC79A7', validation:'6F4E9C', test:'67727C', orange:'E69F00', red:'B35C00', green:'18A76C', lightBlue:'E9F5FF', lightPurple:'F0EBFA', lightOrange:'FFF1E8'
 };
-const FF='Noto Sans CJK SC';
-const EN='Aptos';
+const FF='Microsoft YaHei';
+const EN='Arial';
 const ROOT=path.resolve(__dirname,'..');
 const ASSET_MAP={
   sci_01_forecast_decision_mismatch:'outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png',
@@ -68,8 +68,6 @@ const ASSET_MAP={
   con_02_contribution_overview:'outputs/phase13_1/presentation_assets/con_02_contribution_overview.png'
 };
 const IMG=n=>path.join(ROOT,ASSET_MAP[n]);
-const shadow = safeOuterShadow('000000',0.16,45,1.5,1.1);
-
 function addTop(slide, id, section, light=false){
   slide.addText(id,{x:.48,y:.21,w:.72,h:.22,fontFace:EN,fontSize:8.5,bold:true,color:light?C.validation:C.cyan,charSpacing:1.3,margin:0});
   slide.addText(section.toUpperCase(),{x:1.25,y:.21,w:3.2,h:.22,fontFace:EN,fontSize:8.3,bold:true,color:light?'7A8897':'7890A7',charSpacing:1.0,margin:0});
@@ -90,8 +88,10 @@ function badge(slide,text,x,y,w,{fill=C.blue,color='FFFFFF',line=fill,fs=9}={}){
   slide.addShape(pptx.ShapeType.roundRect,{x,y,w,h:.32,rectRadius:.06,fill:{color:fill},line:{color:line,transparency:100}});
   slide.addText(text,{x:x+.08,y:y+.045,w:w-.16,h:.20,fontFace:FF,fontSize:fs,bold:true,color,align:'center',margin:0,fit:'shrink'});
 }
-function card(slide,x,y,w,h,{fill='FFFFFF',line='E0E7EF',radius=.09,sh=shadow}={}){
-  slide.addShape(pptx.ShapeType.roundRect,{x,y,w,h,rectRadius:radius,fill:{color:fill},line:{color:line,width:.8},shadow:sh});
+function card(slide,x,y,w,h,{fill='FFFFFF',line='E0E7EF',radius=.09,sh=undefined}={}){
+  const shape = {x,y,w,h,rectRadius:radius,fill:{color:fill},line:{color:line,width:.8}};
+  if (sh !== null) shape.shadow = sh ?? safeOuterShadow('000000',0.16,45,1.5,1.1);
+  slide.addShape(pptx.ShapeType.roundRect,shape);
 }
 function addImageCard(slide,img,x,y,w,h,{pad=.12}={}){
   card(slide,x,y,w,h,{fill:'FFFFFF',line:'E2E8F0'});
@@ -132,7 +132,7 @@ function appHeader(slide,id,role){ addTop(slide,id,`APPENDIX · ${role}`,true); 
  }
  badge(s,'预测是输入，不是终点',7.88,4.16,3.92,{fill:'173A54',color:C.cyan,fs:11});
  s.addText('24 小时前瞻预测  →  冻结电池优化  →  实际负荷上的决策结果',{x:7.82,y:4.67,w:4.05,h:.72,fontFace:FF,fontSize:11.2,color:'9EB3C5',margin:0,align:'center',fit:'shrink'});
- s.addText('工作标题 · 正式赛题名称待核验',{x:.68,y:6.55,w:3.3,h:.25,fontFace:FF,fontSize:8.2,color:'647B90',margin:0});
+ s.addText('全球人工智能算法精英大赛 · AI+能源主题赛',{x:.68,y:6.55,w:4.1,h:.25,fontFace:FF,fontSize:8.2,color:'647B90',margin:0});
  mainFooter(s,'SB-M01',true);
  note(s,'开场定位：这是 AI + 储能决策问题。不要把 LightGBM 说成创新。过渡：既然预测服务于决策，传统预测指标是否真的能选出更好的储能方案？');
 }
@@ -160,4 +160,6 @@ function appHeader(slide,id,role){ addTop(slide,id,`APPENDIX · ${role}`,true); 
 {
  const s=pptx.addSlide('MAIN_DARK'); addTop(s,'SB-M03','PROBLEM'); title(s,'预测只是中间环节，调度结果才是工程终点',{dark:true,size:26}); subtitle(s,'负荷预测会改变储能充放电计划；最终评价发生在真实负荷与电池动作叠加后的结果上。',{dark:true});
  addImageCard(s,IMG('con_01_prediction_decision_bridge'),.76,1.69,11.82,4.34,{pad:.06});
+ s.addShape(pptx.ShapeType.rect,{x:3.10,y:1.85,w:7.15,h:.43,fill:{color:'FFFFFF'},line:{color:'FFFFFF',transparency:100}});
+ s.addText('Prediction is an input to the decision — not the endpoint',{x:3.10,y:1.94,w:7.15,h:.24,fontFace:EN,fontSize:13,bold:true,color:C.ink,align:'center',margin:0});
  badge(s,'CONCEPTUAL / EXPLANATORY',.95,6.12,2.42,{fill:'173A54',color:C.cyan,fs:8.5});
