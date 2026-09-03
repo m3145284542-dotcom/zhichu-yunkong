@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "render_scope": "language_and_layout_only",
+  "font": "Microsoft YaHei",
+  "formal_figure_count": 4,
+  "source_artifacts": {
+    "outputs/phase9/final_benchmark.csv": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c",
+    "outputs/phase7/selected_buildings.json": "0a39c5e38c0568d30010d5b0c2a71d82933fe5e27b5df37408c9de2f81f7b885",
+    "outputs/phase8/validation_weight_search.csv": "c28ab6885d2e3c6ad89f1e8854963694f90d9c058077a417b84a906b291163f7",
+    "outputs/phase9/decision_metrics.csv": "f9d107db60d89d6f88d06adc89ba153508d3dad08bc435dd224f1aec97a4fc1d",
+    "outputs/phase8/selected_weights.csv": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+  },
+  "outputs": [
+    "outputs/phase13_5/figures_cn/sci_01_forecast_decision_mismatch_cn.png",
+    "outputs/phase13_5/figures_cn/sci_01_forecast_decision_mismatch_cn.svg",
+    "outputs/phase13_5/figures_cn/sci_02_doef_main_results_cn.png",
+    "outputs/phase13_5/figures_cn/sci_02_doef_main_results_cn.svg",
+    "outputs/phase13_5/figures_cn/sci_03_multibuilding_regret_cn.png",
+    "outputs/phase13_5/figures_cn/sci_03_multibuilding_regret_cn.svg",
+    "outputs/phase13_5/figures_cn/sci_04_validation_weight_selection_cn.png",
+    "outputs/phase13_5/figures_cn/sci_04_validation_weight_selection_cn.svg"
+  ]
+}
