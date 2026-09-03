@@ -42,7 +42,8 @@
     "claim_metric_references": "PASS",
     "slide_claim_references": "PASS",
     "figure_path_references": "PASS",
-    "phase13_0a_source_hash_drift_count": 0
+    "phase13_0a_source_hash_drift_count": 0,
+    "phase13_0b_artifact_hash_drift_count": 0
   },
   "innovation_positioning": [
     {
@@ -94,46 +95,47 @@
       "boundary": "Requires a separate literature and comparable-system audit."
     }
   ],
+  "artifact_hash_contract": "SHA-256 of text bytes after deterministic LF newline normalization; matches final Git committed bytes and is independent of checkout line-ending conversion.",
   "artifacts": [
     {
       "path": "scripts/build_phase13_0b.py",
       "status": "canonical",
-      "sha256": "0cb439653d1590e305a5a0bdce7c172f28abc0d02e32c66b26ad20644621fd47"
+      "sha256": "732ded96fbc9cd43b36b94e80854bd765a2822bd91e5618972593048e885118a"
     },
     {
       "path": "outputs/phase13_0b/final_presentation_claims.json",
       "status": "canonical",
-      "sha256": "2bd76115b0c5d325f08b3eacc8fd3d342cba407db5944f4cbaaf5edac34441d1"
+      "sha256": "aa6825d70a0d71494b7004fa9ecec0884180482386876432eee95abd22d62a7e"
     },
     {
       "path": "outputs/phase13_0b/presentation_metric_shortlist.csv",
       "status": "canonical",
-      "sha256": "f67399fb6d1ae961bd780884b4c729eb8c1c447dc2c27ccd73f4cd19e7e0aa74"
+      "sha256": "4d3a0472d4bf6d9b4a932905d2c6ffa8c5bf3597bbaed34e27c5d7272f7f9936"
     },
     {
       "path": "outputs/phase13_0b/final_figure_shortlist.csv",
       "status": "canonical",
-      "sha256": "f4ffe83fb44c14ab1310bb691c5af2ee2b0a9c7013f762e02ddcb8d30a77193a"
+      "sha256": "d0460501656a797b67a382a51653d24ef85a54eca545f6ccafed50f0e320a276"
     },
     {
       "path": "outputs/phase13_0b/slide_evidence_map.csv",
       "status": "canonical",
-      "sha256": "4f8a7c5973fb23f462963ae246df7e0dd1d691c00ae83aeb6b4962dbd99e6900"
+      "sha256": "b0aa4cedf3a16e81141575b348f8c7d99e85155a19024e834f13e7955175dd1f"
     },
     {
       "path": "outputs/phase13_0b/presentation_limitations_registry.csv",
       "status": "canonical",
-      "sha256": "ec97e1cfc1747e9e0310d82f3a68076dae40759c6c7fee5132d46100837e3501"
+      "sha256": "dc6f61edc43e289690bbc463b2f9c6c79ff1b029e29f769fba7d9b0804258d7b"
     },
     {
       "path": "outputs/phase13_0b/doef_pipeline_spec.json",
       "status": "canonical",
-      "sha256": "dc5c512da452197e22f25dfdee0fba8aa985205bd80bac7248445e55a3b2603b"
+      "sha256": "83fc4b36c5b1493c884b5a39c435ded4831b2e3daa4a49343fdfa59d306d054c"
     },
     {
       "path": "reports/phase13/phase13_0b_frozen_presentation_evidence_selection_and_story_mapping.md",
       "status": "canonical",
-      "sha256": "09358d62b1e44b7572190ebe2cd5debf03efc430f49da01344c0b2e523b238ca"
+      "sha256": "8a28794bba7d6fb37d2dff0a4f7a9b3190264fe045c9df983e6fe1381bec5715"
     }
   ],
   "commit_message": "docs: complete phase 13.0b presentation evidence selection"

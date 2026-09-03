@@ -52,6 +52,12 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def canonical_text_sha256(path: Path) -> str:
+    """Hash text as the LF-normalized bytes stored by Git."""
+    content = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(content).hexdigest()
+
+
 manifest = read_json(INPUT / "frozen_presentation_data_manifest.json")
 manifest_by_id = {item["id"]: item for item in manifest["items"]}
 matrix = read_csv(INPUT / "presentation_claim_evidence_matrix.csv")
@@ -655,6 +661,12 @@ artifact_paths = [
     OUTPUT / "final_figure_shortlist.csv", OUTPUT / "slide_evidence_map.csv",
     OUTPUT / "presentation_limitations_registry.csv", OUTPUT / "doef_pipeline_spec.json", REPORT,
 ]
+artifact_entries = [
+    {"path": path.relative_to(ROOT).as_posix(), "status": "canonical", "sha256": canonical_text_sha256(path)}
+    for path in artifact_paths
+]
+assert all(canonical_text_sha256(ROOT / item["path"]) == item["sha256"] for item in artifact_entries)
+validation["phase13_0b_artifact_hash_drift_count"] = 0
 summary = {
     "schema_version": 1, "phase": "13.0B", "status": "PASS", "artifact_status": "canonical",
     "logical_role": "frozen downstream presentation evidence selection and story map",
@@ -673,7 +685,8 @@ summary = {
     "logical_slide_count": len(slide_rows), "algorithm_modified": False, "new_experiment_run": False, "new_numerical_result_generated": False,
     "presentation_created": False, "phase13_0a_source_hash_drift": 0, "canonical_artifact_modifications": 0,
     "validation": validation, "innovation_positioning": innovation,
-    "artifacts": [{"path": path.relative_to(ROOT).as_posix(), "status": "canonical", "sha256": sha256(path)} for path in artifact_paths],
+    "artifact_hash_contract": "SHA-256 of text bytes after deterministic LF newline normalization; matches final Git committed bytes and is independent of checkout line-ending conversion.",
+    "artifacts": artifact_entries,
     "commit_message": "docs: complete phase 13.0b presentation evidence selection",
 }
 write_json(OUTPUT / "phase13_0b_summary.json", summary)
