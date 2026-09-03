@@ -1,0 +1,39 @@
+name: Build Phase 13.3 competition presentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_phase13_3_presentation.js'
+      - 'scripts/build_phase13_3_presentation.part*.jsfrag'
+      - '.github/workflows/build_phase13_3_presentation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-pptx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install presentation dependencies
+        run: |
+          npm install --no-save pptxgenjs image-size
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+      - name: Build Phase 13.3 deck from frozen repository assets
+        run: node scripts/build_phase13_3_presentation.js
+      - name: Commit generated PPTX
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx
+          if git diff --cached --quiet; then
+            echo "No presentation change to commit."
+          else
+            git commit -m "feat: generate phase 13.3 competition presentation"
+            git push
+          fi

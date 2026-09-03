@@ -1,0 +1,118 @@
+ s.addText('所有预测方法进入同一套冻结电池约束，保证比较的是“预测带来的决策差异”，不是不同优化器。',{x:3.58,y:6.13,w:8.45,h:.32,fontFace:FF,fontSize:10.8,color:'A9B9C8',margin:0,fit:'shrink'});
+ source(s,'Conceptual asset: outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png',{dark:true}); mainFooter(s,'SB-M03',true);
+ note(s,'让 AI 与电气评委建立共同心智模型：历史负荷→次日预测→受约束电池调度→真实削峰结果。概念图不是实验结果。过渡：既然下游目标不同，模型选择标准也要重新对齐。');
+}
+
+// M04
+{
+ const s=pptx.addSlide('MAIN_DARK'); addTop(s,'SB-M04','TENSION → SOLUTION'); title(s,'模型不只要预测得准，还要在 Validation 上支持更好的储能决策',{dark:true,size:25});
+ subtitle(s,'保持预测组件与电池约束不变，只改变“选择依据”：从预测误差，转向 Validation 下游决策 regret。',{dark:true});
+ const rows=[{y:2.02,label:'传统预测选择',col:'527087',steps:['Forecast','MAE / RMSE','Select'],accent:'527087',last:'预测误差最小'}, {y:4.10,label:'DOEF 选择',col:C.validation,steps:['Forecast','Battery dispatch','Decision regret','FREEZE  wᵦ'],accent:C.validation,last:'决策 regret 最小'}];
+ for(const r of rows){
+   s.addText(r.label,{x:.78,y:r.y-.02,w:1.65,h:.32,fontFace:FF,fontSize:11.5,bold:true,color:r.col,margin:0});
+   const n=r.steps.length; const start=2.55; const gap=.28; const total=9.50; const bw=(total-gap*(n-1))/n;
+   r.steps.forEach((st,i)=>{
+     const x=start+i*(bw+gap); card(s,x,r.y-.18,bw,.72,{fill:i===n-1?(r===rows[1]?'1A2740':'102338'):'0E1D2C',line:i===n-1?r.accent:'284059',sh:null});
+     s.addText(st,{x:x+.08,y:r.y+.03,w:bw-.16,h:.28,fontFace:EN,fontSize:11.5,bold:i===n-1,color:i===n-1?(r===rows[1]?'D8CCFF':'B7C5D0'):C.white,align:'center',margin:0,fit:'shrink'});
+     if(i<n-1) lineArrow(s,x+bw+.04,r.y+.18,x+bw+gap-.03,r.y+.18,{color:i===n-2?r.accent:'466078',width:1.5});
+   });
+   s.addText(r.last,{x:10.55,y:r.y+.72,w:1.55,h:.28,fontFace:FF,fontSize:9.5,bold:true,color:r.accent,align:'right',margin:0});
+ }
+ s.addShape(pptx.ShapeType.line,{x:1.1,y:3.57,w:11.1,h:0,line:{color:'234057',width:1,dash:'dash'}});
+ badge(s,'唯一强调的改变：SELECTION OBJECTIVE',4.33,6.02,4.70,{fill:'251D43',color:'D9CCFF',line:'5F45A8',fs:10.2});
+ s.addText('不是联合训练 · 不是新基础模型 · 不是用 Test 调权重',{x:3.48,y:6.48,w:6.25,h:.32,fontFace:FF,fontSize:10.2,color:'8298AA',align:'center',margin:0});
+ mainFooter(s,'SB-M04',true);
+ note(s,'这一页只讲一个改变：selection criterion。组件预测不变，电池约束不变。DOEF 不是联合训练、双层优化或新的 LightGBM。下一页给完整冻结信息流。');
+}
+
+// M05
+{
+ const s=pptx.addSlide('MAIN_LIGHT'); addTop(s,'SB-M05','SOLUTION',true); title(s,'DOEF 在 Validation 上按决策 regret 冻结权重，再进入 Test',{size:25});
+ subtitle(s,'每栋建筑的 DayWeek–LightGBM 权重只在 Validation 选择；Test 对训练、权重、tie-break 和电池配置没有反馈路径。');
+ addImageCard(s,IMG('doef_architecture_master'),.58,1.55,12.15,5.13,{pad:.02});
+ source(s,'Frozen method visual: outputs/phase13_1/architecture/doef_architecture_master.png · formula: wᵦ·LightGBM + (1−wᵦ)·DayWeek'); mainFooter(s,'SB-M05');
+ note(s,'算法只解释一次。强调三段：Train 拟合组件；Validation 把候选权重送入同一电池优化，以 mean daily regret 选择并冻结；Test 只报告。Oracle 只作不可部署 hindsight 上界。');
+}
+
+// M06
+{
+ const s=pptx.addSlide('MAIN_LIGHT'); addTop(s,'SB-M06','EVIDENCE',true); title(s,'DOEF 同时降低预测误差与储能决策 regret',{size:26});
+ subtitle(s,'对比冻结 LightGBM：八栋建筑等权聚合的 normalized MAE 与 normalized decision regret 均下降。');
+ addImageCard(s,IMG('sci_02_doef_main_results'),.63,1.58,9.22,4.85,{pad:.05});
+ card(s,10.10,1.58,2.55,4.85,{fill:'0B192B',line:'0B192B',sh:null});
+ bigNumber(s,'6.36%','normalized MAE 相对改善',10.38,2.02,1.95,{accent:C.cyan,dark:true});
+ bigNumber(s,'3.61%','normalized regret 相对改善',10.38,3.43,1.95,{accent:'BBA7FF',dark:true});
+ s.addText('6  /  2  /  0',{x:10.38,y:4.89,w:1.95,h:.48,fontFace:EN,fontSize:22,bold:true,color:C.white,margin:0,align:'center'});
+ s.addText('win / tie / loss',{x:10.38,y:5.42,w:1.95,h:.26,fontFace:EN,fontSize:9.2,color:'9FB1C1',margin:0,align:'center'});
+ badge(s,'负峰值案例保留：min = −1.017%',10.32,5.86,2.10,{fill:'40291B',color:'FFC494',line:'73513C',fs:7.8});
+ source(s,'Frozen source: outputs/phase13_1/figures/sci_02_doef_main_results.png · Oracle-relative regret ≠ monetary regret'); mainFooter(s,'SB-M06');
+ note(s,'这是最强结果页。先落 6.36% 与 3.61%，再落 6/2/0。主动指出最差建筑 peak reduction 为 -1.017%，负结果没有被删。不要说 SOTA、普适最优、经济收益。');
+}
+
+// M07
+{
+ const s=pptx.addSlide('MAIN_DARK'); addTop(s,'SB-M07','INTERPRETATION'); title(s,'RMSE 衡量预测误差；regret 衡量误差经过调度后的工程后果',{dark:true,size:25});
+ subtitle(s,'两个指标回答不同问题，因此在项目范围内不保证给出相同的模型排序。',{dark:true});
+ card(s,.78,1.78,5.45,4.58,{fill:'0E1D2C',line:'284059',sh:null}); card(s,7.10,1.78,5.45,4.58,{fill:'0E1D2C',line:'284059',sh:null});
+ badge(s,'FORECAST METRIC',1.14,2.12,1.72,{fill:'1A3448',color:'A9D9F2',fs:8.6});
+ s.addText('RMSE',{x:1.13,y:2.67,w:2.2,h:.52,fontFace:EN,fontSize:30,bold:true,color:C.cyan,margin:0});
+ s.addText('“预测偏了多少？”',{x:1.13,y:3.29,w:3.9,h:.38,fontFace:FF,fontSize:16,bold:true,color:C.white,margin:0});
+ s.addText('对所有时间点的误差做平方惩罚并聚合。\n它是必要的预测质量检查，但不是储能决策本身。',{x:1.13,y:3.90,w:4.25,h:1.15,fontFace:FF,fontSize:12,color:'A5B7C6',margin:0,breakLine:false,fit:'shrink'});
+ badge(s,'DOWNSTREAM METRIC',7.46,2.12,1.92,{fill:'2B2148',color:'D8CCFF',fs:8.2});
+ s.addText('regret',{x:7.45,y:2.67,w:2.4,h:.52,fontFace:EN,fontSize:30,bold:true,color:'BCA9FF',margin:0});
+ s.addText('“这次预测让调度损失了多少？”',{x:7.45,y:3.29,w:4.2,h:.38,fontFace:FF,fontSize:15.2,bold:true,color:C.white,margin:0,fit:'shrink'});
+ s.addText('预测 → 电池优化 → 实际负荷，\n再与不可部署 Oracle 的最优决策结果比较。',{x:7.45,y:3.90,w:4.20,h:1.05,fontFace:FF,fontSize:12,color:'A5B7C6',margin:0,fit:'shrink'});
+ lineArrow(s,6.34,4.82,6.98,4.82,{color:'566F85',width:2});
+ s.addText('不同终点',{x:6.32,y:4.36,w:.68,h:.28,fontFace:FF,fontSize:8.8,bold:true,color:'8298AA',align:'center',margin:0});
+ badge(s,'结论：两者都要看，不把一个替代另一个',4.14,6.57,5.05,{fill:'173A54',color:C.cyan,fs:10.1});
+ mainFooter(s,'SB-M07',true);
+ note(s,'用“回答不同问题”化解 M02 的反转，避免讲成“峰时误差一定导致 regret”这种未经证明的普遍机制。核心句：预测指标仍然必要，但下游工程评价不能缺席。');
+}
+
+// M08
+{
+ const s=pptx.addSlide('MAIN_LIGHT'); addTop(s,'SB-M08','BREADTH',true); title(s,'全部八栋固定建筑均被展示：六胜、两平、零负',{size:26});
+ subtitle(s,'建筑在结果评估前冻结：296 个 office 候选 → 82 个质量通过 → 仅用 Train 期形态预选 8 栋。');
+ addImageCard(s,IMG('sci_03_multibuilding_regret'),.60,1.60,10.35,4.93,{pad:.04});
+ card(s,11.18,1.60,1.52,4.93,{fill:'0B192B',line:'0B192B',sh:null});
+ s.addText('8 / 8',{x:11.38,y:2.05,w:1.12,h:.50,fontFace:EN,fontSize:25,bold:true,color:C.cyan,align:'center',margin:0});
+ s.addText('全部展示',{x:11.35,y:2.62,w:1.18,h:.28,fontFace:FF,fontSize:10.5,color:'B2C1CD',align:'center',margin:0});
+ s.addShape(pptx.ShapeType.line,{x:11.40,y:3.08,w:1.08,h:0,line:{color:'314B61',width:1}});
+ s.addText('6',{x:11.42,y:3.35,w:1.0,h:.44,fontFace:EN,fontSize:24,bold:true,color:'6AD7FF',align:'center',margin:0}); s.addText('lower',{x:11.42,y:3.82,w:1.0,h:.24,fontFace:EN,fontSize:8.8,color:'9EB0BE',align:'center',margin:0});
+ s.addText('2',{x:11.42,y:4.28,w:1.0,h:.44,fontFace:EN,fontSize:24,bold:true,color:'D7E2EA',align:'center',margin:0}); s.addText('ties',{x:11.42,y:4.75,w:1.0,h:.24,fontFace:EN,fontSize:8.8,color:'9EB0BE',align:'center',margin:0});
+ s.addText('0',{x:11.42,y:5.20,w:1.0,h:.44,fontFace:EN,fontSize:24,bold:true,color:'8D9AA6',align:'center',margin:0}); s.addText('higher',{x:11.42,y:5.67,w:1.0,h:.24,fontFace:EN,fontSize:8.8,color:'9EB0BE',align:'center',margin:0});
+ source(s,'Frozen source: SCI-03 · buildings preserved in preselected frozen order; no sorting/deletion'); mainFooter(s,'SB-M08');
+ note(s,'用完整 8 栋反驳单楼/挑楼质疑。强调选楼不看 Validation/Test 性能，只基于质量和 Train 期形态。证据只支持固定范围的 multi-building robustness，不支持 unseen-building transfer。');
+}
+
+// M09
+{
+ const s=pptx.addSlide('MAIN_LIGHT'); addTop(s,'SB-M09','CREDIBILITY',true); title(s,'权重在 Validation 冻结，Test 不参与选择',{size:27});
+ subtitle(s,'11 个候选权重在预先声明的 Validation 网格上选择；Test 只用于最终评价，不反馈到模型、权重或 tie-break。');
+ addImageCard(s,IMG('sci_04_validation_weight_selection'),.62,1.65,8.95,4.72,{pad:.04});
+ card(s,9.82,1.65,2.82,4.72,{fill:'0B192B',line:'0B192B',sh:null});
+ badge(s,'NO TEST-TIME TUNING',10.12,2.03,2.20,{fill:'37285E',color:'E2D8FF',fs:8.6});
+ s.addText('Validation',{x:10.18,y:2.82,w:1.0,h:.28,fontFace:EN,fontSize:12,bold:true,color:'CABDFF',margin:0});
+ s.addText('搜索 0.0 → 1.0\n步长 0.1',{x:10.18,y:3.18,w:1.9,h:.62,fontFace:FF,fontSize:12,color:C.white,margin:0});
+ lineArrow(s,10.23,4.12,11.90,4.12,{color:C.validation,width:2.2});
+ badge(s,'FREEZE  wᵦ',10.62,4.40,1.28,{fill:C.validation,fs:9});
+ lineArrow(s,11.28,4.85,11.28,5.38,{color:'8291A1',width:1.6});
+ s.addText('Test',{x:10.18,y:5.52,w:.72,h:.26,fontFace:EN,fontSize:12,bold:true,color:'C0CBD5',margin:0});
+ s.addText('evaluation only',{x:10.95,y:5.55,w:1.22,h:.22,fontFace:EN,fontSize:9.3,color:'8FA1B0',margin:0});
+ source(s,'Frozen source: SCI-04 · candidate grid = 11 weights · prior historical Test visibility means “pristine blind test” is not claimed'); mainFooter(s,'SB-M09');
+ note(s,'这页专门防“你们是不是看 Test 调出来的？”权重只在 Validation 选，并在 Test 前冻结。也不要说 Test 从未被历史阶段看过，只能说 Phase 8/DOEF 选择不使用 Test。');
+}
+
+// M10
+{
+ const s=pptx.addSlide('MAIN_DARK'); addTop(s,'SB-M10','ENGINEERING WORKFLOW'); title(s,'冻结流程明确了次日预测如何生成储能调度，但尚非现场部署',{dark:true,size:25});
+ subtitle(s,'这是可复现的 next-day operating sequence，而不是已在真实楼宇上线的控制系统。',{dark:true});
+ const steps=[['01','已知历史负荷','截至预测时刻可用的正滞后与日历状态'],['02','生成次日预测','冻结 DayWeek + LightGBM，使用已冻结 wᵦ'],['03','求解 24h 电池计划','同一容量 / 功率 / SOC / 效率 / daily reset'],['04','真实负荷后评估','MAE/RMSE + peak + Oracle-relative regret']];
+ const x0=.70, gap=.24, bw=2.86;
+ steps.forEach((p,i)=>{
+   const x=x0+i*(bw+gap); card(s,x,1.95,bw,3.47,{fill:'0E1D2C',line:i===1||i===2?'245D7B':'284059',sh:null});
+   s.addText(p[0],{x:x+.18,y:2.18,w:.58,h:.34,fontFace:EN,fontSize:16,bold:true,color:i===2?C.cyan:'6889A2',margin:0});
+   s.addText(p[1],{x:x+.18,y:2.72,w:bw-.36,h:.52,fontFace:FF,fontSize:15,bold:true,color:C.white,margin:0,fit:'shrink'});
+   s.addText(p[2],{x:x+.18,y:3.56,w:bw-.36,h:1.05,fontFace:FF,fontSize:11.5,color:'A4B5C4',margin:0,fit:'shrink'});
+   if(i<3) lineArrow(s,x+bw+.05,3.75,x+bw+gap-.03,3.75,{color:'41677F',width:1.6});
+ });

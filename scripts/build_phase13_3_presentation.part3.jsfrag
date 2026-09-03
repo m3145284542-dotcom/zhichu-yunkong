@@ -1,0 +1,107 @@
+ source(s,'Canonical source: outputs/phase9/final_benchmark.csv · lower is better for normalized MAE/RMSE/regret'); footer(s,'Appendix · full forecast table');
+}
+
+// A06
+{
+ const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A06','DECISION RESULTS'); title(s,'决策指标必须连同范围与聚合口径一起解释',{size:24}); subtitle(s,'mean 与 median 可能给出完全不同的直觉；负例必须和有利统计一起展示。');
+ card(s,.72,1.70,4.06,4.94,{fill:'0B192B',line:'0B192B',sh:null});
+ s.addText('为什么不能只看一个平均数？',{x:1.02,y:2.03,w:3.28,h:.38,fontFace:FF,fontSize:14.5,bold:true,color:C.white,margin:0});
+ s.addText('CatBoost peak reduction',{x:1.02,y:2.78,w:2.6,h:.27,fontFace:EN,fontSize:10,bold:true,color:'AFC1D0',margin:0});
+ bigNumber(s,'−24.48%','mean',1.02,3.16,1.55,{accent:'FF9C7A',dark:true});
+ bigNumber(s,'+4.82%','median',2.76,3.16,1.55,{accent:C.cyan,dark:true});
+ s.addText('极端负例会强烈拖动 mean；因此报告必须同时给出 method / building / split / aggregation。',{x:1.02,y:4.62,w:3.12,h:1.10,fontFace:FF,fontSize:11.2,color:'A8B8C5',margin:0,fit:'shrink'});
+ badge(s,'min = −245.94%',1.02,5.82,1.70,{fill:'452A23',color:'FFC0A5',fs:8.1});
+ // table right
+ const rr=[['LightGBM','.116127','1.008%','5.057%','−41.192%'],['XGBoost','.117534','0.453%','4.588%','−44.357%'],['CatBoost','.118740','−24.482%','4.821%','−245.943%'],['DOEF','.111929','6.442%','5.629%','−1.017%']];
+ const widths=[1.74,1.36,1.46,1.46,1.46], heads=['Method','norm regret','peak mean','peak median','peak min']; let x=5.02,y=2.02,xx=x;
+ heads.forEach((h,i)=>{s.addShape(pptx.ShapeType.rect,{x:xx,y,w:widths[i],h:.48,fill:{color:'182B3F'},line:{color:'182B3F'}}); s.addText(h,{x:xx+.08,y:y+.13,w:widths[i]-.16,h:.20,fontFace:EN,fontSize:8.5,bold:true,color:'FFFFFF',margin:0,fit:'shrink'}); xx+=widths[i];});
+ rr.forEach((r,ri)=>{let cx=x,yy=y+.48+ri*.73; const hi=r[0]==='DOEF'; r.forEach((v,i)=>{s.addShape(pptx.ShapeType.rect,{x:cx,y:yy,w:widths[i],h:.73,fill:{color:hi?'EAF5FF':r[0]==='CatBoost'?'FFF1E8':'FFFFFF'},line:{color:'E0E7EF',width:.5}}); s.addText(v,{x:cx+.08,y:yy+.20,w:widths[i]-.16,h:.25,fontFace:EN,fontSize:9.5,bold:hi||r[0]==='CatBoost',color:hi?C.doef:r[0]==='CatBoost'?C.red:C.ink,margin:0,fit:'shrink'}); cx+=widths[i];});});
+ source(s,'Frozen source: outputs/phase9/final_benchmark.csv + decision metrics · peak reduction is not a universal scalar'); footer(s,'Appendix · aggregation caveat / negative cases');
+}
+
+// A07
+{
+ const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A07','MECHANISM TRACE'); title(s,'冻结调度轨迹只用于说明流程，不代表普遍表现',{size:24}); subtitle(s,'Phase 8 预先冻结的代表性 Test case；只作为“预测如何改变 realized grid load”的机制说明。');
+ addImageCard(s,IMG('sci_05_storage_dispatch_frozen'),.72,1.72,8.56,4.78,{pad:.04});
+ card(s,9.55,1.72,3.05,4.78,{fill:'0B192B',line:'0B192B',sh:null});
+ badge(s,'BACKUP ONLY',9.91,2.08,1.58,{fill:'3B2B20',color:'FFC494',fs:8.0});
+ const rules=['预冻结 Test case','不代表普遍表现','不做 case reselection','不提取新数值','不改变坐标/标签']; rules.forEach((t,i)=>s.addText('• '+t,{x:9.90,y:2.82+i*.52,w:2.00,h:.27,fontFace:FF,fontSize:10.2,color:'B6C4CF',margin:0}));
+ source(s,'Exact frozen source: outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png · no value extraction or case reselection'); footer(s,'Appendix · dispatch mechanism question');
+}
+
+// A08
+{
+ const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A08','SELECTION'); title(s,'逐建筑权重来自预先声明的 Validation 搜索',{size:24}); subtitle(s,'候选 wᵦ = {0.0, 0.1, …, 1.0}；确定性 tie-break；Test 完全排除。');
+ addImageCard(s,IMG('sci_04_validation_weight_selection'),.68,1.72,7.40,4.71,{pad:.04});
+ const rows=[['Rolando','.9','.7'],['Lavon','0','0'],['Joey','.6','.3'],['Caitlin','.4','.8'],['Addie','1','1'],['Gerardo','0','1'],['Alexis','.6','.7'],['Byron','.9','.8']];
+ const widths=[1.78,1.26,1.26], heads=['Building','w forecast','w decision']; let x=8.32,y=1.96,xx=x;
+ heads.forEach((h,i)=>{s.addShape(pptx.ShapeType.rect,{x:xx,y,w:widths[i],h:.42,fill:{color:'182B3F'},line:{color:'182B3F'}}); s.addText(h,{x:xx+.06,y:y+.11,w:widths[i]-.12,h:.18,fontFace:EN,fontSize:7.7,bold:true,color:'FFFFFF',margin:0,fit:'shrink'}); xx+=widths[i];});
+ rows.forEach((r,ri)=>{let cx=x,yy=y+.42+ri*.47; const hi=r[0]==='Joey'; r.forEach((v,i)=>{s.addShape(pptx.ShapeType.rect,{x:cx,y:yy,w:widths[i],h:.47,fill:{color:hi?'F0EBFA':ri%2?'FAFCFD':'FFFFFF'},line:{color:'E0E7EF',width:.45}}); s.addText(v,{x:cx+.06,y:yy+.12,w:widths[i]-.12,h:.20,fontFace:EN,fontSize:8.8,bold:hi,color:hi?C.validation:C.ink,margin:0}); cx+=widths[i];});});
+ badge(s,'Joey: 0.6 → 0.3',10.00,1.49,2.17,{fill:'F0EBFA',color:C.validation,line:'D9CCEF',fs:8.8});
+ source(s,'Frozen source: selected_weights.csv + SCI-04 · no interpolation between grid points'); footer(s,'Appendix · full weight-selection answer');
+}
+
+// A09
+{
+ const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A09','UNCERTAINTY'); title(s,'冻结 bootstrap 支持固定八栋建筑范围内的差异',{size:24}); subtitle(s,'paired building-level bootstrap；resampling unit = building；不扩展为跨建筑普遍显著性结论。');
+ card(s,.73,1.83,8.62,3.58,{fill:'FFFFFF',line:'E0E7EF'});
+ // Native interval graphic from frozen values only; no new resampling.
+ const gx=1.35, gy=3.63, gw=7.28;
+ s.addShape(pptx.ShapeType.line,{x:gx,y:gy,w:gw,h:0,line:{color:'B9C6D2',width:1.3}});
+ const lo=-0.006850, hi=-0.001719, pt=-0.004198, xmin=-0.008, xmax=0.001;
+ const px=v=>gx+(v-xmin)/(xmax-xmin)*gw;
+ const xlo=px(lo), xhi=px(hi), xpt=px(pt), xzero=px(0);
+ s.addShape(pptx.ShapeType.line,{x:xzero,y:2.48,w:0,h:2.28,line:{color:'B35C00',width:1.2,dash:'dash'}});
+ s.addText('0',{x:xzero-.10,y:4.00,w:.20,h:.18,fontFace:EN,fontSize:8,color:C.red,align:'center',margin:0});
+ s.addShape(pptx.ShapeType.line,{x:xlo,y:gy,w:xhi-xlo,h:0,line:{color:C.validation,width:5,beginArrowType:'none',endArrowType:'none'}});
+ s.addShape(pptx.ShapeType.ellipse,{x:xpt-.09,y:gy-.09,w:.18,h:.18,fill:{color:C.doef},line:{color:'FFFFFF',width:1.2}});
+ s.addText('95% bootstrap interval',{x:1.35,y:2.35,w:2.35,h:.28,fontFace:EN,fontSize:10,bold:true,color:C.validation,margin:0});
+ s.addText('point estimate',{x:xpt-.58,y:2.84,w:1.16,h:.22,fontFace:EN,fontSize:8.3,bold:true,color:C.doef,align:'center',margin:0});
+ s.addText('interval remains below 0',{x:5.88,y:2.35,w:2.45,h:.28,fontFace:EN,fontSize:10,bold:true,color:C.green,align:'right',margin:0});
+ card(s,9.65,1.83,2.92,3.58,{fill:'0B192B',line:'0B192B',sh:null});
+ bigNumber(s,'10,000','resamples · seed 42',9.98,2.24,2.25,{accent:C.cyan,dark:true});
+ bigNumber(s,'−0.004198','point estimate',9.98,3.58,2.25,{accent:'C7B8FF',dark:true});
+ s.addText('95% interval',{x:1.03,y:5.76,w:1.42,h:.25,fontFace:EN,fontSize:9.5,bold:true,color:C.muted,margin:0});
+ s.addText('[ −0.006850 ,  −0.001719 ]',{x:2.55,y:5.67,w:3.35,h:.34,fontFace:EN,fontSize:16,bold:true,color:C.doef,margin:0});
+ badge(s,'fixed 8-building scope only',9.70,5.70,2.33,{fill:'FFF1E8',color:C.red,line:'F0D6C4',fs:8.0});
+ source(s,'Frozen source: outputs/phase9_1/final_reporting_summary.json · no new resampling'); footer(s,'Appendix · uncertainty answer');
+}
+
+// A10
+{
+ const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A10','REPRODUCIBILITY'); title(s,'报告公式与冻结预测逐值一致',{size:25}); subtitle(s,'这是 identity audit：显式 DOEF 公式复算与冻结 Phase 8 ensemble_prediction 逐值对齐，不是新训练或独立重复实验。');
+ card(s,.78,1.78,5.55,4.68,{fill:'0B192B',line:'0B192B',sh:null});
+ s.addText('wᵦ × LightGBM + (1 − wᵦ) × DayWeek',{x:1.16,y:2.38,w:4.80,h:.62,fontFace:EN,fontSize:21,bold:true,color:C.white,align:'center',margin:0,fit:'shrink'});
+ s.addText('=',{x:3.06,y:3.28,w:.95,h:.50,fontFace:EN,fontSize:28,bold:true,color:C.cyan,align:'center',margin:0});
+ s.addText('frozen Phase 8\nensemble_prediction',{x:1.75,y:3.92,w:3.55,h:.68,fontFace:EN,fontSize:15,bold:true,color:'B4C5D2',align:'center',margin:0});
+ badge(s,'IDENTITY AUDIT',2.21,5.44,2.72,{fill:'173A54',color:C.cyan,fs:9});
+ card(s,6.66,1.78,5.92,4.68,{fill:'FFFFFF',line:'E0E7EF'});
+ bigNumber(s,'5,760','frozen predictions checked',7.20,2.36,2.22,{accent:C.doef});
+ bigNumber(s,'0.0 kW','max absolute difference',9.67,2.36,2.22,{accent:C.green});
+ s.addShape(pptx.ShapeType.line,{x:7.20,y:3.85,w:4.58,h:0,line:{color:'D5DEE6',width:1}});
+ s.addText('8 buildings × 720 Test hours',{x:7.20,y:4.20,w:4.3,h:.32,fontFace:EN,fontSize:12,bold:true,color:C.ink,margin:0});
+ s.addText('audited definition = frozen prediction artifact\nwithin tolerance 1e−12',{x:7.20,y:4.78,w:4.3,h:.72,fontFace:EN,fontSize:11,color:C.muted,margin:0});
+ source(s,'Frozen source: Phase 9.1 reporting summary · identity check only'); footer(s,'Appendix · lineage / reproducibility answer');
+}
+
+// A11
+{
+ const s=pptx.addSlide('APPENDIX'); appHeader(s,'SB-A11','FALSIFICATION'); title(s,'负结果被保留，但不用于 Test 后反向改选算法',{size:24}); subtitle(s,'Validation-selected robust variant 在 Test 上明显退化，因此被保留为负结果并排除出 DOEF v1.0。');
+ card(s,.78,1.72,5.47,4.72,{fill:'FFFFFF',line:'E0E7EF'});
+ s.addText('Validation selection',{x:1.10,y:2.08,w:1.75,h:.28,fontFace:EN,fontSize:10,bold:true,color:C.validation,margin:0});
+ s.addText('robust λ = 0.5',{x:1.10,y:2.55,w:3.3,h:.48,fontFace:EN,fontSize:24,bold:true,color:C.ink,margin:0});
+ s.addText('预先按 Validation 规则选出，随后进入 Test；没有因为 Test 结果差而换 λ。',{x:1.10,y:3.30,w:4.33,h:.98,fontFace:FF,fontSize:11.5,color:C.muted,margin:0,fit:'shrink'});
+ badge(s,'selection integrity',1.10,5.50,1.76,{fill:'F0EBFA',color:C.validation,line:'DBD0F0',fs:8.4});
+ card(s,6.53,1.72,6.05,4.72,{fill:'0B192B',line:'0B192B',sh:null});
+ s.addText('Test mean regret',{x:6.92,y:2.08,w:1.55,h:.28,fontFace:EN,fontSize:10,bold:true,color:'AFC1D0',margin:0});
+ bigNumber(s,'20.4635 kW','robust variant',6.92,2.55,2.20,{accent:'FF9C7A',dark:true});
+ bigNumber(s,'11.1274 kW','deterministic',9.65,2.55,2.20,{accent:C.cyan,dark:true});
+ s.addShape(pptx.ShapeType.line,{x:6.92,y:4.07,w:4.92,h:0,line:{color:'31506A',width:1}});
+ s.addText('结论：robust optimization 没有改善 Test，\n因此不进入 DOEF，不做 Test 后反向修正。',{x:6.92,y:4.48,w:4.90,h:.88,fontFace:FF,fontSize:12,bold:true,color:C.white,margin:0,fit:'shrink'});
+ badge(s,'NEGATIVE RESULT RETAINED',8.18,5.65,2.45,{fill:'452A23',color:'FFC0A5',fs:7.9});
+ source(s,'Frozen Phase 5.7 negative result · robust λ=0.5 · no rerun'); footer(s,'Appendix · falsification / failed idea answer');
+}
+
+const OUT=path.join(ROOT,'outputs','phase13_3');
+fs.mkdirSync(OUT,{recursive:true});
+pptx.writeFile({ fileName: path.join(OUT,'Phase13_3_DOEF_Competition_Presentation.pptx') });

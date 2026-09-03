@@ -1,0 +1,163 @@
+const pptxgen = require('pptxgenjs');
+const path = require('path');
+const fs = require('fs');
+const { imageSize } = require('image-size');
+
+function imageSizingContain(img, x, y, w, h) {
+  const dim = imageSize(fs.readFileSync(img));
+  const scale = Math.min(w / dim.width, h / dim.height);
+  const iw = dim.width * scale, ih = dim.height * scale;
+  return { x: x + (w-iw)/2, y: y + (h-ih)/2, w: iw, h: ih };
+}
+function safeOuterShadow(color='000000', opacity=.16, angle=45, blur=1.5, distance=1.1) {
+  return { type:'outer', color, opacity, angle, blur, distance };
+}
+
+const pptx = new pptxgen();
+pptx.layout = 'LAYOUT_WIDE'; // 13.333 × 7.5
+pptx.author = 'OpenAI · Phase 13.3 presentation production';
+pptx.subject = 'DOEF competition defense deck based on frozen Phase 13.2 storyboard';
+pptx.title = 'DOEF：让负荷预测服务于储能削峰决策';
+pptx.company = 'Competition presentation';
+pptx.lang = 'zh-CN';
+pptx.theme = {
+  headFontFace: 'Noto Sans CJK SC',
+  bodyFontFace: 'Noto Sans CJK SC',
+  lang: 'zh-CN'
+};
+pptx.defineSlideMaster({
+  title: 'MAIN_DARK',
+  background: { color: '07111E' },
+  objects: [
+    { rect: { x:0, y:0, w:13.333, h:0.06, fill:{color:'24C7FF'}, line:{color:'24C7FF'} } },
+  ],
+  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'6F8295', fontFace:'Aptos', fontSize:8, align:'right' }
+});
+pptx.defineSlideMaster({
+  title: 'MAIN_LIGHT',
+  background: { color: 'F7FAFC' },
+  objects: [
+    { rect: { x:0, y:0, w:13.333, h:0.06, fill:{color:'1677FF'}, line:{color:'1677FF'} } },
+  ],
+  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'8A98A8', fontFace:'Aptos', fontSize:8, align:'right' }
+});
+pptx.defineSlideMaster({
+  title: 'APPENDIX',
+  background: { color: 'FAFBFC' },
+  objects: [
+    { rect: { x:0, y:0, w:13.333, h:0.06, fill:{color:'6F4E9C'}, line:{color:'6F4E9C'} } },
+  ],
+  slideNumber: { x:12.55, y:7.05, w:0.45, h:0.18, color:'8A98A8', fontFace:'Aptos', fontSize:8, align:'right' }
+});
+
+const C = {
+  bg:'07111E', bg2:'0B192B', bg3:'102338', white:'F8FBFF', paper:'FFFFFF', ink:'18212B', muted:'5C6873', muted2:'8EA1B5', grid:'D9E0E6', panel:'F4F7F9',
+  blue:'1677FF', cyan:'24C7FF', doef:'0072B2', lgbm:'D55E00', xgb:'009E73', dayweek:'CC79A7', validation:'6F4E9C', test:'67727C', orange:'E69F00', red:'B35C00', green:'18A76C', lightBlue:'E9F5FF', lightPurple:'F0EBFA', lightOrange:'FFF1E8'
+};
+const FF='Noto Sans CJK SC';
+const EN='Aptos';
+const ROOT=path.resolve(__dirname,'..');
+const ASSET_MAP={
+  sci_01_forecast_decision_mismatch:'outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png',
+  sci_02_doef_main_results:'outputs/phase13_1/figures/sci_02_doef_main_results.png',
+  sci_03_multibuilding_regret:'outputs/phase13_1/figures/sci_03_multibuilding_regret.png',
+  sci_04_validation_weight_selection:'outputs/phase13_1/figures/sci_04_validation_weight_selection.png',
+  sci_05_storage_dispatch_frozen:'outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png',
+  doef_architecture_master:'outputs/phase13_1/architecture/doef_architecture_master.png',
+  con_01_prediction_decision_bridge:'outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png',
+  con_02_contribution_overview:'outputs/phase13_1/presentation_assets/con_02_contribution_overview.png'
+};
+const IMG=n=>path.join(ROOT,ASSET_MAP[n]);
+const shadow = safeOuterShadow('000000',0.16,45,1.5,1.1);
+
+function addTop(slide, id, section, light=false){
+  slide.addText(id,{x:.48,y:.21,w:.72,h:.22,fontFace:EN,fontSize:8.5,bold:true,color:light?C.validation:C.cyan,charSpacing:1.3,margin:0});
+  slide.addText(section.toUpperCase(),{x:1.25,y:.21,w:3.2,h:.22,fontFace:EN,fontSize:8.3,bold:true,color:light?'7A8897':'7890A7',charSpacing:1.0,margin:0});
+}
+function title(slide,text,{dark=false,size=27,y=.52,w=12.1}={}){
+  slide.addText(text,{x:.62,y,w,h:.62,fontFace:FF,fontSize:size,bold:true,color:dark?C.white:C.ink,margin:0,breakLine:false,fit:'shrink'});
+}
+function subtitle(slide,text,{dark=false,y=1.18,w=11.7}={}){
+  slide.addText(text,{x:.64,y,w,h:.4,fontFace:FF,fontSize:12.4,color:dark?'9DB0C2':C.muted,margin:0,fit:'shrink'});
+}
+function footer(slide,text,{dark=false}={}){
+  slide.addText(text,{x:.62,y:7.04,w:11.3,h:.18,fontFace:FF,fontSize:7.5,color:dark?'6F8295':'8996A4',margin:0,fit:'shrink'});
+}
+function source(slide,text,{dark=false}={}){
+  slide.addText(text,{x:.62,y:6.73,w:11.75,h:.16,fontFace:EN,fontSize:6.7,color:dark?'597087':'97A2AD',margin:0,fit:'shrink'});
+}
+function badge(slide,text,x,y,w,{fill=C.blue,color='FFFFFF',line=fill,fs=9}={}){
+  slide.addShape(pptx.ShapeType.roundRect,{x,y,w,h:.32,rectRadius:.06,fill:{color:fill},line:{color:line,transparency:100}});
+  slide.addText(text,{x:x+.08,y:y+.045,w:w-.16,h:.20,fontFace:FF,fontSize:fs,bold:true,color,align:'center',margin:0,fit:'shrink'});
+}
+function card(slide,x,y,w,h,{fill='FFFFFF',line='E0E7EF',radius=.09,sh=shadow}={}){
+  slide.addShape(pptx.ShapeType.roundRect,{x,y,w,h,rectRadius:radius,fill:{color:fill},line:{color:line,width:.8},shadow:sh});
+}
+function addImageCard(slide,img,x,y,w,h,{pad=.12}={}){
+  card(slide,x,y,w,h,{fill:'FFFFFF',line:'E2E8F0'});
+  slide.addImage({path:img,...imageSizingContain(img,x+pad,y+pad,w-pad*2,h-pad*2)});
+}
+function lineArrow(slide,x1,y1,x2,y2,{color=C.cyan,width=2,dash='solid'}={}){
+  slide.addShape(pptx.ShapeType.line,{x:x1,y:y1,w:x2-x1,h:y2-y1,line:{color,width,dashType:dash,beginArrowType:'none',endArrowType:'triangle'}});
+}
+function bigNumber(slide,n,label,x,y,w,{accent=C.blue,dark=false}={}){
+  slide.addText(n,{x,y,w,h:.62,fontFace:EN,fontSize:28,bold:true,color:accent,margin:0,fit:'shrink'});
+  slide.addText(label,{x,y:y+.72,w,h:.42,fontFace:FF,fontSize:11.5,color:dark?'A9B8C6':C.muted,margin:0,fit:'shrink'});
+}
+function note(slide,txt){ try{ slide.addNotes(txt); }catch(e){} }
+function mainFooter(slide, id, dark=false){ footer(slide,`${id} · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估`,{dark}); }
+function appHeader(slide,id,role){ addTop(slide,id,`APPENDIX · ${role}`,true); badge(slide,'Q&A ONLY',11.55,.19,.98,{fill:C.validation,fs:8.2}); }
+
+// M01
+{
+ const s=pptx.addSlide('MAIN_DARK'); addTop(s,'SB-M01','OPENING');
+ s.addText('DOEF',{x:.65,y:1.25,w:3.4,h:.86,fontFace:EN,fontSize:49,bold:true,color:C.cyan,margin:0,charSpacing:1});
+ s.addText('让负荷预测服务于\n储能削峰决策',{x:.65,y:2.18,w:6.4,h:1.55,fontFace:FF,fontSize:34,bold:true,color:C.white,margin:0,breakLine:false,fit:'shrink',lineSpacingMultiple:1.0});
+ s.addText('面向储能决策的集成负荷预测方法',{x:.67,y:4.00,w:5.6,h:.42,fontFace:FF,fontSize:16,color:'B6C5D2',margin:0});
+ // Right composition: prediction → battery → realized peak
+ s.addShape(pptx.ShapeType.roundRect,{x:7.35,y:1.28,w:5.15,h:4.7,rectRadius:.12,fill:{color:'0D1F33',transparency:2},line:{color:'1D3A57',width:1.0}});
+ const xs=[7.75,9.32,10.88];
+ const labels=[['24h','负荷预测'],['BESS','约束调度'],['PEAK','实际削峰']];
+ const cols=[C.lgbm,C.validation,C.cyan];
+ for(let i=0;i<3;i++){
+   s.addShape(pptx.ShapeType.ellipse,{x:xs[i],y:2.15,w:1.02,h:1.02,fill:{color:cols[i],transparency:82},line:{color:cols[i],width:2}});
+   s.addText(labels[i][0],{x:xs[i]+.10,y:2.42,w:.82,h:.22,fontFace:EN,fontSize:12,bold:true,color:cols[i],align:'center',margin:0});
+   s.addText(labels[i][1],{x:xs[i]-.15,y:3.38,w:1.32,h:.35,fontFace:FF,fontSize:11,bold:true,color:C.white,align:'center',margin:0});
+ }
+ lineArrow(s,8.79,2.66,9.23,2.66,{color:'54728C'}); lineArrow(s,10.35,2.66,10.79,2.66,{color:'54728C'});
+ // micro waveform
+ for(let i=0;i<13;i++){
+   const x=7.72+i*.34; const h=.18+Math.abs(Math.sin(i*.83))*.44;
+   s.addShape(pptx.ShapeType.line,{x,y:5.13-h/2,w:0,h,line:{color:i<6?'32647D':C.cyan,width:2,transparency:i<6?35:5}});
+ }
+ badge(s,'预测是输入，不是终点',7.88,4.16,3.92,{fill:'173A54',color:C.cyan,fs:11});
+ s.addText('24 小时前瞻预测  →  冻结电池优化  →  实际负荷上的决策结果',{x:7.82,y:4.67,w:4.05,h:.72,fontFace:FF,fontSize:11.2,color:'9EB3C5',margin:0,align:'center',fit:'shrink'});
+ s.addText('工作标题 · 正式赛题名称待核验',{x:.68,y:6.55,w:3.3,h:.25,fontFace:FF,fontSize:8.2,color:'647B90',margin:0});
+ mainFooter(s,'SB-M01',true);
+ note(s,'开场定位：这是 AI + 储能决策问题。不要把 LightGBM 说成创新。过渡：既然预测服务于决策，传统预测指标是否真的能选出更好的储能方案？');
+}
+
+// M02
+{
+ const s=pptx.addSlide('MAIN_LIGHT'); addTop(s,'SB-M02','TENSION',true); title(s,'更低的预测 RMSE，并未带来更低的储能决策 regret',{size:25});
+ subtitle(s,'冻结八栋建筑 Test 汇总中，XGBoost 与 LightGBM 在预测误差与决策 regret 上出现排序反转。');
+ addImageCard(s,IMG('sci_01_forecast_decision_mismatch'),.64,1.63,9.15,4.84,{pad:.06});
+ card(s,10.08,1.63,2.62,4.84,{fill:'0B192B',line:'0B192B',sh:null});
+ s.addText('核心矛盾',{x:10.38,y:1.95,w:1.9,h:.28,fontFace:FF,fontSize:11,bold:true,color:C.cyan,margin:0});
+ s.addText('RMSE',{x:10.38,y:2.45,w:1.1,h:.28,fontFace:EN,fontSize:13,bold:true,color:'AFC4D6',margin:0});
+ s.addText('XGBoost\n0.216751',{x:10.38,y:2.77,w:1.9,h:.68,fontFace:EN,fontSize:18,bold:true,color:C.xgb,margin:0});
+ s.addText('Decision regret',{x:10.38,y:3.66,w:1.8,h:.28,fontFace:EN,fontSize:11.3,bold:true,color:'AFC4D6',margin:0});
+ s.addText('LightGBM\n0.116127',{x:10.38,y:4.00,w:1.9,h:.68,fontFace:EN,fontSize:18,bold:true,color:C.lgbm,margin:0});
+ s.addShape(pptx.ShapeType.line,{x:10.35,y:4.94,w:1.95,h:0,line:{color:'31506A',width:1}});
+ s.addText('同一个“更准”\n不一定意味着同一个“更好调度”',{x:10.38,y:5.18,w:1.88,h:.74,fontFace:FF,fontSize:11.7,bold:true,color:C.white,margin:0,fit:'shrink'});
+ badge(s,'范围内反例 ≠ 预测精度无用',10.28,6.02,2.18,{fill:'40291B',color:'FFC494',line:'73513C',fs:7.3});
+ source(s,'Frozen source: outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png · Phase 9 final benchmark');
+ mainFooter(s,'SB-M02',false);
+ note(s,'用这一页制造核心张力。只说“在冻结项目范围内出现排序反转”，不说预测精度无关，也不把很小的差异升级为普遍因果机制。下一页解释预测如何进入调度链。');
+}
+
+// M03
+{
+ const s=pptx.addSlide('MAIN_DARK'); addTop(s,'SB-M03','PROBLEM'); title(s,'预测只是中间环节，调度结果才是工程终点',{dark:true,size:26}); subtitle(s,'负荷预测会改变储能充放电计划；最终评价发生在真实负荷与电池动作叠加后的结果上。',{dark:true});
+ addImageCard(s,IMG('con_01_prediction_decision_bridge'),.76,1.69,11.82,4.34,{pad:.06});
+ badge(s,'CONCEPTUAL / EXPLANATORY',.95,6.12,2.42,{fill:'173A54',color:C.cyan,fs:8.5});
