@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "phase": "13.0",
+  "status": "historical",
+  "logical_role": "historical HOLD-stage presentation implementation plan and source-contract audit",
+  "created_from_commit": "3d77272c36108fffcdcb4f73c240b52bbfc4de86",
+  "recorded_after_commit": "5defef819f54e81c8cad3ad855b0ae16f340e327",
+  "algorithm_freeze_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+  "historical_verdict": "HOLD",
+  "acceptance_reason": "The files are preserved as the audited predecessor that identified the frozen presentation-data gap and motivated Phase 13.0A. They are not the current numerical or story-mapping authority.",
+  "current_authorities": {
+    "numerical_evidence": "outputs/phase13_0a/frozen_presentation_data_manifest.json",
+    "claim_registry": "outputs/phase13_0b/final_presentation_claims.json",
+    "metric_shortlist": "outputs/phase13_0b/presentation_metric_shortlist.csv",
+    "figure_shortlist": "outputs/phase13_0b/final_figure_shortlist.csv",
+    "slide_story_map": "outputs/phase13_0b/slide_evidence_map.csv",
+    "pipeline_specification": "outputs/phase13_0b/doef_pipeline_spec.json"
+  },
+  "consumption_rule": "Later presentation work must use Phase 13.0A and Phase 13.0B as the current frozen authorities. These Phase 13.0 HOLD files may be used only for historical rationale, competition-rule planning, and unresolved GUI-design context.",
+  "artifacts": [
+    {
+      "path": "outputs/phase13/source_of_truth_contract.json",
+      "status": "historical",
+      "sha256": "40ee654b9d07009b9c39a51a49b6001c9ea8d8bec4a02d7c62a9bc5ce9974004",
+      "successor": "outputs/phase13_0a/frozen_presentation_data_manifest.json"
+    },
+    {
+      "path": "outputs/phase13/report_outline.json",
+      "status": "historical",
+      "sha256": "728cf6340ea6c89286ae32e2358d396bfea367329ea9780a399da7c3784b71ff",
+      "successor": "outputs/phase13_0b/slide_evidence_map.csv"
+    },
+    {
+      "path": "outputs/phase13/figure_plan.csv",
+      "status": "historical",
+      "sha256": "a73bd4962511b91709b990822dbb5715048ae9121393c7d77fc4a129d5435ce7",
+      "successor": "outputs/phase13_0b/final_figure_shortlist.csv"
+    },
+    {
+      "path": "outputs/phase13/gui_spec.json",
+      "status": "historical",
+      "sha256": "c16bb9a47eba35377f505ab248d04abb5f5d701c385c2d1c0d39b27132738e33",
+      "successor": null,
+      "note": "Retained as blocked design context; no GUI implementation is authorized by this record."
+    },
+    {
+      "path": "outputs/phase13/gui_data_map.csv",
+      "status": "historical",
+      "sha256": "c19baaab458298e67d693179f02345f7b2a8598cae12cbb83c5a142f58b305b1",
+      "successor": null,
+      "note": "Retained as blocked design context; current presentation data must resolve through Phase 13.0A/13.0B."
+    },
+    {
+      "path": "reports/phase13_implementation_plan.md",
+      "status": "historical",
+      "sha256": "1567e3e4f4f4550c7f33afbcd3535e49069966fe580610eb1a2e67b86736ce62",
+      "successor": "reports/phase13/phase13_0a_frozen_presentation_data_recovery_audit.md"
+    }
+  ],
+  "algorithm_modified": false,
+  "new_experiment_run": false,
+  "presentation_created": false
+}

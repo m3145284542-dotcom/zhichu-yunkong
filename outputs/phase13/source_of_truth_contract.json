@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "phase": "13.0",
+  "status": "HOLD",
+  "created_from_commit": "3d77272c36108fffcdcb4f73c240b52bbfc4de86",
+  "algorithm_freeze_commit": "549abc314e93e2862bfc22965db89622c22890e1",
+  "source_policy": {
+    "headline_number_source": "outputs/phase12/key_number_ledger.csv",
+    "old_report_number_rule": "Numbers in older reports must never become Phase 13 formal values merely because they appear equal. Resolve KPI identity, value, unit, rounding and wording through the Phase 12 ledger.",
+    "claims": "Only Phase 12 APPROVED or APPROVED_WITH_SCOPE claims are allowed; CORE-1 remains LEVEL B, CORE-2/3 LEVEL C.",
+    "test_role": "evaluation_only",
+    "oracle_role": "non-deployable hindsight evaluation upper bound",
+    "raw_data_rule": "Only hash-matching whitelist entries may be consumed. No fallback.",
+    "loader_path": "presentation/data-consumption path may bypass src.final_algorithm only for whitelisted read-only files; this does not repair the canonical-loader defect."
+  },
+  "required_categories": [
+    "competition_rules",
+    "claim_source",
+    "number_source",
+    "metric_semantics",
+    "unit_semantics",
+    "prior_art_source",
+    "raw_figure_data"
+  ],
+  "sources": [
+    {
+      "category": "competition_rules",
+      "path": "reports/phase10_final_deliverable_gap_audit.md",
+      "role": "delivery-gap and lineage audit",
+      "canonical_status": "formal audit",
+      "allowed_use": "plan sequencing and preserve recorded risks",
+      "prohibited_use": "not a competition-rule authority or number source",
+      "sha256": "49b2e62415a88de43b2511f574b7d8a9124a066507dc174e98b995107e584752",
+      "upstream_phase": "10"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase10/deliverable_gap_matrix.csv",
+      "role": "deliverable inventory",
+      "canonical_status": "formal audit",
+      "allowed_use": "gap/status planning",
+      "prohibited_use": "not rules authority or KPI source",
+      "sha256": "a5754f123183fdc24a68e0b86aacbcdd1e53b28c84c811d0ae3176369d2e5323",
+      "upstream_phase": "10"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase10/delivery_roadmap.json",
+      "role": "phase boundary",
+      "canonical_status": "formal audit",
+      "allowed_use": "enforce Phase 13/14/15 boundaries",
+      "prohibited_use": "not algorithm authority",
+      "sha256": "7aaa9a0db14c20f49416d628df69b11c5a629a04f1e93494f006b5d3edd30f55",
+      "upstream_phase": "10"
+    },
+    {
+      "category": "competition_rules",
+      "path": "reports/phase11_competition_rules_verification.md",
+      "role": "verified rule synthesis",
+      "canonical_status": "canonical for interpreted rules",
+      "allowed_use": "report/demo compliance planning",
+      "prohibited_use": "not a substitute for attached official PDFs when exact wording matters",
+      "sha256": "8093b0d4f1b31b3f28b45915237519330fa814d25812eb91813e202df6f8396f",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase11/phase11_verdict.json",
+      "role": "track and phase verdict",
+      "canonical_status": "canonical",
+      "allowed_use": "machine-readable track and readiness checks",
+      "prohibited_use": "not a KPI source",
+      "sha256": "2f236459686dc2f0b1b390c55ff57c4d9fb3e5691a69e987652815012b3e9bf7",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase11/requirement_checklist.csv",
+      "role": "rule checklist",
+      "canonical_status": "canonical",
+      "allowed_use": "rule-by-rule compliance mapping",
+      "prohibited_use": "not experimental evidence",
+      "sha256": "b489b42665f96f4fdccec5eb283d1abaf8e1fa48dae9762321d50800f1f47706",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase11/rule_conflicts.csv",
+      "role": "rule conflict register",
+      "canonical_status": "canonical",
+      "allowed_use": "preserve precedence and UNKNOWN items",
+      "prohibited_use": "not fill UNKNOWN by inference",
+      "sha256": "efa9ee2a7ecc13317300d97dd4a6bf7debd9e3f2c3795f75db56cfb0b89256b7",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase11/rules_evidence_register.csv",
+      "role": "rule evidence register",
+      "canonical_status": "canonical",
+      "allowed_use": "trace requirements to sources",
+      "prohibited_use": "not experimental evidence",
+      "sha256": "392fe07b938b3da09c1053a0a88517a4e3819a604bb6a5ad778e8e5cada40379",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "outputs/phase11/source_manifest.json",
+      "role": "official-source manifest",
+      "canonical_status": "canonical",
+      "allowed_use": "verify official-file identity and hashes",
+      "prohibited_use": "not report-number source",
+      "sha256": "9c969393e3af7a08c8dcb8dd98756db01c26e65e5e5791f82e334454b61d3bac",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "docs/competition_rules/2026-04-28_第八届AIC大赛举办通知.pdf",
+      "role": "general competition notice",
+      "canonical_status": "official primary source",
+      "allowed_use": "competition identity and general schedule",
+      "prohibited_use": "not override track-specific rules",
+      "sha256": "10978152ea8e26b613ce0ec2c66f64cf2ab2342d73a776e5155039b64f1d7ecf",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "docs/competition_rules/2026-04-29_算法创新赛道通知.pdf",
+      "role": "algorithm-track notice",
+      "canonical_status": "official primary source; non-applicable identity evidence",
+      "allowed_use": "disambiguation only",
+      "prohibited_use": "do not import the 算法模型创新 rubric",
+      "sha256": "61062dc9720f0c781dfeb56557644645172b092fce2ecf35674b62adf59fc87c",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "docs/competition_rules/2026-05-06_算法创新赛赛题规则汇总.pdf",
+      "role": "multi-track rule compilation",
+      "canonical_status": "official primary source; mixed scope",
+      "allowed_use": "identity disambiguation only",
+      "prohibited_use": "do not mix non-AI+energy scoring rules",
+      "sha256": "6974f2163f1b2e56999d57e602f8381f6fba2faca0a417d19699e29333b4bff8",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "docs/competition_rules/2026-07-11_AI+能源主题赛通知.pdf",
+      "role": "AI+energy track notice",
+      "canonical_status": "official primary source",
+      "allowed_use": "selected-track identity, eligibility and timeline",
+      "prohibited_use": "not invent unpublished details",
+      "sha256": "57d13d5846f158b3de30f0228fa10ac242dccbd88028e904557eb9d2321b94a3",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "docs/competition_rules/2026-07_AI+能源技术报告参考大纲-科技创新组.pdf",
+      "role": "technical-report outline",
+      "canonical_status": "official primary source",
+      "allowed_use": "report structure and typography",
+      "prohibited_use": "not infer a page limit",
+      "sha256": "1e5d87df60d02235bebf225734b7e7dbc6f951cd64e5e02bccd1d4c512834bbf",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "competition_rules",
+      "path": "docs/competition_rules/2026-07_AI+能源竞赛规则及作品提交要求-科技创新组.pdf",
+      "role": "selected-group rules and submission specification",
+      "canonical_status": "official primary source",
+      "allowed_use": "rubric, anonymity, deliverables and submission limits",
+      "prohibited_use": "not infer GUI as mandatory",
+      "sha256": "81345b2c213e5189da11d867c4f7576cd7d01f3c1dfc0f1d4a8a5cc06446ecf2",
+      "upstream_phase": "11"
+    },
+    {
+      "category": "claim_source",
+      "path": "reports/phase12_innovation_positioning_and_claim_freeze.md",
+      "role": "claim-freeze narrative",
+      "canonical_status": "frozen formal",
+      "allowed_use": "safe narrative and handoff boundary",
+      "prohibited_use": "not a direct numeric source",
+      "sha256": "6258e7107a54c699fa640c8ff4efdab72b08b9fc2168e2f5add544ee67e0655e",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "claim_source",
+      "path": "outputs/phase12/claim_evidence_matrix.csv",
+      "role": "claim wording and evidence matrix",
+      "canonical_status": "frozen canonical",
+      "allowed_use": "use APPROVED or APPROVED_WITH_SCOPE rows only",
+      "prohibited_use": "do not use rejected/provisional wording",
+      "sha256": "14ca3a93f5f173d266ce24b853e971e27a011aff28ef7327a55301ce83995608",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "claim_source",
+      "path": "outputs/phase12/innovation_claims_frozen.json",
+      "role": "CORE-1/2/3 freeze",
+      "canonical_status": "frozen canonical",
+      "allowed_use": "claim level, confidence, safe wording and caveats",
+      "prohibited_use": "do not create or promote claims",
+      "sha256": "6c9dffd8e90867f172e9436b1a372330f83d5a69d582a1d6f3dc973a02267440",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "claim_source",
+      "path": "outputs/phase12/prohibited_claims.md",
+      "role": "prohibited wording register",
+      "canonical_status": "frozen canonical",
+      "allowed_use": "lint report, figures, PPT and GUI copy",
+      "prohibited_use": "do not weaken qualifiers",
+      "sha256": "4d3886fabc315e30f71dc3aa07573dc2b2598559a25b6610cc0a488b7f8af6cd",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "number_source",
+      "path": "outputs/phase12/key_number_ledger.csv",
+      "role": "sole headline-number ledger",
+      "canonical_status": "frozen canonical and exclusive",
+      "allowed_use": "all headline KPI values, units, rounding and wording",
+      "prohibited_use": "no direct headline numbers from old reports or upstream tables even when equal",
+      "sha256": "7c03022b74ae254efec4ed31e61829dbe17c64fcee75fec76dd2e3a22d6913f5",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "prior_art_source",
+      "path": "outputs/phase12/literature_registry_frozen.csv",
+      "role": "frozen literature registry",
+      "canonical_status": "frozen canonical",
+      "allowed_use": "citations and verification status",
+      "prohibited_use": "do not revive pre-research registry",
+      "sha256": "851890bd6977f8fe70e510750a03762f5a27b6fb26429a595e3af0040e4f00fd",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "prior_art_source",
+      "path": "outputs/phase12/prior_art_audit.csv",
+      "role": "method-overlap audit",
+      "canonical_status": "frozen canonical",
+      "allowed_use": "bounded comparison to prior art",
+      "prohibited_use": "do not infer novelty beyond audited differences",
+      "sha256": "51d0a0d468f654403f12a99b5f5f4703885d25546503c0542b84c7485a980dbc",
+      "upstream_phase": "12"
+    },
+    {
+      "category": "metric_semantics",
+      "path": "outputs/phase9_1/metric_semantics.json",
+      "role": "metric definitions",
+      "canonical_status": "canonical",
+      "allowed_use": "define regret, normalization and whole-window peak reduction",
+      "prohibited_use": "do not equate regret with peak, cost, energy or carbon",
+      "sha256": "ff07f2ee0d96b2676f84ab13f6302543cb1b51defb8f8420dfb6ba6d634de574",
+      "upstream_phase": "9.1"
+    },
+    {
+      "category": "unit_semantics",
+      "path": "outputs/phase9_1/unit_semantics.json",
+      "role": "unit definitions",
+      "canonical_status": "canonical",
+      "allowed_use": "label meter energy, interval-average power, SOC and capacity",
+      "prohibited_use": "do not conflate kWh and kW despite one-hour numeric equality",
+      "sha256": "a114ccd51ff37406728238fc279ab2125f24e3b43907dd61b62673af5daba9dc",
+      "upstream_phase": "9.1"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "role": "canonical reporting semantics and aggregate evidence",
+      "canonical_status": "canonical",
+      "allowed_use": "support non-headline derivations and scope checks; headline values still resolve through ledger",
+      "prohibited_use": "not bypass key_number_ledger.csv",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36",
+      "upstream_phase": "9.1"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "role": "building bootstrap units",
+      "canonical_status": "canonical",
+      "allowed_use": "bootstrap supporting figure",
+      "prohibited_use": "not use Phase 9 building-day CI as primary",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8",
+      "upstream_phase": "9.1"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9_1/building_level_bootstrap_summary.json",
+      "role": "building-level CI summary",
+      "canonical_status": "canonical",
+      "allowed_use": "CI annotations; headline values via ledger",
+      "prohibited_use": "not call a hypothesis test",
+      "sha256": "e87007e2dc2608e6e1aafebf622cc00a558110168b7aac525088f188da78a38e",
+      "upstream_phase": "9.1"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase7/selected_buildings.json",
+      "role": "building-selection protocol",
+      "canonical_status": "canonical with known parent-hash caveat",
+      "allowed_use": "296 to 82 to 8 flow and selected IDs",
+      "prohibited_use": "not claim Train-only eligibility or unseen-building transfer",
+      "sha256": "0a39c5e38c0568d30010d5b0c2a71d82933fe5e27b5df37408c9de2f81f7b885",
+      "upstream_phase": "7"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase7/selected_buildings.csv",
+      "role": "selected morphology rows",
+      "canonical_status": "canonical with known parent-hash caveat",
+      "allowed_use": "selection-protocol and morphology supporting figures",
+      "prohibited_use": "not select again",
+      "sha256": "2057f67f11f345fdf7c2f6609351ca4fe4c06dabe816c19067dd129856679d2a",
+      "upstream_phase": "7"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase7/model_test_forecast_metrics.csv",
+      "role": "per-building frozen forecast metrics",
+      "canonical_status": "canonical with known parent-hash caveat",
+      "allowed_use": "support Test rank/winner visuals",
+      "prohibited_use": "not select model on Test",
+      "sha256": "38692038ae03c56000c2f05f6ac2138f39c58f26eb588f9b8cfff14dcd20d855",
+      "upstream_phase": "7"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase7/model_test_decision_metrics.csv",
+      "role": "per-building frozen decision metrics",
+      "canonical_status": "canonical with known parent-hash caveat",
+      "allowed_use": "support Test rank/winner visuals",
+      "prohibited_use": "not select model on Test",
+      "sha256": "8680b2eced090f2ef2e56d5ceecf3217eacc1958f23b0eff1aec07eff3499454",
+      "upstream_phase": "7"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase8/selected_weights.csv",
+      "role": "per-building frozen weights",
+      "canonical_status": "canonical",
+      "allowed_use": "weight mismatch and selected-weight visuals",
+      "prohibited_use": "not retune weights",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959",
+      "upstream_phase": "8"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase8/validation_weight_search.csv",
+      "role": "Validation weight grid",
+      "canonical_status": "canonical supporting selection evidence",
+      "allowed_use": "DOEF mechanism curves/heatmap",
+      "prohibited_use": "not use Test for selection",
+      "sha256": "c28ab6885d2e3c6ad89f1e8854963694f90d9c058077a417b84a906b291163f7",
+      "upstream_phase": "8"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "role": "daily frozen Test outcomes",
+      "canonical_status": "canonical",
+      "allowed_use": "auditable case-selection ranking and daily summaries",
+      "prohibited_use": "not reconstruct hourly dispatch",
+      "sha256": "918f3b4e38cec5b16be964a2631392577068333de264e973ddac9409a2f4da60",
+      "upstream_phase": "8"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase8/test_forecast_metrics.csv",
+      "role": "per-building DOEF Test forecast metrics",
+      "canonical_status": "canonical",
+      "allowed_use": "per-building forecast comparisons",
+      "prohibited_use": "not substitute for hourly saved predictions",
+      "sha256": "66d7bef9f8c671486f5f93f84141101ab04a85168726ebe813b689411bed9c51",
+      "upstream_phase": "8"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "role": "per-building DOEF Test decision metrics",
+      "canonical_status": "canonical",
+      "allowed_use": "per-building decision-result figures",
+      "prohibited_use": "not equate regret and peak reduction",
+      "sha256": "1c4667ce525a0cdada916bd11ee8c27276ec3a816aeae6b12bbd45355fdbb502",
+      "upstream_phase": "8"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9/final_benchmark.csv",
+      "role": "final benchmark summary",
+      "canonical_status": "canonical",
+      "allowed_use": "support per-method benchmark and peak-reduction fields; headline values via ledger",
+      "prohibited_use": "not use old display names without mapping to DOEF",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c",
+      "upstream_phase": "9"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9/per_building_metrics.csv",
+      "role": "per-building benchmark metrics",
+      "canonical_status": "canonical",
+      "allowed_use": "per-building DOEF versus LightGBM chart",
+      "prohibited_use": "not change comparison population",
+      "sha256": "d0fd10d5c8e80b773575857b1f79de4b23294bd7a8b7c82fbf32023a96d29cdf",
+      "upstream_phase": "9"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9/efficiency_metrics.csv",
+      "role": "recorded efficiency evidence",
+      "canonical_status": "canonical supporting",
+      "allowed_use": "efficiency appendix/defense backup",
+      "prohibited_use": "not claim industrial latency",
+      "sha256": "11cbea992e8fddc31e33b4a362ad22d3ab9b98c1567a4723bbd2189d8541b80d",
+      "upstream_phase": "9"
+    },
+    {
+      "category": "raw_figure_data",
+      "path": "outputs/phase9/constraint_summary.json",
+      "role": "constraint audit summary",
+      "canonical_status": "canonical",
+      "allowed_use": "support zero-audited-violation statement via ledger",
+      "prohibited_use": "not field-safety certification",
+      "sha256": "f1c7d860ebca33a98ad09c77b3f5d885a0bc4108d70bad610b6a46b041a05a99",
+      "upstream_phase": "9"
+    },
+    {
+      "category": "existing_visual_only",
+      "path": "outputs/phase8/figures/06_representative_dispatch.png",
+      "role": "existing static representative dispatch image",
+      "canonical_status": "canonical registered visual but not raw data",
+      "allowed_use": "historical visual audit and defense backup only",
+      "prohibited_use": "not power interactive GUI or a recreated full dispatch/SOC figure",
+      "sha256": "a0bb0ec0cc353021314112ccfa36b9e4f2c74dd18b03905e1f9dd121be1b12ca",
+      "upstream_phase": "8"
+    },
+    {
+      "category": "gap_evidence",
+      "path": "outputs/phase7/ensemble_test_results.csv",
+      "role": "empty file proving no saved ensemble hourly rows",
+      "canonical_status": "canonical registered empty artifact",
+      "allowed_use": "document the frozen hourly-data gap",
+      "prohibited_use": "not treat as usable time series or silently fall back",
+      "sha256": "3665f23462e8f8f4b3f1685dcdaef42713f41bddc744d2f9c1f762d9757f1d3c",
+      "upstream_phase": "7"
+    }
+  ],
+  "known_lineage_defect": {
+    "status": "OPEN_HIGH",
+    "description": "Phase 7 clean-checkout parent hashes registered by the canonical loader do not match the delivered committed bytes.",
+    "phase13_action": "record and bypass only through this hash-whitelisted read-only presentation path",
+    "prohibited_action": "do not modify the loader, manifests, registered hashes or frozen artifacts",
+    "latest_resolution_gate": "before Phase 15 completion under separate authorization"
+  },
+  "implementation_blockers": [
+    {
+      "id": "P13-HOURLY-001",
+      "severity": "BLOCKING_FOR_PHASE_13_1",
+      "description": "No canonical machine-readable Phase 7/8/9 multi-building hourly forecast series is saved. outputs/phase7/ensemble_test_results.csv has zero rows."
+    },
+    {
+      "id": "P13-HOURLY-002",
+      "severity": "BLOCKING_FOR_PHASE_13_1",
+      "description": "Phase 8 hourly dispatch data (actual, forecast, charge, discharge, SOC and realized grid load) was held in memory for plotting but not written as a frozen artifact."
+    }
+  ],
+  "integrity_expectations": {
+    "fail_closed": true,
+    "fallback_allowed": false,
+    "schema_validation_required": true,
+    "hash_validation_required": true,
+    "frozen_inputs_mutable": false
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "phase": "13.0",
+  "status": "DESIGN_COMPLETE_IMPLEMENTATION_HOLD",
+  "technology_stack": {
+    "framework": "Python + Streamlit",
+    "decision": "preferred; no repository compatibility issue found",
+    "not_selected": [
+      "React",
+      "Vue",
+      "separate frontend/backend"
+    ],
+    "reason": "minimal read-only competition demonstrator; no need for a second application stack"
+  },
+  "principles": {
+    "read_only": "Only open hash-whitelisted frozen artifacts; no write path to outputs/phase7, outputs/phase8, outputs/phase9, outputs/phase9_1 or outputs/phase12.",
+    "deterministic": "Sort buildings/dates explicitly and apply only contract-declared transformations/rounding.",
+    "fail_closed": "Before rendering any tab, validate required file existence, SHA-256 and schema. Any mismatch raises FrozenSourceError and stops the app.",
+    "no_duplicate_truth": "KPI values are resolved by key_id from outputs/phase12/key_number_ledger.csv; no manually copied constants in UI code.",
+    "no_fallback": "Missing/invalid sources never fall back to old reports, images or earlier outputs.",
+    "simulation_label": "Every storage view shows Simulation-based evaluation / 仿真验证.",
+    "lineage_boundary": "This is a presentation/data-consumption path using contract-whitelisted outputs, not a repair of src.final_algorithm."
+  },
+  "proposed_files": {
+    "app": "demo/app.py (Phase 13.1 or later; not created in 13.0)",
+    "data_layer": "demo/data_loader.py (not created in 13.0 because required hourly interfaces cannot yet be satisfied)",
+    "contract": "outputs/phase13/source_of_truth_contract.json",
+    "mapping": "outputs/phase13/gui_data_map.csv"
+  },
+  "loader_interfaces": [
+    {
+      "name": "load_source_contract()",
+      "returns": "SourceContract",
+      "sources": [
+        "outputs/phase13/source_of_truth_contract.json"
+      ],
+      "validation": [
+        "JSON schema",
+        "contract status policy"
+      ]
+    },
+    {
+      "name": "validate_frozen_sources()",
+      "returns": "ValidationReport or raises FrozenSourceError",
+      "sources": [
+        "all source entries required by active components"
+      ],
+      "validation": [
+        "exists",
+        "sha256 exact",
+        "expected schema/columns",
+        "non-empty when required"
+      ],
+      "side_effects": "none"
+    },
+    {
+      "name": "load_key_numbers()",
+      "returns": "dict[key_id, FrozenNumber]",
+      "sources": [
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "validation": [
+        "exact ledger SHA-256",
+        "unique key_id",
+        "FROZEN status",
+        "unit/rounding fields present"
+      ]
+    },
+    {
+      "name": "load_project_summary()",
+      "returns": "ProjectSummary",
+      "sources": [
+        "outputs/phase12/key_number_ledger.csv",
+        "outputs/phase12/innovation_claims_frozen.json"
+      ],
+      "validation": [
+        "all KPI key_ids present",
+        "CORE levels unchanged"
+      ]
+    },
+    {
+      "name": "load_buildings()",
+      "returns": "ordered list[FrozenBuilding]",
+      "sources": [
+        "outputs/phase7/selected_buildings.json"
+      ],
+      "validation": [
+        "exactly 8 unique frozen IDs",
+        "selection order 0..7"
+      ]
+    },
+    {
+      "name": "load_forecast_timeseries(building, date)",
+      "returns": "HourlyForecastFrame",
+      "sources": [],
+      "validation": [
+        "BLOCKED: canonical hourly Actual/DayWeek/LightGBM/DOEF table absent"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "name": "load_dispatch_timeseries(building, date)",
+      "returns": "HourlyDispatchFrame",
+      "sources": [],
+      "validation": [
+        "BLOCKED: canonical hourly charge/discharge/SOC/grid table absent"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "name": "load_validation_weight_search(building)",
+      "returns": "ValidationWeightFrame",
+      "sources": [
+        "outputs/phase8/validation_weight_search.csv",
+        "outputs/phase8/selected_weights.csv"
+      ],
+      "validation": [
+        "building in frozen list",
+        "11 weights 0.0..1.0",
+        "w_forecast/w_decision each on grid"
+      ]
+    },
+    {
+      "name": "load_multibuilding_results()",
+      "returns": "MultiBuildingResultFrame",
+      "sources": [
+        "outputs/phase9/per_building_metrics.csv",
+        "outputs/phase9_1/building_level_bootstrap.csv",
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "validation": [
+        "8 frozen buildings",
+        "DOEF and LightGBM rows",
+        "W/T/L agrees with DOEF-005"
+      ]
+    }
+  ],
+  "expected_schemas": {
+    "HourlyForecastFrame": [
+      "timestamp",
+      "building",
+      "date",
+      "actual_kwh_per_hour_interval",
+      "dayweek_kwh_per_hour_interval",
+      "lightgbm_kwh_per_hour_interval",
+      "doef_kwh_per_hour_interval"
+    ],
+    "HourlyDispatchFrame": [
+      "timestamp",
+      "building",
+      "date",
+      "method",
+      "actual_load_kwh_per_hour_interval",
+      "forecast_load_kwh_per_hour_interval",
+      "charge_kw",
+      "discharge_kw",
+      "grid_load_kw",
+      "soc_kwh"
+    ],
+    "ValidationWeightFrame": [
+      "building",
+      "weight",
+      "normalized_MAE",
+      "normalized_mean_regret",
+      "is_forecast_optimal",
+      "is_decision_optimal"
+    ]
+  },
+  "tabs": [
+    {
+      "id": "T1",
+      "title": "项目总览",
+      "status": "READY_FOR_IMPLEMENTATION",
+      "components": [
+        "value-chain figure",
+        "296 → 82 → 8",
+        "24 h horizon",
+        "6/8 mismatch",
+        "3.61% normalized-regret improvement",
+        "6/2/0 decision-regret W/T/L",
+        "6.44% simulated mean whole-window peak reduction"
+      ],
+      "kpi_key_ids": [
+        "SCOPE-001",
+        "SCOPE-002",
+        "SCOPE-003",
+        "SPLIT-005",
+        "MISMATCH-001",
+        "DOEF-004",
+        "DOEF-005",
+        "DOEF-008"
+      ],
+      "sources": [
+        "outputs/phase12/key_number_ledger.csv",
+        "outputs/phase13/figure_plan.csv"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "负荷预测",
+      "status": "BLOCKED",
+      "controls": [
+        "frozen building",
+        "frozen Test date"
+      ],
+      "charts": [
+        "Actual",
+        "DayWeek",
+        "LightGBM",
+        "DOEF"
+      ],
+      "sources": [],
+      "blocker": "No frozen multi-building hourly forecast table exists; aggregate metrics cannot substitute."
+    },
+    {
+      "id": "T3",
+      "title": "储能削峰",
+      "status": "BLOCKED",
+      "controls": [
+        "frozen building",
+        "frozen Test date"
+      ],
+      "charts": [
+        "Original load",
+        "Forecast",
+        "charge/discharge",
+        "grid load",
+        "SOC"
+      ],
+      "kpis": [
+        "Original peak",
+        "Optimized peak",
+        "Peak reduction"
+      ],
+      "sources": [
+        "outputs/phase8/test_daily_decision_metrics.csv"
+      ],
+      "blocker": "Daily summary exists, but hourly forecast/dispatch/SOC rows do not. Existing PNG is static-only and cannot satisfy selectable read-only data."
+    },
+    {
+      "id": "T4",
+      "title": "为什么预测最准 ≠ 决策最好",
+      "status": "READY_FOR_IMPLEMENTATION",
+      "controls": [
+        "frozen building"
+      ],
+      "charts": [
+        "weight vs normalized MAE",
+        "weight vs normalized decision regret",
+        "forecast-optimal marker",
+        "decision-optimal marker"
+      ],
+      "kpi_key_ids": [
+        "MISMATCH-001"
+      ],
+      "sources": [
+        "outputs/phase8/validation_weight_search.csv",
+        "outputs/phase8/selected_weights.csv",
+        "outputs/phase12/key_number_ledger.csv"
+      ]
+    }
+  ],
+  "error_model": [
+    {
+      "type": "FrozenSourceMissingError",
+      "condition": "required source path absent",
+      "behavior": "stop rendering; show path and no fallback"
+    },
+    {
+      "type": "FrozenSourceHashMismatchError",
+      "condition": "SHA-256 differs from contract",
+      "behavior": "stop rendering; show expected/actual hash"
+    },
+    {
+      "type": "FrozenSourceSchemaError",
+      "condition": "required fields/types/cardinality fail",
+      "behavior": "stop rendering; list failed checks"
+    },
+    {
+      "type": "FrozenSemanticMismatchError",
+      "condition": "derived W/T/L, weight grid or building set conflicts with ledger",
+      "behavior": "stop rendering; do not display partial KPIs"
+    }
+  ],
+  "security_and_mutability": {
+    "open_mode": "binary/text read only",
+    "allowed_roots": [
+      "outputs/phase7",
+      "outputs/phase8",
+      "outputs/phase9",
+      "outputs/phase9_1",
+      "outputs/phase12",
+      "outputs/phase13"
+    ],
+    "forbidden_calls": [
+      "fit",
+      "train",
+      "tune",
+      "optimize",
+      "dispatch production entry",
+      "prediction generation",
+      "file write to frozen roots"
+    ],
+    "cache_key": "contract SHA-256 plus each source SHA-256"
+  },
+  "case_selection_rule": {
+    "proposed": "Use canonical anchor building Hog_office_Rolando, then choose the frozen Test date whose DOEF daily regret is closest to that building's median DOEF daily regret; break exact ties by earliest date.",
+    "rationale": "Predetermined, auditable and not selected for visual attractiveness or best Test outcome.",
+    "current_status": "NOT EXECUTED; cannot populate an hourly case until an authorized frozen hourly presentation artifact exists."
+  },
+  "phase13_1_entry_gate": [
+    "Provide a separately authorized, immutable, hashed hourly forecast artifact for all 8 buildings and 30 Test dates without retraining/regenerating predictions.",
+    "Provide a separately authorized, immutable, hashed hourly dispatch artifact including charge, discharge, SOC and realized grid load without rerunning dispatch, or formally narrow the GUI to static/aggregate views.",
+    "Add the accepted artifacts to the Phase 13 contract and validate schemas/hashes."
+  ]
+}

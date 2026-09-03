@@ -1,0 +1,24 @@
+gui_component,displayed_metric,displayed_chart,source_file,source_field,transformation,unit,rounding,frozen_source,fallback_allowed,availability,blocker_or_note
+T1.value_chain,,architecture,outputs/phase13/figure_plan.csv,figure_id=F01,render approved diagram specification only,N/A,N/A,YES,NO,AVAILABLE,No experimental recomputation.
+T1.scope_candidates,office building candidates,,outputs/phase12/key_number_ledger.csv,key_id=SCOPE-001,identity lookup,buildings,ledger allowed_rounding,YES,NO,AVAILABLE,
+T1.scope_eligible,eligible office buildings,,outputs/phase12/key_number_ledger.csv,key_id=SCOPE-002,identity lookup,buildings,ledger allowed_rounding,YES,NO,AVAILABLE,
+T1.scope_selected,selected buildings,,outputs/phase12/key_number_ledger.csv,key_id=SCOPE-003,identity lookup,buildings,ledger allowed_rounding,YES,NO,AVAILABLE,
+T1.horizon,forecast horizon,,outputs/phase12/key_number_ledger.csv,key_id=SPLIT-005,identity lookup,hours,ledger allowed_rounding,YES,NO,AVAILABLE,
+T1.mismatch,forecast/decision weight mismatch,,outputs/phase12/key_number_ledger.csv,key_id=MISMATCH-001,identity lookup,buildings,exact fraction,YES,NO,AVAILABLE,
+T1.regret_improvement,relative normalized regret improvement,,outputs/phase12/key_number_ledger.csv,key_id=DOEF-004,identity lookup,percent,3.61%,YES,NO,AVAILABLE,
+T1.wtl,decision-regret wins/ties/losses,,outputs/phase12/key_number_ledger.csv,key_id=DOEF-005,identity lookup,buildings,exact triplet,YES,NO,AVAILABLE,
+T1.peak_reduction,mean whole-window peak reduction,,outputs/phase12/key_number_ledger.csv,key_id=DOEF-008,identity lookup + mandatory simulated label,percent,6.44%,YES,NO,AVAILABLE,Not energy saving.
+T2.building_selector,frozen building list,,outputs/phase7/selected_buildings.json,selected_buildings[].building,sort by selection_order,identifier,none,YES,NO,AVAILABLE,
+T2.date_selector,frozen Test date list,,,,requires unique dates from missing hourly forecast table,date,YYYY-MM-DD,YES,NO,BLOCKED,No canonical multi-building hourly forecast table.
+T2.forecast_chart,,Actual;DayWeek;LightGBM;DOEF,,,filter exact frozen building/date only,kWh per hourly interval,display precision only; no KPI derivation,YES,NO,BLOCKED,Phase 7/8/9 saved aggregate metrics but not hourly component/DOEF predictions.
+T3.date_selector,frozen Test date list,,outputs/phase8/test_daily_decision_metrics.csv,building;date;method,filter frozen Test and DOEF method,date,YYYY-MM-DD,YES,NO,PARTIAL,"Dates/daily rows exist, but chart cannot render hourly series."
+T3.dispatch_chart,,Original load;Forecast;charge/discharge;grid load;SOC,,,filter exact frozen building/date only,kWh per hourly interval;kW;kWh,display precision only,YES,NO,BLOCKED,Phase 8 dispatch frame was not persisted; existing PNG is not a selectable data source.
+T3.original_peak,original daily peak,,outputs/phase8/test_daily_decision_metrics.csv,original_peak,filter building/date/method=DecisionSelectedPerBuilding,kW,display-only; not a headline KPI,YES,NO,AVAILABLE,Simulation-based evaluation label required.
+T3.optimized_peak,realized daily peak,,outputs/phase8/test_daily_decision_metrics.csv,realized_peak,filter building/date/method=DecisionSelectedPerBuilding,kW,display-only; not a headline KPI,YES,NO,AVAILABLE,Simulation-based evaluation label required.
+T3.peak_reduction,daily peak reduction,,outputs/phase8/test_daily_decision_metrics.csv,peak_reduction;peak_reduction_pct,filter building/date/method=DecisionSelectedPerBuilding,kW;percent,display-only; distinguish from ledger whole-window KPI,YES,NO,AVAILABLE,Do not call energy saving.
+T4.building_selector,frozen building list,,outputs/phase7/selected_buildings.json,selected_buildings[].building,sort by selection_order,identifier,none,YES,NO,AVAILABLE,
+T4.weight_curves,,weight vs normalized MAE;weight vs normalized decision regret,outputs/phase8/validation_weight_search.csv,building;weight;normalized_MAE;mean_regret_vs_oracle;train_mean_load,normalized_regret=mean_regret_vs_oracle/train_mean_load; filter building,ratio,chart precision only,YES,NO,AVAILABLE,Validation only.
+T4.optimal_markers,forecast-optimal and decision-optimal weight,,outputs/phase8/selected_weights.csv,building;w_forecast;w_decision;weights_differ,filter building; join exact weight grid,weight,one decimal,YES,NO,AVAILABLE,No optimization in GUI.
+T4.global_mismatch,6 of 8 mismatch,,outputs/phase12/key_number_ledger.csv,key_id=MISMATCH-001,identity lookup,buildings,exact fraction,YES,NO,AVAILABLE,
+validation.contract,source validation status,,outputs/phase13/source_of_truth_contract.json,sources[].path;sources[].sha256,"exists + SHA-256 + schema, all before render",status,none,YES,NO,AVAILABLE,Any failure stops app.
+validation.hourly_gap,hourly interface readiness,,outputs/phase7/ensemble_test_results.csv,row_count,require >0 and schema; current row_count=0,rows,integer,YES,NO,BLOCKED,Explicit fail-closed gap evidence; never fall back.

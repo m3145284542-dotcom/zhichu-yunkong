@@ -1,0 +1,582 @@
+{
+  "schema_version": 1,
+  "phase": "13.0",
+  "status": "PLANNED_WITH_BLOCKER",
+  "competition_context": {
+    "track": "算法主题赛（AI+能源）—科技创新组",
+    "rubric": {
+      "R1": "问题聚焦与创新价值（20）",
+      "R2": "需求洞察与背景分析（10）",
+      "R3": "技术深度与框架构建（25）",
+      "R4": "实验验证与结果分析（25）",
+      "R5": "应用价值与推广潜力（10）",
+      "R6": "反思局限与未来展望（10）",
+      "C": "报告完整性与呈现规范（规则要求，非独立分值）"
+    },
+    "report_pdf_required": true,
+    "report_size_limit_mb": 10,
+    "page_limit": "UNKNOWN",
+    "word_limit": "UNKNOWN",
+    "abstract_chinese_characters": "300–500",
+    "main_text": "小四号宋体，单倍行距",
+    "references": "五号宋体，20 磅行距",
+    "anonymous": true
+  },
+  "narrative_chain": [
+    "建筑能源问题",
+    "建筑负荷预测",
+    "预测精度与储能决策目标不完全一致",
+    "DOEF 的 Validation decision-regret selection",
+    "严格 Test evaluation",
+    "多建筑结果",
+    "模拟储能削峰",
+    "应用价值",
+    "局限性与未来工作"
+  ],
+  "sections": [
+    {
+      "section_id": "S01",
+      "title_cn": "项目概述 / 摘要",
+      "competition_rubric_mapping": [
+        "R1",
+        "R3",
+        "R4",
+        "R5",
+        "C"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase11/requirement_checklist.csv",
+        "outputs/phase12/innovation_claims_frozen.json",
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "required_figures": [
+        "F01",
+        "F03",
+        "F04"
+      ],
+      "required_key_numbers": [
+        "SCOPE-001",
+        "SCOPE-002",
+        "SCOPE-003",
+        "SPLIT-005",
+        "MISMATCH-001",
+        "DOEF-002",
+        "DOEF-004",
+        "DOEF-005",
+        "DOEF-008"
+      ],
+      "allowed_claims": "300–500 字内概述场景、DOEF LEVEL B adaptation、冻结多建筑仿真证据与边界",
+      "prohibited_claims": "任何首次/真实部署/节能电费碳排表述",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S02",
+      "title_cn": "AI+能源问题背景",
+      "competition_rubric_mapping": [
+        "R1",
+        "R2"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase11/requirement_checklist.csv",
+        "outputs/phase12/literature_registry_frozen.csv"
+      ],
+      "required_figures": [
+        "F01"
+      ],
+      "required_key_numbers": [
+        "SPLIT-005"
+      ],
+      "allowed_claims": "建筑负荷预测驱动受约束储能削峰，预测指标并非下游价值的完整代理",
+      "prohibited_claims": "夸大产业规模或未核验经济数据",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S03",
+      "title_cn": "相关工作与现有方法边界",
+      "competition_rubric_mapping": [
+        "R1",
+        "R2"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase12/literature_registry_frozen.csv",
+        "outputs/phase12/prior_art_audit.csv",
+        "outputs/phase12/claim_evidence_matrix.csv"
+      ],
+      "required_figures": [],
+      "required_key_numbers": [],
+      "allowed_claims": "value-oriented forecasting、DFL、battery-aware forecasting 已有先例；精确说明 DOEF 差异",
+      "prohibited_claims": "首创、全新 DFL、first decision-focused ensemble",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S04",
+      "title_cn": "问题定义",
+      "competition_rubric_mapping": [
+        "R1",
+        "R3"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase9_1/metric_semantics.json",
+        "outputs/phase9_1/unit_semantics.json",
+        "outputs/phase9/final_algorithm.json"
+      ],
+      "required_figures": [
+        "F01"
+      ],
+      "required_key_numbers": [
+        "SPLIT-005"
+      ],
+      "allowed_claims": "定义 24 h 点预测、仿真电池、realized peak、Oracle regret 与选择目标",
+      "prohibited_claims": "将 energy/power/peak/regret/cost 混用",
+      "expected_importance": "HIGH",
+      "ppt_candidate": false
+    },
+    {
+      "section_id": "S05",
+      "title_cn": "数据集与实验设计",
+      "competition_rubric_mapping": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase7/selected_buildings.json",
+        "outputs/phase7/selected_buildings.csv",
+        "outputs/phase8/run_config.json",
+        "outputs/phase9_1/methodology_audit.json"
+      ],
+      "required_figures": [
+        "F07",
+        "F08"
+      ],
+      "required_key_numbers": [
+        "SCOPE-001",
+        "SCOPE-002",
+        "SCOPE-003",
+        "SPLIT-001",
+        "SPLIT-002",
+        "SPLIT-003",
+        "SPLIT-004"
+      ],
+      "allowed_claims": "固定 coverage eligibility 后以 Train morphology 选 8 栋；Test 只评价",
+      "prohibited_claims": "所有建筑筛选完全 Train-only、unseen-building transfer",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S06",
+      "title_cn": "系统总体架构",
+      "competition_rubric_mapping": [
+        "R3",
+        "C"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase9/final_algorithm.json",
+        "outputs/phase8/run_config.json",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "required_figures": [
+        "F01"
+      ],
+      "required_key_numbers": [
+        "SPLIT-005"
+      ],
+      "allowed_claims": "清楚分离 Train/Validation/Test，Oracle 仅 hindsight evaluation",
+      "prohibited_claims": "end-to-end differentiable learning 或 Oracle 可部署",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S07",
+      "title_cn": "DOEF 方法",
+      "competition_rubric_mapping": [
+        "R1",
+        "R3"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase12/innovation_claims_frozen.json",
+        "outputs/phase8/selected_weights.csv",
+        "outputs/phase8/validation_weight_search.csv"
+      ],
+      "required_figures": [
+        "F02",
+        "F09"
+      ],
+      "required_key_numbers": [
+        "MISMATCH-001"
+      ],
+      "allowed_claims": "CORE-1 原文：optimizer-derived Validation peak-shaving regret selects a fixed DayWeek–LightGBM blend before Test",
+      "prohibited_claims": "新网络、新 DFL 理论、CORE-1 升级为 LEVEL A",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S08",
+      "title_cn": "储能优化与决策评价",
+      "competition_rubric_mapping": [
+        "R3"
+      ],
+      "upstream_evidence_sources": [
+        "reports/battery_methodology.md",
+        "outputs/phase7/building_battery_configs.csv",
+        "outputs/phase9_1/metric_semantics.json",
+        "outputs/phase9_1/unit_semantics.json"
+      ],
+      "required_figures": [
+        "F01",
+        "F06"
+      ],
+      "required_key_numbers": [
+        "DOEF-010"
+      ],
+      "allowed_claims": "说明受约束 daily optimizer、daily reset、Oracle regret 和单位",
+      "prohibited_claims": "真实控制器部署或 field safety certification",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S09",
+      "title_cn": "实验设置",
+      "competition_rubric_mapping": [
+        "R3",
+        "R4"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase7/model_selection_config.json",
+        "outputs/phase8/run_config.json",
+        "outputs/phase9/run_config.json",
+        "outputs/phase9_1/methodology_audit.json"
+      ],
+      "required_figures": [
+        "F07"
+      ],
+      "required_key_numbers": [
+        "SPLIT-001",
+        "SPLIT-002",
+        "SPLIT-003",
+        "SPLIT-004",
+        "SPLIT-005"
+      ],
+      "allowed_claims": "固定 split、权重网格、tie rule、Test evaluation-only",
+      "prohibited_claims": "重新解释 Test 为选择数据",
+      "expected_importance": "HIGH",
+      "ppt_candidate": false
+    },
+    {
+      "section_id": "S10",
+      "title_cn": "预测结果",
+      "competition_rubric_mapping": [
+        "R4"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase8/test_forecast_metrics.csv",
+        "outputs/phase9/per_building_metrics.csv",
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "required_figures": [
+        "F04"
+      ],
+      "required_key_numbers": [
+        "DOEF-001",
+        "DOEF-002"
+      ],
+      "allowed_claims": "报告 normalized MAE 宏平均及相对 LightGBM 改善",
+      "prohibited_claims": "accuracy 不重要、绝对 kW 或百分点误标",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S11",
+      "title_cn": "决策结果",
+      "competition_rubric_mapping": [
+        "R4"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase8/test_decision_metrics.csv",
+        "outputs/phase9/per_building_metrics.csv",
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "required_figures": [
+        "F04",
+        "F05",
+        "F10"
+      ],
+      "required_key_numbers": [
+        "DOEF-003",
+        "DOEF-004",
+        "DOEF-005",
+        "DOEF-006",
+        "DOEF-007",
+        "DOEF-008",
+        "DOEF-009",
+        "DOEF-010"
+      ],
+      "allowed_claims": "仿真协议下的 normalized regret、6/2/0 与 whole-window peak reduction",
+      "prohibited_claims": "成本、节能、碳排或普遍支配",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S12",
+      "title_cn": "Forecast ≠ Decision 核心证据",
+      "competition_rubric_mapping": [
+        "R1",
+        "R4"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase8/selected_weights.csv",
+        "outputs/phase7/model_test_forecast_metrics.csv",
+        "outputs/phase7/model_test_decision_metrics.csv",
+        "outputs/phase7/summary.json"
+      ],
+      "required_figures": [
+        "F02",
+        "F03",
+        "F09"
+      ],
+      "required_key_numbers": [
+        "MISMATCH-001",
+        "MISMATCH-002",
+        "MISMATCH-003"
+      ],
+      "allowed_claims": "三项统计语义分别解释：Validation weight mismatch、Test winner agreement、exact rank agreement",
+      "prohibited_claims": "把 0.344 说成相关系数或用 Test 选择 DOEF",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S13",
+      "title_cn": "多建筑稳健性",
+      "competition_rubric_mapping": [
+        "R4"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase7/selected_buildings.csv",
+        "outputs/phase9/per_building_metrics.csv",
+        "outputs/phase9_1/building_level_bootstrap.csv"
+      ],
+      "required_figures": [
+        "F05",
+        "F08",
+        "F10"
+      ],
+      "required_key_numbers": [
+        "SCOPE-003",
+        "DOEF-005",
+        "DOEF-006",
+        "DOEF-007"
+      ],
+      "allowed_claims": "8 栋固定办公建筑的多建筑稳健性证据并保留 ties",
+      "prohibited_claims": "全体建筑泛化或未知建筑迁移",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S14",
+      "title_cn": "负面结果与停止规则",
+      "competition_rubric_mapping": [
+        "R4",
+        "R6"
+      ],
+      "upstream_evidence_sources": [
+        "reports/phase5_7_report.md",
+        "outputs/phase9/competition_summary.json",
+        "outputs/phase9_1/final_reporting_summary.json",
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "required_figures": [
+        "F11"
+      ],
+      "required_key_numbers": [
+        "NEG-001",
+        "NEG-002",
+        "NEG-003"
+      ],
+      "allowed_claims": "保留 robust、peak-aware、CatBoost failure 与不利/tie 样本，限定为冻结实验",
+      "prohibited_claims": "把负结果概括成一般理论结论",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S15",
+      "title_cn": "创新点",
+      "competition_rubric_mapping": [
+        "R1"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase12/innovation_claims_frozen.json",
+        "outputs/phase12/claim_evidence_matrix.csv",
+        "outputs/phase12/prior_art_audit.csv"
+      ],
+      "required_figures": [
+        "F02"
+      ],
+      "required_key_numbers": [
+        "MISMATCH-001"
+      ],
+      "allowed_claims": "CORE-1 LEVEL B adaptation；CORE-2/3 LEVEL C evidence/rigor",
+      "prohibited_claims": "新增创新点、提升 claim level、弱化 prior-art 边界",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S16",
+      "title_cn": "应用价值与推广潜力",
+      "competition_rubric_mapping": [
+        "R5"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase11/requirement_checklist.csv",
+        "outputs/phase12/innovation_claims_frozen.json",
+        "outputs/phase9/efficiency_metrics.csv"
+      ],
+      "required_figures": [
+        "F01",
+        "F12"
+      ],
+      "required_key_numbers": [
+        "DOEF-008",
+        "EFF-001",
+        "EFF-002",
+        "EFF-003"
+      ],
+      "allowed_claims": "轻量、透明、可审计的仿真展示与潜在部署路径；效率仅限记录环境",
+      "prohibited_claims": "已节费/节能/减碳/新能源消纳或工业级实时部署",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S17",
+      "title_cn": "局限、伦理与风险",
+      "competition_rubric_mapping": [
+        "R6"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase9_1/final_reporting_summary.json",
+        "outputs/phase10/deliverable_gap_matrix.csv",
+        "outputs/phase12/prohibited_claims.md"
+      ],
+      "required_figures": [
+        "F11"
+      ],
+      "required_key_numbers": [],
+      "allowed_claims": "8 buildings、one Test month、simulation、daily reset、无 tariff/carbon；公开 lineage defect",
+      "prohibited_claims": "隐藏 lineage defect 或把审计机制说成完整复现已解决",
+      "expected_importance": "CRITICAL",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S18",
+      "title_cn": "未来工作",
+      "competition_rubric_mapping": [
+        "R6"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase12/innovation_claims_frozen.json",
+        "outputs/phase10/delivery_roadmap.json"
+      ],
+      "required_figures": [],
+      "required_key_numbers": [],
+      "allowed_claims": "现场验证、更多季节/建筑、成本与碳模型、单独修复 lineage，均明确为 future work",
+      "prohibited_claims": "把未来工作写成已完成结果",
+      "expected_importance": "MEDIUM",
+      "ppt_candidate": false
+    },
+    {
+      "section_id": "S19",
+      "title_cn": "结论",
+      "competition_rubric_mapping": [
+        "R1",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase12/innovation_claims_frozen.json",
+        "outputs/phase12/key_number_ledger.csv"
+      ],
+      "required_figures": [
+        "F03",
+        "F04",
+        "F05"
+      ],
+      "required_key_numbers": [
+        "MISMATCH-001",
+        "DOEF-002",
+        "DOEF-004",
+        "DOEF-005"
+      ],
+      "allowed_claims": "重申 bounded adaptation、冻结 Test 证据和仿真边界",
+      "prohibited_claims": "首创、全面领先、真实工程收益",
+      "expected_importance": "HIGH",
+      "ppt_candidate": true
+    },
+    {
+      "section_id": "S20",
+      "title_cn": "参考文献",
+      "competition_rubric_mapping": [
+        "R2",
+        "C"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase12/literature_registry_frozen.csv"
+      ],
+      "required_figures": [],
+      "required_key_numbers": [],
+      "allowed_claims": "只使用 frozen registry 的核验引用",
+      "prohibited_claims": "未核验元数据作为核心证据",
+      "expected_importance": "HIGH",
+      "ppt_candidate": false
+    },
+    {
+      "section_id": "S21",
+      "title_cn": "可选附录",
+      "competition_rubric_mapping": [
+        "R3",
+        "R4",
+        "R6",
+        "C"
+      ],
+      "upstream_evidence_sources": [
+        "outputs/phase7/artifact_manifest.json",
+        "outputs/phase8/lineage.json",
+        "outputs/phase9_1/data_lineage.json",
+        "outputs/phase12/prohibited_claims.md"
+      ],
+      "required_figures": [
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12"
+      ],
+      "required_key_numbers": [
+        "DOEF-006",
+        "DOEF-007",
+        "DOEF-010",
+        "DOEF-011",
+        "EFF-001",
+        "EFF-002",
+        "EFF-003",
+        "NEG-001",
+        "NEG-002",
+        "NEG-003"
+      ],
+      "allowed_claims": "补充方法、semantics、bootstrap、负结果、效率、血缘风险",
+      "prohibited_claims": "借附录绕过 claim/number freeze",
+      "expected_importance": "MEDIUM",
+      "ppt_candidate": false
+    }
+  ],
+  "global_constraints": {
+    "headline_numbers": "resolve only by key_id through outputs/phase12/key_number_ledger.csv",
+    "claims": "Phase 12 frozen wording only",
+    "storage_outcomes": "must say simulation-based evaluation / 仿真验证",
+    "test": "evaluation only",
+    "oracle": "hindsight, non-deployable"
+  }
+}
