@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "phase": "14",
+  "status": "BLOCKED",
+  "ready_to_submit": false,
+  "blocking_reason": "Phase 13.3 incomplete",
+  "authoritative_scope": "blocked-state record only; not an approved upload list",
+  "starting_head": "a8cab9bd86ada158d38e2c70e32a53f77ee983df",
+  "audit_base_head": "9557c4f8567a6a073b958d8ef35ca46d6927e475",
+  "branch": "main",
+  "frozen_baseline": "549abc314e93e2862bfc22965db89622c22890e1",
+  "frozen_baseline_is_ancestor": true,
+  "submission_recommendation": "SUBMIT_NO_FILES",
+  "phase13_3_gate": {
+    "formal_acceptance_present": false,
+    "pptx_path": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx",
+    "pptx_sha256": "7376af37372cc1cdb571ee1aafec0c4dd3304537c8dd7ae803de4d731ad19b83",
+    "slide_count": 23,
+    "notes_part_count": 23,
+    "openxml_well_formed": true,
+    "standard_renderer": "FAIL_OVERFLOW_INT32",
+    "overflow_attribute_count": 8,
+    "independent_libreoffice_open": "PASS_WITH_VISUAL_DEFECTS",
+    "visual_readability": "FAIL_CJK_GLYPH_COLLISION",
+    "tracked_pdf_present": false
+  },
+  "artifacts": [
+    {
+      "artifact": "Phase 13.3 competition PPTX",
+      "purpose": "competition defense deck",
+      "required": "LIKELY_REQUIRED",
+      "canonical_source": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx",
+      "included": false,
+      "sha256": "7376af37372cc1cdb571ee1aafec0c4dd3304537c8dd7ae803de4d731ad19b83",
+      "status": "BLOCKER"
+    },
+    {
+      "artifact": "PDF deck",
+      "purpose": "fixed-layout presentation fallback",
+      "required": "NOT_YET_CONFIRMED",
+      "canonical_source": null,
+      "included": false,
+      "sha256": null,
+      "status": "MISSING_NOT_VERIFIED"
+    },
+    {
+      "artifact": "technical report",
+      "purpose": "written technical submission",
+      "required": "NOT_YET_CONFIRMED",
+      "canonical_source": null,
+      "included": false,
+      "sha256": null,
+      "status": "NOT_AUDITED_GATE_STOPPED"
+    },
+    {
+      "artifact": "source and reproducibility package",
+      "purpose": "third-party reproduction",
+      "required": "NOT_YET_CONFIRMED",
+      "canonical_source": null,
+      "included": false,
+      "sha256": null,
+      "status": "NOT_PACKAGED_GATE_STOPPED"
+    },
+    {
+      "artifact": "frozen scientific evidence",
+      "purpose": "internal traceability support",
+      "required": "INTERNAL_SUPPORTING_MATERIAL",
+      "canonical_source": "outputs/phase7 through outputs/phase9_1 and outputs/phase13_0a through outputs/phase13_2",
+      "included": false,
+      "sha256": null,
+      "status": "NO_GIT_DRIFT_DETECTED_NOT_PACKAGED"
+    }
+  ],
+  "skipped_due_to_gate": [
+    "final cross-document scientific claim matrix",
+    "final_numeric_consistency_matrix",
+    "final figure and package audit",
+    "official submission requirement classification",
+    "reproducibility and clean-room submission test",
+    "privacy and packaging hygiene scan",
+    "final package hash verification"
+  ]
+}
