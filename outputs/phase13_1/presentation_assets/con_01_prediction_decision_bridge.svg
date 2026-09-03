@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648
+L 1152 648
+L 1152 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 211.8528 388.11312
+L 352.9152 388.11312
+Q 368.9856 388.11312 368.9856 379.13184
+L 368.9856 285.32736
+Q 368.9856 276.34608 352.9152 276.34608
+L 211.8528 276.34608
+Q 195.7824 276.34608 195.7824 285.32736
+L 195.7824 379.13184
+Q 195.7824 388.11312 211.8528 388.11312
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #d55e00; stroke-width: 2.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 417.1968 388.11312
+L 558.2592 388.11312
+Q 574.3296 388.11312 574.3296 379.13184
+L 574.3296 285.32736
+Q 574.3296 276.34608 558.2592 276.34608
+L 417.1968 276.34608
+Q 401.1264 276.34608 401.1264 285.32736
+L 401.1264 379.13184
+Q 401.1264 388.11312 417.1968 388.11312
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #6f4e9c; stroke-width: 2.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 631.4688 388.11312
+L 772.5312 388.11312
+Q 788.6016 388.11312 788.6016 379.13184
+L 788.6016 285.32736
+Q 788.6016 276.34608 772.5312 276.34608
+L 631.4688 276.34608
+Q 615.3984 276.34608 615.3984 285.32736
+L 615.3984 379.13184
+Q 615.3984 388.11312 631.4688 388.11312
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 836.8128 388.11312
+L 977.8752 388.11312
+Q 993.9456 388.11312 993.9456 379.13184
+L 993.9456 285.32736
+Q 993.9456 276.34608 977.8752 276.34608
+L 836.8128 276.34608
+Q 820.7424 276.34608 820.7424 285.32736
+L 820.7424 379.13184
+Q 820.7424 388.11312 836.8128 388.11312
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #18212b; stroke-width: 2.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 360.274588 332.2296
+Q 380.592678 332.2296 398.898308 332.2296
+" clip-path="url(#p84723e4717)" style="fill: none; stroke: #18212b; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 393.298308 329.4296
+L 398.898308 332.2296
+L 393.298308 335.0296
+z
+" clip-path="url(#p84723e4717)" style="fill: #18212b; stroke: #18212b; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 565.618588 332.2296
+Q 585.936678 332.2296 604.242308 332.2296
+" clip-path="url(#p84723e4717)" style="fill: none; stroke: #18212b; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 598.642308 329.4296
+L 604.242308 332.2296
+L 598.642308 335.0296
+z
+" clip-path="url(#p84723e4717)" style="fill: #18212b; stroke: #18212b; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 779.890588 332.2296
+Q 800.208678 332.2296 818.514308 332.2296
+" clip-path="url(#p84723e4717)" style="fill: none; stroke: #18212b; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 812.914308 329.4296
+L 818.514308 332.2296
+L 812.914308 335.0296
+z
+" clip-path="url(#p84723e4717)" style="fill: #18212b; stroke: #18212b; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d55e00" x="222.5664" y="307.925989" transform="rotate(-0 222.5664 307.925989)">24 h load forecast</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18212b" x="222.5664" y="327.936617" transform="rotate(-0 222.5664 327.936617)">error timing + shape</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6f4e9c" x="427.9104" y="306.565442" transform="rotate(-0 427.9104 306.565442)">Battery optimization</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18212b" x="427.9104" y="327.936617" transform="rotate(-0 427.9104 327.936617)">charge / discharge schedule</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0072b2" x="642.1824" y="306.565442" transform="rotate(-0 642.1824 306.565442)">Realized grid load</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18212b" x="642.1824" y="327.936617" transform="rotate(-0 642.1824 327.936617)">actual load + battery action</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18212b" x="847.5264" y="307.925989" transform="rotate(-0 847.5264 307.925989)">Decision outcome</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18212b" x="847.5264" y="327.936617" transform="rotate(-0 847.5264 327.936617)">post-storage peak + regret</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5c6873" x="590.4" y="227.448" transform="rotate(-0 590.4 227.448)">The same scalar forecast score can hide different errors at decision-critical hours</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0072b2" x="590.4" y="451.98" transform="rotate(-0 590.4 451.98)">Evaluate both forecast quality and downstream storage value</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="font-weight: 700; font-size: 27px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #18212b" x="63.36" y="52.915781" transform="rotate(-0 63.36 52.915781)">Prediction is an input to the decision — not the endpoint</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5c6873" x="63.36" y="615.6" transform="rotate(-0 63.36 615.6)">CONCEPTUAL / EXPLANATORY · no experimental values encoded · no cost, carbon, or energy-savings claim</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p84723e4717">
+   <rect x="144" y="77.76" width="892.8" height="498.96"/>
+  </clipPath>
+ </defs>
+</svg>

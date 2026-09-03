@@ -164,3 +164,14 @@ BDG2 meter values are hourly-interval kWh. Dispatch interprets `P_t = E_t / Δt`
 Canonical sources: `outputs/phase9/final_benchmark.csv` for the unchanged benchmark; `outputs/phase9_1/final_reporting_summary.json` for corrected interpretation; `outputs/phase9_1/data_lineage.json` for fail-closed lineage; `reports/phase9_1_final_audit.md` for the final audit report.
 
 Reproduction: `python scripts/run_phase9_1.py` followed by `python -m unittest discover -s tests -v`.
+
+## Phase 13.1 — Frozen Evidence Visual Assets
+
+Phase 13.1 converts only the Phase 13.0B approved evidence into scientific figures, the frozen DOEF v1.0 architecture, and explicitly labeled explanatory assets. It does not rerun experiments, change evidence selection, or create a PPT. The canonical asset manifest is `outputs/phase13_1/manifests/visual_asset_manifest.json`; the audit report is `reports/phase13_1_visual_assets.md`.
+
+Reproduction and fail-closed validation:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\build_phase13_1_visual_assets.py
+.\.venv\Scripts\python.exe scripts\validate_phase13_1_visual_assets.py
+```

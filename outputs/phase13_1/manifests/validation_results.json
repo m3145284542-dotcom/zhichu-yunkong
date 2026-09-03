@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "phase": "13.1",
+  "status": "PASS",
+  "head_at_validation": "062a3ceb02a293bbb78c7c7c4fe1d35fc9ae3999",
+  "branch": "main",
+  "hf1_ancestry": "PASS",
+  "hash_contract": "LF-normalized SHA-256 for text; raw SHA-256 for binary; frozen Git committed bytes arbitrate legacy CRLF registry entries.",
+  "legacy_registry_note": "Some Phase 7/8/9 and Phase 13.0A text digests were historically recorded from CRLF checkouts. They are not rewritten; normalized current bytes are compared with frozen committed blobs to distinguish newline conversion from real drift.",
+  "manifest_schema": "PASS",
+  "asset_count": 8,
+  "source_files_exist": "PASS",
+  "outputs": [
+    {
+      "path": "outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png",
+      "bytes": 173893,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.svg",
+      "bytes": 19868,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_02_doef_main_results.png",
+      "bytes": 183551,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_02_doef_main_results.svg",
+      "bytes": 19731,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_03_multibuilding_regret.png",
+      "bytes": 157213,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_03_multibuilding_regret.svg",
+      "bytes": 18392,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_04_validation_weight_selection.png",
+      "bytes": 152022,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_04_validation_weight_selection.svg",
+      "bytes": 19201,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png",
+      "bytes": 258428,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.svg",
+      "bytes": 156919,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/architecture/doef_architecture_master.png",
+      "bytes": 280098,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/architecture/doef_architecture_master.svg",
+      "bytes": 29336,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/architecture/doef_architecture_master_transparent.png",
+      "bytes": 291285,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png",
+      "bytes": 122676,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.svg",
+      "bytes": 7070,
+      "svg_parse": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/presentation_assets/con_02_contribution_overview.png",
+      "bytes": 136536,
+      "dimensions": [
+        2400,
+        1350
+      ],
+      "png_read": "PASS"
+    },
+    {
+      "path": "outputs/phase13_1/presentation_assets/con_02_contribution_overview.svg",
+      "bytes": 9744,
+      "svg_parse": "PASS"
+    }
+  ],
+  "deterministic_rebuild": "PASS",
+  "integrity": {
+    "phase7_8_9_9_1": {
+      "label": "Phase 7/8/9/9.1 canonical artifacts",
+      "registered": 76,
+      "validated": 76,
+      "drift_count": 0,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_0a": {
+      "label": "Phase 13.0A registered sources",
+      "registered": 88,
+      "validated": 88,
+      "drift_count": 0,
+      "missing": [],
+      "drift": [],
+      "status": "PASS"
+    },
+    "phase13_0b": {
+      "label": "Phase 13.0B registered files",
+      "registered": 8,
+      "validated": 8,
+      "drift_count": 0,
+      "missing": [],
+      "drift": [],
+      "structured_semantic_digest": "aed5661250f7e9f224aa00b6587ccca41c2c8cc7d654cf8e1c716ae5b51ec702",
+      "status": "PASS"
+    }
+  },
+  "claim_evidence_semantic_changes": "NONE",
+  "new_experiments_or_statistical_tests": "NO",
+  "ppt_created": "NO",
+  "errors": []
+}

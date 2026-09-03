@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "phase": "13.1",
+  "status": "canonical",
+  "logical_role": "presentation-ready visual assets derived from frozen approved evidence",
+  "producer": "scripts/build_phase13_1_visual_assets.py",
+  "producer_version": "1.0.0",
+  "starting_head": "062a3ceb02a293bbb78c7c7c4fe1d35fc9ae3999",
+  "branch_at_start": "main",
+  "hash_contract": "LF-normalized SHA-256 for text; raw SHA-256 for binary; frozen Git committed bytes arbitrate legacy CRLF registries",
+  "scientific_freeze": "No experiment, estimator, split, selection, model, prediction, or optimization is rerun or changed.",
+  "asset_count": 8,
+  "scientific_asset_count": 5,
+  "conceptual_asset_count": 3,
+  "style_guide": "outputs/phase13_1/manifests/visual_style_guide.json",
+  "preview_files": [
+    "outputs/phase13_1/previews/phase13_1_core_assets_preview.png",
+    "outputs/phase13_1/previews/phase13_1_core_assets_preview.html"
+  ],
+  "assets": [
+    {
+      "asset_id": "SCI-01-forecast-decision-mismatch",
+      "title": "Forecast metrics alone do not determine decision value",
+      "asset_type": "scientific_figure",
+      "scientific_or_conceptual": "SCIENTIFIC",
+      "claim_id": [
+        "CORE-02"
+      ],
+      "evidence_id": [
+        "CLM-2482",
+        "CLM-2472",
+        "CLM-2484",
+        "CLM-2474"
+      ],
+      "intended_message": "XGBoost has slightly lower normalized RMSE than LightGBM but higher normalized decision regret on the frozen eight-building Test aggregate.",
+      "source_phase": [
+        "9",
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase9/final_benchmark.csv"
+      ],
+      "source_hashes": {
+        "outputs/phase9/final_benchmark.csv": "a43ecd09e1e740c53561ef56547d502224a6c199de33c7248000d04bba73e2b6"
+      },
+      "source_fields": [
+        "rows display_name in {LightGBM,XGBoost}",
+        "normalized_rmse_mean",
+        "normalized_decision_regret_mean"
+      ],
+      "deterministic_transform": "Select two pre-approved rows and render two independent zero-based paired comparisons; no recomputation.",
+      "chart_type": "two-panel paired slope comparison",
+      "output_files": [
+        "outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png",
+        "outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.png": "36b33b5b68d6dd72d5aa8da164a8f157bf0e729de32f22ddd8c174cc9de2e08c",
+        "outputs/phase13_1/figures/sci_01_forecast_decision_mismatch.svg": "9eb63a648cac34be4d931c4f337d6ae02c63e7e796c8f3eddcbc329d1c9935b2"
+      },
+      "plotted_values_checksum": "4200cf711f7953fe9a247719cfcc4997844fa3064c70f280c78dd08daa9b03b4",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Scientific question / mismatch evidence",
+      "priority": "HERO",
+      "supports_claim": "XGBoost has slightly lower normalized RMSE than LightGBM but higher normalized decision regret on the frozen eight-building Test aggregate.",
+      "does_not_support": "Forecast accuracy is irrelevant; all accurate forecasts make poor decisions; causal or universal claims.",
+      "required_caveat": "The directional gap is small and project-scoped; forecast accuracy remains necessary but is insufficient alone.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "SCI-02-doef-main-results",
+      "title": "DOEF improves both frozen aggregate objectives",
+      "asset_type": "scientific_figure",
+      "scientific_or_conceptual": "SCIENTIFIC",
+      "claim_id": [
+        "CORE-06",
+        "CORE-07",
+        "CORE-08"
+      ],
+      "evidence_id": [
+        "CLM-2547",
+        "CLM-2546",
+        "CLM-2550",
+        "CLM-2549",
+        "CLM-2548",
+        "CLM-2551",
+        "CLM-2552",
+        "CLM-2553",
+        "CLM-2554",
+        "CLM-2506",
+        "CLM-2508"
+      ],
+      "intended_message": "Against LightGBM, DOEF lowers mean normalized MAE by 6.36% and mean normalized decision regret by 3.61%, with 6 wins, 2 ties, and 0 losses; the negative peak-reduction building remains disclosed.",
+      "source_phase": [
+        "9",
+        "9.1",
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase9/final_benchmark.csv",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "source_hashes": {
+        "outputs/phase9/final_benchmark.csv": "a43ecd09e1e740c53561ef56547d502224a6c199de33c7248000d04bba73e2b6",
+        "outputs/phase9_1/final_reporting_summary.json": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1"
+      },
+      "source_fields": [
+        "rows display_name in {LightGBM,DOEF}",
+        "normalized_mae_mean",
+        "normalized_decision_regret_mean",
+        "decision_wins_vs_lightgbm",
+        "decision_ties_vs_lightgbm",
+        "decision_losses_vs_lightgbm",
+        "peak_reduction_mean_pct",
+        "peak_reduction_min_pct"
+      ],
+      "deterministic_transform": "Render separate zero-based metric panels and verbatim frozen summary annotations; no cross-unit axis.",
+      "chart_type": "two-panel paired bars with outcome annotation",
+      "output_files": [
+        "outputs/phase13_1/figures/sci_02_doef_main_results.png",
+        "outputs/phase13_1/figures/sci_02_doef_main_results.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/figures/sci_02_doef_main_results.png": "4ffeb7c250a121828a678472994eab5e1b74f85b02c0bbc239b91edd67160230",
+        "outputs/phase13_1/figures/sci_02_doef_main_results.svg": "096e726ce06ef27310cce8f03f03f903d08f8f7c2822028d51aee80d8932b166"
+      },
+      "plotted_values_checksum": "401acb4b0637bb4aac4fb6aa471ec90400335e4f1993a1ebaa1dd61a051a5958",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Key result",
+      "priority": "HERO",
+      "supports_claim": "Against LightGBM, DOEF lowers mean normalized MAE by 6.36% and mean normalized decision regret by 3.61%, with 6 wins, 2 ties, and 0 losses; the negative peak-reduction building remains disclosed.",
+      "does_not_support": "SOTA, universal superiority, unseen-building generalization, significance, cost, carbon, or energy savings.",
+      "required_caveat": "Eight fixed offices and one fixed future Test month per building; Oracle-relative regret is not monetary regret.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "SCI-03-multibuilding-regret",
+      "title": "Decision value across all eight fixed buildings",
+      "asset_type": "scientific_figure",
+      "scientific_or_conceptual": "SCIENTIFIC",
+      "claim_id": [
+        "CORE-07"
+      ],
+      "evidence_id": [
+        "CLM-2549",
+        "CLM-2548",
+        "CLM-2552",
+        "CLM-2553",
+        "CLM-2554"
+      ],
+      "intended_message": "DOEF has lower normalized decision regret for six buildings and ties LightGBM for two, with every frozen building shown.",
+      "source_phase": [
+        "7",
+        "8",
+        "9",
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase7/selected_buildings.json",
+        "outputs/phase8/validation_weight_search.csv",
+        "outputs/phase9/decision_metrics.csv"
+      ],
+      "source_hashes": {
+        "outputs/phase7/selected_buildings.json": "0a4d54567eaecd03c390c6541cef6a5b440e52b6a63a0042f2479e8d09f55a4d",
+        "outputs/phase8/validation_weight_search.csv": "e686bda19aa2fb3b25b057f180e73577fd444bf0c68e3d371fccd2fe600a7e88",
+        "outputs/phase9/decision_metrics.csv": "e1738dac055ca57312daa7637e027e2f17d40a3353bd13777e48a47bef91b2bb"
+      },
+      "source_fields": [
+        "selected_buildings[*].building in frozen order",
+        "validation_weight_search: first train_mean_load per building",
+        "decision_metrics: split=test, method in {LightGBM,Phase8_DOEF}, mean_regret_vs_oracle"
+      ],
+      "deterministic_transform": "Divide frozen mean regret (kW) by frozen Train mean load per building; preserve all eight buildings and frozen order.",
+      "chart_type": "horizontal paired dumbbell",
+      "output_files": [
+        "outputs/phase13_1/figures/sci_03_multibuilding_regret.png",
+        "outputs/phase13_1/figures/sci_03_multibuilding_regret.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/figures/sci_03_multibuilding_regret.png": "98698812d1c21bd4cffb6a2867f0a4207b86d35dd81f5ded609c6ca9df197c87",
+        "outputs/phase13_1/figures/sci_03_multibuilding_regret.svg": "d33331c8dafa6073ee13ec0854b96c743835908534118c5302029de4e2db6328"
+      },
+      "plotted_values_checksum": "1c4fd567b35515db28c1d265f4ff5cc5a5120dbbd12b913b5fc1633caed83616",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Generalization / robustness",
+      "priority": "CORE",
+      "supports_claim": "DOEF has lower normalized decision regret for six buildings and ties LightGBM for two, with every frozen building shown.",
+      "does_not_support": "Transfer to unseen buildings or performance outside the fixed eight-building scope.",
+      "required_caveat": "Multi-building robustness only, not unseen-building transfer; equal-building reporting scope.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "SCI-04-validation-weight-selection",
+      "title": "Validation objectives select different ensemble weights",
+      "asset_type": "scientific_figure",
+      "scientific_or_conceptual": "SCIENTIFIC",
+      "claim_id": [
+        "CORE-03",
+        "CORE-05"
+      ],
+      "evidence_id": [
+        "CLM-2526",
+        "CLM-2531",
+        "CLM-2532"
+      ],
+      "intended_message": "For six of eight buildings, the Validation forecast-error optimum and Validation decision-regret optimum select different LightGBM weights.",
+      "source_phase": [
+        "8",
+        "9.1",
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase8/selected_weights.csv",
+        "outputs/phase9_1/final_reporting_summary.json"
+      ],
+      "source_hashes": {
+        "outputs/phase8/selected_weights.csv": "060c505f57d4fae131f7665d6f9e2037a39d542e380939db29dc867ed5c5cbe7",
+        "outputs/phase9_1/final_reporting_summary.json": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1"
+      },
+      "source_fields": [
+        "building",
+        "w_forecast",
+        "w_decision",
+        "weights_differ"
+      ],
+      "deterministic_transform": "Plot all eight frozen building-specific paired weights in source order; no Test data.",
+      "chart_type": "paired weight dumbbell",
+      "output_files": [
+        "outputs/phase13_1/figures/sci_04_validation_weight_selection.png",
+        "outputs/phase13_1/figures/sci_04_validation_weight_selection.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/figures/sci_04_validation_weight_selection.png": "ebf25de462fbbf54e777f3f0cdc995c1cf980fa401b01602b30617ee16de99f0",
+        "outputs/phase13_1/figures/sci_04_validation_weight_selection.svg": "79484f723927d485995840bad36ae5fb665b7b0d3a119fc97125308ae706d997"
+      },
+      "plotted_values_checksum": "661b6d7c033a0ae80f30be89459479547af9e92e282b1eda38358f1d9e808b94",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Method evidence",
+      "priority": "CORE",
+      "supports_claim": "For six of eight buildings, the Validation forecast-error optimum and Validation decision-regret optimum select different LightGBM weights.",
+      "does_not_support": "Test-selected weights, joint training, bilevel optimization, or statistical significance.",
+      "required_caveat": "Weights are Validation-selected; differing weights do not by themselves prove universal downstream superiority.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "SCI-05-storage-dispatch-frozen",
+      "title": "Frozen representative forecast-to-dispatch trace",
+      "asset_type": "scientific_figure_frozen_reuse",
+      "scientific_or_conceptual": "SCIENTIFIC",
+      "claim_id": [
+        "CORE-01",
+        "SUP-06"
+      ],
+      "evidence_id": [
+        "CLM-0021"
+      ],
+      "intended_message": "A pre-frozen representative Test trace shows how alternative forecasts produce realized grid-load schedules.",
+      "source_phase": [
+        "8",
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase8/figures/06_representative_dispatch.png"
+      ],
+      "source_hashes": {
+        "outputs/phase8/figures/06_representative_dispatch.png": "a0bb0ec0cc353021314112ccfa36b9e4f2c74dd18b03905e1f9dd121be1b12ca"
+      },
+      "source_fields": [
+        "frozen raster pixels",
+        "Phase 8 pre-frozen representative building/date selection"
+      ],
+      "deterministic_transform": "Embed the approved frozen raster unchanged in a presentation-readable frame; do not extract values, reselect a case, or rerun dispatch.",
+      "chart_type": "framed frozen trace",
+      "output_files": [
+        "outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png",
+        "outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png": "e6019292f8567ad6ab3f8f1a46a7e39e75527def21cb822219bdb6606b369287",
+        "outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.svg": "ec1a0b5e18868fdfbc60d498f5eabde6d043f9b8091df4a5352b5edf5a979893"
+      },
+      "plotted_values_checksum": "a0bb0ec0cc353021314112ccfa36b9e4f2c74dd18b03905e1f9dd121be1b12ca",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Storage decision framework / backup",
+      "priority": "BACKUP",
+      "supports_claim": "A pre-frozen representative Test trace shows how alternative forecasts produce realized grid-load schedules.",
+      "does_not_support": "Universal dispatch behavior, new numerical values, or a newly selected representative case.",
+      "required_caveat": "Pre-frozen representative case and backup-only evidence; not a universal performance claim.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "ARCH-01-doef-architecture-master",
+      "title": "DOEF v1.0 frozen architecture",
+      "asset_type": "architecture",
+      "scientific_or_conceptual": "CONCEPTUAL_EXPLANATORY",
+      "claim_id": [
+        "CORE-01",
+        "CORE-03",
+        "CORE-05"
+      ],
+      "evidence_id": [
+        "CLM-0021",
+        "CLM-2526",
+        "CLM-2531",
+        "CLM-2532"
+      ],
+      "intended_message": "Causal forecasts feed Validation-selected decision-oriented ensembling, then frozen battery optimization and Test-only evaluation without feedback leakage.",
+      "source_phase": [
+        "8",
+        "9",
+        "9.1",
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase13_0b/doef_pipeline_spec.json",
+        "outputs/phase9/final_algorithm.json",
+        "outputs/phase9_1/final_reporting_summary.json",
+        "outputs/phase8/selected_weights.csv"
+      ],
+      "source_hashes": {
+        "outputs/phase13_0b/doef_pipeline_spec.json": "83fc4b36c5b1493c884b5a39c435ded4831b2e3daa4a49343fdfa59d306d054c",
+        "outputs/phase9/final_algorithm.json": "56bf263a73c00e01324c11ae36e67058f7bd897a9be3e720102e8720bf741b87",
+        "outputs/phase9_1/final_reporting_summary.json": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1",
+        "outputs/phase8/selected_weights.csv": "060c505f57d4fae131f7665d6f9e2037a39d542e380939db29dc867ed5c5cbe7"
+      },
+      "source_fields": [
+        "modules M1-M7",
+        "algorithm formula",
+        "algorithm_selection_source",
+        "test_role",
+        "weight_field"
+      ],
+      "deterministic_transform": "Render the frozen module graph with one-way Train/Validation selection flow and isolated Test evaluation lane.",
+      "chart_type": "layered causal architecture diagram",
+      "output_files": [
+        "outputs/phase13_1/architecture/doef_architecture_master.png",
+        "outputs/phase13_1/architecture/doef_architecture_master.svg",
+        "outputs/phase13_1/architecture/doef_architecture_master_transparent.png"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/architecture/doef_architecture_master.png": "71224b4581e322d12b3be89cad812146121f239920cf414927bf998cea540423",
+        "outputs/phase13_1/architecture/doef_architecture_master.svg": "0183d928bd8b65d1e5ba8759a9096dfdf799a4001d039af480f2deda70c5b5d9",
+        "outputs/phase13_1/architecture/doef_architecture_master_transparent.png": "13442f688ae7d12aa03f61b53af35ab83e495564b79ef3cf8609c0609b1ff1f2"
+      },
+      "plotted_values_checksum": "a308140af034709c164cc0f881051993fd4411a3533d6a8feff0acbdc2d41720",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Method",
+      "priority": "HERO",
+      "supports_claim": "Causal forecasts feed Validation-selected decision-oriented ensembling, then frozen battery optimization and Test-only evaluation without feedback leakage.",
+      "does_not_support": "Neural, transformer, RL, online learning, uncertainty, digital twin, agent, or LLM modules.",
+      "required_caveat": "Deterministic frozen pipeline; not end-to-end differentiable, jointly trained, online, or bilevel.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "CON-01-prediction-decision-bridge",
+      "title": "Prediction is an input to the decision, not the endpoint",
+      "asset_type": "explanatory_visual",
+      "scientific_or_conceptual": "CONCEPTUAL_EXPLANATORY",
+      "claim_id": [
+        "CORE-01"
+      ],
+      "evidence_id": [
+        "CLM-0021"
+      ],
+      "intended_message": "Forecast errors matter through the battery schedule and realized post-storage peak.",
+      "source_phase": [
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase13_0b/final_presentation_claims.json",
+        "outputs/phase13_0b/presentation_limitations_registry.csv"
+      ],
+      "source_hashes": {
+        "outputs/phase13_0b/final_presentation_claims.json": "aa6825d70a0d71494b7004fa9ecec0884180482386876432eee95abd22d62a7e",
+        "outputs/phase13_0b/presentation_limitations_registry.csv": "dc6f61edc43e289690bbc463b2f9c6c79ff1b029e29f769fba7d9b0804258d7b"
+      },
+      "source_fields": [
+        "CORE-01 presentation_wording",
+        "LIM-05/LIM-09 constraints and unit boundaries"
+      ],
+      "deterministic_transform": "Diagrammatic restatement only; no numeric encoding.",
+      "chart_type": "conceptual flow",
+      "output_files": [
+        "outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png",
+        "outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png": "cd76fadcc4f64537bd04083fa7e87c571730bf1619202849c2ae9f24e07f1813",
+        "outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.svg": "98a2dadedca8a2ee300733964efef6f45192ccdd55362144f83f95baff8b5661"
+      },
+      "plotted_values_checksum": "fab878386cdc02070b95f90a7345ec0a0a50a662e9d7ef8fbe4763b38a3e8859",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Motivation",
+      "priority": "SUPPORTING",
+      "supports_claim": "Forecast errors matter through the battery schedule and realized post-storage peak.",
+      "does_not_support": "Experimental evidence or quantified outcomes.",
+      "required_caveat": "Conceptual only; does not quantify causal effect, cost, carbon, or energy savings.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    },
+    {
+      "asset_id": "CON-02-contribution-overview",
+      "title": "Four verified contribution pillars",
+      "asset_type": "explanatory_visual",
+      "scientific_or_conceptual": "CONCEPTUAL_EXPLANATORY",
+      "claim_id": [
+        "CORE-03",
+        "CORE-04",
+        "CORE-05",
+        "CORE-07"
+      ],
+      "evidence_id": [
+        "CLM-2526",
+        "CLM-2532",
+        "CLM-0003",
+        "CLM-0004",
+        "CLM-2549"
+      ],
+      "intended_message": "The frozen project contribution combines causal forecasting, Validation-based decision selection, multi-building robustness evaluation, and downstream storage metrics.",
+      "source_phase": [
+        "13.0B"
+      ],
+      "source_files": [
+        "outputs/phase13_0b/final_presentation_claims.json",
+        "outputs/phase13_0b/doef_pipeline_spec.json"
+      ],
+      "source_hashes": {
+        "outputs/phase13_0b/final_presentation_claims.json": "aa6825d70a0d71494b7004fa9ecec0884180482386876432eee95abd22d62a7e",
+        "outputs/phase13_0b/doef_pipeline_spec.json": "83fc4b36c5b1493c884b5a39c435ded4831b2e3daa4a49343fdfa59d306d054c"
+      },
+      "source_fields": [
+        "CORE-03",
+        "CORE-04",
+        "CORE-05",
+        "CORE-07",
+        "modules M2/M5/M6/M7"
+      ],
+      "deterministic_transform": "Diagrammatic summary only; no experimental values.",
+      "chart_type": "four-pillar explanatory grid",
+      "output_files": [
+        "outputs/phase13_1/presentation_assets/con_02_contribution_overview.png",
+        "outputs/phase13_1/presentation_assets/con_02_contribution_overview.svg"
+      ],
+      "output_hashes": {
+        "outputs/phase13_1/presentation_assets/con_02_contribution_overview.png": "277230a0372c92442b97592e47309b232ffc093e2df9eb40f9f07e5ad2d784cf",
+        "outputs/phase13_1/presentation_assets/con_02_contribution_overview.svg": "a835d3b72de3f7f27630b12b0febdb2989f383a641b455e9e85460fad6e7978a"
+      },
+      "plotted_values_checksum": "f3c594ba8772ffed18768b6b91d383f09cdabfe5a2b7b21bb9211cb334db7414",
+      "generation_script": "scripts/build_phase13_1_visual_assets.py",
+      "generation_script_version": "1.0.0",
+      "slide_role": "Contribution overview",
+      "priority": "SUPPORTING",
+      "supports_claim": "The frozen project contribution combines causal forecasting, Validation-based decision selection, multi-building robustness evaluation, and downstream storage metrics.",
+      "does_not_support": "Experimental evidence, first/world-first, or state-of-the-art positioning.",
+      "required_caveat": "Project-scoped contribution summary; no external novelty or SOTA claim.",
+      "truthfulness_status": "PASS",
+      "presentation_suitability": "PASS",
+      "reproducibility_status": "PASS",
+      "status": "canonical"
+    }
+  ],
+  "acceptance_reason": "All frozen-source, schema, format, readability, truthfulness, lineage, and deterministic rebuild checks passed."
+}

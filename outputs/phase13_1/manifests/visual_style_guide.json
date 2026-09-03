@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "name": "Phase 13.1 scientific presentation visual system",
+  "font_family": "DejaVu Sans (cross-platform)",
+  "canvas": {
+    "aspect_ratio": "16:9",
+    "png_pixels": [
+      2400,
+      1350
+    ],
+    "figure_inches": [
+      16,
+      9
+    ],
+    "dpi": 150
+  },
+  "minimum_core_text_pt_at_asset_scale": 12,
+  "palette": {
+    "ink": "#18212B",
+    "muted": "#5C6873",
+    "grid": "#D9E0E6",
+    "panel": "#F4F7F9",
+    "doef": "#0072B2",
+    "lightgbm": "#D55E00",
+    "xgboost": "#009E73",
+    "dayweek": "#CC79A7",
+    "persistence": "#7A7A7A",
+    "load": "#202020",
+    "grid_load": "#0072B2",
+    "charge": "#56B4E9",
+    "discharge": "#E69F00",
+    "validation": "#6F4E9C",
+    "test": "#67727C",
+    "positive": "#0072B2",
+    "warning": "#B35C00"
+  },
+  "identity": {
+    "DOEF": {
+      "color": "#0072B2",
+      "marker": "circle",
+      "line": "solid"
+    },
+    "LightGBM": {
+      "color": "#D55E00",
+      "marker": "square",
+      "line": "solid",
+      "hatch": "//"
+    },
+    "XGBoost": {
+      "color": "#009E73",
+      "marker": "circle",
+      "line": "solid"
+    },
+    "DayWeek": {
+      "color": "#CC79A7",
+      "marker": "diamond",
+      "line": "dashed"
+    },
+    "Persistence": {
+      "color": "#7A7A7A",
+      "marker": "triangle",
+      "line": "dotted"
+    },
+    "original_load": {
+      "color": "#202020",
+      "line": "solid"
+    },
+    "post_storage_grid_load": {
+      "color": "#0072B2",
+      "line": "solid"
+    },
+    "charge": {
+      "color": "#56B4E9",
+      "fill": "positive"
+    },
+    "discharge": {
+      "color": "#E69F00",
+      "fill": "negative"
+    }
+  },
+  "rules": [
+    "Never use jet/rainbow, 3D, dual axes, or color as the sole category channel.",
+    "Use zero baselines for bar charts and independent axes for incompatible metrics.",
+    "State split, aggregation, direction, normalization, and material caveats on-figure.",
+    "Conceptual assets must be explicitly labeled and must not encode experimental values."
+  ]
+}
