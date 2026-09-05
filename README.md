@@ -197,3 +197,11 @@ Validation:
 ```
 
 Phase 14 must still be re-run before the project can be declared ready to submit.
+
+## Phase 13.6 — Technical Report Submission PDF
+
+The report PDF is [reports/phase13_6/technical_report_submission.pdf](reports/phase13_6/technical_report_submission.pdf). Editable LaTeX, production/validation scripts, rule snapshots and visual/semantic audits are retained in [reports/phase13_6/](reports/phase13_6/). The body derives solely from Phase 13.5 final Markdown. One user-authorized bibliographic author correction was synchronized to both report versions and the Phase 12 registry. Scientific results and Phase 7/8/9/9.1 artifacts remain unchanged.
+
+Validate without rerunning experiments: `python reports/phase13_6/validate_pdf.py`.
+
+This phase produces the report PDF only; it does not upload the entry or advance another phase.

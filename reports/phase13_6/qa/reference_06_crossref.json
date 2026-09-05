@@ -1,0 +1,852 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        1
+      ]
+    ],
+    "date-time": "2026-07-01T19:56:25Z",
+    "timestamp": 1782935785954,
+    "version": "3.54.5"
+  },
+  "reference-count": 53,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-017"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-037"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-012"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-029"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2024-07-01T00:00:00Z",
+        "timestamp": 1719792000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-004"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Journal of Building Engineering"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        7
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.jobe.2024.109163",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        28
+      ]
+    ],
+    "date-time": "2024-03-28T17:12:24Z",
+    "timestamp": 1711645944000
+  },
+  "page": "109163",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 11,
+  "special_numbering": "C",
+  "title": [
+    "Optimizing electricity peak shaving through stochastic programming and probabilistic time series forecasting"
+  ],
+  "prefix": "10.1016",
+  "volume": "88",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0008-9660-4277",
+      "authenticated-orcid": false,
+      "given": "Syed",
+      "family": "Rafayal",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6318-9686",
+      "authenticated-orcid": false,
+      "given": "Aliaa",
+      "family": "Alnaggar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-4020-6305",
+      "authenticated-orcid": false,
+      "given": "Mucahit",
+      "family": "Cevik",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "issue": "5",
+      "key": "10.1016/j.jobe.2024.109163_b1",
+      "doi-asserted-by": "crossref",
+      "first-page": "585",
+      "DOI": "10.1002/er.3329",
+      "article-title": "A review on clean energy solutions for better sustainability",
+      "volume": "39",
+      "author": "Dincer",
+      "year": "2015",
+      "journal-title": "Int. J. Energy Res."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b2",
+      "series-title": "Advances in Energy Systems: The Large-Scale Renewable Energy Integration Challenge",
+      "first-page": "111",
+      "article-title": "Energy security: challenges and needs",
+      "author": "Sovacool",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b3",
+      "doi-asserted-by": "crossref",
+      "first-page": "627",
+      "DOI": "10.1016/j.apenergy.2019.01.102",
+      "article-title": "Smart energy management algorithm for load smoothing and peak shaving based on load forecasting of an island’s power system",
+      "volume": "238",
+      "author": "Chapaloglou",
+      "year": "2019",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b4",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enbuild.2021.110932",
+      "article-title": "Optimal energy management of smart building for peak shaving considering multi-energy flexibility measures",
+      "volume": "241",
+      "author": "Chen",
+      "year": "2021",
+      "journal-title": "Energy Build."
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.jobe.2024.109163_b5",
+      "doi-asserted-by": "crossref",
+      "first-page": "931",
+      "DOI": "10.1016/j.euroecorev.2012.02.007",
+      "article-title": "Residential energy use and conservation: Economics and demographics",
+      "volume": "56",
+      "author": "Brounen",
+      "year": "2012",
+      "journal-title": "Eur. Econ. Rev."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b6",
+      "doi-asserted-by": "crossref",
+      "first-page": "544",
+      "DOI": "10.1016/j.applthermaleng.2018.11.085",
+      "article-title": "Review of energy conservation technologies for fresh air supply in zero energy buildings",
+      "volume": "148",
+      "author": "Liu",
+      "year": "2019",
+      "journal-title": "Appl. Therm. Eng."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b7",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.jclepro.2023.136738",
+      "article-title": "Financial efficiency and its impact on renewable energy investment: Empirical evidence from advanced and emerging economies",
+      "volume": "401",
+      "author": "Alsagr",
+      "year": "2023",
+      "journal-title": "J. Clean. Prod."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b8",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.energy.2023.126949",
+      "article-title": "Is renewable energy use lowering resource-related uncertainties?",
+      "volume": "271",
+      "author": "Olanipekun",
+      "year": "2023",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b9",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.rser.2023.113320",
+      "article-title": "Renewable energy transition in global carbon mitigation: Does the use of metallic minerals matter?",
+      "volume": "181",
+      "author": "Wang",
+      "year": "2023",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b10",
+      "doi-asserted-by": "crossref",
+      "first-page": "3323",
+      "DOI": "10.1016/j.rser.2017.10.056",
+      "article-title": "A review on peak load shaving strategies",
+      "volume": "82",
+      "author": "Uddin",
+      "year": "2018",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.jobe.2024.109163_b11",
+      "doi-asserted-by": "crossref",
+      "first-page": "1553",
+      "DOI": "10.1016/j.energy.2009.09.017",
+      "article-title": "Evolution and current status of demand response (DR) in electricity markets: Insights from PJM and NYISO",
+      "volume": "35",
+      "author": "Walawalkar",
+      "year": "2010",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b12",
+      "series-title": "Electric rates",
+      "author": "Ontario-Energy-Board",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b13",
+      "series-title": "2013 North American Power Symposium",
+      "first-page": "1",
+      "article-title": "A simple and effective approach for peak load shaving using battery storage systems",
+      "author": "Rahimi",
+      "year": "2013"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b14",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.energy.2020.117084",
+      "article-title": "A novel peak shaving algorithm for islanded microgrid using battery energy storage system",
+      "volume": "196",
+      "author": "Uddin",
+      "year": "2020",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.jobe.2024.109163_b15",
+      "doi-asserted-by": "crossref",
+      "first-page": "62",
+      "DOI": "10.1002/2475-8876.12135",
+      "article-title": "Electricity load forecasting using clustering and ARIMA model for energy management in buildings",
+      "volume": "3",
+      "author": "Nepal",
+      "year": "2020",
+      "journal-title": "Jpn. Archit. Rev."
+    },
+    {
+      "issue": "15",
+      "key": "10.1016/j.jobe.2024.109163_b16",
+      "doi-asserted-by": "crossref",
+      "first-page": "853",
+      "DOI": "10.1049/el.2019.0890",
+      "article-title": "Multistage energy management system using autoregressive moving average and artificial neural network for day-ahead peak shaving",
+      "volume": "55",
+      "author": "Mahmud",
+      "year": "2019",
+      "journal-title": "Electron. Lett."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b17",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.energy.2020.117948",
+      "article-title": "A hybrid data mining driven algorithm for long term electric peak load and energy demand forecasting",
+      "volume": "204",
+      "author": "Kazemzadeh",
+      "year": "2020",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b18",
+      "series-title": "2018 IEEE Texas Power and Energy Conference",
+      "first-page": "1",
+      "article-title": "Long term load forecasting with hourly predictions based on long-short-term-memory networks",
+      "author": "Agrawal",
+      "year": "2018"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b19",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.rser.2020.110591",
+      "article-title": "A deep learning framework for building energy consumption forecast",
+      "volume": "137",
+      "author": "Somu",
+      "year": "2021",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.jobe.2024.109163_b20",
+      "doi-asserted-by": "crossref",
+      "first-page": "385",
+      "DOI": "10.1007/s12065-018-00196-0",
+      "article-title": "Short-term electrical load forecasting method based on stacked auto-encoding and gru neural network",
+      "volume": "12",
+      "author": "Ke",
+      "year": "2019",
+      "journal-title": "Evol. Intell."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b21",
+      "series-title": "2019 IEEE PES Innovative Smart Grid Technologies Conference-Latin America",
+      "first-page": "1",
+      "article-title": "A framework for peak shaving through the coordination of smart homes",
+      "author": "de Souza Dutra",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b22",
+      "doi-asserted-by": "crossref",
+      "first-page": "148",
+      "DOI": "10.1016/j.energy.2018.01.128",
+      "article-title": "Peak shaving and valley filling of power consumption profile in non-residential buildings using an electric vehicle parking lot",
+      "volume": "148",
+      "author": "Ioakimidis",
+      "year": "2018",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b23",
+      "doi-asserted-by": "crossref",
+      "first-page": "146",
+      "DOI": "10.1016/j.energy.2017.01.148",
+      "article-title": "Cost reduction and peak shaving through domestic load shifting and ders",
+      "volume": "124",
+      "author": "Shirazi",
+      "year": "2017",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.jobe.2024.109163_b24",
+      "doi-asserted-by": "crossref",
+      "first-page": "5235",
+      "DOI": "10.1109/TPWRS.2021.3069781",
+      "article-title": "Cooperative peak shaving and voltage regulation in unbalanced distribution feeders",
+      "volume": "36",
+      "author": "Guo",
+      "year": "2021",
+      "journal-title": "IEEE Trans. Power Syst."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b25",
+      "series-title": "Time Series Analysis: Forecasting and Control",
+      "author": "Box",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b26",
+      "doi-asserted-by": "crossref",
+      "first-page": "1372",
+      "DOI": "10.1016/j.renene.2015.09.050",
+      "article-title": "Load peak shaving and power smoothing of a distribution grid with high renewable energy penetration",
+      "volume": "86",
+      "author": "Reihani",
+      "year": "2016",
+      "journal-title": "Renew. Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b27",
+      "series-title": "2017 52nd International Universities Power Engineering Conference",
+      "first-page": "1",
+      "article-title": "Assessing the impact of load forecasting accuracy on battery dispatching strategies with respect to peak shaving and time-of-use (TOU) applications for industrial consumers",
+      "author": "Papadopoulos",
+      "year": "2017"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b28",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3389/fenrg.2022.964305",
+      "article-title": "Protection of a smart grid with the detection of cyber-malware attacks using efficient and novel machine learning models",
+      "volume": "10",
+      "author": "Aziz",
+      "year": "2022",
+      "journal-title": "Front. Energy Res."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b29",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enconman.2020.113487",
+      "article-title": "Solar irradiance forecasting based on direct explainable neural network",
+      "volume": "226",
+      "author": "Wang",
+      "year": "2020",
+      "journal-title": "Energy Convers. Manage."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b30",
+      "article-title": "Forecasting energy demand of PCM integrated residential buildings: A machine learning approach",
+      "volume": "70",
+      "author": "Zhussupbekov",
+      "year": "2023",
+      "journal-title": "J. Build. Eng."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b31",
+      "article-title": "Assessing the impacts of urban morphological factors on urban building energy modeling based on spatial proximity analysis and explainable machine learning",
+      "author": "Li",
+      "year": "2024",
+      "journal-title": "J. Build. Eng."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.jobe.2024.109163_b32",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1186/s40327-018-0064-7",
+      "article-title": "Machine learning for estimation of building energy consumption and performance: a review",
+      "volume": "6",
+      "author": "Seyedzadeh",
+      "year": "2018",
+      "journal-title": "Vis. Eng."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b33",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2023.121052",
+      "article-title": "Electricity peak shaving for commercial buildings using machine learning and vehicle to building (V2B) system",
+      "volume": "340",
+      "author": "Ghafoori",
+      "year": "2023",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "issue": "7",
+      "key": "10.1016/j.jobe.2024.109163_b34",
+      "doi-asserted-by": "crossref",
+      "first-page": "2157",
+      "DOI": "10.3390/s20072157",
+      "article-title": "Energy management of smart home with home appliances, energy storage system and electric vehicle: A hierarchical deep reinforcement learning approach",
+      "volume": "20",
+      "author": "Lee",
+      "year": "2020",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b35",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.egyai.2020.100043",
+      "article-title": "Deep reinforcement learning for home energy management system control",
+      "volume": "3",
+      "author": "Lissa",
+      "year": "2021",
+      "journal-title": "Energy AI"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.jobe.2024.109163_b36",
+      "doi-asserted-by": "crossref",
+      "first-page": "914",
+      "DOI": "10.1016/j.ijforecast.2015.11.011",
+      "article-title": "Probabilistic electric load forecasting: A tutorial review",
+      "volume": "32",
+      "author": "Hong",
+      "year": "2016",
+      "journal-title": "Int. J. Forecast."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.jobe.2024.109163_b37",
+      "doi-asserted-by": "crossref",
+      "first-page": "917",
+      "DOI": "10.1007/s10618-019-00619-1",
+      "article-title": "Deep learning for time series classification: a review",
+      "volume": "33",
+      "author": "Fawaz",
+      "year": "2019",
+      "journal-title": "Data Min. Knowl. Discov."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b38",
+      "doi-asserted-by": "crossref",
+      "first-page": "300",
+      "DOI": "10.1016/j.compeleceng.2019.07.019",
+      "article-title": "A review of reinforcement learning for autonomous building energy management",
+      "volume": "78",
+      "author": "Mason",
+      "year": "2019",
+      "journal-title": "Comput. Electr. Eng."
+    },
+    {
+      "issue": "17",
+      "key": "10.1016/j.jobe.2024.109163_b39",
+      "doi-asserted-by": "crossref",
+      "first-page": "3254",
+      "DOI": "10.3390/en12173254",
+      "article-title": "Forecasting energy use in buildings using artificial neural networks: A review",
+      "volume": "12",
+      "author": "Runge",
+      "year": "2019",
+      "journal-title": "Energies"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b40",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enbuild.2020.110022",
+      "article-title": "A review of the-state-of-the-art in data-driven approaches for building energy prediction",
+      "volume": "221",
+      "author": "Sun",
+      "year": "2020",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b41",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2021.116452",
+      "article-title": "A review of machine learning in building load prediction",
+      "volume": "285",
+      "author": "Zhang",
+      "year": "2021",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b42",
+      "doi-asserted-by": "crossref",
+      "first-page": "618",
+      "DOI": "10.1016/j.energy.2019.03.117",
+      "article-title": "A mixed integer linear programming model for unit commitment of thermal plants with peak shaving operation aspect in regional power grid lack of flexible hydropower energy",
+      "volume": "175",
+      "author": "Feng",
+      "year": "2019",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.jobe.2024.109163_b43",
+      "doi-asserted-by": "crossref",
+      "first-page": "555",
+      "DOI": "10.1007/s40565-017-0375-z",
+      "article-title": "A fast and efficient coordinated vehicle-to-grid discharging control scheme for peak shaving in power distribution system",
+      "volume": "6",
+      "author": "Erdogan",
+      "year": "2018",
+      "journal-title": "J. Mod. Power Syst. Clean Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b44",
+      "article-title": "Optimal midterm peak shaving cost in an electricity management system using behind customers’ smart meter configuration",
+      "volume": "283",
+      "author": "de la Nieta",
+      "year": "2021",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b45",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.energy.2022.125107",
+      "article-title": "Wasserstein metric-based two-stage distributionally robust optimization model for optimal daily peak shaving dispatch of cascade hydroplants under renewable energy uncertainties",
+      "volume": "260",
+      "author": "Jin",
+      "year": "2022",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b46",
+      "article-title": "Energy-efficient heating control for smart buildings with deep reinforcement learning",
+      "volume": "34",
+      "author": "Gupta",
+      "year": "2021",
+      "journal-title": "J. Build. Eng."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.jobe.2024.109163_b47",
+      "doi-asserted-by": "crossref",
+      "first-page": "1509",
+      "DOI": "10.1016/j.aej.2020.11.005",
+      "article-title": "Energy management of intelligent building based on deep reinforced learning",
+      "volume": "60",
+      "author": "Huang",
+      "year": "2021",
+      "journal-title": "Alex. Eng. J."
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.jobe.2024.109163_b48",
+      "first-page": "133",
+      "article-title": "On the impact of deep learning-based time-series forecasts on multistage stochastic programming policies",
+      "volume": "60",
+      "author": "Wang",
+      "year": "2022",
+      "journal-title": "INFOR Inf. Syst. Oper. Res."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b49",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.patcog.2021.108144",
+      "article-title": "Explainable boosted linear regression for time series forecasting",
+      "volume": "120",
+      "author": "Ilic",
+      "year": "2021",
+      "journal-title": "Pattern Recognit."
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.jobe.2024.109163_b50",
+      "doi-asserted-by": "crossref",
+      "first-page": "1181",
+      "DOI": "10.1016/j.ijforecast.2019.07.001",
+      "article-title": "Deepar: Probabilistic forecasting with autoregressive recurrent networks",
+      "volume": "36",
+      "author": "Salinas",
+      "year": "2020",
+      "journal-title": "Int. J. Forecast."
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b51",
+      "series-title": "Lectures on Stochastic Programming: Modeling and Theory",
+      "author": "Shapiro",
+      "year": "2021"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b52",
+      "series-title": "Electric rates",
+      "author": "Pacific Gas & Electric Tariffs",
+      "year": "2021"
+    },
+    {
+      "key": "10.1016/j.jobe.2024.109163_b53",
+      "first-page": "2546",
+      "article-title": "Algorithms for hyper-parameter optimization",
+      "author": "Bergstra",
+      "year": "2011",
+      "journal-title": "Adv. Neural Inf. Process. Syst."
+    }
+  ],
+  "container-title": [
+    "Journal of Building Engineering"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2352710224007319?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2352710224007319?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        4,
+        28
+      ]
+    ],
+    "date-time": "2024-04-28T20:14:14Z",
+    "timestamp": 1714335254000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2352710224007319"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        7
+      ]
+    ]
+  },
+  "references-count": 53,
+  "alternative-id": [
+    "S2352710224007319"
+  ],
+  "URL": "https://doi.org/10.1016/j.jobe.2024.109163",
+  "relation": {},
+  "ISSN": [
+    "2352-7102"
+  ],
+  "issn-type": [
+    {
+      "value": "2352-7102",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        7
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Optimizing electricity peak shaving through stochastic programming and probabilistic time series forecasting",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Journal of Building Engineering",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.jobe.2024.109163",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2024 Elsevier Ltd. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "109163"
+}

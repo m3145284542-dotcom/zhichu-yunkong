@@ -1,0 +1,795 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        4
+      ]
+    ],
+    "date-time": "2026-09-04T16:41:29Z",
+    "timestamp": 1788540089807,
+    "version": "build-2803163510"
+  },
+  "reference-count": 68,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2017,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2017-06-01T00:00:00Z",
+        "timestamp": 1496275200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Renewable and Sustainable Energy Reviews"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2017,
+        6
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.rser.2017.02.023",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2017,
+        2,
+        11
+      ]
+    ],
+    "date-time": "2017-02-11T05:45:26Z",
+    "timestamp": 1486791926000
+  },
+  "page": "1104-1122",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 518,
+  "special_numbering": "C",
+  "title": [
+    "A review and analysis of regression and machine learning models on commercial building electricity load forecasting"
+  ],
+  "prefix": "10.1016",
+  "volume": "73",
+  "author": [
+    {
+      "given": "B.",
+      "family": "Yildiz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "J.I.",
+      "family": "Bilbao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "A.B.",
+      "family": "Sproul",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib1",
+      "unstructured": "International Energy Agency. Electricity Information. Paris; 2012."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib2",
+      "series-title": "Electric power monthly: with data for January 2015",
+      "author": "EIA",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib3",
+      "unstructured": "Pitt Sherry. Final report : quantitative assessment of energy savings from building energy efficiency; 2013."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib4",
+      "first-page": "1",
+      "article-title": "Unlocking energy efficiency in the U.S. economy",
+      "author": "Granade",
+      "year": "2009",
+      "journal-title": "McKinsey Glob Energy Mater"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib5",
+      "unstructured": "Lister M Scaling the peaks : demand management in network infrastructure planning key questions for the stage 3 review; 2011."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib6",
+      "unstructured": "Smith M, Hargroves K, Stasinopoulos P, Stephens R, Desha CH. Energy transformed: sustainable energy solutions for climate change mitigation; 2007."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib7",
+      "doi-asserted-by": "crossref",
+      "first-page": "2179",
+      "DOI": "10.1016/j.enbuild.2011.04.022",
+      "article-title": "Peak load characteristics of Sydney office buildings and policy recommendations for peak load reduction",
+      "volume": "43",
+      "author": "Steinfeld",
+      "year": "2011",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib8",
+      "doi-asserted-by": "crossref",
+      "first-page": "2169",
+      "DOI": "10.1016/j.enbuild.2008.06.013",
+      "article-title": "Comparison between detailed model simulation and artificial neural network for forecasting building energy consumption",
+      "volume": "40",
+      "author": "Neto",
+      "year": "2008",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib9",
+      "doi-asserted-by": "crossref",
+      "first-page": "3586",
+      "DOI": "10.1016/j.rser.2012.02.049",
+      "article-title": "A review on the prediction of building energy consumption",
+      "volume": "16",
+      "author": "Zhao",
+      "year": "2012",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib10",
+      "doi-asserted-by": "crossref",
+      "first-page": "23",
+      "DOI": "10.1080/00207720110067421",
+      "article-title": "Electric load forecasting: literature survey and classification of methods",
+      "volume": "33",
+      "author": "Alfares",
+      "year": "2002",
+      "journal-title": "Int J Syst Sci"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib11",
+      "doi-asserted-by": "crossref",
+      "first-page": "272",
+      "DOI": "10.1016/j.rser.2013.03.004",
+      "article-title": "State of the art in building modelling and energy performances prediction: a review",
+      "volume": "23",
+      "author": "Foucquier",
+      "year": "2013",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib12",
+      "doi-asserted-by": "crossref",
+      "first-page": "1223",
+      "DOI": "10.1016/j.rser.2011.08.014",
+      "article-title": "Energy models for demand forecasting – a review",
+      "volume": "16",
+      "author": "Suganthi",
+      "year": "2012",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib13",
+      "doi-asserted-by": "crossref",
+      "first-page": "1272",
+      "DOI": "10.1016/j.rser.2015.12.040",
+      "article-title": "A review on modeling and simulation of building energy systems",
+      "volume": "56",
+      "author": "Harish",
+      "year": "2016",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib14",
+      "doi-asserted-by": "crossref",
+      "first-page": "102",
+      "DOI": "10.1016/j.rser.2014.01.069",
+      "article-title": "A review on applications of ANN and SVM for building electrical energy consumption forecasting",
+      "volume": "33",
+      "author": "Ahmad",
+      "year": "2014",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib15",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wang Z, Srinivasan RS A review of artificial intelligence based building energy use prediction : contrasting the capabilities of single and ensemble prediction models. Renew Sustain Energy Rev; n.d. 0–1. 〈doi:10.1016/j.rser.2016.10.079〉.",
+      "DOI": "10.1016/j.rser.2016.10.079"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib16",
+      "doi-asserted-by": "crossref",
+      "first-page": "177",
+      "DOI": "10.1115/1.2888067",
+      "article-title": "Multivariate regression modeling",
+      "volume": "120",
+      "author": "Katipamula",
+      "year": "1998",
+      "journal-title": "J Sol Energy Eng"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib17",
+      "doi-asserted-by": "crossref",
+      "first-page": "305",
+      "DOI": "10.1016/j.apenergy.2014.05.062",
+      "article-title": "Using regression analysis to predict the future energy consumption of a supermarket in the UK",
+      "volume": "130",
+      "author": "Braun",
+      "year": "2014",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib18",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Katipamula S, Kissock JK, Claridge DE. The functional basis of steady- state tliermal energy use in air- side HVAC Equipment; 1995. p. 117.",
+      "DOI": "10.1115/1.2847720"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib19",
+      "first-page": "225",
+      "article-title": "Regression models for estimating monthly energy consumptions in schools in hot and humid climates",
+      "volume": "118",
+      "author": "Nassif",
+      "year": "2012",
+      "journal-title": "ASHRAE Trans"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib20",
+      "doi-asserted-by": "crossref",
+      "first-page": "161",
+      "DOI": "10.1016/S0169-2070(97)00015-0",
+      "article-title": "Short-run forecasts of electricity loads and peaks",
+      "volume": "13",
+      "author": "Ramanathan",
+      "year": "1997",
+      "journal-title": "Int J Forecast"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib21",
+      "doi-asserted-by": "crossref",
+      "first-page": "2692",
+      "DOI": "10.1016/j.enconman.2010.06.004",
+      "article-title": "Multiple regression models for energy use in air-conditioned office buildings in different climates",
+      "volume": "51",
+      "author": "Lam",
+      "year": "2010",
+      "journal-title": "Energy Convers Manag"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib22",
+      "doi-asserted-by": "crossref",
+      "first-page": "113",
+      "DOI": "10.1016/j.enconman.2007.05.004",
+      "article-title": "Building energy simulation using multi-years and typical meteorological years in different climates",
+      "volume": "49",
+      "author": "Yang",
+      "year": "2008",
+      "journal-title": "Energy Convers Manag"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib23",
+      "doi-asserted-by": "crossref",
+      "first-page": "67",
+      "DOI": "10.1016/0378-7788(84)90008-2",
+      "article-title": "Simplified energy analysis methodology for commercial buildings",
+      "volume": "6",
+      "author": "Turiel",
+      "year": "1984",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib24",
+      "doi-asserted-by": "crossref",
+      "first-page": "165",
+      "DOI": "10.1016/j.buildenv.2012.04.021",
+      "article-title": "Multivariate regression as an energy assessment tool in early building design",
+      "volume": "57",
+      "author": "Hygh",
+      "year": "2012",
+      "journal-title": "Build Environ"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib25",
+      "doi-asserted-by": "crossref",
+      "first-page": "147",
+      "DOI": "10.1016/S0378-7788(97)00035-2",
+      "article-title": "A simplified correlation method accounting for heating and cooling loads in energy-efficient buildings",
+      "volume": "27",
+      "author": "Bauer",
+      "year": "1998",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib26",
+      "doi-asserted-by": "crossref",
+      "first-page": "1761",
+      "DOI": "10.1016/j.energy.2006.11.010",
+      "article-title": "Predicting electricity energy consumption: a comparison of regression analysis, decision tree and neural networks",
+      "volume": "32",
+      "author": "Tso",
+      "year": "2007",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib27",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.apenergy.2014.04.016",
+      "article-title": "Development of prediction models for next-day building energy consumption and peak power demand using data mining techniques",
+      "volume": "127",
+      "author": "Fan",
+      "year": "2014",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib28",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Gómez JR, Gregio K, Santo D, Antonio M. Linear and non-linear methods for prediction of peak load at University of São Paulo, vol. 78; 2016. p. 187–201. http://dx.doi.org/10.1016/j.measurement.2015.09.053.",
+      "DOI": "10.1016/j.measurement.2015.09.053"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib29",
+      "doi-asserted-by": "crossref",
+      "first-page": "668",
+      "DOI": "10.1016/j.enbuild.2013.02.008",
+      "article-title": "A prediction system for home appliance usage",
+      "volume": "67",
+      "author": "Basu",
+      "year": "2013",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib30",
+      "doi-asserted-by": "crossref",
+      "first-page": "587",
+      "DOI": "10.1016/j.rser.2014.07.053",
+      "article-title": "Optimisation of energy management in commercial buildings with weather forecasting inputs: a review",
+      "volume": "39",
+      "author": "Lazos",
+      "year": "2014",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib31",
+      "doi-asserted-by": "crossref",
+      "first-page": "1622",
+      "DOI": "10.1109/TPWRS.2005.852123",
+      "article-title": "Short-term load forecasting, profile identification, and customer segmentation: a methodology based on periodic time series",
+      "volume": "20",
+      "author": "Espinoza",
+      "year": "2005",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib32",
+      "doi-asserted-by": "crossref",
+      "first-page": "798",
+      "DOI": "10.1109/59.962429",
+      "article-title": "Short-term hourly load forecasting using time-series modeling with peak load estimation capability",
+      "volume": "16",
+      "author": "Amjady",
+      "year": "2001",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib33",
+      "doi-asserted-by": "crossref",
+      "first-page": "86",
+      "DOI": "10.1016/j.enbuild.2015.03.045",
+      "article-title": "A neural network-based multi-zone modelling approach for predictive control system design in commercial buildings",
+      "volume": "97",
+      "author": "Huang",
+      "year": "2015",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib34",
+      "doi-asserted-by": "crossref",
+      "first-page": "1077",
+      "DOI": "10.1115/1.1897403",
+      "article-title": "Analysis of support vector regression for approximation of complex engineering analyses",
+      "volume": "127",
+      "author": "Clarke",
+      "year": "2005",
+      "journal-title": "J Mech Des"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib35",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Borges CE, Penya YK, Fernández I. Optimal combined short-term building load forecasting. 2011 IEEE PES Innov Smart Grid Technol ISGT Asia 2011 Conference Smarter Grid Sustain Afford Energy Futur; 2011 〈doi:10.1109/ISGT-Asia.2011.6167091〉.",
+      "DOI": "10.1109/ISGT-Asia.2011.6167091"
+    },
+    {
+      "issue": "19",
+      "key": "10.1016/j.rser.2017.02.023_bib36",
+      "doi-asserted-by": "crossref",
+      "first-page": "1821",
+      "DOI": "10.1109/TPWRS.2004.835679",
+      "article-title": "Load forecasting using support vector machines: a study on EUNITE competition 2001",
+      "author": "Chen",
+      "year": "2004",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib37",
+      "series-title": "Statistical machine learning",
+      "first-page": "1",
+      "author": "Tibshirani",
+      "year": "2006"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib38",
+      "doi-asserted-by": "crossref",
+      "first-page": "1535",
+      "DOI": "10.1109/59.99410",
+      "article-title": "A regression-based approach to short-term system load forecasting – power systems",
+      "volume": "5",
+      "author": "Papalexopoulos",
+      "year": "1990",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib39",
+      "doi-asserted-by": "crossref",
+      "first-page": "35",
+      "DOI": "10.1016/0378-7788(94)90014-0",
+      "article-title": "Using synthetic data to evaluate multiple regression and principal component analyses for statistical modeling of daily building energy consumption",
+      "volume": "21",
+      "author": "Reddy",
+      "year": "1994",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib40",
+      "first-page": "348",
+      "article-title": "Estimating industrial building energy savings using inverse simulation",
+      "volume": "117",
+      "author": "Sever",
+      "year": "2011",
+      "journal-title": "ASHRAE Trans"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib41",
+      "doi-asserted-by": "crossref",
+      "first-page": "168",
+      "DOI": "10.1115/1.2888066",
+      "article-title": "Ambient-temperature regression analysis for estimating retrofit savings in commercial buildings",
+      "volume": "120",
+      "author": "Kissock",
+      "year": "1998",
+      "journal-title": "J Sol Energy Eng"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib42",
+      "doi-asserted-by": "crossref",
+      "first-page": "996",
+      "DOI": "10.1016/j.apenergy.2016.07.087",
+      "article-title": "A regression-based approach to estimating retrofit savings using the building performance database",
+      "volume": "179",
+      "author": "Walter",
+      "year": "2016",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib43",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Fels M. PRISM: an introduction. Cent Energy Environ Stud Princt Univ, vol. 9; 1986. p. 5–18.",
+      "DOI": "10.1016/0378-7788(86)90003-4"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib44",
+      "doi-asserted-by": "crossref",
+      "first-page": "361",
+      "DOI": "10.1080/00038628.2002.9696951",
+      "article-title": "Simple regression models for fully air-conditioned public sector office buildings in subtropical climates",
+      "volume": "45",
+      "author": "Lam",
+      "year": "2002",
+      "journal-title": "Arch Sci Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib45",
+      "first-page": "895",
+      "article-title": "Effects of varying indoor air temperature and heat gain on the measurement of retrofit savings",
+      "volume": "104",
+      "author": "Kissock",
+      "year": "1998",
+      "journal-title": "ASHRAE Trans"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib46",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Morgan MG. Uncertainty: a guide to dealing with uncertainty in quantitative risk and policy analysis. New York; 1990.",
+      "DOI": "10.1017/CBO9780511840609"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib47",
+      "unstructured": "Green Building Council of Australia. Introducing Green Star; 2013."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib48",
+      "first-page": "27",
+      "article-title": "Library for support vector machines",
+      "volume": "2",
+      "author": "Chih-Wei",
+      "year": "2011",
+      "journal-title": "ACM Trans Intell Syst Technol"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib49",
+      "doi-asserted-by": "crossref",
+      "first-page": "2040",
+      "DOI": "10.1016/j.rser.2007.04.010",
+      "article-title": "Short-term prediction of household electricity consumption: assessing weather sensitivity in a Mediterranean area",
+      "volume": "12",
+      "author": "Beccali",
+      "year": "2008",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib50",
+      "first-page": "1",
+      "article-title": "Equations describing the physical properties of moist air",
+      "author": "Padfield",
+      "year": "2015",
+      "journal-title": "Creat Commons"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib51",
+      "doi-asserted-by": "crossref",
+      "unstructured": "James G, Witten D, Hastie T, Tibshirani R. An introduction to statistical learning. vol. 102; 2006. http://dx.doi.org/10.1016/j.peva.2007.06.006.",
+      "DOI": "10.1016/j.peva.2007.06.006"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib52",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Smith LI. A tutorial on principal components analysis introduction. Department of Computer Science Univ Otago, vol. 51; 2002. p. 52. http://dx.doi.org/10.1080/03610928808829796.",
+      "DOI": "10.1080/03610928808829796"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib53",
+      "series-title": "Advice for applying machine learning",
+      "author": "NG",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib54",
+      "series-title": "Identification and investigation of peak demand reduction opportunities – Sydney CBD area",
+      "author": "Sinclair",
+      "year": "2006"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib55",
+      "series-title": "Neural networks learning in machine learning",
+      "author": "NG",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib56",
+      "unstructured": "Jesus DE, Hagan MT. Backpropagation through time for a general class of recurrent network. Proc Int Jt Conf Neural Networks, Washingtonm DC; 2001. p. 2638–42."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib57",
+      "unstructured": "MATLAB. Nerual network toolbox; 2015."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib58",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Beale MH, Hagan MT, Demuth HB. Neural network toolboxTM user’s guide 2015. http://dx.doi.org/10.1016/j.neunet.2005.10.002.",
+      "DOI": "10.1016/j.neunet.2005.10.002"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib59",
+      "series-title": "Decision trees",
+      "author": "MathWorks",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib60",
+      "series-title": "Support vector machines",
+      "first-page": "1",
+      "volume": "1",
+      "author": "Ng",
+      "year": "2000"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib61",
+      "unstructured": "Sauptik Dhar, Han Tai S. Support Vector Machine Regression. Univ Minnesota, CSci, Mach Learn; 2011. 〈http://www.ece.umn.edu/users/cherkass/ee4389/sw/scaleSVM.m〉."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib62",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shumway RH, Stoffer DS. Time series analysis and its applications with R examples; 2011. http://dx.doi.org/10.1007/978-1-4419-7865-3.",
+      "DOI": "10.1007/978-1-4419-7865-3"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib63",
+      "doi-asserted-by": "crossref",
+      "first-page": "799",
+      "DOI": "10.1057/palgrave.jors.2601589",
+      "article-title": "Short-term electricity demand forecasting using double seasonal exponential smoothing",
+      "volume": "54",
+      "author": "Taylor",
+      "year": "2003",
+      "journal-title": "J Oper Res Soc"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib64",
+      "unstructured": "Livera AMDe, Hyndman RJ, Snyder RD. Forecasting time series with complex seasonal patterns using exponential smoothing Forecasting time series with complex seasonal patterns using exponential smoothing.October 2010:to appear."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib65",
+      "unstructured": "Sevlian R, Rajagopal R. Short term electricity load forecasting on varying levels of aggregation; 2014."
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib66",
+      "series-title": "Open intro statistics",
+      "author": "Diez",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib67",
+      "doi-asserted-by": "crossref",
+      "first-page": "79",
+      "DOI": "10.3354/cr030079",
+      "article-title": "Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance",
+      "volume": "30",
+      "author": "Willmott",
+      "year": "2005",
+      "journal-title": "Clim Res"
+    },
+    {
+      "key": "10.1016/j.rser.2017.02.023_bib68",
+      "doi-asserted-by": "crossref",
+      "first-page": "1247",
+      "DOI": "10.5194/gmd-7-1247-2014",
+      "article-title": "Root mean square error (RMSE) or mean absolute error (MAE) -Arguments against avoiding RMSE in the literature",
+      "volume": "7",
+      "author": "Chai",
+      "year": "2014",
+      "journal-title": "Geosci Model Dev"
+    }
+  ],
+  "container-title": [
+    "Renewable and Sustainable Energy Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S1364032117302265?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S1364032117302265?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2020,
+        3,
+        12
+      ]
+    ],
+    "date-time": "2020-03-12T11:22:35Z",
+    "timestamp": 1584012155000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1364032117302265"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2017,
+        6
+      ]
+    ]
+  },
+  "references-count": 68,
+  "alternative-id": [
+    "S1364032117302265"
+  ],
+  "URL": "https://doi.org/10.1016/j.rser.2017.02.023",
+  "relation": {},
+  "ISSN": [
+    "1364-0321"
+  ],
+  "issn-type": [
+    {
+      "value": "1364-0321",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2017,
+        6
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "A review and analysis of regression and machine learning models on commercial building electricity load forecasting",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Renewable and Sustainable Energy Reviews",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.rser.2017.02.023",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2017 Elsevier Ltd. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

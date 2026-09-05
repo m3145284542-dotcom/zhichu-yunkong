@@ -1,0 +1,36 @@
+{
+  "authorization": "User: 处理错误 (2026-09-05)",
+  "scope": "Reference [2] author metadata only; same DOI, title, year, journal and reference set",
+  "scientific_semantic_changes": 0,
+  "bibliographic_corrections": 1,
+  "files": [
+    {
+      "path": "reports/phase13_5/technical_report_final.md",
+      "old_text": "[2] Amasyali K, El-Gohary N M.",
+      "new_text": "[2] Zhang L, Wen J, Li Y, Chen J, Ye Y, Fu Y, Livingood W.",
+      "before_sha256": "50b3c0b3c51166da2957dbdd4d7944d5ff48fc26d68487b73a6516d755a3d322",
+      "after_sha256": "9bf8dfa229202aa4719537136a5cf74c80f11f300fe087528d626adf159754bf",
+      "bytes": 26446
+    },
+    {
+      "path": "reports/phase13_5/technical_report_nature.md",
+      "old_text": "[2] Amasyali K, El-Gohary N M.",
+      "new_text": "[2] Zhang L, Wen J, Li Y, Chen J, Ye Y, Fu Y, Livingood W.",
+      "before_sha256": "0dd1dfa9609be78dec79ab4fe4979cb4f9dac84054dd627fa9c9052671eaf6db",
+      "after_sha256": "a43f37dfc756c5daa3bf67b4b1d3306ef6e3184c61b88c218730ddaa1a970614",
+      "bytes": 26542
+    },
+    {
+      "path": "outputs/phase12/literature_registry_frozen.csv",
+      "old_text": "Kadir Amasyali; Nora M. El-Gohary",
+      "new_text": "Liang Zhang; Jin Wen; Yanfei Li; Jianli Chen; Yunyang Ye; Yangyang Fu; William Livingood",
+      "before_sha256": "851890bd6977f8fe70e510750a03762f5a27b6fb26429a595e3af0040e4f00fd",
+      "after_sha256": "a25845c7154ee5eb14ff3fa30396a1f3064d2fec926a2943fdc4961c8a6a6bc1",
+      "bytes": 8324
+    }
+  ],
+  "evidence": [
+    "qa/reference_02_crossref.json",
+    "https://pure.psu.edu/en/publications/a-review-of-machine-learning-in-building-load-prediction/"
+  ]
+}

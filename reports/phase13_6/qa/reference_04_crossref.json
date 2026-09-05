@@ -1,0 +1,440 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        29
+      ]
+    ],
+    "date-time": "2026-08-29T12:31:43Z",
+    "timestamp": 1788006703866,
+    "version": "build-2784847793"
+  },
+  "publisher-location": "New York, NY, USA",
+  "reference-count": 25,
+  "publisher": "ACM",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            12
+          ]
+        ],
+        "date-time": "2020-06-12T00:00:00Z",
+        "timestamp": 1591920000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100000001",
+      "name": "National Science Foundation",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "1645952, 1908298"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "1645952, 1908298"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100000001",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2020,
+        6,
+        12
+      ]
+    ]
+  },
+  "DOI": "10.1145/3396851.3397751",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        6,
+        18
+      ]
+    ],
+    "date-time": "2020-06-18T22:03:20Z",
+    "timestamp": 1592517800000
+  },
+  "page": "237-241",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 19,
+  "title": [
+    "Peak Forecasting for Battery-based Energy Optimizations in Campus Microgrids"
+  ],
+  "prefix": "10.1145",
+  "author": [
+    {
+      "given": "Akhil",
+      "family": "Soman",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "University of Massachusetts, Amherst"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Amee",
+      "family": "Trivedi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Massachusetts, Amherst"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "David",
+      "family": "Irwin",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Massachusetts, Amherst"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Beka",
+      "family": "Kosanovic",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Massachusetts, Amherst"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Benjamin",
+      "family": "McDaniel",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Massachusetts, Amherst"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Prashant",
+      "family": "Shenoy",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Massachusetts, Amherst"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2020,
+        6,
+        18
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_1_1_1",
+      "volume-title": "Tensorflow: Large-scale machine learning on heterogeneous systems",
+      "author": "Abadi M.",
+      "year": "2015",
+      "unstructured": "Abadi , M. , Agarwal , A. , Barham , P. , Brevdo , E. , Chen , Z. , Citro , C. , Corrado , G. S. , Davis , A. , Dean , J. , Devin , M. , Tensorflow: Large-scale machine learning on heterogeneous systems , 2015 . Software available from tensorflow.org (2015). Abadi, M., Agarwal, A., Barham, P., Brevdo, E., Chen, Z., Citro, C., Corrado, G. S., Davis, A., Dean, J., Devin, M., et al. Tensorflow: Large-scale machine learning on heterogeneous systems, 2015. Software available from tensorflow.org (2015)."
+    },
+    {
+      "key": "e_1_3_2_1_2_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/PerCom.2012.6199851"
+    },
+    {
+      "key": "e_1_3_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3307772.3328298"
+    },
+    {
+      "key": "e_1_3_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/IGSC48788.2019.8957184"
+    },
+    {
+      "key": "e_1_3_2_1_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/GlobalSIP.2018.8646654"
+    },
+    {
+      "key": "e_1_3_2_1_6_1",
+      "volume-title": "A novel hybrid algorithm for electricity price and load forecasting in smart grids with demand-side management. Applied energy 177",
+      "author": "Ghasemi A.",
+      "year": "2016",
+      "unstructured": "Ghasemi , A. , Shayeghi , H. , Moradzadeh , M. , and Nooshyar , M . A novel hybrid algorithm for electricity price and load forecasting in smart grids with demand-side management. Applied energy 177 ( 2016 ), 40--59. Ghasemi, A., Shayeghi, H., Moradzadeh, M., and Nooshyar, M. A novel hybrid algorithm for electricity price and load forecasting in smart grids with demand-side management. Applied energy 177 (2016), 40--59."
+    },
+    {
+      "key": "e_1_3_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/JSAC.2016.2525599"
+    },
+    {
+      "key": "e_1_3_2_1_8_1",
+      "volume-title": "The time series approach to short term load forecasting",
+      "author": "Hagan M. T.",
+      "year": "1987",
+      "unstructured": "Hagan , M. T. , and Behr , S. M . The time series approach to short term load forecasting . IEEE transactions on power systems 2, 3 ( 1987 ), 785--791. Hagan, M. T., and Behr, S. M. The time series approach to short term load forecasting. IEEE transactions on power systems 2, 3 (1987), 785--791."
+    },
+    {
+      "key": "e_1_3_2_1_9_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3390/s120911571"
+    },
+    {
+      "key": "e_1_3_2_1_10_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/59.910780"
+    },
+    {
+      "key": "e_1_3_2_1_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1142/S0218488598000094"
+    },
+    {
+      "key": "e_1_3_2_1_12_1",
+      "volume-title": "Long short-term memory. Neural computation 9, 8",
+      "author": "Hochreiter S.",
+      "year": "1997",
+      "unstructured": "Hochreiter , S. , and Schmidhuber , J . Long short-term memory. Neural computation 9, 8 ( 1997 ), 1735--1780. Hochreiter, S., and Schmidhuber, J. Long short-term memory. Neural computation 9, 8 (1997), 1735--1780."
+    },
+    {
+      "key": "e_1_3_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.enpol.2016.02.052"
+    },
+    {
+      "key": "e_1_3_2_1_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TSTE.2016.2569425"
+    },
+    {
+      "key": "e_1_3_2_1_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.rser.2015.10.117"
+    },
+    {
+      "key": "e_1_3_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.egyr.2019.08.086"
+    },
+    {
+      "key": "e_1_3_2_1_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ijepes.2015.11.046"
+    },
+    {
+      "key": "e_1_3_2_1_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3307772.3328279"
+    },
+    {
+      "key": "e_1_3_2_1_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.asoc.2017.01.015"
+    },
+    {
+      "key": "e_1_3_2_1_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/NAPS.2013.6666824"
+    },
+    {
+      "key": "e_1_3_2_1_21_1",
+      "volume-title": "Load peak shaving and power smoothing of a distribution grid with high renewable energy penetration. Renewable energy 86",
+      "author": "Reihani E.",
+      "year": "2016",
+      "unstructured": "Reihani , E. , Motalleb , M. , Ghorbani , R. , and Saoud , L. S . Load peak shaving and power smoothing of a distribution grid with high renewable energy penetration. Renewable energy 86 ( 2016 ), 1372--1379. Reihani, E., Motalleb, M., Ghorbani, R., and Saoud, L. S. Load peak shaving and power smoothing of a distribution grid with high renewable energy penetration. Renewable energy 86 (2016), 1372--1379."
+    },
+    {
+      "key": "e_1_3_2_1_22_1",
+      "first-page": "1",
+      "article-title": "Deep neural network based demand side short term load forecasting",
+      "volume": "10",
+      "author": "Ryu S.",
+      "year": "2017",
+      "unstructured": "Ryu , S. , Noh , J. , and Kim , H . Deep neural network based demand side short term load forecasting . Energies 10 , 1 ( 2017 ), 3. Ryu, S., Noh, J., and Kim, H. Deep neural network based demand side short term load forecasting. Energies 10, 1 (2017), 3.",
+      "journal-title": "Energies"
+    },
+    {
+      "key": "e_1_3_2_1_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ijar.2017.01.006"
+    },
+    {
+      "key": "e_1_3_2_1_24_1",
+      "first-page": "3",
+      "article-title": "Using battery storage for peak shaving and frequency regulation: Joint optimization for superlinear gains",
+      "volume": "33",
+      "author": "Shi Y.",
+      "year": "2017",
+      "unstructured": "Shi , Y. , Xu , B. , Wang , D. , and Zhang , B . Using battery storage for peak shaving and frequency regulation: Joint optimization for superlinear gains . IEEE Transactions on Power Systems 33 , 3 ( 2017 ), 2882--2894. Shi, Y., Xu, B., Wang, D., and Zhang, B. Using battery storage for peak shaving and frequency regulation: Joint optimization for superlinear gains. IEEE Transactions on Power Systems 33, 3 (2017), 2882--2894.",
+      "journal-title": "IEEE Transactions on Power Systems"
+    },
+    {
+      "key": "e_1_3_2_1_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/CISS.2017.7926112"
+    }
+  ],
+  "event": {
+    "name": "e-Energy '20: The Eleventh ACM International Conference on Future Energy Systems",
+    "location": "Virtual Event Australia",
+    "acronym": "e-Energy '20",
+    "sponsor": [
+      "SIGEnergy ACM Special Interest Group on Energy Systems and Informatics"
+    ]
+  },
+  "container-title": [
+    "Proceedings of the Eleventh ACM International Conference on Future Energy Systems"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/3396851.3397751",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3396851.3397751",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3396851.3397751",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        17
+      ]
+    ],
+    "date-time": "2025-06-17T22:41:06Z",
+    "timestamp": 1750200066000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3396851.3397751"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        6,
+        12
+      ]
+    ]
+  },
+  "references-count": 25,
+  "alternative-id": [
+    "10.1145/3396851.3397751",
+    "10.1145/3396851"
+  ],
+  "URL": "https://doi.org/10.1145/3396851.3397751",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        6,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2020-06-18",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

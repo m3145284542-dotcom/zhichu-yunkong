@@ -1,0 +1,449 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        18
+      ]
+    ],
+    "date-time": "2026-08-18T04:40:40Z",
+    "timestamp": 1787028040379,
+    "version": "build-2736575974"
+  },
+  "reference-count": 27,
+  "publisher": "MDPI AG",
+  "issue": "21",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            28
+          ]
+        ],
+        "date-time": "2020-10-28T00:00:00Z",
+        "timestamp": 1603843200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Energies"
+  ],
+  "abstract": "<jats:p>This paper proposes an optimal Energy Storage System (ESS) scheduling algorithm Building Energy Management System (BEMS). In particular, the focus is placed on how to reduce the peak load using ESS and load forecast. To this end, first, an existing deep learning-based load forecast method is applied to a real building energy prediction and it is shown that the deep learning-based method leads to an accuracy-enhanced load forecast. Second, an optimization problem is formulated in order to devise an ESS scheduling. In the optimization problem, the objective function and constraints are defined such that the peak load is reduced; the cost for electricity is minimized; and the ESS’s lifetime is elongated considering the accuracy-enhanced load forecast, real-time electricity price, and the state-of-charge of the ESS. For the purpose of demonstrating the effectiveness of the proposed ESS scheduling method, it is implemented using a real building load power and temperature data. The simulation results show that the proposed method can reduce the peak load and results in smooth charging and discharging, which is important for the ESS lifetime.</jats:p>",
+  "DOI": "10.3390/en13215633",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        28
+      ]
+    ],
+    "date-time": "2020-10-28T11:43:06Z",
+    "timestamp": 1603885386000
+  },
+  "page": "5633",
+  "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 26,
+  "title": [
+    "Optimal ESS Scheduling for Peak Shaving of Building Energy Using Accuracy-Enhanced Load Forecast"
+  ],
+  "prefix": "10.3390",
+  "volume": "13",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-3331-0537",
+      "authenticated-orcid": false,
+      "given": "Jin Sol",
+      "family": "Hwang",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1053-9985",
+      "authenticated-orcid": false,
+      "given": "Ismi",
+      "family": "Rosyiana Fitri",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5952-2917",
+      "authenticated-orcid": false,
+      "given": "Jung-Su",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6313-2719",
+      "authenticated-orcid": false,
+      "given": "Hwachang",
+      "family": "Song",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1968",
+  "published-online": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        28
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "ref_1",
+      "doi-asserted-by": "crossref",
+      "first-page": "3323",
+      "DOI": "10.1016/j.rser.2017.10.056",
+      "article-title": "A review on peak load shaving strategies",
+      "volume": "82",
+      "author": "Uddin",
+      "year": "2018",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "key": "ref_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Rahimi, A., Zarghami, M., Vaziri, M., and Vadhva, S. (2013, January 22–24). A simple and effective approach for peak load shaving using Battery Storage Systems. Proceedings of the 2013 North American Power Symposium (NAPS), Manhattan, KS, USA.",
+      "DOI": "10.1109/NAPS.2013.6666824"
+    },
+    {
+      "key": "ref_3",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Joshi, K.A., and Pindoriya, N.M. (2015, January 26–30). Day-ahead dispatch of Battery Energy Storage System for peak load shaving and load leveling in low voltage unbalance distribution networks. Proceedings of the 2015 IEEE Power Energy Society General Meeting, Denver, CO, USA.",
+      "DOI": "10.1109/PESGM.2015.7285673"
+    },
+    {
+      "key": "ref_4",
+      "doi-asserted-by": "crossref",
+      "first-page": "2208",
+      "DOI": "10.1109/TSG.2019.2949573",
+      "article-title": "Optimal Energy Storage System Operation for Peak Reduction in a Distribution Network Using a Prediction Interval",
+      "volume": "11",
+      "author": "Kodaira",
+      "year": "2020",
+      "journal-title": "IEEE Trans. Smart Grid"
+    },
+    {
+      "key": "ref_5",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Martins, R., Hesse, H.C., Jungbauer, J., Vorbuchner, T., and Musilek, P. (2018). Optimal Component Sizing for Peak Shaving in Battery Energy Storage System for Industrial Applications. Energies, 11.",
+      "DOI": "10.3390/en11082048"
+    },
+    {
+      "key": "ref_6",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Gibilisco, P., Ieva, G., Marcone, F., Porro, G., and Tuglie, E.D. (2018). Day-ahead operation planning for microgrids embedding Battery Energy Storage Systems. A case study on the PrInCE Lab microgrid. 2018 AEIT International Annual Conference, IEEE.",
+      "DOI": "10.23919/AEIT.2018.8577353"
+    },
+    {
+      "key": "ref_7",
+      "doi-asserted-by": "crossref",
+      "first-page": "1646",
+      "DOI": "10.1109/TSG.2017.2775209",
+      "article-title": "Online Energy Management for a Sustainable Smart Home With an HVAC Load and Random Occupancy",
+      "volume": "10",
+      "author": "Yu",
+      "year": "2019",
+      "journal-title": "IEEE Trans. Smart Grid"
+    },
+    {
+      "key": "ref_8",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Kim, N.K., Shim, M.H., and Won, D. (2018). Building Energy Management Strategy Using an HVAC System and Energy Storage System. Energies, 11.",
+      "DOI": "10.3390/en11102690"
+    },
+    {
+      "key": "ref_9",
+      "unstructured": "Niu, D.X., Wanq, Q., and Li, J.C. (2005, January 18–21). Short term load forecasting model using support vector machine based on artificial neural network. Proceedings of the 2005 International Conference on Machine Learning and Cybernetics, Guangzhou, China."
+    },
+    {
+      "key": "ref_10",
+      "doi-asserted-by": "crossref",
+      "first-page": "2762",
+      "DOI": "10.1109/TPEL.2011.2116808",
+      "article-title": "Optimal Allocation and Economic Analysis of Energy Storage System in Microgrids",
+      "volume": "26",
+      "author": "Chen",
+      "year": "2011",
+      "journal-title": "IEEE Trans. Power Electron."
+    },
+    {
+      "key": "ref_11",
+      "doi-asserted-by": "crossref",
+      "first-page": "261",
+      "DOI": "10.1109/TSG.2015.2453017",
+      "article-title": "Optimal DR and ESS Scheduling for Distribution Losses Payments Minimization Under Electricity Price Uncertainty",
+      "volume": "7",
+      "author": "Soroudi",
+      "year": "2016",
+      "journal-title": "IEEE Trans. Smart Grid"
+    },
+    {
+      "key": "ref_12",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Mukhopadhyay, P., Mitra, G., Banerjee, S., and Mukherjee, G. (2017, January 21–23). Electricity load forecasting using fuzzy logic: Short term load forecasting factoring weather parameter. Proceedings of the 2017 7th International Conference on Power Systems (ICPS), Pune, India.",
+      "DOI": "10.1109/ICPES.2017.8387401"
+    },
+    {
+      "key": "ref_13",
+      "doi-asserted-by": "crossref",
+      "first-page": "595",
+      "DOI": "10.1016/j.enbuild.2004.09.006",
+      "article-title": "Prediction of hourly energy consumption in buildings based on a feedback artificial neural network",
+      "volume": "37",
+      "year": "2005",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "ref_14",
+      "doi-asserted-by": "crossref",
+      "first-page": "284",
+      "DOI": "10.1016/j.enbuild.2015.12.050",
+      "article-title": "Forecasting diurnal cooling energy load for institutional buildings using Artificial Neural Networks",
+      "volume": "121",
+      "author": "Deb",
+      "year": "2016",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "ref_15",
+      "doi-asserted-by": "crossref",
+      "first-page": "372",
+      "DOI": "10.1016/j.apenergy.2017.12.051",
+      "article-title": "Predicting electricity consumption for commercial and residential buildings using deep recurrent neural networks",
+      "volume": "212",
+      "author": "Rahman",
+      "year": "2018",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "ref_16",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bouktif, S., Fiaz, A., Ouni, A., and Serhani, M.A. (2018). Optimal Deep Learning LSTM Model for Electric Load Forecasting using Feature Selection and Genetic Algorithm: Comparison with Machine Learning Approaches. Energies, 11.",
+      "DOI": "10.3390/en11071636"
+    },
+    {
+      "key": "ref_17",
+      "doi-asserted-by": "crossref",
+      "first-page": "700",
+      "DOI": "10.1016/j.apenergy.2018.12.004",
+      "article-title": "Assessment of deep recurrent neural network-based strategies for short-term building energy predictions",
+      "volume": "236",
+      "author": "Fan",
+      "year": "2019",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "ref_18",
+      "doi-asserted-by": "crossref",
+      "first-page": "841",
+      "DOI": "10.1109/TSG.2017.2753802",
+      "article-title": "Short-Term Residential Load Forecasting Based on LSTM Recurrent Neural Network",
+      "volume": "10",
+      "author": "Kong",
+      "year": "2019",
+      "journal-title": "IEEE Trans. Smart Grid"
+    },
+    {
+      "key": "ref_19",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Yudantaka, K., Kim, J.S., and Song, H. (2020). Dual Deep Learning Networks Based Load Forecasting with Partial Real-Time Information and Its Application to System Marginal Price Prediction. Energies, 13.",
+      "DOI": "10.3390/en13010148"
+    },
+    {
+      "key": "ref_20",
+      "doi-asserted-by": "crossref",
+      "first-page": "117",
+      "DOI": "10.1109/TII.2017.2755465",
+      "article-title": "Demand-Side Management by Regulating Charging and Discharging of the EV, ESS, and Utilizing Renewable Energy",
+      "volume": "14",
+      "author": "Tushar",
+      "year": "2018",
+      "journal-title": "IEEE Trans. Ind. Inform."
+    },
+    {
+      "key": "ref_21",
+      "doi-asserted-by": "crossref",
+      "first-page": "33",
+      "DOI": "10.1109/TSTE.2016.2577040",
+      "article-title": "A Two-Layer Model for Microgrid Real-Time Dispatch Based on Energy Storage System Charging/Discharging Hidden Costs",
+      "volume": "8",
+      "author": "Zhang",
+      "year": "2017",
+      "journal-title": "IEEE Trans. Sustain. Energy"
+    },
+    {
+      "key": "ref_22",
+      "doi-asserted-by": "crossref",
+      "first-page": "1949",
+      "DOI": "10.1109/TIA.2018.2794330",
+      "article-title": "Optimal Scheduling and Operation of the ESS for Prosumer Market Environment in Grid-Connected Industrial Complex",
+      "volume": "54",
+      "author": "Choi",
+      "year": "2018",
+      "journal-title": "IEEE Trans. Ind. Appl."
+    },
+    {
+      "key": "ref_23",
+      "doi-asserted-by": "crossref",
+      "first-page": "1735",
+      "DOI": "10.1162/neco.1997.9.8.1735",
+      "article-title": "Long Short-Term Memory",
+      "volume": "9",
+      "author": "Hochreiter",
+      "year": "2006",
+      "journal-title": "Neural Comput."
+    },
+    {
+      "key": "ref_24",
+      "unstructured": "Goodfellow, I., Bengio, Y., and Courville, A. (2017). Deep Learning, MIT Press."
+    },
+    {
+      "key": "ref_25",
+      "unstructured": "(2019, September 30). OpenEI. Available online: https://openei.org/datasets/dataset/consumption-outdoor-air-temperature-11-commercial-buildings."
+    },
+    {
+      "key": "ref_26",
+      "unstructured": "Tensorflow.org (2019, October 14). Deep Learning Library developed by Google. Available online: https://www.tensorflow.org/."
+    },
+    {
+      "key": "ref_27",
+      "unstructured": "CVX (2020, June 01). Matlab Software for Disciplined Convex Programming. Available online: http://cvxr.com/."
+    }
+  ],
+  "container-title": [
+    "Energies"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.mdpi.com/1996-1073/13/21/5633/pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        11
+      ]
+    ],
+    "date-time": "2025-10-11T10:29:43Z",
+    "timestamp": 1760178583000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.mdpi.com/1996-1073/13/21/5633"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        28
+      ]
+    ]
+  },
+  "references-count": 27,
+  "journal-issue": {
+    "issue": "21",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          11
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "en13215633"
+  ],
+  "URL": "https://doi.org/10.3390/en13215633",
+  "relation": {},
+  "ISSN": [
+    "1996-1073"
+  ],
+  "issn-type": [
+    {
+      "value": "1996-1073",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        28
+      ]
+    ]
+  }
+}

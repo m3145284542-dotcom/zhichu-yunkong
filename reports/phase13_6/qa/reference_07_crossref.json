@@ -1,0 +1,958 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        3
+      ]
+    ],
+    "date-time": "2026-09-03T07:10:38Z",
+    "timestamp": 1788419438510,
+    "version": "build-2803163510"
+  },
+  "reference-count": 63,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-017"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-037"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-012"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-029"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2024-03-01T00:00:00Z",
+        "timestamp": 1709251200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-004"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001809",
+      "name": "National Natural Science Foundation of China",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100001809",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Energy and Buildings"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.enbuild.2024.113913",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        1,
+        26
+      ]
+    ],
+    "date-time": "2024-01-26T08:09:05Z",
+    "timestamp": 1706256545000
+  },
+  "page": "113913",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 27,
+  "special_numbering": "C",
+  "title": [
+    "Quantifying the impact of building load forecasts on optimizing energy storage systems"
+  ],
+  "prefix": "10.1016",
+  "volume": "307",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0002-5241-569X",
+      "authenticated-orcid": false,
+      "given": "Lunlong",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1636-3386",
+      "authenticated-orcid": false,
+      "given": "Yi",
+      "family": "Ju",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2231-1606",
+      "authenticated-orcid": false,
+      "given": "Zhe",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0010",
+      "series-title": "Building Simulation",
+      "first-page": "1",
+      "article-title": "Modeling and management performances of distributed energy resource for demand flexibility in Japanese zero energy house",
+      "author": "Li",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0020",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.est.2022.105422",
+      "article-title": "A numerical study to compensate duck curve of ESS integrated gas turbine system with reused-battery",
+      "volume": "55",
+      "author": "Kwon",
+      "year": "2022",
+      "journal-title": "J. Energy Storage"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0030",
+      "series-title": "Building Simulation",
+      "first-page": "1",
+      "article-title": "On-site solar PV generation and use: self-consumption and self-sufficiency",
+      "author": "Wang",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0040",
+      "series-title": "Building Simulation",
+      "first-page": "1",
+      "article-title": "A general spatial-temporal framework for short-term building temperature forecasting at arbitrary locations with crowdsourcing weather data",
+      "author": "Widjaja",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0050",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2022.119343",
+      "article-title": "Site demonstration and performance evaluation of MPC for a large chiller plant with TES for renewable energy integration and grid decarbonization",
+      "volume": "321",
+      "author": "Kim",
+      "year": "2022",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0060",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2021.117733",
+      "article-title": "Controlling distributed energy resources via deep reinforcement learning for load flexibility and energy efficiency",
+      "volume": "304",
+      "author": "Touzani",
+      "year": "2021",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0070",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.adapen.2021.100063",
+      "article-title": "A modeler's guide to handle complexity in energy systems optimization",
+      "volume": "4",
+      "author": "Kotzur",
+      "year": "2021",
+      "journal-title": "Adv. Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0080",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enconman.2023.117723",
+      "article-title": "Recent developments of energy management strategies in microgrids: an updated and comprehensive review and classification",
+      "volume": "297",
+      "author": "Abbasi",
+      "year": "2023",
+      "journal-title": "Energy Convers. Manag."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0090",
+      "series-title": "2019 1st International Conference on Control Systems, Mathematical Modelling, Automation and Energy Efficiency (SUMMA)",
+      "first-page": "411",
+      "article-title": "Intensive data collection system for smart grid and smart building research",
+      "author": "Bazenkov",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0100",
+      "series-title": "Building Simulation",
+      "first-page": "1",
+      "article-title": "Modeling and configuration optimization of the rooftop photovoltaic with electric-hydrogen-thermal hybrid storage system for zero-energy buildings: consider a cumulative seasonal effect",
+      "author": "Dong",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0110",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.rser.2023.113751",
+      "article-title": "Demand response of HVAC systems for hosting capacity improvement in distribution networks: a comprehensive review and case study",
+      "volume": "187",
+      "author": "Hwang",
+      "year": "2023",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0120",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.est.2022.105579",
+      "article-title": "Integrating electric vehicles as virtual power plants: a comprehensive review on vehicle-to-grid (V2G) concepts, interface topologies, marketing and future prospects",
+      "volume": "55",
+      "author": "İnci",
+      "year": "2022",
+      "journal-title": "J. Energy Storage"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0130",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.energy.2023.129652",
+      "article-title": "A hybrid-mpc based energy management system with time series constraints for a bioclimatic building",
+      "volume": "287",
+      "author": "Topa",
+      "year": "2024",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0140",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.ijepes.2020.105949",
+      "article-title": "An mpc-based power management of standalone dc microgrid with energy storage",
+      "volume": "120",
+      "author": "Batiyah",
+      "year": "2020",
+      "journal-title": "Int. J. Electr. Power Energy Syst."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0150",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2023.120998",
+      "article-title": "Balancing CO2 emissions and economic cost in a microgrid through an energy management system using MPC and multi-objective optimization",
+      "volume": "347",
+      "author": "Vásquez",
+      "year": "2023",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0160",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2023.121145",
+      "article-title": "Hierarchical energy management system for multi-microgrid coordination with demand-side management",
+      "volume": "342",
+      "author": "Bustos",
+      "year": "2023",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0170",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enbuild.2022.112712",
+      "article-title": "Energy management of the grid-connected residential photovoltaic-battery system using model predictive control coupled with dynamic programming",
+      "volume": "279",
+      "author": "Zou",
+      "year": "2023",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0180",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.rser.2021.111955",
+      "article-title": "An overview of the challenges of solar power integration in isolated industrial microgrids with reliability constraints",
+      "volume": "155",
+      "author": "Polleux",
+      "year": "2022",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.enbuild.2024.113913_br0190",
+      "doi-asserted-by": "crossref",
+      "first-page": "3652",
+      "DOI": "10.1109/TSG.2016.2637958",
+      "article-title": "Control strategies for microgrids with distributed energy storage systems: an overview",
+      "volume": "9",
+      "author": "Morstyn",
+      "year": "2018",
+      "journal-title": "IEEE Trans. Smart Grid"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0200",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2021.117875",
+      "article-title": "Comparative study of the dynamic programming-based and rule-based operation strategies for grid-connected pv-battery systems of office buildings",
+      "volume": "305",
+      "author": "Zou",
+      "year": "2022",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0210",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.rser.2020.110422",
+      "article-title": "Model predictive control of microgrids–an overview",
+      "volume": "136",
+      "author": "Hu",
+      "year": "2021",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0220",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2020.115036",
+      "article-title": "Reinforcement learning for building controls: the opportunities and challenges",
+      "volume": "269",
+      "author": "Wang",
+      "year": "2020",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0230",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.applthermaleng.2023.120430",
+      "article-title": "Comparison of reinforcement learning and model predictive control for building energy system optimization",
+      "volume": "228",
+      "author": "Wang",
+      "year": "2023",
+      "journal-title": "Appl. Therm. Eng."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0240",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3389/fbuil.2022.849754",
+      "article-title": "Comparison of optimal control techniques for building energy management",
+      "volume": "8",
+      "author": "Arroyo",
+      "year": "2022",
+      "journal-title": "Front. Built Environ."
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.enbuild.2024.113913_br0250",
+      "doi-asserted-by": "crossref",
+      "first-page": "2127",
+      "DOI": "10.1109/TSG.2017.2789333",
+      "article-title": "Model predictive control for smart grids with multiple electric-vehicle charging stations",
+      "volume": "10",
+      "author": "Shi",
+      "year": "2018",
+      "journal-title": "IEEE Trans. Smart Grid"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0260",
+      "doi-asserted-by": "crossref",
+      "first-page": "873",
+      "DOI": "10.1016/j.apenergy.2019.03.038",
+      "article-title": "Model predictive control for thermal energy storage and thermal comfort optimization of building demand response in smart grids",
+      "volume": "242",
+      "author": "Tang",
+      "year": "2019",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0270",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2019.113665",
+      "article-title": "Single-dwelling and community renewable microgrids: optimal sizing and energy management for new business models",
+      "volume": "254",
+      "author": "Avilés A.",
+      "year": "2019",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0280",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2022.120038",
+      "article-title": "Cloud-based model-predictive-control of a battery storage system at a commercial site",
+      "volume": "327",
+      "author": "Goldsworthy",
+      "year": "2022",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0290",
+      "doi-asserted-by": "crossref",
+      "first-page": "1033",
+      "DOI": "10.1016/j.apenergy.2018.04.103",
+      "article-title": "Microgrids energy management systems: a critical review on methods, solutions, and prospects",
+      "volume": "222",
+      "author": "Zia",
+      "year": "2018",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0300",
+      "first-page": "317",
+      "article-title": "A demand side management approach to increase self-consumption in buildings",
+      "volume": "vol. 16",
+      "author": "Fernández Bandera",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0310",
+      "author": "Darghouth"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0320",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2023.120913",
+      "article-title": "Optimal dispatch of a multi-energy system microgrid under uncertainty: a renewable energy community in Austria",
+      "volume": "337",
+      "author": "Houben",
+      "year": "2023",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.enbuild.2024.113913_br0330",
+      "doi-asserted-by": "crossref",
+      "first-page": "901",
+      "DOI": "10.1016/j.apenergy.2009.06.010",
+      "article-title": "Cooling output optimization of an air handling unit",
+      "volume": "87",
+      "author": "Kusiak",
+      "year": "2010",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0340",
+      "doi-asserted-by": "crossref",
+      "first-page": "459",
+      "DOI": "10.1016/j.apenergy.2017.07.048",
+      "article-title": "Data analytics and optimization of an ice-based energy storage system for commercial buildings",
+      "volume": "204",
+      "author": "Luo",
+      "year": "2017",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "issue": "7",
+      "key": "10.1016/j.enbuild.2024.113913_br0350",
+      "doi-asserted-by": "crossref",
+      "first-page": "1124",
+      "DOI": "10.1016/j.enbuild.2007.10.014",
+      "article-title": "Load prediction method for heat and electricity demand in buildings for the purpose of planning for mixed energy distribution systems",
+      "volume": "40",
+      "author": "Pedersen",
+      "year": "2008",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0360",
+      "doi-asserted-by": "crossref",
+      "first-page": "297",
+      "DOI": "10.1016/j.apenergy.2013.11.064",
+      "article-title": "An interactive building power demand management strategy for facilitating smart grid optimization",
+      "volume": "116",
+      "author": "Xue",
+      "year": "2014",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0370",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2020.114683",
+      "article-title": "Building thermal load prediction through shallow machine learning and deep learning",
+      "volume": "263",
+      "author": "Wang",
+      "year": "2020",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0380",
+      "doi-asserted-by": "crossref",
+      "first-page": "517",
+      "DOI": "10.1016/j.rser.2014.05.056",
+      "article-title": "Review of building energy modeling for control and operation",
+      "volume": "37",
+      "author": "Li",
+      "year": "2014",
+      "journal-title": "Renew. Sustain. Energy Rev."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0390",
+      "first-page": "263",
+      "article-title": "Timetabling optimization of classrooms and self-study rooms in university teaching buildings based on the building controls virtual test bed platform considering energy efficiency",
+      "volume": "vol. 16",
+      "author": "Liu",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0400",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enbuild.2021.111163",
+      "article-title": "Optimal energy management in smart sustainable buildings – a chance-constrained model predictive control approach",
+      "volume": "248",
+      "author": "Nagpal",
+      "year": "2021",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0410",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enbuild.2023.113753",
+      "article-title": "Model predictive control of distributed energy resources in residential buildings considering forecast uncertainties",
+      "volume": "303",
+      "author": "Langner",
+      "year": "2024",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0420",
+      "series-title": "2016 IEEE 43rd Photovoltaic Specialists Conference (PVSC)",
+      "first-page": "1875",
+      "article-title": "A comparison between two mpc algorithms for demand charge reduction in a real-world microgrid system",
+      "author": "Xue",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0430",
+      "first-page": "1685",
+      "article-title": "Daily power demand prediction for buildings at a large scale using a hybrid of physics-based model and generative adversarial network",
+      "volume": "vol. 15",
+      "author": "Tian",
+      "year": "2022"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0440",
+      "doi-asserted-by": "crossref",
+      "first-page": "723",
+      "DOI": "10.1016/j.jpowsour.2016.06.076",
+      "article-title": "Nonlinear predictive energy management of residential buildings with photovoltaics & batteries",
+      "volume": "325",
+      "author": "Sun",
+      "year": "2016",
+      "journal-title": "J. Power Sources"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.enbuild.2024.113913_br0450",
+      "doi-asserted-by": "crossref",
+      "first-page": "652",
+      "DOI": "10.1109/JSYST.2022.3154389",
+      "article-title": "Learning-aided framework for storage control facing renewable energy",
+      "volume": "17",
+      "author": "Wu",
+      "year": "2022",
+      "journal-title": "IEEE Syst. J."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.enbuild.2024.113913_br0460",
+      "doi-asserted-by": "crossref",
+      "first-page": "339",
+      "DOI": "10.1016/j.ejor.2020.10.041",
+      "article-title": "Strategies for microgrid operation under real-world conditions",
+      "volume": "292",
+      "author": "Gust",
+      "year": "2021",
+      "journal-title": "Eur. J. Oper. Res."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0470",
+      "doi-asserted-by": "crossref",
+      "first-page": "15",
+      "DOI": "10.1016/j.enbuild.2011.09.022",
+      "article-title": "Use of model predictive control and weather forecasts for energy efficient building climate control",
+      "volume": "45",
+      "author": "Oldewurtel",
+      "year": "2012",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0480",
+      "author": "Campo"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0490",
+      "doi-asserted-by": "crossref",
+      "first-page": "1207",
+      "DOI": "10.1016/j.apenergy.2017.08.133",
+      "article-title": "On the use of probabilistic forecasts in scheduling of renewable energy sources coupled to storages",
+      "volume": "210",
+      "author": "Appino",
+      "year": "2018",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.enbuild.2024.113913_br0500",
+      "doi-asserted-by": "crossref",
+      "first-page": "9",
+      "DOI": "10.1287/mnsc.2020.3922",
+      "article-title": "Smart “predict, then optimize”",
+      "volume": "68",
+      "author": "Elmachtoub",
+      "year": "2022",
+      "journal-title": "Manag. Sci."
+    },
+    {
+      "issue": "124",
+      "key": "10.1016/j.enbuild.2024.113913_br0510",
+      "first-page": "1",
+      "article-title": "Darts: user-friendly modern machine learning for time series",
+      "volume": "23",
+      "author": "Herzen",
+      "year": "2022",
+      "journal-title": "J. Mach. Learn. Res."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0520",
+      "series-title": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "first-page": "785",
+      "article-title": "XGBoost: a scalable tree boosting system",
+      "author": "Chen",
+      "year": "2016"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.enbuild.2024.113913_br0530",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1063/5.0038650",
+      "article-title": "Open-source multi-year power generation, consumption, and storage data in a microgrid",
+      "volume": "13",
+      "author": "Silwal",
+      "year": "2021",
+      "journal-title": "J. Renew. Sustain. Energy"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.enbuild.2024.113913_br0540",
+      "doi-asserted-by": "crossref",
+      "first-page": "1639",
+      "DOI": "10.3390/s21051639",
+      "article-title": "An attention-based multilayer GRU model for multistep-ahead short-term load forecasting",
+      "volume": "21",
+      "author": "Jung",
+      "year": "2021",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0560",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.enbuild.2021.111574",
+      "article-title": "An online physical-based multiple linear regression model for building's hourly cooling load prediction",
+      "volume": "254",
+      "author": "Chen",
+      "year": "2022",
+      "journal-title": "Energy Build."
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.enbuild.2024.113913_br0570",
+      "doi-asserted-by": "crossref",
+      "first-page": "1181",
+      "DOI": "10.1016/j.ijforecast.2019.07.001",
+      "article-title": "DeepAR: probabilistic forecasting with autoregressive recurrent networks",
+      "volume": "36",
+      "author": "Salinas",
+      "year": "2020",
+      "journal-title": "Int. J. Forecast."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.enbuild.2024.113913_br0580",
+      "doi-asserted-by": "crossref",
+      "first-page": "1748",
+      "DOI": "10.1016/j.ijforecast.2021.03.012",
+      "article-title": "Temporal fusion transformers for interpretable multi-horizon time series forecasting",
+      "volume": "37",
+      "author": "Lim",
+      "year": "2021",
+      "journal-title": "Int. J. Forecast."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0550",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.adapen.2021.100025",
+      "article-title": "Predicting city-scale daily electricity consumption using data-driven models",
+      "volume": "2",
+      "author": "Wang",
+      "year": "2021",
+      "journal-title": "Adv. Appl. Energy"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.enbuild.2024.113913_br0600",
+      "doi-asserted-by": "crossref",
+      "first-page": "587",
+      "DOI": "10.1016/j.ijforecast.2020.07.007",
+      "article-title": "Kaggle forecasting competitions: an overlooked learning opportunity",
+      "volume": "37",
+      "author": "Bojer",
+      "year": "2021",
+      "journal-title": "Int. J. Forecast."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0610",
+      "series-title": "Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "article-title": "Optuna: a next-generation hyperparameter optimization framework",
+      "author": "Akiba",
+      "year": "2019"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.enbuild.2024.113913_br0620",
+      "doi-asserted-by": "crossref",
+      "first-page": "221",
+      "DOI": "10.1080/10789669.2007.10390952",
+      "article-title": "Calibrating detailed building energy simulation programs with measured data—part I: general methodology (RP-1051)",
+      "volume": "13",
+      "author": "Reddy",
+      "year": "2007",
+      "journal-title": "HVAC&R Res."
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0630",
+      "doi-asserted-by": "crossref",
+      "first-page": "222",
+      "DOI": "10.1016/j.apenergy.2017.03.064",
+      "article-title": "A short-term building cooling load prediction method using deep learning algorithms",
+      "volume": "195",
+      "author": "Fan",
+      "year": "2017",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "10.1016/j.enbuild.2024.113913_br0640",
+      "author": "McLaren"
+    }
+  ],
+  "container-title": [
+    "Energy and Buildings"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S037877882400029X?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S037877882400029X?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        3,
+        16
+      ]
+    ],
+    "date-time": "2025-03-16T23:00:06Z",
+    "timestamp": 1742166006000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S037877882400029X"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        3
+      ]
+    ]
+  },
+  "references-count": 63,
+  "alternative-id": [
+    "S037877882400029X"
+  ],
+  "URL": "https://doi.org/10.1016/j.enbuild.2024.113913",
+  "relation": {},
+  "ISSN": [
+    "0378-7788"
+  ],
+  "issn-type": [
+    {
+      "value": "0378-7788",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        3
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Quantifying the impact of building load forecasts on optimizing energy storage systems",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Energy and Buildings",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.enbuild.2024.113913",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2024 Elsevier B.V. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "113913"
+}

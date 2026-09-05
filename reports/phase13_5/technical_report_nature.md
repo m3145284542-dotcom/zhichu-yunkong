@@ -311,7 +311,7 @@ DOEF 面向的工程问题是建筑侧储能在有限容量下如何把电量留
 
 [1] Miller C, et al. The Building Data Genome Project 2, energy meter data from the ASHRAE Great Energy Predictor III competition. *Scientific Data*, 2020. DOI: 10.1038/s41597-020-00712-x.
 
-[2] Amasyali K, El-Gohary N M. A review of machine learning in building load prediction. *Applied Energy*, 2021. DOI: 10.1016/j.apenergy.2021.116452.
+[2] Zhang L, Wen J, Li Y, Chen J, Ye Y, Fu Y, Livingood W. A review of machine learning in building load prediction. *Applied Energy*, 2021. DOI: 10.1016/j.apenergy.2021.116452.
 
 [3] Yildiz B, Bilbao J I, Sproul A B. A review and analysis of regression and machine learning models on commercial building electricity load forecasting. *Renewable and Sustainable Energy Reviews*, 2017. DOI: 10.1016/j.rser.2017.02.023.
 

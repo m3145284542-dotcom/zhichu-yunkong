@@ -1,0 +1,721 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "pdf_sha256": "73b1bea85272c26bae51b77308a9820fe47c8ccccb6453becdc90da6d28d6abb",
+  "bytes": 1096823,
+  "pages": 15,
+  "page_size_pt": [
+    0.0,
+    0.0,
+    595.280029296875,
+    841.8900146484375
+  ],
+  "version": "PDF 1.7",
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "DOEF：让负荷预测服务于储能削峰决策",
+    "author": "",
+    "subject": "AI+能源 科技创新组技术报告",
+    "keywords": "",
+    "creator": "XeLaTeX",
+    "producer": "MiKTeX-dvipdfmx (20250413)",
+    "creationDate": "D:20260905092057+08'00'",
+    "modDate": "",
+    "trapped": "",
+    "encryption": null
+  },
+  "fonts": [
+    {
+      "name": "NRVHNE+SimSun",
+      "embedded": true
+    },
+    {
+      "name": "HVRRNI+ArialMT",
+      "embedded": true
+    },
+    {
+      "name": "APIXKU+SimHei",
+      "embedded": true
+    },
+    {
+      "name": "ZIHENR+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "name": "PVAOGT+SimHei",
+      "embedded": true
+    },
+    {
+      "name": "SOSCQC+SimSun",
+      "embedded": true
+    },
+    {
+      "name": "PINVTR+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "name": "SNNPAO+Arial-BoldMT",
+      "embedded": true
+    },
+    {
+      "name": "FRPCRM+SimHei",
+      "embedded": true
+    },
+    {
+      "name": "VVJJGM+CMMI12",
+      "embedded": true
+    },
+    {
+      "name": "QBDMKU+CMR12",
+      "embedded": true
+    },
+    {
+      "name": "FAPNNL+CMMI8",
+      "embedded": true
+    },
+    {
+      "name": "HXJRVQ+CMSY8",
+      "embedded": true
+    },
+    {
+      "name": "TNZSRW+CMR8",
+      "embedded": true
+    },
+    {
+      "name": "DLFAAM+CMEX10",
+      "embedded": true
+    },
+    {
+      "name": "BYEQDH+CMSY10",
+      "embedded": true
+    },
+    {
+      "name": "BTKAQP+TimesNewRomanPS-ItalicMT",
+      "embedded": true
+    }
+  ],
+  "review_annotations": 0,
+  "links": [
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 1
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 3
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 3
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 4
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 4
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 5
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 6
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 7
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 7
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 9
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 9
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 9
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 10
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 11
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 11
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 12
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 12
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 12
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 12
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 13
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 13
+    },
+    {
+      "page": 3,
+      "kind": 4,
+      "target_page": 14
+    }
+  ],
+  "bookmarks": [
+    [
+      1,
+      "摘要",
+      2
+    ],
+    [
+      1,
+      "1. 项目背景与意义",
+      4
+    ],
+    [
+      2,
+      "1.1 研究背景与问题定义",
+      4
+    ],
+    [
+      1,
+      "2. 技术方案与实现",
+      5
+    ],
+    [
+      2,
+      "2.1 数据集与实验设计",
+      5
+    ],
+    [
+      2,
+      "2.2 建筑负荷预测方法",
+      6
+    ],
+    [
+      2,
+      "2.3 储能削峰优化模型",
+      7
+    ],
+    [
+      2,
+      "2.4 从预测误差到决策误差",
+      8
+    ],
+    [
+      2,
+      "2.5 DOEF：面向储能决策的预测融合方法",
+      8
+    ],
+    [
+      1,
+      "3. 实验结果与分析",
+      10
+    ],
+    [
+      2,
+      "3.1 预测层结果",
+      10
+    ],
+    [
+      2,
+      "3.2 决策层结果",
+      10
+    ],
+    [
+      2,
+      "3.3 多建筑稳健性",
+      11
+    ],
+    [
+      2,
+      "3.4 验证集选择与测试集评价",
+      12
+    ],
+    [
+      2,
+      "3.5 冻结结果复用与可复现性",
+      12
+    ],
+    [
+      1,
+      "4. 创新点与应用前景",
+      13
+    ],
+    [
+      2,
+      "4.1 创新点",
+      13
+    ],
+    [
+      2,
+      "4.2 工程价值",
+      13
+    ],
+    [
+      2,
+      "4.3 局限性、伦理风险与未来工作",
+      13
+    ],
+    [
+      1,
+      "5. 结论",
+      14
+    ],
+    [
+      1,
+      "参考文献",
+      14
+    ],
+    [
+      1,
+      "附录 A：核心证据来源",
+      15
+    ]
+  ],
+  "blank_pages": [],
+  "out_of_page_text": [],
+  "typesetting_warnings": [],
+  "source_sha256": "9bf8dfa229202aa4719537136a5cf74c80f11f300fe087528d626adf159754bf",
+  "source_bytes": 26446,
+  "source_blob": "ea5f9f7d83646c4ef3f48670f81e901624a50856",
+  "source_baseline_blob": "2c39807f4d244c26abbdf907978beb6688dcd608",
+  "text_segments": 209,
+  "missing_segments": [],
+  "numeric_tokens": 69,
+  "numeric_missing": [],
+  "display_equations": 11,
+  "inline_equations": 21,
+  "scientific_semantic_changes": 0,
+  "bibliographic_corrections": 1,
+  "abstract_word_count": 402,
+  "abstract_CJK_characters": 373,
+  "protected_files": [
+    {
+      "path": "outputs/phase7/artifact_manifest.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/building_candidate_statistics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/constraint_audit.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/constraint_audit_details.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/cross_building_model_summary.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/ensemble_test_results.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/ensemble_validation_sweep.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/01_morphology_map.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/02_normalized_forecast_comparison.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/03_decision_comparison.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/04_forecast_vs_decision_rank.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/05_average_rank.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/06_success_case.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/07_failure_case.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/figures/08_ensemble_improvement.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/hog_phase6_compatibility.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/leakage_audit.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/model_selection_config.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/model_test_decision_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/model_test_forecast_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/model_validation_results.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/paired_model_comparison.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/selected_buildings.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/selected_buildings.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/selected_ensemble_config.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/summary.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase7/test_daily_decision_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/aggregate_summary.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/bootstrap_summary.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/building_summary.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/constraint_audit.txt",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/constraint_audit_details.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/figures/01_validation_weight_vs_mae.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/figures/02_validation_weight_vs_regret.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/figures/03_selected_weights.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/figures/04_test_decision_regret.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/figures/05_forecast_vs_decision_effect.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/figures/06_representative_dispatch.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/global_selected_weights.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/global_test_summary.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/global_weight_search.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/leakage_audit.txt",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/lineage.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/run_config.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/test_forecast_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase8/validation_weight_search.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/aggregate_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/bootstrap_results.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/competition_summary.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/constraint_audit.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/constraint_summary.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/data_lineage.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/decision_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/efficiency_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/figures/01_forecast_vs_decision.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/figures/02_building_decision_comparison.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/figures/03_core_improvements.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/figures/04_peak_quality_vs_decision.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/figures/05_efficiency.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/figures/06_validation_search.png",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/final_algorithm.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/forecast_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/leakage_audit.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/per_building_metrics.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/run_config.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/selected_peak_configs.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/summary.json",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "outputs/phase9/validation_search.csv",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "reports/phase7_report.md",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "reports/phase8_report.md",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    },
+    {
+      "path": "reports/phase9_report.md",
+      "baseline_blob_unchanged": true,
+      "registered_hash_matches": true
+    }
+  ]
+}

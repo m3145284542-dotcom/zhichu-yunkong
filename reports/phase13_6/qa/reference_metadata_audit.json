@@ -1,0 +1,878 @@
+[
+  {
+    "number": "1",
+    "source": "Miller C, et al. The Building Data Genome Project 2, energy meter data from the ASHRAE Great Energy Predictor III competition. *Scientific Data*, 2020. DOI: 10.1038/s41597-020-00712-x.",
+    "title": [
+      "The Building Data Genome Project 2, energy meter data from the ASHRAE Great Energy Predictor III competition"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1186-4299",
+        "authenticated-orcid": false,
+        "given": "Clayton",
+        "family": "Miller",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anjukan",
+        "family": "Kathirgamanathan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bianca",
+        "family": "Picchetti",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pandarasamy",
+        "family": "Arjunan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "June Young",
+        "family": "Park",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6014-3228",
+        "authenticated-orcid": false,
+        "given": "Zoltan",
+        "family": "Nagy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6532-5178",
+        "authenticated-orcid": false,
+        "given": "Paul",
+        "family": "Raftery",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Brodie W.",
+        "family": "Hobson",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zixiao",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Forrest",
+        "family": "Meggers",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          10,
+          27
+        ]
+      ]
+    },
+    "container": [
+      "Scientific Data"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "2",
+    "source": "Zhang L, Wen J, Li Y, Chen J, Ye Y, Fu Y, Livingood W. A review of machine learning in building load prediction. *Applied Energy*, 2021. DOI: 10.1016/j.apenergy.2021.116452.",
+    "title": [
+      "A review of machine learning in building load prediction"
+    ],
+    "authors": [
+      {
+        "given": "Liang",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jin",
+        "family": "Wen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yanfei",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianli",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yunyang",
+        "family": "Ye",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yangyang",
+        "family": "Fu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "William",
+        "family": "Livingood",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    },
+    "container": [
+      "Applied Energy"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "3",
+    "source": "Yildiz B, Bilbao J I, Sproul A B. A review and analysis of regression and machine learning models on commercial building electricity load forecasting. *Renewable and Sustainable Energy Reviews*, 2017. DOI: 10.1016/j.rser.2017.02.023.",
+    "title": [
+      "A review and analysis of regression and machine learning models on commercial building electricity load forecasting"
+    ],
+    "authors": [
+      {
+        "given": "B.",
+        "family": "Yildiz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.I.",
+        "family": "Bilbao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "A.B.",
+        "family": "Sproul",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          6
+        ]
+      ]
+    },
+    "container": [
+      "Renewable and Sustainable Energy Reviews"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "4",
+    "source": "Soman A, et al. Peak Forecasting for Battery-based Energy Optimizations in Campus Microgrids. *ACM e-Energy*, 2020. DOI: 10.1145/3396851.3397751.",
+    "title": [
+      "Peak Forecasting for Battery-based Energy Optimizations in Campus Microgrids"
+    ],
+    "authors": [
+      {
+        "given": "Akhil",
+        "family": "Soman",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Massachusetts, Amherst"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Amee",
+        "family": "Trivedi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Massachusetts, Amherst"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David",
+        "family": "Irwin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Massachusetts, Amherst"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Beka",
+        "family": "Kosanovic",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Massachusetts, Amherst"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Benjamin",
+        "family": "McDaniel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Massachusetts, Amherst"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Prashant",
+        "family": "Shenoy",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Massachusetts, Amherst"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          6,
+          12
+        ]
+      ]
+    },
+    "container": [
+      "Proceedings of the Eleventh ACM International Conference on Future Energy Systems"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "5",
+    "source": "Hwang J S, et al. Optimal ESS Scheduling for Peak Shaving of Building Energy Using Accuracy-Enhanced Load Forecast. *Energies*, 2020. DOI: 10.3390/en13215633.",
+    "title": [
+      "Optimal ESS Scheduling for Peak Shaving of Building Energy Using Accuracy-Enhanced Load Forecast"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-3331-0537",
+        "authenticated-orcid": false,
+        "given": "Jin Sol",
+        "family": "Hwang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1053-9985",
+        "authenticated-orcid": false,
+        "given": "Ismi",
+        "family": "Rosyiana Fitri",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5952-2917",
+        "authenticated-orcid": false,
+        "given": "Jung-Su",
+        "family": "Kim",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6313-2719",
+        "authenticated-orcid": false,
+        "given": "Hwachang",
+        "family": "Song",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul 01811, Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          10,
+          28
+        ]
+      ]
+    },
+    "container": [
+      "Energies"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "6",
+    "source": "Rafayal S, Alnaggar A, Cevik M. Optimizing electricity peak shaving through stochastic programming and probabilistic time series forecasting. *Journal of Building Engineering*, 2024. DOI: 10.1016/j.jobe.2024.109163.",
+    "title": [
+      "Optimizing electricity peak shaving through stochastic programming and probabilistic time series forecasting"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0008-9660-4277",
+        "authenticated-orcid": false,
+        "given": "Syed",
+        "family": "Rafayal",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6318-9686",
+        "authenticated-orcid": false,
+        "given": "Aliaa",
+        "family": "Alnaggar",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4020-6305",
+        "authenticated-orcid": false,
+        "given": "Mucahit",
+        "family": "Cevik",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          7
+        ]
+      ]
+    },
+    "container": [
+      "Journal of Building Engineering"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "7",
+    "source": "Li L, Ju Y, Wang Z. Quantifying the impact of building load forecasts on optimizing energy storage systems. *Energy and Buildings*, 2024. DOI: 10.1016/j.enbuild.2024.113913.",
+    "title": [
+      "Quantifying the impact of building load forecasts on optimizing energy storage systems"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0002-5241-569X",
+        "authenticated-orcid": false,
+        "given": "Lunlong",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1636-3386",
+        "authenticated-orcid": false,
+        "given": "Yi",
+        "family": "Ju",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2231-1606",
+        "authenticated-orcid": false,
+        "given": "Zhe",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "container": [
+      "Energy and Buildings"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "8",
+    "source": "Singleton C, Grindrod P. Forecasting for Battery Storage: Choosing the Error Metric. *Energies*, 2021. DOI: 10.3390/en14196274.",
+    "title": [
+      "Forecasting for Battery Storage: Choosing the Error Metric"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-5227-173X",
+        "authenticated-orcid": false,
+        "given": "Colin",
+        "family": "Singleton",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Counting Lab Ltd., Reading RG6 6BU, UK"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Peter",
+        "family": "Grindrod",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Mathematical Institute, University of Oxford, Oxford OX2 6GG, UK"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          10,
+          1
+        ]
+      ]
+    },
+    "container": [
+      "Energies"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "9",
+    "source": "Donti P L, Amos B, Kolter J Z. Task-based End-to-end Model Learning in Stochastic Optimization. *NeurIPS*, 2017.",
+    "status": "no DOI; official NeurIPS lookup required"
+  },
+  {
+    "number": "10",
+    "source": "Elmachtoub A N, Grigas P. Smart Predict, then Optimize. *Management Science*, 2022. DOI: 10.1287/mnsc.2020.3922.",
+    "title": [
+      "Smart “Predict, then Optimize”"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-0729-4999",
+        "authenticated-orcid": false,
+        "given": "Adam N.",
+        "family": "Elmachtoub",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Industrial Engineering and Operations Research and Data Science Institute, Columbia University, New York, New York 10027;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5617-1058",
+        "authenticated-orcid": false,
+        "given": "Paul",
+        "family": "Grigas",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Industrial Engineering and Operations Research, University of California, Berkeley, Berkeley, California 94720"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "container": [
+      "Management Science"
+    ],
+    "status": "retrieved"
+  },
+  {
+    "number": "11",
+    "source": "Mandi J, et al. Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities. *Journal of Artificial Intelligence Research*, 2024. DOI: 10.1613/jair.1.15320.",
+    "title": [
+      "Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-8675-8178",
+        "authenticated-orcid": false,
+        "given": "Jayanta",
+        "family": "Mandi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4499-8066",
+        "authenticated-orcid": false,
+        "given": "James",
+        "family": "Kotary",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Senne",
+        "family": "Berden",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maxime",
+        "family": "Mulamba",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Victor",
+        "family": "Bucarey",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tias",
+        "family": "Guns",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ferdinando",
+        "family": "Fioretto",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          31
+        ]
+      ]
+    },
+    "container": [
+      "Journal of Artificial Intelligence Research"
+    ],
+    "status": "retrieved"
+  }
+]

@@ -1,0 +1,2495 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        29
+      ]
+    ],
+    "date-time": "2026-08-29T07:57:32Z",
+    "timestamp": 1787990252839,
+    "version": "build-2784847793"
+  },
+  "reference-count": 223,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2021-03-01T00:00:00Z",
+        "timestamp": 1614556800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2021-03-01T00:00:00Z",
+        "timestamp": 1614556800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            13
+          ]
+        ],
+        "date-time": "2022-01-13T00:00:00Z",
+        "timestamp": 1642032000000
+      },
+      "content-version": "am",
+      "delay-in-days": 318,
+      "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100006134",
+      "name": "Office of Energy Efficiency and Renewable Energy",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/100006134",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Applied Energy"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.apenergy.2021.116452",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        13
+      ]
+    ],
+    "date-time": "2021-01-13T14:43:51Z",
+    "timestamp": 1610549031000
+  },
+  "page": "116452",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 622,
+  "special_numbering": "C",
+  "title": [
+    "A review of machine learning in building load prediction"
+  ],
+  "prefix": "10.1016",
+  "volume": "285",
+  "author": [
+    {
+      "given": "Liang",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jin",
+      "family": "Wen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yanfei",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jianli",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yunyang",
+      "family": "Ye",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yangyang",
+      "family": "Fu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "William",
+      "family": "Livingood",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0005",
+      "unstructured": "EIA, Monthly energy review – June 2020. US Energy Information Administration, 2020."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0010",
+      "doi-asserted-by": "crossref",
+      "first-page": "517",
+      "DOI": "10.1016/j.rser.2014.05.056",
+      "article-title": "Review of building energy modeling for control and operation",
+      "volume": "37",
+      "author": "Li",
+      "year": "2014",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "issue": "6245",
+      "key": "10.1016/j.apenergy.2021.116452_b0015",
+      "doi-asserted-by": "crossref",
+      "first-page": "255",
+      "DOI": "10.1126/science.aaa8415",
+      "article-title": "Machine learning: Trends, perspectives, and prospects",
+      "volume": "349",
+      "author": "Jordan",
+      "year": "2015",
+      "journal-title": "Science"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0020",
+      "unstructured": "Mitchell TM. Machine learning. 1997. Burr Ridge, IL: McGraw Hill, 1997. 45(37): p. 870–7."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0025",
+      "doi-asserted-by": "crossref",
+      "first-page": "222",
+      "DOI": "10.1016/j.apenergy.2017.03.064",
+      "article-title": "A short-term building cooling load prediction method using deep learning algorithms",
+      "volume": "195",
+      "author": "Fan",
+      "year": "2017",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0030",
+      "doi-asserted-by": "crossref",
+      "first-page": "1343",
+      "DOI": "10.1016/j.apenergy.2017.12.002",
+      "article-title": "Using machine learning techniques for occupancy-prediction-based cooling control in office buildings",
+      "volume": "211",
+      "author": "Peng",
+      "year": "2018",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0035",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1080/23744731.2017.1318008",
+      "article-title": "A review of fault detection and diagnostics methods for building systems",
+      "volume": "24",
+      "author": "Kim",
+      "year": "2018",
+      "journal-title": "Sci Technol Built Environ"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0040",
+      "series-title": "International Conference on Global Research and Education",
+      "article-title": "State of the art survey of deep learning and machine learning models for smart cities and urban sustainability",
+      "author": "Nosratabadi",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0045",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Potter CW, Archambault A, Westrick K. Building a smarter smart grid through better renewable energy information. In: 2009 IEEE/PES Power Systems Conference and Exposition. 2009. IEEE.",
+      "DOI": "10.1109/PSCE.2009.4840110"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0050",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.enbuild.2014.07.021",
+      "article-title": "Building energy consumption on-line forecasting using physics based system identification",
+      "volume": "82",
+      "author": "Li",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0055",
+      "doi-asserted-by": "crossref",
+      "first-page": "91",
+      "DOI": "10.1016/j.segan.2016.02.005",
+      "article-title": "Deep learning for estimating building energy consumption",
+      "volume": "6",
+      "author": "Mocanu",
+      "year": "2016",
+      "journal-title": "Sustain Energy Grids Netw"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.apenergy.2021.116452_b0060",
+      "doi-asserted-by": "crossref",
+      "first-page": "674",
+      "DOI": "10.1080/23744731.2016.1188654",
+      "article-title": "Commercial building cooling energy forecasting using proactive system identification: A whole building experiment study",
+      "volume": "22",
+      "author": "Li",
+      "year": "2016",
+      "journal-title": "Sci Technol Built Environ"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0065",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Cugliari J, Goude Y, Poggi J-M. Disaggregated electricity forecasting using wavelet-based clustering of individual consumers. In: 2016 IEEE International Energy Conference (ENERGYCON). 2016. IEEE.",
+      "DOI": "10.1109/ENERGYCON.2016.7514087"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.apenergy.2021.116452_b0070",
+      "doi-asserted-by": "crossref",
+      "first-page": "3586",
+      "DOI": "10.1016/j.rser.2012.02.049",
+      "article-title": "A review on the prediction of building energy consumption",
+      "volume": "16",
+      "author": "Zhao",
+      "year": "2012",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0075",
+      "doi-asserted-by": "crossref",
+      "first-page": "102",
+      "DOI": "10.1016/j.rser.2014.01.069",
+      "article-title": "A review on applications of ANN and SVM for building electrical energy consumption forecasting",
+      "volume": "33",
+      "author": "Ahmad",
+      "year": "2014",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0080",
+      "doi-asserted-by": "crossref",
+      "first-page": "53",
+      "DOI": "10.1016/j.rser.2013.11.040",
+      "article-title": "A review on the basics of building energy estimation",
+      "volume": "31",
+      "author": "Fumo",
+      "year": "2014",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0085",
+      "doi-asserted-by": "crossref",
+      "first-page": "1352",
+      "DOI": "10.1016/j.rser.2015.04.065",
+      "article-title": "A review on artificial intelligence based load demand forecasting techniques for smart grid and buildings",
+      "volume": "50",
+      "author": "Raza",
+      "year": "2015",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0090",
+      "doi-asserted-by": "crossref",
+      "first-page": "1104",
+      "DOI": "10.1016/j.rser.2017.02.023",
+      "article-title": "A review and analysis of regression and machine learning models on commercial building electricity load forecasting",
+      "volume": "73",
+      "author": "Yildiz",
+      "year": "2017",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0095",
+      "doi-asserted-by": "crossref",
+      "first-page": "1108",
+      "DOI": "10.1016/j.rser.2016.12.015",
+      "article-title": "Building electrical energy consumption forecasting analysis using conventional and artificial intelligence methods: A review",
+      "volume": "70",
+      "author": "Daut",
+      "year": "2017",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0100",
+      "doi-asserted-by": "crossref",
+      "first-page": "902",
+      "DOI": "10.1016/j.rser.2017.02.085",
+      "article-title": "A review on time series forecasting techniques for building energy consumption",
+      "volume": "74",
+      "author": "Deb",
+      "year": "2017",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0105",
+      "doi-asserted-by": "crossref",
+      "first-page": "5",
+      "DOI": "10.1186/s40327-018-0064-7",
+      "article-title": "Machine learning for estimation of building energy consumption and performance: a review",
+      "volume": "6",
+      "author": "Seyedzadeh",
+      "year": "2018",
+      "journal-title": "Visualiz Eng"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0110",
+      "doi-asserted-by": "crossref",
+      "first-page": "587",
+      "DOI": "10.1016/j.rser.2014.07.053",
+      "article-title": "Optimisation of energy management in commercial buildings with weather forecasting inputs: A review",
+      "volume": "39",
+      "author": "Lazos",
+      "year": "2014",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0115",
+      "unstructured": "Wang Z, Srinivasan RS. A review of artificial intelligence based building energy prediction with a focus on ensemble prediction models. In: 2015 Winter Simulation Conference (WSC). 2015. IEEE."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0120",
+      "doi-asserted-by": "crossref",
+      "first-page": "598",
+      "DOI": "10.1016/j.rser.2016.11.132",
+      "article-title": "Data science for building energy management: A review",
+      "volume": "70",
+      "author": "Molina-Solana",
+      "year": "2017",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0125",
+      "doi-asserted-by": "crossref",
+      "first-page": "1192",
+      "DOI": "10.1016/j.rser.2017.04.095",
+      "article-title": "A review of data-driven building energy consumption prediction studies",
+      "volume": "81",
+      "author": "Amasyali",
+      "year": "2018",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0130",
+      "doi-asserted-by": "crossref",
+      "first-page": "257",
+      "DOI": "10.1016/j.scs.2017.08.009",
+      "article-title": "Electrical load forecasting models: A critical systematic review",
+      "volume": "35",
+      "author": "Kuster",
+      "year": "2017",
+      "journal-title": "Sustain Cities Soc"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0135",
+      "doi-asserted-by": "crossref",
+      "first-page": "18",
+      "DOI": "10.1016/j.energy.2017.07.150",
+      "article-title": "Electricity load forecasting by an improved forecast engine for building level consumers",
+      "volume": "139",
+      "author": "Liu",
+      "year": "2017",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0140",
+      "series-title": "International Conference on Intelligent Decision Technologies",
+      "article-title": "Short term load forecasting for residential buildings—An extensive literature review",
+      "author": "Gerwig",
+      "year": "2017"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.apenergy.2021.116452_b0145",
+      "doi-asserted-by": "crossref",
+      "first-page": "5352",
+      "DOI": "10.1016/j.eswa.2010.10.021",
+      "article-title": "Prediction of building energy needs in early stage of design by using ANFIS",
+      "volume": "38",
+      "author": "Ekici",
+      "year": "2011",
+      "journal-title": "Expert Syst Appl"
+    },
+    {
+      "issue": "7",
+      "key": "10.1016/j.apenergy.2021.116452_b0150",
+      "doi-asserted-by": "crossref",
+      "first-page": "2555",
+      "DOI": "10.1016/j.enconman.2011.02.002",
+      "article-title": "A study of the importance of occupancy to building cooling load in prediction by intelligent approach",
+      "volume": "52",
+      "author": "Kwok",
+      "year": "2011",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0155",
+      "doi-asserted-by": "crossref",
+      "first-page": "1672",
+      "DOI": "10.1016/j.energy.2016.03.057",
+      "article-title": "Simplified dynamic neural network model to predict heating load of a building using Taguchi method",
+      "volume": "115",
+      "author": "Sholahudin",
+      "year": "2016",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0160",
+      "doi-asserted-by": "crossref",
+      "first-page": "77",
+      "DOI": "10.1016/j.enbuild.2017.04.038",
+      "article-title": "Trees vs Neurons: Comparison between random forest and ANN for high-resolution prediction of building energy consumption",
+      "volume": "147",
+      "author": "Ahmad",
+      "year": "2017",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0165",
+      "doi-asserted-by": "crossref",
+      "first-page": "15",
+      "DOI": "10.1016/j.enbuild.2018.03.087",
+      "article-title": "Activity-aware HVAC power demand forecasting",
+      "volume": "170",
+      "author": "Sala-Cardoso",
+      "year": "2018",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0170",
+      "doi-asserted-by": "crossref",
+      "first-page": "189",
+      "DOI": "10.1016/j.enbuild.2015.02.052",
+      "article-title": "Ensemble of various neural networks for prediction of heating energy consumption",
+      "volume": "94",
+      "author": "Jovanović",
+      "year": "2015",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0175",
+      "doi-asserted-by": "crossref",
+      "first-page": "877",
+      "DOI": "10.1016/j.energy.2014.07.064",
+      "article-title": "Heating, cooling, and electrical load forecasting for a large-scale district energy system",
+      "volume": "74",
+      "author": "Powell",
+      "year": "2014",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.apenergy.2021.116452_b0180",
+      "doi-asserted-by": "crossref",
+      "first-page": "1637",
+      "DOI": "10.1016/j.enbuild.2010.04.006",
+      "article-title": "A decision tree method for building energy demand modeling",
+      "volume": "42",
+      "author": "Yu",
+      "year": "2010",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0185",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.apenergy.2014.04.016",
+      "article-title": "Development of prediction models for next-day building energy consumption and peak power demand using data mining techniques",
+      "volume": "127",
+      "author": "Fan",
+      "year": "2014",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0190",
+      "doi-asserted-by": "crossref",
+      "first-page": "332",
+      "DOI": "10.1016/j.rser.2015.03.035",
+      "article-title": "Regression analysis for prediction of residential energy consumption",
+      "volume": "47",
+      "author": "Fumo",
+      "year": "2015",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0195",
+      "doi-asserted-by": "crossref",
+      "first-page": "305",
+      "DOI": "10.1016/j.apenergy.2014.05.062",
+      "article-title": "Using regression analysis to predict the future energy consumption of a supermarket in the UK",
+      "volume": "130",
+      "author": "Braun",
+      "year": "2014",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0200",
+      "doi-asserted-by": "crossref",
+      "first-page": "168",
+      "DOI": "10.1016/j.apenergy.2014.02.057",
+      "article-title": "Forecasting energy consumption of multi-family residential buildings using support vector regression: Investigating the impact of temporal and spatial monitoring granularity on performance accuracy",
+      "volume": "123",
+      "author": "Jain",
+      "year": "2014",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0205",
+      "doi-asserted-by": "crossref",
+      "first-page": "591",
+      "DOI": "10.1016/j.enbuild.2012.03.010",
+      "article-title": "Predicting future hourly residential electrical consumption: A machine learning case study",
+      "volume": "49",
+      "author": "Edwards",
+      "year": "2012",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0210",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Marino DL, Amarasinghe K, Manic M. Building energy load forecasting using deep neural networks. In: IECON 2016-42nd Annual Conference of the IEEE Industrial Electronics Society. 2016. IEEE.",
+      "DOI": "10.1109/IECON.2016.7793413"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0215",
+      "doi-asserted-by": "crossref",
+      "first-page": "184",
+      "DOI": "10.1016/j.enbuild.2015.11.045",
+      "article-title": "Artificial neural network model for forecasting sub-hourly electricity usage in commercial buildings",
+      "volume": "111",
+      "author": "Chae",
+      "year": "2016",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0220",
+      "doi-asserted-by": "crossref",
+      "first-page": "925",
+      "DOI": "10.1016/j.apenergy.2009.09.004",
+      "article-title": "A data-driven approach for steam load prediction in buildings",
+      "volume": "87",
+      "author": "Kusiak",
+      "year": "2010",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0225",
+      "doi-asserted-by": "crossref",
+      "first-page": "460",
+      "DOI": "10.1016/j.enbuild.2018.01.066",
+      "article-title": "Short and medium-term forecasting of cooling and heating load demand in building environment with data-mining based approaches",
+      "volume": "166",
+      "author": "Ahmad",
+      "year": "2018",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0230",
+      "doi-asserted-by": "crossref",
+      "first-page": "141",
+      "DOI": "10.1016/j.enbuild.2017.04.032",
+      "article-title": "Comparative assessment of low-complexity models to predict electricity consumption in an institutional building: Linear regression vs. fuzzy modeling vs. neural networks",
+      "volume": "146",
+      "author": "Pombeiro",
+      "year": "2017",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0235",
+      "doi-asserted-by": "crossref",
+      "first-page": "322",
+      "DOI": "10.1016/j.enbuild.2015.02.007",
+      "article-title": "Short-term load forecasting in a non-residential building contrasting models and attributes",
+      "volume": "92",
+      "author": "Massana",
+      "year": "2015",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0240",
+      "doi-asserted-by": "crossref",
+      "first-page": "45",
+      "DOI": "10.1016/j.enbuild.2014.04.052",
+      "article-title": "Utilizing artificial neural network to predict energy consumption and thermal comfort level: An indoor swimming pool case study",
+      "volume": "80",
+      "author": "Yuce",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0245",
+      "doi-asserted-by": "crossref",
+      "first-page": "94",
+      "DOI": "10.1016/j.enbuild.2016.05.028",
+      "article-title": "Time series forecasting for building energy consumption using weighted Support Vector Regression with differential evolution optimization technique",
+      "volume": "126",
+      "author": "Zhang",
+      "year": "2016",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "9",
+      "key": "10.1016/j.apenergy.2021.116452_b0250",
+      "doi-asserted-by": "crossref",
+      "first-page": "684",
+      "DOI": "10.3390/en9090684",
+      "article-title": "An application of non-linear autoregressive neural networks to predict energy consumption in public buildings",
+      "volume": "9",
+      "author": "Ruiz",
+      "year": "2016",
+      "journal-title": "Energies"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0255",
+      "doi-asserted-by": "crossref",
+      "first-page": "214",
+      "DOI": "10.1016/j.enbuild.2014.08.004",
+      "article-title": "Neural network model ensembles for building-level electricity load forecasts",
+      "volume": "84",
+      "author": "Jetcheva",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0260",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Fernández I, Borges CE, Penya YK. Efficient building load forecasting. in ETFA2011. 2011. IEEE.",
+      "DOI": "10.1109/ETFA.2011.6059103"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0265",
+      "doi-asserted-by": "crossref",
+      "first-page": "1016",
+      "DOI": "10.1016/j.proeng.2015.09.097",
+      "article-title": "Using support vector machine to predict next day electricity load of public buildings with sub-metering devices",
+      "volume": "121",
+      "author": "Fu",
+      "year": "2015",
+      "journal-title": "Procedia Eng"
+    },
+    {
+      "issue": "11",
+      "key": "10.1016/j.apenergy.2021.116452_b0270",
+      "doi-asserted-by": "crossref",
+      "first-page": "2070",
+      "DOI": "10.1016/j.enbuild.2010.06.016",
+      "article-title": "Forecasting building energy consumption with hybrid genetic algorithm-hierarchical adaptive network-based fuzzy inference system",
+      "volume": "42",
+      "author": "Li",
+      "year": "2010",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0275",
+      "doi-asserted-by": "crossref",
+      "first-page": "329",
+      "DOI": "10.1007/s11063-017-9723-2",
+      "article-title": "Small-scale building load forecast based on hybrid forecast engine",
+      "volume": "48",
+      "author": "Mohammadi",
+      "year": "2018",
+      "journal-title": "Neural Process Lett"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0280",
+      "doi-asserted-by": "crossref",
+      "first-page": "50",
+      "DOI": "10.1016/j.enbuild.2015.04.011",
+      "article-title": "Short-term electricity load forecasting of buildings in microgrids",
+      "volume": "99",
+      "author": "Chitsaz",
+      "year": "2015",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "11",
+      "key": "10.1016/j.apenergy.2021.116452_b0285",
+      "doi-asserted-by": "crossref",
+      "first-page": "3112",
+      "DOI": "10.1016/j.enbuild.2011.08.008",
+      "article-title": "New artificial neural network prediction method for electrical consumption forecasting based on building end-uses",
+      "volume": "43",
+      "author": "Escrivá-Escrivá",
+      "year": "2011",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0290",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Aman S, Simmhan Y, Prasanna VK. Improving energy use forecast for campus micro-grids using indirect indicators. In: 2011 IEEE 11th International Conference on Data Mining Workshops. 2011. IEEE.",
+      "DOI": "10.1109/ICDMW.2011.95"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0295",
+      "doi-asserted-by": "crossref",
+      "first-page": "999",
+      "DOI": "10.1016/j.energy.2016.10.126",
+      "article-title": "Artificial neural networks to predict energy performance and retrofit scenarios for any member of a building category: A novel approach",
+      "volume": "118",
+      "author": "Ascione",
+      "year": "2017",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0300",
+      "doi-asserted-by": "crossref",
+      "first-page": "622",
+      "DOI": "10.1016/j.proeng.2015.08.495",
+      "article-title": "Multi-linear regression models to predict the annual energy consumption of an office building with different shapes",
+      "volume": "118",
+      "author": "Mottahedi",
+      "year": "2015",
+      "journal-title": "Procedia Eng"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0305",
+      "doi-asserted-by": "crossref",
+      "first-page": "275",
+      "DOI": "10.1016/j.enbuild.2018.06.056",
+      "article-title": "A novel method based on extreme learning machine to predict heating and cooling load through design and structural attributes",
+      "volume": "176",
+      "author": "Kumar",
+      "year": "2018",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0310",
+      "doi-asserted-by": "crossref",
+      "first-page": "372",
+      "DOI": "10.1016/j.apenergy.2017.12.051",
+      "article-title": "Predicting electricity consumption for commercial and residential buildings using deep recurrent neural networks",
+      "volume": "212",
+      "author": "Rahman",
+      "year": "2018",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0315",
+      "doi-asserted-by": "crossref",
+      "first-page": "24",
+      "DOI": "10.1016/j.energy.2016.12.022",
+      "article-title": "Comparison of linear regression and artificial neural networks models to predict heating and cooling energy demand, energy consumption and CO2 emissions",
+      "volume": "118",
+      "author": "Pino-Mejías",
+      "year": "2017",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0320",
+      "doi-asserted-by": "crossref",
+      "first-page": "33",
+      "DOI": "10.1109/TII.2014.2363584",
+      "article-title": "Household electricity demand forecast based on context information and user daily schedule analysis from meter data",
+      "volume": "11",
+      "author": "Hsiao",
+      "year": "2014",
+      "journal-title": "IEEE Trans Ind Inf"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0325",
+      "doi-asserted-by": "crossref",
+      "first-page": "654",
+      "DOI": "10.1016/j.apenergy.2017.07.114",
+      "article-title": "Short-term residential load forecasting: Impact of calendar effects and forecast granularity",
+      "volume": "205",
+      "author": "Lusis",
+      "year": "2017",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0330",
+      "doi-asserted-by": "crossref",
+      "first-page": "164",
+      "DOI": "10.1016/j.measurement.2018.01.032",
+      "article-title": "Building energy consumption forecast using multi-objective genetic programming",
+      "volume": "118",
+      "author": "Tahmassebi",
+      "year": "2018",
+      "journal-title": "Measurement"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0335",
+      "doi-asserted-by": "crossref",
+      "first-page": "437",
+      "DOI": "10.1016/j.enbuild.2014.07.036",
+      "article-title": "Modeling heating and cooling loads by artificial intelligence for energy-efficient building design",
+      "volume": "82",
+      "author": "Chou",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "3–4",
+      "key": "10.1016/j.apenergy.2021.116452_b0340",
+      "first-page": "197",
+      "article-title": "Deep learning: methods and applications. Foundations and Trends®",
+      "volume": "7",
+      "author": "Deng",
+      "year": "2014",
+      "journal-title": "Signal Process"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0345",
+      "doi-asserted-by": "crossref",
+      "first-page": "646",
+      "DOI": "10.1016/j.enbuild.2016.01.030",
+      "article-title": "Unsupervised energy prediction in a smart grid context using reinforcement cross-building transfer learning",
+      "volume": "116",
+      "author": "Mocanu",
+      "year": "2016",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.apenergy.2021.116452_b0350",
+      "first-page": "457",
+      "article-title": "Hybrid and ensemble methods in machine learning J. UCS special issue",
+      "volume": "19",
+      "author": "Kazienko",
+      "year": "2013",
+      "journal-title": "J Univer Comput Sci"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0355",
+      "doi-asserted-by": "crossref",
+      "first-page": "169",
+      "DOI": "10.1613/jair.614",
+      "article-title": "Popular ensemble methods: An empirical study",
+      "volume": "11",
+      "author": "Opitz",
+      "year": "1999",
+      "journal-title": "J Artif Intell Res"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0360",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Penya YK, Borges CE, Fernández I. Short-term load forecasting in non-residential buildings. In: IEEE Africon'11. 2011. IEEE.",
+      "DOI": "10.1109/AFRCON.2011.6072062"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0365",
+      "doi-asserted-by": "crossref",
+      "first-page": "225",
+      "DOI": "10.1016/j.enbuild.2012.08.007",
+      "article-title": "Building hourly thermal load prediction using an indexed ARX model",
+      "volume": "54",
+      "author": "Yun",
+      "year": "2012",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0370",
+      "series-title": "Proceedings of the International MultiConference of Engineers and Computer Scientists",
+      "article-title": "Time series analysis of household electric consumption with ARIMA and ARMA models",
+      "author": "Chujai",
+      "year": "2013"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0375",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Newsham GR, Birt BJ. Building-level occupancy data to improve ARIMA-based electricity use forecasts. In: Proceedings of the 2nd ACM workshop on embedded sensing systems for energy-efficiency in building. 2010.",
+      "DOI": "10.1145/1878431.1878435"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0380",
+      "series-title": "Proceedings of the regional conference on statistical sciences",
+      "article-title": "Short term load forecasting using double seasonal ARIMA model",
+      "author": "Mohamed",
+      "year": "2010"
+    },
+    {
+      "issue": "11",
+      "key": "10.1016/j.apenergy.2021.116452_b0385",
+      "doi-asserted-by": "crossref",
+      "first-page": "1107",
+      "DOI": "10.1016/j.ijthermalsci.2004.02.009",
+      "article-title": "Hourly cooling load prediction by a combined forecasting model based on analytic hierarchy process",
+      "volume": "43",
+      "author": "Yao",
+      "year": "2004",
+      "journal-title": "Int J Therm Sci"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0390",
+      "doi-asserted-by": "crossref",
+      "first-page": "498",
+      "DOI": "10.1109/59.932287",
+      "article-title": "Short-term hourly load forecasting using time-series modeling with peak load estimation capability",
+      "volume": "16",
+      "author": "Amjady",
+      "year": "2001",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0395",
+      "doi-asserted-by": "crossref",
+      "first-page": "1622",
+      "DOI": "10.1109/TPWRS.2005.852123",
+      "article-title": "Short-term load forecasting, profile identification, and customer segmentation: a methodology based on periodic time series",
+      "volume": "20",
+      "author": "Espinoza",
+      "year": "2005",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0400",
+      "doi-asserted-by": "crossref",
+      "first-page": "395",
+      "DOI": "10.1016/j.procs.2015.07.089",
+      "article-title": "Fuzzy modeling to forecast an electric load time series",
+      "volume": "55",
+      "author": "Pereira",
+      "year": "2015",
+      "journal-title": "Procedia Comput Sci"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0405",
+      "doi-asserted-by": "crossref",
+      "first-page": "1126",
+      "DOI": "10.1109/TPWRS.2005.846106",
+      "article-title": "A particle swarm optimization to identifying the ARMAX model for short-term load forecasting",
+      "volume": "20",
+      "author": "Huang",
+      "year": "2005",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0410",
+      "doi-asserted-by": "crossref",
+      "first-page": "217",
+      "DOI": "10.1109/59.651639",
+      "article-title": "A new short-term load forecasting approach using self-organizing fuzzy ARMAX models",
+      "volume": "13",
+      "author": "Yang",
+      "year": "1998",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "issue": "23",
+      "key": "10.1016/j.apenergy.2021.116452_b0415",
+      "doi-asserted-by": "crossref",
+      "first-page": "9643",
+      "DOI": "10.1016/j.apm.2013.05.016",
+      "article-title": "Application of seasonal SVR with chaotic gravitational search algorithm in electricity forecasting",
+      "volume": "37",
+      "author": "Ju",
+      "year": "2013",
+      "journal-title": "Appl Math Model"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0420",
+      "doi-asserted-by": "crossref",
+      "first-page": "751",
+      "DOI": "10.1016/j.apenergy.2016.05.074",
+      "article-title": "Time series analytics using sliding window metaheuristic optimization-based machine learning system for identifying building energy consumption patterns",
+      "volume": "177",
+      "author": "Chou",
+      "year": "2016",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0425",
+      "doi-asserted-by": "crossref",
+      "first-page": "650",
+      "DOI": "10.1016/j.apenergy.2015.12.015",
+      "article-title": "Development of a probabilistic graphical model for predicting building energy performance",
+      "volume": "164",
+      "author": "O’Neill",
+      "year": "2016",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0430",
+      "doi-asserted-by": "crossref",
+      "first-page": "152",
+      "DOI": "10.1016/j.enbuild.2014.06.017",
+      "article-title": "Development of an energy prediction tool for commercial buildings using case-based reasoning",
+      "volume": "81",
+      "author": "Monfet",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0435",
+      "doi-asserted-by": "crossref",
+      "first-page": "251",
+      "DOI": "10.1016/j.apenergy.2016.03.112",
+      "article-title": "Short-term building energy model recommendation system: A meta-learning approach",
+      "volume": "172",
+      "author": "Cui",
+      "year": "2016",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0440",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Al-Qahtani FH, Crone SF. Multivariate k-nearest neighbour regression for time series data—A novel algorithm for forecasting UK electricity demand. In: The 2013 international joint conference on neural networks (IJCNN). 2013. IEEE.",
+      "DOI": "10.1109/IJCNN.2013.6706742"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0445",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Colombo T, Koprinska I, Panella M. Maximum Length Weighted Nearest Neighbor approach for electricity load forecasting. In: 2015 International Joint Conference on Neural Networks (IJCNN). 2015. IEEE.",
+      "DOI": "10.1109/IJCNN.2015.7280809"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0450",
+      "doi-asserted-by": "crossref",
+      "first-page": "340",
+      "DOI": "10.1016/j.ijepes.2014.07.043",
+      "article-title": "Short term load forecasting using wavelet transform combined with Holt-Winters and weighted nearest neighbor models",
+      "volume": "64",
+      "author": "Sudheer",
+      "year": "2015",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0455",
+      "series-title": "Proceedings of 13th international building performance simulation association conference",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.26868/25222708.2013.1410",
+      "article-title": "An inverse model with uncertainty quantification to estimate the energy performance of an office building",
+      "author": "Zhang",
+      "year": "2013"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0460",
+      "doi-asserted-by": "crossref",
+      "first-page": "438",
+      "DOI": "10.1016/j.enbuild.2013.05.037",
+      "article-title": "Baseline building energy modeling and localized uncertainty quantification using Gaussian mixture models",
+      "volume": "65",
+      "author": "Srivastav",
+      "year": "2013",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0465",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Boltürk E, Öztayşi B, Sarı I. Electricity consumption forecasting using fuzzy time series. In: 2012 IEEE 13th International Symposium on Computational Intelligence and Informatics (CINTI). 2012. IEEE.",
+      "DOI": "10.1109/CINTI.2012.6496768"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0470",
+      "doi-asserted-by": "crossref",
+      "first-page": "422",
+      "DOI": "10.1016/j.asoc.2014.11.043",
+      "article-title": "A new linguistic out-sample approach of fuzzy time series for daily forecasting of Malaysian electricity load demand",
+      "volume": "28",
+      "author": "Efendi",
+      "year": "2015",
+      "journal-title": "Appl Soft Comput"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0475",
+      "unstructured": "Liu X, Bai E, Luo L. Time-variant slide fuzzy time-series method for short-term load forecasting. In: 2010 IEEE International Conference on Intelligent Computing and Intelligent Systems. 2010. IEEE."
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0480",
+      "doi-asserted-by": "crossref",
+      "first-page": "596",
+      "DOI": "10.1109/TPWRS.2011.2174659",
+      "article-title": "Holiday load forecasting using fuzzy polynomial regression with weather feature selection and adjustment",
+      "volume": "27",
+      "author": "Wi",
+      "year": "2011",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0485",
+      "doi-asserted-by": "crossref",
+      "first-page": "96",
+      "DOI": "10.1109/TPWRS.2004.835632",
+      "article-title": "Short-term load forecasting for the holidays using fuzzy linear regression method",
+      "volume": "20",
+      "author": "Song",
+      "year": "2005",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0490",
+      "doi-asserted-by": "crossref",
+      "first-page": "1104",
+      "DOI": "10.1016/j.enconman.2013.08.039",
+      "article-title": "Imperialist competitive algorithm combined with refined high-order weighted fuzzy time series (RHWFTS–ICA) for short term load forecasting",
+      "volume": "76",
+      "author": "Enayatifar",
+      "year": "2013",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0495",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ma Y., et al. Study on power energy consumption model for large-scale public building. In: 2010 2nd International Workshop on Intelligent Systems and Applications. 2010. IEEE.",
+      "DOI": "10.1109/IWISA.2010.5473608"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.apenergy.2021.116452_b0500",
+      "doi-asserted-by": "crossref",
+      "first-page": "271",
+      "DOI": "10.1016/j.apenergy.2006.09.012",
+      "article-title": "Comparison of neural network, conditional demand analysis, and engineering approaches for modeling end-use energy consumption in the residential sector",
+      "volume": "85",
+      "author": "Aydinalp-Koksal",
+      "year": "2008",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0505",
+      "doi-asserted-by": "crossref",
+      "first-page": "165",
+      "DOI": "10.1016/j.buildenv.2012.04.021",
+      "article-title": "Multivariate regression as an energy assessment tool in early building design",
+      "volume": "57",
+      "author": "Hygh",
+      "year": "2012",
+      "journal-title": "Build Environ"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.apenergy.2021.116452_b0510",
+      "doi-asserted-by": "crossref",
+      "first-page": "2351",
+      "DOI": "10.1016/j.energy.2009.12.023",
+      "article-title": "An integrated fuzzy regression algorithm for energy consumption estimation with non-stationary data: a case study of Iran",
+      "volume": "35",
+      "author": "Azadeh",
+      "year": "2010",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0515",
+      "doi-asserted-by": "crossref",
+      "first-page": "178",
+      "DOI": "10.1016/j.asoc.2014.05.015",
+      "article-title": "Accurately predicting building energy performance using evolutionary multivariate adaptive regression splines",
+      "volume": "22",
+      "author": "Cheng",
+      "year": "2014",
+      "journal-title": "Appl Soft Comput"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.apenergy.2021.116452_b0520",
+      "doi-asserted-by": "crossref",
+      "first-page": "545",
+      "DOI": "10.1016/j.enbuild.2004.09.009",
+      "article-title": "Applying support vector machines to predict building energy consumption in tropical region",
+      "volume": "37",
+      "author": "Dong",
+      "year": "2005",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0525",
+      "doi-asserted-by": "crossref",
+      "first-page": "231",
+      "DOI": "10.1260/1748-3018.4.2.231",
+      "article-title": "Parallel support vector machines applied to the prediction of multiple buildings energy consumption",
+      "volume": "4",
+      "author": "Zhao",
+      "year": "2010",
+      "journal-title": "J Algorith Comput Technol"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0530",
+      "unstructured": "Jinhu L, et al. Applying principal component analysis and weighted support vector machine in building cooling load forecasting. In: 2010 International Conference on Computer and Communication Technologies in Agriculture Engineering. 2010. IEEE."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0535",
+      "unstructured": "Xuemei L, et al. Building cooling load forecasting using fuzzy support vector machine and fuzzy c-mean clustering. In: 2010 international conference on computer and communication technologies in agriculture engineering. 2010. IEEE."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0540",
+      "doi-asserted-by": "crossref",
+      "first-page": "65",
+      "DOI": "10.1016/j.apenergy.2012.01.010",
+      "article-title": "An annual load forecasting model based on support vector regression with differential evolution algorithm",
+      "volume": "94",
+      "author": "Wang",
+      "year": "2012",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0545",
+      "doi-asserted-by": "crossref",
+      "first-page": "392",
+      "DOI": "10.1109/TPWRS.2005.860944",
+      "article-title": "Short-term load forecasting based on an adaptive hybrid method",
+      "volume": "21",
+      "author": "Fan",
+      "year": "2006",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0550",
+      "unstructured": "Sun C, Gong D. Support vector machines with PSO algorithm for short-term load forecasting. In: 2006 IEEE International Conference on Networking, Sensing and Control. 2006. IEEE."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0555",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wang J, Zhou YX. Chen. Electricity load forecasting based on support vector machines and simulated annealing particle swarm optimization algorithm. In: 2007 IEEE International Conference on Automation and Logistics. 2007. IEEE.",
+      "DOI": "10.1109/ICAL.2007.4339064"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0560",
+      "doi-asserted-by": "crossref",
+      "first-page": "2531",
+      "DOI": "10.1016/j.eswa.2009.08.019",
+      "article-title": "Power load forecasting using support vector machine and ant colony optimization",
+      "volume": "37",
+      "author": "Niu",
+      "year": "2010",
+      "journal-title": "Expert Syst Appl"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0565",
+      "doi-asserted-by": "crossref",
+      "first-page": "259",
+      "DOI": "10.1016/j.ijepes.2014.03.056",
+      "article-title": "A novel hybrid model for bi-objective short-term electric load forecasting",
+      "volume": "61",
+      "author": "Che",
+      "year": "2014",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "issue": "9",
+      "key": "10.1016/j.apenergy.2021.116452_b0570",
+      "doi-asserted-by": "crossref",
+      "first-page": "2617",
+      "DOI": "10.1016/j.apm.2014.10.065",
+      "article-title": "A hybrid application algorithm based on the support vector machine and artificial intelligence: An example of electric load forecasting",
+      "volume": "39",
+      "author": "Chen",
+      "year": "2015",
+      "journal-title": "Appl Math Model"
+    },
+    {
+      "issue": "9",
+      "key": "10.1016/j.apenergy.2021.116452_b0575",
+      "doi-asserted-by": "crossref",
+      "first-page": "5568",
+      "DOI": "10.1016/j.energy.2011.07.015",
+      "article-title": "Electric load forecasting by seasonal recurrent SVR (support vector regression) with chaotic artificial bee colony algorithm",
+      "volume": "36",
+      "author": "Hong",
+      "year": "2011",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.apenergy.2021.116452_b0580",
+      "first-page": "1192",
+      "article-title": "Optimizing of SVM with hybrid PSO and genetic algorithm in power load forecasting",
+      "volume": "5",
+      "author": "Wang",
+      "year": "2010",
+      "journal-title": "J Netw"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0585",
+      "doi-asserted-by": "crossref",
+      "first-page": "417",
+      "DOI": "10.1016/j.epsr.2005.01.006",
+      "article-title": "Forecasting regional electricity load based on recurrent support vector machines with genetic algorithms",
+      "volume": "74",
+      "author": "Pai",
+      "year": "2005",
+      "journal-title": "Electr Power Syst Res"
+    },
+    {
+      "issue": "7–8",
+      "key": "10.1016/j.apenergy.2021.116452_b0590",
+      "doi-asserted-by": "crossref",
+      "first-page": "409",
+      "DOI": "10.1016/j.ijepes.2009.03.020",
+      "article-title": "Hybrid evolutionary algorithms in a SVR-based electric load forecasting model",
+      "volume": "31",
+      "author": "Hong",
+      "year": "2009",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "issue": "13",
+      "key": "10.1016/j.apenergy.2021.116452_b0595",
+      "doi-asserted-by": "crossref",
+      "first-page": "6047",
+      "DOI": "10.1016/j.eswa.2014.03.053",
+      "article-title": "A new hybrid modified firefly algorithm and support vector regression model for accurate short term load forecasting",
+      "volume": "41",
+      "author": "Kavousi-Fard",
+      "year": "2014",
+      "journal-title": "Expert Syst Appl"
+    },
+    {
+      "issue": "05",
+      "key": "10.1016/j.apenergy.2021.116452_b0600",
+      "first-page": "189",
+      "article-title": "Short term load forecasting using a hybrid model based on support vector regression",
+      "volume": "4",
+      "author": "Baziar",
+      "year": "2015",
+      "journal-title": "Int. J. Sci. Technol. Res"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0605",
+      "doi-asserted-by": "crossref",
+      "first-page": "105",
+      "DOI": "10.1016/j.enconman.2008.08.031",
+      "article-title": "Chaotic particle swarm optimization algorithm in a support vector regression electric load forecasting model",
+      "volume": "50",
+      "author": "Hong",
+      "year": "2009",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0610",
+      "first-page": "274",
+      "article-title": "Hybridizing GMDH and least squares SVM support vector machine for forecasting tourism demand",
+      "volume": "3",
+      "author": "Ruhaidah",
+      "year": "2010",
+      "journal-title": "Int J Res Rev Appl Sci"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0615",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Xuemei L, Lixing D, Lanlan L. A novel building cooling load prediction based on SVR and SAPSO. In: 2010 International Symposium on Computer, Communication, Control and Automation (3CA). 2010. IEEE.",
+      "DOI": "10.1109/3CA.2010.5533863"
+    },
+    {
+      "issue": "12",
+      "key": "10.1016/j.apenergy.2021.116452_b0620",
+      "doi-asserted-by": "crossref",
+      "first-page": "2169",
+      "DOI": "10.1016/j.enbuild.2008.06.013",
+      "article-title": "Comparison between detailed model simulation and artificial neural network for forecasting building energy consumption",
+      "volume": "40",
+      "author": "Neto",
+      "year": "2008",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0625",
+      "doi-asserted-by": "crossref",
+      "first-page": "90",
+      "DOI": "10.1016/j.enconman.2008.08.033",
+      "article-title": "Predicting hourly cooling load in the building: A comparison of support vector machine and different artificial neural networks",
+      "volume": "50",
+      "author": "Li",
+      "year": "2009",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0630",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Liu F, Findlay RD, Song Q. A neural network based short term electric load forecasting in Ontario Canada. In: 2006 International Conference on Computational Inteligence for Modelling Control and Automation and International Conference on Intelligent Agents Web Technologies and International Commerce (CIMCA'06). 2006. IEEE.",
+      "DOI": "10.1109/CIMCA.2006.17"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0635",
+      "doi-asserted-by": "crossref",
+      "first-page": "657",
+      "DOI": "10.1016/j.energy.2011.10.034",
+      "article-title": "An adaptive fuzzy combination model based on self-organizing map and support vector regression for electric load forecasting",
+      "volume": "37",
+      "author": "Che",
+      "year": "2012",
+      "journal-title": "Energy"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0640",
+      "doi-asserted-by": "crossref",
+      "first-page": "17",
+      "DOI": "10.1016/j.ijepes.2010.08.008",
+      "article-title": "Monthly electricity demand forecasting based on a weighted evolving fuzzy neural network approach",
+      "volume": "33",
+      "author": "Chang",
+      "year": "2011",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0645",
+      "unstructured": "Li Q, Ren P, Meng Q. Prediction model of annual energy consumption of residential buildings. In: 2010 international conference on advances in energy engineering. 2010. IEEE."
+    },
+    {
+      "issue": "9",
+      "key": "10.1016/j.apenergy.2021.116452_b0650",
+      "doi-asserted-by": "crossref",
+      "first-page": "1033",
+      "DOI": "10.1016/j.apenergy.2005.08.006",
+      "article-title": "Cooling-load prediction by the combination of rough set theory and an artificial neural-network based on data-fusion technique",
+      "volume": "83",
+      "author": "Hou",
+      "year": "2006",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0655",
+      "first-page": "1731",
+      "article-title": "Integration of artificial neural networks and genetic algorithm to predict electrical energy consumption",
+      "volume": "186",
+      "author": "Azadeh",
+      "year": "2007",
+      "journal-title": "Appl Math Comput"
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.apenergy.2021.116452_b0660",
+      "doi-asserted-by": "crossref",
+      "first-page": "2893",
+      "DOI": "10.1016/j.enbuild.2011.07.010",
+      "article-title": "Forecasting building energy consumption using neural networks and hybrid neuro-fuzzy system: A comparative study",
+      "volume": "43",
+      "author": "Li",
+      "year": "2011",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0665",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ghanbari A, Abbasian-Naghneh S, Hadavandi E. An intelligent load forecasting expert system by integration of ant colony optimization, genetic algorithms and fuzzy logic. In: 2011 IEEE Symposium on Computational Intelligence and Data Mining (CIDM). 2011. IEEE.",
+      "DOI": "10.1109/CIDM.2011.5949432"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0670",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Mishra S, Patra SK. Short term load forecasting using neural network trained with genetic algorithm & particle swarm optimization. In: 2008 First International Conference on Emerging Trends in Engineering and Technology. 2008. IEEE.",
+      "DOI": "10.1109/ICETET.2008.94"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0675",
+      "series-title": "Advances in Intelligent Systems",
+      "first-page": "27",
+      "article-title": "Application of GMDH to short-term load forecasting",
+      "author": "Xu",
+      "year": "2012"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0680",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sun W, Zhang Y-X, Li F-T. The neural network model based on pso for short-term load forecasting. In: 2006 International Conference on Machine Learning and Cybernetics. 2006. IEEE.",
+      "DOI": "10.1109/ICMLC.2006.258368"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0685",
+      "doi-asserted-by": "crossref",
+      "unstructured": "ShangDong Y, Xiang L. A new ANN optimized by improved PSO algorithm combined with chaos and its application in short-term load forecasting. In: 2006 International Conference on Computational Intelligence and Security. 2006. IEEE.",
+      "DOI": "10.1109/ICCIAS.2006.295400"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0690",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lu N, Zhou J. Particle swarm optimization-based RBF neural network load forecasting model. In: 2009 Asia-Pacific Power and Energy Engineering Conference. 2009. IEEE.",
+      "DOI": "10.1109/APPEEC.2009.4918588"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0695",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Niu D, Wang H, Cai C. Application of Neural Network-based Combining Forecasting Model Optimized by Ant Colony In Power Load Forecasting. In: 2010 Asia-Pacific Power and Energy Engineering Conference. 2010. IEEE.",
+      "DOI": "10.1109/APPEEC.2010.5448646"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0700",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wai R-J, Huang Y-C, Chen Y-C. Intelligent daily load forecasting with fuzzy neural network and particle swarm optimization. In: 2012 IEEE International Conference on Fuzzy Systems. 2012. IEEE.",
+      "DOI": "10.1109/FUZZ-IEEE.2012.6250819"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0705",
+      "doi-asserted-by": "crossref",
+      "unstructured": "He Y, Xu Q. Short-term power load forecasting based on self-adapting PSO-BP neural network model. In: 2012 Fourth International Conference on Computational and Information Sciences. 2012. IEEE.",
+      "DOI": "10.1109/ICCIS.2012.279"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0710",
+      "article-title": "Forecasting electrical energy consumption of equipment maintenance using neural network and particle swarm optimization",
+      "volume": "2013",
+      "author": "Jiang",
+      "year": "2013",
+      "journal-title": "Mathem Probl Eng"
+    },
+    {
+      "issue": "1–3",
+      "key": "10.1016/j.apenergy.2021.116452_b0715",
+      "doi-asserted-by": "crossref",
+      "first-page": "449",
+      "DOI": "10.1016/j.neucom.2009.07.005",
+      "article-title": "Time series prediction using RBF neural networks with a nonlinear time-varying evolution PSO algorithm",
+      "volume": "73",
+      "author": "Lee",
+      "year": "2009",
+      "journal-title": "Neurocomputing"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0720",
+      "doi-asserted-by": "crossref",
+      "first-page": "1080",
+      "DOI": "10.1109/TPWRS.2009.2016609",
+      "article-title": "Short-term and midterm load forecasting using a bilevel optimization model",
+      "volume": "24",
+      "author": "Mao",
+      "year": "2009",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0725",
+      "doi-asserted-by": "crossref",
+      "first-page": "11",
+      "DOI": "10.1007/s00521-011-0741-0",
+      "article-title": "Time series forecasting by evolving artificial neural networks with genetic algorithms, differential evolution and estimation of distribution algorithm",
+      "volume": "22",
+      "author": "Donate",
+      "year": "2013",
+      "journal-title": "Neural Comput Appl"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0730",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.scs.2020.102247",
+      "article-title": "A novel reinforcement learning method for improving occupant comfort via window opening and closing",
+      "author": "Han",
+      "year": "2020",
+      "journal-title": "Sustain Cities Soc"
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.apenergy.2021.116452_b0735",
+      "first-page": "7381",
+      "article-title": "Building an integrated hybrid model for short-term and mid-term load forecasting with genetic optimization",
+      "volume": "8",
+      "author": "Xue",
+      "year": "2012",
+      "journal-title": "Int Innovat Comput, Inform Control"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0740",
+      "doi-asserted-by": "crossref",
+      "first-page": "1455",
+      "DOI": "10.1016/j.egypro.2012.01.229",
+      "article-title": "Hybrid of ARIMA and SVMs for short-term load forecasting",
+      "volume": "16",
+      "author": "Nie",
+      "year": "2012",
+      "journal-title": "Energy Procedia"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0745",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.enconman.2013.02.010",
+      "article-title": "Short term load forecasting technique based on the seasonal exponential adjustment method and the regression model",
+      "volume": "70",
+      "author": "Wu",
+      "year": "2013",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0750",
+      "doi-asserted-by": "crossref",
+      "first-page": "106",
+      "DOI": "10.1109/MCOM.2013.6400446",
+      "article-title": "A multi-agent system architecture for smart grid management and forecasting of energy demand in virtual power plants",
+      "volume": "51",
+      "author": "Hernández",
+      "year": "2013",
+      "journal-title": "IEEE Commun Mag"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.apenergy.2021.116452_b0755",
+      "doi-asserted-by": "crossref",
+      "first-page": "263",
+      "DOI": "10.1080/19401493.2011.577539",
+      "article-title": "Kernel regression for real-time building energy analysis",
+      "volume": "5",
+      "author": "Brown",
+      "year": "2012",
+      "journal-title": "J Build Perform Simul"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0760",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Xuemei L, et al. A novel air-conditioning load prediction based on ARIMA and BPNN model. In: 2009 Asia-Pacific Conference on Information Processing. 2009. IEEE.",
+      "DOI": "10.1109/APCIP.2009.21"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0765",
+      "doi-asserted-by": "crossref",
+      "first-page": "958",
+      "DOI": "10.1016/j.neucom.2015.08.051",
+      "article-title": "Electric load forecasting by the SVR model with differential empirical mode decomposition and auto regression",
+      "volume": "173",
+      "author": "Fan",
+      "year": "2016",
+      "journal-title": "Neurocomputing"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0770",
+      "doi-asserted-by": "crossref",
+      "first-page": "749",
+      "DOI": "10.1016/j.ijepes.2013.10.020",
+      "article-title": "Application of a hybrid quantized Elman neural network in short-term load forecasting",
+      "volume": "55",
+      "author": "Li",
+      "year": "2014",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0775",
+      "doi-asserted-by": "crossref",
+      "first-page": "230",
+      "DOI": "10.1016/j.ijepes.2014.11.027",
+      "article-title": "Short term load forecast using fuzzy logic and wavelet transform integrated generalized neural network",
+      "volume": "67",
+      "author": "Chaturvedi",
+      "year": "2015",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0780",
+      "doi-asserted-by": "crossref",
+      "first-page": "777",
+      "DOI": "10.1016/j.energy.2015.01.028",
+      "article-title": "A hybrid short-term load forecasting with a new input selection framework",
+      "volume": "81",
+      "author": "Ghofrani",
+      "year": "2015",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0785",
+      "doi-asserted-by": "crossref",
+      "first-page": "489",
+      "DOI": "10.1016/j.apenergy.2012.06.009",
+      "article-title": "A new hybrid day-ahead peak load forecasting method for Iran’s National Grid",
+      "volume": "101",
+      "author": "Moazzami",
+      "year": "2013",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0790",
+      "doi-asserted-by": "crossref",
+      "first-page": "142",
+      "DOI": "10.1016/j.enbuild.2014.06.052",
+      "article-title": "A prediction model based on neural networks for the energy consumption of a bioclimatic building",
+      "volume": "82",
+      "author": "Mena",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.apenergy.2021.116452_b0795",
+      "first-page": "1184",
+      "article-title": "A Hybrid Neural Network and ARIMA Model for Energy Consumption Forcasting",
+      "volume": "7",
+      "author": "Wang",
+      "year": "2012",
+      "journal-title": "JCP"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0800",
+      "doi-asserted-by": "crossref",
+      "first-page": "310",
+      "DOI": "10.1016/j.enbuild.2014.07.037",
+      "article-title": "Modeling and short-term prediction of HVAC system with a clustering algorithm",
+      "volume": "82",
+      "author": "Tang",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0805",
+      "doi-asserted-by": "crossref",
+      "first-page": "319",
+      "DOI": "10.1016/j.enconman.2008.09.017",
+      "article-title": "Prediction of energy demands using neural network with model identification by global optimization",
+      "volume": "50",
+      "author": "Yokoyama",
+      "year": "2009",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0810",
+      "unstructured": "Aqlan F, et al. Integrating artificial neural networks and cluster analysis to assess energy efficiency of buildings. In: IIE Annual Conference. Proceedings. 2014. Institute of Industrial and Systems Engineers (IISE)."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0815",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Prahastono I, King D, OzverenCS. A review of electricity load profile classification methods. In: 2007 42nd international universities power engineering conference. 2007. IEEE.",
+      "DOI": "10.1109/UPEC.2007.4469120"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0820",
+      "doi-asserted-by": "crossref",
+      "first-page": "27",
+      "DOI": "10.1016/j.enbuild.2017.03.071",
+      "article-title": "k-Shape clustering algorithm for building energy usage patterns analysis and forecasting model accuracy improvement",
+      "volume": "146",
+      "author": "Yang",
+      "year": "2017",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b0825",
+      "doi-asserted-by": "crossref",
+      "first-page": "45",
+      "DOI": "10.1016/j.enbuild.2006.04.018",
+      "article-title": "Using intelligent clustering techniques to classify the energy performance of school buildings",
+      "volume": "39",
+      "author": "Santamouris",
+      "year": "2007",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0830",
+      "doi-asserted-by": "crossref",
+      "first-page": "109",
+      "DOI": "10.1016/j.enbuild.2014.02.005",
+      "article-title": "Data mining in building automation system for improving building operational performance",
+      "volume": "75",
+      "author": "Xiao",
+      "year": "2014",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0835",
+      "article-title": "A New Clustering Method to Identify Outliers and Diurnal Schedules from Building Energy Interval Data",
+      "volume": "121",
+      "author": "Jalori",
+      "year": "2015",
+      "journal-title": "ASHRAE Trans"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.apenergy.2021.116452_b0840",
+      "doi-asserted-by": "crossref",
+      "first-page": "1409",
+      "DOI": "10.1016/j.enbuild.2011.02.002",
+      "article-title": "A systematic procedure to study the influence of occupant behavior on building energy consumption",
+      "volume": "43",
+      "author": "Yu",
+      "year": "2011",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0845",
+      "doi-asserted-by": "crossref",
+      "first-page": "145",
+      "DOI": "10.1016/j.enbuild.2012.06.006",
+      "article-title": "Assessment of potential energy saving using cluster analysis: A case study of lighting systems in buildings",
+      "volume": "52",
+      "author": "Petcharat",
+      "year": "2012",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0850",
+      "first-page": "1",
+      "article-title": "The ASHRAE Great Energy Predictor III competition: Overview and results",
+      "author": "Miller",
+      "year": "2020",
+      "journal-title": "Sci Technol Built Environ"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0855",
+      "unstructured": "Bogatu AT. Cost–effective data wrangling in data lakes. 2020, The University of Manchester."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0860",
+      "unstructured": "Levermore GJ. Building energy management systems: applications to low-energy HVAC and natural ventilation control. 2000: Taylor & Francis."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0865",
+      "doi-asserted-by": "crossref",
+      "first-page": "85",
+      "DOI": "10.1016/j.enbuild.2016.03.059",
+      "article-title": "Building energy metering and environmental monitoring–A state-of-the-art review and directions for future research",
+      "volume": "120",
+      "author": "Ahmad",
+      "year": "2016",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0870",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1016/j.future.2017.09.082",
+      "article-title": "Efficient IoT-based sensor BIG Data collection–processing and analysis in smart buildings",
+      "volume": "82",
+      "author": "Plageras",
+      "year": "2018",
+      "journal-title": "Future Gener Comput Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0875",
+      "doi-asserted-by": "crossref",
+      "first-page": "344",
+      "DOI": "10.1016/j.enbuild.2015.12.019",
+      "article-title": "Review of occupancy sensing systems and occupancy modeling methodologies for the application in institutional buildings",
+      "volume": "121",
+      "author": "Yang",
+      "year": "2016",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0880",
+      "doi-asserted-by": "crossref",
+      "first-page": "9",
+      "DOI": "10.1016/j.buildenv.2015.06.019",
+      "article-title": "Virtual occupancy sensors for real-time occupancy information in buildings",
+      "volume": "93",
+      "author": "Zhao",
+      "year": "2015",
+      "journal-title": "Build Environ"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0885",
+      "doi-asserted-by": "crossref",
+      "first-page": "633",
+      "DOI": "10.1016/j.enbuild.2017.08.045",
+      "article-title": "Non-intrusive occupancy sensing in commercial buildings",
+      "volume": "154",
+      "author": "Zou",
+      "year": "2017",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0890",
+      "doi-asserted-by": "crossref",
+      "first-page": "215",
+      "DOI": "10.1016/j.rser.2015.11.050",
+      "article-title": "Big data driven smart energy management: From big data to big insights",
+      "volume": "56",
+      "author": "Zhou",
+      "year": "2016",
+      "journal-title": "Renew Sustain Energy Rev"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0895",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Osterlind F, et al. Integrating building automation systems and wireless sensor networks. In: 2007 IEEE Conference on Emerging Technologies and Factory Automation (EFTA 2007). 2007. IEEE.",
+      "DOI": "10.1109/EFTA.2007.4416941"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0900",
+      "unstructured": "Mainetti L, Patrono L, Vilei A. Evolution of wireless sensor networks towards the internet of things: A survey. In: SoftCOM 2011, 19th international conference on software, telecommunications and computer networks. 2011. IEEE."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0905",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Buyya R, Broberg J, Goscinski AM. Cloud computing: Principles and paradigms. Vol. 87. 2010: John Wiley & Sons.",
+      "DOI": "10.1002/9780470940105"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0910",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.csi.2015.11.005",
+      "article-title": "Building automation systems: Concepts and technology review",
+      "volume": "45",
+      "author": "Domingues",
+      "year": "2016",
+      "journal-title": "Comput Stand Interfaces"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.apenergy.2021.116452_b0915",
+      "doi-asserted-by": "crossref",
+      "first-page": "263",
+      "DOI": "10.1080/17512549.2015.1103665",
+      "article-title": "A taxonomy of data types and data collection methods for building energy monitoring and performance simulation",
+      "volume": "10",
+      "author": "Mantha",
+      "year": "2016",
+      "journal-title": "Adv Build Energy Res"
+    },
+    {
+      "issue": "8",
+      "key": "10.1016/j.apenergy.2021.116452_b0920",
+      "doi-asserted-by": "crossref",
+      "first-page": "2628",
+      "DOI": "10.3390/su10082628",
+      "article-title": "Advanced wireless sensor networks for sustainable buildings using building ducts",
+      "volume": "10",
+      "author": "Yang",
+      "year": "2018",
+      "journal-title": "Sustainability"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.apenergy.2021.116452_b0925",
+      "doi-asserted-by": "crossref",
+      "first-page": "415",
+      "DOI": "10.1007/s11518-014-5258-5",
+      "article-title": "Platform selection for complex systems: Building automation systems",
+      "volume": "23",
+      "author": "van de Kaa",
+      "year": "2014",
+      "journal-title": "J Syst Sci Syst Eng"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.apenergy.2021.116452_b0930",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1145/2532644",
+      "article-title": "A review of wireless-sensor-network-enabled building energy management systems",
+      "volume": "10",
+      "author": "Kazmi",
+      "year": "2014",
+      "journal-title": "ACM Trans Sens Netw"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0935",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bashir MR, Gill AQ. Towards an IoT big data analytics framework: smart buildings systems. In: 2016 IEEE 18th International Conference on High Performance Computing and Communications; IEEE 14th International Conference on Smart City; IEEE 2nd International Conference on Data Science and Systems (HPCC/SmartCity/DSS). 2016. IEEE.",
+      "DOI": "10.1109/HPCC-SmartCity-DSS.2016.0188"
+    },
+    {
+      "issue": "172",
+      "key": "10.1016/j.apenergy.2021.116452_b0940",
+      "doi-asserted-by": "crossref",
+      "first-page": "544",
+      "DOI": "10.1016/j.proeng.2017.02.064",
+      "article-title": "Big data in building energy efficiency: understanding of big data and main challenges",
+      "volume": "2017",
+      "author": "Koseleva",
+      "year": "2017",
+      "journal-title": "Procedia Eng"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0945",
+      "doi-asserted-by": "crossref",
+      "first-page": "85",
+      "DOI": "10.1016/j.apenergy.2014.11.042",
+      "article-title": "Big-data for building energy performance: Lessons from assembling a very large national database of building energy use",
+      "volume": "140",
+      "author": "Mathew",
+      "year": "2015",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0950",
+      "series-title": "Proceedings of the 3rd ACM International Conference on Systems for Energy-Efficient Built Environments",
+      "article-title": "Brick: Towards a unified metadata schema for buildings",
+      "author": "Balaji",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0955",
+      "unstructured": "Haystack P. Project haystack. 2018."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0960",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Charpenay V, et al. An ontology design pattern for iot device tagging systems. In: 2015 5th International Conference on the Internet of Things (IOT). 2015. IEEE.",
+      "DOI": "10.1109/IOT.2015.7356558"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0965",
+      "unstructured": "Rasmussen M. et al. Recent changes in the building topology ontology. 2017."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0970",
+      "series-title": "International Workshop Formal Ontologies Meet Industries",
+      "article-title": "Created in close interaction with the industry: the smart appliances reference (SAREF) ontology",
+      "author": "Daniele",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0975",
+      "series-title": "Green Planning for Cities and Communities",
+      "first-page": "383",
+      "article-title": "Green BIM and CIM: Sustainable Planning Using Building Information Modelling",
+      "author": "Zichi",
+      "year": "2020"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0980",
+      "article-title": "The impact of preprocessing on support vector regression and neural networks in time series prediction",
+      "author": "Crone",
+      "year": "2006",
+      "journal-title": "DMIN."
+    },
+    {
+      "issue": "11",
+      "key": "10.1016/j.apenergy.2021.116452_b0985",
+      "doi-asserted-by": "crossref",
+      "first-page": "3639",
+      "DOI": "10.1109/TIE.2009.2027926",
+      "article-title": "Classification of energy consumption in buildings with outlier detection",
+      "volume": "57",
+      "author": "Li",
+      "year": "2009",
+      "journal-title": "IEEE Trans Ind Electron"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.apenergy.2021.116452_b0990",
+      "doi-asserted-by": "crossref",
+      "first-page": "302",
+      "DOI": "10.1016/j.autcon.2008.09.003",
+      "article-title": "A data fusion scheme for building automation systems of building central chilling plants",
+      "volume": "18",
+      "author": "Huang",
+      "year": "2009",
+      "journal-title": "Autom Constr"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b0995",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Allison PD. Missing data. Vol. 136. 2001: Sage publications.",
+      "DOI": "10.4135/9781412985079"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1000",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Liu L, Özsu MT, Encyclopedia of database systems. Vol. 6. 2009: Springer New York, NY, USA.",
+      "DOI": "10.1007/978-0-387-39940-9"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b1005",
+      "doi-asserted-by": "crossref",
+      "first-page": "52",
+      "DOI": "10.1016/j.enbuild.2006.03.033",
+      "article-title": "Using intelligent data analysis to detect abnormal energy consumption in buildings",
+      "volume": "39",
+      "author": "Seem",
+      "year": "2007",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1010",
+      "unstructured": "Ng A. Machine Learning and AI via Brain simulations. 2013."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b1015",
+      "doi-asserted-by": "crossref",
+      "first-page": "135",
+      "DOI": "10.1016/j.enconman.2009.09.004",
+      "article-title": "Principal component analysis and long-term building energy simulation correlation",
+      "volume": "51",
+      "author": "Lam",
+      "year": "2010",
+      "journal-title": "Energy Convers Manage"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1020",
+      "unstructured": "Cunningham P. Dimension Reduction, Technical report UCD-CSI-2007-7. University College Dublin, 2007."
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1025",
+      "doi-asserted-by": "crossref",
+      "first-page": "106",
+      "DOI": "10.1016/j.enbuild.2015.09.002",
+      "article-title": "Building's electricity consumption prediction using optimized artificial neural networks and principal component analysis",
+      "volume": "108",
+      "author": "Li",
+      "year": "2015",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b1030",
+      "doi-asserted-by": "crossref",
+      "first-page": "35",
+      "DOI": "10.1016/0378-7788(94)90014-0",
+      "article-title": "Using synthetic data to evaluate multiple regression and principal component analyses for statistical modeling of daily building energy consumption",
+      "volume": "21",
+      "author": "Reddy",
+      "year": "1994",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b1035",
+      "doi-asserted-by": "crossref",
+      "first-page": "454",
+      "DOI": "10.1016/j.ijepes.2012.05.072",
+      "article-title": "Long-term load forecasting by a collaborative fuzzy-neural approach",
+      "volume": "43",
+      "author": "Chen",
+      "year": "2012",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "issue": "Mar",
+      "key": "10.1016/j.apenergy.2021.116452_b1040",
+      "first-page": "1157",
+      "article-title": "An introduction to variable and feature selection",
+      "volume": "3",
+      "author": "Guyon",
+      "year": "2003",
+      "journal-title": "J Mach Learn Res"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1045",
+      "doi-asserted-by": "crossref",
+      "first-page": "151",
+      "DOI": "10.1016/j.enbuild.2012.08.032",
+      "article-title": "The use of occupancy space electrical power demand in building cooling load prediction",
+      "volume": "55",
+      "author": "Leung",
+      "year": "2012",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1050",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Krarti M. Energy audit of building systems: an engineering approach. 2016: CRC press.",
+      "DOI": "10.1201/b10342"
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.apenergy.2021.116452_b1055",
+      "doi-asserted-by": "crossref",
+      "first-page": "2249",
+      "DOI": "10.1016/j.apenergy.2008.11.035",
+      "article-title": "Applying support vector machine to predict hourly cooling load in the building",
+      "volume": "86",
+      "author": "Li",
+      "year": "2009",
+      "journal-title": "Appl Energy"
+    },
+    {
+      "issue": "12",
+      "key": "10.1016/j.apenergy.2021.116452_b1060",
+      "doi-asserted-by": "crossref",
+      "first-page": "1250",
+      "DOI": "10.1016/j.enbuild.2005.02.005",
+      "article-title": "On-line building energy prediction using adaptive artificial neural networks",
+      "volume": "37",
+      "author": "Yang",
+      "year": "2005",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b1065",
+      "doi-asserted-by": "crossref",
+      "first-page": "592",
+      "DOI": "10.1115/1.1637640",
+      "article-title": "Statistical analysis of neural networks as applied to building energy prediction",
+      "volume": "126",
+      "author": "Dodier",
+      "year": "2004",
+      "journal-title": "J Sol Energy Eng"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.apenergy.2021.116452_b1070",
+      "doi-asserted-by": "crossref",
+      "first-page": "59",
+      "DOI": "10.1260/1748-3018.6.1.59",
+      "article-title": "Feature selection for predicting building energy consumption based on statistical learning method",
+      "volume": "6",
+      "author": "Zhao",
+      "year": "2012",
+      "journal-title": "J Algorith Comput Technol"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1075",
+      "doi-asserted-by": "crossref",
+      "first-page": "560",
+      "DOI": "10.1016/j.enbuild.2012.03.003",
+      "article-title": "Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools",
+      "volume": "49",
+      "author": "Tsanas",
+      "year": "2012",
+      "journal-title": "Energy Build"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.apenergy.2021.116452_b1080",
+      "doi-asserted-by": "crossref",
+      "first-page": "4356",
+      "DOI": "10.1109/TPWRS.2013.2269803",
+      "article-title": "A strategy for short-term load forecasting by support vector regression machines",
+      "volume": "28",
+      "author": "Ceperic",
+      "year": "2013",
+      "journal-title": "IEEE Trans Power Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1085",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Kolter JZ, Ferreira Jr J. A large-scale study on predicting and contextualizing building energy usage. 2011.",
+      "DOI": "10.1609/aaai.v25i1.7806"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1090",
+      "doi-asserted-by": "crossref",
+      "first-page": "1162",
+      "DOI": "10.1016/j.proeng.2015.08.459",
+      "article-title": "Forecasting short-term electricity demand in residential sector based on support vector regression and fuzzy-rough feature selection with particle swarm optimization",
+      "volume": "118",
+      "author": "Son",
+      "year": "2015",
+      "journal-title": "Procedia Eng"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1095",
+      "doi-asserted-by": "crossref",
+      "first-page": "276",
+      "DOI": "10.1016/j.energy.2015.04.039",
+      "article-title": "Hybrid methodologies for electricity load forecasting: Entropy-based feature selection with machine learning and soft computing techniques",
+      "volume": "86",
+      "author": "Jurado",
+      "year": "2015",
+      "journal-title": "Energy"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1100",
+      "doi-asserted-by": "crossref",
+      "first-page": "428",
+      "DOI": "10.1016/j.enbuild.2018.11.010",
+      "article-title": "A systematic feature selection procedure for short-term data-driven building energy forecasting model development",
+      "volume": "183",
+      "author": "Zhang",
+      "year": "2019",
+      "journal-title": "Energy Build"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1105",
+      "doi-asserted-by": "crossref",
+      "first-page": "862",
+      "DOI": "10.1016/j.ijepes.2014.05.036",
+      "article-title": "A new short-term load forecast method based on neuro-evolutionary algorithm and chaotic feature selection",
+      "volume": "62",
+      "author": "Kouhi",
+      "year": "2014",
+      "journal-title": "Int J Electr Power Energy Syst"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1110",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.buildenv.2020.107338",
+      "article-title": "A systematic feature extraction and selection framework for data-driven whole-building automated fault detection and diagnostics in commercial buildings",
+      "volume": "186",
+      "author": "Zhang",
+      "year": "2020",
+      "journal-title": "Build Environ"
+    },
+    {
+      "key": "10.1016/j.apenergy.2021.116452_b1115",
+      "unstructured": "Roth KW, et al., Energy impact of commercial building controls and performance diagnostics: market characterization, energy impact of building faults and energy savings potential. Prepared by TAIX LLC for the US Department of Energy. November. 412pp (Table 2–1), 2005."
+    }
+  ],
+  "container-title": [
+    "Applied Energy"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0306261921000209?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0306261921000209?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        5
+      ]
+    ],
+    "date-time": "2025-10-05T13:47:35Z",
+    "timestamp": 1759672055000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0306261921000209"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        3
+      ]
+    ]
+  },
+  "references-count": 223,
+  "alternative-id": [
+    "S0306261921000209"
+  ],
+  "URL": "https://doi.org/10.1016/j.apenergy.2021.116452",
+  "relation": {},
+  "ISSN": [
+    "0306-2619"
+  ],
+  "issn-type": [
+    {
+      "value": "0306-2619",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        3
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "A review of machine learning in building load prediction",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Applied Energy",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.apenergy.2021.116452",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2021 Elsevier Ltd. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "116452"
+}

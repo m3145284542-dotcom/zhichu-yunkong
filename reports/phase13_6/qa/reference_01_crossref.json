@@ -1,0 +1,565 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        30
+      ]
+    ],
+    "date-time": "2026-08-30T13:37:30Z",
+    "timestamp": 1788097050026,
+    "version": "build-2803163510"
+  },
+  "reference-count": 20,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            27
+          ]
+        ],
+        "date-time": "2020-10-27T00:00:00Z",
+        "timestamp": 1603756800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            27
+          ]
+        ],
+        "date-time": "2020-10-27T00:00:00Z",
+        "timestamp": 1603756800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Sci Data"
+  ],
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>This paper describes an open data set of 3,053 energy meters from 1,636 non-residential buildings with a range of two full years (2016 and 2017) at an hourly frequency (17,544 measurements per meter resulting in approximately 53.6 million measurements). These meters were collected from 19 sites across North America and Europe, with one or more meters per building measuring whole building electrical, heating and cooling water, steam, and solar energy as well as water and irrigation meters. Part of these data was used in the Great Energy Predictor III (GEPIII) competition hosted by the American Society of Heating, Refrigeration, and Air-Conditioning Engineers (ASHRAE) in October-December 2019. GEPIII was a machine learning competition for long-term prediction with an application to measurement and verification. This paper describes the process of data collection, cleaning, and convergence of time-series meter data, the meta-data about the buildings, and complementary weather data. This data set can be used for further prediction benchmarking and prototyping as well as anomaly detection, energy analysis, and building type classification.</jats:p>",
+  "DOI": "10.1038/s41597-020-00712-x",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        27
+      ]
+    ],
+    "date-time": "2020-10-27T07:19:17Z",
+    "timestamp": 1603783157000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 250,
+  "title": [
+    "The Building Data Genome Project 2, energy meter data from the ASHRAE Great Energy Predictor III competition"
+  ],
+  "prefix": "10.1038",
+  "volume": "7",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-1186-4299",
+      "authenticated-orcid": false,
+      "given": "Clayton",
+      "family": "Miller",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Anjukan",
+      "family": "Kathirgamanathan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Bianca",
+      "family": "Picchetti",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pandarasamy",
+      "family": "Arjunan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "June Young",
+      "family": "Park",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6014-3228",
+      "authenticated-orcid": false,
+      "given": "Zoltan",
+      "family": "Nagy",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6532-5178",
+      "authenticated-orcid": false,
+      "given": "Paul",
+      "family": "Raftery",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Brodie W.",
+      "family": "Hobson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Zixiao",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Forrest",
+      "family": "Meggers",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        27
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "712_CR1",
+      "doi-asserted-by": "publisher",
+      "first-page": "296",
+      "DOI": "10.1016/j.apenergy.2016.04.049",
+      "volume": "172",
+      "author": "J Granderson",
+      "year": "2016",
+      "unstructured": "Granderson, J. et al. Accuracy of automated measurement and verification (M V) techniques for energy savings in commercial buildings. Appl. Energy 172, 296–308 (2016).",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "issue": "3",
+      "key": "712_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "974",
+      "DOI": "10.3390/make1030056",
+      "volume": "1",
+      "author": "C Miller",
+      "year": "2019",
+      "unstructured": "Miller, C. More buildings make more generalizable models – benchmarking prediction methods on open electrical meter data. Machine Learning and Knowledge Extraction 1(3), 974–993 (2019).",
+      "journal-title": "Machine Learning and Knowledge Extraction"
+    },
+    {
+      "key": "712_CR3",
+      "doi-asserted-by": "publisher",
+      "first-page": "1293",
+      "DOI": "10.1109/JAS.2019.1911747",
+      "volume": "6",
+      "author": "HA Dau",
+      "year": "2019",
+      "unstructured": "Dau, H. A. et al. The UCR time series archive. IEEE/CAA Journal of Automatica Sinica 6, 1293–1305 (2019).",
+      "journal-title": "IEEE/CAA Journal of Automatica Sinica"
+    },
+    {
+      "key": "712_CR4",
+      "unstructured": "Xiao, H., Rasul, K. & Vollgraf, R. Fashion-MNIST: a novel image dataset for benchmarking machine learning algorithms. Preprint at https://arxiv.org/abs/1708.07747 (2017)."
+    },
+    {
+      "issue": "2",
+      "key": "712_CR5",
+      "doi-asserted-by": "publisher",
+      "first-page": "8",
+      "DOI": "10.1109/MM.2020.2974843",
+      "volume": "40",
+      "author": "P Mattson",
+      "year": "2020",
+      "unstructured": "Mattson, P. et al. MLPerf: An industry standard benchmark suite for machine learning performance. IEEE Micro. 40(2), 8–16 (2020).",
+      "journal-title": "IEEE Micro."
+    },
+    {
+      "key": "712_CR6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/sdata.2018.48",
+      "volume": "5",
+      "author": "T Kriechbaumer",
+      "year": "2018",
+      "unstructured": "Kriechbaumer, T. & Jacobsen, H. A. BLOND, a building-level office environment dataset of typical electrical appliances. Sci. Data 5, 180048 (2018).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "key": "712_CR7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/sdata.2015.7",
+      "volume": "2",
+      "author": "J Kelly",
+      "year": "2015",
+      "unstructured": "Kelly, J. & Knottenbelt, W. The UK-DALE dataset, domestic appliance-level electricity demand and whole-house demand from five UK homes. Sci. Data 2, 150007 (2015).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "issue": "1",
+      "key": "712_CR8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41597-019-0271-7",
+      "volume": "6",
+      "author": "A Mahdavi",
+      "year": "2019",
+      "unstructured": "Mahdavi, A., Berger, C., Tahmasebi, F. & Schuss, M. Monitored data on occupants’ presence and actions in an office building. Sci. Data 6(1), 290 (2019).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "issue": "1",
+      "key": "712_CR9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41597-019-0199-y",
+      "volume": "6",
+      "author": "O Ruhnau",
+      "year": "2019",
+      "unstructured": "Ruhnau, O., Hirth, L. & Praktiknjo, A. Time series of heat demand and heat pump efficiency for energy system modeling. Sci. Data 6(1), 189 (2019).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "issue": "1",
+      "key": "712_CR10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41597-019-0283-3",
+      "volume": "6",
+      "author": "M Schweiker",
+      "year": "2019",
+      "unstructured": "Schweiker, M., Kleber, M. & Wagner, A. Long-term monitoring data from a naturally ventilated office building. Sci. Data 6(1), 293 (2019).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "key": "712_CR11",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/sdata.2019.15",
+      "volume": "6",
+      "author": "H Rashid",
+      "year": "2019",
+      "unstructured": "Rashid, H., Singh, P. & Singh, A. I-BLEND, a campus-scale commercial and residential buildings electrical energy dataset. Sci. Data 6, 190015 (2019).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "issue": "1",
+      "key": "712_CR12",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41597-019-0275-3",
+      "volume": "6",
+      "author": "F Paige",
+      "year": "2019",
+      "unstructured": "Paige, F., Agee, P. & Jazizadeh, F. flEECe, an energy use and occupant behavior dataset for net-zero energy affordable senior residential buildings. Sci. Data 6(1), 291 (2019).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "issue": "1",
+      "key": "712_CR13",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41597-020-0434-6",
+      "volume": "7",
+      "author": "C Klemenjak",
+      "year": "2020",
+      "unstructured": "Klemenjak, C., Kovatsch, C., Herold, M. & Elmenreich, W. A synthetic energy dataset for non-intrusive load monitoring in households. Sci. Data 7(1), 108 (2020).",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "key": "712_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "111327",
+      "DOI": "10.1016/j.enpol.2020.111327",
+      "volume": "139",
+      "author": "J Roth",
+      "year": "2020",
+      "unstructured": "Roth, J., Lim, B., Jain, R. K. & Grueneich, D. Examining the feasibility of using open data to benchmark building energy usage in cities: A data science and policy perspective. Energy Policy 139, 111327 (2020).",
+      "journal-title": "Energy Policy"
+    },
+    {
+      "key": "712_CR15",
+      "doi-asserted-by": "publisher",
+      "first-page": "296",
+      "DOI": "10.1016/j.apenergy.2016.04.049",
+      "volume": "173",
+      "author": "J Granderson",
+      "year": "2016",
+      "unstructured": "Granderson, J. et al. Accuracy of automated measurement and verification (M&V) techniques for energy savings in commercial buildings. Appl. Energy 173, 296–308 (2016).",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "key": "712_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "439",
+      "DOI": "10.1016/j.egypro.2017.07.400",
+      "volume": "122",
+      "author": "C Miller",
+      "year": "2017",
+      "unstructured": "Miller, C. & Meggers, F. The building data genome project: An open, public data set from non-residential building electrical meters. Energy Procedia 122, 439–444 (2017).",
+      "journal-title": "Energy Procedia"
+    },
+    {
+      "key": "712_CR17",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Miller C. et al. The ASHRAE Great Energy Predictor III competition: Overview and results, Science and Technology for the Built Environment, 26(10), 1427-1447, https://doi.org/10.1080/23744731.2020.1795514 (2020).",
+      "DOI": "10.1080/23744731.2020.1795514"
+    },
+    {
+      "key": "712_CR18",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5281/zenodo.3887306",
+      "author": "C Miller",
+      "year": "2020",
+      "unstructured": "Miller, C. et al. buds-lab/building-data-genome-project-2: v1.0. Zenodo https://doi.org/10.5281/zenodo.3887306 (2020)."
+    },
+    {
+      "key": "712_CR19",
+      "doi-asserted-by": "publisher",
+      "first-page": "360",
+      "DOI": "10.1016/j.enbuild.2017.09.056",
+      "volume": "156",
+      "author": "C Miller",
+      "year": "2017",
+      "unstructured": "Miller, C. & Meggers, F. Mining electrical meter data to predict principal building use, performance class, and operations strategy for hundreds of non-residential buildings. Energy Build. 156, 360–373 (2017).",
+      "journal-title": "Energy Build."
+    },
+    {
+      "key": "712_CR20",
+      "doi-asserted-by": "publisher",
+      "first-page": "1192",
+      "DOI": "10.1016/j.rser.2017.04.095",
+      "volume": "81",
+      "author": "K Amasyali",
+      "year": "2018",
+      "unstructured": "Amasyali, K. & El-Gohary, N. M. A review of data-driven building energy consumption prediction studies. Renewable Sustainable Energy Rev. 81, 1192–1205 (2018).",
+      "journal-title": "Renewable Sustainable Energy Rev."
+    }
+  ],
+  "container-title": [
+    "Scientific Data"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.nature.com/articles/s41597-020-00712-x.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41597-020-00712-x",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41597-020-00712-x.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        12,
+        5
+      ]
+    ],
+    "date-time": "2022-12-05T23:44:47Z",
+    "timestamp": 1670283887000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.nature.com/articles/s41597-020-00712-x"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        27
+      ]
+    ]
+  },
+  "references-count": 20,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "712"
+  ],
+  "URL": "https://doi.org/10.1038/s41597-020-00712-x",
+  "relation": {
+    "references": [
+      {
+        "id-type": "doi",
+        "id": "10.5281/zenodo.3887306",
+        "asserted-by": "subject"
+      }
+    ]
+  },
+  "ISSN": [
+    "2052-4463"
+  ],
+  "issn-type": [
+    {
+      "value": "2052-4463",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        10,
+        27
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "12 June 2020",
+      "order": 1,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "29 September 2020",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "27 October 2020",
+      "order": 3,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "The authors declare no competing interests.",
+      "order": 1,
+      "name": "Ethics",
+      "group": {
+        "name": "EthicsHeading",
+        "label": "Competing interests"
+      }
+    }
+  ],
+  "article-number": "368"
+}

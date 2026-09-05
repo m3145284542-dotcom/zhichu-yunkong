@@ -1,0 +1,219 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        31
+      ]
+    ],
+    "date-time": "2026-08-31T15:51:31Z",
+    "timestamp": 1788191491278,
+    "version": "build-2803163510"
+  },
+  "reference-count": 0,
+  "publisher": "AI Access Foundation",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "jair"
+  ],
+  "abstract": "<jats:p>Decision-focused learning (DFL) is an emerging paradigm that integrates machine learning (ML) and constrained optimization to enhance decision quality by training ML models in an end-to-end system. This approach shows significant potential to revolutionize combinatorial decision-making in real-world applications that operate under uncertainty, where estimating unknown parameters within decision models is a major challenge. This paper presents a comprehensive review of DFL, providing an in-depth analysis of both gradient-based and gradient-free techniques used to combine ML and constrained optimization. It evaluates the strengths and limitations of these techniques and includes an extensive empirical evaluation of eleven methods across seven problems. The survey also offers insights into recent advancements and future research directions in DFL.</jats:p>",
+  "DOI": "10.1613/jair.1.15320",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        31
+      ]
+    ],
+    "date-time": "2024-08-31T22:28:03Z",
+    "timestamp": 1725143283000
+  },
+  "page": "1623-1701",
+  "source": "Crossref",
+  "is-referenced-by-count": 106,
+  "title": [
+    "Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities"
+  ],
+  "prefix": "10.1613",
+  "volume": "80",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-8675-8178",
+      "authenticated-orcid": false,
+      "given": "Jayanta",
+      "family": "Mandi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-4499-8066",
+      "authenticated-orcid": false,
+      "given": "James",
+      "family": "Kotary",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Senne",
+      "family": "Berden",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Maxime",
+      "family": "Mulamba",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Victor",
+      "family": "Bucarey",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Tias",
+      "family": "Guns",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ferdinando",
+      "family": "Fioretto",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "16860",
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        31
+      ]
+    ]
+  },
+  "container-title": [
+    "Journal of Artificial Intelligence Research"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://www.jair.org/index.php/jair/article/download/15320/27076",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.jair.org/index.php/jair/article/download/15320/27078",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.jair.org/index.php/jair/article/download/15320/27076",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        31
+      ]
+    ],
+    "date-time": "2024-08-31T22:28:03Z",
+    "timestamp": 1725143283000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.jair.org/index.php/jair/article/view/15320"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        31
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.1613/jair.1.15320",
+  "relation": {},
+  "ISSN": [
+    "1076-9757"
+  ],
+  "issn-type": [
+    {
+      "value": "1076-9757",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        31
+      ]
+    ]
+  }
+}
