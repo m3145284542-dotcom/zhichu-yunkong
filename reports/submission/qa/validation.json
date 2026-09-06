@@ -1,10 +1,7 @@
 {
-  "status": "FAIL",
-  "errors": [
-    "manifest identity: reports/submission/validate_submission.py",
-    "manifest identity: reports/submission/.gitignore"
-  ],
-  "checks_passed": 551,
+  "status": "PASS",
+  "errors": [],
+  "checks_passed": 553,
   "checks_total": 553,
   "report_pages": 15,
   "report_text_segments": 209,
@@ -545,7 +542,7 @@
     "manifest identity: reports/submission/build_pdf.py": true,
     "manifest identity: reports/submission/build_presentation.mjs": true,
     "manifest identity: reports/submission/export_presentation.ps1": true,
-    "manifest identity: reports/submission/validate_submission.py": false,
+    "manifest identity: reports/submission/validate_submission.py": true,
     "manifest identity: reports/submission/BUILD.md": true,
     "manifest identity: reports/submission/editorial_changes.json": true,
     "manifest identity: reports/submission/presentation_changes.json": true,
@@ -556,7 +553,7 @@
     "manifest identity: outputs/submission/DOEF_Competition_Presentation.pptx": true,
     "manifest identity: outputs/submission/DOEF_Competition_Presentation.pdf": true,
     "manifest identity: reports/submission/qa/visual_review.json": true,
-    "manifest identity: reports/submission/.gitignore": false,
+    "manifest identity: reports/submission/.gitignore": true,
     "manifest identity: reports/phase13_5/technical_report_final.md": true,
     "manifest identity: reports/phase13_6/technical_report_submission.pdf": true,
     "manifest identity: reports/phase13_6/assets/figure_04_layout.png": true,

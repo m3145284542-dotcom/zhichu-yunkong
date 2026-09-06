@@ -116,7 +116,7 @@
     {
       "path": "reports/submission/validate_submission.py",
       "status": "canonical",
-      "sha256": "685af8cb0c9c9685000527efe72899060732affe6ac382fe2e550054cd53223c",
+      "sha256": "606b1e91f23ac80fe6af3dbea3a67b0c9a488a46aaea74a4bc6392dc1d50f8a2",
       "bytes": 9571
     },
     {
@@ -182,7 +182,7 @@
     {
       "path": "reports/submission/.gitignore",
       "status": "canonical",
-      "sha256": "a3f83d288f9769ed6ea0a8b81116916a25337859c575c75f7901145ced9bd710",
+      "sha256": "7e3e39935b814c459e2fb36a4de159e30225903eafe06456b1abea92701d0e37",
       "bytes": 50
     }
   ],
