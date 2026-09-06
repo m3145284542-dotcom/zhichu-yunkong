@@ -1,0 +1,864 @@
+[
+  {
+    "slide": 1,
+    "old": "SB-M01",
+    "new": "DOEF"
+  },
+  {
+    "slide": 1,
+    "old": "OPENING",
+    "new": "作品介绍"
+  },
+  {
+    "slide": 1,
+    "old": "预测是输入，不是终点",
+    "new": "负荷预测与削峰调度"
+  },
+  {
+    "slide": 1,
+    "old": "24 小时前瞻预测  →  冻结电池优化  →  实际负荷上的决策结果",
+    "new": "24 小时超前预测 → 电池调度 → 实际峰值评价",
+    "position": {
+      "left": 750.72,
+      "top": 535,
+      "width": 388.8,
+      "height": 24
+    },
+    "layout_reason": "Place description below the decorative bars to remove overlap."
+  },
+  {
+    "slide": 1,
+    "old": "全球人工智能算法精英大赛 · AI+能源主题赛",
+    "new": "全球校园人工智能算法精英大赛 · AI+能源"
+  },
+  {
+    "slide": 1,
+    "old": "SB-M01 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 2,
+    "old": "SB-M02",
+    "new": "DOEF"
+  },
+  {
+    "slide": 2,
+    "old": "TENSION",
+    "new": "研究问题"
+  },
+  {
+    "slide": 2,
+    "old": "更低的预测 RMSE，并未带来更低的储能决策 regret",
+    "new": "预测精度与削峰效果的排序差异"
+  },
+  {
+    "slide": 2,
+    "old": "冻结八栋建筑 Test 汇总中，XGBoost 与 LightGBM 在预测误差与决策 regret 上出现排序反转。",
+    "new": "八建筑测试结果中，XGBoost 的 RMSE 略低于 LightGBM，决策后悔值却略高。"
+  },
+  {
+    "slide": 2,
+    "old": "SB-M02 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 3,
+    "old": "SB-M03",
+    "new": "DOEF"
+  },
+  {
+    "slide": 3,
+    "old": "PROBLEM",
+    "new": "技术路线"
+  },
+  {
+    "slide": 3,
+    "old": "预测只是中间环节，调度结果才是工程终点",
+    "new": "负荷预测驱动储能调度"
+  },
+  {
+    "slide": 3,
+    "old": "负荷预测会改变储能充放电计划；最终评价发生在真实负荷与电池动作叠加后的结果上。",
+    "new": "预测生成充放电计划，再用实际负荷计算调度后的取电峰值。"
+  },
+  {
+    "slide": 3,
+    "old": "SB-M03 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 4,
+    "old": "SB-M04",
+    "new": "DOEF"
+  },
+  {
+    "slide": 4,
+    "old": "TENSION → SOLUTION",
+    "new": "方法设计"
+  },
+  {
+    "slide": 4,
+    "old": "模型不只要预测得准，还要在 Validation 上支持更好的储能决策",
+    "new": "以验证集削峰表现选择融合权重"
+  },
+  {
+    "slide": 4,
+    "old": "保持预测组件与电池约束不变，只改变“选择依据”：从预测误差，转向 Validation 下游决策 regret。",
+    "new": "预测分量与电池约束保持一致，融合权重依据验证集决策后悔值选择。"
+  },
+  {
+    "slide": 4,
+    "old": "不是联合训练 · 不是新基础模型 · 不是用 Test 调权重",
+    "new": "预测器与优化器分别运行，权重在验证集确定"
+  },
+  {
+    "slide": 4,
+    "old": "SB-M04 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 5,
+    "old": "SB-M05",
+    "new": "DOEF"
+  },
+  {
+    "slide": 5,
+    "old": "SOLUTION",
+    "new": "DOEF 方法"
+  },
+  {
+    "slide": 5,
+    "old": "DOEF 在 Validation 上按决策 regret 冻结权重，再进入 Test",
+    "new": "DOEF：周期基线与 LightGBM 融合"
+  },
+  {
+    "slide": 5,
+    "old": "每栋建筑的 DayWeek–LightGBM 权重只在 Validation 选择；Test 对训练、权重、tie-break 和电池配置没有反馈路径。",
+    "new": "逐建筑选择 DayWeek 与 LightGBM 的权重，验证完成后固定权重并评价测试集。"
+  },
+  {
+    "slide": 5,
+    "old": "SB-M05 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 6,
+    "old": "SB-M06",
+    "new": "DOEF"
+  },
+  {
+    "slide": 6,
+    "old": "EVIDENCE",
+    "new": "实验结果"
+  },
+  {
+    "slide": 6,
+    "old": "DOEF 同时降低预测误差与储能决策 regret",
+    "new": "预测误差降低 6.36%，决策后悔值降低 3.61%"
+  },
+  {
+    "slide": 6,
+    "old": "对比冻结 LightGBM：八栋建筑等权聚合的 normalized MAE 与 normalized decision regret 均下降。",
+    "new": "相对 LightGBM，八建筑等权平均的归一化 MAE 和归一化决策后悔值均下降。"
+  },
+  {
+    "slide": 6,
+    "old": "SB-M06 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 7,
+    "old": "SB-M07",
+    "new": "DOEF"
+  },
+  {
+    "slide": 7,
+    "old": "INTERPRETATION",
+    "new": "评价指标"
+  },
+  {
+    "slide": 7,
+    "old": "RMSE 衡量预测误差；regret 衡量误差经过调度后的工程后果",
+    "new": "预测误差与决策后悔值"
+  },
+  {
+    "slide": 7,
+    "old": "两个指标回答不同问题，因此在项目范围内不保证给出相同的模型排序。",
+    "new": "RMSE 衡量负荷预测偏差；决策后悔值衡量相对 Oracle 的实际峰值差。"
+  },
+  {
+    "slide": 7,
+    "old": "结论：两者都要看，不把一个替代另一个",
+    "new": "同时报告预测精度与调度表现"
+  },
+  {
+    "slide": 7,
+    "old": "SB-M07 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 8,
+    "old": "SB-M08",
+    "new": "DOEF"
+  },
+  {
+    "slide": 8,
+    "old": "BREADTH",
+    "new": "多建筑比较"
+  },
+  {
+    "slide": 8,
+    "old": "全部八栋固定建筑均被展示：六胜、两平、零负",
+    "new": "八建筑后悔值对比：6 胜、2 平、0 负"
+  },
+  {
+    "slide": 8,
+    "old": "建筑在结果评估前冻结：296 个 office 候选 → 82 个质量通过 → 仅用 Train 期形态预选 8 栋。",
+    "new": "296 栋办公建筑候选中，82 栋通过质量筛选，再依据训练期负荷形态选出 8 栋。"
+  },
+  {
+    "slide": 8,
+    "old": "SB-M08 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 9,
+    "old": "SB-M09",
+    "new": "DOEF"
+  },
+  {
+    "slide": 9,
+    "old": "CREDIBILITY",
+    "new": "实验设计"
+  },
+  {
+    "slide": 9,
+    "old": "权重在 Validation 冻结，Test 不参与选择",
+    "new": "验证集权重选择与测试集评价"
+  },
+  {
+    "slide": 9,
+    "old": "11 个候选权重在预先声明的 Validation 网格上选择；Test 只用于最终评价，不反馈到模型、权重或 tie-break。",
+    "new": "验证集比较 11 个候选权重；测试集只用于评价，不参与模型、权重或平局规则选择。"
+  },
+  {
+    "slide": 9,
+    "old": "SB-M09 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 10,
+    "old": "SB-M10",
+    "new": "DOEF"
+  },
+  {
+    "slide": 10,
+    "old": "ENGINEERING WORKFLOW",
+    "new": "实现流程"
+  },
+  {
+    "slide": 10,
+    "old": "冻结流程明确了次日预测如何生成储能调度，但尚非现场部署",
+    "new": "预测与储能调度的仿真流程"
+  },
+  {
+    "slide": 10,
+    "old": "这是可复现的 next-day operating sequence，而不是已在真实楼宇上线的控制系统。",
+    "new": "离线仿真已实现预测、优化和实际负荷评价；真实楼宇在线部署仍需验证。"
+  },
+  {
+    "slide": 10,
+    "old": "SB-M10 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 11,
+    "old": "SB-M11",
+    "new": "DOEF"
+  },
+  {
+    "slide": 11,
+    "old": "CONTRIBUTION",
+    "new": "作品贡献"
+  },
+  {
+    "slide": 11,
+    "old": "创新不在基础预测器，而在把模型选择对齐储能决策",
+    "new": "决策导向融合与多建筑评测"
+  },
+  {
+    "slide": 11,
+    "old": "DOEF 的贡献是可审计的 decision-oriented framework，而不是把 LightGBM 或简单加权包装成新模型。",
+    "new": "通过验证集调度表现选择预测组合，并在相同电池约束下开展多建筑比较。"
+  },
+  {
+    "slide": 11,
+    "old": "SB-M11 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 12,
+    "old": "SB-M12",
+    "new": "DOEF"
+  },
+  {
+    "slide": 12,
+    "old": "CONCLUSION",
+    "new": "结论"
+  },
+  {
+    "slide": 12,
+    "old": "让预测评价\n与最终储能决策对齐",
+    "new": "面向储能削峰的\n负荷预测组合选择"
+  },
+  {
+    "slide": 12,
+    "old": "SB-M12 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+  },
+  {
+    "slide": 13,
+    "old": "SB-A01",
+    "new": "DOEF"
+  },
+  {
+    "slide": 13,
+    "old": "APPENDIX · SCOPE",
+    "new": "附录 · 数据"
+  },
+  {
+    "slide": 13,
+    "old": "建筑范围在结果评估前冻结",
+    "new": "建筑筛选与样本构成"
+  },
+  {
+    "slide": 13,
+    "old": "质量筛选 + Train-only 负荷形态覆盖，Validation/Test 模型或决策性能不参与建筑预选。",
+    "new": "先按数据质量确定候选范围，再用训练期负荷形态选楼；不使用验证或测试成绩。"
+  },
+  {
+    "slide": 13,
+    "old": "Appendix · open for “why only 8 / cherry-picking?”",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 14,
+    "old": "SB-A02",
+    "new": "DOEF"
+  },
+  {
+    "slide": 14,
+    "old": "APPENDIX · PROTOCOL",
+    "new": "附录 · 方法"
+  },
+  {
+    "slide": 14,
+    "old": "因果特征与时间切分共同约束信息边界",
+    "new": "因果特征与时间切分"
+  },
+  {
+    "slide": 14,
+    "old": "24 h horizon；只使用预测时刻可获得的负荷历史与日历信息；Validation 选择，Test 最终评估。",
+    "new": "24 h 超前预测仅使用当时可获得的负荷和日历信息，按目标可用性处理切分边界。"
+  },
+  {
+    "slide": 14,
+    "old": "Appendix · leakage / chronology answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 15,
+    "old": "SB-A03",
+    "new": "DOEF"
+  },
+  {
+    "slide": 15,
+    "old": "APPENDIX · MODELS",
+    "new": "附录 · 模型"
+  },
+  {
+    "slide": 15,
+    "old": "基础模型是对照与组件，不是被包装的创新点",
+    "new": "预测基线与模型组成"
+  },
+  {
+    "slide": 15,
+    "old": "DOEF 只组合 DayWeek 与逐建筑 LightGBM；其他模型用于基线或受控对照。",
+    "new": "DayWeek 与逐建筑 LightGBM 构成 DOEF，其余模型用于基线比较。"
+  },
+  {
+    "slide": 15,
+    "old": "Appendix · algorithm-component answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 16,
+    "old": "SB-A04",
+    "new": "DOEF"
+  },
+  {
+    "slide": 16,
+    "old": "APPENDIX · DECISION MODEL",
+    "new": "附录 · 约束"
+  },
+  {
+    "slide": 16,
+    "old": "同一冻结电池约束保证方法间可比",
+    "new": "电池参数与调度约束"
+  },
+  {
+    "slide": 16,
+    "old": "所有预测方法进入完全相同的储能优化器；参数按每栋建筑 Train 期负荷尺度冻结。",
+    "new": "各预测方法共享同一建筑的电池与优化器，电池规模由训练期负荷确定。"
+  },
+  {
+    "slide": 16,
+    "old": "Appendix · physical constraint / unit answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 17,
+    "old": "SB-A05",
+    "new": "DOEF"
+  },
+  {
+    "slide": 17,
+    "old": "APPENDIX · FORECAST RESULTS",
+    "new": "附录 · 预测"
+  },
+  {
+    "slide": 17,
+    "old": "完整预测指标用于核查，不替代下游决策评价",
+    "new": "八建筑预测结果"
+  },
+  {
+    "slide": 17,
+    "old": "冻结八栋 Test 等权聚合；normalized metrics 均按每栋 Train mean load 归一化。",
+    "new": "八建筑测试集等权平均；MAE、RMSE 和后悔值按各建筑训练期平均负荷归一化。"
+  },
+  {
+    "slide": 17,
+    "old": "Appendix · full forecast table",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 18,
+    "old": "SB-A06",
+    "new": "DOEF"
+  },
+  {
+    "slide": 18,
+    "old": "APPENDIX · DECISION RESULTS",
+    "new": "附录 · 决策"
+  },
+  {
+    "slide": 18,
+    "old": "决策指标必须连同范围与聚合口径一起解释",
+    "new": "削峰率分布与失效案例"
+  },
+  {
+    "slide": 18,
+    "old": "mean 与 median 可能给出完全不同的直觉；负例必须和有利统计一起展示。",
+    "new": "均值、中位数和最小值共同描述调度表现，负削峰率表示取电峰值反而升高。"
+  },
+  {
+    "slide": 18,
+    "old": "Appendix · aggregation caveat / negative cases",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 19,
+    "old": "SB-A07",
+    "new": "DOEF"
+  },
+  {
+    "slide": 19,
+    "old": "APPENDIX · MECHANISM TRACE",
+    "new": "附录 · 案例"
+  },
+  {
+    "slide": 19,
+    "old": "冻结调度轨迹只用于说明流程，不代表普遍表现",
+    "new": "预测误差对充放电计划的影响"
+  },
+  {
+    "slide": 19,
+    "old": "Phase 8 预先冻结的代表性 Test case；只作为“预测如何改变 realized grid load”的机制说明。",
+    "new": "预先选定的测试案例用于解释预测如何改变调度结果，不能代表全部建筑表现。"
+  },
+  {
+    "slide": 19,
+    "old": "Appendix · dispatch mechanism question",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 20,
+    "old": "SB-A08",
+    "new": "DOEF"
+  },
+  {
+    "slide": 20,
+    "old": "APPENDIX · SELECTION",
+    "new": "附录 · 权重"
+  },
+  {
+    "slide": 20,
+    "old": "逐建筑权重来自预先声明的 Validation 搜索",
+    "new": "逐建筑融合权重"
+  },
+  {
+    "slide": 20,
+    "old": "候选 wᵦ = {0.0, 0.1, …, 1.0}；确定性 tie-break；Test 完全排除。",
+    "new": "候选权重为 0.0、0.1、…、1.0，按验证集目标和平局规则选择，测试期保持不变。"
+  },
+  {
+    "slide": 20,
+    "old": "Appendix · full weight-selection answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 21,
+    "old": "SB-A09",
+    "new": "DOEF"
+  },
+  {
+    "slide": 21,
+    "old": "APPENDIX · UNCERTAINTY",
+    "new": "附录 · 统计"
+  },
+  {
+    "slide": 21,
+    "old": "冻结 bootstrap 支持固定八栋建筑范围内的差异",
+    "new": "建筑级 bootstrap 不确定性分析"
+  },
+  {
+    "slide": 21,
+    "old": "paired building-level bootstrap；resampling unit = building；不扩展为跨建筑普遍显著性结论。",
+    "new": "以建筑为单位进行配对重采样，区间描述本次 8 栋建筑样本内的不确定性。"
+  },
+  {
+    "slide": 21,
+    "old": "Appendix · uncertainty answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 22,
+    "old": "SB-A10",
+    "new": "DOEF"
+  },
+  {
+    "slide": 22,
+    "old": "APPENDIX · REPRODUCIBILITY",
+    "new": "附录 · 复现"
+  },
+  {
+    "slide": 22,
+    "old": "报告公式与冻结预测逐值一致",
+    "new": "DOEF 公式与预测输出的一致性"
+  },
+  {
+    "slide": 22,
+    "old": "这是 identity audit：显式 DOEF 公式复算与冻结 Phase 8 ensemble_prediction 逐值对齐，不是新训练或独立重复实验。",
+    "new": "按公式复算 5,760 个测试预测，与保存的输出逐点比对；该检查不涉及重新训练。"
+  },
+  {
+    "slide": 22,
+    "old": "Appendix · lineage / reproducibility answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 23,
+    "old": "SB-A11",
+    "new": "DOEF"
+  },
+  {
+    "slide": 23,
+    "old": "APPENDIX · FALSIFICATION",
+    "new": "附录 · 对比"
+  },
+  {
+    "slide": 23,
+    "old": "负结果被保留，但不用于 Test 后反向改选算法",
+    "new": "稳健调度的对比实验"
+  },
+  {
+    "slide": 23,
+    "old": "Validation-selected robust variant 在 Test 上明显退化，因此被保留为负结果并排除出 DOEF v1.0。",
+    "new": "验证集选出的稳健调度方案在测试期后悔值更高；保留该结果，未反调参数。"
+  },
+  {
+    "slide": 23,
+    "old": "Appendix · falsification / failed idea answer",
+    "new": "智储云控 · DOEF | 补充实验与方法说明"
+  },
+  {
+    "slide": 2,
+    "old": "核心矛盾",
+    "new": "指标排序差异"
+  },
+  {
+    "slide": 2,
+    "old": "同一个“更准”\n不一定意味着同一个“更好调度”",
+    "new": "预测指标与调度指标\n需要分别评价"
+  },
+  {
+    "slide": 2,
+    "old": "范围内反例 ≠ 预测精度无用",
+    "new": "预测精度仍是必要指标"
+  },
+  {
+    "slide": 3,
+    "old": "CONCEPTUAL / EXPLANATORY",
+    "new": "流程示意"
+  },
+  {
+    "slide": 3,
+    "old": "所有预测方法进入同一套冻结电池约束，保证比较的是“预测带来的决策差异”，不是不同优化器。",
+    "new": "各预测方法共享电池约束和优化器，比较预测输入对调度结果的影响。"
+  },
+  {
+    "slide": 4,
+    "old": "唯一强调的改变：SELECTION OBJECTIVE",
+    "new": "权重选择依据：验证集决策后悔值"
+  },
+  {
+    "slide": 6,
+    "old": "normalized MAE 相对改善",
+    "new": "归一化 MAE 相对改善"
+  },
+  {
+    "slide": 6,
+    "old": "normalized regret 相对改善",
+    "new": "归一化后悔值相对改善"
+  },
+  {
+    "slide": 6,
+    "old": "负峰值案例保留：min = −1.017%",
+    "new": "最小整段削峰率：−1.017%"
+  },
+  {
+    "slide": 7,
+    "old": "FORECAST METRIC",
+    "new": "预测指标"
+  },
+  {
+    "slide": 7,
+    "old": "“预测偏了多少？”",
+    "new": "预测负荷与实际负荷的偏差"
+  },
+  {
+    "slide": 7,
+    "old": "对所有时间点的误差做平方惩罚并聚合。\n它是必要的预测质量检查，但不是储能决策本身。",
+    "new": "对各时刻的预测误差平方取平均，再开方。\n用于评价负荷预测质量。"
+  },
+  {
+    "slide": 7,
+    "old": "DOWNSTREAM METRIC",
+    "new": "调度指标"
+  },
+  {
+    "slide": 7,
+    "old": "“这次预测让调度损失了多少？”",
+    "new": "相对 Oracle 的实际峰值差"
+  },
+  {
+    "slide": 7,
+    "old": "预测 → 电池优化 → 实际负荷，\n再与不可部署 Oracle 的最优决策结果比较。",
+    "new": "预测生成电池计划，用实际负荷评价峰值。\nOracle 知道未来负荷，仅作事后参照。"
+  },
+  {
+    "slide": 7,
+    "old": "不同终点",
+    "new": "双层评价"
+  },
+  {
+    "slide": 9,
+    "old": "NO TEST-TIME TUNING",
+    "new": "验证后固定权重"
+  },
+  {
+    "slide": 10,
+    "old": "冻结 DayWeek + LightGBM，使用已冻结 wᵦ",
+    "new": "DayWeek + LightGBM，采用验证集确定的 wᵦ"
+  },
+  {
+    "slide": 10,
+    "old": "工程价值：把 AI 预测、储能约束、决策评价连成一条可审计链。",
+    "new": "已实现负荷预测、约束调度和实际峰值评价的仿真流程。"
+  },
+  {
+    "slide": 12,
+    "old": "Validation 对齐选择",
+    "new": "验证集选择权重"
+  },
+  {
+    "slide": 12,
+    "old": "按储能 regret 冻结 wᵦ",
+    "new": "按决策后悔值确定 wᵦ"
+  },
+  {
+    "slide": 12,
+    "old": "Test 只做最终评价",
+    "new": "测试集评价效果"
+  },
+  {
+    "slide": 12,
+    "old": "固定 8 栋 · 全部结果保留",
+    "new": "8 栋建筑分别训练与评价"
+  },
+  {
+    "slide": 12,
+    "old": "预测模型不仅要“预测得准”，也要验证它是否支持更好的工程决策。",
+    "new": "用验证集调度表现选择负荷预测组合，在本次八建筑实验中取得改善。"
+  },
+  {
+    "slide": 12,
+    "old": "DOEF v1.0 · frozen evidence",
+    "new": "DOEF v1.0 · 八建筑仿真验证"
+  },
+  {
+    "slide": 12,
+    "old": "八栋固定办公建筑 · 单一未来 Test 月 · 24 h horizon · 无成本/碳/现场部署结论",
+    "new": "8 栋办公建筑 · 单一测试月 · 24 h 超前预测 · 离线仿真"
+  },
+  {
+    "slide": 13,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 13,
+    "old": "冻结建筑顺序",
+    "new": "建筑样本"
+  },
+  {
+    "slide": 14,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 14,
+    "old": "TEST ≠ pristine blind set",
+    "new": "历史测试期已被查看"
+  },
+  {
+    "slide": 15,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 16,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 17,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 18,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 18,
+    "old": "为什么不能只看一个平均数？",
+    "new": "均值与中位数的差异"
+  },
+  {
+    "slide": 18,
+    "old": "极端负例会强烈拖动 mean；因此报告必须同时给出 method / building / split / aggregation。",
+    "new": "极端负值拉低平均削峰率，需结合中位数和最小值判断调度表现。"
+  },
+  {
+    "slide": 19,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 19,
+    "old": "BACKUP ONLY",
+    "new": "案例说明"
+  },
+  {
+    "slide": 19,
+    "old": "• 预冻结 Test case",
+    "new": "• 预先确定的测试案例"
+  },
+  {
+    "slide": 19,
+    "old": "• 不代表普遍表现",
+    "new": "• 用于说明调度机制"
+  },
+  {
+    "slide": 19,
+    "old": "• 不做 case reselection",
+    "new": "• 展示预测与实际负荷"
+  },
+  {
+    "slide": 19,
+    "old": "• 不提取新数值",
+    "new": "• 关注高负荷时段的偏差"
+  },
+  {
+    "slide": 19,
+    "old": "• 不改变坐标/标签",
+    "new": "• 总体表现见全样本结果"
+  },
+  {
+    "slide": 20,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 21,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 22,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 22,
+    "old": "frozen Phase 8\nensemble_prediction",
+    "new": "保存的融合预测\nensemble_prediction"
+  },
+  {
+    "slide": 22,
+    "old": "IDENTITY AUDIT",
+    "new": "逐点一致性检查"
+  },
+  {
+    "slide": 22,
+    "old": "frozen predictions checked",
+    "new": "个预测值参与比对"
+  },
+  {
+    "slide": 22,
+    "old": "audited definition = frozen prediction artifact\nwithin tolerance 1e−12",
+    "new": "公式复算与保存的预测一致\n容差 1e−12"
+  },
+  {
+    "slide": 23,
+    "old": "Q&A ONLY",
+    "new": "答疑"
+  },
+  {
+    "slide": 23,
+    "old": "预先按 Validation 规则选出，随后进入 Test；没有因为 Test 结果差而换 λ。",
+    "new": "λ 由验证集选择；测试期保持不变。"
+  },
+  {
+    "slide": 23,
+    "old": "结论：robust optimization 没有改善 Test，\n因此不进入 DOEF，不做 Test 后反向修正。",
+    "new": "该稳健方案的测试后悔值高于确定性对照，\n最终 DOEF 未采用这一方案。"
+  },
+  {
+    "slide": 23,
+    "old": "NEGATIVE RESULT RETAINED",
+    "new": "稳健调度失效案例"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "changed_textboxes": 171,
+  "slide_count": 23,
+  "package_findings": 0,
+  "layout_findings": 0,
+  "layout_warnings": 0,
+  "source_native_table_count": 0,
+  "table_implementation": "Original editable textboxes and shapes retained",
+  "first_party_import": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 23,
+    "sha256": "9c8e01bbb1a8bddb850d161b97c5d8ee31d0be59ee59e4c1428817b8460b0445",
+    "runtimeNodeModules": "C:/Users/m/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "nodeExecutable": "C:\\Users\\m\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+  },
+  "sha256": "9c8e01bbb1a8bddb850d161b97c5d8ee31d0be59ee59e4c1428817b8460b0445"
+}

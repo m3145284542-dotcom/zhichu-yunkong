@@ -1,0 +1,77 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex.fmt)
+entering extended mode
+(technical_report_layout.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(D:\software\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(D:\software\MiKTeX\tex/latex/base\size12.clo))
+(D:\software\MiKTeX\tex/latex/fontspec\fontspec.sty
+(D:\software\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+(D:\software\MiKTeX\tex/latex/l3kernel\expl3.sty
+(D:\software\MiKTeX\tex/latex/l3backend\l3backend-xetex.def)))
+(D:\software\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
+(D:\software\MiKTeX\tex/latex/base\fontenc.sty)
+(D:\software\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+(D:\software\MiKTeX\tex/xelatex/xecjk\xeCJK.sty
+(D:\software\MiKTeX\tex/latex/ctex\ctexhook.sty)
+(D:\software\MiKTeX\tex/latex/l3packages/xtemplate\xtemplate.sty)
+(D:\software\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg))
+(D:\software\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(D:\software\MiKTeX\tex/latex/amsmath\amstext.sty
+(D:\software\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(D:\software\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(D:\software\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(D:\software\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(D:\software\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+(D:\software\MiKTeX\tex/latex/graphics\graphicx.sty
+(D:\software\MiKTeX\tex/latex/graphics\keyval.sty)
+(D:\software\MiKTeX\tex/latex/graphics\graphics.sty
+(D:\software\MiKTeX\tex/latex/graphics\trig.sty)
+(D:\software\MiKTeX\tex/latex/graphics-cfg\graphics.cfg)
+(D:\software\MiKTeX\tex/latex/graphics-def\xetex.def)))
+(D:\software\MiKTeX\tex/latex/geometry\geometry.sty
+(D:\software\MiKTeX\tex/generic/iftex\ifvtex.sty
+(D:\software\MiKTeX\tex/generic/iftex\iftex.sty))
+(D:\software\MiKTeX\tex/latex/geometry\geometry.cfg))
+(D:\software\MiKTeX\tex/latex/tools\tabularx.sty
+(D:\software\MiKTeX\tex/latex/tools\array.sty))
+(D:\software\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(D:\software\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(D:\software\MiKTeX\tex/latex/titlesec\titlesec.sty)
+(D:\software\MiKTeX\tex/latex/needspace\needspace.sty)
+(D:\software\MiKTeX\tex/latex/xurl\xurl.sty
+(D:\software\MiKTeX\tex/latex/url\url.sty))
+(D:\software\MiKTeX\tex/latex/hyperref\hyperref.sty
+(D:\software\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty)
+(D:\software\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty)
+(D:\software\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+(D:\software\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(D:\software\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+(D:\software\MiKTeX\tex/generic/infwarerr\infwarerr.sty)))
+(D:\software\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(D:\software\MiKTeX\tex/latex/hyperref\nameref.sty
+(D:\software\MiKTeX\tex/latex/refcount\refcount.sty)
+(D:\software\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+(D:\software\MiKTeX\tex/latex/kvoptions\kvoptions.sty)))
+(D:\software\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(D:\software\MiKTeX\tex/generic/stringenc\stringenc.sty)
+(D:\software\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(D:\software\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(D:\software\MiKTeX\tex/latex/hyperref\puenc.def)
+(D:\software\MiKTeX\tex/generic/bitset\bitset.sty
+(D:\software\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty)))
+(D:\software\MiKTeX\tex/latex/hyperref\hxetex.def
+(D:\software\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+(D:\software\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty)))
+(technical_report_layout.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(technical_report_layout.out) (technical_report_layout.out)
+(D:\software\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(D:\software\MiKTeX\tex/latex/amsfonts\umsb.fd) [1] [2]
+(technical_report_layout.toc) [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+[13] [14] [15] (technical_report_layout.aux) )
+Output written on technical_report_layout.pdf (15 pages).
+Transcript written on technical_report_layout.log.

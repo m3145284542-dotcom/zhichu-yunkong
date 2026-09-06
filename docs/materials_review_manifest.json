@@ -1,85 +1,31 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "canonical",
-  "role": "repository navigation and report/presentation companion; not a competition submission approval",
-  "producer": "documentation usability review",
+  "role": "current competition-material navigation",
+  "producer": "competition editorial release",
   "created_date": "2026-09-06",
-  "base_commit": "e0abda4be41da3d28bb8cbcf37d7edff1dc316fc",
-  "acceptance_reason": "Local links and displayed key metrics checked; existing report and presentation validators PASS; scientific artifacts and binary deliverables unchanged.",
-  "hash_policy": "Markdown SHA-256 after CRLF-to-LF normalization; other files raw SHA-256",
-  "sources": [
-    {
-      "path": "reports/phase13_5/technical_report_final.md",
-      "sha256": "9bf8dfa229202aa4719537136a5cf74c80f11f300fe087528d626adf159754bf"
-    },
-    {
-      "path": "reports/phase13_6/technical_report_submission.pdf",
-      "sha256": "73b1bea85272c26bae51b77308a9820fe47c8ccccb6453becdc90da6d28d6abb"
-    },
-    {
-      "path": "reports/phase13_6/manifest.json",
-      "sha256": "25a2d8ecdbe61eaf6df21d11e03c46e538bf9f06d8482c405687b2e18f330344"
-    },
-    {
-      "path": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx",
-      "sha256": "a1e6bd19307acfad6d51b87f52f94032737664142b64ef2a66fe1127a25f315e"
-    },
-    {
-      "path": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pdf",
-      "sha256": "f30955a26ee5418314e7f6c9cd1658753d1e66f519296bec1e7359b96ebd3834"
-    },
-    {
-      "path": "outputs/phase9/final_benchmark.csv",
-      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
-    },
-    {
-      "path": "outputs/phase9_1/final_reporting_summary.json",
-      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
-    },
-    {
-      "path": "outputs/phase8/run_config.json",
-      "sha256": "b4f7b7011df0e2a845dc75ccd8c4fbb716fdaf098794fd8b1861711064c4ad78"
-    },
-    {
-      "path": "reports/phase13_6/qa/heading_mapping.json",
-      "sha256": "f4baa260a1021c7b1b1a1aedaa9cb7828073039d7d567c5a832cff00a97a7a4f"
-    }
-  ],
-  "artifacts": [
+  "current_manifest": "reports/submission/manifest.json",
+  "current_manifest_sha256": "f42fd0471b9103a762176761053e858a1228739c4d27cf2247da9a555c3a52ae",
+  "current_artifacts": {
+    "report": "reports/submission/technical_report_submission.pdf",
+    "presentation": "outputs/submission/DOEF_Competition_Presentation.pptx",
+    "presentation_pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
+  },
+  "companion_artifacts": [
     {
       "path": "README.md",
-      "status": "canonical",
-      "role": "current repository entry",
-      "sha256": "7e47a3482d7a01043853f6591066055aeddae63fcc2089ff770ea84e1a5edfe6"
+      "sha256": "ac61cd4cdd2157bfa23ad47aa7e9e0192a16b89389b2aebca70964e5977932c0"
     },
     {
       "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
-      "status": "canonical",
-      "role": "report reading and defense rehearsal companion",
-      "sha256": "64a1bb969cb6fe684c179f795d57ec387c0110b014f1da09a35a51d4ee78693d"
-    },
-    {
-      "path": "docs/DEVELOPMENT_HISTORY.md",
-      "status": "historical",
-      "role": "preserved stage narrative formerly in README",
-      "sha256": "914d7c812700d5ba7b218ad6574097e5dadc5f62e48344061ac52b11fbbd9947"
+      "sha256": "461e39fbcc8c5d1348f27cfa6cb61b8f22982293921296f65c6fd8c37315f624"
     }
   ],
-  "validation": {
-    "presentation_package_and_pdf": "PASS; 23 slides, 23 notes, 23 PDF pages",
-    "technical_report": "PASS; 15 pages, 209 text segments, 69 numeric tokens, 11 display equations, 21 inline equations, 76 frozen scientific files",
-    "local_document_links": "PASS; 30 links",
-    "displayed_improvement_and_bootstrap_values": "PASS; compared to Phase 9.1 summary",
-    "visual_review": "Report rendered contact sheet and existing presentation contact sheet reviewed for navigation/layout; no binary reauthoring",
-    "model_experiments_rerun": false
+  "previous_navigation": {
+    "status": "superseded",
+    "commit": "7cce39d",
+    "report": "reports/phase13_6/technical_report_submission.pdf",
+    "presentation": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx"
   },
-  "historical_records": [
-    "reports/phase14_submission_readiness_audit.md",
-    "reports/phase14_submission_manifest.md"
-  ],
-  "unchanged_deliverables": [
-    "reports/phase13_6/technical_report_submission.pdf",
-    "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx",
-    "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pdf"
-  ]
+  "history": "Original scientific and phase-specific records remain unchanged."
 }

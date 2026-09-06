@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "role": "current competition-facing report and defense materials",
+  "producer": "editorial revision using existing scientific results",
+  "created_date": "2026-09-06",
+  "base_commit": "7cce39d",
+  "hash_policy": "SHA-256; CRLF normalized to LF for text sources, raw bytes for PDF/PPTX/PNG",
+  "canonical_paths": {
+    "report": "reports/submission/technical_report_submission.pdf",
+    "presentation": "outputs/submission/DOEF_Competition_Presentation.pptx",
+    "presentation_pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
+  },
+  "scientific_changes": 0,
+  "editorial_report_replacements": 36,
+  "edited_presentation_textboxes": 171,
+  "layout_changes": [
+    "Move cover description below decorative bars to remove overlap."
+  ],
+  "sources": [
+    {
+      "path": "reports/phase13_5/technical_report_final.md",
+      "status": "historical_source",
+      "sha256": "9bf8dfa229202aa4719537136a5cf74c80f11f300fe087528d626adf159754bf"
+    },
+    {
+      "path": "reports/phase13_6/technical_report_submission.pdf",
+      "status": "historical_source",
+      "sha256": "73b1bea85272c26bae51b77308a9820fe47c8ccccb6453becdc90da6d28d6abb"
+    },
+    {
+      "path": "reports/phase13_6/assets/figure_04_layout.png",
+      "status": "historical_source",
+      "sha256": "8cd4557763a98de7d2a27e2e15171b96c0cbd4e2b1ec40b6530efe180a9aba87"
+    },
+    {
+      "path": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx",
+      "status": "historical_source",
+      "sha256": "a1e6bd19307acfad6d51b87f52f94032737664142b64ef2a66fe1127a25f315e"
+    },
+    {
+      "path": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pdf",
+      "status": "historical_source",
+      "sha256": "f30955a26ee5418314e7f6c9cd1658753d1e66f519296bec1e7359b96ebd3834"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "status": "frozen_scientific_source",
+      "sha256": "a43ecd09e1e740c53561ef56547d502224a6c199de33c7248000d04bba73e2b6"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "status": "frozen_scientific_source",
+      "sha256": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1"
+    },
+    {
+      "path": "outputs/phase9_1/artifact_hash_audit.json",
+      "status": "frozen_scientific_source",
+      "sha256": "727a42852f641969d6fe8d5d13392919e8af531a36ef6d7d50d01ea2155f6cd8"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "status": "frozen_scientific_source",
+      "sha256": "060c505f57d4fae131f7665d6f9e2037a39d542e380939db29dc867ed5c5cbe7"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "status": "canonical",
+      "sha256": "ac61cd4cdd2157bfa23ad47aa7e9e0192a16b89389b2aebca70964e5977932c0",
+      "bytes": 6442
+    },
+    {
+      "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
+      "status": "canonical",
+      "sha256": "461e39fbcc8c5d1348f27cfa6cb61b8f22982293921296f65c6fd8c37315f624",
+      "bytes": 7977
+    },
+    {
+      "path": "reports/submission/technical_report.md",
+      "status": "canonical",
+      "sha256": "2fbbc55edde598697a53fa818e985e4e03a1a6577879fc0b21d30fe1f3a089d7",
+      "bytes": 26399
+    },
+    {
+      "path": "reports/submission/technical_report_layout.tex",
+      "status": "canonical",
+      "sha256": "ffd2e0ac8f1891240b85d885040400dba7d86122a2381a1d07fa8c176d275a57",
+      "bytes": 31549
+    },
+    {
+      "path": "reports/submission/technical_report_submission.pdf",
+      "status": "canonical",
+      "sha256": "9b9c5bd1198189e9b8e90ad2e4e6a41fa0560c785074a4769a2f2d6798f6d16e",
+      "bytes": 1094022
+    },
+    {
+      "path": "reports/submission/build_pdf.py",
+      "status": "canonical",
+      "sha256": "df364b1539d3697673c93f00e499f4e48a4bacb1cb1cadbb4e2c8ab58035e3b2",
+      "bytes": 8070
+    },
+    {
+      "path": "reports/submission/build_presentation.mjs",
+      "status": "canonical",
+      "sha256": "b879b60ffba14d59c9d46740acbd3dd701350bc728ce02e5a6718e0421653d72",
+      "bytes": 4092
+    },
+    {
+      "path": "reports/submission/export_presentation.ps1",
+      "status": "canonical",
+      "sha256": "f75fd5e180952fb455adfb864b2e5e9c3750b5749ec7c785e49fb88792552772",
+      "bytes": 955
+    },
+    {
+      "path": "reports/submission/validate_submission.py",
+      "status": "canonical",
+      "sha256": "685af8cb0c9c9685000527efe72899060732affe6ac382fe2e550054cd53223c",
+      "bytes": 9571
+    },
+    {
+      "path": "reports/submission/BUILD.md",
+      "status": "canonical",
+      "sha256": "a666aa9f3a1a1f7a8c092c0841ba1245baa65d8383402a855da25b8b4032b8c4",
+      "bytes": 2676
+    },
+    {
+      "path": "reports/submission/editorial_changes.json",
+      "status": "canonical",
+      "sha256": "7b51ede2baf5f3b3ecd7d6d9a6a32e07d67bdf799c31d33f84841424b31cc239",
+      "bytes": 7455
+    },
+    {
+      "path": "reports/submission/presentation_changes.json",
+      "status": "canonical",
+      "sha256": "2dfac09d425df3724bb71b9978a18d860a5dab7a48b74db2ef7a31bbd10132bc",
+      "bytes": 24683
+    },
+    {
+      "path": "reports/submission/qa/heading_mapping.json",
+      "status": "canonical",
+      "sha256": "9823ec992f264af37384574cc04b47aa3a8a861a5cd5ca5c3e25a94e3125bab7",
+      "bytes": 3789
+    },
+    {
+      "path": "reports/submission/qa/official_logo.png",
+      "status": "canonical",
+      "sha256": "fdbade8597e13180b41884761f965c796eaf8cba92d261780df9518ca7ba0f02",
+      "bytes": 10681
+    },
+    {
+      "path": "reports/submission/qa/compile_console.txt",
+      "status": "canonical",
+      "sha256": "9e0b3a2afc83af9bb4b1c23ed3c71cdcac3c04c202374a385f48c56cafbff817",
+      "bytes": 4099
+    },
+    {
+      "path": "reports/submission/qa/presentation_package.json",
+      "status": "canonical",
+      "sha256": "13e3e247a65120228eab7043dfd8d6e86db7d270df3f493e0f778ac45b93f00a",
+      "bytes": 748
+    },
+    {
+      "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
+      "status": "canonical",
+      "sha256": "9c8e01bbb1a8bddb850d161b97c5d8ee31d0be59ee59e4c1428817b8460b0445",
+      "bytes": 1883823
+    },
+    {
+      "path": "outputs/submission/DOEF_Competition_Presentation.pdf",
+      "status": "canonical",
+      "sha256": "bf802a97270ee1a271b5d440f204fabc3281d9efe798b946ae97dbd6aee9b47a",
+      "bytes": 1896451
+    },
+    {
+      "path": "reports/submission/qa/visual_review.json",
+      "status": "canonical",
+      "sha256": "7c8c43c48700df21f994cd57639d2844e6d7418339d800e04a32083a9a4c4882",
+      "bytes": 1617
+    },
+    {
+      "path": "reports/submission/.gitignore",
+      "status": "canonical",
+      "sha256": "a3f83d288f9769ed6ea0a8b81116916a25337859c575c75f7901145ced9bd710",
+      "bytes": 50
+    }
+  ],
+  "supersedes_for_current_navigation": {
+    "reports/phase13_6/technical_report_submission.pdf": "reports/submission/technical_report_submission.pdf",
+    "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx": "outputs/submission/DOEF_Competition_Presentation.pptx",
+    "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
+  },
+  "validation_record": "reports/submission/qa/validation.json",
+  "acceptance_reason": "Automated content and integrity checks passed; all 15 report pages and 23 PowerPoint slide renders reviewed; original numerical evidence, equations, tables, image bytes and speaker-note prose preserved.",
+  "history_policy": "Prior phase files remain unchanged for reproduction; current README and companion resolve to this release."
+}
