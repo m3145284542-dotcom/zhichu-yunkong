@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>智储云控 · DOEF 演示控制台</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<aside><a class="brand" href="/">▥ <span>智储云控<small>ENERGY INTELLIGENCE</small></span></a><div class="nav-label">演示工作台</div><nav aria-label="演示章节"><button data-page="0" class="active">◈ <span>运行总览</span><em>01</em></button><button data-page="1">⌁ <span>决策导向预测</span><em>02</em></button><button data-page="2">▤ <span>储能调度</span><em>03</em></button><button data-page="3">▥ <span>实验评估</span><em>04</em></button></nav><div class="side-bottom"><span class="dot"></span> 冻结实验 · 可追溯证据<p>DOEF v1.0<br>电协 · AI + 能源科技创新</p></div></aside>
+<main><header><div><span class="eyebrow">DOEF / DEMONSTRATION</span><h1 id="title">运行总览</h1></div><div class="actions"><button id="fullscreen">⛶ 全屏</button><button id="play">▶ 章节演示</button><button id="tour" class="primary">▶ 八建筑巡演</button></div></header>
+<div class="context"><span>BDG2 办公建筑 / 固定测试集</span><label>当前建筑 <select id="building" aria-label="当前建筑"></select></label></div>
+<section id="tour-panel" hidden aria-label="八建筑自动巡演"><div class="tour-top"><div><span class="eyebrow">BUILDING TOUR</span><strong id="tour-status">准备巡演</strong></div><div class="tour-actions"><button id="tour-pause">Ⅱ 暂停</button><button id="tour-next">下一栋 →</button><button id="tour-exit">退出巡演</button></div></div><div id="tour-buildings"></div><div class="tour-track"><div id="tour-progress"></div></div><p class="hint">每栋 4 秒 · 曲线下方同步运行总览 · 8 栋后进入综合结果 · 全程约 32 秒</p></section>
+<section id="content" aria-live="polite"><p>正在载入冻结实验数据…</p></section>
+<footer><div><span class="eyebrow" id="step">01 / 04</span><p id="narration"></p></div><div class="controls"><button id="prev" aria-label="上一章节">←</button><button id="next" aria-label="下一章节">→</button></div><div id="progress"></div></footer>
+<div class="disclaimer">研究边界：8 栋建筑 · 离线评估 · 非现场控制；削峰不等于节电、降费或碳减排。</div></main>
+<script src="/app.js"></script></body></html>

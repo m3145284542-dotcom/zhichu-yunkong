@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "role": "portable presentation only; does not replace scientific sources",
+  "producer": "gui/export_demo.py",
+  "created_at": "2026-09-07T09:58:33.189466+00:00",
+  "acceptance": "30 daily records per building/method reconciled to final peaks and regret; all assets inlined",
+  "artifact": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
+  "sha256": "e63c1cd113a277ed1a7c32001d0a4eda973d92aca02912c4e5b79e8ae34b5f4b",
+  "hash_normalization": "UTF-8 text with LF line endings",
+  "sources": [
+    {
+      "path": "outputs/phase9/final_algorithm.json",
+      "sha256": "56bf263a73c00e01324c11ae36e67058f7bd897a9be3e720102e8720bf741b87"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "a43ecd09e1e740c53561ef56547d502224a6c199de33c7248000d04bba73e2b6"
+    },
+    {
+      "path": "outputs/phase9/per_building_metrics.csv",
+      "sha256": "d08e3f1b517e9aa8ea556fc14b286864ca264408987618b89a9cb40336f52883"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "060c505f57d4fae131f7665d6f9e2037a39d542e380939db29dc867ed5c5cbe7"
+    },
+    {
+      "path": "outputs/phase8/validation_weight_search.csv",
+      "sha256": "e686bda19aa2fb3b25b057f180e73577fd444bf0c68e3d371fccd2fe600a7e88"
+    },
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "f8cb4ee4f7577a59eb400ed781311f17e4be7c84264d2e23c58ea4e299b82879"
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "sha256": "e5fdebd8e389d284aa52bed4d070de6403072dc80e2a829b33ada28205e0d7e2"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "gui/index.html",
+      "sha256": "0a1f72ef60e5f599eeaadada61b20eb25954661a796df9acf9db39bf947e87c3"
+    },
+    {
+      "path": "gui/app.js",
+      "sha256": "19c6b29196b59085dcb77fef8157896a76b0c3b274957be7f95729fc0069d24e"
+    },
+    {
+      "path": "gui/style.css",
+      "sha256": "e4fa13e0faa35aa91f53604c8d8668197a558492a3053a8c89aa74f1ba21cbba"
+    },
+    {
+      "path": "gui/server.py",
+      "sha256": "474147d91aaf259fd28b7813101942db7d92fce9a631cfadb0f099093983e964"
+    },
+    {
+      "path": "gui/export_demo.py",
+      "sha256": "328b23f8058f74bb7a26381643f5cc0e185580fd653673c125354d12c7e5b733"
+    }
+  ]
+}
