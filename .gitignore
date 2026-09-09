@@ -24,3 +24,8 @@ Thumbs.db
 data/raw/*
 !data/raw/.gitkeep
 
+# Local recording intermediates and generated submission bundles.
+tmp/
+.audit-lo/
+outputs/competition_delivery/
+

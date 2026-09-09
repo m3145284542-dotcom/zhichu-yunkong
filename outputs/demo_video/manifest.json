@@ -1,0 +1,64 @@
+{
+  "status": "canonical",
+  "role": "competition demonstration video",
+  "created_at": "2026-09-09T01:28:47.918904+00:00",
+  "producer": "scripts/build_demo_video.py",
+  "artifact": "outputs/demo_video/DOEF_Demo_Narrated.mp4",
+  "sha256": "b411ad95568aae8193b19be7a04af475bdc367d2a00f862439dfa45aed543655",
+  "bytes": 10306629,
+  "planned_duration_seconds": 273,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "voice_type": "neural synthesized Chinese narration",
+  "sources": [
+    {
+      "path": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
+      "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833"
+    },
+    {
+      "path": "outputs/gui_demo/manifest.json",
+      "sha256": "8c86411d3ca9c3121237c2f970106ad526817615256622d226414377359a1f61"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "a43ecd09e1e740c53561ef56547d502224a6c199de33c7248000d04bba73e2b6"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1"
+    },
+    {
+      "path": "scripts/build_demo_video.py",
+      "sha256": "6408177891563cfa4779e0fcbf58a1dfa005b4550831ef2de9ad335cc9545ea5"
+    }
+  ],
+  "schema_version": 1,
+  "acceptance": "273.02 seconds; 1080p H.264/AAC MP4; under 300 MB; all streams decode; actual GUI capture; original-speed neural narration; subtitle and chapter visual review passed.",
+  "validation": "outputs/demo_video/validation.json",
+  "supporting_artifacts": [
+    {
+      "path": "outputs/demo_video/DOEF_Demo_Narrated.srt",
+      "sha256": "0c5f1a01c65e2d0adcfd81778fe17b9566998795e92df9f6581043b76abeace6",
+      "hash_normalization": "CRLF to LF"
+    },
+    {
+      "path": "outputs/demo_video/narration.md",
+      "sha256": "4d3dad3b847611b424b1da3ee52b07b8cda5c66fe1bc7db5da551de572a2fe1f",
+      "hash_normalization": "CRLF to LF"
+    },
+    {
+      "path": "outputs/demo_video/validation.json",
+      "sha256": "2b3d8422920f276803cad8c659828f1eac7125abb0dc6174b0f07829fcbe967c",
+      "hash_normalization": "CRLF to LF"
+    },
+    {
+      "path": "outputs/demo_video/contact_sheet.jpg",
+      "sha256": "8b3ca6a613f308d896b57c1529540844bc2ce6aee7732496a57e10084dbf40bc"
+    },
+    {
+      "path": "outputs/demo_video/README.md",
+      "sha256": "5d6f72ed8565f1aa04bb566e84f5e8c4b53b66584b00609a2ed18b38547f97fd",
+      "hash_normalization": "CRLF to LF"
+    }
+  ],
+  "source_hash_normalization": "CRLF to LF; MP4 identity uses raw bytes"
+}

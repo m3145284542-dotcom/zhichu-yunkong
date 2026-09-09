@@ -60,5 +60,6 @@ class GuiEvidenceTests(unittest.TestCase):
         self.assertNotIn(b'<link rel="stylesheet"', html)
 
 
+
 if __name__ == '__main__':
     unittest.main()

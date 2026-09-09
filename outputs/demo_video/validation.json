@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "duration_seconds": 273.02,
+  "bytes": 10306629,
+  "checks": {
+    "mp4_container": true,
+    "duration_180_to_300_seconds": true,
+    "size_under_300_MB": true,
+    "full_hd": true,
+    "h264_video": true,
+    "aac_audio": true,
+    "all_streams_decode": true,
+    "audible_audio": true,
+    "source_hashes_unchanged": true,
+    "artifact_identity": true
+  },
+  "audio_level": [
+    "mean_volume: -19.6 dB",
+    "max_volume: -1.5 dB"
+  ],
+  "decode_errors": "",
+  "visual_review_frames_seconds": [
+    8,
+    26,
+    52,
+    80,
+    109,
+    143,
+    160,
+    175,
+    207,
+    238,
+    260
+  ],
+  "note": "Complete stream decode plus representative-frame visual review; neural voice retained at original speed.",
+  "visual_review": "PASS: representative frames across all chapters inspected; subtitles readable and separated from GUI; actual building tour and result table visible."
+}

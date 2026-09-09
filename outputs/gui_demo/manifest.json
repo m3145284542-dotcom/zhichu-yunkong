@@ -3,10 +3,10 @@
   "status": "canonical",
   "role": "portable presentation only; does not replace scientific sources",
   "producer": "gui/export_demo.py",
-  "created_at": "2026-09-07T09:58:33.189466+00:00",
+  "created_at": "2026-09-08T11:59:03.359806+00:00",
   "acceptance": "30 daily records per building/method reconciled to final peaks and regret; all assets inlined",
   "artifact": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
-  "sha256": "e63c1cd113a277ed1a7c32001d0a4eda973d92aca02912c4e5b79e8ae34b5f4b",
+  "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833",
   "hash_normalization": "UTF-8 text with LF line endings",
   "sources": [
     {
@@ -45,15 +45,15 @@
   "implementation": [
     {
       "path": "gui/index.html",
-      "sha256": "0a1f72ef60e5f599eeaadada61b20eb25954661a796df9acf9db39bf947e87c3"
+      "sha256": "67c040025ab1eb84b28d73b11e42a75a057b5d7c526d7e988b46313728b39888"
     },
     {
       "path": "gui/app.js",
-      "sha256": "19c6b29196b59085dcb77fef8157896a76b0c3b274957be7f95729fc0069d24e"
+      "sha256": "c970b74bbb3fe33ca25ae54760e7852282037378a0926c3a256366f7891bd455"
     },
     {
       "path": "gui/style.css",
-      "sha256": "e4fa13e0faa35aa91f53604c8d8668197a558492a3053a8c89aa74f1ba21cbba"
+      "sha256": "636b7b2bbe97bf32984fd366fc330c91e78568c22bec39c957970bccc748d5ea"
     },
     {
       "path": "gui/server.py",

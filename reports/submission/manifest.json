@@ -9,7 +9,8 @@
   "canonical_paths": {
     "report": "reports/submission/technical_report_submission.pdf",
     "presentation": "outputs/submission/DOEF_Competition_Presentation.pptx",
-    "presentation_pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
+    "presentation_pdf": "outputs/submission/DOEF_Competition_Presentation.pdf",
+    "demo_video": "outputs/demo_video/DOEF_Demo_Narrated.mp4"
   },
   "scientific_changes": 0,
   "editorial_report_replacements": 36,
@@ -68,8 +69,8 @@
     {
       "path": "README.md",
       "status": "canonical",
-      "sha256": "ac61cd4cdd2157bfa23ad47aa7e9e0192a16b89389b2aebca70964e5977932c0",
-      "bytes": 6442
+      "sha256": "8b2b5fbf546808efddc861a5062fae69074d13c160d00ff546ed30528dfe7f71",
+      "bytes": 7497
     },
     {
       "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
@@ -193,5 +194,7 @@
   },
   "validation_record": "reports/submission/qa/validation.json",
   "acceptance_reason": "Automated content and integrity checks passed; all 15 report pages and 23 PowerPoint slide renders reviewed; original numerical evidence, equations, tables, image bytes and speaker-note prose preserved.",
-  "history_policy": "Prior phase files remain unchanged for reproduction; current README and companion resolve to this release."
+  "history_policy": "Prior phase files remain unchanged for reproduction; current README and companion resolve to this release.",
+  "packaging_note": "2026-09-09: add validated narrated MP4 and synchronize README navigation; older packages without video remain historical; scientific artifacts unchanged.",
+  "demo_video_manifest": "outputs/demo_video/manifest.json"
 }

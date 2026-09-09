@@ -12,6 +12,8 @@ DOEF 融合 DayWeek 周期基线与 LightGBM，在验证集上按储能调度表
 
 ## 参赛成果
 
+按报名系统栏目整理材料及补齐要求见[提交清单](docs/SUBMISSION_CHECKLIST.md)。[中文配音演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)已生成，约4分33秒，1080p，附同步字幕。本地整理包由 `python scripts/package_competition_submission.py --team-id 实际团队编号` 生成；当前仍需实际团队编号及百度网盘分享链接。已有“待补视频”旧包是历史整理版本，新打包会纳入已验收视频。
+
 [技术报告](reports/submission/technical_report_submission.pdf) · [答辩 PPT](outputs/submission/DOEF_Competition_Presentation.pptx) · [演示 PDF](outputs/submission/DOEF_Competition_Presentation.pdf) · [答辩讲稿与资料索引](docs/REPORT_AND_DEFENSE_GUIDE.md)
 
 作品包含 DOEF 算法实现、多建筑对比实验、储能调度程序、技术报告和答辩材料。PPT 共 23 页，其中第 1 至 12 页为主讲，第 13 至 23 页为补充实验与方法说明。报告的[Markdown 正文](reports/submission/technical_report.md)与 PDF 同步维护。
@@ -47,7 +49,7 @@ DOEF 在 6 栋建筑上的决策后悔值低于 LightGBM，另 2 栋持平。建
 
 ## 视频演示 GUI
 
-运行 `python gui/server.py` 后，在浏览器打开 http://127.0.0.1:8765 。顶部展示当前建筑状态，下方展示八建筑平均效果。支持30天调度前后动态曲线、日期拖动、回放倍速、算法指标动画对比、全屏、32秒八建筑快速巡演（曲线下方同步运行总览，最后综合汇总）与80秒章节演示。[单文件便携版](outputs/gui_demo/DOEF_Dynamic_Demo.html) 可复制到其他电脑离线播放，也支持局域网访问。所有指标来自冻结实验，不重新训练或下发控制指令。详见 [GUI 使用说明](gui/README.md)。
+运行 `python gui/server.py` 后，在浏览器打开 http://127.0.0.1:8765 。界面仅保留「八建筑巡演 → 综合结果」：一键约32秒自动播放八栋建筑，每栋曲线下方显示运行总览和电池配置，结束后停在综合汇总。[单文件便携版](outputs/gui_demo/DOEF_Dynamic_Demo.html) 可复制到其他电脑离线播放，也支持局域网访问。数据来自冻结实验，不重新训练或下发控制指令。详见 [GUI 使用说明](gui/README.md)。
 
 ## 环境与快速验证
 

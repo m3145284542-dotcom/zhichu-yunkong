@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 const nodes = new Map();
 const node = id => {
-  if (!nodes.has(id)) nodes.set(id, {textContent:'',innerHTML:'',value:'',style:{},hidden:true});
+  if (!nodes.has(id)) nodes.set(id, {textContent:'',innerHTML:'',value:'',style:{},hidden:true,currentTime:0,playing:false,play(){this.playing=true;return Promise.resolve();},pause(){this.playing=false;},setAttribute(){}});
   return nodes.get(id);
 };
 let clock=1000, serial=0;
