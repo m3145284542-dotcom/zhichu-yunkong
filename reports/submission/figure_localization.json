@@ -1,5 +1,5 @@
 {
-  "status": "candidate",
+  "status": "canonical",
   "producer": "reports/submission/localize_figures.py",
   "scope": "Chinese figure labels; original data and curve pixels retained",
   "media": {
@@ -13,7 +13,7 @@
     },
     "ppt/media/image3.png": {
       "path": "reports/submission/figures_cn/architecture/doef_architecture_master.png",
-      "sha256": "236d90504f8a5467643ace260a29694cf3eb35935eb7bc4c06d8566f55c5adfe"
+      "sha256": "0885e6418b27ffb1d3210a4ff24a097969e88d602fb3680a4e69d5e98fa8c81b"
     },
     "ppt/media/image4.png": {
       "path": "outputs/phase13_5/figures_cn/sci_02_doef_main_results_cn.png",
@@ -24,8 +24,8 @@
       "sha256": "2ae2ac5b8f8bf4f3aad829b238f8b9cc1f2a0a072ddb8c8343b66444a6fcb1ba"
     },
     "ppt/media/image6.png": {
-      "path": "outputs/phase13_5/figures_cn/sci_04_validation_weight_selection_cn.png",
-      "sha256": "2b8cd2ea695aa4e6cffae346d7d6f9ed61902a6511e47a915fddb31589e39e3e"
+      "path": "reports/phase13_6/assets/figure_04_layout.png",
+      "sha256": "8cd4557763a98de7d2a27e2e15171b96c0cbd4e2b1ec40b6530efe180a9aba87"
     },
     "ppt/media/image7.png": {
       "path": "reports/submission/figures_cn/presentation_assets/con_02_contribution_overview.png",
@@ -33,26 +33,24 @@
     },
     "ppt/media/image8.png": {
       "path": "reports/submission/figures_cn/architecture/doef_architecture_master.png",
-      "sha256": "236d90504f8a5467643ace260a29694cf3eb35935eb7bc4c06d8566f55c5adfe"
+      "sha256": "0885e6418b27ffb1d3210a4ff24a097969e88d602fb3680a4e69d5e98fa8c81b"
     },
     "ppt/media/image10.png": {
-      "path": "outputs/phase13_5/figures_cn/sci_04_validation_weight_selection_cn.png",
-      "sha256": "2b8cd2ea695aa4e6cffae346d7d6f9ed61902a6511e47a915fddb31589e39e3e"
+      "path": "reports/phase13_6/assets/figure_04_layout.png",
+      "sha256": "8cd4557763a98de7d2a27e2e15171b96c0cbd4e2b1ec40b6530efe180a9aba87"
     },
     "ppt/media/image9.png": {
-      "path": "reports/submission/figures_cn/dispatch_cn.png",
-      "sha256": "129c14615c2e0e746930ffb02faf7e7024901cc088b15ff7ab540252a5bcb0e7"
+      "path": "outputs/phase8/figures/06_representative_dispatch.png",
+      "sha256": "a0bb0ec0cc353021314112ccfa36b9e4f2c74dd18b03905e1f9dd121be1b12ca"
     }
   },
   "extra_texts": {
     "19": [
-      "代表性负荷预测与储能调度曲线",
-      "固定测试案例；保留原始曲线与数值，仅将图题和图例改为中文",
       "代表性测试调度：Hog_office_Joey，2017-12-14",
       "实际负荷",
-      "按决策指标选权重",
-      "按预测指标选权重",
-      "案例用于解释调度机制，不代表普遍性能；沿用预先固定案例，未重新选择。"
+      "决策选权重",
+      "预测选权重"
     ]
-  }
+  },
+  "acceptance_record": "reports/submission/qa/chinese_figures_review.json"
 }

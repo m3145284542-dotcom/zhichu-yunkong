@@ -6,7 +6,7 @@ import fitz
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 SOURCE=HERE/'technical_report.md'
-EXPECTED='ecd2befb2894d9de950eea92577c446f61dbe7d2823278679928f907c3b520fa'
+EXPECTED='f82d550d53cc26a35faa7a7ef87aded5e97ebd8b662fb085b63be5a6e119c60f'
 assert hashlib.sha256(SOURCE.read_bytes().replace(b'\r\n', b'\n')).hexdigest()==EXPECTED
 raw=SOURCE.read_text(encoding='utf-8')
 qa=HERE/'qa'; qa.mkdir(exist_ok=True)
@@ -67,7 +67,8 @@ preamble=r'''\documentclass[12pt,a4paper]{article}
 \noindent 作品名称：{\sffamily\fontsize{20}{26}\selectfont 智能云储}\par\vspace{3mm}
 \noindent {\fontsize{12}{20}\selectfont ——基于决策导向预测融合的\\建筑储能削峰优化系统}\par\vspace{6mm}
 \noindent 赛道组别：科技创新组\par\vspace{6mm}
-\noindent 团队名称：电协
+\noindent 团队名称：电协\par\vspace{6mm}
+\noindent 团队编号：AIC-2026-27833449
 \end{minipage}
 \vfill
 {\fontsize{16}{20}\selectfont 日期：2026 年 9 月 5 日}\vspace{24mm}

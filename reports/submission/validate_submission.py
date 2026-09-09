@@ -100,6 +100,7 @@ check(not re.search(r'Overfull|Missing character|Warning', log.read_text(encodin
       'report has no typesetting warnings')
 
 changes = json.loads(read('reports/submission/presentation_changes.json'))
+localization = json.loads(read('reports/submission/figure_localization.json'))
 old_ppt = ROOT / 'outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx'
 new_ppt = ROOT / 'outputs/submission/DOEF_Competition_Presentation.pptx'
 deck_pdf = fitz.open(ROOT / 'outputs/submission/DOEF_Competition_Presentation.pdf')
@@ -113,11 +114,15 @@ with zipfile.ZipFile(old_ppt) as old, zipfile.ZipFile(new_ppt) as new:
         original_texts = texts_from_slide(old.read(path))
         expected_texts = original_texts[:]
         for c in [c for c in changes if c['slide'] == i]:
-            check(expected_texts.count(c['old']) == 1, f'one PPT source match: slide {i}: {c["old"]}')
+            check(expected_texts.count(c['old']) == c.get('count', 1), f'one PPT source match: slide {i}: {c["old"]}')
             expected_texts = [c['new'] if t == c['old'] else t for t in expected_texts]
+        extras = localization.get('extra_texts', {}).get(str(i), [])
+        expected_texts += extras
         actual = texts_from_slide(new.read(path))
         check(Counter(actual) == Counter(expected_texts), f'PPT slide {i} exact text preservation/rewrite')
         page_text = norm(deck_pdf[i - 1].get_text())
+        for text in extras:
+            check(norm(text) in page_text, f'PDF localized label: slide {i}: {text}')
         # Visible editorial text must survive native PowerPoint PDF export.
         for c in [c for c in changes if c['slide'] == i]:
             check(norm(c['new']) in page_text, f'PDF contains edited text: slide {i}: {c["new"]}')
@@ -127,6 +132,7 @@ with zipfile.ZipFile(old_ppt) as old, zipfile.ZipFile(new_ppt) as new:
     if localization_path.exists():
         localization = json.loads(localization_path.read_text(encoding='utf-8'))
         registered = localization.get('media', {})
+        check(set(registered).issubset(new.namelist()), 'all registered localized media present')
         for name in [n for n in new.namelist() if n.startswith('ppt/media/') and not n.endswith('/')]:
             if name in registered:
                 item = registered[name]

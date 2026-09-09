@@ -1,5 +1,7 @@
 # 智能云储答辩讲稿与资料索引
 
+团队编号：AIC-2026-27833449
+
 本指南配合[正式技术报告](../reports/submission/technical_report_submission.pdf)及[23 页答辩 PPT](../outputs/submission/DOEF_Competition_Presentation.pptx)使用。以下页码均为 PDF/PPT 的实际页序，报告页码包含封面与目录。
 
 ## 作品介绍

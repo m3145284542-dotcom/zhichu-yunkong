@@ -19,8 +19,9 @@ const changes=JSON.parse(await fs.readFile(path.join(root,'reports/submission/pr
 const anchors=[];
 for(const c of changes){
  const found=rows.filter(r=>r.kind==='textbox'&&r.slide===c.slide&&r.text===c.old);
- if(found.length!==1)throw Error(`Expected one textbox: ${JSON.stringify(c)}`);
- const target=p.resolve(found[0].id);
+ if(found.length!==(c.count||1))throw Error(`Expected one textbox: ${JSON.stringify(c)}`);
+ for(const match of found){
+ const target=p.resolve(match.id);
  if(c.position)target.position=c.position;
  if(c.fontSizePt)target.text.style={fontSizePt:c.fontSizePt};
  // The API's replace does not span paragraph boundaries. Replace within each
@@ -28,20 +29,41 @@ for(const c of changes){
  const oldLines=c.old.split('\n'),newLines=c.new.split('\n');
  if(oldLines.length!==newLines.length)throw Error('Paragraph count changed');
  for(let i=0;i<oldLines.length;i++)if(oldLines[i]!==newLines[i])target.text.replace(oldLines[i],newLines[i]);
- anchors.push({id:found[0].id,...c});
+ anchors.push({id:match.id,...c});
+ }
 }
 const after=await inspect();
 for(const c of anchors)if(after.find(r=>r.id===c.id)?.text!==c.new)throw Error('Text replacement failed: '+c.old);
+// Keep the full 2:1 original dispatch plot above the existing caption strip.
+const imageRows=(await p.inspect({kind:'image',maxChars:500000})).ndjson.split('\n').filter(Boolean).map(JSON.parse);
+for(const r of imageRows.filter(r=>[9,20].includes(r.slide)&&r.kind==='image')){
+ const img=p.resolve(r.id), pos=img.position;
+ const width=pos.height*2400/1476;
+ img.position={...pos,left:pos.left+(pos.width-width)/2,width};
+}
+const dispatchImages=imageRows.filter(r=>r.slide===19 && r.kind==='image');
+if(dispatchImages.length!==1)throw Error('Expected one dispatch image: '+JSON.stringify(dispatchImages));
+p.resolve(dispatchImages[0].id).position={left:95,top:180,width:720,height:360};
+const dispatchSlide=p.slides.items[18];
+for(const [left,top,width,height,text,fontSize] of [
+ [95,180,720,26,'代表性测试调度：Hog_office_Joey，2017-12-14',14],
+ [696,212,104,10.4,'实际负荷',8.5],
+ [696,222.4,104,10.4,'决策选权重',8.5],
+ [696,232.8,104,10.4,'预测选权重',8.5],
+]){
+ const box=dispatchSlide.shapes.add({geometry:'textbox',position:{left,top,width,height},fill:'#FFFFFF',line:{fill:'none',width:0}});
+ box.text=text;box.text.style={typeface:'Microsoft YaHei',fontSize,color:'#18212B',autoFit:'none',alignment:top===180?'center':'left',verticalAlignment:'middle',insets:{left:0,right:0,top:0,bottom:0}};
+}
 const build=path.join(root,'tmp/competition_style','build-'+Date.now());
 await fs.mkdir(path.join(build,'final'),{recursive:true});
 const candidatePath=path.join(build,'candidate.pptx');
 await (await PresentationFile.exportPptx(p)).save(candidatePath);
+execFileSync(RUNTIME_PYTHON,[path.join(root,'reports/submission/localize_figures.py'),'--pptx',candidatePath],{cwd:root,stdio:'inherit'});
 const {finalizePresentation}=await import(pathToFileURL(path.join(PPT_SKILL_DIR,'container_tools/artifact_tool_utils.mjs')).href);
 const finalPath=path.join(build,'final','DOEF_Competition_Presentation.pptx');
 const result=await finalizePresentation({workspaceDir:root,candidatePath,finalPath,pythonExecutable:RUNTIME_PYTHON,integrityValidatorPath:path.join(PPT_SKILL_DIR,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(PPT_SKILL_DIR,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000'],explicitTotalSlideCount:23,requiredNativeTableOwnerSlides:[],verifyArtifactToolImport:true,receiptPath:path.join(build,'validation.json')});
 await fs.mkdir(path.join(root,'outputs/submission'),{recursive:true});
 await fs.copyFile(finalPath,path.join(root,'outputs/submission/DOEF_Competition_Presentation.pptx'));
-execFileSync(RUNTIME_PYTHON,[path.join(root,'reports/submission/localize_figures.py')],{cwd:root,stdio:'inherit'});
 await fs.mkdir(path.join(root,'reports/submission/qa'),{recursive:true});
-await fs.writeFile(path.join(root,'reports/submission/qa/presentation_package.json'),JSON.stringify({status:'PASS',changed_textboxes:changes.length,slide_count:23,package_findings:result.packageIntegrity.finding_count,layout_findings:result.presentationLayout.finding_count,layout_warnings:result.presentationLayout.warning_count,source_native_table_count:0,table_implementation:'Original editable textboxes and shapes retained',first_party_import:result.firstPartyImport,sha256:result.finalSha256},null,2)+'\n');
+await fs.writeFile(path.join(root,'reports/submission/qa/presentation_package.json'),JSON.stringify({status:'PASS',changed_textboxes:changes.length,slide_count:23,package_findings:result.packageIntegrity.finding_count,layout_findings:result.presentationLayout.finding_count,layout_warnings:result.presentationLayout.warning_count,source_native_table_count:0,table_implementation:'Original editable textboxes and shapes retained',first_party_import:result.firstPartyImport,sha256:(await import('node:crypto')).createHash('sha256').update(await fs.readFile(path.join(root,'outputs/submission/DOEF_Competition_Presentation.pptx'))).digest('hex')},null,2)+'\n');
 console.log('PPTX validated and promoted; export PDF and visually check before release.');

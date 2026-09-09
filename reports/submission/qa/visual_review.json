@@ -3,7 +3,7 @@
   "reviewed_date": "2026-09-09",
   "report": {
     "path": "reports/submission/technical_report_submission.pdf",
-    "sha256": "3700af247c4b8527ee52c163b025152103e4fa1addabb1495a192fa19d65988a",
+    "sha256": "032c15e8c1a77c52e9a492b8d234f6784ed8a3d27ac991dfa00d94865e96914f",
     "pages_reviewed": [
       1,
       2,
@@ -27,12 +27,13 @@
       "Table and figure captions",
       "Equations and references",
       "Bookmarks and page numbering"
-    ]
+    ],
+    "final_check": "Cover inspected after team ID addition; pages 2–15 render byte-identically to prior accepted report."
   },
   "presentation": {
     "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
-    "sha256": "61349cd6ef3d90e3933948d51022b355133eb71ab28d8858aa62a797f5591689",
-    "pdf_sha256": "bf802a97270ee1a271b5d440f204fabc3281d9efe798b946ae97dbd6aee9b47a",
+    "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4",
+    "pdf_sha256": "2f17979c404ddf086e3b74094c1d5da6cbf28fab8117d7efd7ff70b507090872",
     "slides_reviewed": [
       1,
       2,
@@ -60,11 +61,14 @@
     ],
     "render": "Microsoft PowerPoint PNG export, 1600 x 900",
     "corrections": [
-      "Slide 12 cross-paragraph title replacement verified",
-      "Cover description moved below decorative bars"
+      "Slide 3 native English title translated",
+      "Slide 5 and 14 fixed-weight label moved clear of diagonal arrow",
+      "Slide 9 and 20 reuse accepted report legend layout, retaining all eight data rows",
+      "Slide 19 title and legend translated; full date axis restored; original RGB curves and case preserved",
+      "Native labels and table headings translated while model IDs, units, formulas and numerical cells retained"
     ],
-    "final_render_recheck": "After the last text edit, only slide 19 render changed; rechecked slide 19 and the cover.",
-    "scope": "Existing scientific figure assets and table layouts retained; this review covers the editorial revision."
+    "final_render_recheck": "All 23 slides individually inspected; final changed slides 5, 9, 14, 15, 18, 20, 21 rechecked after final build.",
+    "scope": "Chinese figures and native labels; original scientific values, cases and notes retained"
   },
   "title_revision_review": "Cover renders inspected at full size; all 15 report pages and 23 slides reviewed in contact sheets. Subtitle fits; unchanged body validated independently."
 }

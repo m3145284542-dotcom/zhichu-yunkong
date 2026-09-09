@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "reviewed_date": "2026-09-09",
+  "producer": "Chinese presentation completion",
+  "team_id": "AIC-2026-27833449",
+  "slides_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "report_unchanged_render_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "dispatch_source_sha256": "a0bb0ec0cc353021314112ccfa36b9e4f2c74dd18b03905e1f9dd121be1b12ca",
+  "dispatch_policy": "Original PNG bytes retained; full axes and curve pixels; native Chinese labels cover original title and legend text only",
+  "weight_figure": "reports/phase13_6/assets/figure_04_layout.png",
+  "alignment": {
+    "status": "NOT_APPLICABLE",
+    "reason": "Existing conceptual diagrams use a single axes; no comparable quantitative panels were redrawn"
+  },
+  "collision_audits": {
+    "architecture": {
+      "pdf": "reports\\submission\\figures_cn\\architecture\\doef_architecture_master.pdf",
+      "auditable": true,
+      "verdict": "REVIEW REQUIRED",
+      "page_count": 1,
+      "visible_text_box_count": 50,
+      "text_trace_count": 59,
+      "stroke_path_count": 38,
+      "filled_region_count": 29,
+      "image_region_count": 0,
+      "summary": {
+        "fail": 0,
+        "warn": 1,
+        "contained_fill_overlays": 83,
+        "contained_image_overlays": 0
+      },
+      "thresholds": {
+        "text_inset_pt": 0.6,
+        "min_overlap_ratio": 0.05,
+        "clipping_tolerance_pt": 0.5
+      },
+      "findings": [
+        {
+          "severity": "WARN",
+          "kind": "text-fill-edge",
+          "page": 1,
+          "message": "Text partially overlaps the edge of 1 filled region(s)",
+          "text": "预测指标直接评价路径",
+          "text_bbox": [
+            675.5700073242188,
+            516.472900390625,
+            773.5700073242188,
+            526.2728881835938
+          ],
+          "other_text": null,
+          "other_bbox": [
+            168.10560607910156,
+            413.0611267089844,
+            1012.6943969726562,
+            520.8364868164062
+          ],
+          "object_count": 1,
+          "object_indexes": [
+            3
+          ]
+        }
+      ]
+    },
+    "bridge": {
+      "pdf": "reports\\submission\\figures_cn\\presentation_assets\\con_01_prediction_decision_bridge.pdf",
+      "auditable": true,
+      "verdict": "PASS",
+      "page_count": 1,
+      "visible_text_box_count": 12,
+      "text_trace_count": 12,
+      "stroke_path_count": 10,
+      "filled_region_count": 8,
+      "image_region_count": 0,
+      "summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 8,
+        "contained_image_overlays": 0
+      },
+      "thresholds": {
+        "text_inset_pt": 0.6,
+        "min_overlap_ratio": 0.05,
+        "clipping_tolerance_pt": 0.5
+      },
+      "findings": []
+    },
+    "contribution": {
+      "pdf": "reports\\submission\\figures_cn\\presentation_assets\\con_02_contribution_overview.pdf",
+      "auditable": true,
+      "verdict": "PASS",
+      "page_count": 1,
+      "visible_text_box_count": 18,
+      "text_trace_count": 20,
+      "stroke_path_count": 4,
+      "filled_region_count": 5,
+      "image_region_count": 0,
+      "summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 16,
+        "contained_image_overlays": 0
+      },
+      "thresholds": {
+        "text_inset_pt": 0.6,
+        "min_overlap_ratio": 0.05,
+        "clipping_tolerance_pt": 0.5
+      },
+      "findings": []
+    }
+  },
+  "visual_decisions": [
+    "Slide 3 native English title translated",
+    "Slide 5 and 14 fixed-weight label moved clear of diagonal arrow",
+    "Slide 9 and 20 reuse accepted report legend layout, retaining all eight data rows",
+    "Slide 19 title and legend translated; full date axis restored; original RGB curves and case preserved",
+    "Native labels and table headings translated while model IDs, units, formulas and numerical cells retained"
+  ],
+  "warning_review": "Architecture direct-metric path label touches only the pale background band boundary; visibly readable, clear of text and arrow strokes. Accepted intentional background overlay."
+}

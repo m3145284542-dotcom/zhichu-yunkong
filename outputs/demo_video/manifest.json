@@ -11,12 +11,18 @@
   "voice_type": "neural synthesized Chinese narration",
   "sources": [
     {
-      "path": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
-      "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833"
+      "path": "outputs/demo_video/recording_sources/DOEF_Dynamic_Demo.html",
+      "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833",
+      "original_path": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
+      "source_commit": "0443a73",
+      "status": "historical_source"
     },
     {
-      "path": "outputs/gui_demo/manifest.json",
-      "sha256": "8c86411d3ca9c3121237c2f970106ad526817615256622d226414377359a1f61"
+      "path": "outputs/demo_video/recording_sources/manifest.json",
+      "sha256": "8c86411d3ca9c3121237c2f970106ad526817615256622d226414377359a1f61",
+      "original_path": "outputs/gui_demo/manifest.json",
+      "source_commit": "0443a73",
+      "status": "historical_source"
     },
     {
       "path": "outputs/phase9/final_benchmark.csv",
@@ -60,5 +66,6 @@
       "hash_normalization": "CRLF to LF"
     }
   ],
-  "source_hash_normalization": "CRLF to LF; MP4 identity uses raw bytes"
+  "source_hash_normalization": "CRLF to LF; MP4 identity uses raw bytes",
+  "lineage_note": "Recording-time GUI inputs are preserved as historical snapshots; the current portable GUI has a separate manifest. MP4 bytes unchanged."
 }

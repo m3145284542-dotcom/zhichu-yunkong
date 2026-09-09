@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "changed_textboxes": 173,
+  "changed_textboxes": 300,
   "slide_count": 23,
   "package_findings": 0,
   "layout_findings": 0,
@@ -11,11 +11,9 @@
     "performed": true,
     "passed": true,
     "slideCount": 23,
-    "sha256": "9c8e01bbb1a8bddb850d161b97c5d8ee31d0be59ee59e4c1428817b8460b0445",
+    "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4",
     "runtimeNodeModules": "C:/Users/m/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
     "nodeExecutable": "C:\\Users\\m\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
   },
-  "sha256": "61023fca991b3ba63bcbfdf420c45f2b7ab936b7e63293d34c86782a1de77592",
-  "title_revision": "2026-09-09: existing OOXML text edited in place, media and layout retained",
-  "localization": "Chinese figure media registered; 9 image parts replaced, original numerical sources unchanged"
+  "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4"
 }

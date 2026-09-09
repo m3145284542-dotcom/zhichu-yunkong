@@ -4,7 +4,7 @@
 
 全球校园人工智能算法精英大赛 · AI+能源科技创新组
 
-参赛团队：电协
+参赛团队：电协 · 团队编号：AIC-2026-27833449
 
 建筑储能的削峰效果，既取决于负荷预测精度，也取决于预测误差出现的时段。智能云储围绕这一问题，完成了负荷预测、电池调度和实际峰值评价的仿真程序，并提出决策导向集成预测方法 DOEF v1.0。
 
@@ -12,7 +12,7 @@ DOEF 融合 DayWeek 周期基线与 LightGBM，在验证集上按储能调度表
 
 ## 参赛成果
 
-按报名系统栏目整理材料及补齐要求见[提交清单](docs/SUBMISSION_CHECKLIST.md)。[中文配音演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)已生成，约4分33秒，1080p，附同步字幕。本地整理包由 `python scripts/package_competition_submission.py --team-id 实际团队编号` 生成；当前仍需实际团队编号及百度网盘分享链接。已有“待补视频”旧包是历史整理版本，新打包会纳入已验收视频。
+按报名系统栏目整理材料及补齐要求见[提交清单](docs/SUBMISSION_CHECKLIST.md)。[中文配音演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)已生成，约4分33秒，1080p，附同步字幕。本地整理包由 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449` 生成；团队编号已确认；仍需创建百度网盘分享链接并完成网上提交。最终整理包包含已验收视频；项目维护状态和清理记录见[收尾记录](docs/PROJECT_CLOSEOUT.md)。
 
 [技术报告](reports/submission/technical_report_submission.pdf) · [答辩 PPT](outputs/submission/DOEF_Competition_Presentation.pptx) · [演示 PDF](outputs/submission/DOEF_Competition_Presentation.pdf) · [答辩讲稿与资料索引](docs/REPORT_AND_DEFENSE_GUIDE.md)
 

@@ -29,3 +29,9 @@ tmp/
 .audit-lo/
 outputs/competition_delivery/
 
+# Private registration files and disposable review renders.
+output/latex-pledge/
+source-pledge.png
+outputs/competition_audit/render_current/
+.local-archive/
+

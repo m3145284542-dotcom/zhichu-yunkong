@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 import zipfile
 from datetime import datetime, timezone
 
@@ -18,7 +19,7 @@ def sha(data):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--team-id', default='待填团队编号')
+    parser.add_argument('--team-id', default='AIC-2026-27833449')
     parser.add_argument('--work-name', default='智能云储')
     args = parser.parse_args()
     for value in (args.team_id, args.work_name):
@@ -36,7 +37,11 @@ def main():
     outer = dest.with_name(dest.name + ('-材料整理包-含配音视频.zip' if video_ready else '-材料整理包-待补视频.zip'))
     if dest.exists() or outer.exists():
         parser.error('同名输出已存在；请保留原包并先改名，再重新生成')
+    subprocess.run([sys.executable, str(ROOT / 'reports/submission/validate_submission.py')], cwd=ROOT, check=True)
     qa = json.loads((ROOT / 'reports/submission/qa/validation.json').read_text(encoding='utf-8'))
+    release = json.loads((ROOT / 'reports/submission/manifest.json').read_text(encoding='utf-8'))
+    if release['status'] != 'canonical':
+        raise RuntimeError('当前材料尚未完成验收')
     if qa['status'] != 'PASS':
         raise RuntimeError('请先运行 reports/submission/validate_submission.py 并通过检查')
     report = ROOT / 'reports/submission/technical_report_submission.pdf'
@@ -60,12 +65,20 @@ def main():
     copy('outputs/submission/DOEF_Competition_Presentation.pdf', upload, '答辩PPT')
     copy('outputs/submission/DOEF_Competition_Presentation.pptx', cloud, '答辩PPT可编辑备份')
     copy('outputs/gui_demo/DOEF_Dynamic_Demo.html', cloud, '离线系统演示')
+    copy('reports/submission/technical_report_submission.pdf', cloud, '技术报告')
+    copy('outputs/submission/DOEF_Competition_Presentation.pdf', cloud, '答辩PPT')
+    pledge = ROOT / 'output/latex-pledge/pledge-signed.pdf'
+    if pledge.exists():
+        registration = dest / '报名附件（含个人信息，仅供报名）'
+        registration.mkdir()
+        copy('output/latex-pledge/pledge-signed.pdf', registration, '参赛承诺书')
     if video_ready:
         copy('outputs/demo_video/DOEF_Demo_Narrated.mp4', upload, '演示视频')
         copy('outputs/demo_video/DOEF_Demo_Narrated.mp4', cloud, '演示视频')
 
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode('utf-8').split('\0')
-    extras = ['docs/SUBMISSION_CHECKLIST.md', 'scripts/package_competition_submission.py']
+    extras = ['docs/SUBMISSION_CHECKLIST.md', 'scripts/package_competition_submission.py',
+              'reports/submission/render_figures_cn.py', 'reports/submission/qa/chinese_figures_review.json']
     if video_ready:
         extras += ['scripts/build_demo_video.py', 'scripts/validate_demo_video.py',
                    'outputs/demo_video/README.md', 'outputs/demo_video/narration.md',
@@ -90,7 +103,7 @@ def main():
     deploy = '''智能云储部署与复核说明
 
 一、无需安装的演示
-双击同目录的“离线系统演示.html”，使用现代桌面浏览器打开。
+双击同目录以“离线系统演示.html”结尾的文件，使用现代桌面浏览器打开。
 所有样式、脚本和冻结数据均已内嵌。可切换建筑、日期及巡演模式。
 这是已有离线实验回放，不是实时训练、在线调度或现场硬件控制，也不是MP4视频。
 
@@ -128,11 +141,13 @@ outputs/phase9_1/final_reporting_summary.json和outputs/phase8/selected_weights.
     (dest / '提交清单.md').write_text((ROOT / 'docs/SUBMISSION_CHECKLIST.md').read_text(encoding='utf-8') +
         f'\n\n本包文件前缀：`{prefix}`。' + ('已包含配音 MP4，' if video_ready else '视频缺失，') + '网盘分享链接尚未创建。\n', encoding='utf-8-sig')
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-    manifest = {'schema_version': 1, 'status': 'candidate', 'role': 'local submission preparation, not submitted',
+    manifest = {'schema_version': 1, 'status': 'canonical', 'submission_status': 'not_submitted', 'role': 'validated local submission package',
                 'producer': 'scripts/package_competition_submission.py',
                 'created_utc': datetime.now(timezone.utc).isoformat(), 'source_commit': commit,
                 'source_repository': 'https://github.com/m3145284542-dotcom/zhichu-yunkong',
                 'team_id': args.team_id, 'work_name': args.work_name,
+                'source_manifest_sha256': sha((ROOT / 'reports/submission/manifest.json').read_bytes()),
+                'acceptance_reason': 'Validated source materials; copied bytes and nested ZIP integrity checked',
                 'blocking_items': ([] if video_ready else ['MP4 video missing']) + ['Baidu permanent share not created'] +
                                   (['team id missing'] if args.team_id == '待填团队编号' else []),
                 'checks': {'archive_integrity': True, 'copied_bytes_identical': True,

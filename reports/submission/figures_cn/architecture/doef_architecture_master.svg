@@ -514,10 +514,10 @@ z
     <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(856.4544 494.542331)">峰值与相对理想基准后悔值</text>
    </g>
    <g id="text_31">
-    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei'; fill: #6f4e9c" transform="translate(742.763175 407.937384) rotate(-347)">固定权重传递</text>
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #6f4e9c" x="760.032" y="424.5372" transform="rotate(-0 760.032 424.5372)">固定权重传递</text>
    </g>
    <g id="text_32">
-    <text style="font-size: 9.8px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #67727c" x="724.32" y="519.3396" transform="rotate(-0 724.32 519.3396)">预测指标直接评价路径</text>
+    <text style="font-size: 9.8px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #67727c" x="724.32" y="524.3292" transform="rotate(-0 724.32 524.3292)">预测指标直接评价路径</text>
    </g>
    <g id="text_33">
     <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #b35c00" x="849.312" y="554.2668" transform="rotate(-0 849.312 554.2668)">测试结果不反馈至训练、特征、权重或选择过程</text>
