@@ -6,7 +6,7 @@
   "created_at": "2026-09-08T11:59:03.359806+00:00",
   "acceptance": "30 daily records per building/method reconciled to final peaks and regret; all assets inlined",
   "artifact": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
-  "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833",
+  "sha256": "3e61a3efc158c3685d3bd27f71e5e2f36e4c33af3102ddfcba927f330e06e3ed",
   "hash_normalization": "UTF-8 text with LF line endings",
   "sources": [
     {
@@ -63,5 +63,6 @@
       "path": "gui/export_demo.py",
       "sha256": "328b23f8058f74bb7a26381643f5cc0e185580fd653673c125354d12c7e5b733"
     }
-  ]
+  ],
+  "title_revision": "2026-09-09"
 }

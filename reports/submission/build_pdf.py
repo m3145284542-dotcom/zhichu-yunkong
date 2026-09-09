@@ -6,7 +6,7 @@ import fitz
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 SOURCE=HERE/'technical_report.md'
-EXPECTED='dc879c81e63c36fddb827b5f3105106ff3db043f26acce06ae95e85212e71f5a'
+EXPECTED='ecd2befb2894d9de950eea92577c446f61dbe7d2823278679928f907c3b520fa'
 assert hashlib.sha256(SOURCE.read_bytes().replace(b'\r\n', b'\n')).hexdigest()==EXPECTED
 raw=SOURCE.read_text(encoding='utf-8')
 qa=HERE/'qa'; qa.mkdir(exist_ok=True)
@@ -36,7 +36,7 @@ preamble=r'''\documentclass[12pt,a4paper]{article}
 \setCJKsansfont{SimHei}[AutoFakeBold=1.5]
 \setCJKmonofont{SimSun}
 \setmonofont{Arial}
-\hypersetup{pdftitle={DOEF：让负荷预测服务于储能削峰决策},pdfauthor={},pdfsubject={AI+能源 科技创新组技术报告},pdfcreator={XeLaTeX}}
+\hypersetup{pdftitle={智能云储——基于决策导向预测融合的建筑储能削峰优化系统},pdfauthor={},pdfsubject={AI+能源 科技创新组技术报告},pdfcreator={XeLaTeX}}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\includegraphics[width=10mm]{qa/official_logo.png}}
 \fancyhead[R]{\fontsize{9}{11}\selectfont 第八届全球校园人工智能算法精英大赛·算法主题赛}
@@ -64,7 +64,8 @@ preamble=r'''\documentclass[12pt,a4paper]{article}
 {\sffamily\fontsize{22}{30}\selectfont 算法主题赛\\AI+能源\\技术报告\par}
 \vspace{33mm}
 \begin{minipage}{125mm}
-\noindent 作品名称：DOEF：让负荷预测服务于储能削峰决策\par\vspace{6mm}
+\noindent 作品名称：{\sffamily\fontsize{20}{26}\selectfont 智能云储}\par\vspace{3mm}
+\noindent {\fontsize{12}{20}\selectfont ——基于决策导向预测融合的\\建筑储能削峰优化系统}\par\vspace{6mm}
 \noindent 赛道组别：科技创新组\par\vspace{6mm}
 \noindent 团队名称：电协
 \end{minipage}

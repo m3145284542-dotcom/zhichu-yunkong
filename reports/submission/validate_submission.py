@@ -26,7 +26,7 @@ def read(path):
 
 def digest(path):
     data = (ROOT / path).read_bytes()
-    if Path(path).name == '.gitignore' or Path(path).suffix.lower() in {'.md', '.py', '.mjs', '.json', '.csv', '.tex', '.txt', '.ps1'}:
+    if Path(path).name == '.gitignore' or Path(path).suffix.lower() in {'.md', '.py', '.mjs', '.json', '.csv', '.tex', '.txt', '.ps1', '.html', '.css'}:
         data = data.replace(b'\r\n', b'\n')
     return hashlib.sha256(data).hexdigest()
 
@@ -123,7 +123,21 @@ with zipfile.ZipFile(old_ppt) as old, zipfile.ZipFile(new_ppt) as new:
             check(norm(c['new']) in page_text, f'PDF contains edited text: slide {i}: {c["new"]}')
     media_hashes = lambda z: Counter(hashlib.sha256(z.read(n)).hexdigest()
                                    for n in z.namelist() if n.startswith('ppt/media/') and not n.endswith('/'))
-    check(media_hashes(old) == media_hashes(new), 'all presentation media bytes unchanged')
+    localization_path = HERE / 'figure_localization.json'
+    if localization_path.exists():
+        localization = json.loads(localization_path.read_text(encoding='utf-8'))
+        registered = localization.get('media', {})
+        for name in [n for n in new.namelist() if n.startswith('ppt/media/') and not n.endswith('/')]:
+            if name in registered:
+                item = registered[name]
+                check(hashlib.sha256(new.read(name)).hexdigest() == item['sha256'] ==
+                      hashlib.sha256((ROOT / item['path']).read_bytes()).hexdigest(),
+                      'localized media identity: ' + name)
+            else:
+                check(name in old.namelist() and old.read(name) == new.read(name),
+                      'unmodified media identity: ' + name)
+    else:
+        check(media_hashes(old) == media_hashes(new), 'all presentation media bytes unchanged')
     def notes_body(z, number):
         root = ET.fromstring(z.read(f'ppt/notesSlides/notesSlide{number}.xml'))
         return [''.join(t.text or '' for t in shape.findall('.//a:t', NS))

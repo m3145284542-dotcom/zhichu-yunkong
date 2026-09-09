@@ -1,6 +1,11 @@
 [
   {
     "slide": 1,
+    "old": "DOEF",
+    "new": "智能云储"
+  },
+  {
+    "slide": 1,
     "old": "SB-M01",
     "new": "DOEF"
   },
@@ -34,7 +39,7 @@
   {
     "slide": 1,
     "old": "SB-M01 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 2,
@@ -59,7 +64,7 @@
   {
     "slide": 2,
     "old": "SB-M02 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 3,
@@ -84,7 +89,7 @@
   {
     "slide": 3,
     "old": "SB-M03 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 4,
@@ -114,7 +119,7 @@
   {
     "slide": 4,
     "old": "SB-M04 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 5,
@@ -139,7 +144,7 @@
   {
     "slide": 5,
     "old": "SB-M05 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 6,
@@ -164,7 +169,7 @@
   {
     "slide": 6,
     "old": "SB-M06 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 7,
@@ -194,7 +199,7 @@
   {
     "slide": 7,
     "old": "SB-M07 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 8,
@@ -219,7 +224,7 @@
   {
     "slide": 8,
     "old": "SB-M08 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 9,
@@ -244,7 +249,7 @@
   {
     "slide": 9,
     "old": "SB-M09 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 10,
@@ -269,7 +274,7 @@
   {
     "slide": 10,
     "old": "SB-M10 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 11,
@@ -294,7 +299,7 @@
   {
     "slide": 11,
     "old": "SB-M11 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 12,
@@ -314,7 +319,7 @@
   {
     "slide": 12,
     "old": "SB-M12 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验"
+    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验"
   },
   {
     "slide": 13,
@@ -339,7 +344,7 @@
   {
     "slide": 13,
     "old": "Appendix · open for “why only 8 / cherry-picking?”",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 14,
@@ -364,7 +369,7 @@
   {
     "slide": 14,
     "old": "Appendix · leakage / chronology answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 15,
@@ -389,7 +394,7 @@
   {
     "slide": 15,
     "old": "Appendix · algorithm-component answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 16,
@@ -414,7 +419,7 @@
   {
     "slide": 16,
     "old": "Appendix · physical constraint / unit answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 17,
@@ -439,7 +444,7 @@
   {
     "slide": 17,
     "old": "Appendix · full forecast table",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 18,
@@ -464,7 +469,7 @@
   {
     "slide": 18,
     "old": "Appendix · aggregation caveat / negative cases",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 19,
@@ -489,7 +494,7 @@
   {
     "slide": 19,
     "old": "Appendix · dispatch mechanism question",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 20,
@@ -514,7 +519,7 @@
   {
     "slide": 20,
     "old": "Appendix · full weight-selection answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 21,
@@ -539,7 +544,7 @@
   {
     "slide": 21,
     "old": "Appendix · uncertainty answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 22,
@@ -564,7 +569,7 @@
   {
     "slide": 22,
     "old": "Appendix · lineage / reproducibility answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 23,
@@ -589,7 +594,7 @@
   {
     "slide": 23,
     "old": "Appendix · falsification / failed idea answer",
-    "new": "智储云控 · DOEF | 补充实验与方法说明"
+    "new": "智能云储 · DOEF | 补充实验与方法说明"
   },
   {
     "slide": 2,
@@ -860,5 +865,11 @@
     "slide": 23,
     "old": "NEGATIVE RESULT RETAINED",
     "new": "稳健调度失效案例"
+  },
+  {
+    "slide": 1,
+    "old": "让负荷预测服务于\n储能削峰决策",
+    "new": "基于决策导向预测融合的\n建筑储能削峰优化系统",
+    "fontSizePt": 26
   }
 ]

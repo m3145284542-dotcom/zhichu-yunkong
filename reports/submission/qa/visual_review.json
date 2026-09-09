@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "reviewed_date": "2026-09-06",
+  "reviewed_date": "2026-09-09",
   "report": {
     "path": "reports/submission/technical_report_submission.pdf",
-    "sha256": "9b9c5bd1198189e9b8e90ad2e4e6a41fa0560c785074a4769a2f2d6798f6d16e",
+    "sha256": "3700af247c4b8527ee52c163b025152103e4fa1addabb1495a192fa19d65988a",
     "pages_reviewed": [
       1,
       2,
@@ -31,7 +31,7 @@
   },
   "presentation": {
     "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
-    "sha256": "9c8e01bbb1a8bddb850d161b97c5d8ee31d0be59ee59e4c1428817b8460b0445",
+    "sha256": "61349cd6ef3d90e3933948d51022b355133eb71ab28d8858aa62a797f5591689",
     "pdf_sha256": "bf802a97270ee1a271b5d440f204fabc3281d9efe798b946ae97dbd6aee9b47a",
     "slides_reviewed": [
       1,
@@ -65,5 +65,6 @@
     ],
     "final_render_recheck": "After the last text edit, only slide 19 render changed; rechecked slide 19 and the cover.",
     "scope": "Existing scientific figure assets and table layouts retained; this review covers the editorial revision."
-  }
+  },
+  "title_revision_review": "Cover renders inspected at full size; all 15 report pages and 23 slides reviewed in contact sheets. Subtitle fits; unchanged body validated independently."
 }

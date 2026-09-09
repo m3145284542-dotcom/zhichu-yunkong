@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648
+L 1152 648
+L 1152 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 211.8528 318.25872
+L 558.2592 318.25872
+Q 574.3296 318.25872 574.3296 309.27744
+L 574.3296 200.50416
+Q 574.3296 191.52288 558.2592 191.52288
+L 211.8528 191.52288
+Q 195.7824 191.52288 195.7824 200.50416
+L 195.7824 309.27744
+Q 195.7824 318.25872 211.8528 318.25872
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #d55e00; stroke-width: 2.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 622.5408 318.25872
+L 968.9472 318.25872
+Q 985.0176 318.25872 985.0176 309.27744
+L 985.0176 200.50416
+Q 985.0176 191.52288 968.9472 191.52288
+L 622.5408 191.52288
+Q 606.4704 191.52288 606.4704 200.50416
+L 606.4704 309.27744
+Q 606.4704 318.25872 622.5408 318.25872
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #6f4e9c; stroke-width: 2.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 211.8528 482.91552
+L 558.2592 482.91552
+Q 574.3296 482.91552 574.3296 473.93424
+L 574.3296 365.16096
+Q 574.3296 356.17968 558.2592 356.17968
+L 211.8528 356.17968
+Q 195.7824 356.17968 195.7824 365.16096
+L 195.7824 473.93424
+Q 195.7824 482.91552 211.8528 482.91552
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #009e73; stroke-width: 2.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 622.5408 482.91552
+L 968.9472 482.91552
+Q 985.0176 482.91552 985.0176 473.93424
+L 985.0176 365.16096
+Q 985.0176 356.17968 968.9472 356.17968
+L 622.5408 356.17968
+Q 606.4704 356.17968 606.4704 365.16096
+L 606.4704 473.93424
+Q 606.4704 482.91552 622.5408 482.91552
+z
+" clip-path="url(#p84723e4717)" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #d55e00" x="222.5664" y="221.773883" transform="rotate(-0 222.5664 221.773883)">01  因果负荷预测</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(222.5664 242.407855)">24 小时超前预测</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(222.5664 255.041531)">正向滞后与移位历史特征</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(222.5664 267.675207)">无未来目标信息泄漏</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #6f4e9c" x="633.2544" y="221.773883" transform="rotate(-0 633.2544 221.773883)">02  决策导向预测融合</text>
+   </g>
+   <g id="text_4">
+    <!-- 按验证集后悔值选择 $w_b$ -->
+    <g style="fill: #18212b" transform="translate(633.2544 242.407855)">
+     <text>
+      <tspan x="0" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">按</tspan>
+      <tspan x="10.625" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">验</tspan>
+      <tspan x="21.25" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">证</tspan>
+      <tspan x="31.875" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">集</tspan>
+      <tspan x="42.5" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">后</tspan>
+      <tspan x="53.125" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">悔</tspan>
+      <tspan x="63.75" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">值</tspan>
+      <tspan x="74.375" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">选</tspan>
+      <tspan x="85" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b">择</tspan>
+      <tspan x="95.625" y="-0.78125" style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b"> </tspan>
+      <tspan x="98.768921" y="-0.78125" style="font-style: oblique; font-size: 10.6px; font-family: 'DejaVu Sans'; fill: #18212b">w</tspan>
+      <tspan x="107.458801" y="1.023438" style="font-style: oblique; font-size: 7.42px; font-family: 'DejaVu Sans'; fill: #18212b">b</tspan>
+     </text>
+    </g>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(633.2544 255.041531)">LightGBM + DayWeek</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(633.2544 267.736489)">测试集不参与选择</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #009e73" x="222.5664" y="386.430682" transform="rotate(-0 222.5664 386.430682)">03  多建筑稳健性评价</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(222.5664 407.064655)">固定 8 栋异质办公建筑</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(222.5664 419.698331)">仅按训练期负荷形态选楼</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(222.5664 432.332007)">不代表未见建筑迁移能力</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #0072b2" x="633.2544" y="386.430682" transform="rotate(-0 633.2544 386.430682)">04  储能决策评价</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(633.2544 407.064655)">共享相同约束优化器</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(633.2544 419.698331)">实际峰值与理想基准后悔值</text>
+    <text style="font-size: 10.6px; font-family: 'Microsoft YaHei'; fill: #18212b" transform="translate(633.2544 432.332007)">同时保留预测指标</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-weight: 700; font-size: 27px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #18212b" x="63.36" y="53.983125" transform="rotate(-0 63.36 53.983125)">经过验证的四项工作</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: start; fill: #5c6873" x="63.36" y="612.36" transform="rotate(-0 63.36 612.36)">概念示意：贡献限定于本项目，不主张首次提出、最先进性能或端到端训练。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p84723e4717">
+   <rect x="144" y="77.76" width="892.8" height="498.96"/>
+  </clipPath>
+ </defs>
+</svg>

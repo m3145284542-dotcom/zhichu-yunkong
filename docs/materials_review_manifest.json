@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "status": "canonical",
+  "status": "candidate",
   "role": "current competition-material navigation",
   "producer": "competition editorial release",
   "created_date": "2026-09-06",
   "current_manifest": "reports/submission/manifest.json",
-  "current_manifest_sha256": "4abd451a1b8309d648d532df0dbd978752348efc7b9df02cb9be35cc0a448c2f",
+  "current_manifest_sha256": "0f63ca521aba428f085de880686b5c5b9d63a19ce81819fe13f991e1e397ee4e",
   "current_artifacts": {
     "report": "reports/submission/technical_report_submission.pdf",
     "presentation": "outputs/submission/DOEF_Competition_Presentation.pptx",
@@ -14,11 +14,11 @@
   "companion_artifacts": [
     {
       "path": "README.md",
-      "sha256": "ac61cd4cdd2157bfa23ad47aa7e9e0192a16b89389b2aebca70964e5977932c0"
+      "sha256": "6264bbfb19eecc3f9c3deb2cb62947f081a73238b0c8b65aa8fd77a1007fd07f"
     },
     {
       "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
-      "sha256": "461e39fbcc8c5d1348f27cfa6cb61b8f22982293921296f65c6fd8c37315f624"
+      "sha256": "fbdf91df203a3d935fb989cd2703d9a0e68a3c5708bb59c6f1fb12ca173c1d38"
     }
   ],
   "previous_navigation": {
@@ -27,5 +27,6 @@
     "report": "reports/phase13_6/technical_report_submission.pdf",
     "presentation": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx"
   },
-  "history": "Original scientific and phase-specific records remain unchanged."
+  "history": "Original scientific and phase-specific records remain unchanged.",
+  "updated_date": "2026-09-09"
 }

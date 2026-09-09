@@ -98,5 +98,5 @@ if __name__ == '__main__':
     parser.add_argument('--host', default='127.0.0.1', help='Use your LAN IPv4 address for other devices')
     args = parser.parse_args()
     payload()  # Validate required inputs before accepting requests.
-    print(f'智储云控演示：http://{args.host}:{args.port}', flush=True)
+    print(f'智能云储演示：http://{args.host}:{args.port}', flush=True)
     ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()

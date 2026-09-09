@@ -19,7 +19,7 @@ def sha(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--team-id', default='待填团队编号')
-    parser.add_argument('--work-name', default='智储云控')
+    parser.add_argument('--work-name', default='智能云储')
     args = parser.parse_args()
     for value in (args.team_id, args.work_name):
         if not value.strip() or re.search(r'[<>:"/\\|?*\x00-\x1f]', value) or value.endswith(('.', ' ')):
@@ -50,7 +50,7 @@ def main():
 
     def copy(source, folder, label):
         path = ROOT / source
-        target = folder / f'{prefix}-{label}{path.suffix}'
+        target = folder / (path.name if path.suffix.lower() == '.mp4' else f'{prefix}-{label}{path.suffix}')
         shutil.copy2(path, target)
         assert target.read_bytes() == path.read_bytes()
         records.append({'path': target.relative_to(dest).as_posix(), 'source': source,
@@ -87,7 +87,7 @@ def main():
     records.append({'path': code_zip.relative_to(dest).as_posix(), 'source': 'git tracked working files + packaging additions',
                     'sha256': sha(code_zip.read_bytes()), 'bytes': code_zip.stat().st_size})
 
-    deploy = '''智储云控部署与复核说明
+    deploy = '''智能云储部署与复核说明
 
 一、无需安装的演示
 双击同目录的“离线系统演示.html”，使用现代桌面浏览器打开。

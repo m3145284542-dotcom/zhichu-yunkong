@@ -1,0 +1,19 @@
+{
+"DOEF v1.0 — frozen causal architecture":"DOEF v1.0：因果预测与决策导向融合流程",
+"Prediction serves the storage decision · Validation selects · Test evaluates only":"预测服务于储能决策；验证集选择权重，测试集仅用于评价",
+"TRAIN":"训练集","Fit component model":"拟合预测分量","VALIDATION":"验证集","Select and freeze $w_b$":"选择并固定 $w_b$","TEST":"测试集","Final reporting only":"仅作最终评价",
+"Frozen hourly load":"小时负荷数据","8 fixed offices":"固定 8 栋办公建筑","predefined time windows":"预设时间窗口","Causal features":"因果特征","positive lags + shifted history":"正向滞后与移位历史特征","24 h target horizon · no weather":"24 小时超前预测；无气象输入","per-building fit":"逐建筑拟合","frozen configuration":"固定模型配置",
+"Validation window":"验证时间窗口","component forecasts":"各分量预测值","realized validation load":"验证期实际负荷","Frozen battery":"固定电池","optimizer":"优化器","same constraints":"相同约束条件","+ daily reset":"每日重置荷电状态","Decision-oriented":"决策导向","selection":"权重选择","min mean daily regret":"最小化平均日后悔值","vs non-deployable Oracle":"参照不可部署的理想预知基准","FREEZE":"固定权重","$w_b$ per":"逐建筑","building":"权重 $w_b$","Test inputs":"测试输入","past-known load +":"已知历史负荷与","calendar state":"日历信息","DOEF forecast":"DOEF 融合预测","Battery schedule":"电池调度","24 h charge/discharge":"24 小时充放电计划","from frozen optimizer":"由固定优化器生成","Final evaluation":"最终评价","peak + Oracle regret":"峰值与相对理想基准后悔值","frozen weight transfer":"固定权重传递","direct forecast-metric path":"预测指标直接评价路径","NO Test feedback to training, features, weights, or selection":"测试结果不反馈至训练、特征、权重或选择过程",
+"ALGORITHM FROZEN · deterministic ensemble and constrained optimization · not joint training, bilevel optimization, online learning, or a deployable Oracle.":"方法范围：确定性融合与约束优化；未进行联合训练、双层优化或在线学习，理想预知基准不可部署。",
+"24 h load forecast":"24 小时负荷预测","error timing + shape":"误差时序与形态","Battery optimization":"电池优化","charge / discharge schedule":"充放电计划","Realized grid load":"实际电网负荷","actual load + battery action":"实际负荷叠加电池动作","Decision outcome":"决策结果","post-storage peak + regret":"储能后峰值与后悔值",
+"The same scalar forecast score can hide different errors at decision-critical hours":"相同预测误差指标，可能掩盖关键调度时段的误差差异",
+"Evaluate both forecast quality and downstream storage value":"同时评价预测质量与下游储能决策价值",
+"Prediction is an input to the decision — not the endpoint":"从负荷预测到储能决策评价",
+"CONCEPTUAL / EXPLANATORY · no experimental values encoded · no cost, carbon, or energy-savings claim":"概念示意：不包含实验数值，不代表成本、碳排放或节能收益。",
+"01  Causal forecasting":"01  因果负荷预测","24 h horizon":"24 小时超前预测","no future-target leakage":"无未来目标信息泄漏",
+"02  Decision-oriented ensemble":"02  决策导向预测融合","Validation regret selects $w_b$":"按验证集后悔值选择 $w_b$","Test excluded from selection":"测试集不参与选择",
+"03  Multi-building robustness":"03  多建筑稳健性评价","8 fixed heterogeneous offices":"固定 8 栋异质办公建筑","Train-only morphology sampling":"仅按训练期负荷形态选楼","not unseen-building transfer":"不代表未见建筑迁移能力",
+"04  Storage decision evaluation":"04  储能决策评价","same constrained optimizer":"共享相同约束优化器","realized peaks + Oracle regret":"实际峰值与理想基准后悔值","alongside forecast metrics":"同时保留预测指标",
+"Four verified contribution pillars":"经过验证的四项工作",
+"CONCEPTUAL / EXPLANATORY · contribution is project-scoped; no first / SOTA / end-to-end claim":"概念示意：贡献限定于本项目，不主张首次提出、最先进性能或端到端训练。"
+}

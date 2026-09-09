@@ -6,6 +6,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {createRequire} from 'node:module';
+import {execFileSync} from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const {RUNTIME_NODE_MODULES,RUNTIME_PYTHON,PPT_SKILL_DIR}=process.env;
 if(!RUNTIME_NODE_MODULES||!RUNTIME_PYTHON||!PPT_SKILL_DIR)throw Error('Set RUNTIME_NODE_MODULES, RUNTIME_PYTHON and PPT_SKILL_DIR from the bundled workspace runtime.');
@@ -21,6 +22,7 @@ for(const c of changes){
  if(found.length!==1)throw Error(`Expected one textbox: ${JSON.stringify(c)}`);
  const target=p.resolve(found[0].id);
  if(c.position)target.position=c.position;
+ if(c.fontSizePt)target.text.style={fontSizePt:c.fontSizePt};
  // The API's replace does not span paragraph boundaries. Replace within each
  // existing paragraph to preserve its font, size and other text formatting.
  const oldLines=c.old.split('\n'),newLines=c.new.split('\n');
@@ -39,6 +41,7 @@ const finalPath=path.join(build,'final','DOEF_Competition_Presentation.pptx');
 const result=await finalizePresentation({workspaceDir:root,candidatePath,finalPath,pythonExecutable:RUNTIME_PYTHON,integrityValidatorPath:path.join(PPT_SKILL_DIR,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(PPT_SKILL_DIR,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000'],explicitTotalSlideCount:23,requiredNativeTableOwnerSlides:[],verifyArtifactToolImport:true,receiptPath:path.join(build,'validation.json')});
 await fs.mkdir(path.join(root,'outputs/submission'),{recursive:true});
 await fs.copyFile(finalPath,path.join(root,'outputs/submission/DOEF_Competition_Presentation.pptx'));
+execFileSync(RUNTIME_PYTHON,[path.join(root,'reports/submission/localize_figures.py')],{cwd:root,stdio:'inherit'});
 await fs.mkdir(path.join(root,'reports/submission/qa'),{recursive:true});
 await fs.writeFile(path.join(root,'reports/submission/qa/presentation_package.json'),JSON.stringify({status:'PASS',changed_textboxes:changes.length,slide_count:23,package_findings:result.packageIntegrity.finding_count,layout_findings:result.presentationLayout.finding_count,layout_warnings:result.presentationLayout.warning_count,source_native_table_count:0,table_implementation:'Original editable textboxes and shapes retained',first_party_import:result.firstPartyImport,sha256:result.finalSha256},null,2)+'\n');
 console.log('PPTX validated and promoted; export PDF and visually check before release.');

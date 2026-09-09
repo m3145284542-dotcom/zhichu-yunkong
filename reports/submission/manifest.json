@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "canonical",
+  "status": "candidate",
   "role": "current competition-facing report and defense materials",
   "producer": "editorial revision using existing scientific results",
   "created_date": "2026-09-06",
@@ -14,7 +14,7 @@
   },
   "scientific_changes": 0,
   "editorial_report_replacements": 36,
-  "edited_presentation_textboxes": 171,
+  "edited_presentation_textboxes": 173,
   "layout_changes": [
     "Move cover description below decorative bars to remove overlap."
   ],
@@ -69,44 +69,44 @@
     {
       "path": "README.md",
       "status": "canonical",
-      "sha256": "8b2b5fbf546808efddc861a5062fae69074d13c160d00ff546ed30528dfe7f71",
-      "bytes": 7497
+      "sha256": "6264bbfb19eecc3f9c3deb2cb62947f081a73238b0c8b65aa8fd77a1007fd07f",
+      "bytes": 7516
     },
     {
       "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
       "status": "canonical",
-      "sha256": "461e39fbcc8c5d1348f27cfa6cb61b8f22982293921296f65c6fd8c37315f624",
-      "bytes": 7977
+      "sha256": "fbdf91df203a3d935fb989cd2703d9a0e68a3c5708bb59c6f1fb12ca173c1d38",
+      "bytes": 8004
     },
     {
       "path": "reports/submission/technical_report.md",
       "status": "canonical",
-      "sha256": "2fbbc55edde598697a53fa818e985e4e03a1a6577879fc0b21d30fe1f3a089d7",
-      "bytes": 26399
+      "sha256": "ecd2befb2894d9de950eea92577c446f61dbe7d2823278679928f907c3b520fa",
+      "bytes": 26432
     },
     {
       "path": "reports/submission/technical_report_layout.tex",
       "status": "canonical",
-      "sha256": "ffd2e0ac8f1891240b85d885040400dba7d86122a2381a1d07fa8c176d275a57",
-      "bytes": 31549
+      "sha256": "534d03c1970f7c91ec873051be7b6ca488d6a471e307f86953a068eb0c265e68",
+      "bytes": 31714
     },
     {
       "path": "reports/submission/technical_report_submission.pdf",
       "status": "canonical",
-      "sha256": "9b9c5bd1198189e9b8e90ad2e4e6a41fa0560c785074a4769a2f2d6798f6d16e",
-      "bytes": 1094022
+      "sha256": "3700af247c4b8527ee52c163b025152103e4fa1addabb1495a192fa19d65988a",
+      "bytes": 1094111
     },
     {
       "path": "reports/submission/build_pdf.py",
       "status": "canonical",
-      "sha256": "df364b1539d3697673c93f00e499f4e48a4bacb1cb1cadbb4e2c8ab58035e3b2",
-      "bytes": 8070
+      "sha256": "4db869c25065e49d917ed5f33f84b542cf5588f08e29c8dbb7604a1b9546a5c4",
+      "bytes": 8235
     },
     {
       "path": "reports/submission/build_presentation.mjs",
       "status": "canonical",
-      "sha256": "b879b60ffba14d59c9d46740acbd3dd701350bc728ce02e5a6718e0421653d72",
-      "bytes": 4092
+      "sha256": "9c92dac77172f95107ab12ad41100310943150f111ed3888bdb938d0c1f139d4",
+      "bytes": 4316
     },
     {
       "path": "reports/submission/export_presentation.ps1",
@@ -117,26 +117,26 @@
     {
       "path": "reports/submission/validate_submission.py",
       "status": "canonical",
-      "sha256": "606b1e91f23ac80fe6af3dbea3a67b0c9a488a46aaea74a4bc6392dc1d50f8a2",
-      "bytes": 9571
+      "sha256": "3219fe9a51a042b66b2be9ccb8fc5d76735b9ffb867d2c5b0e75e041210dbaff",
+      "bytes": 10396
     },
     {
       "path": "reports/submission/BUILD.md",
       "status": "canonical",
-      "sha256": "a666aa9f3a1a1f7a8c092c0841ba1245baa65d8383402a855da25b8b4032b8c4",
-      "bytes": 2676
+      "sha256": "fe1dc7115bf2070752ad8d79c28f4273245fa4f62edf2a49becd94517b6572ec",
+      "bytes": 3004
     },
     {
       "path": "reports/submission/editorial_changes.json",
       "status": "canonical",
-      "sha256": "7b51ede2baf5f3b3ecd7d6d9a6a32e07d67bdf799c31d33f84841424b31cc239",
-      "bytes": 7455
+      "sha256": "56cf03c0003cb4251504854b8e9a873c7f2411e3ec7f99b8a5e974bf2cbc5ef0",
+      "bytes": 7659
     },
     {
       "path": "reports/submission/presentation_changes.json",
       "status": "canonical",
-      "sha256": "2dfac09d425df3724bb71b9978a18d860a5dab7a48b74db2ef7a31bbd10132bc",
-      "bytes": 24683
+      "sha256": "1b372df94e247416e2a8f33df9edf1de74ee879122ded5629d322d515cc71b7b",
+      "bytes": 24949
     },
     {
       "path": "reports/submission/qa/heading_mapping.json",
@@ -159,32 +159,164 @@
     {
       "path": "reports/submission/qa/presentation_package.json",
       "status": "canonical",
-      "sha256": "13e3e247a65120228eab7043dfd8d6e86db7d270df3f493e0f778ac45b93f00a",
-      "bytes": 748
+      "sha256": "7271146527e3eecb1f041667a6a5caaab227bf27c24f18db4b9ecea2999cfe3f",
+      "bytes": 982
     },
     {
       "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
       "status": "canonical",
-      "sha256": "9c8e01bbb1a8bddb850d161b97c5d8ee31d0be59ee59e4c1428817b8460b0445",
-      "bytes": 1883823
+      "sha256": "61023fca991b3ba63bcbfdf420c45f2b7ab936b7e63293d34c86782a1de77592",
+      "bytes": 2015831
     },
     {
       "path": "outputs/submission/DOEF_Competition_Presentation.pdf",
       "status": "canonical",
-      "sha256": "bf802a97270ee1a271b5d440f204fabc3281d9efe798b946ae97dbd6aee9b47a",
-      "bytes": 1896451
+      "sha256": "059dbaa39adbf6b02fdefc6d12bf93c01436165b4be96ccb6772063e1ecf983d",
+      "bytes": 1768544
     },
     {
       "path": "reports/submission/qa/visual_review.json",
       "status": "canonical",
-      "sha256": "7c8c43c48700df21f994cd57639d2844e6d7418339d800e04a32083a9a4c4882",
-      "bytes": 1617
+      "sha256": "1a06e3a438130b06096b1b4aa2e1e79fa2466fba02e6086310e35247a7ac87ba",
+      "bytes": 1803
     },
     {
       "path": "reports/submission/.gitignore",
       "status": "canonical",
       "sha256": "7e3e39935b814c459e2fb36a4de159e30225903eafe06456b1abea92701d0e37",
       "bytes": 50
+    },
+    {
+      "path": "docs/SUBMISSION_CHECKLIST.md",
+      "status": "canonical",
+      "sha256": "621361976b2ca6748f3a11387c362caea25ab22f942d7331d5e2cc477db9da02",
+      "bytes": 4087
+    },
+    {
+      "path": "gui/README.md",
+      "status": "canonical",
+      "sha256": "7b53b2cb5b6e573345851f46328a8b1dc137010d9e38433bf98b545f537f998b",
+      "bytes": 3539
+    },
+    {
+      "path": "gui/index.html",
+      "status": "canonical",
+      "sha256": "56fc02c22756e4c89f0d3ea5f74716a8285fa44da6f17b58ff95713ffa84753a",
+      "bytes": 1774
+    },
+    {
+      "path": "gui/server.py",
+      "status": "canonical",
+      "sha256": "a40a26da6c40a8164d10532116f8697c53a7b670679fdbb97712cf824a3336f3",
+      "bytes": 6009
+    },
+    {
+      "path": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
+      "status": "canonical",
+      "sha256": "3e61a3efc158c3685d3bd27f71e5e2f36e4c33af3102ddfcba927f330e06e3ed",
+      "bytes": 1032865
+    },
+    {
+      "path": "outputs/gui_demo/manifest.json",
+      "status": "canonical",
+      "sha256": "a1380a9a3f3505105866a6cf6f58e015bf86f606a06ff4e7bf5a75c878d64942",
+      "bytes": 2542
+    },
+    {
+      "path": "scripts/package_competition_submission.py",
+      "status": "canonical",
+      "sha256": "eaf74727c103567dda8ed3cca3c6df0f3a32c0afccd5d49ca739aa3fa2388df6",
+      "bytes": 9656
+    },
+    {
+      "path": "reports/submission/localize_figures.py",
+      "status": "candidate",
+      "sha256": "1ee90cf31fe05823477dd4c86767acf3774650c6bf0942d15948a522990b1d3d",
+      "bytes": 6031
+    },
+    {
+      "path": "reports/submission/figure_translations.json",
+      "status": "candidate",
+      "sha256": "fd749fc8c845493d9eb0bb5de38c50d41b52582746db62d2b1d1715c6130d51a",
+      "bytes": 4388
+    },
+    {
+      "path": "reports/submission/figure_localization.json",
+      "status": "candidate",
+      "sha256": "db8d2e35f4fecc02d2d3ccbc5d0cc0de15f3c98329cdbb91ec6144200b593e81",
+      "bytes": 2755
+    },
+    {
+      "path": "reports/submission/CHINESE_FIGURES_CHECKPOINT.md",
+      "status": "candidate",
+      "sha256": "c86e6b8f40b14d8e8866bf1e5accdca9af820813050017ac68c56d91f6f47068",
+      "bytes": 1498
+    },
+    {
+      "path": "reports/submission/figures_cn/dispatch_cn.png",
+      "status": "candidate",
+      "sha256": "129c14615c2e0e746930ffb02faf7e7024901cc088b15ff7ab540252a5bcb0e7",
+      "bytes": 117024
+    },
+    {
+      "path": "reports/submission/figures_cn/architecture/doef_architecture_master_transparent.png",
+      "status": "candidate",
+      "sha256": "93aa705d4eda6f6ffe5161a0effc22b6924f76e301ca4e776fe8f4d0ee0b7476",
+      "bytes": 359276
+    },
+    {
+      "path": "reports/submission/figures_cn/architecture/doef_architecture_master.pdf",
+      "status": "candidate",
+      "sha256": "631d419e114befea03544c08c675df5f8445df70aca0776b6add0d4065bf35cf",
+      "bytes": 116542
+    },
+    {
+      "path": "reports/submission/figures_cn/architecture/doef_architecture_master.png",
+      "status": "candidate",
+      "sha256": "236d90504f8a5467643ace260a29694cf3eb35935eb7bc4c06d8566f55c5adfe",
+      "bytes": 340974
+    },
+    {
+      "path": "reports/submission/figures_cn/architecture/doef_architecture_master.svg",
+      "status": "candidate",
+      "sha256": "6c3d5ba7a717f0ab410c84efaec3ee2d0a1ab6c7ceed2ea2699b35b13618c5ff",
+      "bytes": 28112
+    },
+    {
+      "path": "reports/submission/figures_cn/presentation_assets/con_01_prediction_decision_bridge.pdf",
+      "status": "candidate",
+      "sha256": "9f73edba1f6a44205ba84df63561a8e85a60ba95235462a5198ecf3ab9409345",
+      "bytes": 57876
+    },
+    {
+      "path": "reports/submission/figures_cn/presentation_assets/con_01_prediction_decision_bridge.png",
+      "status": "candidate",
+      "sha256": "59dfdc01ce46213c4b57e9d8308ba069cf488bb3b9b746bc90afe47746174d5c",
+      "bytes": 148619
+    },
+    {
+      "path": "reports/submission/figures_cn/presentation_assets/con_01_prediction_decision_bridge.svg",
+      "status": "candidate",
+      "sha256": "4f2237491622af98224979d1f1d4282f3667464b2f7a5f505aac820ec56a2f04",
+      "bytes": 7041
+    },
+    {
+      "path": "reports/submission/figures_cn/presentation_assets/con_02_contribution_overview.pdf",
+      "status": "candidate",
+      "sha256": "430f527522deecbede5bf5bdd80f0c697b3029f41919278e357e2d28f660b028",
+      "bytes": 82105
+    },
+    {
+      "path": "reports/submission/figures_cn/presentation_assets/con_02_contribution_overview.png",
+      "status": "candidate",
+      "sha256": "06f727eba1bc26b70389f31c205a4553406d588868ab55f566baaccde0f56043",
+      "bytes": 162562
+    },
+    {
+      "path": "reports/submission/figures_cn/presentation_assets/con_02_contribution_overview.svg",
+      "status": "candidate",
+      "sha256": "55e6d34fdbec1523a281d0c9709dfac4d5b4b4e9c07a3ea85f15e9d6b72f4f3e",
+      "bytes": 7917
     }
   ],
   "supersedes_for_current_navigation": {
@@ -193,8 +325,13 @@
     "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
   },
   "validation_record": "reports/submission/qa/validation.json",
-  "acceptance_reason": "Automated content and integrity checks passed; all 15 report pages and 23 PowerPoint slide renders reviewed; original numerical evidence, equations, tables, image bytes and speaker-note prose preserved.",
+  "acceptance_reason": "Automated content checks cover registered text, media identities and frozen scientific sources. Chinese figure visual acceptance remains pending; this is not a final accepted release.",
   "history_policy": "Prior phase files remain unchanged for reproduction; current README and companion resolve to this release.",
   "packaging_note": "2026-09-09: add validated narrated MP4 and synchronize README navigation; older packages without video remain historical; scientific artifacts unchanged.",
-  "demo_video_manifest": "outputs/demo_video/manifest.json"
+  "demo_video_manifest": "outputs/demo_video/manifest.json",
+  "project_title": "智能云储",
+  "project_subtitle": "基于决策导向预测融合的建筑储能削峰优化系统",
+  "updated_date": "2026-09-09",
+  "title_revision_scope": "Current report, slides, documentation, GUI and package naming; video and historical stages unchanged.",
+  "pending_work": "Chinese figure visual QA remains incomplete: residual English and dispatch figure label/layout defects require correction. Current revision is pushed as candidate, not accepted final delivery."
 }
