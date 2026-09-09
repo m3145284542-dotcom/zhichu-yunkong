@@ -117,8 +117,8 @@
     {
       "path": "reports/submission/validate_submission.py",
       "status": "canonical",
-      "sha256": "7bc642e425e5190687eb692797cccc10b472d61e4a50dfebd25dd55b232915ab",
-      "bytes": 10826
+      "sha256": "84c7fe16ab427e91d196f0d96282949e881615486d456b92c62f836b73e041ec",
+      "bytes": 10924
     },
     {
       "path": "reports/submission/BUILD.md",
@@ -331,6 +331,18 @@
       "status": "canonical",
       "sha256": "30ce526276d1bff302c2f057abc129f5d51c7f6611357304d8167b19e33761b0",
       "bytes": 4472
+    },
+    {
+      "path": "reports/submission/frozen_hashes.py",
+      "status": "canonical",
+      "sha256": "2aa72e67b1f2089da5c3f1ec353340a121940dee862e2fa17ab1cd930c853888",
+      "bytes": 856
+    },
+    {
+      "path": "reports/submission/frozen_text_identity.json",
+      "status": "canonical",
+      "sha256": "849187f5a3c2e8501c4fcb7bbb03fa87e0556e35dfa6fb2ddb94a41094fce834",
+      "bytes": 887
     }
   ],
   "supersedes_for_current_navigation": {

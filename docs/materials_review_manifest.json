@@ -5,7 +5,7 @@
   "producer": "competition editorial release",
   "created_date": "2026-09-06",
   "current_manifest": "reports/submission/manifest.json",
-  "current_manifest_sha256": "6595b37a6c46766688c34cdf55d6a891486ad78bb83c5c0b0426508e29a57c9f",
+  "current_manifest_sha256": "877ad7dbb1022de3cb9672044921ced0172652e824a3bb6b486f8fb66b0822d6",
   "current_artifacts": {
     "report": "reports/submission/technical_report_submission.pdf",
     "presentation": "outputs/submission/DOEF_Competition_Presentation.pptx",

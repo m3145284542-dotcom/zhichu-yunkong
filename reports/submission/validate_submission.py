@@ -8,6 +8,7 @@ import sys
 import xml.etree.ElementTree as ET
 import zipfile
 import fitz
+from frozen_hashes import matches_frozen_hash
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -161,11 +162,12 @@ with zipfile.ZipFile(old_ppt) as old, zipfile.ZipFile(new_ppt) as new:
               'slide dimensions unchanged')
 
 frozen = json.loads(read('outputs/phase9_1/artifact_hash_audit.json'))['artifacts']
+text_identities = {x['path']: x for x in json.loads(read(
+    'reports/submission/frozen_text_identity.json'))['artifacts']}
 for item in frozen:
     data = (ROOT / item['path']).read_bytes()
     expected_hash = item.get('after_sha256') or item['before_sha256']
-    check(expected_hash in {hashlib.sha256(data).hexdigest(),
-                           hashlib.sha256(data.replace(b'\r\n', b'\n').replace(b'\r', b'\n')).hexdigest()},
+    check(matches_frozen_hash(item['path'], data, expected_hash, text_identities.get(item['path'])),
           'scientific source unchanged: ' + item['path'])
 
 for path in ['README.md', 'docs/REPORT_AND_DEFENSE_GUIDE.md', 'reports/submission/technical_report.md']:
