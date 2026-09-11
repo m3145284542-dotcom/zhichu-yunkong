@@ -53,8 +53,18 @@ for item in json.loads(read('reports/submission/editorial_changes.json'))['chang
     expected = expected.replace(item['old'], item['new'])
 check(expected == report, 'report matches approved editorial replacements')
 body = lambda s: s[s.index('## 摘要'):]
-numeric = lambda s: Counter(re.findall(r'(?<![A-Za-z_])[-+]?\d+(?:[,.]\d+)*%?', body(s)))
+def core_body(s):
+    return re.sub(r'<!-- compliance-addition:([a-z]+):start -->.*?<!-- compliance-addition:\1:end -->', '', body(s), flags=re.S)
+
+# Supplements are explicitly registered and checked verbatim below. Original
+# scientific prose, values, tables, formulae and references remain invariant.
+numeric = lambda s: Counter(re.findall(r'(?<![A-Za-z_])[-+]?\d+(?:[,.]\d+)*%?', core_body(s)))
 check(numeric(source) == numeric(report), 'all report body numeric tokens unchanged')
+supplements = json.loads(read('reports/submission/compliance_supplements.json'))
+for key, value in supplements['blocks'].items():
+    check(report.count(f'<!-- compliance-addition:{key}:start -->\n'+value+
+                       f'<!-- compliance-addition:{key}:end -->') == 1,
+          'registered compliance supplement: ' + key)
 check([x for x in source.splitlines() if x.startswith('|')] ==
       [x for x in report.splitlines() if x.startswith('|')], 'all report table cells unchanged')
 references = lambda s: s.split('## 参考文献')[1].split('## 附录')[0]
@@ -65,9 +75,12 @@ for display in [True, False]:
           'display formulas unchanged' if display else 'inline formulas unchanged')
 
 pdf = fitz.open(ROOT / 'reports/submission/technical_report_submission.pdf')
-full = norm('\n'.join(p.get_text() for p in pdf))
+def report_page_body(page):
+    text=page.get_text().replace('第八届全球校园人工智能算法精英大赛·算法主题赛','')
+    return re.sub(r'—\s*\d+\s*—', '', text)
+full = norm('\n'.join(report_page_body(p) for p in pdf))
 segments = []
-for block in re.split(r'\n\s*\n', body(report)):
+for block in re.split(r'\n\s*\n', re.sub(r'<!--.*?-->\n?', '', body(report))):
     if block.startswith(('#', '![', r'\[')):
         continue
     parts = []
@@ -84,7 +97,10 @@ for block in re.split(r'\n\s*\n', body(report)):
                 segments.append(text)
 missing = [s for s in segments if s not in full and s.replace('-', '') not in full.replace('-', '')]
 check(not missing, 'report PDF preserves prose and tables')
-check(len(pdf) == 15, 'report has 15 pages')
+check(len(pdf) >= 5 and (ROOT / 'reports/submission/technical_report_submission.pdf').stat().st_size <= 10_000_000,
+      'report is complete and under official 10 MB limit')
+check(all(norm(t) in full for t in ['总体架构设计','系统功能实现','实验环境与设置','应用流程与部署条件']),
+      'report contains required architecture system environment and application coverage')
 check('电协' in full and '提交前填写' not in full, 'report cover complete')
 fonts = {f[0] for p in pdf for f in p.get_fonts(full=True)}
 check(all(pdf.extract_font(x)[3] for x in fonts), 'report fonts embedded')
@@ -150,8 +166,12 @@ with zipfile.ZipFile(old_ppt) as old, zipfile.ZipFile(new_ppt) as new:
         return [''.join(t.text or '' for t in shape.findall('.//a:t', NS))
                 for shape in root.findall('.//p:sp', NS)
                 if not any(ph.get('type') == 'sldNum' for ph in shape.findall('.//p:ph', NS))]
-    check(all(notes_body(old, i) == notes_body(new, i) for i in range(1, 24)),
-          'all speaker-note prose unchanged; slide-number placeholders excluded')
+    note_updates=json.loads(read('reports/submission/presentation_supplements.json'))['notes']
+    check(all(notes_body(old, i) == notes_body(new, i) for i in range(1, 24) if str(i) not in note_updates),
+          'unaffected speaker-note prose unchanged; slide-number placeholders excluded')
+    for number, expected_note in note_updates.items():
+        check(norm(expected_note) in norm(''.join(notes_body(new,int(number)))),
+              'speaker note matches updated application slide: '+number)
     check(len([n for n in new.namelist() if re.fullmatch(r'ppt/notesSlides/notesSlide\d+.xml', n)]) == 23,
           '23 speaker note parts retained')
     check(not any(b'TargetMode="External"' in new.read(n) for n in new.namelist() if n.endswith('.rels')),

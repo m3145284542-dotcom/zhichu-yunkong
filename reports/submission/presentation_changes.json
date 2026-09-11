@@ -2,7 +2,7 @@
   {
     "slide": 1,
     "old": "DOEF",
-    "new": "智能云储",
+    "new": "智储云控",
     "count": 1
   },
   {
@@ -75,7 +75,7 @@
   {
     "slide": 2,
     "old": "SB-M02 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -87,25 +87,25 @@
   {
     "slide": 3,
     "old": "PROBLEM",
-    "new": "技术路线",
+    "new": "办公楼应用",
     "count": 1
   },
   {
     "slide": 3,
     "old": "预测只是中间环节，调度结果才是工程终点",
-    "new": "负荷预测驱动储能调度",
+    "new": "智储云控如何服务一栋办公楼？",
     "count": 1
   },
   {
     "slide": 3,
     "old": "负荷预测会改变储能充放电计划；最终评价发生在真实负荷与电池动作叠加后的结果上。",
-    "new": "预测生成充放电计划，再用实际负荷计算调度后的取电峰值。",
+    "new": "使用者：楼宇能源管理人员与储能方案评估人员",
     "count": 1
   },
   {
     "slide": 3,
     "old": "SB-M03 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -141,7 +141,7 @@
   {
     "slide": 4,
     "old": "SB-M04 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -171,7 +171,7 @@
   {
     "slide": 5,
     "old": "SB-M05 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -201,7 +201,7 @@
   {
     "slide": 6,
     "old": "SB-M06 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -237,7 +237,7 @@
   {
     "slide": 7,
     "old": "SB-M07 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -267,7 +267,7 @@
   {
     "slide": 8,
     "old": "SB-M08 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -297,7 +297,7 @@
   {
     "slide": 9,
     "old": "SB-M09 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -315,7 +315,7 @@
   {
     "slide": 10,
     "old": "冻结流程明确了次日预测如何生成储能调度，但尚非现场部署",
-    "new": "预测与储能调度的仿真流程",
+    "new": "当前原型：离线仿真决策支持系统",
     "count": 1
   },
   {
@@ -327,7 +327,7 @@
   {
     "slide": 10,
     "old": "SB-M10 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -357,7 +357,7 @@
   {
     "slide": 11,
     "old": "SB-M11 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -369,19 +369,19 @@
   {
     "slide": 12,
     "old": "CONCLUSION",
-    "new": "结论",
+    "new": "应用前景与结论",
     "count": 1
   },
   {
     "slide": 12,
     "old": "让预测评价\n与最终储能决策对齐",
-    "new": "面向储能削峰的\n负荷预测组合选择",
+    "new": "建筑储能削峰的\n方案评估与试点路径",
     "count": 1
   },
   {
     "slide": 12,
     "old": "SB-M12 · 固定 8 栋办公建筑 · Validation 选规则 · Test 仅评估",
-    "new": "智能云储 · DOEF | 8 栋办公建筑仿真实验",
+    "new": "智储云控 · DOEF | 8 栋办公建筑仿真实验",
     "count": 1
   },
   {
@@ -411,7 +411,7 @@
   {
     "slide": 13,
     "old": "Appendix · open for “why only 8 / cherry-picking?”",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -441,7 +441,7 @@
   {
     "slide": 14,
     "old": "Appendix · leakage / chronology answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -471,7 +471,7 @@
   {
     "slide": 15,
     "old": "Appendix · algorithm-component answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -501,7 +501,7 @@
   {
     "slide": 16,
     "old": "Appendix · physical constraint / unit answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -531,7 +531,7 @@
   {
     "slide": 17,
     "old": "Appendix · full forecast table",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -561,7 +561,7 @@
   {
     "slide": 18,
     "old": "Appendix · aggregation caveat / negative cases",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -591,7 +591,7 @@
   {
     "slide": 19,
     "old": "Appendix · dispatch mechanism question",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -621,7 +621,7 @@
   {
     "slide": 20,
     "old": "Appendix · full weight-selection answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -651,7 +651,7 @@
   {
     "slide": 21,
     "old": "Appendix · uncertainty answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -681,7 +681,7 @@
   {
     "slide": 22,
     "old": "Appendix · lineage / reproducibility answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -711,7 +711,7 @@
   {
     "slide": 23,
     "old": "Appendix · falsification / failed idea answer",
-    "new": "智能云储 · DOEF | 补充实验与方法说明",
+    "new": "智储云控 · DOEF | 补充实验与方法说明",
     "count": 1
   },
   {
@@ -741,7 +741,7 @@
   {
     "slide": 3,
     "old": "所有预测方法进入同一套冻结电池约束，保证比较的是“预测带来的决策差异”，不是不同优化器。",
-    "new": "各预测方法共享电池约束和优化器，比较预测输入对调度结果的影响。",
+    "new": "关键问题：有限的电池电量，是否留给了真正的峰值时段？",
     "count": 1
   },
   {
@@ -825,49 +825,49 @@
   {
     "slide": 10,
     "old": "工程价值：把 AI 预测、储能约束、决策评价连成一条可审计链。",
-    "new": "已实现负荷预测、约束调度和实际峰值评价的仿真流程。",
+    "new": "GUI：建筑巡演 → 核对电池配置 → 查看削峰结果 → 八建筑比较",
     "count": 1
   },
   {
     "slide": 12,
     "old": "Validation 对齐选择",
-    "new": "验证集选择权重",
+    "new": "使用流程",
     "count": 1
   },
   {
     "slide": 12,
     "old": "按储能 regret 冻结 wᵦ",
-    "new": "按决策后悔值确定 wᵦ",
+    "new": "巡演建筑 → 查看参数与削峰效果",
     "count": 1
   },
   {
     "slide": 12,
     "old": "Test 只做最终评价",
-    "new": "测试集评价效果",
+    "new": "试点条件",
     "count": 1
   },
   {
     "slide": 12,
     "old": "固定 8 栋 · 全部结果保留",
-    "new": "8 栋建筑分别训练与评价",
+    "new": "影子运行 → 人工审批 → 受控执行",
     "count": 1
   },
   {
     "slide": 12,
     "old": "预测模型不仅要“预测得准”，也要验证它是否支持更好的工程决策。",
-    "new": "用验证集调度表现选择负荷预测组合，在本次八建筑实验中取得改善。",
+    "new": "当前支持离线方案比较；跨季节与现场试点验证后，再评估电费和寿命收益。",
     "count": 1
   },
   {
     "slide": 12,
     "old": "DOEF v1.0 · frozen evidence",
-    "new": "DOEF v1.0 · 八建筑仿真验证",
+    "new": "DOEF v1.0 · 离线决策支持原型",
     "count": 1
   },
   {
     "slide": 12,
     "old": "八栋固定办公建筑 · 单一未来 Test 月 · 24 h horizon · 无成本/碳/现场部署结论",
-    "new": "8 栋办公建筑 · 单一测试月 · 24 h 超前预测 · 离线仿真",
+    "new": "8 栋办公建筑 · 单一测试月 · 尚无成本、碳减排或现场部署结论",
     "count": 1
   },
   {
@@ -1072,13 +1072,13 @@
   {
     "slide": 3,
     "old": "Prediction is an input to the decision — not the endpoint",
-    "new": "从负荷预测到储能决策评价",
+    "new": "办公楼储能削峰的使用闭环",
     "count": 1
   },
   {
     "slide": 3,
     "old": "Conceptual asset: outputs/phase13_1/presentation_assets/con_01_prediction_decision_bridge.png",
-    "new": "概念示意：预测作为调度输入；图中不包含实验数值",
+    "new": "应用设计示意；电表接入与设备执行尚未实现",
     "count": 1
   },
   {
@@ -1234,13 +1234,13 @@
   {
     "slide": 12,
     "old": "FOR BATTERY PEAK SHAVING",
-    "new": "用于建筑储能削峰",
+    "new": "用于楼宇能源管理与储能方案评估",
     "count": 1
   },
   {
     "slide": 12,
     "old": "RMSE 与 regret 回答不同问题",
-    "new": "RMSE 与后悔值评价不同方面",
+    "new": "楼宇能源管理与储能评估人员",
     "count": 1
   },
   {
@@ -1805,6 +1805,12 @@
     "slide": 18,
     "old": "min = −245.94%",
     "new": "最小值 = −245.94%",
+    "count": 1
+  },
+  {
+    "slide": 12,
+    "old": "预测误差 ≠ 决策价值",
+    "new": "使用对象",
     "count": 1
   }
 ]

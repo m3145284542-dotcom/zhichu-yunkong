@@ -50,7 +50,30 @@
       "实际负荷",
       "决策选权重",
       "预测选权重"
+    ],
+    "3": [
+      "智能电表 / EMS",
+      "历史小时级负荷",
+      "现场接入待实现",
+      "→",
+      "智储云控",
+      "DOEF 负荷预测",
+      "离线预测已实现",
+      "→",
+      "储能优化",
+      "24 h 充放电计划",
+      "约束求解已实现",
+      "→",
+      "储能系统",
+      "充电 / 放电",
+      "设备执行待实现",
+      "→",
+      "建筑电网侧",
+      "评价最大取电功率",
+      "已完成仿真评价",
+      "评价反馈：实际负荷与执行回执 → 核对峰值、执行偏差与异常",
+      "当前：冻结实验回放；未来：接入电表、EMS 与 PCS/BMS"
     ]
   },
-  "acceptance_record": "reports/submission/qa/chinese_figures_review.json"
+  "acceptance_reason": "Rendered report and changed slides reviewed; all prose/table/formula/notes checks and 76 frozen scientific identities passed before manifest synchronization"
 }

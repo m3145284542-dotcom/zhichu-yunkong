@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "canonical",
   "role": "current competition-facing report and defense materials",
-  "producer": "editorial revision using existing scientific results",
+  "producer": "User-authorized application closure; registered editorial additions and native application flow",
   "created_date": "2026-09-06",
   "base_commit": "7cce39d",
   "hash_policy": "SHA-256; CRLF normalized to LF for text sources, raw bytes for PDF/PPTX/PNG",
@@ -13,8 +13,8 @@
     "demo_video": "outputs/demo_video/DOEF_Demo_Narrated.mp4"
   },
   "scientific_changes": 0,
-  "editorial_report_replacements": 37,
-  "edited_presentation_textboxes": 312,
+  "editorial_report_replacements": 45,
+  "edited_presentation_textboxes": 301,
   "layout_changes": [
     "Move cover description below decorative bars to remove overlap."
   ],
@@ -69,44 +69,44 @@
     {
       "path": "README.md",
       "status": "canonical",
-      "sha256": "3439cc7f8d7e277365f4270b2c6a05b3fb3097ff1e5b48503aa20337bf3e9baa",
-      "bytes": 7494
+      "sha256": "2d731fd9b55c58babf5b84e68dcfeef2f147fea1422ac3f01fbad2ba7f7bd6fb",
+      "bytes": 7993
     },
     {
       "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
       "status": "canonical",
-      "sha256": "a3ac77b1afa664f64339a5f08f3f5cbffed38e2fd29678dc19efec3c24225347",
-      "bytes": 8040
+      "sha256": "f3e87627cd35682e2f779c78a9e3a6942218b6be404af870f539ce8d256a693d",
+      "bytes": 8455
     },
     {
       "path": "reports/submission/technical_report.md",
       "status": "canonical",
-      "sha256": "f82d550d53cc26a35faa7a7ef87aded5e97ebd8b662fb085b63be5a6e119c60f",
-      "bytes": 26466
+      "sha256": "a48798b793185e9d4ef05d1b1d82c0d2d5896c5a7809c127649f405c88e18d0f",
+      "bytes": 35106
     },
     {
       "path": "reports/submission/technical_report_layout.tex",
       "status": "canonical",
-      "sha256": "76379e32a2285797650f31b0260fc9768e233ba9914bffebb7c17ffeb2b8e58f",
-      "bytes": 31774
+      "sha256": "e1cca90aad2e1866c1ef8712a70855274c696f10eacfdc8df03334a33f2fe519",
+      "bytes": 40388
     },
     {
       "path": "reports/submission/technical_report_submission.pdf",
       "status": "canonical",
-      "sha256": "032c15e8c1a77c52e9a492b8d234f6784ed8a3d27ac991dfa00d94865e96914f",
-      "bytes": 1094265
+      "sha256": "cf5a318b319d8264d8b4b0ff18e0a8508ec0c3834fd6411422688ff32abbd697",
+      "bytes": 1632864
     },
     {
       "path": "reports/submission/build_pdf.py",
       "status": "canonical",
-      "sha256": "61b65c7bd9a5f9ff6ba502459d5e20d4b32a65934f2a684850df6594ec706c3d",
-      "bytes": 8295
+      "sha256": "3efa401499c4a2e0d717fc4d98d6653a046e42df6ddc10de60a9b0a4313ab2c2",
+      "bytes": 9072
     },
     {
       "path": "reports/submission/build_presentation.mjs",
       "status": "canonical",
-      "sha256": "0248b74926cd1c8a3eead14905a608393afb7693eeaf73f8ec5a0dde812bafd0",
-      "bytes": 5876
+      "sha256": "acbd8a6e4a1fd4401539c06b0224835b27d6432c4f2bf8008345c8842f4fe3ff",
+      "bytes": 7820
     },
     {
       "path": "reports/submission/export_presentation.ps1",
@@ -117,32 +117,32 @@
     {
       "path": "reports/submission/validate_submission.py",
       "status": "canonical",
-      "sha256": "84c7fe16ab427e91d196f0d96282949e881615486d456b92c62f836b73e041ec",
-      "bytes": 10924
+      "sha256": "2b19b0adc99eef4aacea19a4f16ff34a9979b85cb65e4401d2faa074e4145471",
+      "bytes": 12474
     },
     {
       "path": "reports/submission/BUILD.md",
       "status": "canonical",
-      "sha256": "3f18923d8120f36868517bcf0ded6622f98c3b4aa87970a5bcc77d001e96f8c9",
-      "bytes": 3587
+      "sha256": "d0aabc44b363f9b50216e054cbc3393d77e99d2d4e181e623d122004ad06a46d",
+      "bytes": 4947
     },
     {
       "path": "reports/submission/editorial_changes.json",
       "status": "canonical",
-      "sha256": "75986585bdf5ec106af702c1eb96274247300e8ad35064943d5cb4e428c86458",
-      "bytes": 7804
+      "sha256": "6c7a0fd7c16bdea4ae099695a57386ed9294b3a842916cf79317adf53de19f7c",
+      "bytes": 27028
     },
     {
       "path": "reports/submission/presentation_changes.json",
       "status": "canonical",
-      "sha256": "7aa9275a970a1e78f2cb48c3e823ad80657e659986d35c58a480cf0d996d9802",
-      "bytes": 44477
+      "sha256": "2f973ae948abbd624ff13849368bc238777199c96129160d8896586c65866d50",
+      "bytes": 44664
     },
     {
       "path": "reports/submission/qa/heading_mapping.json",
       "status": "canonical",
-      "sha256": "9823ec992f264af37384574cc04b47aa3a8a861a5cd5ca5c3e25a94e3125bab7",
-      "bytes": 3789
+      "sha256": "b463c59065c287e9448e958160af5c46883e10dd82dd00c689e886917a0f6892",
+      "bytes": 4195
     },
     {
       "path": "reports/submission/qa/official_logo.png",
@@ -153,32 +153,32 @@
     {
       "path": "reports/submission/qa/compile_console.txt",
       "status": "canonical",
-      "sha256": "9e0b3a2afc83af9bb4b1c23ed3c71cdcac3c04c202374a385f48c56cafbff817",
-      "bytes": 4099
+      "sha256": "c3393aa6e0cce0bef231697d7c8575cef020053bc9c984ca23ac8d1b7fefb2ce",
+      "bytes": 4109
     },
     {
       "path": "reports/submission/qa/presentation_package.json",
       "status": "canonical",
-      "sha256": "9adf9dd302ad9db580f97b541fe759f7fd1c3e72599ab1db4ce9f258833b2cef",
+      "sha256": "a513e7f65c07d5763c84547abe12b208ed2193c9e08f9d765b7860f2192bca3c",
       "bytes": 748
     },
     {
       "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
       "status": "canonical",
-      "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4",
-      "bytes": 1999115
+      "sha256": "080184dcfbcff298d282e3176046d50e30b334b7c925ba707c32e9fdb62afae2",
+      "bytes": 2001276
     },
     {
       "path": "outputs/submission/DOEF_Competition_Presentation.pdf",
       "status": "canonical",
-      "sha256": "2f17979c404ddf086e3b74094c1d5da6cbf28fab8117d7efd7ff70b507090872",
-      "bytes": 1804668
+      "sha256": "99815d345594bec17f55214bbf464540fe79f5bcca3322a9bc4699c00f849fef",
+      "bytes": 1768826
     },
     {
       "path": "reports/submission/qa/visual_review.json",
       "status": "canonical",
-      "sha256": "ee2eaf3eea713484183f41d01d647fac513836702a6374003ae18b7746b04fbe",
-      "bytes": 2261
+      "sha256": "7c2ea5d5e2779c7f50055bf0e15ef7258c9e23669247f6bf0f696b3382424938",
+      "bytes": 1885
     },
     {
       "path": "reports/submission/.gitignore",
@@ -189,50 +189,50 @@
     {
       "path": "docs/SUBMISSION_CHECKLIST.md",
       "status": "canonical",
-      "sha256": "9d48417d3be637cdb5de1d7e0962ca9bd18cde9150644b9a619d3f8cd4480160",
-      "bytes": 4494
+      "sha256": "6fcb8e0f8fcb141d1bf43eae2afd04ee01970409669f6b4f103bdf47a41af0c7",
+      "bytes": 4986
     },
     {
       "path": "gui/README.md",
       "status": "canonical",
-      "sha256": "7b53b2cb5b6e573345851f46328a8b1dc137010d9e38433bf98b545f537f998b",
-      "bytes": 3539
+      "sha256": "26109eb35feed81340ec7dde8a5b638c78be2e36c78fba6942241e11db169baf",
+      "bytes": 3917
     },
     {
       "path": "gui/index.html",
       "status": "canonical",
-      "sha256": "56fc02c22756e4c89f0d3ea5f74716a8285fa44da6f17b58ff95713ffa84753a",
-      "bytes": 1774
+      "sha256": "4aab2138d90f90401f21f175876772ba39d221cdeb1e827f29b5608dc2416042",
+      "bytes": 1799
     },
     {
       "path": "gui/server.py",
       "status": "canonical",
-      "sha256": "a40a26da6c40a8164d10532116f8697c53a7b670679fdbb97712cf824a3336f3",
+      "sha256": "474147d91aaf259fd28b7813101942db7d92fce9a631cfadb0f099093983e964",
       "bytes": 6009
     },
     {
       "path": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
       "status": "canonical",
-      "sha256": "3e61a3efc158c3685d3bd27f71e5e2f36e4c33af3102ddfcba927f330e06e3ed",
-      "bytes": 1032865
+      "sha256": "e0d175e593d715d4550ea939558768d0065fd9cc0494a1ff313f6694152f1505",
+      "bytes": 1032890
     },
     {
       "path": "outputs/gui_demo/manifest.json",
       "status": "canonical",
-      "sha256": "e0c988c81c5a708d80024c6c9a7cf78498ef92e12b9257136bc7cdf99a1631b5",
+      "sha256": "5675c27abb9b6b5abf5a01072f5943f2a083b5337997600662efb1c81f4c3f63",
       "bytes": 2505
     },
     {
       "path": "scripts/package_competition_submission.py",
       "status": "canonical",
-      "sha256": "2110bb96f6978f9673fb28cd2206267d0cc3a2fbb216ad03d56907652fe5d69d",
-      "bytes": 10823
+      "sha256": "8d621a625a5c3a8dab52a1ef2ee43459ee7c647eb71d005f6129c3aa6ab035f1",
+      "bytes": 11480
     },
     {
       "path": "reports/submission/localize_figures.py",
       "status": "canonical",
-      "sha256": "24ab51c983f457109bbe1bdbe08df8573b5feba54ed3d530615f7bc01d7a3166",
-      "bytes": 2272
+      "sha256": "75e185917868942f965785cffb93ed8a475095b57d8fefed57c11fa3911877d0",
+      "bytes": 2800
     },
     {
       "path": "reports/submission/figure_translations.json",
@@ -243,8 +243,8 @@
     {
       "path": "reports/submission/figure_localization.json",
       "status": "canonical",
-      "sha256": "1cdd324168f6b851ebf0417479f23e47c145b1d5847e7364b50e73b2a0539dca",
-      "bytes": 2511
+      "sha256": "5473d3b7e8b4964d3d648a26bd30390e283cf93c88f54dfe75473e7127c06a60",
+      "bytes": 3303
     },
     {
       "path": "reports/submission/CHINESE_FIGURES_CHECKPOINT.md",
@@ -343,6 +343,58 @@
       "status": "canonical",
       "sha256": "849187f5a3c2e8501c4fcb7bbb03fa87e0556e35dfa6fb2ddb94a41094fce834",
       "bytes": 887
+    },
+    {
+      "path": "reports/submission/compliance_supplements.json",
+      "status": "canonical",
+      "sha256": "740e39ccec74171a38d1217234233ab39c2a21d0331c33406bcf00d9fb15c212",
+      "bytes": 8967
+    },
+    {
+      "path": "reports/submission/presentation_supplements.json",
+      "status": "canonical",
+      "sha256": "e066fa6880836dbbebe2b44a60ccd0844319ea965dfde8215aa50282c36d44f4",
+      "bytes": 2858
+    },
+    {
+      "path": "reports/submission/capture_system.cjs",
+      "status": "canonical",
+      "sha256": "12fbc492b9ae14789504efbadc898900d33cbf9c087a7fdcd1e787d82b5ed326",
+      "bytes": 1058
+    },
+    {
+      "path": "reports/submission/assets/system_demo.png",
+      "status": "canonical",
+      "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e",
+      "bytes": 175366
+    },
+    {
+      "path": "outputs/demo_video/DOEF_Demo_Narrated.mp4",
+      "status": "canonical",
+      "sha256": "b411ad95568aae8193b19be7a04af475bdc367d2a00f862439dfa45aed543655",
+      "bytes": 10306629
+    },
+    {
+      "path": "outputs/demo_video/manifest.json",
+      "status": "canonical",
+      "sha256": "b6f52b999d75e00e80be9926958171c50dedb584bf5cd578db6c7dc460311a3d",
+      "bytes": 2959
+    },
+    {
+      "path": "docs/ENGINEERING_INTEGRATION.md",
+      "status": "canonical",
+      "role": "Site integration design; not an implemented interface",
+      "producer": "user-authorized application closure",
+      "source_inputs": [
+        "src/features/load_features.py",
+        "src/battery/optimizer.py",
+        "gui/server.py",
+        "outputs/phase8/selected_weights.csv"
+      ],
+      "version": "2026-09-11",
+      "acceptance_reason": "Checked against current offline capabilities; proposed interfaces explicitly labelled",
+      "sha256": "29c630591384d53eb853d55c865ba67fec505fb8eedd8680c6536381f72da772",
+      "bytes": 7127
     }
   ],
   "supersedes_for_current_navigation": {
@@ -351,13 +403,60 @@
     "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
   },
   "validation_record": "reports/submission/qa/validation.json",
-  "acceptance_reason": "23-slide PowerPoint renders reviewed; Chinese labels and table headings complete; original dispatch image and all numerical/scientific sources preserved. Team ID added to report/PPT covers. Registered media, native text, PDF content and package structure validated.",
+  "acceptance_reason": "17 report pages and application slides visually reviewed; original formulas/tables/scientific numeric tokens and 76 frozen files unchanged; GUI and source-hash tests passed",
   "history_policy": "Prior phase files remain unchanged for reproduction; current README and companion resolve to this release.",
-  "packaging_note": "2026-09-09: named local package for AIC-2026-27833449; original video unchanged; registration pledge kept outside cloud materials.",
+  "packaging_note": "New local package uses team-title prefix for every top-level deliverable including MP4. Baidu and portal upload deferred.",
   "demo_video_manifest": "outputs/demo_video/manifest.json",
-  "project_title": "智能云储",
+  "project_title": "智储云控",
   "project_subtitle": "基于决策导向预测融合的建筑储能削峰优化系统",
-  "updated_date": "2026-09-09",
-  "title_revision_scope": "Current report, slides, documentation, GUI and package naming; video and historical stages unchanged.",
-  "team_id": "AIC-2026-27833449"
+  "updated_date": "2026-09-11",
+  "title_revision_scope": "Report, presentation, guide, GUI and new package use 智储云控; subtitle unchanged; existing video already uses this name.",
+  "team_id": "AIC-2026-27833449",
+  "report_pages": 17,
+  "presentation_pages": 23,
+  "compliance_supplements": "reports/submission/compliance_supplements.json",
+  "presentation_supplements": "reports/submission/presentation_supplements.json",
+  "supersedes_local_packages": {
+    "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智能云储": {
+      "status": "superseded",
+      "replacement": "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智储云控",
+      "reason": "User-confirmed name and compliance additions"
+    },
+    "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智储云控": {
+      "status": "superseded",
+      "replacement": "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智储云控-application-20260911",
+      "reason": "Application closure report, slides, GUI label and integration design"
+    },
+    "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智储云控-application-20260911": {
+      "status": "superseded",
+      "replacement": "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智储云控-application-20260911-push",
+      "reason": "Synchronized submission documentation for repository delivery"
+    }
+  },
+  "current_local_package": "outputs/competition_delivery/AIC-2026-27833449-AI+能源-智储云控-application-20260911-push",
+  "engineering_integration": "docs/ENGINEERING_INTEGRATION.md",
+  "application_closure": {
+    "date": "2026-09-11",
+    "status": "canonical",
+    "role": "Offline decision-support application story and proposed site integration",
+    "sources": [
+      "src/features/load_features.py",
+      "src/battery/optimizer.py",
+      "gui/server.py",
+      "outputs/phase8/selected_weights.csv"
+    ],
+    "invariants": [
+      "DOEF v1.0 unchanged",
+      "No training or scientific experiment rerun",
+      "No real device connection or deployment claim"
+    ],
+    "pending_site_capabilities": [
+      "Meter/EMS adapters",
+      "Unified cutoff-time validation",
+      "Actual SOC and device state handling",
+      "Approval and PCS/BMS execution receipts",
+      "Shadow and hardware pilot validation"
+    ],
+    "remote_delivery": "Repository delivery authorized; Git commit and remote branch record identify published version. Baidu and competition portal submission remain separate."
+  }
 }

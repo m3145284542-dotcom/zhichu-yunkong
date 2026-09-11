@@ -1,6 +1,6 @@
 """Localize slide figures using unchanged data, source artists and registered labels."""
 from pathlib import Path
-import argparse,json,hashlib,zipfile
+import argparse,json,hashlib,zipfile,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[2]; HERE=Path(__file__).resolve().parent
 OUT=HERE/'figures_cn';OUT.mkdir(exist_ok=True)
 def sha(b):return hashlib.sha256(b).hexdigest()
@@ -22,7 +22,16 @@ with zipfile.ZipFile(p) as z: entries=[(i,z.read(i.filename)) for i in z.infolis
 with zipfile.ZipFile(p,'w') as z:
  for info,b in entries:
   if info.filename.startswith('ppt/media/') and Path(info.filename).name in media:b=(ROOT/media[Path(info.filename).name]).read_bytes()
+  if info.filename=='ppt/slides/slide3.xml':
+   tree=ET.fromstring(b)
+   ns={'p':'http://schemas.openxmlformats.org/presentationml/2006/main'}
+   sp=tree.find('.//p:spTree',ns)
+   pictures=sp.findall('p:pic',ns)
+   assert len(pictures)==1, 'Expected original concept image on slide 3'
+   sp.remove(pictures[0])
+   b=ET.tostring(tree,encoding='utf-8',xml_declaration=True)
   z.writestr(info,b)
 record={'status':'candidate','producer':'reports/submission/localize_figures.py','scope':'Chinese figure labels; original data and curve pixels retained','media':{f'ppt/media/{k}':{'path':v,'sha256':sha((ROOT/v).read_bytes())} for k,v in media.items()},'extra_texts':{'19':['代表性测试调度：Hog_office_Joey，2017-12-14','实际负荷','决策选权重','预测选权重']}}
+record['extra_texts'].update(json.loads((HERE/'presentation_supplements.json').read_text(encoding='utf-8')).get('diagram_texts',{}))
 (HERE/'figure_localization.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Registered 10 image parts; original dispatch image retained with native Chinese labels.')

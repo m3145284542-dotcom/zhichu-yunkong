@@ -55,6 +55,29 @@ for(const [left,top,width,height,text,fontSize] of [
  box.text=text;box.text.style={typeface:'Microsoft YaHei',fontSize,color:'#18212B',autoFit:'none',alignment:top===180?'center':'left',verticalAlignment:'middle',insets:{left:0,right:0,top:0,bottom:0}};
 }
 const build=path.join(root,'tmp/competition_style','build-'+Date.now());
+const supplements=JSON.parse(await fs.readFile(path.join(root,'reports/submission/presentation_supplements.json'),'utf8'));
+// Native application diagram replaces the conceptual image on slide 3.
+// The old media bytes stay in the package for historical identity checks.
+const applicationSlide=p.slides.items[2];
+const applicationTexts=[];
+const applicationText=(left,top,width,height,text,size,color='#18212B',fill='none')=>{
+ const box=applicationSlide.shapes.add({geometry:'textbox',position:{left,top,width,height},fill,line:{fill:'none',width:0}});
+ box.text=text;box.text.style={typeface:'Microsoft YaHei',fontSize:size,color,alignment:'center',verticalAlignment:'middle',autoFit:'none',insets:{left:3,right:3,top:2,bottom:2}};
+ applicationTexts.push(text);
+};
+const stages=[['智能电表 / EMS','历史小时级负荷','现场接入待实现'],['智储云控','DOEF 负荷预测','离线预测已实现'],['储能优化','24 h 充放电计划','约束求解已实现'],['储能系统','充电 / 放电','设备执行待实现'],['建筑电网侧','评价最大取电功率','已完成仿真评价']];
+for(let i=0;i<stages.length;i++){
+ const x=108+i*216;
+ applicationText(x,278,188,44,stages[i][0],23);
+ applicationText(x,326,188,46,stages[i][1],18);
+ applicationText(x,382,188,34,stages[i][2],16,i===0||i===3?'#A65E10':'#087BA5');
+ if(i<4)applicationText(x+188,316,28,40,'→',24);
+}
+applicationText(134,446,1010,42,'评价反馈：实际负荷与执行回执 → 核对峰值、执行偏差与异常',21);
+applicationText(134,498,1010,32,'当前：冻结实验回放；未来：接入电表、EMS 与 PCS/BMS',18,'#526373');
+supplements.diagram_texts={'3':applicationTexts};
+await fs.writeFile(path.join(root,'reports/submission/presentation_supplements.json'),JSON.stringify(supplements,null,2)+'\n');
+for(const [number,text] of Object.entries(supplements.notes))p.slides.items[Number(number)-1].speakerNotes.textFrame.setText(text);
 await fs.mkdir(path.join(build,'final'),{recursive:true});
 const candidatePath=path.join(build,'candidate.pptx');
 await (await PresentationFile.exportPptx(p)).save(candidatePath);

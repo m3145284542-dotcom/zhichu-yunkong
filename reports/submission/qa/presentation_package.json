@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "changed_textboxes": 300,
+  "changed_textboxes": 301,
   "slide_count": 23,
   "package_findings": 0,
   "layout_findings": 0,
@@ -11,9 +11,9 @@
     "performed": true,
     "passed": true,
     "slideCount": 23,
-    "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4",
+    "sha256": "080184dcfbcff298d282e3176046d50e30b334b7c925ba707c32e9fdb62afae2",
     "runtimeNodeModules": "C:/Users/m/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
     "nodeExecutable": "C:\\Users\\m\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
   },
-  "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4"
+  "sha256": "080184dcfbcff298d282e3176046d50e30b334b7c925ba707c32e9fdb62afae2"
 }

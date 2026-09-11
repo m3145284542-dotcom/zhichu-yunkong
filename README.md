@@ -1,4 +1,4 @@
-# 智能云储
+# 智储云控
 
 ## 基于决策导向预测融合的建筑储能削峰优化系统
 
@@ -6,17 +6,17 @@
 
 参赛团队：电协 · 团队编号：AIC-2026-27833449
 
-建筑储能的削峰效果，既取决于负荷预测精度，也取决于预测误差出现的时段。智能云储围绕这一问题，完成了负荷预测、电池调度和实际峰值评价的仿真程序，并提出决策导向集成预测方法 DOEF v1.0。
+建筑储能的削峰效果，既取决于负荷预测精度，也取决于预测误差出现的时段。智储云控围绕这一问题，完成了负荷预测、电池调度和实际峰值评价的仿真程序，并提出决策导向集成预测方法 DOEF v1.0。
 
 DOEF 融合 DayWeek 周期基线与 LightGBM，在验证集上按储能调度表现选择逐建筑权重。在 8 栋办公建筑的测试中，相比 LightGBM，平均归一化预测 MAE 降低 6.36%，平均归一化决策后悔值降低 3.61%。
 
 ## 参赛成果
 
-按报名系统栏目整理材料及补齐要求见[提交清单](docs/SUBMISSION_CHECKLIST.md)。[中文配音演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)已生成，约4分33秒，1080p，附同步字幕。本地整理包由 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449` 生成；团队编号已确认；仍需创建百度网盘分享链接并完成网上提交。最终整理包包含已验收视频；项目维护状态和清理记录见[收尾记录](docs/PROJECT_CLOSEOUT.md)。
+按报名系统栏目整理材料及补齐要求见[提交清单](docs/SUBMISSION_CHECKLIST.md)。[中文配音演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)已生成，约4分33秒，1080p，附同步字幕。本地整理包由 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449 --revision application-20260911-push` 生成；团队编号已确认；仍需创建百度网盘分享链接并完成网上提交。最终整理包包含已验收视频；项目维护状态和清理记录见[收尾记录](docs/PROJECT_CLOSEOUT.md)。
 
 [技术报告](reports/submission/technical_report_submission.pdf) · [答辩 PPT](outputs/submission/DOEF_Competition_Presentation.pptx) · [演示 PDF](outputs/submission/DOEF_Competition_Presentation.pdf) · [答辩讲稿与资料索引](docs/REPORT_AND_DEFENSE_GUIDE.md)
 
-作品包含 DOEF 算法实现、多建筑对比实验、储能调度程序、技术报告和答辩材料。PPT 共 23 页，其中第 1 至 12 页为主讲，第 13 至 23 页为补充实验与方法说明。报告的[Markdown 正文](reports/submission/technical_report.md)与 PDF 同步维护。
+作品包含 DOEF 算法实现、多建筑对比实验、储能调度程序、技术报告和答辩材料。PPT 共 23 页，其中第 1 至 12 页为主讲，第 13 至 23 页为补充实验与方法说明。报告已补充办公楼场景、典型使用流程、总体架构、真实系统界面和应用条件；PPT 第 3 页说明办公楼闭环，第 10 页说明原型定位，第 12 页说明试点路径。报告的[Markdown 正文](reports/submission/technical_report.md)与 PDF 同步维护。
 
 ## 技术方案
 
@@ -45,7 +45,7 @@ DOEF 在 6 栋建筑上的决策后悔值低于 LightGBM，另 2 栋持平。建
 
 本作品完成了离线仿真验证，各建筑使用自身历史训练，结果适用于本次 8 栋办公建筑及测试月份。未见建筑、其他季节和真实在线控制仍需独立验证。测试期在早期实验中已被查看，后续保持其边界固定，不用于模型或权重选择。
 
-目前程序评价的是最大取电功率的削减，未建立电价与碳排放模型，因此不将削峰率解释为节电率、电费降幅或碳减排量。现已提供用于录屏的本地前端 GUI 和只读数据接口；现场控制接入尚未实现。
+目前程序评价的是最大取电功率的削减，未建立电价与碳排放模型，因此不将削峰率解释为节电率、电费降幅或碳减排量。现已提供离线仿真决策支持 GUI 和只读回放接口；现场控制接入尚未实现。具体输入输出、EMS/PCS/BMS 接入职责、预测时点、执行回执与分阶段验收见[工程接入说明](docs/ENGINEERING_INTEGRATION.md)。
 
 ## 视频演示 GUI
 

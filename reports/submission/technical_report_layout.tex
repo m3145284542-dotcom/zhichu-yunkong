@@ -8,13 +8,13 @@
 \setCJKsansfont{SimHei}[AutoFakeBold=1.5]
 \setCJKmonofont{SimSun}
 \setmonofont{Arial}
-\hypersetup{pdftitle={智能云储——基于决策导向预测融合的建筑储能削峰优化系统},pdfauthor={},pdfsubject={AI+能源 科技创新组技术报告},pdfcreator={XeLaTeX}}
+\hypersetup{pdftitle={智储云控——基于决策导向预测融合的建筑储能削峰优化系统},pdfauthor={},pdfsubject={AI+能源 科技创新组技术报告},pdfcreator={XeLaTeX}}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\includegraphics[width=10mm]{qa/official_logo.png}}
 \fancyhead[R]{\fontsize{9}{11}\selectfont 第八届全球校园人工智能算法精英大赛·算法主题赛}
 \fancyfoot[C]{—\quad\thepage\quad—}
 \renewcommand{\headrulewidth}{0.4pt}
-\setlength{\parindent}{2em}\setlength{\parskip}{3pt}
+\setlength{\parindent}{2em}\setlength{\parskip}{2pt}
 \linespread{1}\raggedbottom
 \setcounter{secnumdepth}{0}\setcounter{tocdepth}{2}
 \renewcommand{\contentsname}{目录}
@@ -36,7 +36,7 @@
 {\sffamily\fontsize{22}{30}\selectfont 算法主题赛\\AI+能源\\技术报告\par}
 \vspace{33mm}
 \begin{minipage}{125mm}
-\noindent 作品名称：{\sffamily\fontsize{20}{26}\selectfont 智能云储}\par\vspace{3mm}
+\noindent 作品名称：{\sffamily\fontsize{20}{26}\selectfont 智储云控}\par\vspace{3mm}
 \noindent {\fontsize{12}{20}\selectfont ——基于决策导向预测融合的\\建筑储能削峰优化系统}\par\vspace{6mm}
 \noindent 赛道组别：科技创新组\par\vspace{6mm}
 \noindent 团队名称：电协\par\vspace{6mm}
@@ -57,6 +57,9 @@
 \subsubsection{1.1.1 建筑用能与电网削峰需求}
 建筑电力负荷通常随人员活动和使用时段形成峰谷变化。对建筑侧储能而言，削峰的直接目标不是减少全天总用电量，而是在容量、功率、效率和荷电状态约束下压低最大电网取电功率。若高峰出现前的负荷预测失真，储能可能过早放电、在真正峰值到来时能量不足，或因错误充电形成新的峰值。因此，负荷预测只有通过调度动作和实际负荷共同评价，才能反映其对储能削峰的作用。\par
 研究对象是 24 h 超前的小时级建筑负荷预测与日内电池削峰。历史负荷和预测时刻可获得的日历信息进入预测器，预测结果驱动 24 h 确定性储能优化；调度冻结后作用于实际负荷，再计算削峰和决策后悔值。该任务不涉及在线控制，也未模拟电价、碳排放或建筑总能耗变化。\par
+\subsubsection{办公楼中的使用场景}
+在办公楼和校园办公区，楼宇能源管理人员需要提前安排储能电池的充放电。设想次日下午出现用电高峰，而电池电量有限：若预测把峰值时刻判断得过早，电池可能提前放电，在真正峰值到来时已没有足够电量。即使全天平均预测误差不大，削峰计划也可能失效。智储云控关注的是预测能否帮助使用者把有限电量留给关键时段，以降低建筑电网侧的最大取电功率。\par
+这一场景用于解释工程需求，不是已部署案例。当前项目通过公开建筑数据完成离线预测、约束调度与结果评价，并用可视化原型支持方案比较；现场接入和运行收益仍待验证。\par
 \subsubsection{1.1.2 传统预测评价的局限}
 MAE、RMSE 和平均绝对百分比误差（MAPE）是必要的预测评价指标，但它们将不同时刻的误差按固定规则汇总。储能削峰对误差位置并非同等敏感：峰值附近的负荷高低和时序判断会改变充放电计划，而部分低谷误差可能对当日最大需量影响有限。因而，“预测误差更小”与“调度后的实际峰值更低”在本项目中不是同一命题。\par
 八建筑测试集提供了一个范围明确的反例：XGBoost 的平均归一化 RMSE 为 0.216751，略低于 LightGBM 的 0.216942，但其平均归一化决策后悔值为 0.117534，高于 LightGBM 的 0.116127（图 1）。两组差距均较小，该结果只说明在本项目的固定样本和调度协议内，预测排序不能完全代替决策排序；它不支持“预测精度不重要”或普适因果结论。\par
@@ -65,18 +68,21 @@ MAE、RMSE 和平均绝对百分比误差（MAPE）是必要的预测评价指�
 给定建筑 \(b\) 在预测时刻可获得的信息，预测未来 24 个小时的负荷 \(\hat{y}_{b,t}\)。预测层报告 MAE、RMSE、MAPE 及按训练期平均负荷归一化的指标；决策层以预测负荷生成电池充放电计划，并用实际负荷计算调度后的峰值、削峰率和相对 Oracle 的决策后悔值。项目目标是在不使用测试集选模的前提下，选择更适合下游储能削峰的预测组合。\par
 \subsubsection{1.1.4 相关技术与研究定位}
 建筑负荷预测研究已经比较了多类回归和机器学习模型[2,3]，部分工作也把负荷或峰值预测接入建筑、园区及电池储能优化[4-8]。predict-then-optimize 和 decision-focused learning 研究进一步讨论预测损失与下游目标的偏离，并提出任务损失训练或决策导向的模型选择方法[9-11]。DOEF 同样主张按下游用途评价预测，但实现范围较窄：它既不进行端到端训练，也不学习新的优化器，而是在已有 DayWeek 与 LightGBM 预测之间，用验证集储能决策后悔值选择逐建筑固定权重。因此，本项目的创新是可审计的任务导向融合与冻结评测闭环，不包括 LightGBM、滞后特征或通用削峰优化本身。\par
-\section{2. 技术方案与实现}
-\subsection{2.1 数据集与实验设计}
-\subsubsection{2.1.1 数据来源与单位}
+\section{2. 技术方案与实现}\subsection{2.1 总体架构设计}
+智储云控由离线实验计算与结果展示两部分组成。计算端依次执行数据质量控制、因果特征构造、逐建筑模型训练、验证集权重选择及固定约束下的储能调度；展示端读取已经保存的实验结果，供用户比较建筑、预测方法和削峰效果。图 A 展示计算端的数据流与选择边界。验证集用于选模，测试期实际负荷仅在调度计划冻结后用于评价，不进入预测或调度求解。\par
+\par\noindent\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{figures_cn/architecture/doef_architecture_master.png}\par\raggedright \textbf{图 A｜总体技术架构。} 历史负荷与日历特征进入预测层，验证集决策指标确定融合权重，测试期使用固定权重和共同电池约束评价实际效果。图中分层区分训练、验证与测试用途；界面展示复用已保存的结果，不触发模型重训。\par\end{minipage}\par
+数据处理由 \nolinkurl{src/data} 与 \nolinkurl{src/features} 实现，预测训练和验证选择由 \nolinkurl{src/phase7} 实现，融合权重与下游调度记录分别保存在 \nolinkurl{outputs/phase8} 和 \nolinkurl{outputs/phase9}。电池约束与优化器位于 \nolinkurl{src/battery}。浏览器界面通过 \nolinkurl{gui/server.py} 读取汇总结果，也可使用内嵌数据的离线 HTML。模块间以文件和明确字段衔接，便于独立核对数据来源、权重和结果。\par
+\subsection{2.2 数据集与实验设计}
+\subsubsection{2.2.1 数据来源与单位}
 实验使用 BDG2 的 \nolinkurl{electricity_cleaned.csv} 与 \nolinkurl{metadata.csv}[1]。原始电表读数的语义是每小时区间的电能 \(E_t\)（kWh）。调度按 \(\Delta t=1\,\text{h}\) 将其解释为区间平均功率：\par
 \[
 P_t = \frac{E_t}{\Delta t}.
 \]
 因此数值在一小时时间步下相同，但负荷和充放电功率使用 kW，电池容量与 SOC 使用 kWh，两种单位在语义上不可互换。\par
-\subsubsection{2.1.2 建筑筛选与质量控制}
+\subsubsection{2.2.2 建筑筛选与质量控制}
 建筑选择表包含 1,578 条建筑序列，其中 296 条为办公建筑候选，82 条通过确定性覆盖与质量规则。最终 8 栋建筑由一栋既定锚点建筑与训练期负荷形态空间中的确定性最远点采样组成。形态特征包括负荷规模、变异系数、峰均比、峰谷差、24 h 与 168 h 自相关、工作日和周末差异、日曲线变异及稳健异常比例。验证集或测试集上的预测、调度成绩均未参与选楼。\par
 这种选择方式避免用测试成绩挑选建筑，但不能据此声称模型能够迁移到未见建筑。报告中的“多建筑稳健性”仅指 8 栋预先固定办公建筑上的一致性评价。\par
-\subsubsection{2.1.3 因果时间切分}
+\subsubsection{2.2.3 因果时间切分}
 特征时刻的锚定时间窗见表 1。目标由固定 24 h 前视位移形成，边界处执行目标可用性清除，避免训练或验证样本引用后续区间的目标值。每栋建筑的测试集包含 720 个小时目标，即 30 个完整调度日。\par
 \par\noindent\begin{minipage}{\linewidth}\textbf{表 1｜数据切分与用途}\par\smallskip\renewcommand{\arraystretch}{1.2}\begin{tabularx}{\linewidth}{>{\hsize=0.55\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.1\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.55\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\linewidth=\hsize\raggedright\arraybackslash}X}\toprule
 数据分区 & 特征时刻范围 & 主要用途 & 是否参与最终报告评价\\\midrule
@@ -85,8 +91,8 @@ P_t = \frac{E_t}{\Delta t}.
 测试集 & 2017-12-01 至 2017-12-30 & 冻结算法的最终评价 & 是\\
 \bottomrule\end{tabularx}\end{minipage}\par
 测试集不参与建筑选择、模型参数选择或融合权重选择。由于历史项目阶段已经查看过测试结果，本报告称其为“冻结的留出评价期”，不称为从未查看的全新盲测集。\par
-\subsection{2.2 建筑负荷预测方法}
-\subsubsection{2.2.1 周期基线}
+\subsection{2.3 建筑负荷预测方法}
+\subsubsection{2.3.1 周期基线}
 表 2 给出实际使用的预测基线。项目早期材料中的 Persistence 与 Day 是同一科学方法，不作为两个独立基线重复计数。DayWeek 是固定周期平均，不含学习参数。\par
 \par\noindent\begin{minipage}{\linewidth}\textbf{表 2｜预测方法及其定义}\par\smallskip\renewcommand{\arraystretch}{1.2}\begin{tabularx}{\linewidth}{>{\hsize=0.65\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.35\hsize\linewidth=\hsize\raggedright\arraybackslash}X}\toprule
 方法 & 定义或作用\\\midrule
@@ -97,9 +103,9 @@ LightGBM & 逐建筑训练的梯度提升树预测器\\
 XGBoost / CatBoost & 冻结对比模型\\
 DOEF & DayWeek 与 LightGBM 的验证集决策导向融合\\
 \bottomrule\end{tabularx}\end{minipage}\par
-\subsubsection{2.2.2 LightGBM 与因果特征}
+\subsubsection{2.3.2 LightGBM 与因果特征}
 LightGBM 能处理非线性关系、离散日历状态和多尺度滞后特征，训练与推理开销也较低。输入包括当前特征时刻的负荷、日历编码、1/2/3/24/48/72/168/336 h 正滞后，以及先移位后计算的滚动统计。所有特征在预测时刻均可获得；项目没有使用未来目标或未来天气，也没有加入天气、节假日等外部数据。每栋建筑的候选参数和验证集选择结果均记录在冻结配置中。LightGBM 是基础预测器，并非本项目原创算法。\par
-\subsubsection{2.2.3 预测指标}
+\subsubsection{2.3.3 预测指标}
 设测试样本数为 \(n\)，实际负荷为 \(y_i\)，预测负荷为 \(\hat{y}_i\)，则：\par
 \[
 \mathrm{MAE}=\frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|,
@@ -111,8 +117,8 @@ LightGBM 能处理非线性关系、离散日历状态和多尺度滞后特征�
 \qquad \mathcal I=\{i:|y_i|>10^{-12}\}.
 \]
 跨建筑主比较采用各建筑指标除以对应训练期平均负荷后的等权平均，以免大负荷建筑仅因量级主导结果。MAPE 对接近零负荷敏感，因此作为补充指标，不用于支持核心排序结论。\par
-\subsection{2.3 储能削峰优化模型}
-\subsubsection{2.3.1 电池配置}
+\subsection{2.4 储能削峰优化模型}
+\subsubsection{2.4.1 电池配置}
 每栋建筑使用按训练期平均日用电量缩放的独立电池，但所有预测方法共享该建筑的同一配置。名义容量为训练期平均日用电量的 10\%，最大充电与放电功率均为容量的 25\%/h。SOC 范围为 10\% 至 90\%，每天初始和终止 SOC 均为 50\%。充、放电效率均为 \(\sqrt{0.9}\)，往返效率为 90\%。表 3 汇总共同规则；逐建筑容量从 20.507 kWh 到 2,857.763 kWh，完整数值由冻结配置给出。\par
 \par\noindent\begin{minipage}{\linewidth}\textbf{表 3｜电池共同参数}\par\smallskip\renewcommand{\arraystretch}{1.2}\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}\toprule
 参数 & 取值\\\midrule
@@ -125,7 +131,7 @@ SOC 下限 / 上限 & 10\% / 90\%\\
 往返效率 & 0.90\\
 调度周期 & 24 h，每日重置\\
 \bottomrule\end{tabularx}\end{minipage}\par
-\subsubsection{2.3.2 确定性日调度}
+\subsubsection{2.4.2 确定性日调度}
 对每个 24 h 调度日，令 \(c_t\ge 0\) 和 \(d_t\ge 0\) 分别为充电、放电功率，\(s_t\) 为 SOC，\(z_t\in\{0,1\}\) 为互斥模式变量，\(p^{\max}\) 为预测负荷下的目标峰值。冻结实现求解：\par
 \[
 \min \; p^{\max}+\epsilon\sum_{t=1}^{24}(c_t+d_t),
@@ -147,7 +153,7 @@ s^{\min}\le s_t\le s^{\max},\quad
 s_1=s_{25}=0.5C.
 \]
 该混合整数线性规划由 \nolinkurl{scipy.optimize.milp} 求解。调度阶段只读取预测负荷，实际未来负荷不参与求解；实际负荷仅在计划冻结后用于计算实现峰值。Oracle 以实际负荷求解同一问题，只作为不可部署的评价参照。\par
-\subsubsection{2.3.3 决策评价}
+\subsubsection{2.4.3 决策评价}
 实现电网负荷为 \(g_t=y_t+c_t-d_t\)。整段削峰率定义为：\par
 \[
 r_{\text{peak}}=\frac{\max_t y_t-\max_t g_t}{\max_t y_t}\times100\%.
@@ -157,12 +163,12 @@ r_{\text{peak}}=\frac{\max_t y_t-\max_t g_t}{\max_t y_t}\times100\%.
 R_d=\max_{t\in d}g_t^{\text{method}}-\max_{t\in d}g_t^{\text{Oracle}}.
 \]
 后悔值的单位为 kW；归一化后除以该建筑训练期平均负荷。它不是电费、收益或碳排放意义上的“后悔”。\par
-\subsection{2.4 从预测误差到决策误差}
+\subsection{2.5 从预测误差到决策误差}
 预测误差会先改变电池计划，再影响实际峰值，并不直接等同于决策误差。低估峰值时段可能使优化器预留不足；高估错误时段则可能把有限能量用在非关键时段。因此，两种预测即使整体 MAE 或 RMSE 接近，也可能因为峰值时序不同而生成不同的充放电轨迹。\par
 图 1 的 XGBoost-LightGBM 排序反例说明这种差异确实出现在冻结实验中。验证阶段进一步显示，若分别以 MAE 和决策后悔值选择同一组候选融合权重，8 栋建筑中有 6 栋得到不同权重（图 4）。这两项证据共同支持双层评价：预测指标用于检查基本拟合质量，决策指标用于评价预测进入储能优化后的任务价值。\par
 该观察不等同于“峰值附近误差必然导致更差调度”。本项目的结果是由既定电池参数、每日 SOC 重置和确定性峰值目标共同产生；改变电池规模、动态电价或控制时域可能改变误差与决策的关系。\par
-\subsection{2.5 DOEF：面向储能决策的预测融合方法}
-\subsubsection{2.5.1 方法动机与定义}
+\subsection{2.6 DOEF：面向储能决策的预测融合方法}
+\subsubsection{2.6.1 方法动机与定义}
 DOEF v1.0 使用两个已有预测分量：DayWeek 提供稳定的日周周期参照，LightGBM 表达逐建筑的非线性负荷规律。对建筑 \(b\)，最终预测为：\par
 \[
 \hat{y}_{b,t}^{\text{DOEF}}
@@ -171,7 +177,7 @@ DOEF v1.0 使用两个已有预测分量：DayWeek 提供稳定的日周周期�
 \qquad w_b\in\{0.0,0.1,\ldots,1.0\}.
 \]
 DOEF 不是简单平均：权重随建筑变化，并由验证集下游决策目标选择。它也不是端到端学习，因为预测器参数与储能优化器没有联合训练，决策目标只用于选择冻结候选权重。\par
-\subsubsection{2.5.2 验证集权重选择}
+\subsubsection{2.6.2 验证集权重选择}
 对每个候选 \(w_b\)，系统先在验证集形成融合预测，再用相同电池约束逐日求解调度，并计算相对 Oracle 的平均日决策后悔值。权重按冻结的等价带和平局规则选择；候选集合、评价目标和规则均在测试前确定。选定后，\(w_b\) 固定转移到测试集，不再更新。\par
 \par\noindent\begin{minipage}{\linewidth}\textbf{表 4｜逐建筑冻结融合权重}\par\smallskip\renewcommand{\arraystretch}{1.2}\begin{tabularx}{\linewidth}{>{\hsize=1.4\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\linewidth=\hsize\raggedright\arraybackslash}X}\toprule
 建筑 & MAE 选择的 LightGBM 权重 & 决策后悔值选择的 LightGBM 权重（DOEF）\\\midrule
@@ -185,10 +191,18 @@ Hog\_office\_Alexis & 0.6 & 0.7\\
 Hog\_office\_Byron & 0.9 & 0.8\\
 \bottomrule\end{tabularx}\end{minipage}\par
 \par\noindent\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{../phase13_6/assets/figure_04_layout.png}\par\raggedright \textbf{图 4｜验证集融合权重选择。} MAE 最优权重与决策后悔值最优权重在 6 栋建筑上不同。测试集不参与权重或平局规则选择，图中只展示 Phase 8 已冻结权重。\par\end{minipage}\par
-\subsubsection{2.5.3 与传统选模的区别}
+\subsubsection{2.6.3 与传统选模的区别}
 常见流程用验证集 MAE 或 RMSE 选定预测模型，再把预测直接输入优化器。DOEF 仍遵守相同的数据隔离原则，但权重依据验证集下游储能决策后悔值选择。这是一种任务导向的选择关系，不是可微的端到端训练。方法结构透明、便于复核，其能力也受到两个固定预测分量和离散权重网格的限制。\par
+\subsection{2.7 系统功能实现}
+系统提供八建筑巡演与综合结果两个主要视图。巡演视图随回放进度更新建筑和日期，展示无储能、LightGBM 与 DOEF 对应的每日取电峰值曲线，并同步显示所选建筑的电池配置和结果指标。开始巡演后，界面依次回放各建筑；用户可暂停、继续或切换至下一栋，综合结果在八建筑巡演结束后显示。综合结果视图展示逐建筑比较与等权聚合指标，保留负削峰案例。\par
+\par\noindent\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{assets/system_demo.png}\par\raggedright \textbf{图 B｜智储云控系统界面。} 截图来自随作品提供的离线 HTML，展示单栋建筑的日峰值回放与运行总览。曲线读取已有实验结果；界面中的播放表示结果回放，不表示正在计算新的调度或控制真实设备。\par\end{minipage}\par
+用户可直接打开随包的离线 HTML，无需联网或安装依赖；也可在源码目录执行 \texttt{python gui/server.py}，在浏览器访问 \nolinkurl{http://127.0.0.1:8765}。该服务仅依赖 Python 标准库。现有功能支持查看和比较已完成的实验，尚不支持上传任意建筑数据后自动训练，也未接入现场电池控制接口。\par
 \section{3. 实验结果与分析}
-\subsection{3.1 预测层结果}
+\subsection{3.1 实验环境与设置}
+原实验环境按留存日志列示：最终算法验证记录的处理器标识为 Intel64 Family 6 Model 186 Stepping 2, GenuineIntel，架构为 AMD64，系统标识为 Windows-10-10.0.26200-SP0，Python 为 3.11.9。多建筑阶段记录 pandas 2.3.3。日志未保存内存容量和全部依赖的精确版本，因此不把当前机器配置冒充原实验配置。完整依赖范围由随包 \nolinkurl{requirements.txt} 提供，原始环境记录分别见 \nolinkurl{outputs/phase9/summary.json} 和 \nolinkurl{outputs/phase7/summary.json}。\par
+核心模型采用 CPU 训练，随机种子为 42，线程数为 4。多建筑树模型的最大训练预算为 500 棵树，学习率为 0.03，早停耐心为 50 轮。LightGBM 比较平衡型和小规模正则化两组参数：叶子数分别为 31 和 15，最大深度分别为不限和 6，最小叶样本数分别为 20 和 30，L2 正则项分别为 0 和 0.2；行、列采样比例均为 0.8。逐建筑选定参数及最佳迭代数见 \nolinkurl{outputs/phase7/model_selection_config.json}，通用训练实现见 \nolinkurl{src/phase7/models.py}。既定锚点建筑的兼容预测按原冻结来源复用，不将统一候选预算描述为对所有历史模型重新训练。\par
+储能优化使用 SciPy 的混合整数线性规划接口，电池容量、效率、SOC 和日末约束沿用前文设置。模型参数与融合权重分别在验证集上确定；测试集不用于追加搜索。包内提供依赖安装、原始数据获取和分阶段执行说明。结果文件核对与从原始数据完整重训是不同的复现层次；本次材料补充仅核对现有结果，未进行完整重训。\par
+\subsection{3.2 预测层结果}
 表 5 报告冻结测试集的八建筑等权聚合结果。DOEF 的平均归一化 MAE 与 RMSE 在所列方法中最低，分别为 0.137970 和 0.207822。LightGBM 的归一化 MAE 为 0.147338，低于 DayWeek 的 0.183478，但 XGBoost 的归一化 RMSE 以 0.216751 略低于 LightGBM 的 0.216942。不同模型在局部指标上各有优势。MAPE 在低负荷建筑上容易放大，因此不作为跨建筑主结论的依据。\par
 \par\noindent\begin{minipage}{\linewidth}\textbf{表 5｜测试集预测层聚合结果}\par\smallskip\renewcommand{\arraystretch}{1.2}\begin{tabularx}{\linewidth}{>{\hsize=1.4\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8666666666666667\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8666666666666667\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8666666666666667\hsize\linewidth=\hsize\raggedright\arraybackslash}X}\toprule
 方法 & 平均归一化 MAE & 平均归一化 RMSE & 平均 MAPE（\%）\\\midrule
@@ -200,17 +214,17 @@ XGBoost & 0.149781 & 0.216751 & 32.48\\
 CatBoost & 0.173604 & 0.239211 & 33.14\\
 DOEF & 0.137970 & 0.207822 & 16.20\\
 \bottomrule\end{tabularx}\end{minipage}\par
-\subsection{3.2 决策层结果}
+\subsection{3.3 决策层结果}
 相对 LightGBM，DOEF 的平均归一化 MAE 从 0.147338 降至 0.137970，相对改善 6.3585\%；平均归一化决策后悔值从 0.116127 降至 0.111929，相对改善 3.6147\%（图 2）。建筑级决策后悔值比较为 6 胜、2 平、0 负。以建筑为重采样单位的 10,000 次 bootstrap 给出 DOEF 减 LightGBM 的平均归一化后悔值差为 -0.004198，95\% 区间为 [-0.006850, -0.001719]。该区间描述本次 8 栋建筑样本内的不确定性，外部适用性仍需更多建筑验证。\par
 \par\noindent\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{../../outputs/phase13_5/figures_cn/sci_02_doef_main_results_cn.png}\par\raggedright \textbf{图 2｜DOEF 的实验主结果。} 在八建筑测试集等权聚合下，DOEF 相对 LightGBM 同时降低平均归一化 MAE 和平均归一化决策后悔值。图中同时保留平均削峰率与最小削峰率，避免用均值掩盖负值案例。\par\end{minipage}\par
 整段削峰率提供不同于后悔值的工程视角。DOEF 的平均值为 6.4423\%，中位数为 5.6291\%，最小值为 -1.0170\%，最大值为 14.0162\%。最小值为负，说明至少一栋建筑在测试期出现反向削峰，即调度后的实际最大负荷高于原始负荷峰值。CatBoost 的最小削峰率为 -245.9433\%，反映了预测偏差可能造成的严重调度失效。\par
 对比实验还记录了稳健调度的失效案例。在锚点建筑 Phase 5.7 测试中，验证集选择的稳健调度平均后悔值为 20.4635 kW，高于确定性 LightGBM 调度的 11.1274 kW，因此稳健调度没有进入最终算法。Phase 9 的峰值加权 LightGBM 也没有产生稳定收益，只作为支持性实验记录。\par
-\subsection{3.3 多建筑稳健性}
+\subsection{3.4 多建筑稳健性}
 图 3 按冻结选择顺序展示全部 8 栋建筑。DOEF 在 6 栋建筑上的平均归一化决策后悔值低于 LightGBM，在 2 栋上因 DOEF 的冻结 LightGBM 权重为 1.0 而与 LightGBM 持平。该比较包含全部建筑，评价范围为预先固定的办公建筑及一个未来测试月。\par
 \par\noindent\begin{minipage}{\linewidth}\centering\includegraphics[width=\linewidth]{../../outputs/phase13_5/figures_cn/sci_03_multibuilding_regret_cn.png}\par\raggedright \textbf{图 3｜八栋固定建筑的决策价值比较。} 每个点是建筑测试期平均日决策后悔值除以该建筑训练期平均负荷。该图支持多建筑稳健性，不支持未见建筑、其他季节或跨年份迁移。\par\end{minipage}\par
-\subsection{3.4 验证集选择与测试集评价}
+\subsection{3.5 验证集选择与测试集评价}
 DOEF 的证据链严格遵循“验证集选择权重，冻结权重，测试集评价”。图 4 展示的是验证集上两种目标对应的已冻结权重，不含测试期优化。Phase 9.1 方法审计确认：算法选择来源为验证集，测试集仅用于评价，测试集不能晋升算法；峰值加权 LightGBM 作为未进入最终算法的支持性负结果保留。\par
-\subsection{3.5 结果一致性与可复现性}
+\subsection{3.6 结果一致性与可复现性}
 Phase 9.1 用显式 DOEF 公式、同一组冻结分量预测和 \nolinkurl{w_decision} 权重重建测试预测，并与 Phase 8 参考预测逐点比较。8 栋建筑共 5,760 个预测值的最大绝对差为 0.0 kW，容差为 \(10^{-12}\)。同时，Phase 7/8/9/9.1 共 76 个登记科研文件通过 LF 归一化哈希审计。报告直接复用这组预测与调度结果，写作阶段未重新训练、选模或筛选结果。\par
 \par\noindent\begin{minipage}{\linewidth}\textbf{表 6｜预测一致性与文件完整性检查}\par\smallskip\renewcommand{\arraystretch}{1.2}\begin{tabularx}{\linewidth}{>{\hsize=1.4\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\linewidth=\hsize\raggedright\arraybackslash}X}\toprule
 检查对象 & 规模 & 结果\\\midrule
@@ -230,6 +244,18 @@ LightGBM、周期滞后、通用电池模型和混合整数削峰优化均为已
 \subsection{4.2 工程价值}
 建筑侧储能容量有限，调度需要把电量留给影响最大需量的时段。将预测接入储能调度，可以直接检验模型对这一控制目标的作用。对于采用日前计划的建筑能源管理系统，这套流程无需改变电池优化器，就能为预测器或预测组合提供与任务直接相关的验证标准。\par
 在八建筑测试中，两分量融合同时改善了预测和决策聚合指标。逐建筑权重、调度约束和结果来源均可查询，便于复现与比较。当前验证采用离线仿真，尚无电价模型、需求电费账单、碳因子、硬件退化成本及现场控制数据，因此未量化成本、能耗与碳排放收益。\par
+\subsubsection{4.2.1 典型使用流程}
+楼宇能源管理人员负责核对运行条件和审批计划，储能方案评估人员负责比较预测方案与失败案例。面向办公楼的完整应用流程如下，其中现场数据接入和设备执行属于后续试点设计。\par
+一、 数据接入：目标系统由智能电表或建筑能源管理系统提供历史小时级负荷，核对建筑标识、时间戳、时区、单位与缺失记录。当前实验使用 BDG2 文件，尚未连接实时电表。\par
+二、 负荷预测：DOEF 使用历史负荷与日历特征，按验证阶段确定的逐建筑权重融合 DayWeek 与 LightGBM。当前实现为逐小时提前 24 h 预测，再按目标日组成负荷曲线；现场日前服务还需明确统一数据截止时间、预测可用时间与计划发布时间，并单独验收。\par
+三、 计划生成：预测曲线进入储能优化模块，在电池容量、充放电功率、SOC、效率及日末约束下生成 24 h 充放电计划。输出应包含逐时充放电功率、SOC 轨迹、预计电网取电功率和求解状态，供管理人员审阅。预计结果与实际运行结果分别记录。\par
+四、 执行与回执：当前实验将固定计划作用于实际负荷进行仿真。未来可由 EMS 接收经审批的计划，再经设备适配层交给 PCS/BMS 执行，回传实际功率、SOC、告警与计划执行状态。现场计划必须服从设备侧约束及人工接管；该控制接口尚未实现。\par
+五、 运行评价：离线流程根据实际负荷计算峰值、削峰率和相对 Oracle 的决策后悔值，GUI 展示保存的结果。现场试点应另外评价计划执行偏差、可用率和异常事件；Oracle 仅用于具有完整事后负荷数据的仿真比较，不是现场可调用的预测器。异常记录用于排查与后续独立验证，不回流调整本次冻结测试结果。\par
+本项目当前完成上述流程的离线仿真与可视化验证，尚未接入真实建筑智能电表、储能 PCS/BMS 或现场 EMS，因此不将实验结果表述为实际部署收益。\par
+\subsubsection{4.2.2 应用流程与部署条件}
+当前原型定位为离线仿真决策支持系统。GUI 的实际操作为开始八建筑巡演、查看当前建筑日峰值与电池配置、暂停或切换下一栋、查看八建筑综合比较。界面回放冻结实验，不触发新的预测、调度求解或设备控制。新增建筑需要重新处理数据、训练并独立验证，不能直接沿用已有建筑权重。\par
+试点按离线复现、只读影子运行、人工审批试运行和受控自动运行分阶段推进。影子运行只生成建议与评价，不下发设备指令；只有输入质量、预测时点、物理约束、异常回退及回执链路通过约定验收，才进入下一阶段。现场应读取实测初始 SOC，不能沿用每日重置的仿真假设。具体字段、职责与验收证据见随附工程接入说明。\par
+预期价值是辅助削峰方案筛选和暴露预测失效风险。电费收益、电池寿命、节能与碳减排仍需结合实际费率、退化模型和现场数据另行评价，本作品不提供未经验证的金额或减排承诺。\par
 \subsection{4.3 局限性、伦理风险与未来工作}
 数据范围是当前主要限制。实验使用 8 栋预先固定办公建筑和每栋一个未来测试月，只能支持该范围内的多建筑稳健性，不能证明对未见建筑、其他季节或跨年份数据的迁移能力。未来应在预先注册的更多建筑、季节和年份上进行独立外部评价，并保持验证规则不接触新测试集。\par
 预测信息主要来自历史负荷与日历状态。项目未引入更丰富的天气、节假日、占用率或设备状态数据，因此不能判断外部变量是否会改变预测与决策排序。后续可在保持因果可用性的前提下加入这些信息，并分别检查预测层和决策层收益。\par

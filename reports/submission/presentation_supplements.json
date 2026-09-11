@@ -1,0 +1,36 @@
+{
+  "status": "canonical",
+  "producer": "reports/submission/build_presentation.mjs",
+  "date": "2026-09-11",
+  "notes": {
+    "3": "假设明天下午办公楼会出现用电高峰，而电池容量有限，电池应该几点放电？如果预测把峰值判断得过早，电池就可能在真正峰值到来前耗尽。图中智能电表提供历史负荷，DOEF形成预测，优化器生成充放电计划，未来由储能设备执行，再评价建筑电网侧峰值。实际负荷和设备回执构成评价反馈。当前完成的是离线仿真，电表、EMS及PCS/BMS尚未接入；图中现场环节均为目标设计。当前预测是逐小时提前24小时，再按目标日组装；真实日前服务需要独立验证统一截止时间与发布时间。来源：src/features/load_features.py；src/battery；reports/submission/technical_report.md第1、9节。",
+    "10": "当前原型是离线仿真决策支持系统。算法与调度程序已完成离线计算，GUI读取保存的实验结果。演示从开始八建筑巡演，到核对当前建筑参数、观察每日峰值与削峰结果，最后进入八建筑综合比较。播放按钮不重新预测或求解，也不下发控制命令。新增建筑需重新处理数据并独立验证。来源：gui/index.html；gui/app.js；gui/server.py。",
+    "12": "面向楼宇能源管理与储能评估人员，当前提供离线方案比较。下一阶段先完成数据和时间语义核对，再做只读影子运行，随后开展人工审批试运行，验收通过后才考虑受控自动运行。现场读取实际SOC，并接收功率、告警和执行回执；异常时按设备方案回退并允许人工接管。协议适配、硬件联调及跨季节验证均待实施。3.61%是固定八建筑平均归一化决策后悔值相对改善，不是现场收益承诺。来源：docs/ENGINEERING_INTEGRATION.md；reports/submission/technical_report.md第9节。"
+  },
+  "acceptance_reason": "Rendered report and changed slides reviewed; all prose/table/formula/notes checks and 76 frozen scientific identities passed before manifest synchronization",
+  "diagram_texts": {
+    "3": [
+      "智能电表 / EMS",
+      "历史小时级负荷",
+      "现场接入待实现",
+      "→",
+      "智储云控",
+      "DOEF 负荷预测",
+      "离线预测已实现",
+      "→",
+      "储能优化",
+      "24 h 充放电计划",
+      "约束求解已实现",
+      "→",
+      "储能系统",
+      "充电 / 放电",
+      "设备执行待实现",
+      "→",
+      "建筑电网侧",
+      "评价最大取电功率",
+      "已完成仿真评价",
+      "评价反馈：实际负荷与执行回执 → 核对峰值、执行偏差与异常",
+      "当前：冻结实验回放；未来：接入电表、EMS 与 PCS/BMS"
+    ]
+  }
+}

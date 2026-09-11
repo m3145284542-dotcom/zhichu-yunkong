@@ -5,20 +5,22 @@
   "producer": "competition editorial release",
   "created_date": "2026-09-06",
   "current_manifest": "reports/submission/manifest.json",
-  "current_manifest_sha256": "877ad7dbb1022de3cb9672044921ced0172652e824a3bb6b486f8fb66b0822d6",
+  "current_manifest_sha256": "da1f2998f188927a03a9ef84135bd7f49e69068aac4148645acb6c5cd2444028",
   "current_artifacts": {
     "report": "reports/submission/technical_report_submission.pdf",
     "presentation": "outputs/submission/DOEF_Competition_Presentation.pptx",
-    "presentation_pdf": "outputs/submission/DOEF_Competition_Presentation.pdf"
+    "presentation_pdf": "outputs/submission/DOEF_Competition_Presentation.pdf",
+    "demo_video": "outputs/demo_video/DOEF_Demo_Narrated.mp4",
+    "engineering_integration": "docs/ENGINEERING_INTEGRATION.md"
   },
   "companion_artifacts": [
     {
       "path": "README.md",
-      "sha256": "3439cc7f8d7e277365f4270b2c6a05b3fb3097ff1e5b48503aa20337bf3e9baa"
+      "sha256": "2d731fd9b55c58babf5b84e68dcfeef2f147fea1422ac3f01fbad2ba7f7bd6fb"
     },
     {
       "path": "docs/REPORT_AND_DEFENSE_GUIDE.md",
-      "sha256": "a3ac77b1afa664f64339a5f08f3f5cbffed38e2fd29678dc19efec3c24225347"
+      "sha256": "f3e87627cd35682e2f779c78a9e3a6942218b6be404af870f539ce8d256a693d"
     }
   ],
   "previous_navigation": {
@@ -28,6 +30,7 @@
     "presentation": "outputs/phase13_3/Phase13_3_DOEF_Competition_Presentation.pptx"
   },
   "history": "Original scientific and phase-specific records remain unchanged.",
-  "updated_date": "2026-09-09",
-  "team_id": "AIC-2026-27833449"
+  "updated_date": "2026-09-11",
+  "team_id": "AIC-2026-27833449",
+  "project_title": "智储云控"
 }

@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "reviewed_date": "2026-09-09",
+  "reviewed_date": "2026-09-11",
   "report": {
     "path": "reports/submission/technical_report_submission.pdf",
-    "sha256": "032c15e8c1a77c52e9a492b8d234f6784ed8a3d27ac991dfa00d94865e96914f",
+    "sha256": "cf5a318b319d8264d8b4b0ff18e0a8508ec0c3834fd6411422688ff32abbd697",
     "pages_reviewed": [
       1,
       2,
@@ -19,22 +19,24 @@
       12,
       13,
       14,
-      15
+      15,
+      16,
+      17
     ],
-    "render": "PyMuPDF at 1.3x",
+    "render": "PyMuPDF 1.2x",
     "checks": [
-      "Page titles and text fit",
-      "Table and figure captions",
-      "Equations and references",
-      "Bookmarks and page numbering"
-    ],
-    "final_check": "Cover inspected after team ID addition; pages 2–15 render byte-identically to prior accepted report."
+      "All 17 pages visually reviewed",
+      "Scenario heading corrected; font-supported step labels",
+      "No clipped text or figures; appendix fits page 17",
+      "Actual GUI capture regenerated",
+      "Scientific prose, formulas and tables verified separately"
+    ]
   },
   "presentation": {
     "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
-    "sha256": "e0b69bd9e6566bc0fbe91b6f6bf290ea6d016c342b25211142b2e01d84f82da4",
-    "pdf_sha256": "2f17979c404ddf086e3b74094c1d5da6cbf28fab8117d7efd7ff70b507090872",
-    "slides_reviewed": [
+    "sha256": "080184dcfbcff298d282e3176046d50e30b334b7c925ba707c32e9fdb62afae2",
+    "pdf_sha256": "99815d345594bec17f55214bbf464540fe79f5bcca3322a9bc4699c00f849fef",
+    "slides_scanned": [
       1,
       2,
       3,
@@ -59,16 +61,21 @@
       22,
       23
     ],
-    "render": "Microsoft PowerPoint PNG export, 1600 x 900",
-    "corrections": [
-      "Slide 3 native English title translated",
-      "Slide 5 and 14 fixed-weight label moved clear of diagonal arrow",
-      "Slide 9 and 20 reuse accepted report legend layout, retaining all eight data rows",
-      "Slide 19 title and legend translated; full date axis restored; original RGB curves and case preserved",
-      "Native labels and table headings translated while model IDs, units, formulas and numerical cells retained"
+    "changed_slides_reviewed": [
+      3,
+      10,
+      12
     ],
-    "final_render_recheck": "All 23 slides individually inspected; final changed slides 5, 9, 14, 15, 18, 20, 21 rechecked after final build.",
-    "scope": "Chinese figures and native labels; original scientific values, cases and notes retained"
+    "unchanged_slide_pixel_comparison": true,
+    "checks": [
+      "23-slide PDF exported through PowerPoint",
+      "Changed slides reviewed at full size; all slides scanned",
+      "Other 20 rendered slides pixel-identical to pre-edit PDF",
+      "Application diagram uses editable text; proposed site stages labelled"
+    ]
   },
-  "title_revision_review": "Cover renders inspected at full size; all 15 report pages and 23 slides reviewed in contact sheets. Subtitle fits; unchanged body validated independently."
+  "gui": {
+    "tests": "5 evidence tests; tour lifecycle test passed",
+    "scope": "Prototype label and matching portable export; no computation change"
+  }
 }

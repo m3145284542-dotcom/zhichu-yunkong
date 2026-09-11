@@ -20,13 +20,16 @@ def sha(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--team-id', default='AIC-2026-27833449')
-    parser.add_argument('--work-name', default='智能云储')
+    parser.add_argument('--work-name', default='智储云控')
+    parser.add_argument('--revision', default='', help='Optional package revision; keeps previous packages intact')
     args = parser.parse_args()
     for value in (args.team_id, args.work_name):
         if not value.strip() or re.search(r'[<>:"/\\|?*\x00-\x1f]', value) or value.endswith(('.', ' ')):
             parser.error('编号或作品名称包含文件名不支持的字符')
     prefix = f'{args.team_id}-AI+能源-{args.work_name}'
-    dest = ROOT / 'outputs/competition_delivery' / prefix
+    if args.revision and not re.fullmatch(r'[A-Za-z0-9_-]+', args.revision):
+        parser.error('版本标签仅支持字母、数字、下划线和连字符')
+    dest = ROOT / 'outputs/competition_delivery' / (prefix + ('-' + args.revision if args.revision else ''))
     video = ROOT / 'outputs/demo_video/DOEF_Demo_Narrated.mp4'
     video_manifest_path = ROOT / 'outputs/demo_video/manifest.json'
     video_ready = video.exists() and video_manifest_path.exists()
@@ -55,7 +58,7 @@ def main():
 
     def copy(source, folder, label):
         path = ROOT / source
-        target = folder / (path.name if path.suffix.lower() == '.mp4' else f'{prefix}-{label}{path.suffix}')
+        target = folder / f'{prefix}-{label}{path.suffix}'
         shutil.copy2(path, target)
         assert target.read_bytes() == path.read_bytes()
         records.append({'path': target.relative_to(dest).as_posix(), 'source': source,
@@ -77,13 +80,16 @@ def main():
         copy('outputs/demo_video/DOEF_Demo_Narrated.mp4', cloud, '演示视频')
 
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode('utf-8').split('\0')
-    extras = ['docs/SUBMISSION_CHECKLIST.md', 'scripts/package_competition_submission.py',
+    extras = ['docs/ENGINEERING_INTEGRATION.md', 'docs/SUBMISSION_CHECKLIST.md', 'scripts/package_competition_submission.py',
               'reports/submission/render_figures_cn.py', 'reports/submission/qa/chinese_figures_review.json']
     if video_ready:
         extras += ['scripts/build_demo_video.py', 'scripts/validate_demo_video.py',
                    'outputs/demo_video/README.md', 'outputs/demo_video/narration.md',
                    'outputs/demo_video/DOEF_Demo_Narrated.srt', 'outputs/demo_video/manifest.json',
                    'outputs/demo_video/validation.json']
+    extras += [p.relative_to(ROOT).as_posix() for p in (ROOT/'reports/submission/assets').rglob('*') if p.is_file()]
+    extras += ['reports/submission/compliance_supplements.json', 'reports/submission/presentation_supplements.json',
+               'reports/submission/capture_system.cjs']
     files = sorted(set(p for p in tracked + extras if p and not p.startswith('outputs/competition_delivery/')))
     inventory = []
     code_zip = cloud / f'{prefix}-代码与实验材料.zip'
@@ -100,11 +106,11 @@ def main():
     records.append({'path': code_zip.relative_to(dest).as_posix(), 'source': 'git tracked working files + packaging additions',
                     'sha256': sha(code_zip.read_bytes()), 'bytes': code_zip.stat().st_size})
 
-    deploy = '''智能云储部署与复核说明
+    deploy = '''智储云控部署与复核说明
 
 一、无需安装的演示
 双击同目录以“离线系统演示.html”结尾的文件，使用现代桌面浏览器打开。
-所有样式、脚本和冻结数据均已内嵌。可切换建筑、日期及巡演模式。
+所有样式、脚本和冻结数据均已内嵌。可开始八建筑巡演，暂停、继续或切换至下一栋；结束后查看综合结果。
 这是已有离线实验回放，不是实时训练、在线调度或现场硬件控制，也不是MP4视频。
 
 二、Python原型

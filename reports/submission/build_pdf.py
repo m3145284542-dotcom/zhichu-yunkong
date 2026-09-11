@@ -6,7 +6,7 @@ import fitz
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 SOURCE=HERE/'technical_report.md'
-EXPECTED='f82d550d53cc26a35faa7a7ef87aded5e97ebd8b662fb085b63be5a6e119c60f'
+EXPECTED='a48798b793185e9d4ef05d1b1d82c0d2d5896c5a7809c127649f405c88e18d0f'
 assert hashlib.sha256(SOURCE.read_bytes().replace(b'\r\n', b'\n')).hexdigest()==EXPECTED
 raw=SOURCE.read_text(encoding='utf-8')
 qa=HERE/'qa'; qa.mkdir(exist_ok=True)
@@ -20,7 +20,8 @@ def inline(t):
     out=[]
     for i,p in enumerate(re.split(r'(\\\(.*?\\\)|`[^`]+`|\*\*.*?\*\*|\*[^*]+\*)',t)):
         if p.startswith(r'\('): out.append(p)
-        elif p.startswith('`'): out.append(r'\nolinkurl{'+p[1:-1]+'}')
+        elif p.startswith('`'):
+            out.append((r'\texttt{'+esc(p[1:-1])+'}') if ' ' in p else (r'\nolinkurl{'+p[1:-1]+'}'))
         elif p.startswith('**'): out.append(r'\textbf{'+esc(p[2:-2])+'}')
         elif p.startswith('*'): out.append(r'\textit{'+esc(p[1:-1])+'}')
         else: out.append(esc(p))
@@ -36,13 +37,13 @@ preamble=r'''\documentclass[12pt,a4paper]{article}
 \setCJKsansfont{SimHei}[AutoFakeBold=1.5]
 \setCJKmonofont{SimSun}
 \setmonofont{Arial}
-\hypersetup{pdftitle={智能云储——基于决策导向预测融合的建筑储能削峰优化系统},pdfauthor={},pdfsubject={AI+能源 科技创新组技术报告},pdfcreator={XeLaTeX}}
+\hypersetup{pdftitle={智储云控——基于决策导向预测融合的建筑储能削峰优化系统},pdfauthor={},pdfsubject={AI+能源 科技创新组技术报告},pdfcreator={XeLaTeX}}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\includegraphics[width=10mm]{qa/official_logo.png}}
 \fancyhead[R]{\fontsize{9}{11}\selectfont 第八届全球校园人工智能算法精英大赛·算法主题赛}
 \fancyfoot[C]{—\quad\thepage\quad—}
 \renewcommand{\headrulewidth}{0.4pt}
-\setlength{\parindent}{2em}\setlength{\parskip}{3pt}
+\setlength{\parindent}{2em}\setlength{\parskip}{2pt}
 \linespread{1}\raggedbottom
 \setcounter{secnumdepth}{0}\setcounter{tocdepth}{2}
 \renewcommand{\contentsname}{目录}
@@ -64,7 +65,7 @@ preamble=r'''\documentclass[12pt,a4paper]{article}
 {\sffamily\fontsize{22}{30}\selectfont 算法主题赛\\AI+能源\\技术报告\par}
 \vspace{33mm}
 \begin{minipage}{125mm}
-\noindent 作品名称：{\sffamily\fontsize{20}{26}\selectfont 智能云储}\par\vspace{3mm}
+\noindent 作品名称：{\sffamily\fontsize{20}{26}\selectfont 智储云控}\par\vspace{3mm}
 \noindent {\fontsize{12}{20}\selectfont ——基于决策导向预测融合的\\建筑储能削峰优化系统}\par\vspace{6mm}
 \noindent 赛道组别：科技创新组\par\vspace{6mm}
 \noindent 团队名称：电协\par\vspace{6mm}
@@ -80,18 +81,23 @@ groups={1:'1. 项目背景与意义',2:'2. 技术方案与实现',7:'3. 实验�
 group=0; sub=0; old=0; table_caption=''
 while i<len(lines):
     l=lines[i]
-    if not l.strip(): i+=1; continue
+    if not l.strip() or l.startswith('<!--'): i+=1; continue
     if l==r'\[':
         j=i+1
         while lines[j]!=r'\]': j+=1
         out.append('\n'.join(lines[i:j+1])); i=j+1;continue
     if l.startswith('## '):
         title=l[3:]
-        if title=='摘要': out.append(r'\phantomsection\section*{摘要}\addcontentsline{toc}{section}{摘要}')
+        if title=='总体架构设计':
+            group=2;sub=1
+            out.append(r'\section{2. 技术方案与实现}\subsection{2.1 总体架构设计}')
+        elif title=='系统功能实现':
+            sub+=1;out.append(r'\subsection{'+f'2.{sub} 系统功能实现'+'}')
+        elif title=='摘要': out.append(r'\phantomsection\section*{摘要}\addcontentsline{toc}{section}{摘要}')
         elif re.match(r'\d+\.',title):
             n=int(title.split('.')[0]);old=n
             if n==1:out.append(r'\clearpage\tableofcontents\clearpage')
-            if n in groups:
+            if n in groups and n!=2:
                 group+=1;sub=0
                 out.append(r'\section{'+groups[n]+'}')
             sub+=1
@@ -105,7 +111,15 @@ while i<len(lines):
             out.append(r'\section{'+inline(title)+'}')
         i+=1;continue
     if l.startswith('### '):
-        title=l[4:]; child=title.split()[0].split('.')[-1]
+        title=l[4:]
+        if title=='办公楼中的使用场景':
+            out.append(r'\subsubsection{办公楼中的使用场景}')
+            mapping.append({'source':title,'layout':title})
+            i+=1;continue
+        if title=='应用流程与部署条件':
+            out.append(r'\subsubsection{4.2.1 应用流程与部署条件}');i+=1;continue
+        child=title.split()[0].split('.')[-1]
+        if old==7: child=str(int(child)+1)
         title2=(f'{group}.{child} ' if old==7 else f'{group}.{sub}.{child} ')+re.sub(r'^\d+\.\d+\s*','',title)
         out.append((r'\subsection{' if old==7 else r'\subsubsection{')+inline(title2)+'}');mapping.append({'source':title,'layout':title2});i+=1;continue
     if l.startswith('|'):
@@ -124,7 +138,8 @@ while i<len(lines):
     if l.startswith('!['):
         path=re.search(r'\]\((.*?)\)',l).group(1)
         img=(SOURCE.parent/path).resolve()
-        imgpath=img.relative_to(ROOT).as_posix().replace('outputs/','../../outputs/',1)
+        import os
+        imgpath=Path(os.path.relpath(img,HERE)).as_posix()
         if 'sci_04_' in img.name:imgpath='../phase13_6/assets/figure_04_layout.png'
         j=i+1
         while not lines[j].strip():j+=1
