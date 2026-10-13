@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "path": "docs/competition_rules/2026-07_AI+能源技术报告参考大纲-科技创新组.pdf",
+  "sha256": "1e5d87df60d02235bebf225734b7e7dbc6f951cd64e5e02bccd1d4c512834bbf",
+  "requirements": {
+    "body": "小四号宋体，单倍行距",
+    "references": "五号，20磅行距",
+    "abstract": "300–500字",
+    "structure": "官方五章大纲",
+    "appendix": "omitted at user request"
+  }
+}

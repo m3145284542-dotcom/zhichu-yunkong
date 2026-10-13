@@ -6,17 +6,19 @@
 
 参赛团队：电协 · 团队编号：AIC-2026-27833449
 
-建筑储能的削峰效果，既取决于负荷预测精度，也取决于预测误差出现的时段。智储云控围绕这一问题，完成了负荷预测、电池调度和实际峰值评价的仿真程序，并提出决策导向集成预测方法 DOEF v1.0。
+建筑储能的削峰效果，既取决于负荷预测精度，也取决于预测误差出现的时段。智储云控围绕这一问题，完成了负荷预测、电池调度和实际峰值评价的仿真程序，并提出决策导向预测融合方法 DOEF v1.0。
 
 DOEF 融合 DayWeek 周期基线与 LightGBM，在验证集上按储能调度表现选择逐建筑权重。在 8 栋办公建筑的测试中，相比 LightGBM，平均归一化预测 MAE 降低 6.36%，平均归一化决策后悔值降低 3.61%。
 
-## 参赛成果
+## 最终成果
 
-按报名系统栏目整理材料及补齐要求见[提交清单](docs/SUBMISSION_CHECKLIST.md)。[中文配音演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)已生成，约4分33秒，1080p，附同步字幕。本地整理包由 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449 --revision application-20260911-push` 生成；团队编号已确认；仍需创建百度网盘分享链接并完成网上提交。最终整理包包含已验收视频；项目维护状态和清理记录见[收尾记录](docs/PROJECT_CLOSEOUT.md)。
+[技术报告 PDF](outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf)（16 页） · [答辩 PPTX](outputs/provincial_20261012/DOEF_Provincial_Submission.pptx) / [PDF](outputs/provincial_20261012/DOEF_Provincial_Submission.pdf)（12 页） · [中文演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)（4 分 56 秒）
 
-[技术报告](reports/submission/technical_report_submission.pdf) · [答辩 PPT](outputs/submission/DOEF_Competition_Presentation.pptx) · [演示 PDF](outputs/submission/DOEF_Competition_Presentation.pdf) · [答辩讲稿与资料索引](docs/REPORT_AND_DEFENSE_GUIDE.md)
+[逐页讲稿与指标说明](docs/REPORT_AND_DEFENSE_GUIDE.md) · [提交清单](docs/SUBMISSION_CHECKLIST.md) · [报告正文](reports/provincial_20261012/technical_report.md)
 
-作品包含 DOEF 算法实现、多建筑对比实验、储能调度程序、技术报告和答辩材料。PPT 共 23 页，其中第 1 至 12 页为主讲，第 13 至 23 页为补充实验与方法说明。报告已补充办公楼场景、典型使用流程、总体架构、真实系统界面和应用条件；PPT 第 3 页说明办公楼闭环，第 10 页说明原型定位，第 12 页说明试点路径。报告的[Markdown 正文](reports/submission/technical_report.md)与 PDF 同步维护。
+当前版本由 [current_submission.json](reports/current_submission.json) 指定。仓库仅保留最终交付物、维护代码及必要实验依据；旧报告、旧 PPT、重复视频和制作过程已移出当前文件树。报告与 PPT 的创新定位、消融对照、样本依赖性、负向结果及适用边界一致；视频包含当前 12 页 PPT、中文合成配音与真实离线 GUI 回放。
+
+本地整理包运行 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449 --revision final-20261013` 生成；不纳入 GitHub。网盘分享与赛事报名系统提交仍需单独完成。
 
 ## 技术方案
 
@@ -70,11 +72,11 @@ python -m pip install -r requirements.txt
 **只核对现有材料，无需下载原始数据或重新训练：**
 
 ```sh
-python -m pip install PyMuPDF
-python reports/submission/validate_submission.py
+python -m pip install -r requirements-delivery.txt
+python scripts/validate_final_delivery.py
 ```
 
-材料验证检查文稿、公式、数据表和 PPT 文本是否与源文件一致，同时核对科研文件哈希。检查结果写入 `reports/submission/qa/validation.json`。
+材料验证检查文稿、公式、数据表和 PPT 文本是否与源文件一致，同时核对科研文件哈希。检查结果写入 `reports/provincial_20261012/alignment_qa.json`。
 
 ## 从数据开始复现
 
@@ -88,11 +90,13 @@ python scripts/validate_processed.py
 
 初始数据流水线的教育类园区聚合属于早期探索；最终 DOEF 使用固定办公建筑，不能把 `campus_hourly.csv` 当作最终八建筑预测的替代输入。数据文件、单位与下载失败后的处理见[数据说明](docs/DATASET.md)。
 
-完整实验路线、阶段依赖与历史产物见[开发记录](docs/DEVELOPMENT_HISTORY.md)。重跑阶段脚本会写入对应 `outputs/phase*/`，请在独立工作副本中复现，保留已冻结的提交材料供比较。代码回归入口：
+完整实验路线、阶段依赖与历史产物见[实验复现说明](docs/REPRODUCING.md)。重跑阶段脚本会写入对应 `outputs/phase*/`，请在独立工作副本中复现，保留已冻结的提交材料供比较。代码回归入口：
 
 ```sh
 python -m unittest discover -s tests -v
 ```
+
+公开克隆不含 BDG2 原始大数据，因此只跳过一项直接对照原始电表数据的集成测试；下载数据后该项会自动执行。其余测试使用仓库中的冻结实验依据。
 
 ## 仓库导航
 
@@ -102,8 +106,8 @@ python -m unittest discover -s tests -v
 | `scripts/` | 数据下载、阶段运行、材料生成和验证入口 |
 | `tests/` | 数据因果性、约束、算法与溯源回归检查 |
 | `outputs/phase7/` 至 `outputs/phase9_1/` | 最终多建筑实验、冻结权重与科研证据 |
-| `outputs/submission/` | 当前答辩 PPTX 与演示 PDF |
-| `reports/submission/` | 当前技术报告、排版源与材料验证 |
+| `outputs/provincial_20261012/` | 当前报告 PDF、答辩 PPTX 与 PDF |
+| `reports/provincial_20261012/` | 当前文稿、构建脚本、讲稿与材料校验 |
 | `docs/competition_rules/` | 保存的比赛规则与报告参考大纲 |
 
-数据来源见[数据说明](docs/DATASET.md)，算法定义见[DOEF 配置](outputs/phase9/final_algorithm.json)。历史实验、原版材料及验收记录保存在各阶段目录中，当前材料版本见[成果清单](reports/submission/manifest.json)。
+数据来源见[数据说明](docs/DATASET.md)，算法定义见[DOEF 配置](outputs/phase9/final_algorithm.json)。必要研究证据保存在 phase3–9.1 目录；旧交付版本可从 Git 历史追溯，当前材料版本见[成果清单](reports/provincial_20261012/manifest.json)。

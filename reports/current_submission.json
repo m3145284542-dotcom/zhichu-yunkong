@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "manifest": "reports/provincial_20261012/manifest.json",
+  "report": "outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf",
+  "deck_pdf": "outputs/provincial_20261012/DOEF_Provincial_Submission.pdf",
+  "deck_pptx": "outputs/provincial_20261012/DOEF_Provincial_Submission.pptx",
+  "validator": "reports/provincial_20261012/validate_alignment.py",
+  "qa": "reports/provincial_20261012/alignment_qa.json",
+  "video": "outputs/demo_video/DOEF_Demo_Narrated.mp4",
+  "video_manifest": "outputs/demo_video/manifest.json"
+}

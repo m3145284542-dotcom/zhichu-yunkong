@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "name": "buildings",
+      "collision": "PASS",
+      "width_mm": 154.0,
+      "sha256": "d040a22fbddf5e19162d9d000e7ca8abd1072e28846674ec43fc11c255174c96"
+    },
+    {
+      "name": "main_results",
+      "collision": "PASS",
+      "width_mm": 154.0,
+      "sha256": "c0f7347f526d84a8434340efc72ad3171355b6039222b261b754d630971c9dfe"
+    },
+    {
+      "name": "mismatch",
+      "collision": "PASS",
+      "width_mm": 154.0,
+      "sha256": "063e141f08eec186867ef0ff1735eb083be8108966177aa16ef072459373d814"
+    },
+    {
+      "name": "weights",
+      "collision": "PASS",
+      "width_mm": 154.0,
+      "sha256": "bc6d1cef68776fdbc12453d8358f30d9c3588a143798977339516ed733483453"
+    }
+  ],
+  "static_warnings_reviewed": [
+    "Width expression is 154/25.4 inches, actual exported width 154 mm; report column, not journal format.",
+    "PNG is preview only; vector PDF is the embedded delivery, TIFF not required."
+  ],
+  "visual_review": "All four charts inspected within report at final size; no clipping or overlap; four figures directly read saved CSVs; no new experimental data."
+}

@@ -1,0 +1,26 @@
+{
+  "source_commit": "5b7ca5173b9144cc990cba6118f65d5cc0f40568",
+  "source_path": "reports/submission/technical_report.md",
+  "source_sha256": "4d52201ac1494b1a2a16fd77c5eb6eab85378f208defd417cb2fd326f4252091",
+  "display_equations": [
+    "\\[\nP_t = \\frac{E_t}{\\Delta t}.\n\\]",
+    "\\[\nR_d=\\max_{t\\in d}g_t^{\\text{method}}-\\max_{t\\in d}g_t^{\\text{Oracle}}.\n\\]",
+    "\\[\n\\hat{y}_t+c_t-d_t\\le p^{\\max},\n\\]",
+    "\\[\n\\hat{y}_{b,t}^{\\text{DOEF}}\n=w_b\\hat{y}_{b,t}^{\\text{LightGBM}}\n+(1-w_b)\\hat{y}_{b,t}^{\\text{DayWeek}},\n\\qquad w_b\\in\\{0.0,0.1,\\ldots,1.0\\}.\n\\]",
+    "\\[\n\\mathrm{MAE}=\\frac{1}{n}\\sum_{i=1}^{n}|y_i-\\hat{y}_i|,\n\\qquad\n\\mathrm{RMSE}=\\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(y_i-\\hat{y}_i)^2},\n\\]",
+    "\\[\n\\mathrm{MAPE}=\\frac{100\\%}{|\\mathcal I|}\\sum_{i\\in\\mathcal I}\\left|\\frac{y_i-\\hat{y}_i}{y_i}\\right|,\n\\qquad \\mathcal I=\\{i:|y_i|>10^{-12}\\}.\n\\]",
+    "\\[\n\\min \\; p^{\\max}+\\epsilon\\sum_{t=1}^{24}(c_t+d_t),\n\\qquad \\epsilon=10^{-6},\n\\]",
+    "\\[\nr_{\\text{peak}}=\\frac{\\max_t y_t-\\max_t g_t}{\\max_t y_t}\\times100\\%.\n\\]",
+    "\\[\ns^{\\min}\\le s_t\\le s^{\\max},\\quad\n0\\le c_t\\le z_t P_c^{\\max},\\quad\n0\\le d_t\\le (1-z_t)P_d^{\\max},\n\\]",
+    "\\[\ns_1=s_{25}=0.5C.\n\\]",
+    "\\[\ns_{t+1}=s_t+\\eta_c c_t-\\frac{d_t}{\\eta_d},\n\\]"
+  ],
+  "tables": [
+    "| 数据分区 | 特征时刻范围 | 主要用途 | 是否参与最终报告评价 |\n| --- | --- | --- | --- |\n| 训练集 | 2016-01-15 至 2017-10-31 | 特征统计、基础模型训练、电池按训练期尺度配置 | 否 |\n| 验证集 | 2017-11-01 至 2017-11-30 | 基础模型与 DOEF 权重选择、平局规则执行 | 否 |\n| 测试集 | 2017-12-01 至 2017-12-30 | 冻结算法的最终评价 | 是 |\n",
+    "| 方法 | 定义或作用 |\n| --- | --- |\n| Day Persistence | \\(\\hat{y}_t=y_{t-24}\\)，沿用前一日同小时实际负荷 |\n| Week | \\(\\hat{y}_t=y_{t-168}\\)，沿用前一周同小时实际负荷 |\n| DayWeek | \\(\\hat{y}_t=0.5y_{t-24}+0.5y_{t-168}\\) |\n| LightGBM | 逐建筑训练的梯度提升树预测器 |\n| XGBoost / CatBoost | 冻结对比模型 |\n| DOEF | DayWeek 与 LightGBM 的验证集决策导向融合 |\n",
+    "| 参数 | 取值 |\n| --- | ---: |\n| 容量规则 | 训练期平均日用电量的 10% |\n| 最大充电功率 | 容量的 25%/h |\n| 最大放电功率 | 容量的 25%/h |\n| SOC 下限 / 上限 | 10% / 90% |\n| 日初 / 日末 SOC | 50% / 50% |\n| 充电效率 / 放电效率 | 0.948683 / 0.948683 |\n| 往返效率 | 0.90 |\n| 调度周期 | 24 h，每日重置 |\n",
+    "| 建筑 | MAE 选择的 LightGBM 权重 | 决策后悔值选择的 LightGBM 权重（DOEF） |\n| --- | ---: | ---: |\n| Hog_office_Rolando | 0.9 | 0.7 |\n| Hog_office_Lavon | 0.0 | 0.0 |\n| Hog_office_Joey | 0.6 | 0.3 |\n| Lamb_office_Caitlin | 0.4 | 0.8 |\n| Robin_office_Addie | 1.0 | 1.0 |\n| Lamb_office_Gerardo | 0.0 | 1.0 |\n| Hog_office_Alexis | 0.6 | 0.7 |\n| Hog_office_Byron | 0.9 | 0.8 |\n",
+    "| 方法 | 平均归一化 MAE | 平均归一化 RMSE | 平均 MAPE（%） |\n| --- | ---: | ---: | ---: |\n| Day Persistence | 0.225885 | 0.430193 | 21.33 |\n| Week | 0.201578 | 0.328414 | 23.52 |\n| DayWeek | 0.183478 | 0.296621 | 20.03 |\n| LightGBM | 0.147338 | 0.216942 | 30.90 |\n| XGBoost | 0.149781 | 0.216751 | 32.48 |\n| CatBoost | 0.173604 | 0.239211 | 33.14 |\n| DOEF | 0.137970 | 0.207822 | 16.20 |\n",
+    "| 检查对象 | 规模 | 结果 |\n| --- | ---: | --- |\n| DOEF 测试预测逐点一致性 | 8 栋 × 720 h = 5,760 点 | 最大绝对差 0.0 kW，PASS |\n| 实验文件哈希 | 76 个文件 | 76/76 PASS |\n| 算法选择数据源 | 验证集 | PASS |\n| 测试集角色 | 仅评价 | PASS |\n| 约束审计 | 同一冻结电池与优化器 | PASS |\n"
+  ]
+}

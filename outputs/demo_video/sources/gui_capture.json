@@ -1,0 +1,16 @@
+{
+  "status": "canonical_source",
+  "producer": "FFmpeg lossless H.264 excerpt",
+  "parent": {
+    "path": "outputs/demo_video/history/20261013_before_ppt_video/DOEF_Demo_Narrated.mp4",
+    "sha256": "65c4ab06c9acf23368e69a293f719b30dcba90bd1ebef3d7d7c374b11eb656fe"
+  },
+  "parent_range_seconds": [
+    125,
+    165
+  ],
+  "artifact": "outputs/demo_video/sources/gui_capture.mkv",
+  "sha256": "ac79aa7c54727fb578a8d6b560d5e8b1a162e80949ed1275273fad6021e4f6c0",
+  "note": "Losslessly decoded GUI source excerpt; superseded full video removed during final-only cleanup.",
+  "decoded_frame_identity_verified": true
+}

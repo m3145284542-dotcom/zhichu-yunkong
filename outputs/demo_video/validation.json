@@ -1,7 +1,8 @@
 {
   "status": "PASS",
-  "duration_seconds": 273.02,
-  "bytes": 10306629,
+  "sha256": "b6def9d3475d39ccdabaf1b3aa074cb3078905d4e5133ea290e0a12bfa6b3610",
+  "duration_seconds": 296.14,
+  "bytes": 11697580,
   "checks": {
     "mp4_container": true,
     "duration_180_to_300_seconds": true,
@@ -11,27 +12,52 @@
     "aac_audio": true,
     "all_streams_decode": true,
     "audible_audio": true,
+    "audio_no_full_scale_peak": true,
     "source_hashes_unchanged": true,
-    "artifact_identity": true
+    "artifact_identity": true,
+    "gui_source_identity": true,
+    "planned_duration": true,
+    "all_12_slides_in_order": true,
+    "gui_scene_present": true,
+    "subtitle_matches_narration": true,
+    "subtitles_inside_video": true,
+    "subtitles_do_not_overlap": true,
+    "current_deck_identity": true,
+    "rendered_slide_matches_current_ppt": true
   },
-  "audio_level": [
-    "mean_volume: -19.6 dB",
-    "max_volume: -1.5 dB"
-  ],
+  "audio_level": {
+    "mean_db": -24.3,
+    "max_db": -0.3
+  },
+  "slide_pixel_mean_absolute_error": {
+    "1": 1.5445318717477807,
+    "2": 0.9153055172941537,
+    "3": 0.9182524104683196,
+    "4": 0.8878575528007345,
+    "5": 0.8859586394245484,
+    "6": 0.8156556091215181,
+    "7": 1.0443887741046831,
+    "8": 0.9689571854912763,
+    "9": 1.0475887664524028,
+    "10": 0.7704928068564433,
+    "11": 0.9774058769513315,
+    "12": 1.6256835399449037
+  },
   "decode_errors": "",
   "visual_review_frames_seconds": [
-    8,
-    26,
-    52,
-    80,
-    109,
-    143,
-    160,
-    175,
-    207,
-    238,
-    260
+    4,
+    21.2,
+    40.2,
+    60.2,
+    83.2,
+    112.92,
+    134.92000000000002,
+    160.76000000000002,
+    189.96,
+    216.52,
+    228.48000000000002,
+    262.44,
+    281.92
   ],
-  "note": "Complete stream decode plus representative-frame visual review; neural voice retained at original speed.",
-  "visual_review": "PASS: representative frames across all chapters inspected; subtitles readable and separated from GUI; actual building tour and result table visible."
+  "note": "Visual review required before canonical promotion."
 }

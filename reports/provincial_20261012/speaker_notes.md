@@ -1,0 +1,160 @@
+# 省赛答辩逐页讲稿
+
+正式答辩 12 页，无附录。建议按约 8 分钟排练，实际以现场要求为准。
+
+## 01 智储云控
+
+各位评委老师好，我们的作品是智储云控。我们关注办公楼储能的一个具体问题：预测结果是否真正帮助电池降低用电峰值。本作品完成了决策导向预测融合、约束调度和离线结果展示。建议 20 秒。
+
+页面补充说明：
+全球校园人工智能算法精英大赛 · AI+能源科技创新组
+团队编号：AIC-2026-27833449
+
+证据来源：
+README.md
+outputs/phase9_1/final_reporting_summary.json
+
+## 02 01 项目背景与行业痛点
+
+先从用能管理问题开场。电池容量有限，若预测高峰过早，电池可能提前用完，也可能因充电时机错误形成新峰。本页解释工程机制，不将其当作已发生的现场案例或量化经济收益。建议 40 秒。
+
+页面补充说明：
+背景与需求
+场景解释，不代表已部署案例；当前对象为办公建筑侧储能
+
+证据来源：
+reports/provincial_20261012/technical_report.md §1
+src/battery/optimizer.py
+docs/ENGINEERING_INTEGRATION.md
+
+## 03 02 核心问题：预测误差最优 ≠ 削峰决策最优
+
+6/8 来自验证集同一权重网格的不同选择目标，不是测试集上的胜负数。下方测试反例中 XGBoost 的 RMSE 略好，但后悔值略差，差距很小，只证明两类排序不等价。Oracle 事后知道实际负荷，仅用于比较，不可部署。建议 40 秒。
+
+证据来源：
+outputs/phase8/selected_weights.csv
+outputs/phase9/final_benchmark.csv
+outputs/phase9_1/metric_semantics.json
+
+## 04 03 项目创新点：方法改进与工程贡献
+
+已有工作已经研究任务导向预测和决策导向组合，不能声称首次提出该思想。本项目的具体改进是：用验证集上固定储能优化器的实际后悔值，选择 DayWeek-LightGBM 的有限网格凸组合。创新属于应用方法适配，不是新型 LightGBM、端到端学习或新优化理论。评测与系统是支撑贡献。建议 45 秒。
+
+页面补充说明：
+创新点
+定位：面向建筑储能的应用方法改进；已有任务导向预测研究是本工作的基础
+
+证据来源：
+src/phase8.py select_forecast_weight / select_decision_weight
+reports/provincial_20261012/technical_report.md §4.1
+Stratigakos et al. (2025), Decision-focused linear pooling for probabilistic forecast combination. DOI: 10.1016/j.ijforecast.2024.11.006
+https://portaldelainvestigacion.uma.es/documentos/675f922a60134444f312094d
+
+## 05 04 技术方案：DOEF 决策导向预测融合
+
+用一句话解释 DOEF：我们不改 LightGBM 的训练目标，而是改变预测组合的选择标准。DayWeek 等于目标前 24 小时及 168 小时负荷的平均；w 是 LightGBM 的比例。验证集先生成调度，再用验证期已观测负荷计算后悔值，测试期不重新选择。端点 w=0 和 w=1 分别退化成两个分量，不强制混合。建议 45 秒。
+
+页面补充说明：
+核心方法
+候选权重 w = 0.0、0.1、…、1.0；预测器与优化器分别运行
+
+证据来源：
+outputs/phase8/run_config.json
+outputs/phase8/selected_weights.csv
+src/phase8.py
+
+## 06 05 实验设计：8 栋办公楼，30 个测试日
+
+原始覆盖 2016—2017 年。按特征时刻切分；逐小时用 t 时刻信息预测 t+24 小时，所以测试目标日为 2017-12-02 至 2017-12-31。训练和验证边界按标签可用性清除。建筑资格筛选使用预定义三个窗口的原始覆盖，代表性抽样仅使用训练期形态，不使用测试成绩。不是全新盲测或跨建筑零样本泛化。每天初始、终止 SOC 都为 50%，统一固定参数。建议 45 秒。
+
+页面补充说明：
+实验设计
+固定样本多建筑评测；未验证未见建筑迁移，历史测试期已被查看
+
+证据来源：
+src/features/load_features.py
+src/models/train_lgbm.py
+outputs/phase7/selected_buildings.json
+outputs/phase7/building_battery_configs.csv
+outputs/phase9_1/final_reporting_summary.json
+
+## 07 06 实验结果：相对 LightGBM，平均误差与后悔值均降低
+
+改进率来自未舍入的跨楼等权归一化均值。6胜2平0负比较对象为 LightGBM，平局来自两栋楼 w=1。图示按已冻结建筑顺序。95%区间来自原 Phase9.1 建筑级重采样，8个建筑单位、10000次、种子42，本次未更新这个区间。结论只适用于这组样本，不能把3.61%说成电费、能耗或总峰值的降幅。建议 50 秒。
+
+页面补充说明：
+核心结果
+柱高为逐楼归一化日均后悔值，越低越好；八建筑均展示
+
+证据来源：
+outputs/phase9_1/final_reporting_summary.json
+outputs/phase9_1/building_level_bootstrap.csv
+
+## 08 07 消融实验：选权目标与逐楼适配均有增益
+
+这是证明方法贡献最直接的对照。逐楼 MAE vs 逐楼后悔值只改变选择规则，两个分量和优化器不变；改善12.4781%，5胜2平1负。全局决策权重对照可检查逐建筑权重作用，DOEF相对它改善3.1677%。等权行直接复用 ForecastSelectedGlobal，因为当时选中的全局 MAE 权重恰为0.5，这是数值等价对照，不伪称新预注册实验。12.48%的约82.44%归一化差额由Gerardo贡献，因此同时展示留一楼汇总范围，不能用它代替相对LightGBM的3.61%。此处留一分析仅重新汇总既有结果，没有删楼重训或改选样本。建议 55 秒。
+
+页面补充说明：
+机制验证
+同一批预测分量、同一电池优化器、同一测试期；从既有结果整理，无新增训练
+
+证据来源：
+outputs/phase8/global_test_summary.csv
+outputs/phase8/global_selected_weights.json
+outputs/phase8/test_decision_metrics.csv
+outputs/phase7/building_battery_configs.csv
+reports/provincial_20261012/evidence.json
+
+## 09 08 局限性分析：平均改善仍有失效边界
+
+本页纠正原PPT第19页的案例说明。src/phase8.py 使用两策略测试日峰差绝对值的最大项选择案例，不是测试前预先选定。该日DOEF的1380.125054 kW高于预测选权重的1332.581714 kW；二者都低于无储能1446.768 kW。该日失利与Joey整月最小削峰率-1.017%是不同统计事实，不能把整月负值归因于这个案例日。旧图彩色线为realized_grid_load，并非负荷预测。本版用可编辑表清晰呈现已保存日峰数值，不推断没有被曲线证明的具体充电因果。建议 40 秒。
+
+页面补充说明：
+失效分析
+Joey，2017-12-14；按两种选权策略的测试日峰差异最大事后选取
+
+证据来源：
+src/phase8.py _plots
+outputs/phase8/test_daily_decision_metrics.csv
+outputs/phase8/test_decision_metrics.csv
+outputs/phase9/final_benchmark.csv
+
+## 10 09 系统展示：离线仿真回放与结果比较
+
+展示界面来自项目现有GUI截图。演示顺序为八建筑巡演、查看运行与电池参数、综合结果。GUI曲线是每日最大取电功率，不是逐小时充放电功率。预测和优化在离线实验程序完成；GUI回放已保存结果，不现场重训、不实时优化、不下发指令。建议40秒；如播放视频，应提前确认现场时长。
+
+页面补充说明：
+系统展示
+现有程序的真实界面；读取已保存实验结果，不接收设备控制指令
+
+证据来源：
+reports/provincial_20261012/assets/system_demo.png
+gui/README.md
+gui/server.py
+docs/ENGINEERING_INTEGRATION.md
+
+## 11 10 应用价值：辅助比较建筑储能削峰方案
+
+这一页只介绍已经完成的工作如何支持离线方案比较。项目保存了预测、权重、电池配置与调度结果，并通过GUI回放和核对；统一约束允许评委比较不同预测方法的实际调度效果。逐楼结果和失效案例帮助理解平均改善的适用范围。当前没有现场运行或电费、碳收益的实测结论。建议40秒。
+
+页面补充说明：
+应用价值
+当前成果用于离线方案比较；仿真指标不等同现场实测收益
+
+证据来源：
+docs/ENGINEERING_INTEGRATION.md
+reports/provincial_20261012/technical_report.md §4–5
+outputs/phase8/test_decision_metrics.csv
+gui/README.md
+
+## 12 11 总结与展望：方法、结果与适用边界
+
+我们完成了一个可运行的离线预测调度流程。贡献是把预测组合的选择标准直接连到储能削峰效果；固定实验支持平均改善，也保留失效案例。展望只保留两项：跨月份验证与电池参数敏感性，均未计入本次已完成实验。感谢评委老师。建议20秒。全套12页主讲按上述建议约8分钟；根据现场时长调整。
+
+页面补充说明：
+结论
+智储云控 · DOEF · 8 栋办公建筑离线仿真
+
+证据来源：
+outputs/phase9_1/final_reporting_summary.json
+docs/ENGINEERING_INTEGRATION.md

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "review_date": "2026-10-13",
+  "scope": "Final report, deck, explanation, code, video and public packaging",
+  "research_files_unchanged": 112,
+  "changed_research_files": [],
+  "regression_tests": 130,
+  "regression_status": "PASS",
+  "gui_tour_test": "PASS",
+  "report_alignment_checks": 48,
+  "deck_checks": 62,
+  "video_checks": 20,
+  "markdown_link_check": "PASS",
+  "ppt_note_paths": "PASS",
+  "report_pages": 16,
+  "deck_pages": 12,
+  "semantic_checks": [
+    "DOEF w*LightGBM+(1-w)*DayWeek; Validation-only weight selection",
+    "LightGBM comparison 6.36% MAE and 3.61% regret; ablation gains 12.48% and 3.17%",
+    "Fixed 8-building scope; 30 days/building; negative outcomes preserved",
+    "No tariff, carbon, field control or unseen-building claims"
+  ],
+  "cleanup": "Retired drafts moved to ignored local recovery archive; not included in public files or packages",
+  "limitations": [
+    "No full model-training or dispatch pipeline rerun",
+    "No Baidu or registration-portal submission"
+  ],
+  "public_snapshot_tests": {
+    "discovered": 130,
+    "passed": 129,
+    "skipped": 1,
+    "reason": "Only the integration comparison requiring optional BDG2 raw electricity data is skipped."
+  },
+  "checkout_portability": {
+    "status": "PASS",
+    "scientific_artifact_bytes_match_working_copy": true,
+    "method": "Git attributes preserve registered CRLF/LF and six mixed-newline historical records."
+  }
+}

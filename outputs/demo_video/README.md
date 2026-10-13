@@ -1,11 +1,11 @@
-# 智储云控配音演示视频
+# 最终答辩演示视频
 
-正式视频：`DOEF_Demo_Narrated.mp4`。包含作品功能、实现流程、真实GUI八建筑巡演、实验效果与应用边界。
+`DOEF_Demo_Narrated.mp4`：296.14 秒，1920×1080，中文 Microsoft Huihui 合成配音，同步字幕，12 页正式 PPT 与真实离线 GUI 回放。
 
-中文配音为 Microsoft Xiaoxiao 神经语音合成，保持原始语速；不使用真人声音克隆。字幕已烧录到视频，也提供独立 SRT 和完整讲解稿。视频使用现有冻结数据，没有重新训练或下发设备控制命令。
+字幕、讲解稿、时间轴及校验记录分别为 DOEF_Demo_Narrated.srt、narration.md、timeline.json、manifest.json 和 validation.json。sources/ 只保留重建所需的 12 张幻灯片、逐句音频及无损 GUI 片段，旧视频整片和重复成片已移出交付。
 
-核验记录：`validation.json`。来源及正式状态：`manifest.json`。画面检查：`contact_sheet.jpg`。
+安装 `requirements-delivery.txt` 后，运行 `python scripts/validate_demo_video.py` 检查整片解码、音量、字幕、画面与来源散列。
 
-重新制作：安装 `edge-tts imageio-ffmpeg playwright Pillow`，运行 `python -m playwright install ffmpeg`，然后在仓库根目录运行 `python scripts/build_demo_video.py` 和 `python scripts/validate_demo_video.py`。本机制作脚本使用 Windows 微软雅黑字体和已安装的 Edge；语音合成需要网络。重新生成后状态为 candidate，须完成画面检查再验收。临时录屏及逐段音频保存在 `tmp/demo_video/`。
+使用保存的素材重建：`python scripts/build_ppt_video_20261013.py`，候选结果写入 tmp/video_candidate/；再运行 `python scripts/validate_ppt_video_20261013.py --directory tmp/video_candidate --record`。日常复核不带 --record，不改写已验收文件。更新配音可在 Windows PowerShell 执行 scripts/synthesize_ppt_video.ps1。修改内容后须同步脚本、speech_input.json、幻灯片来源和来源清单。
 
-旧的“待补视频”参赛材料包没有被覆盖。新打包会按视频 manifest 检查正式状态与哈希，再复制MP4。
+候选视频经人工画面/听感验收后，将成片、字幕、讲解稿、时间轴、manifest.json、validation.json 与 contact_sheet.jpg 同步到本目录，更新 manifest 中 artifact 路径及 canonical 状态，再运行报告目录的 finalize_delivery.py。直接构建不会覆盖已验收成片。GUI 展示已保存仿真实验，不是现场设备控制。

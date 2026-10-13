@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8"
+    }
+  ],
+  "producer": "reports/provincial_20261012/render_report_figures.py",
+  "new_experiments": false,
+  "panel_alignment": "not applicable: one axes per figure"
+}

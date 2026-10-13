@@ -3,7 +3,7 @@
   "status": "canonical",
   "role": "portable presentation only; does not replace scientific sources",
   "producer": "gui/export_demo.py",
-  "created_at": "2026-09-11T08:51:26.624415+00:00",
+  "created_at": "2026-10-13T10:35:49.343776+00:00",
   "acceptance": "30 daily records per building/method reconciled to final peaks and regret; all assets inlined",
   "artifact": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
   "sha256": "e0d175e593d715d4550ea939558768d0065fd9cc0494a1ff313f6694152f1505",
@@ -57,7 +57,7 @@
     },
     {
       "path": "gui/server.py",
-      "sha256": "474147d91aaf259fd28b7813101942db7d92fce9a631cfadb0f099093983e964"
+      "sha256": "ca2e74efce5d3c12ae3ce3f957daddef4fd7d63c36516db0e4fddb7b70d48930"
     },
     {
       "path": "gui/export_demo.py",

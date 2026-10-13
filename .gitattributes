@@ -1,0 +1,22 @@
+* text=auto eol=lf
+* whitespace=cr-at-eol
+*.svg -whitespace
+# Accepted delivery hashes identify exact bytes on every platform.
+reports/provincial_20261012/** -text
+outputs/provincial_20261012/** -text
+outputs/demo_video/** -text
+# Frozen manifests hash Windows-generated evidence byte-for-byte.
+outputs/phase*/** text=auto eol=crlf
+reports/phase*.md text eol=crlf
+reports/battery_methodology.md text eol=crlf
+# These accepted files were originally generated with LF.
+outputs/phase6/canonical_reproduction.json text eol=lf
+reports/phase5_5_report.md text eol=lf
+reports/phase5_report.md text eol=lf
+# Preserve the accepted mixed line endings in historical integrity records.
+outputs/phase5_6/summary.json -text
+outputs/phase6/selected_config.json -text
+outputs/phase7/artifact_manifest.json -text
+reports/phase5_7_report.md -text
+reports/phase6_report.md -text
+reports/phase7_report.md -text

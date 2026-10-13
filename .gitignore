@@ -35,3 +35,8 @@ source-pledge.png
 outputs/competition_audit/render_current/
 .local-archive/
 
+
+# Private registration material and ephemeral rendering/cache folders.
+output/
+.chart-data-*/
+reports/current_delivery.json

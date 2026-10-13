@@ -1,0 +1,652 @@
+{
+  "schema_version": 2,
+  "status": "canonical",
+  "scope": "final technical report, defense deck and narrated video",
+  "producer": "reports/provincial_20261012/finalize_delivery.py",
+  "created_utc": "2026-10-13T13:38:40.512099+00:00",
+  "acceptance_reason": "Current content, source identities and hash-bound visual reviews passed",
+  "canonical_for_scope": [
+    "outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf",
+    "outputs/provincial_20261012/DOEF_Provincial_Submission.pdf",
+    "outputs/provincial_20261012/DOEF_Provincial_Submission.pptx",
+    "outputs/demo_video/DOEF_Demo_Narrated.mp4"
+  ],
+  "source_artifacts": [
+    {
+      "path": "outputs/phase8/global_test_summary.csv",
+      "sha256": "42d8930a4c3799951bdffeb8d8bb525dbcd462962cf88f37e71caae3eeab919a"
+    },
+    {
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "sha256": "1c4667ce525a0cdada916bd11ee8c27276ec3a816aeae6b12bbd45355fdbb502"
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "sha256": "918f3b4e38cec5b16be964a2631392577068333de264e973ddac9409a2f4da60"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    {
+      "path": "outputs/phase8/global_selected_weights.json",
+      "sha256": "327e2208cc5ffe9c0c4de2690070764652de24091ad3914e746a16c398b7ecd2"
+    },
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "e360e2259744a3b9788d550ba87635e4f986d726e93147066e8d7deaa40a8eb7"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8"
+    },
+    {
+      "path": "reports/provincial_20261012/assets/system_demo.png",
+      "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e"
+    },
+    {
+      "path": "src/phase8.py",
+      "sha256": "19aea3a725349c9a05f3f0f5683a6acb95666e26482c2396227f1c3fe46226a6"
+    },
+    {
+      "path": "docs/ENGINEERING_INTEGRATION.md",
+      "sha256": "29c630591384d53eb853d55c865ba67fec505fb8eedd8680c6536381f72da772"
+    }
+  ],
+  "new_experiments_run": false,
+  "validation": {
+    "alignment_qa.json": "PASS",
+    "qa.json": "PASS",
+    "report_visual_qa.json": "PASS",
+    "deck_visual_qa.json": "PASS"
+  },
+  "artifacts": [
+    {
+      "path": "outputs/demo_video/contact_sheet.jpg",
+      "sha256": "cf8f71cd272349527a795f44169251454d5a38e2812179066c365659e6ccfcfb",
+      "bytes": 717034
+    },
+    {
+      "path": "outputs/demo_video/DOEF_Demo_Narrated.mp4",
+      "sha256": "b6def9d3475d39ccdabaf1b3aa074cb3078905d4e5133ea290e0a12bfa6b3610",
+      "bytes": 11697580
+    },
+    {
+      "path": "outputs/demo_video/DOEF_Demo_Narrated.srt",
+      "sha256": "177c4925ce7d0dca2c0a0d764147b0b2972c4d5ff811b95bacb31b2d12104f05",
+      "bytes": 4815
+    },
+    {
+      "path": "outputs/demo_video/manifest.json",
+      "sha256": "afb6e71191d085fe063683bfd98de7a7baf7a0a6f614c6140b282bcea4a42a8c",
+      "bytes": 12490
+    },
+    {
+      "path": "outputs/demo_video/narration.md",
+      "sha256": "4c7dd79ca9dfb5241dca342300561b2ae582c5fb64f3cb329fea9dbd35dfa5f2",
+      "bytes": 3937
+    },
+    {
+      "path": "outputs/demo_video/README.md",
+      "sha256": "6ce3164f19194796d58c0189aaffc42a2aecd6789b5bb6bb8d2ca6c3a15a9218",
+      "bytes": 1441
+    },
+    {
+      "path": "outputs/demo_video/recording_sources/DOEF_Dynamic_Demo.html",
+      "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833",
+      "bytes": 1032562
+    },
+    {
+      "path": "outputs/demo_video/recording_sources/manifest.json",
+      "sha256": "8c86411d3ca9c3121237c2f970106ad526817615256622d226414377359a1f61",
+      "bytes": 2439
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/00_00.wav",
+      "sha256": "d6ac3c7536a29d7ca267311dba9572b6c1f79ae2fab6123eaa717172ab64d7e5",
+      "bytes": 296276
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/00_01.wav",
+      "sha256": "4fb57c66270f43f9e45782a3112947d75a8363542e3e798ca6e613e356ff296a",
+      "bytes": 405162
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/01_00.wav",
+      "sha256": "cf52ce6c16d37a7ccffca68802cef550f995e2c5926b2a84f51f8b93702548e2",
+      "bytes": 239628
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/01_01.wav",
+      "sha256": "31eae910c8d32548d31498ad54d77e86b65c228254ffecbc253d7be144b69bcc",
+      "bytes": 258800
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/01_02.wav",
+      "sha256": "ecc77d12c069398ec07c7834c24444a7f0a039eaf86350bb7cc2bd7b7619330b",
+      "bytes": 276868
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/02_00.wav",
+      "sha256": "7b232881fbf4d6c482af00c6f18286ed43fa98b4428e7e72ad49ac8918efec23",
+      "bytes": 219568
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/02_01.wav",
+      "sha256": "57fefb67fd59e109d954b5da1d194d6e65047f225ae21510073971e3f9590cff",
+      "bytes": 331974
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/02_02.wav",
+      "sha256": "ebd9c7671a4f7c6269ed0d39e56ce5a78dcdfc73714911dc31c983b1c2ed4938",
+      "bytes": 266944
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/03_00.wav",
+      "sha256": "2d2b2c170ff7369c1a19890a121b6fc60ee06d5817f8fe0e53de02e23e590ad5",
+      "bytes": 254176
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/03_01.wav",
+      "sha256": "3c950ae61660aca5e4878ef7f31aaa939d6f797c10fd08c78c09617ad279bdb0",
+      "bytes": 455628
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/03_02.wav",
+      "sha256": "aa5a3bd34c38588cc4a066bcd0bf613e857aefae9bf6182109d57a3e616f5962",
+      "bytes": 242044
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_00.wav",
+      "sha256": "1f5bf8bfbddadbaa3a73a2bbcc1a70bdacba7f24810baf537ce143a21fecd995",
+      "bytes": 325376
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_01.wav",
+      "sha256": "fa463246755dca6e50252b6ea028688f06d7664a84cd55d9fc2d2dbba910c015",
+      "bytes": 296054
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_02.wav",
+      "sha256": "39c264d126a56999e2967ebbb15fcd12116c6e5ac0173fa5e8768977c80919be",
+      "bytes": 286348
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_03.wav",
+      "sha256": "3296a48c9a207f57aa32f8081da7d19db1f850a6d9287bb4af57c537eaf1c774",
+      "bytes": 335042
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/05_00.wav",
+      "sha256": "8689823bdba9f6561801bc18dedf29cc1108ebfb82dfddfa287bb674ee3b3d4f",
+      "bytes": 255492
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/05_01.wav",
+      "sha256": "5edbe6df25f244f9ef330f421ae8f6a5ae9f648ab34316347200151c68d603ae",
+      "bytes": 349828
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/05_02.wav",
+      "sha256": "449a768ae450f2c2444e0246a2be40bbdd6da8c5699d50fadf3a36973d87ac1e",
+      "bytes": 301112
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/06_00.wav",
+      "sha256": "836b8728a92df6dfda070d7251aac1b74aaa870c795c48fcdc20258746f62615",
+      "bytes": 468846
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/06_01.wav",
+      "sha256": "1e15f34d7534e276a374c8ea6cfcd24156b4845d994259f2e5b85d1142ef5630",
+      "bytes": 189594
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/06_02.wav",
+      "sha256": "64313b0511f4d9b26253b1674dca634516f41a6cab3ddb60341fde8da6a8f34c",
+      "bytes": 417930
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_00.wav",
+      "sha256": "e434395f583d1db94131bc55a934ed8bec2c4291548573e8151bae5272a9e69c",
+      "bytes": 276430
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_01.wav",
+      "sha256": "42854a4619a8212f39aa557baa3ccaaf214fbb155839490b208e61e2654d0993",
+      "bytes": 533228
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_02.wav",
+      "sha256": "b21c96296e526f0880b66c90228519b6c46d9c9c6f1d9deba11792212f65f44c",
+      "bytes": 181868
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_03.wav",
+      "sha256": "5b24b06249a82a2aaaac695c34233933cea68f25b4851f7116b8a710d538ddd5",
+      "bytes": 227926
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_00.wav",
+      "sha256": "e8470edf84af85acde3cb744c62e9e394ab628a1c8c035e08f6cc65d68f05ca3",
+      "bytes": 182086
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_01.wav",
+      "sha256": "979e4916cf2475545aa83b8577e5c15bac83a626a0b295f711f2f6d4d07fafd7",
+      "bytes": 307946
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_02.wav",
+      "sha256": "1000eedcf9f3cbc0caeffa6d53f11b6b688b4336e0a2ca911964e87fe80d4927",
+      "bytes": 181642
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_03.wav",
+      "sha256": "09b913d320b1dd346525e2425a37880d2d9da007d405075f1b412c1660dd0f1b",
+      "bytes": 430934
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/09_00.wav",
+      "sha256": "cbd4e8d31fd7fe3a695867cb41f142669592e230864406719db3bea0adae6a3d",
+      "bytes": 286354
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/09_01.wav",
+      "sha256": "ef5880e5e0bd45701de7e39a64645cf486f0e4961e0ac1acc5964215b761a5d0",
+      "bytes": 184074
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_00.wav",
+      "sha256": "1e8f5326148f7f8a0110a73ed390e09b6cd4f54c5a5d72cded8712cee9ab3600",
+      "bytes": 225080
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_01.wav",
+      "sha256": "94c0e1c7ee12321cec1530d83bb1cba83bd3eb4f52fa76d3a24665264b037c7b",
+      "bytes": 370328
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_02.wav",
+      "sha256": "b79db195ba51933e524fc8e98f53f40c95016cc546c383ed8da8491e842de55a",
+      "bytes": 244684
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_03.wav",
+      "sha256": "6b9cbe63852877f2e622b92100d162b2ba1268d2fb14f4b2510330a858ae8056",
+      "bytes": 313686
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_04.wav",
+      "sha256": "cbfde05fcffd19599ce8abb44d64372d031f82424c973f1e3604cbdde5ed2c95",
+      "bytes": 270262
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/11_00.wav",
+      "sha256": "6a2b02fc8e8f79c506000728b4ba7549d435994ed4cec2cb91ec1c00cf049afe",
+      "bytes": 204560
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/11_01.wav",
+      "sha256": "5b5a046dbed20d8c92342445b6f8c654fd8fb6a56a2958f9b629b522a70fcd6c",
+      "bytes": 361526
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/11_02.wav",
+      "sha256": "6310047d1f4d3c89beb61e366dd77f57a268236974aecec0fffec081e1e2fefc",
+      "bytes": 229264
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/12_00.wav",
+      "sha256": "d000205f3100a94d2f9d183a45de2c88a287c20315ff8ef5118b2526cb1ccea5",
+      "bytes": 287228
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/12_01.wav",
+      "sha256": "8bb6140e1cfe6715ad24796efc3bd4ae52e620eeff332af46ea6ac413f18a090",
+      "bytes": 370770
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/12_02.wav",
+      "sha256": "b1daceb5062344cd83652604242a38955f92163c54a225f5865cc8edef60b6ad",
+      "bytes": 82470
+    },
+    {
+      "path": "outputs/demo_video/sources/gui_capture.json",
+      "sha256": "824793f31f9621f2c6ceeaaedc6fdf46884a0dfbd90f6a1e652a22805259ce4e",
+      "bytes": 615
+    },
+    {
+      "path": "outputs/demo_video/sources/gui_capture.mkv",
+      "sha256": "ac79aa7c54727fb578a8d6b560d5e8b1a162e80949ed1275273fad6021e4f6c0",
+      "bytes": 13119809
+    },
+    {
+      "path": "outputs/demo_video/sources/slide01.png",
+      "sha256": "3d142e93fbea0741991cabd53f625dab53e0b796c3e470bd6be6fdbebcabb981",
+      "bytes": 47717
+    },
+    {
+      "path": "outputs/demo_video/sources/slide02.png",
+      "sha256": "0dd933f01fe42b31ec38783e6e00c162be61ba369fdfaf69cab6e91e42d543be",
+      "bytes": 61111
+    },
+    {
+      "path": "outputs/demo_video/sources/slide03.png",
+      "sha256": "31d2f866a05bcdfb1d422620c40439a53b99bc676fa6c7f028c9c584fc34d4c1",
+      "bytes": 69472
+    },
+    {
+      "path": "outputs/demo_video/sources/slide04.png",
+      "sha256": "36de480634ac24ab6a24fa060a47c37ec8e4c2ddc73c1e3af659f73e58648349",
+      "bytes": 69759
+    },
+    {
+      "path": "outputs/demo_video/sources/slide05.png",
+      "sha256": "9bd243697bb9881eb1139f3ef3f922324c92ae772a972e3280d3b2ef7812670b",
+      "bytes": 57767
+    },
+    {
+      "path": "outputs/demo_video/sources/slide06.png",
+      "sha256": "50974e138998a10bd3e396682c2074f799d7321ed4243173d72cac6ec2f2f937",
+      "bytes": 64818
+    },
+    {
+      "path": "outputs/demo_video/sources/slide07.png",
+      "sha256": "b0aa1ba5b7a791a06820a145cf557374ab66c3cd82239c7f0691d3e0db59337e",
+      "bytes": 95275
+    },
+    {
+      "path": "outputs/demo_video/sources/slide08.png",
+      "sha256": "d5ad56213f83361344bd180ae4716f3b4954765330340a7a50e06731ff2616d3",
+      "bytes": 80900
+    },
+    {
+      "path": "outputs/demo_video/sources/slide09.png",
+      "sha256": "5648a747c3f7a4a45fe664ddcfee779ddbac81b693e16f725a079cb8d3d7fd23",
+      "bytes": 114236
+    },
+    {
+      "path": "outputs/demo_video/sources/slide10.png",
+      "sha256": "1a1ddf694c2a956a6dd84b15e1eea3f682dd21cf81996eb5f3167f180cc27c34",
+      "bytes": 157307
+    },
+    {
+      "path": "outputs/demo_video/sources/slide11.png",
+      "sha256": "5c1ddf858c08034b583c3b695aa64ce73cd2855414e8736d4da4e985c5c31459",
+      "bytes": 78688
+    },
+    {
+      "path": "outputs/demo_video/sources/slide12.png",
+      "sha256": "f22362bfc70ab765ce06b6e84aad983378ae9af280a25953b14183f92638d9bd",
+      "bytes": 68965
+    },
+    {
+      "path": "outputs/demo_video/speech_input.json",
+      "sha256": "d379e3b0f16e4bfecd20574f55e557f3e1640b02ca1fc2b3393b73e2810b9b90",
+      "bytes": 5162
+    },
+    {
+      "path": "outputs/demo_video/timeline.json",
+      "sha256": "7a32d04b1bea5d817997b536830cdcbd503d2ec1e1b70e29e12a683b58af1981",
+      "bytes": 5628
+    },
+    {
+      "path": "outputs/demo_video/validation.json",
+      "sha256": "80d743fbfb630443b0edba7e005967553fee3d0d43e04785b2fab03b5054da6f",
+      "bytes": 1596
+    },
+    {
+      "path": "outputs/provincial_20261012/DOEF_Provincial_Submission.pdf",
+      "sha256": "2761356fd999f59f8f01a88c057fa20891d9b2649f41325754e13925f58e0118",
+      "bytes": 376359
+    },
+    {
+      "path": "outputs/provincial_20261012/DOEF_Provincial_Submission.pptx",
+      "sha256": "620a4033fe0d184659caf678b500f7ed12b4353c00f9920bcdec66bf66a96ed9",
+      "bytes": 227225
+    },
+    {
+      "path": "outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf",
+      "sha256": "ea2efd1e1be6b128d6b8a224d9fd3d1eb4642dd826495e82c6ef1f0c97b5686b",
+      "bytes": 455900
+    },
+    {
+      "path": "reports/provincial_20261012/.gitignore",
+      "sha256": "f4635974b4f62bc0072002fc8ab96a8c12731b58791af549882b95e8dd0e61e0",
+      "bytes": 107
+    },
+    {
+      "path": "reports/provincial_20261012/alignment_qa.json",
+      "sha256": "95f1fc439bbcd690bc450cbd4f5546a63185689a0dfa4dc3882dba7c2a7f6fba",
+      "bytes": 2392
+    },
+    {
+      "path": "reports/provincial_20261012/assets/system_demo.png",
+      "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e",
+      "bytes": 175366
+    },
+    {
+      "path": "reports/provincial_20261012/build_deck.mjs",
+      "sha256": "3a1bafba31787b0019ea7afed37817da1c419d85048c9006c06807bc6b47501d",
+      "bytes": 25429
+    },
+    {
+      "path": "reports/provincial_20261012/build_receipt.json",
+      "sha256": "8c7ccd8cb99db7fef0f8b3ecf5575153be6586268bba063224810881d05822c7",
+      "bytes": 384
+    },
+    {
+      "path": "reports/provincial_20261012/build_report.py",
+      "sha256": "116106291dd5ffc26a8437083cec165fd1749789a9db7554db4fb5451d71900a",
+      "bytes": 7630
+    },
+    {
+      "path": "reports/provincial_20261012/deck_visual_qa.json",
+      "sha256": "2e86f3047c92c8e1d5588ea19e9634706e17da79eb47d7bb4c28c95345d354f1",
+      "bytes": 428
+    },
+    {
+      "path": "reports/provincial_20261012/evidence.json",
+      "sha256": "f555d0b65078a9518b3eefe92207433a57d8588516b09da2c13503da7357668d",
+      "bytes": 26412
+    },
+    {
+      "path": "reports/provincial_20261012/export_deck.ps1",
+      "sha256": "9138740468cb5636a8ecf301833d76862426338607939e355006b469d46336cf",
+      "bytes": 900
+    },
+    {
+      "path": "reports/provincial_20261012/figure_contract.md",
+      "sha256": "8fd89a097a97bfe7c055bd37ccf37638c55f4961aef9f3656e32e664393728c6",
+      "bytes": 1375
+    },
+    {
+      "path": "reports/provincial_20261012/figure_qa.json",
+      "sha256": "9270772245db05ae00edcf011d61a683a060af35499ab021caa9697fb45b07c3",
+      "bytes": 1169
+    },
+    {
+      "path": "reports/provincial_20261012/figures/buildings.csv",
+      "sha256": "27a3bbd22abef15db86aa9c6d0b48dfa630741dcd2055ec00a974c35f296cf1c",
+      "bytes": 499
+    },
+    {
+      "path": "reports/provincial_20261012/figures/buildings.pdf",
+      "sha256": "d040a22fbddf5e19162d9d000e7ca8abd1072e28846674ec43fc11c255174c96",
+      "bytes": 18883
+    },
+    {
+      "path": "reports/provincial_20261012/figures/buildings.png",
+      "sha256": "4f66c1f0fee131151cf6ab74477310c71a4113d8acfa588ef23ebadb796a1cba",
+      "bytes": 169484
+    },
+    {
+      "path": "reports/provincial_20261012/figures/buildings.svg",
+      "sha256": "33316831ac2d9da04202cdfa22ab49180323acc00604ad1fbedcc1548a194150",
+      "bytes": 14534
+    },
+    {
+      "path": "reports/provincial_20261012/figures/main_results.csv",
+      "sha256": "75e0b497e7f7aaef2accdf60ecc6ca85de541c6dbf8ea42c4b03bf97d67975b5",
+      "bytes": 157
+    },
+    {
+      "path": "reports/provincial_20261012/figures/main_results.pdf",
+      "sha256": "c0f7347f526d84a8434340efc72ad3171355b6039222b261b754d630971c9dfe",
+      "bytes": 19696
+    },
+    {
+      "path": "reports/provincial_20261012/figures/main_results.png",
+      "sha256": "9342f6a610c1f76b60d45aa701c8dc716df752f5636fe0a3cb87740291a53343",
+      "bytes": 137467
+    },
+    {
+      "path": "reports/provincial_20261012/figures/main_results.svg",
+      "sha256": "3534d354a3ba3372d8ea686997c9d1caff401f4aa1e7e378d20fb2206fa39d00",
+      "bytes": 8014
+    },
+    {
+      "path": "reports/provincial_20261012/figures/mismatch.csv",
+      "sha256": "3e344a2c01a3d41e8a858e0d4bb52f1a444efced50a529cdbace2b7aacf4df0f",
+      "bytes": 161
+    },
+    {
+      "path": "reports/provincial_20261012/figures/mismatch.pdf",
+      "sha256": "063e141f08eec186867ef0ff1735eb083be8108966177aa16ef072459373d814",
+      "bytes": 19955
+    },
+    {
+      "path": "reports/provincial_20261012/figures/mismatch.png",
+      "sha256": "fd29824ee76640f43cee34795623acf72d896c0d76b08fa0c24583b972ed9131",
+      "bytes": 153561
+    },
+    {
+      "path": "reports/provincial_20261012/figures/mismatch.svg",
+      "sha256": "22ea9dee6927a3f97baa0a0f1d75b79687bf406524b3c9deb8bb1db2522abfa2",
+      "bytes": 8879
+    },
+    {
+      "path": "reports/provincial_20261012/figures/source_manifest.json",
+      "sha256": "4ab8647656f307cd801b8192ec6ab0654d3fc5902034bb87bb51bc449f830182",
+      "bytes": 653
+    },
+    {
+      "path": "reports/provincial_20261012/figures/weights.csv",
+      "sha256": "c451e9e8475accb947c3ba97175c3028abb55259abae9d838a65458eb9663644",
+      "bytes": 250
+    },
+    {
+      "path": "reports/provincial_20261012/figures/weights.pdf",
+      "sha256": "bc6d1cef68776fdbc12453d8358f30d9c3588a143798977339516ed733483453",
+      "bytes": 19714
+    },
+    {
+      "path": "reports/provincial_20261012/figures/weights.png",
+      "sha256": "c5bac3e041a271740d883764378b1bb4aef78cede6282c0545c4f8fd3c459f78",
+      "bytes": 192356
+    },
+    {
+      "path": "reports/provincial_20261012/figures/weights.svg",
+      "sha256": "7e6b55a6293d9b7a600260eb37da1f01c434ccc0aaa2d18c8c6facb249590979",
+      "bytes": 14555
+    },
+    {
+      "path": "reports/provincial_20261012/finalize_delivery.py",
+      "sha256": "ac46791aa348640978016d151f712720f530747fb337c5a75cfb26120175b20c",
+      "bytes": 2906
+    },
+    {
+      "path": "reports/provincial_20261012/format_source.json",
+      "sha256": "d1d991272bafb9a773b8f2187edafa5770e738eacf9bc39a9d49e4cb8f392661",
+      "bytes": 443
+    },
+    {
+      "path": "reports/provincial_20261012/package_validation.json",
+      "sha256": "c52e87698881c6c8470a0c36832e6f1d4a6067ee628d45c8e23457e4cfa9c5d3",
+      "bytes": 7757
+    },
+    {
+      "path": "reports/provincial_20261012/prepare_evidence.py",
+      "sha256": "d5ce9bafefb2668aaacc9f39c8a80b7294e869125078c188610b6d8497269955",
+      "bytes": 4362
+    },
+    {
+      "path": "reports/provincial_20261012/qa.json",
+      "sha256": "4e597329ecf6f848c3384815a7d12a96508430c205fabed2df4f269a98fd7403",
+      "bytes": 3378
+    },
+    {
+      "path": "reports/provincial_20261012/README.md",
+      "sha256": "6bfb27ce74fd14d08e778b00b7e70ebd6e6882a4f47277688dd3e4ad751e61f5",
+      "bytes": 2094
+    },
+    {
+      "path": "reports/provincial_20261012/reference_metadata_audit.json",
+      "sha256": "92feb37132b5c1bb87c89658653bc3b290588dad30389bcab7efb3262b3f4eea",
+      "bytes": 22014
+    },
+    {
+      "path": "reports/provincial_20261012/render_report_figures.py",
+      "sha256": "37634869b3c2c2d74ed554ed06c66c226e2b10f2c90b84c53e68e098bbedad87",
+      "bytes": 4003
+    },
+    {
+      "path": "reports/provincial_20261012/report_contract.json",
+      "sha256": "d94a1231322c47bc74c1a149151be347df931feeaaf82c0691da685027921104",
+      "bytes": 3812
+    },
+    {
+      "path": "reports/provincial_20261012/report_source.json",
+      "sha256": "4f8ec4d87eaffee31bb38b8d279ad891a61ad226d0d56fe4a12dd72a693ad68b",
+      "bytes": 2457
+    },
+    {
+      "path": "reports/provincial_20261012/report_visual_qa.json",
+      "sha256": "2a603bb02cc755f47ed3ac946568ead6265ec9b1c9208be1b9daa8a6154bdf43",
+      "bytes": 525
+    },
+    {
+      "path": "reports/provincial_20261012/speaker_notes.json",
+      "sha256": "1146b643184afe55c55c66443e5184be6a0f6fa897d241c95512ab9e9aefd14f",
+      "bytes": 9326
+    },
+    {
+      "path": "reports/provincial_20261012/speaker_notes.md",
+      "sha256": "2d9cb307d5e0f927eaad4ec569bc29b827dec518073b521bbd497ff46c30a538",
+      "bytes": 8770
+    },
+    {
+      "path": "reports/provincial_20261012/technical_report.md",
+      "sha256": "59ea145495f9232e1bca0d5a1663a426d5a3423ae6eb32545f9a2a8b9fc61769",
+      "bytes": 32643
+    },
+    {
+      "path": "reports/provincial_20261012/technical_report_layout.tex",
+      "sha256": "a90bd467cca624812ade50fbd621f2950b623c429c39d5bf70fc6742757f20a9",
+      "bytes": 38030
+    },
+    {
+      "path": "reports/provincial_20261012/validate_alignment.py",
+      "sha256": "73a9c61fe30e0c32cec2a44fe6890c464f1af33c2797531008c2d292072e61fb",
+      "bytes": 5423
+    },
+    {
+      "path": "reports/provincial_20261012/validate_deck.py",
+      "sha256": "1d8c7565b7e3aa5851894a51f87fa498539a4336f9d151d4fa992f4c9ec79177",
+      "bytes": 5653
+    }
+  ],
+  "limitations": [
+    "Offline fixed-eight-building evidence; no new training, field control or external competition submission."
+  ],
+  "cleanup_policy": "Only accepted deliverables, maintenance sources and required research evidence retained. Earlier tracked drafts remain in Git history."
+}

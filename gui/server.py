@@ -72,7 +72,7 @@ class Handler(BaseHTTPRequestHandler):
                  '/app.js': ('gui/app.js', 'text/javascript; charset=utf-8'),
                  '/style.css': ('gui/style.css', 'text/css; charset=utf-8'),
                  '/portable-demo.html': ('outputs/gui_demo/DOEF_Dynamic_Demo.html', 'text/html; charset=utf-8'),
-                 '/dispatch.png': ('outputs/phase13_1/figures/sci_05_storage_dispatch_frozen.png', 'image/png')}
+                 '/dispatch.png': ('gui/assets/dispatch.png', 'image/png')}
         try:
             if path == '/api/demo':
                 data, mime = json.dumps(payload(), ensure_ascii=False, allow_nan=False).encode(), 'application/json; charset=utf-8'

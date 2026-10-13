@@ -1,0 +1,8 @@
+{
+  "status": "accepted",
+  "build_dir": "D:\\document\\aic\\tmp\\provincial_review\\build-1791853394038",
+  "final_path": "D:\\document\\aic\\tmp\\provincial_review\\build-1791853394038\\final\\validated.pptx",
+  "slide_count": 12,
+  "validation_receipt": "reports/provincial_20261012/package_validation.json",
+  "content_validation": "reports/provincial_20261012/qa.json"
+}

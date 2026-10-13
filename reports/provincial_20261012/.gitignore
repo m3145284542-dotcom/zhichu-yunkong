@@ -1,0 +1,5 @@
+__pycache__/
+technical_report_layout.*
+qa/compile_console.txt
+qa/official_logo.png
+qa/heading_mapping.json

@@ -1,41 +1,22 @@
-name: Validate final submission materials
-
+name: Validate final delivery
 on:
   push:
     branches: [main]
-    paths:
-      - 'README.md'
-      - 'docs/**'
-      - 'reports/submission/**'
-      - 'outputs/submission/**'
-      - 'outputs/gui_demo/**'
-      - 'outputs/demo_video/**'
-      - '.github/workflows/submission.yml'
-      - 'tests/test_submission_hashes.py'
   pull_request:
-    paths:
-      - 'README.md'
-      - 'docs/**'
-      - 'reports/submission/**'
-      - 'outputs/submission/**'
-      - 'outputs/gui_demo/**'
-      - 'outputs/demo_video/**'
-      - '.github/workflows/submission.yml'
-      - 'tests/test_submission_hashes.py'
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install PyMuPDF==1.28.2
-      - run: python -m unittest discover -s tests -p test_submission_hashes.py -v
-      - run: python reports/submission/validate_submission.py
+          cache: pip
+      - run: python -m pip install -r requirements.txt -r requirements-delivery.txt
+      - run: python scripts/validate_final_delivery.py
+      - run: python scripts/validate_demo_video.py
+      - run: python -m unittest discover -s tests -v

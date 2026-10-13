@@ -4,7 +4,7 @@ from pathlib import Path
 import subprocess
 import unittest
 
-from reports.submission.frozen_hashes import matches_frozen_hash
+from reports.frozen_hashes import matches_frozen_hash
 
 
 class SubmissionHashTests(unittest.TestCase):
@@ -27,7 +27,7 @@ class SubmissionHashTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         audit = json.loads((root / 'outputs/phase9_1/artifact_hash_audit.json').read_text())
         identities = {x['path']: x for x in json.loads((root /
-            'reports/submission/frozen_text_identity.json').read_text())['artifacts']}
+            'reports/frozen_text_identity.json').read_text())['artifacts']}
         for item in audit['artifacts']:
             with self.subTest(path=item['path']):
                 data = subprocess.check_output(['git', 'show', 'HEAD:' + item['path']], cwd=root)

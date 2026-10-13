@@ -1,71 +1,326 @@
 {
+  "schema_version": 2,
   "status": "canonical",
-  "role": "competition demonstration video",
-  "created_at": "2026-09-09T01:28:47.918904+00:00",
-  "producer": "scripts/build_demo_video.py",
+  "role": "competition demonstration video based on current 12-slide defense",
+  "created_at": "2026-10-13T01:25:48.502860+00:00",
+  "producer": "scripts/build_ppt_video_20261013.py",
   "artifact": "outputs/demo_video/DOEF_Demo_Narrated.mp4",
-  "sha256": "b411ad95568aae8193b19be7a04af475bdc367d2a00f862439dfa45aed543655",
-  "bytes": 10306629,
-  "planned_duration_seconds": 273,
-  "voice": "zh-CN-XiaoxiaoNeural",
-  "voice_type": "neural synthesized Chinese narration",
+  "sha256": "b6def9d3475d39ccdabaf1b3aa074cb3078905d4e5133ea290e0a12bfa6b3610",
+  "bytes": 11697580,
+  "planned_duration_seconds": 296.12,
+  "voice": "Microsoft Huihui",
+  "voice_type": "local Windows Chinese speech synthesis; not neural voice or voice clone",
+  "source_hash_normalization": "raw bytes",
   "sources": [
     {
-      "path": "outputs/demo_video/recording_sources/DOEF_Dynamic_Demo.html",
-      "sha256": "374a57d61c5d8549deed3523117a71aafe1004f333b6921828162a13b72a5833",
-      "original_path": "outputs/gui_demo/DOEF_Dynamic_Demo.html",
-      "source_commit": "0443a73",
-      "status": "historical_source"
+      "path": "outputs/provincial_20261012/DOEF_Provincial_Submission.pptx",
+      "sha256": "620a4033fe0d184659caf678b500f7ed12b4353c00f9920bcdec66bf66a96ed9"
     },
     {
-      "path": "outputs/demo_video/recording_sources/manifest.json",
-      "sha256": "8c86411d3ca9c3121237c2f970106ad526817615256622d226414377359a1f61",
-      "original_path": "outputs/gui_demo/manifest.json",
-      "source_commit": "0443a73",
-      "status": "historical_source"
+      "path": "outputs/provincial_20261012/DOEF_Provincial_Submission.pdf",
+      "sha256": "2761356fd999f59f8f01a88c057fa20891d9b2649f41325754e13925f58e0118"
+    },
+    {
+      "path": "reports/provincial_20261012/speaker_notes.json",
+      "sha256": "1146b643184afe55c55c66443e5184be6a0f6fa897d241c95512ab9e9aefd14f"
+    },
+    {
+      "path": "reports/provincial_20261012/evidence.json",
+      "sha256": "f555d0b65078a9518b3eefe92207433a57d8588516b09da2c13503da7357668d"
     },
     {
       "path": "outputs/phase9/final_benchmark.csv",
-      "sha256": "a43ecd09e1e740c53561ef56547d502224a6c199de33c7248000d04bba73e2b6"
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
     },
     {
       "path": "outputs/phase9_1/final_reporting_summary.json",
-      "sha256": "d49a8ee5dfaec45c67d02c6589c0c5e6035f8a4df201419777d0860e16f0a1b1"
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
     },
     {
-      "path": "scripts/build_demo_video.py",
-      "sha256": "6408177891563cfa4779e0fcbf58a1dfa005b4550831ef2de9ad335cc9545ea5"
+      "path": "docs/competition_rules/2026-07_AI+能源竞赛规则及作品提交要求-科技创新组.pdf",
+      "sha256": "81345b2c213e5189da11d867c4f7576cd7d01f3c1dfc0f1d4a8a5cc06446ecf2"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide01.png",
+      "sha256": "3d142e93fbea0741991cabd53f625dab53e0b796c3e470bd6be6fdbebcabb981"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide02.png",
+      "sha256": "0dd933f01fe42b31ec38783e6e00c162be61ba369fdfaf69cab6e91e42d543be"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide03.png",
+      "sha256": "31d2f866a05bcdfb1d422620c40439a53b99bc676fa6c7f028c9c584fc34d4c1"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide04.png",
+      "sha256": "36de480634ac24ab6a24fa060a47c37ec8e4c2ddc73c1e3af659f73e58648349"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide05.png",
+      "sha256": "9bd243697bb9881eb1139f3ef3f922324c92ae772a972e3280d3b2ef7812670b"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide06.png",
+      "sha256": "50974e138998a10bd3e396682c2074f799d7321ed4243173d72cac6ec2f2f937"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide07.png",
+      "sha256": "b0aa1ba5b7a791a06820a145cf557374ab66c3cd82239c7f0691d3e0db59337e"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide08.png",
+      "sha256": "d5ad56213f83361344bd180ae4716f3b4954765330340a7a50e06731ff2616d3"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide09.png",
+      "sha256": "5648a747c3f7a4a45fe664ddcfee779ddbac81b693e16f725a079cb8d3d7fd23"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide10.png",
+      "sha256": "1a1ddf694c2a956a6dd84b15e1eea3f682dd21cf81996eb5f3167f180cc27c34"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide11.png",
+      "sha256": "5c1ddf858c08034b583c3b695aa64ce73cd2855414e8736d4da4e985c5c31459"
+    },
+    {
+      "path": "outputs/demo_video/sources/slide12.png",
+      "sha256": "f22362bfc70ab765ce06b6e84aad983378ae9af280a25953b14183f92638d9bd"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/00_00.wav",
+      "sha256": "d6ac3c7536a29d7ca267311dba9572b6c1f79ae2fab6123eaa717172ab64d7e5"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/00_01.wav",
+      "sha256": "4fb57c66270f43f9e45782a3112947d75a8363542e3e798ca6e613e356ff296a"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/01_00.wav",
+      "sha256": "cf52ce6c16d37a7ccffca68802cef550f995e2c5926b2a84f51f8b93702548e2"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/01_01.wav",
+      "sha256": "31eae910c8d32548d31498ad54d77e86b65c228254ffecbc253d7be144b69bcc"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/01_02.wav",
+      "sha256": "ecc77d12c069398ec07c7834c24444a7f0a039eaf86350bb7cc2bd7b7619330b"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/02_00.wav",
+      "sha256": "7b232881fbf4d6c482af00c6f18286ed43fa98b4428e7e72ad49ac8918efec23"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/02_01.wav",
+      "sha256": "57fefb67fd59e109d954b5da1d194d6e65047f225ae21510073971e3f9590cff"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/02_02.wav",
+      "sha256": "ebd9c7671a4f7c6269ed0d39e56ce5a78dcdfc73714911dc31c983b1c2ed4938"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/03_00.wav",
+      "sha256": "2d2b2c170ff7369c1a19890a121b6fc60ee06d5817f8fe0e53de02e23e590ad5"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/03_01.wav",
+      "sha256": "3c950ae61660aca5e4878ef7f31aaa939d6f797c10fd08c78c09617ad279bdb0"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/03_02.wav",
+      "sha256": "aa5a3bd34c38588cc4a066bcd0bf613e857aefae9bf6182109d57a3e616f5962"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_00.wav",
+      "sha256": "1f5bf8bfbddadbaa3a73a2bbcc1a70bdacba7f24810baf537ce143a21fecd995"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_01.wav",
+      "sha256": "fa463246755dca6e50252b6ea028688f06d7664a84cd55d9fc2d2dbba910c015"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_02.wav",
+      "sha256": "39c264d126a56999e2967ebbb15fcd12116c6e5ac0173fa5e8768977c80919be"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/04_03.wav",
+      "sha256": "3296a48c9a207f57aa32f8081da7d19db1f850a6d9287bb4af57c537eaf1c774"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/05_00.wav",
+      "sha256": "8689823bdba9f6561801bc18dedf29cc1108ebfb82dfddfa287bb674ee3b3d4f"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/05_01.wav",
+      "sha256": "5edbe6df25f244f9ef330f421ae8f6a5ae9f648ab34316347200151c68d603ae"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/05_02.wav",
+      "sha256": "449a768ae450f2c2444e0246a2be40bbdd6da8c5699d50fadf3a36973d87ac1e"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/06_00.wav",
+      "sha256": "836b8728a92df6dfda070d7251aac1b74aaa870c795c48fcdc20258746f62615"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/06_01.wav",
+      "sha256": "1e15f34d7534e276a374c8ea6cfcd24156b4845d994259f2e5b85d1142ef5630"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/06_02.wav",
+      "sha256": "64313b0511f4d9b26253b1674dca634516f41a6cab3ddb60341fde8da6a8f34c"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_00.wav",
+      "sha256": "e434395f583d1db94131bc55a934ed8bec2c4291548573e8151bae5272a9e69c"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_01.wav",
+      "sha256": "42854a4619a8212f39aa557baa3ccaaf214fbb155839490b208e61e2654d0993"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_02.wav",
+      "sha256": "b21c96296e526f0880b66c90228519b6c46d9c9c6f1d9deba11792212f65f44c"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/07_03.wav",
+      "sha256": "5b24b06249a82a2aaaac695c34233933cea68f25b4851f7116b8a710d538ddd5"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_00.wav",
+      "sha256": "e8470edf84af85acde3cb744c62e9e394ab628a1c8c035e08f6cc65d68f05ca3"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_01.wav",
+      "sha256": "979e4916cf2475545aa83b8577e5c15bac83a626a0b295f711f2f6d4d07fafd7"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_02.wav",
+      "sha256": "1000eedcf9f3cbc0caeffa6d53f11b6b688b4336e0a2ca911964e87fe80d4927"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/08_03.wav",
+      "sha256": "09b913d320b1dd346525e2425a37880d2d9da007d405075f1b412c1660dd0f1b"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/09_00.wav",
+      "sha256": "cbd4e8d31fd7fe3a695867cb41f142669592e230864406719db3bea0adae6a3d"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/09_01.wav",
+      "sha256": "ef5880e5e0bd45701de7e39a64645cf486f0e4961e0ac1acc5964215b761a5d0"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_00.wav",
+      "sha256": "1e8f5326148f7f8a0110a73ed390e09b6cd4f54c5a5d72cded8712cee9ab3600"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_01.wav",
+      "sha256": "94c0e1c7ee12321cec1530d83bb1cba83bd3eb4f52fa76d3a24665264b037c7b"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_02.wav",
+      "sha256": "b79db195ba51933e524fc8e98f53f40c95016cc546c383ed8da8491e842de55a"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_03.wav",
+      "sha256": "6b9cbe63852877f2e622b92100d162b2ba1268d2fb14f4b2510330a858ae8056"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/10_04.wav",
+      "sha256": "cbfde05fcffd19599ce8abb44d64372d031f82424c973f1e3604cbdde5ed2c95"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/11_00.wav",
+      "sha256": "6a2b02fc8e8f79c506000728b4ba7549d435994ed4cec2cb91ec1c00cf049afe"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/11_01.wav",
+      "sha256": "5b5a046dbed20d8c92342445b6f8c654fd8fb6a56a2958f9b629b522a70fcd6c"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/11_02.wav",
+      "sha256": "6310047d1f4d3c89beb61e366dd77f57a268236974aecec0fffec081e1e2fefc"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/12_00.wav",
+      "sha256": "d000205f3100a94d2f9d183a45de2c88a287c20315ff8ef5118b2526cb1ccea5"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/12_01.wav",
+      "sha256": "8bb6140e1cfe6715ad24796efc3bd4ae52e620eeff332af46ea6ac413f18a090"
+    },
+    {
+      "path": "outputs/demo_video/sources/audio/12_02.wav",
+      "sha256": "b1daceb5062344cd83652604242a38955f92163c54a225f5865cc8edef60b6ad"
+    },
+    {
+      "path": "outputs/demo_video/sources/gui_capture.mkv",
+      "sha256": "ac79aa7c54727fb578a8d6b560d5e8b1a162e80949ed1275273fad6021e4f6c0"
     }
   ],
-  "schema_version": 1,
-  "acceptance": "273.02 seconds; 1080p H.264/AAC MP4; under 300 MB; all streams decode; actual GUI capture; original-speed neural narration; subtitle and chapter visual review passed.",
-  "validation": "outputs/demo_video/validation.json",
-  "supporting_artifacts": [
+  "gui_parent_time_range_seconds": [
+    125,
+    165
+  ],
+  "slide_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "new_experiments": false,
+  "narration_speedup": false,
+  "limitations": [
+    "Locally synthesized Microsoft Huihui Chinese voice; real offline GUI playback, not online control."
+  ],
+  "acceptance_reason": "Full stream decoding, rules checks, subtitle/source identity and rendered visual review passed",
+  "accepted_at": "2026-10-13T01:28:11.111806+00:00",
+  "historical_parent": {
+    "path": "outputs/demo_video/history/20261013_before_ppt_video/DOEF_Demo_Narrated.mp4",
+    "sha256": "65c4ab06c9acf23368e69a293f719b30dcba90bd1ebef3d7d7c374b11eb656fe",
+    "status": "superseded"
+  },
+  "gui_source": {
+    "path": "outputs/demo_video/sources/gui_capture.mkv",
+    "sha256": "ac79aa7c54727fb578a8d6b560d5e8b1a162e80949ed1275273fad6021e4f6c0"
+  },
+  "source_history": [
     {
-      "path": "outputs/demo_video/DOEF_Demo_Narrated.srt",
-      "sha256": "0c5f1a01c65e2d0adcfd81778fe17b9566998795e92df9f6581043b76abeace6",
-      "hash_normalization": "CRLF to LF"
+      "path": "outputs/provincial_20261012/DOEF_Provincial_Submission.pptx",
+      "sha256": "66c40fa27df2b2125bb8864e22203a7784ae61da7186692625fb8b6e43c2a28b",
+      "status": "original_build_source"
     },
     {
-      "path": "outputs/demo_video/narration.md",
-      "sha256": "4d3dad3b847611b424b1da3ee52b07b8cda5c66fe1bc7db5da551de572a2fe1f",
-      "hash_normalization": "CRLF to LF"
+      "path": "reports/provincial_20261012/speaker_notes.json",
+      "sha256": "59331f26b41a8ea59e971f57473d3685e13bce83d47ff04d3bc3149355fc3685",
+      "status": "original_build_source"
     },
     {
-      "path": "outputs/demo_video/validation.json",
-      "sha256": "2b3d8422920f276803cad8c659828f1eac7125abb0dc6174b0f07829fcbe967c",
-      "hash_normalization": "CRLF to LF"
+      "path": "reports/provincial_20261012/evidence.json",
+      "sha256": "460da7d490fcc236cc8b0ee9127658ad6dfb33d5b82243a75a3192b7ede069b7",
+      "status": "original_build_source"
     },
     {
-      "path": "outputs/demo_video/contact_sheet.jpg",
-      "sha256": "8b3ca6a613f308d896b57c1529540844bc2ce6aee7732496a57e10084dbf40bc"
+      "path": "scripts/build_ppt_video_20261013.py",
+      "sha256": "2b317f821ca0e342e672b5143b313a2725cdf8deaeb52870503fd626d2131107",
+      "status": "original_build_source"
     },
     {
-      "path": "outputs/demo_video/README.md",
-      "sha256": "5d6f72ed8565f1aa04bb566e84f5e8c4b53b66584b00609a2ed18b38547f97fd",
-      "hash_normalization": "CRLF to LF"
+      "path": "scripts/synthesize_ppt_video.ps1",
+      "sha256": "1c1c25808c23a488c961e3bb490353f837f0da2497eb756d88d04343fd9225cc",
+      "status": "original_build_source"
     }
   ],
-  "source_hash_normalization": "CRLF to LF; MP4 identity uses raw bytes",
-  "lineage_note": "Recording-time GUI inputs are preserved as historical snapshots; the current portable GUI has a separate manifest. MP4 bytes unchanged."
+  "maintenance_note": "Video bytes unchanged. Speaker-note source paths and evidence metadata consolidated; visible slides/media unchanged. Original source identities retained in source_history; GUI excerpt retained losslessly."
 }

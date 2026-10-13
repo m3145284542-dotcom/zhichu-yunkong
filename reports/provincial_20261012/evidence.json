@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "status": "accepted_derived_evidence",
+  "role": "derived presentation evidence; no new model or dispatch experiment",
+  "creation_date": "2026-10-12",
+  "producer": "reports/provincial_20261012/prepare_evidence.py",
+  "canonical_research_modified": false,
+  "source_artifacts": [
+    {
+      "path": "outputs/phase8/global_test_summary.csv",
+      "sha256": "42d8930a4c3799951bdffeb8d8bb525dbcd462962cf88f37e71caae3eeab919a"
+    },
+    {
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "sha256": "1c4667ce525a0cdada916bd11ee8c27276ec3a816aeae6b12bbd45355fdbb502"
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "sha256": "918f3b4e38cec5b16be964a2631392577068333de264e973ddac9409a2f4da60"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    {
+      "path": "outputs/phase8/global_selected_weights.json",
+      "sha256": "327e2208cc5ffe9c0c4de2690070764652de24091ad3914e746a16c398b7ecd2"
+    },
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "e360e2259744a3b9788d550ba87635e4f986d726e93147066e8d7deaa40a8eb7"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8"
+    },
+    {
+      "path": "reports/provincial_20261012/assets/system_demo.png",
+      "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e"
+    },
+    {
+      "path": "src/phase8.py",
+      "sha256": "19aea3a725349c9a05f3f0f5683a6acb95666e26482c2396227f1c3fe46226a6"
+    },
+    {
+      "path": "docs/ENGINEERING_INTEGRATION.md",
+      "sha256": "29c630591384d53eb853d55c865ba67fec505fb8eedd8680c6536381f72da772"
+    }
+  ],
+  "ablation": [
+    {
+      "method": "DayWeek",
+      "mae": 0.1834775145794906,
+      "regret": 0.1430186694957667,
+      "relative_improvement_pct": 21.738060994001362,
+      "wins": 7,
+      "ties": 1,
+      "losses": 0
+    },
+    {
+      "method": "LightGBM",
+      "mae": 0.1473380276776881,
+      "regret": 0.116126784093835,
+      "relative_improvement_pct": 3.6146701543680715,
+      "wins": 6,
+      "ties": 2,
+      "losses": 0
+    },
+    {
+      "method": "ForecastSelectedGlobal",
+      "mae": 0.1517904331174638,
+      "regret": 0.1252300512639358,
+      "relative_improvement_pct": 10.621146635111645,
+      "wins": 6,
+      "ties": 0,
+      "losses": 2
+    },
+    {
+      "method": "ForecastSelectedPerBuilding",
+      "mae": 0.1682972253887245,
+      "regret": 0.1278870804679682,
+      "relative_improvement_pct": 12.478114694312282,
+      "wins": 5,
+      "ties": 2,
+      "losses": 1
+    },
+    {
+      "method": "DecisionSelectedGlobal",
+      "mae": 0.1434696890629138,
+      "regret": 0.1155908050380909,
+      "relative_improvement_pct": 3.167744310558762,
+      "wins": 6,
+      "ties": 2,
+      "losses": 0
+    },
+    {
+      "method": "DecisionSelectedPerBuilding",
+      "mae": 0.1379695350007493,
+      "regret": 0.1119291838879677,
+      "relative_improvement_pct": 0.0,
+      "wins": 0,
+      "ties": 8,
+      "losses": 0
+    }
+  ],
+  "weights": [
+    {
+      "building": "Hog_office_Rolando",
+      "w_forecast": 0.9,
+      "w_decision": 0.7,
+      "weights_differ": true,
+      "validation_MAE_decision_minus_forecast": 0.0468455706063695,
+      "validation_regret_decision_minus_forecast": -0.0634689092511848,
+      "validation_MAE_decision_rank_spearman": 0.9545454545454546
+    },
+    {
+      "building": "Hog_office_Lavon",
+      "w_forecast": 0.0,
+      "w_decision": 0.0,
+      "weights_differ": false,
+      "validation_MAE_decision_minus_forecast": 0.0,
+      "validation_regret_decision_minus_forecast": 0.0,
+      "validation_MAE_decision_rank_spearman": 1.0
+    },
+    {
+      "building": "Hog_office_Joey",
+      "w_forecast": 0.6,
+      "w_decision": 0.3,
+      "weights_differ": true,
+      "validation_MAE_decision_minus_forecast": 2.9848124028365746,
+      "validation_regret_decision_minus_forecast": -2.180767529493409,
+      "validation_MAE_decision_rank_spearman": 0.0636363636363636
+    },
+    {
+      "building": "Lamb_office_Caitlin",
+      "w_forecast": 0.4,
+      "w_decision": 0.8,
+      "weights_differ": true,
+      "validation_MAE_decision_minus_forecast": 1.2384183257057495,
+      "validation_regret_decision_minus_forecast": -1.0179468049228797,
+      "validation_MAE_decision_rank_spearman": -0.5454545454545455
+    },
+    {
+      "building": "Robin_office_Addie",
+      "w_forecast": 1.0,
+      "w_decision": 1.0,
+      "weights_differ": false,
+      "validation_MAE_decision_minus_forecast": 0.0,
+      "validation_regret_decision_minus_forecast": 0.0,
+      "validation_MAE_decision_rank_spearman": 1.0
+    },
+    {
+      "building": "Lamb_office_Gerardo",
+      "w_forecast": 0.0,
+      "w_decision": 1.0,
+      "weights_differ": true,
+      "validation_MAE_decision_minus_forecast": 0.3074321821098413,
+      "validation_regret_decision_minus_forecast": -0.0651134091592696,
+      "validation_MAE_decision_rank_spearman": -1.0
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "w_forecast": 0.6,
+      "w_decision": 0.7,
+      "weights_differ": true,
+      "validation_MAE_decision_minus_forecast": 0.0497808438790938,
+      "validation_regret_decision_minus_forecast": -0.015230022940031,
+      "validation_MAE_decision_rank_spearman": 0.3818181818181818
+    },
+    {
+      "building": "Hog_office_Byron",
+      "w_forecast": 0.9,
+      "w_decision": 0.8,
+      "weights_differ": true,
+      "validation_MAE_decision_minus_forecast": 1.4885510835370894,
+      "validation_regret_decision_minus_forecast": -0.6101223050286606,
+      "validation_MAE_decision_rank_spearman": 0.9272727272727276
+    }
+  ],
+  "benchmark": [
+    {
+      "display_name": "Day Persistence",
+      "internal_method": "Persistence",
+      "raw_identifiers": "Persistence|Day",
+      "equivalent_alias": true,
+      "normalized_mae_mean": 0.2258845988864577,
+      "normalized_mae_median": 0.1034397769027117,
+      "normalized_rmse_mean": 0.4301930787029329,
+      "normalized_peak_mae_mean": 0.3611890635536578,
+      "normalized_decision_regret_mean": 0.1629860984277617,
+      "normalized_decision_regret_median": 0.1501103905958921,
+      "peak_reduction_mean_pct": -1.8784522306447489,
+      "peak_reduction_median_pct": 0.6351631356196247,
+      "peak_reduction_min_pct": -11.568875080690914,
+      "peak_reduction_max_pct": 3.642312132954678,
+      "decision_wins_vs_lightgbm": null,
+      "decision_ties_vs_lightgbm": null,
+      "decision_losses_vs_lightgbm": null
+    },
+    {
+      "display_name": "Week",
+      "internal_method": "Week",
+      "raw_identifiers": "Week",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.2015782033719362,
+      "normalized_mae_median": 0.1166171013637299,
+      "normalized_rmse_mean": 0.3284141789770246,
+      "normalized_peak_mae_mean": 0.2576295302735708,
+      "normalized_decision_regret_mean": 0.144323002826905,
+      "normalized_decision_regret_median": 0.1376602079079792,
+      "peak_reduction_mean_pct": 3.085462929586199,
+      "peak_reduction_median_pct": 4.7720764135384375,
+      "peak_reduction_min_pct": -10.509524002763452,
+      "peak_reduction_max_pct": 14.742243197967438,
+      "decision_wins_vs_lightgbm": null,
+      "decision_ties_vs_lightgbm": null,
+      "decision_losses_vs_lightgbm": null
+    },
+    {
+      "display_name": "DayWeek",
+      "internal_method": "DayWeek",
+      "raw_identifiers": "DayWeek",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.1834775145794906,
+      "normalized_mae_median": 0.0934492738014127,
+      "normalized_rmse_mean": 0.2966208944834146,
+      "normalized_peak_mae_mean": 0.2636585700909476,
+      "normalized_decision_regret_mean": 0.1430186694957667,
+      "normalized_decision_regret_median": 0.1125917722295761,
+      "peak_reduction_mean_pct": 4.906897876871062,
+      "peak_reduction_median_pct": 5.573690485501219,
+      "peak_reduction_min_pct": -0.1310143376537229,
+      "peak_reduction_max_pct": 11.312897424377178,
+      "decision_wins_vs_lightgbm": null,
+      "decision_ties_vs_lightgbm": null,
+      "decision_losses_vs_lightgbm": null
+    },
+    {
+      "display_name": "LightGBM",
+      "internal_method": "LightGBM",
+      "raw_identifiers": "LightGBM",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.1473380276776882,
+      "normalized_mae_median": 0.0849925613653012,
+      "normalized_rmse_mean": 0.2169419587841403,
+      "normalized_peak_mae_mean": 0.217359814952041,
+      "normalized_decision_regret_mean": 0.116126784093835,
+      "normalized_decision_regret_median": 0.0963823976460824,
+      "peak_reduction_mean_pct": 1.0084324543018923,
+      "peak_reduction_median_pct": 5.057121486433106,
+      "peak_reduction_min_pct": -41.192111813709005,
+      "peak_reduction_max_pct": 13.681487625310265,
+      "decision_wins_vs_lightgbm": null,
+      "decision_ties_vs_lightgbm": null,
+      "decision_losses_vs_lightgbm": null
+    },
+    {
+      "display_name": "XGBoost",
+      "internal_method": "XGBoost",
+      "raw_identifiers": "XGBoost",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.1497806938494076,
+      "normalized_mae_median": 0.0883794846413225,
+      "normalized_rmse_mean": 0.2167511842160507,
+      "normalized_peak_mae_mean": 0.2114395161100171,
+      "normalized_decision_regret_mean": 0.1175341513618143,
+      "normalized_decision_regret_median": 0.0926794108424905,
+      "peak_reduction_mean_pct": 0.4528337144682357,
+      "peak_reduction_median_pct": 4.588389692040035,
+      "peak_reduction_min_pct": -44.35689885669765,
+      "peak_reduction_max_pct": 12.89310878140217,
+      "decision_wins_vs_lightgbm": null,
+      "decision_ties_vs_lightgbm": null,
+      "decision_losses_vs_lightgbm": null
+    },
+    {
+      "display_name": "CatBoost",
+      "internal_method": "CatBoost",
+      "raw_identifiers": "CatBoost",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.1736043750545097,
+      "normalized_mae_median": 0.0923214179056432,
+      "normalized_rmse_mean": 0.239210962621775,
+      "normalized_peak_mae_mean": 0.2313820094294375,
+      "normalized_decision_regret_mean": 0.1187404081252623,
+      "normalized_decision_regret_median": 0.0942749361144157,
+      "peak_reduction_mean_pct": -24.48241606779646,
+      "peak_reduction_median_pct": 4.820860917002948,
+      "peak_reduction_min_pct": -245.94331246534048,
+      "peak_reduction_max_pct": 13.236691454892531,
+      "decision_wins_vs_lightgbm": null,
+      "decision_ties_vs_lightgbm": null,
+      "decision_losses_vs_lightgbm": null
+    },
+    {
+      "display_name": "DOEF",
+      "internal_method": "Phase8_DOEF",
+      "raw_identifiers": "Phase8_DOEF",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.1379695350007493,
+      "normalized_mae_median": 0.0797041360928283,
+      "normalized_rmse_mean": 0.2078222913306698,
+      "normalized_peak_mae_mean": 0.2071963903828385,
+      "normalized_decision_regret_mean": 0.1119291838879677,
+      "normalized_decision_regret_median": 0.0941162837837408,
+      "peak_reduction_mean_pct": 6.442331666592077,
+      "peak_reduction_median_pct": 5.629144355214001,
+      "peak_reduction_min_pct": -1.0170484967146218,
+      "peak_reduction_max_pct": 14.016247016534503,
+      "decision_wins_vs_lightgbm": 6.0,
+      "decision_ties_vs_lightgbm": 2.0,
+      "decision_losses_vs_lightgbm": 0.0
+    },
+    {
+      "display_name": "Peak-aware LightGBM",
+      "internal_method": "PeakAwareLightGBM",
+      "raw_identifiers": "PeakAwareLightGBM",
+      "equivalent_alias": false,
+      "normalized_mae_mean": 0.147586770563029,
+      "normalized_mae_median": 0.0849925613653012,
+      "normalized_rmse_mean": 0.2172835091296721,
+      "normalized_peak_mae_mean": 0.2173714596985529,
+      "normalized_decision_regret_mean": 0.1162024576163798,
+      "normalized_decision_regret_median": 0.0963823976460824,
+      "peak_reduction_mean_pct": 1.1288134828307546,
+      "peak_reduction_median_pct": 5.057121486433106,
+      "peak_reduction_min_pct": -41.192111813709005,
+      "peak_reduction_max_pct": 14.644535853541162,
+      "decision_wins_vs_lightgbm": 0.0,
+      "decision_ties_vs_lightgbm": 7.0,
+      "decision_losses_vs_lightgbm": 1.0
+    }
+  ],
+  "bootstrap_rows": [
+    {
+      "building": "Hog_office_Rolando",
+      "mean_daily_regret_doef": 10.400277090318191,
+      "mean_daily_regret_lightgbm": 11.127371928531794,
+      "train_mean_load": 305.3239581326655,
+      "normalized_difference": -0.0023813880923739
+    },
+    {
+      "building": "Hog_office_Lavon",
+      "mean_daily_regret_doef": 3.5933695765587657,
+      "mean_daily_regret_lightgbm": 5.564642032160648,
+      "train_mean_load": 297.5030661204268,
+      "normalized_difference": -0.0066260576111303
+    },
+    {
+      "building": "Hog_office_Joey",
+      "mean_daily_regret_doef": 80.43570943369181,
+      "mean_daily_regret_lightgbm": 85.5044375870371,
+      "train_mean_load": 1190.7347092585378,
+      "normalized_difference": -0.0042568072585215
+    },
+    {
+      "building": "Lamb_office_Caitlin",
+      "mean_daily_regret_doef": 5.236261888054604,
+      "mean_daily_regret_lightgbm": 5.479727125238769,
+      "train_mean_load": 21.494301892784552,
+      "normalized_difference": -0.0113269664862153
+    },
+    {
+      "building": "Robin_office_Addie",
+      "mean_daily_regret_doef": 2.5314944707724,
+      "mean_daily_regret_lightgbm": 2.5314944707724,
+      "train_mean_load": 20.928938052591462,
+      "normalized_difference": 0.0
+    },
+    {
+      "building": "Lamb_office_Gerardo",
+      "mean_daily_regret_doef": 2.2312356472728343,
+      "mean_daily_regret_lightgbm": 2.2312356472728343,
+      "train_mean_load": 8.54476761199895,
+      "normalized_difference": 0.0
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "mean_daily_regret_doef": 2.3359553504947903,
+      "mean_daily_regret_lightgbm": 2.4736269204294503,
+      "train_mean_load": 19.356408128814444,
+      "normalized_difference": -0.0071124543881526
+    },
+    {
+      "building": "Hog_office_Byron",
+      "mean_daily_regret_doef": 33.70248123224396,
+      "mean_daily_regret_lightgbm": 35.49120986265348,
+      "train_mean_load": 952.907213010038,
+      "normalized_difference": -0.0018771278105444
+    }
+  ],
+  "canonical_summary": {
+    "schema_version": 1,
+    "status": "canonical",
+    "phase": "9.1",
+    "final_algorithm": {
+      "name": "Decision-Oriented Ensemble Forecasting",
+      "acronym": "DOEF",
+      "display_name": "DOEF v1.0 — Decision-Oriented Ensemble Forecasting",
+      "display_name_zh": "面向储能决策的集成负荷预测方法",
+      "source_phase": 9,
+      "canonical_reporting_phase": "9.1",
+      "algorithm_version": "1.0",
+      "freeze_status": "frozen",
+      "algorithm_selection_source": "Validation",
+      "selection_source_phase": 8,
+      "selection_objective": "downstream storage decision regret",
+      "test_role": "evaluation_only",
+      "test_can_promote_algorithm": false,
+      "weight_config_path": "outputs/phase8/selected_weights.csv",
+      "weight_field": "w_decision",
+      "formula": "w_b * LightGBM + (1 - w_b) * DayWeek",
+      "dayweek_formula": "0.5 * actual(t-24h) + 0.5 * actual(t-168h)"
+    },
+    "test_protocol": {
+      "test_role": "evaluation_only",
+      "algorithm_selection_source": "Validation",
+      "test_used_for_algorithm_promotion": false,
+      "peak_aware_role": "frozen supporting experiment / stress test; rejected from canonical algorithm"
+    },
+    "evaluation_scope": {
+      "preferred_term": "multi-building robustness evaluation",
+      "buildings": 8,
+      "not_unseen_building_transfer": true
+    },
+    "building_selection": {
+      "eligibility": "fixed raw-data coverage checks over predefined Train/Validation/Test windows",
+      "representative_sampling": "Train-period load morphology only among eligible buildings",
+      "validation_or_test_forecast_or_decision_performance_used": false
+    },
+    "forecast_vs_decision_weights": {
+      "total": 8,
+      "same": 2,
+      "different": 6,
+      "rows": [
+        {
+          "building": "Hog_office_Rolando",
+          "w_forecast": 0.9,
+          "w_decision": 0.7,
+          "weights_differ": true
+        },
+        {
+          "building": "Hog_office_Lavon",
+          "w_forecast": 0.0,
+          "w_decision": 0.0,
+          "weights_differ": false
+        },
+        {
+          "building": "Hog_office_Joey",
+          "w_forecast": 0.6,
+          "w_decision": 0.3,
+          "weights_differ": true
+        },
+        {
+          "building": "Lamb_office_Caitlin",
+          "w_forecast": 0.4,
+          "w_decision": 0.8,
+          "weights_differ": true
+        },
+        {
+          "building": "Robin_office_Addie",
+          "w_forecast": 1.0,
+          "w_decision": 1.0,
+          "weights_differ": false
+        },
+        {
+          "building": "Lamb_office_Gerardo",
+          "w_forecast": 0.0,
+          "w_decision": 1.0,
+          "weights_differ": true
+        },
+        {
+          "building": "Hog_office_Alexis",
+          "w_forecast": 0.6,
+          "w_decision": 0.7,
+          "weights_differ": true
+        },
+        {
+          "building": "Hog_office_Byron",
+          "w_forecast": 0.9,
+          "w_decision": 0.8,
+          "weights_differ": true
+        }
+      ]
+    },
+    "doef_vs_lightgbm": {
+      "doef_mean_normalized_mae": 0.1379695350007493,
+      "lightgbm_mean_normalized_mae": 0.1473380276776882,
+      "doef_mean_normalized_regret": 0.1119291838879677,
+      "lightgbm_mean_normalized_regret": 0.116126784093835,
+      "normalized_mae_relative_improvement_pct": 6.358502841800696,
+      "normalized_regret_relative_improvement_pct": 3.6146701543680733,
+      "decision_regret_win_tie_loss": {
+        "wins": 6,
+        "ties": 2,
+        "losses": 0
+      }
+    },
+    "building_level_bootstrap": {
+      "comparison": "DOEF_minus_LightGBM",
+      "metric": "building mean daily decision regret difference normalized by Phase 7 Train mean load",
+      "resampling_unit": "building",
+      "number_of_buildings": 8,
+      "number_of_units": 8,
+      "resamples": 10000,
+      "seed": 42,
+      "point_estimate": -0.0041976002058672825,
+      "median_bootstrap_estimate": -0.0041410778250212076,
+      "ci95_lower": -0.0068502135531734835,
+      "ci95_upper": -0.0017190447979306138,
+      "probability_mean_less_than_zero": 1.0
+    },
+    "secondary_building_day_bootstrap": {
+      "comparison": "Phase8_DOEF_minus_LightGBM",
+      "metric": "daily regret difference normalized by frozen Phase 7 Train mean load",
+      "resampling_unit": "building-day pair",
+      "pairs": 240,
+      "seed": 42,
+      "resamples": 10000,
+      "point_estimate": -0.0041976002058672,
+      "median_difference": -0.0004035619357737,
+      "ci95_lower": -0.0078296163486311,
+      "ci95_upper": -0.0003556580476148,
+      "probability_a_better": 0.9834,
+      "analysis_role": "secondary temporal-resampling sensitivity analysis"
+    },
+    "unit_semantics_path": "outputs/phase9_1/unit_semantics.json",
+    "metric_semantics_path": "outputs/phase9_1/metric_semantics.json",
+    "doef_prediction_invariance": {
+      "status": "PASS",
+      "reference": "frozen Phase 8 ensemble_prediction using w_decision",
+      "audited_definition": "explicit DOEF v1.0 formula using the same frozen component forecasts and weights",
+      "samples": 5760,
+      "max_absolute_delta": 0.0,
+      "tolerance": 1e-12,
+      "reference_sha256": "b628fa94b3883e88867acbed96d9366540c2777dca54bb6d1c2d4ea34ebfdc66",
+      "audited_sha256": "b628fa94b3883e88867acbed96d9366540c2777dca54bb6d1c2d4ea34ebfdc66",
+      "per_building": [
+        {
+          "building": "Hog_office_Rolando",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Hog_office_Lavon",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Hog_office_Joey",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Lamb_office_Caitlin",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Robin_office_Addie",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Lamb_office_Gerardo",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Hog_office_Alexis",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        },
+        {
+          "building": "Hog_office_Byron",
+          "samples": 720,
+          "max_abs_delta": 0.0
+        }
+      ]
+    },
+    "catboost_peak_reduction_pct": {
+      "mean": -24.482416067796464,
+      "median": 4.820860917002948,
+      "min": -245.94331246534048,
+      "max": 13.236691454892531,
+      "per_building": [
+        {
+          "building": "Hog_office_Alexis",
+          "peak_reduction_percentage": 11.68435263492371
+        },
+        {
+          "building": "Hog_office_Byron",
+          "peak_reduction_percentage": 12.53391257506742
+        },
+        {
+          "building": "Hog_office_Joey",
+          "peak_reduction_percentage": 0.3385458642955882
+        },
+        {
+          "building": "Hog_office_Lavon",
+          "peak_reduction_percentage": -245.94331246534048
+        },
+        {
+          "building": "Hog_office_Rolando",
+          "peak_reduction_percentage": 5.555821767077667
+        },
+        {
+          "building": "Lamb_office_Caitlin",
+          "peak_reduction_percentage": 4.08590006692823
+        },
+        {
+          "building": "Lamb_office_Gerardo",
+          "peak_reduction_percentage": 2.6487595597836258
+        },
+        {
+          "building": "Robin_office_Addie",
+          "peak_reduction_percentage": 13.236691454892531
+        }
+      ],
+      "extreme_case": {
+        "building": "Hog_office_Lavon",
+        "no_battery_peak_kw": 19.192,
+        "post_dispatch_peak_kw": 66.39344052834815,
+        "normalized_mae": 0.0479740655650084,
+        "daily_peak_hour_mae_hours": 7.466666666666667
+      }
+    },
+    "limitations": [
+      "eight office buildings",
+      "one fixed future Test month per building",
+      "one-hour intervals and 24-hour forecast horizon",
+      "frozen battery and daily-reset dispatch protocol",
+      "no energy-use, tariff, cost, or carbon outcome model"
+    ]
+  },
+  "leave_one_building_out": [
+    {
+      "omitted_building": "Hog_office_Alexis",
+      "relative_improvement_pct": 13.920073252318199
+    },
+    {
+      "omitted_building": "Hog_office_Byron",
+      "relative_improvement_pct": 12.90893405800867
+    },
+    {
+      "omitted_building": "Hog_office_Joey",
+      "relative_improvement_pct": 13.45027546245211
+    },
+    {
+      "omitted_building": "Hog_office_Lavon",
+      "relative_improvement_pct": 12.627188189319005
+    },
+    {
+      "omitted_building": "Hog_office_Rolando",
+      "relative_improvement_pct": 12.796663547885046
+    },
+    {
+      "omitted_building": "Lamb_office_Caitlin",
+      "relative_improvement_pct": 14.22122280117646
+    },
+    {
+      "omitted_building": "Lamb_office_Gerardo",
+      "relative_improvement_pct": 3.414434998407645
+    },
+    {
+      "omitted_building": "Robin_office_Addie",
+      "relative_improvement_pct": 14.151148948078884
+    }
+  ],
+  "case": {
+    "building": "Hog_office_Joey",
+    "date": "2017-12-14",
+    "selection": "post-hoc maximum absolute test daily peak difference between the two selectors",
+    "rows": [
+      {
+        "method": "Oracle",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1309.840231441048,
+        "regret_vs_oracle": 0.0
+      },
+      {
+        "method": "DayWeek",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1427.8618296460172,
+        "regret_vs_oracle": 118.02159820496922
+      },
+      {
+        "method": "LightGBM",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1348.0580289808356,
+        "regret_vs_oracle": 38.217797539787625
+      },
+      {
+        "method": "ForecastSelectedPerBuilding",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1332.5817143272218,
+        "regret_vs_oracle": 22.7414828861738
+      },
+      {
+        "method": "DecisionSelectedPerBuilding",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1380.1250543748324,
+        "regret_vs_oracle": 70.28482293378443
+      },
+      {
+        "method": "ForecastSelectedGlobal",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1348.4272590153748,
+        "regret_vs_oracle": 38.58702757432684
+      },
+      {
+        "method": "DecisionSelectedGlobal",
+        "original_peak": 1446.7679999999998,
+        "realized_peak": 1338.0319571441498,
+        "regret_vs_oracle": 28.19172570310184
+      }
+    ]
+  },
+  "caveats": [
+    "The two 6/2/0 and 5/2/1 comparisons have different baselines.",
+    "ForecastSelectedGlobal is numerically an equal blend because its Validation-selected weight is 0.5, not a newly preregistered equal-weight experiment.",
+    "New relative percentages and leave-one-out summaries are arithmetic reanalyses of saved metrics, not new tests or formal replacements for frozen conclusions.",
+    "The case was selected after evaluating Test; its colored historical curves are realized grid loads, not forecast loads."
+  ],
+  "historical_parents": [
+    {
+      "path": "outputs/submission/DOEF_Competition_Presentation.pptx",
+      "sha256": "080184dcfbcff298d282e3176046d50e30b334b7c925ba707c32e9fdb62afae2",
+      "status": "superseded",
+      "git_commit": "5b7ca5173b9144cc990cba6118f65d5cc0f40568"
+    },
+    {
+      "path": "outputs/submission/DOEF_Competition_Presentation.pdf",
+      "sha256": "99815d345594bec17f55214bbf464540fe79f5bcca3322a9bc4699c00f849fef",
+      "status": "superseded",
+      "git_commit": "5b7ca5173b9144cc990cba6118f65d5cc0f40568"
+    }
+  ]
+}

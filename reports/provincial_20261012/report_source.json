@@ -1,0 +1,64 @@
+{
+  "status": "accepted",
+  "source_sha256_lf": "cca4b3923a8dd40793f7600d86c46e98a79f55b4abb700de8c1979b686cf63be",
+  "scientific_sources": [
+    {
+      "path": "outputs/phase8/global_test_summary.csv",
+      "sha256": "42d8930a4c3799951bdffeb8d8bb525dbcd462962cf88f37e71caae3eeab919a"
+    },
+    {
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "sha256": "1c4667ce525a0cdada916bd11ee8c27276ec3a816aeae6b12bbd45355fdbb502"
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "sha256": "918f3b4e38cec5b16be964a2631392577068333de264e973ddac9409a2f4da60"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    {
+      "path": "outputs/phase8/global_selected_weights.json",
+      "sha256": "327e2208cc5ffe9c0c4de2690070764652de24091ad3914e746a16c398b7ecd2"
+    },
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "e360e2259744a3b9788d550ba87635e4f986d726e93147066e8d7deaa40a8eb7"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8"
+    },
+    {
+      "path": "reports/provincial_20261012/assets/system_demo.png",
+      "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e"
+    },
+    {
+      "path": "src/phase8.py",
+      "sha256": "19aea3a725349c9a05f3f0f5683a6acb95666e26482c2396227f1c3fe46226a6"
+    },
+    {
+      "path": "docs/ENGINEERING_INTEGRATION.md",
+      "sha256": "29c630591384d53eb853d55c865ba67fec505fb8eedd8680c6536381f72da772"
+    }
+  ],
+  "new_training": false,
+  "new_dispatch": false,
+  "derived_analysis": "Arithmetic aggregation of previously saved Phase 8 building metrics",
+  "historical_parent": {
+    "path": "reports/submission/technical_report.md",
+    "sha256": "4d52201ac1494b1a2a16fd77c5eb6eab85378f208defd417cb2fd326f4252091",
+    "git_commit": "5b7ca5173b9144cc990cba6118f65d5cc0f40568",
+    "status": "superseded"
+  },
+  "equation_table_contract": "reports/provincial_20261012/report_contract.json"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "pages": 12,
+  "pdf_sha256": "2761356fd999f59f8f01a88c057fa20891d9b2649f41325754e13925f58e0118",
+  "review_date": "2026-10-13",
+  "method": "Rendered all PDF pages and inspected contact sheet; dense pages inspected at full size.",
+  "findings": "No clipping, overlapping objects or inconsistent claim baselines observed. Speaker-note source paths updated; all visible slide and media bytes unchanged."
+}

@@ -92,6 +92,10 @@ class Phase55AcceptanceTests(unittest.TestCase):
         self.assertEqual(timestamps.dt.normalize().nunique(), 30)
         self.assertTrue(timestamps.groupby(timestamps.dt.normalize()).size().eq(24).all())
 
+    @unittest.skipUnless(
+        (ROOT / "data/raw/electricity_cleaned.csv").is_file(),
+        "Requires optional BDG2 raw data; run scripts/download_bdg2.py",
+    )
     def test_phase4_actual_matches_raw_load(self) -> None:
         raw = pd.read_csv(
             ROOT / "data" / "raw" / "electricity_cleaned.csv",
