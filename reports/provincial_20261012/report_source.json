@@ -1,6 +1,6 @@
 {
   "status": "accepted",
-  "source_sha256_lf": "cca4b3923a8dd40793f7600d86c46e98a79f55b4abb700de8c1979b686cf63be",
+  "source_sha256_lf": "df14a27cf84628b48867ac5d2de24624704c65b67390c520161f8d0509f4adda",
   "scientific_sources": [
     {
       "path": "outputs/phase8/global_test_summary.csv",
@@ -60,5 +60,6 @@
     "git_commit": "5b7ca5173b9144cc990cba6118f65d5cc0f40568",
     "status": "superseded"
   },
-  "equation_table_contract": "reports/provincial_20261012/report_contract.json"
+  "equation_table_contract": "reports/provincial_20261012/report_contract.json",
+  "editorial_revision": "reports/provincial_20261012/report_revision.json"
 }

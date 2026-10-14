@@ -1,6 +1,6 @@
 # 最终报告与答辩索引
 
-- [技术报告](../outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf)：16 页；[可维护正文](../reports/provincial_20261012/technical_report.md)。
+- [技术报告](../outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf)：17 页；[可维护正文](../reports/provincial_20261012/technical_report.md)。
 - [答辩 PPTX](../outputs/provincial_20261012/DOEF_Provincial_Submission.pptx)与 [PDF](../outputs/provincial_20261012/DOEF_Provincial_Submission.pdf)：12 页，无附录。
 - [逐页讲稿](../reports/provincial_20261012/speaker_notes.md)、[配音视频](../outputs/demo_video/DOEF_Demo_Narrated.mp4)、[提交说明](SUBMISSION_CHECKLIST.md)。
 
@@ -15,3 +15,5 @@
 留一建筑汇总保持模型和权重不变，收益范围 3.41%–14.22%，不属于新增外部验证。平均整段削峰率 6.4423%，最小值 −1.0170%；日案例与整月负削峰是不同事实。跨月份、电池敏感性和现场控制尚未完成，不作为已实现成果。
 
 当前 GUI 与视频均为离线实验回放。演示视频 296.14 秒。网盘和报名系统提交需单独完成；GitHub 推送状态以仓库提交为准。
+
+答辩时应区分候选参数选择与方法路线保留：DOEF 候选融合权重在验证集上选择后冻结，但历史融合路线保留及峰值加权路线晋级判断曾参考已查看的测试结果。现有测试不能作为完全独立于开发判断的盲测证明，后续需要锁定方法后进行新月份或新建筑评价。详见报告 3.3.6 节。

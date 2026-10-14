@@ -72,7 +72,7 @@ preamble=r'''\documentclass[12pt,a4paper]{article}
 \noindent 团队编号：AIC-2026-27833449
 \end{minipage}
 \vfill
-{\fontsize{16}{20}\selectfont 日期：2026 年 10 月 13 日}\vspace{24mm}
+{\fontsize{16}{20}\selectfont 日期：2026 年 10 月 14 日}\vspace{24mm}
 \end{center}
 \clearpage
 '''

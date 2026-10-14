@@ -8,3 +8,5 @@
 4. buildings：全部八建筑的归一化后悔值配对点图；每点为 30 日后悔值均值除以该建筑训练期平均负荷。保留全部八建筑、固定顺序及持平值。
 
 来源：outputs/phase9/final_benchmark.csv、outputs/phase8/selected_weights.csv、outputs/phase9_1/building_level_bootstrap.csv。源文件哈希和实际绘图数据另存 figures/source_manifest.json 及 CSV。无新增显著性检验、平滑、插值或样本筛选。无需新增 p 值或误差线。
+
+总体架构为单独的流程示意图，由 build_architecture.py 生成 figures/architecture.pdf，说明训练、验证、冻结留出评价和只读展示关系，不产生实验数据。报告图号依次为 mismatch（图1）、architecture（图2）、weights（图3）、main_results（图4）、buildings（图5）。四张数据图的科学输入保持不变。

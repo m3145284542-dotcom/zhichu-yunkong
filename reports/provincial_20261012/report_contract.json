@@ -21,6 +21,7 @@
     "| 参数 | 取值 |\n| --- | ---: |\n| 容量规则 | 训练期平均日用电量的 10% |\n| 最大充电功率 | 容量的 25%/h |\n| 最大放电功率 | 容量的 25%/h |\n| SOC 下限 / 上限 | 10% / 90% |\n| 日初 / 日末 SOC | 50% / 50% |\n| 充电效率 / 放电效率 | 0.948683 / 0.948683 |\n| 往返效率 | 0.90 |\n| 调度周期 | 24 h，每日重置 |\n",
     "| 建筑 | MAE 选择的 LightGBM 权重 | 决策后悔值选择的 LightGBM 权重（DOEF） |\n| --- | ---: | ---: |\n| Hog_office_Rolando | 0.9 | 0.7 |\n| Hog_office_Lavon | 0.0 | 0.0 |\n| Hog_office_Joey | 0.6 | 0.3 |\n| Lamb_office_Caitlin | 0.4 | 0.8 |\n| Robin_office_Addie | 1.0 | 1.0 |\n| Lamb_office_Gerardo | 0.0 | 1.0 |\n| Hog_office_Alexis | 0.6 | 0.7 |\n| Hog_office_Byron | 0.9 | 0.8 |\n",
     "| 方法 | 平均归一化 MAE | 平均归一化 RMSE | 平均 MAPE（%） |\n| --- | ---: | ---: | ---: |\n| Day Persistence | 0.225885 | 0.430193 | 21.33 |\n| Week | 0.201578 | 0.328414 | 23.52 |\n| DayWeek | 0.183478 | 0.296621 | 20.03 |\n| LightGBM | 0.147338 | 0.216942 | 30.90 |\n| XGBoost | 0.149781 | 0.216751 | 32.48 |\n| CatBoost | 0.173604 | 0.239211 | 33.14 |\n| DOEF | 0.137970 | 0.207822 | 16.20 |\n",
-    "| 检查对象 | 规模 | 结果 |\n| --- | ---: | --- |\n| DOEF 测试预测逐点一致性 | 8 栋 × 720 h = 5,760 点 | 最大绝对差 0.0 kW，PASS |\n| 实验文件哈希 | 76 个文件 | 76/76 PASS |\n| 算法选择数据源 | 验证集 | PASS |\n| 测试集角色 | 仅评价 | PASS |\n| 约束审计 | 同一冻结电池与优化器 | PASS |\n"
-  ]
+    "| 检查对象 | 规模 | 结果 |\n| --- | ---: | --- |\n| DOEF 测试预测逐点一致性 | 8 栋 × 720 h = 5,760 点 | 最大绝对差 0.0 kW，PASS |\n| 实验文件哈希 | 76 个文件 | 76/76 PASS |\n| DOEF 候选权重选择数据源 | 验证集 | PASS |\n| 留出期使用边界 | 冻结权重评价；历史路线保留曾参考测试 | 已披露 |\n| 约束审计 | 同一冻结电池与优化器 | PASS |\n"
+  ],
+  "editorial_correction": "Audit-table labels corrected to distinguish validation weight search from historically test-informed method promotion; numeric scientific tables and equations unchanged."
 }

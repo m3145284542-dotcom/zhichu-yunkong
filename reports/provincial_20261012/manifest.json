@@ -3,7 +3,7 @@
   "status": "canonical",
   "scope": "final technical report, defense deck and narrated video",
   "producer": "reports/provincial_20261012/finalize_delivery.py",
-  "created_utc": "2026-10-13T13:38:40.512099+00:00",
+  "created_utc": "2026-10-14T04:19:19.285762+00:00",
   "acceptance_reason": "Current content, source identities and hash-bound visual reviews passed",
   "canonical_for_scope": [
     "outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf",
@@ -416,8 +416,8 @@
     },
     {
       "path": "outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf",
-      "sha256": "ea2efd1e1be6b128d6b8a224d9fd3d1eb4642dd826495e82c6ef1f0c97b5686b",
-      "bytes": 455900
+      "sha256": "d07d37a44fb9e7d949f59e376c7cd8c75b988e6f45c7b0e57302165143ccacf8",
+      "bytes": 492989
     },
     {
       "path": "reports/provincial_20261012/.gitignore",
@@ -426,13 +426,18 @@
     },
     {
       "path": "reports/provincial_20261012/alignment_qa.json",
-      "sha256": "95f1fc439bbcd690bc450cbd4f5546a63185689a0dfa4dc3882dba7c2a7f6fba",
+      "sha256": "82ad61732a3a1137c02c0fb5cace0b09060f19a8ff8f182e9a5c3ba3463b0130",
       "bytes": 2392
     },
     {
       "path": "reports/provincial_20261012/assets/system_demo.png",
       "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e",
       "bytes": 175366
+    },
+    {
+      "path": "reports/provincial_20261012/build_architecture.py",
+      "sha256": "ee1ace5481f7e212c5f3410933d90da457997662cbe1adbdf020729b1349a17a",
+      "bytes": 2481
     },
     {
       "path": "reports/provincial_20261012/build_deck.mjs",
@@ -446,7 +451,7 @@
     },
     {
       "path": "reports/provincial_20261012/build_report.py",
-      "sha256": "116106291dd5ffc26a8437083cec165fd1749789a9db7554db4fb5451d71900a",
+      "sha256": "97cc0fa01e6964d28028c999345d52f83d724a80b882e7a08675fa0f5c2fde8b",
       "bytes": 7630
     },
     {
@@ -466,13 +471,18 @@
     },
     {
       "path": "reports/provincial_20261012/figure_contract.md",
-      "sha256": "8fd89a097a97bfe7c055bd37ccf37638c55f4961aef9f3656e32e664393728c6",
-      "bytes": 1375
+      "sha256": "0baf2dd473dfe2ca9cd32aa5d53fd8155664b15ee6a9903ce1a4889dc9e8d07b",
+      "bytes": 1749
     },
     {
       "path": "reports/provincial_20261012/figure_qa.json",
-      "sha256": "9270772245db05ae00edcf011d61a683a060af35499ab021caa9697fb45b07c3",
-      "bytes": 1169
+      "sha256": "3e36ed535a4e5dbbc7ab4bdb0914c041cb8480a63e2bc2de04b0ebd7ec870662",
+      "bytes": 1477
+    },
+    {
+      "path": "reports/provincial_20261012/figures/architecture.pdf",
+      "sha256": "934391bb2d8748480f188664fcd8aa405a8ac2da4be989e673928b2f5ff4c84b",
+      "bytes": 29590
     },
     {
       "path": "reports/provincial_20261012/figures/buildings.csv",
@@ -586,8 +596,8 @@
     },
     {
       "path": "reports/provincial_20261012/README.md",
-      "sha256": "6bfb27ce74fd14d08e778b00b7e70ebd6e6882a4f47277688dd3e4ad751e61f5",
-      "bytes": 2094
+      "sha256": "6a6f11bc9ae6a3e38b182ffffa9bf12acd45127d22ebaad117e214ad9cbb5a13",
+      "bytes": 2259
     },
     {
       "path": "reports/provincial_20261012/reference_metadata_audit.json",
@@ -601,18 +611,23 @@
     },
     {
       "path": "reports/provincial_20261012/report_contract.json",
-      "sha256": "d94a1231322c47bc74c1a149151be347df931feeaaf82c0691da685027921104",
-      "bytes": 3812
+      "sha256": "634e91ea0d717a5c5025399c5b644cff62a03a4038aafa5088fd4f2267a2b543",
+      "bytes": 4105
+    },
+    {
+      "path": "reports/provincial_20261012/report_revision.json",
+      "sha256": "f62f4b0dc6028d7564c3bc9b1b94207cf5578ab3853583b00d4ad4315602851b",
+      "bytes": 4372
     },
     {
       "path": "reports/provincial_20261012/report_source.json",
-      "sha256": "4f8ec4d87eaffee31bb38b8d279ad891a61ad226d0d56fe4a12dd72a693ad68b",
-      "bytes": 2457
+      "sha256": "4c82b799ab881e090bd377dd64cadb73d7b738b3f2f5dc39d4d48722bbed1279",
+      "bytes": 2598
     },
     {
       "path": "reports/provincial_20261012/report_visual_qa.json",
-      "sha256": "2a603bb02cc755f47ed3ac946568ead6265ec9b1c9208be1b9daa8a6154bdf43",
-      "bytes": 525
+      "sha256": "4f4d28f55bba97f4e57143323bf9b32f48d2ccfd08f19b1ca9ebb05dc408e500",
+      "bytes": 597
     },
     {
       "path": "reports/provincial_20261012/speaker_notes.json",
@@ -626,18 +641,18 @@
     },
     {
       "path": "reports/provincial_20261012/technical_report.md",
-      "sha256": "59ea145495f9232e1bca0d5a1663a426d5a3423ae6eb32545f9a2a8b9fc61769",
-      "bytes": 32643
+      "sha256": "df14a27cf84628b48867ac5d2de24624704c65b67390c520161f8d0509f4adda",
+      "bytes": 34380
     },
     {
       "path": "reports/provincial_20261012/technical_report_layout.tex",
-      "sha256": "a90bd467cca624812ade50fbd621f2950b623c429c39d5bf70fc6742757f20a9",
-      "bytes": 38030
+      "sha256": "d97d7bec634e33e39a55afa55b2ce68e036c63df4e51bbea05952c4935d70333",
+      "bytes": 40257
     },
     {
       "path": "reports/provincial_20261012/validate_alignment.py",
-      "sha256": "73a9c61fe30e0c32cec2a44fe6890c464f1af33c2797531008c2d292072e61fb",
-      "bytes": 5423
+      "sha256": "123ec8afab508e6e82eac1f263878dffdb132a82ea32289e829fe76011eeca05",
+      "bytes": 5492
     },
     {
       "path": "reports/provincial_20261012/validate_deck.py",

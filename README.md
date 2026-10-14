@@ -12,13 +12,13 @@ DOEF 融合 DayWeek 周期基线与 LightGBM，在验证集上按储能调度表
 
 ## 最终成果
 
-[技术报告 PDF](outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf)（16 页） · [答辩 PPTX](outputs/provincial_20261012/DOEF_Provincial_Submission.pptx) / [PDF](outputs/provincial_20261012/DOEF_Provincial_Submission.pdf)（12 页） · [中文演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)（4 分 56 秒）
+[技术报告 PDF](outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf)（17 页） · [答辩 PPTX](outputs/provincial_20261012/DOEF_Provincial_Submission.pptx) / [PDF](outputs/provincial_20261012/DOEF_Provincial_Submission.pdf)（12 页） · [中文演示视频](outputs/demo_video/DOEF_Demo_Narrated.mp4)（4 分 56 秒）
 
 [逐页讲稿与指标说明](docs/REPORT_AND_DEFENSE_GUIDE.md) · [提交清单](docs/SUBMISSION_CHECKLIST.md) · [报告正文](reports/provincial_20261012/technical_report.md)
 
 当前版本由 [current_submission.json](reports/current_submission.json) 指定。仓库仅保留最终交付物、维护代码及必要实验依据；旧报告、旧 PPT、重复视频和制作过程已移出当前文件树。报告与 PPT 的创新定位、消融对照、样本依赖性、负向结果及适用边界一致；视频包含当前 12 页 PPT、中文合成配音与真实离线 GUI 回放。
 
-本地整理包运行 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449 --revision final-20261013` 生成；不纳入 GitHub。网盘分享与赛事报名系统提交仍需单独完成。
+本地整理包运行 `python scripts/package_competition_submission.py --team-id AIC-2026-27833449 --revision submit-ready-20261014` 生成；不纳入 GitHub。网盘分享与赛事报名系统提交仍需单独完成。
 
 ## 技术方案
 
@@ -45,7 +45,7 @@ DOEF 在 6 栋建筑上的决策后悔值低于 LightGBM，另 2 栋持平。建
 
 ## 应用范围
 
-本作品完成了离线仿真验证，各建筑使用自身历史训练，结果适用于本次 8 栋办公建筑及测试月份。未见建筑、其他季节和真实在线控制仍需独立验证。测试期在早期实验中已被查看，后续保持其边界固定，不用于模型或权重选择。
+本作品完成了离线仿真验证，各建筑使用自身历史训练，结果适用于本次 8 栋办公建筑及测试月份。未见建筑、其他季节和真实在线控制仍需独立验证。测试期在早期实验中已被查看，候选参数与融合权重在验证集上选择后冻结；历史方法路线保留曾参考测试表现，因此现有结果不构成完全独立的盲测证明。
 
 目前程序评价的是最大取电功率的削减，未建立电价与碳排放模型，因此不将削峰率解释为节电率、电费降幅或碳减排量。现已提供离线仿真决策支持 GUI 和只读回放接口；现场控制接入尚未实现。具体输入输出、EMS/PCS/BMS 接入职责、预测时点、执行回执与分阶段验收见[工程接入说明](docs/ENGINEERING_INTEGRATION.md)。
 

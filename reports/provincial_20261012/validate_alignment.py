@@ -53,7 +53,7 @@ abstract=new.split('## 摘要\n\n')[1].split('\n\n关键词')[0]
 check('abstract_300_500_characters',300<=len(abstract)<=500)
 tex=(HERE/'technical_report_layout.tex').read_text(encoding='utf-8')
 check('official_font_and_spacing',r'\documentclass[12pt,a4paper]' in tex and r'\setCJKmainfont{SimSun}' in tex and r'\linespread{1}' in tex and r'\fontsize{10.5}{20}' in tex)
-check('sequential_figure_captions',re.findall(r'^\*\*图 (\d+)',new,re.M)==list(map(str,range(1,5))))
+check('sequential_figure_captions',re.findall(r'^\*\*图 (\d+)',new,re.M)==list(map(str,range(1,6))))
 check('sequential_table_captions',re.findall(r'^\*\*表 (\d+)',new,re.M)==list(map(str,range(1,8))))
 check('deck_core_innovation','方法创新' in deck_text and '选择DayWeek与LightGBM的融合权重' in deck_text)
 errors=[k for k,v in checks.items() if not v]

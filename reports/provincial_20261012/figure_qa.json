@@ -30,5 +30,13 @@
     "Width expression is 154/25.4 inches, actual exported width 154 mm; report column, not journal format.",
     "PNG is preview only; vector PDF is the embedded delivery, TIFF not required."
   ],
-  "visual_review": "All four charts inspected within report at final size; no clipping or overlap; four figures directly read saved CSVs; no new experimental data."
+  "visual_review": "All four charts inspected within report at final size; no clipping or overlap; four figures directly read saved CSVs; no new experimental data.",
+  "architecture": {
+    "status": "PASS",
+    "path": "figures/architecture.pdf",
+    "sha256": "934391bb2d8748480f188664fcd8aa405a8ac2da4be989e673928b2f5ff4c84b",
+    "producer": "build_architecture.py",
+    "review_date": "2026-10-14",
+    "review": "Inspected in final report page 6; legible labels and no connector intersections."
+  }
 }

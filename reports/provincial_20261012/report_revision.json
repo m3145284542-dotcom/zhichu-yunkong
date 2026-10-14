@@ -1,0 +1,115 @@
+{
+  "status": "canonical",
+  "producer": "report compliance revision",
+  "created_utc": "2026-10-13T13:59:18.589149+00:00",
+  "parent_pdf_sha256": "ea2efd1e1be6b128d6b8a224d9fd3d1eb4642dd826495e82c6ef1f0c97b5686b",
+  "parent_git_commit": "8487653e0a7e0e547a7b9d1f6a679a4d77663cdf",
+  "source_documents": [
+    "reports/provincial_20261012/technical_report.md",
+    "outputs/phase9/summary.json",
+    "outputs/phase8/aggregate_summary.json",
+    "reports/phase5_7_report.md"
+  ],
+  "changes": [
+    "architecture diagram",
+    "template keywords",
+    "separate original and review environment",
+    "disclose historical test-informed method promotion",
+    "correct figure cross-reference",
+    "data attribution documentation pointer",
+    "cover date 2026-10-14"
+  ],
+  "new_training": false,
+  "new_dispatch": false,
+  "review_environment": {
+    "python": "3.12.14",
+    "physical_memory_bytes": 16791150592,
+    "packages": {
+      "pandas": "2.3.3",
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "lightgbm": "4.7.0",
+      "xgboost": "3.2.0",
+      "catboost": "1.2.10",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "unchanged_scientific_sources": [
+    {
+      "path": "outputs/phase8/global_test_summary.csv",
+      "sha256": "42d8930a4c3799951bdffeb8d8bb525dbcd462962cf88f37e71caae3eeab919a"
+    },
+    {
+      "path": "outputs/phase8/test_decision_metrics.csv",
+      "sha256": "1c4667ce525a0cdada916bd11ee8c27276ec3a816aeae6b12bbd45355fdbb502"
+    },
+    {
+      "path": "outputs/phase8/test_daily_decision_metrics.csv",
+      "sha256": "918f3b4e38cec5b16be964a2631392577068333de264e973ddac9409a2f4da60"
+    },
+    {
+      "path": "outputs/phase8/selected_weights.csv",
+      "sha256": "2c0069968f31917c3b4be6d2989bf88f23401be8ddaea779181dbeeceb238959"
+    },
+    {
+      "path": "outputs/phase8/global_selected_weights.json",
+      "sha256": "327e2208cc5ffe9c0c4de2690070764652de24091ad3914e746a16c398b7ecd2"
+    },
+    {
+      "path": "outputs/phase7/building_battery_configs.csv",
+      "sha256": "e360e2259744a3b9788d550ba87635e4f986d726e93147066e8d7deaa40a8eb7"
+    },
+    {
+      "path": "outputs/phase9/final_benchmark.csv",
+      "sha256": "b2cd308f3a4bc45329f79e8eedd45579ab1877c74b6cb02968a687dc1624801c"
+    },
+    {
+      "path": "outputs/phase9_1/final_reporting_summary.json",
+      "sha256": "16de5296be9b0798860a85bb8e28116095e80e1bd21df811d87c40940d27fe36"
+    },
+    {
+      "path": "outputs/phase9_1/building_level_bootstrap.csv",
+      "sha256": "86bdb42cb3ff8a3d37c4472e8a50f4dc0198b5d456f3f0442aca2bbf9c2964b8"
+    },
+    {
+      "path": "reports/provincial_20261012/assets/system_demo.png",
+      "sha256": "b24b4c1685edf4cd5fdece8bf08f78c5df2712ad53bd35bc6b5d69c358ac864e"
+    },
+    {
+      "path": "src/phase8.py",
+      "sha256": "19aea3a725349c9a05f3f0f5683a6acb95666e26482c2396227f1c3fe46226a6"
+    },
+    {
+      "path": "docs/ENGINEERING_INTEGRATION.md",
+      "sha256": "29c630591384d53eb853d55c865ba67fec505fb8eedd8680c6536381f72da772"
+    }
+  ],
+  "role": "accepted report compliance revision",
+  "accepted_utc": "2026-10-14T04:19:18.322867+00:00",
+  "acceptance_reason": "48 content checks passed and all 17 pages visually reviewed; frozen numeric scientific sources unchanged.",
+  "pdf_path": "outputs/provincial_20261012/DOEF_Technical_Report_Submission.pdf",
+  "pdf_sha256": "d07d37a44fb9e7d949f59e376c7cd8c75b988e6f45c7b0e57302165143ccacf8",
+  "source_markdown_sha256": "df14a27cf84628b48867ac5d2de24624704c65b67390c520161f8d0509f4adda",
+  "figure_sha256": "934391bb2d8748480f188664fcd8aa405a8ac2da4be989e673928b2f5ff4c84b",
+  "previous_report_status": "superseded",
+  "previous_report_preserved_in": "Git parent commit and previous local current_delivery package",
+  "source_inputs": [
+    {
+      "path": "reports/provincial_20261012/technical_report.md",
+      "sha256": "df14a27cf84628b48867ac5d2de24624704c65b67390c520161f8d0509f4adda"
+    },
+    {
+      "path": "outputs/phase9/summary.json",
+      "sha256": "21d2b5d5b42c0f8c33396a382a5299ed1e6b3576b02936fec4b5831411abdb16"
+    },
+    {
+      "path": "outputs/phase8/aggregate_summary.json",
+      "sha256": "ce5018ef62e724e85c343381b279f8e061ba2438e725dfc84c014e205845a895"
+    },
+    {
+      "path": "reports/phase5_7_report.md",
+      "sha256": "330c58f4c48f6c8d856013993838605fb83da4743a52face4b1b51492af90ab6"
+    }
+  ]
+}
